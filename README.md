@@ -13,7 +13,7 @@ explicitly so that's visible at a glance, not just asserted.
 
 One data core (Supabase), six functional clusters around it, two people who
 touch the system. Dashed lines are actor interactions or the one retry loop;
-`(external)` marks a third-party dependency.
+`(external) ` marks a third-party dependency.
 
 ```mermaid
 flowchart TB
