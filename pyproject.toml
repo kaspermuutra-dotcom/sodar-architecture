@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sodar-harness"
+version = "0.1.0"
+description = "SODAR engineering harness: one provider contract, deterministic local evaluation."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+# Optional developer tooling. The harness itself and its tests need none of it —
+# `python -m unittest` runs on a bare interpreter.
+dev = ["ruff>=0.6", "mypy>=1.11"]
+# The opencv-stitch provider. `opencv-python-headless` is the GUI-less build
+# (no cv2.imshow); it declares numpy as a transitive dependency, so numpy is
+# pulled in automatically and is not listed here. Apache-2.0 licensed.
+opencv = ["opencv-python-headless>=4.9"]
+
+[project.scripts]
+sodar = "sodar.cli.main:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+src = ["src", "tests"]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+mypy_path = "src"
+packages = ["sodar"]
+strict = true

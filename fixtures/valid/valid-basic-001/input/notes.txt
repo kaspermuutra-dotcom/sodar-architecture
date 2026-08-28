@@ -1,0 +1,2 @@
+Synthetic fixture for the SODAR harness. Contains no real property, customer,
+or capture data. Safe to commit and share.

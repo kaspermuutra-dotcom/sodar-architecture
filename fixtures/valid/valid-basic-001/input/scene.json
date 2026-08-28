@@ -1,0 +1,8 @@
+{
+  "scene": "synthetic-apartment-a",
+  "rooms": [
+    { "name": "living_room", "frames": 12 },
+    { "name": "kitchen", "frames": 9 },
+    { "name": "bedroom", "frames": 10 }
+  ]
+}

@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# Harness run outputs — regenerated; not source of truth.
+artifacts/evals/*/
+artifacts/provider-runs/
+!artifacts/evals/.gitkeep

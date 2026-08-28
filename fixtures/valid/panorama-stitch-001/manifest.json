@@ -1,0 +1,11 @@
+{
+  "fixture_id": "panorama-stitch-001",
+  "schema_version": "fixture.v1",
+  "kind": "valid",
+  "description": "Three overlapping synthetic 300x200 views sliced from one seeded scene (~50% overlap). Ordered inputs for the opencv-stitch provider. Regenerate with make_inputs.py.",
+  "inputs": ["input/view_01.png", "input/view_02.png", "input/view_03.png"],
+  "expected_artifacts": ["panorama.png", "stitch_metadata.json"],
+  "expect": {
+    "provider_validation": "pass"
+  }
+}

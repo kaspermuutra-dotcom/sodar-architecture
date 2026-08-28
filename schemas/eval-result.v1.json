@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sodar.io/schemas/eval-result.v1.json",
+  "title": "SODAR evaluation result, version 1",
+  "description": "One deterministic evaluation of one provider against one fixture. Historical results stay readable: readers dispatch on schema_version, and metrics / provider_metadata are open maps so new providers add fields without a schema change.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "provider_id",
+    "fixture_id",
+    "success",
+    "started_at",
+    "completed_at",
+    "duration_ms",
+    "estimated_cost",
+    "artifacts",
+    "metrics",
+    "errors",
+    "provider_metadata",
+    "evaluator_version"
+  ],
+  "properties": {
+    "schema_version": { "const": "eval-result.v1" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "provider_id": { "type": "string", "minLength": 1 },
+    "fixture_id": { "type": "string", "minLength": 1 },
+    "success": { "type": "boolean" },
+    "started_at": { "type": "string", "minLength": 1 },
+    "completed_at": { "type": "string", "minLength": 1 },
+    "duration_ms": { "type": "integer", "minimum": 0 },
+    "estimated_cost": { "type": "number", "minimum": 0 },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["relpath", "bytes", "sha256"],
+        "properties": {
+          "relpath": { "type": "string", "minLength": 1 },
+          "bytes": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "minLength": 64, "maxLength": 64 }
+        }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "description": "Deterministic harness-level metrics. The v1 keys are always present; providers or later evaluator versions may add more.",
+      "additionalProperties": true,
+      "required": [
+        "artifact_count",
+        "total_output_bytes",
+        "expected_artifacts_present",
+        "output_manifest_valid"
+      ],
+      "properties": {
+        "artifact_count": { "type": "integer", "minimum": 0 },
+        "total_output_bytes": { "type": "integer", "minimum": 0 },
+        "expected_artifacts_present": { "type": "boolean" },
+        "output_manifest_valid": { "type": "boolean" }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "provider_metadata": {
+      "type": "object",
+      "description": "Opaque provider-specific detail. No required keys; vendor-shaped data is normalized by the adapter before it lands here.",
+      "additionalProperties": true
+    },
+    "evaluator_version": { "type": "string", "minLength": 1 }
+  }
+}

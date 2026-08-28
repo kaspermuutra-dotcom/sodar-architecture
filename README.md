@@ -143,3 +143,27 @@ Names that came up in scoping that don't have a confirmed place yet:
 `Sigma`, `Admanage`, `Omni`, `Claude Commerse`, `Stich`, `Impeccable`,
 `Leanxlnx`, `Sensor LLC`, `Graphify`, `SPAG-4D` — flagged rather than guessed
 into a slot. A repo link or one-line description per item would resolve these.
+
+## Engineering harness
+
+`src/sodar/` is a small local harness that plugs candidate external providers in
+behind one stable contract (`sodar.providers.base`) and evaluates them
+deterministically against local fixtures — no network, no cloud. It runs on a
+bare Python 3.11+ interpreter (`python -m unittest discover -s tests`); planning
+and design notes live in [`wat/`](wat/) and [`docs/`](docs/).
+
+```
+sodar provider list
+sodar provider run <provider> <fixture>
+sodar eval run <provider> <fixture>      # persists artifacts/evals/<run_id>/eval-result.json
+```
+
+Providers:
+
+| id | dependency | notes |
+|---|---|---|
+| `dummy` | none | deterministic reference provider |
+| `opencv-stitch` | `opencv-python-headless` (Apache-2.0), optional extra `[opencv]` | OpenCV panorama stitching; output is not byte-reproducible — see [`docs/HARNESS_NOTES.md`](docs/HARNESS_NOTES.md) |
+
+Install an optional provider's dependency with e.g. `pip install -e ".[opencv]"`.
+The default install stays dependency-free.

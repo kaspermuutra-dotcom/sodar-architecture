@@ -1,0 +1,12 @@
+{
+  "fixture_id": "invalid-missing-rooms-001",
+  "schema_version": "fixture.v1",
+  "kind": "invalid",
+  "description": "scene.json is well-formed JSON but omits the required 'rooms' array. The dummy provider must reject it during input validation.",
+  "inputs": ["input/scene.json"],
+  "expected_artifacts": [],
+  "expect": {
+    "provider_validation": "fail",
+    "reason_contains": "missing required field 'rooms'"
+  }
+}

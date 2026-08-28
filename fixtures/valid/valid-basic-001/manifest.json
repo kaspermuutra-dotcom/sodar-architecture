@@ -1,0 +1,11 @@
+{
+  "fixture_id": "valid-basic-001",
+  "schema_version": "fixture.v1",
+  "kind": "valid",
+  "description": "Minimal synthetic scene with three rooms. Enough for the dummy provider to validate and execute successfully.",
+  "inputs": ["input/scene.json", "input/notes.txt"],
+  "expected_artifacts": ["result.json", "summary.txt"],
+  "expect": {
+    "provider_validation": "pass"
+  }
+}

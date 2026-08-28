@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sodar.io/schemas/fixture.v1.json",
+  "title": "SODAR harness fixture manifest, version 1",
+  "description": "Describes one local test fixture: its inputs, what a provider is expected to emit, and whether provider input-validation should pass or fail.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["fixture_id", "schema_version", "kind", "description", "inputs", "expected_artifacts", "expect"],
+  "properties": {
+    "fixture_id": { "type": "string", "minLength": 1 },
+    "schema_version": { "const": "fixture.v1" },
+    "kind": { "enum": ["valid", "invalid"] },
+    "description": { "type": "string", "minLength": 1 },
+    "inputs": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "expected_artifacts": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "expect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["provider_validation"],
+      "properties": {
+        "provider_validation": { "enum": ["pass", "fail"] },
+        "reason_contains": { "type": "string" }
+      }
+    }
+  }
+}
