@@ -13,3 +13,6 @@ dist/
 artifacts/evals/*/
 artifacts/provider-runs/
 !artifacts/evals/.gitkeep
+
+# reconstruction model weights (large, fetched via scripts/fetch_reconstruction_weights.sh)
+third_party/weights/

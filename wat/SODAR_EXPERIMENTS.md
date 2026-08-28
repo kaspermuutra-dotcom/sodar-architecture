@@ -93,12 +93,17 @@ Run by the **Benchmark / Evaluation Agent** via `tools/` only. Artifacts go to
 
 ## E4 — Monocular / 360 depth parallax
 
+- **Vendored deps + pipeline design:**
+  [`docs/RECONSTRUCTION_INTEGRATION.md`](../../docs/RECONSTRUCTION_INTEGRATION.md)
+  — RAFT (flow) + Depth-Anything-V2 (depth) + LaMa (disocclusion inpaint) are in
+  `third_party/` as pinned submodules. Not yet runnable here (no GPU/torch).
 - **Hypothesis:** Panorama + estimated depth gives enough head parallax to feel
   more immersive than a flat panorama, without artifacts that read as "broken".
 - **Method:** For 3–4 panoramas from E1: run Depth Anything V2 (tiled
   perspective) and one 360-native depth model via `depth_infer.py`; displace a
-  sphere mesh / point cloud; load in PSV with clamped parallax. A/B against the
-  flat panorama.
+  sphere mesh / point cloud, or warp between two capture points with
+  flow+depth and inpaint the holes; load in PSV with clamped parallax. A/B
+  against the flat panorama.
 - **Dataset:** E1 panoramas.
 - **Metrics:** artifact rate (edge stretching, disocclusion holes) 1–5;
   perceived-realism delta vs flat (blind A/B preference); inference time.

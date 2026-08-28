@@ -17,6 +17,11 @@ dev = ["ruff>=0.6", "mypy>=1.11"]
 # (no cv2.imshow); it declares numpy as a transitive dependency, so numpy is
 # pulled in automatically and is not listed here. Apache-2.0 licensed.
 opencv = ["opencv-python-headless>=4.9"]
+# SODAR-side glue for the parallax reconstruction pipeline (RAFT + Depth-Anything-V2
+# + LaMa live in third_party/ as submodules, each run in its own env — see
+# docs/RECONSTRUCTION_INTEGRATION.md). This extra is only the warp/mask/IO code,
+# not the models themselves.
+reconstruction = ["numpy>=1.24", "imageio>=2.31", "opencv-python-headless>=4.9"]
 
 [project.scripts]
 sodar = "sodar.cli.main:main"
