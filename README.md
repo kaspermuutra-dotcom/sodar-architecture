@@ -1,4 +1,4 @@
-# Solar.io — Core Architecture
+# Sodar.io — Core Architecture
 
 Browser-based tool for real estate agents: scan a property room-by-room with a
 phone, get an AI-reconstructed 360° tour, pay a one-time fee sized to the
