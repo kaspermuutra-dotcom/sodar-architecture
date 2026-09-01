@@ -72,6 +72,7 @@ export default async function Home() {
           />
           {LABEL[health.status]}
           {health.status !== "unconfigured" ? ` · ${health.host}` : null}
+          {health.status === "error" ? ` · ${health.detail}` : null}
         </p>
       </div>
     </main>
