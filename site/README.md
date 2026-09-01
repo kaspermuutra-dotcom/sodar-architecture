@@ -30,8 +30,11 @@ Both are safe to expose to the browser. Never put the `service_role` key in a
 Vercel builds this directory (project **Root Directory** is set to `site`).
 Pushes to `main` deploy to production; other branches get preview URLs.
 
-## Supabase clients
+## Supabase
 
-- `lib/supabase/client.ts` — for Client Components
-- `lib/supabase/server.ts` — for Server Components, Route Handlers, Actions
+- `lib/supabase/env.ts` — reads and validates the two public env vars
 - `lib/supabase/health.ts` — the connectivity check the homepage renders
+
+This pings the REST root with the publishable key, so it needs no tables and
+works against an empty project. Add `@supabase/ssr` and its server/browser
+client wrappers when the site actually starts reading data.
