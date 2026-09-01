@@ -16,3 +16,6 @@ artifacts/provider-runs/
 
 # reconstruction model weights (large, fetched via scripts/fetch_reconstruction_weights.sh)
 third_party/weights/
+
+# Per-machine Claude Code state (MCP trust decisions) — not shared.
+.claude/settings.local.json
