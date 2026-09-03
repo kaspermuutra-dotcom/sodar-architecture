@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<title>SODAR — panorama tour viewer</title>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+  #app { position: fixed; inset: 0; }
+  #canvas { width: 100%; height: 100%; display: block; touch-action: none; }
+
+  /* --- overlay UI --- */
+  .ui { position: fixed; z-index: 10; font: 500 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: #fff; -webkit-user-select: none; user-select: none; }
+  #room-label { top: max(14px, env(safe-area-inset-top)); left: 14px; padding: 8px 14px; background: rgba(0,0,0,.45); backdrop-filter: blur(8px); border-radius: 999px; letter-spacing: .01em; }
+  #controls { bottom: max(16px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); display: flex; gap: 10px; }
+  #controls button { padding: 10px 16px; border: 0; border-radius: 999px; background: rgba(0,0,0,.5); backdrop-filter: blur(8px); color: #fff; font: inherit; cursor: pointer; }
+  #controls button[aria-pressed="true"] { background: #2f6fed; }
+  #controls button:disabled { opacity: .4; cursor: default; }
+
+  /* --- hotspots --- */
+  .hotspot { position: fixed; z-index: 8; transform: translate(-50%, -50%); width: 44px; height: 44px; margin: 0; border: 0; border-radius: 50%;
+    background: rgba(47,111,237,.28); box-shadow: 0 0 0 2px #fff inset, 0 2px 10px rgba(0,0,0,.4); cursor: pointer; transition: opacity .2s; }
+  .hotspot::after { content: ""; position: absolute; inset: 15px; border-radius: 50%; background: #fff; }
+  .hotspot .tip { position: absolute; left: 50%; bottom: 130%; transform: translateX(-50%); white-space: nowrap; padding: 4px 10px; border-radius: 6px;
+    background: rgba(0,0,0,.7); color: #fff; font: 500 13px/1 system-ui, sans-serif; opacity: 0; transition: opacity .15s; pointer-events: none; }
+  .hotspot:hover .tip { opacity: 1; }
+
+  /* --- fader + loader --- */
+  #fader { position: fixed; inset: 0; z-index: 20; background: #000; opacity: 0; pointer-events: none; transition: opacity .28s ease; }
+  #fader.on { opacity: 1; }
+  #status { position: fixed; inset: 0; z-index: 30; display: grid; place-items: center; background: #0b0b0c; color: #cfcfd4;
+    font: 500 14px system-ui, sans-serif; text-align: center; padding: 24px; }
+  #status.hidden { display: none; }
+  #status .sp { width: 26px; height: 26px; border: 3px solid #3a3a40; border-top-color: #2f6fed; border-radius: 50%; animation: spin .8s linear infinite; margin: 0 auto 12px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div id="app">
+  <canvas id="canvas"></canvas>
+</div>
+
+<div id="room-label" class="ui" hidden></div>
+<div id="controls" class="ui">
+  <button id="btn-gyro" aria-pressed="false" hidden>Gyro</button>
+  <button id="btn-recenter">Recenter</button>
+</div>
+<div id="fader"></div>
+<div id="status"><div><div class="sp"></div><div id="status-msg">Loading viewer…</div></div></div>
+
+<script type="module">
+import * as pc from './vendor/playcanvas-2.21.4.min.mjs';
+
+/* ------------------------------------------------------------------ *
+ * SODAR panorama tour viewer  —  ViewerBuilder reference target
+ *
+ * Renders an equirectangular-panorama tour (TD-003 candidate: PlayCanvas
+ * engine, MIT). Reads `tour.json` (schema `tour.v0`); every panorama is a
+ * texture on the inside of a sphere, camera sits at the centre. Pointer +
+ * touch look, pinch / wheel zoom, optional DeviceOrientation gyro, DOM
+ * hotspots that travel between nodes.
+ *
+ * Query params (debug / embedding):
+ *   ?tour=<url>   load a different tour manifest
+ *   ?pano=<url>   skip the manifest, show one panorama
+ *   ?node=<id>    start on a specific node
+ * ------------------------------------------------------------------ */
+
+const qs = new URLSearchParams(location.search);
+const statusEl = document.getElementById('status');
+const statusMsg = document.getElementById('status-msg');
+const faderEl = document.getElementById('fader');
+const roomLabel = document.getElementById('room-label');
+const btnGyro = document.getElementById('btn-gyro');
+const btnRecenter = document.getElementById('btn-recenter');
+const canvas = document.getElementById('canvas');
+
+const fail = (msg, err) => {
+  console.error('[viewer]', msg, err || '');
+  statusEl.classList.remove('hidden');
+  statusEl.innerHTML = `<div style="max-width:36ch"><strong>Viewer error</strong><br>${msg}` +
+    `<br><br><span style="color:#8a8a90">Serve this folder over HTTP ` +
+    `(<code>python3 -m http.server</code>) — <code>file://</code> blocks module and texture loads.</span></div>`;
+};
+window.addEventListener('error', (e) => fail(e.message, e.error));
+
+/* ---------- fallback manifest (keeps config out of the failure path) ---------- */
+const FALLBACK_TOUR = {
+  schema_version: 'tour.v0',
+  title: 'Demo property',
+  start_node: 'living-room',
+  nodes: [
+    { id: 'living-room', room: 'Living room', panorama: 'panoramas/living-room.jpg', initial_yaw_deg: 0,
+      hotspots: [{ to: 'kitchen', label: 'Kitchen', yaw_deg: 90, pitch_deg: -6 }] },
+    { id: 'kitchen', room: 'Kitchen', panorama: 'panoramas/kitchen.jpg', initial_yaw_deg: 270,
+      hotspots: [{ to: 'living-room', label: 'Living room', yaw_deg: 270, pitch_deg: -6 }] },
+  ],
+};
+
+async function loadTour() {
+  if (qs.get('pano')) {
+    return { schema_version: 'tour.v0', title: 'Panorama', start_node: 'n0',
+      nodes: [{ id: 'n0', room: '', panorama: qs.get('pano'), initial_yaw_deg: 0, hotspots: [] }] };
+  }
+  const url = qs.get('tour') || 'tour.json';
+  try {
+    const r = await fetch(url, { cache: 'no-cache' });
+    if (!r.ok) throw new Error(`${url} -> HTTP ${r.status}`);
+    return await r.json();
+  } catch (e) {
+    console.warn('[viewer] manifest load failed, using fallback:', e.message);
+    return FALLBACK_TOUR;
+  }
+}
+
+/* ================================================================== */
+
+const app = new pc.Application(canvas, {
+  mouse: new pc.Mouse(canvas),
+  touch: new pc.TouchDevice(canvas),
+  graphicsDeviceOptions: { antialias: true, alpha: false, preferWebGl2: true },
+});
+app.setCanvasFillMode(pc.FILLMODE_FILL_WINDOW);
+app.setCanvasResolution(pc.RESOLUTION_AUTO);
+app.graphicsDevice.maxPixelRatio = Math.min(window.devicePixelRatio || 1, 2);
+addEventListener('resize', () => app.resizeCanvas());
+
+/* --- camera at the centre of the sphere --- */
+const camera = new pc.Entity('camera');
+camera.addComponent('camera', {
+  projection: pc.PROJECTION_PERSPECTIVE,
+  fov: 75,
+  clearColor: new pc.Color(0, 0, 0, 1),
+  nearClip: 0.05,
+  farClip: 100,
+});
+app.root.addChild(camera);
+
+/* --- inverted sphere that carries the panorama --- */
+const sphere = new pc.Entity('panosphere');
+sphere.addComponent('render', { type: 'sphere' });
+sphere.setLocalScale(20, 20, 20);
+app.root.addChild(sphere);
+
+const panoMat = new pc.StandardMaterial();
+panoMat.useLighting = false;                 // fullbright — a photo, not a lit surface
+panoMat.diffuse = new pc.Color(0, 0, 0);
+panoMat.emissive = new pc.Color(1, 1, 1);
+panoMat.cull = pc.CULLFACE_FRONT;            // we look at it from inside
+panoMat.emissiveMapTiling = new pc.Vec2(-1, 1);   // un-mirror the inside-out UVs
+panoMat.emissiveMapOffset = new pc.Vec2(1, 0);
+panoMat.update();
+sphere.render.material = panoMat;
+
+/* ---------- look controls ---------- */
+const view = { yaw: 0, pitch: 0, tYaw: 0, tPitch: 0, fov: 75, tFov: 75 };
+const PITCH_LIMIT = 85;
+const FOV_MIN = 35, FOV_MAX = 100;
+let gyro = null;               // set when gyro mode is on
+let dragging = false;
+let lastX = 0, lastY = 0;
+let pinchDist = 0;
+
+const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+function onDown(e) {
+  if (gyro) return;
+  dragging = true;
+  lastX = e.clientX; lastY = e.clientY;
+  canvas.setPointerCapture?.(e.pointerId);
+}
+function onMove(e) {
+  if (!dragging || gyro) return;
+  const k = (view.fov / 75) * 0.13;          // slower when zoomed in
+  view.tYaw   -= (e.clientX - lastX) * k;
+  view.tPitch += (e.clientY - lastY) * k;
+  view.tPitch = clamp(view.tPitch, -PITCH_LIMIT, PITCH_LIMIT);
+  lastX = e.clientX; lastY = e.clientY;
+}
+function onUp(e) { dragging = false; canvas.releasePointerCapture?.(e.pointerId); }
+
+canvas.addEventListener('pointerdown', onDown);
+canvas.addEventListener('pointermove', onMove);
+canvas.addEventListener('pointerup', onUp);
+canvas.addEventListener('pointercancel', onUp);
+canvas.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  view.tFov = clamp(view.tFov + Math.sign(e.deltaY) * 4, FOV_MIN, FOV_MAX);
+}, { passive: false });
+
+/* pinch zoom */
+canvas.addEventListener('touchmove', (e) => {
+  if (e.touches.length !== 2) return;
+  e.preventDefault();
+  const dx = e.touches[0].clientX - e.touches[1].clientX;
+  const dy = e.touches[0].clientY - e.touches[1].clientY;
+  const d = Math.hypot(dx, dy);
+  if (pinchDist) view.tFov = clamp(view.tFov - (d - pinchDist) * 0.2, FOV_MIN, FOV_MAX);
+  pinchDist = d;
+}, { passive: false });
+canvas.addEventListener('touchend', () => { pinchDist = 0; });
+
+/* ---------- gyro (DeviceOrientation) ---------- */
+function screenAngle() {
+  return (screen.orientation && screen.orientation.angle) || window.orientation || 0;
+}
+function enableGyro() {
+  const start = () => {
+    gyro = { alpha: 0, beta: 90, gamma: 0, base: null };
+    window.addEventListener('deviceorientation', onOrient);
+    btnGyro.setAttribute('aria-pressed', 'true');
+  };
+  const needsPerm = typeof DeviceOrientationEvent !== 'undefined' &&
+    typeof DeviceOrientationEvent.requestPermission === 'function';
+  if (needsPerm) {
+    DeviceOrientationEvent.requestPermission().then((s) => { if (s === 'granted') start(); })
+      .catch(() => {});
+  } else {
+    start();
+  }
+}
+function disableGyro() {
+  window.removeEventListener('deviceorientation', onOrient);
+  gyro = null;
+  btnGyro.setAttribute('aria-pressed', 'false');
+}
+function onOrient(e) {
+  if (!gyro) return;
+  gyro.alpha = e.alpha || 0;
+  gyro.beta = e.beta == null ? 90 : e.beta;
+  gyro.gamma = e.gamma || 0;
+  if (gyro.base === null) gyro.base = gyro.alpha;   // zero heading to where you started
+}
+btnGyro.addEventListener('click', () => (gyro ? disableGyro() : enableGyro()));
+if (typeof DeviceOrientationEvent !== 'undefined' && 'ontouchstart' in window) btnGyro.hidden = false;
+
+btnRecenter.addEventListener('click', () => {
+  if (gyro && gyro.base !== null) gyro.base = gyro.alpha;
+  view.tPitch = 0;
+  view.tFov = 75;
+});
+
+/* ---------- hotspots ---------- */
+let hotspotEls = [];
+function buildHotspots(node) {
+  hotspotEls.forEach((h) => h.el.remove());
+  hotspotEls = (node.hotspots || []).map((hs) => {
+    const el = document.createElement('button');
+    el.className = 'hotspot ui';
+    el.innerHTML = `<span class="tip">${hs.label || 'Go'}</span>`;
+    el.addEventListener('click', () => travelTo(hs.to));
+    document.body.appendChild(el);
+    // world direction on a unit sphere from yaw/pitch (yaw 0 = -Z, +yaw = right)
+    const yaw = pc.math.DEG_TO_RAD * (hs.yaw_deg || 0);
+    const pitch = pc.math.DEG_TO_RAD * (hs.pitch_deg || 0);
+    const dir = new pc.Vec3(
+      Math.sin(yaw) * Math.cos(pitch),
+      Math.sin(pitch),
+      -Math.cos(yaw) * Math.cos(pitch),
+    ).mulScalar(5);
+    return { el, world: dir };
+  });
+}
+const screenPos = new pc.Vec3();
+function positionHotspots() {
+  const w = app.graphicsDevice.width / app.graphicsDevice.maxPixelRatio;
+  for (const h of hotspotEls) {
+    camera.camera.worldToScreen(h.world, screenPos);
+    const inFront = screenPos.z > 0;
+    if (!inFront) { h.el.style.opacity = '0'; h.el.style.pointerEvents = 'none'; continue; }
+    h.el.style.opacity = '1';
+    h.el.style.pointerEvents = 'auto';
+    h.el.style.left = `${screenPos.x}px`;
+    h.el.style.top = `${screenPos.y}px`;
+  }
+}
+
+/* ---------- tour state / travel ---------- */
+let TOUR = null;
+let nodeById = new Map();
+let current = null;
+let texCache = new Map();
+
+function loadTexture(url) {
+  if (texCache.has(url)) return Promise.resolve(texCache.get(url));
+  return new Promise((resolve, reject) => {
+    const asset = new pc.Asset(url, 'texture', { url });
+    asset.on('load', () => {
+      const t = asset.resource;
+      t.addressU = pc.ADDRESS_CLAMP_TO_EDGE;
+      t.addressV = pc.ADDRESS_CLAMP_TO_EDGE;
+      t.minFilter = pc.FILTER_LINEAR;
+      t.magFilter = pc.FILTER_LINEAR;
+      texCache.set(url, t);
+      resolve(t);
+    });
+    asset.on('error', (err) => reject(new Error(`panorama failed: ${url} (${err})`)));
+    app.assets.add(asset);
+    app.assets.load(asset);
+  });
+}
+
+async function showNode(id, { fade = false } = {}) {
+  const node = nodeById.get(id) || TOUR.nodes[0];
+  if (fade) { faderEl.classList.add('on'); await new Promise((r) => setTimeout(r, 280)); }
+  try {
+    const tex = await loadTexture(node.panorama);
+    panoMat.emissiveMap = tex;
+    panoMat.update();
+  } catch (e) {
+    fail(e.message, e);
+    return;
+  }
+  current = node;
+  view.yaw = view.tYaw = (node.initial_yaw_deg || 0);
+  view.pitch = view.tPitch = 0;
+  if (gyro) gyro.base = null;
+  roomLabel.textContent = node.room || TOUR.title || '';
+  roomLabel.hidden = !roomLabel.textContent;
+  buildHotspots(node);
+  // warm the neighbours
+  (node.hotspots || []).forEach((h) => { const n = nodeById.get(h.to); if (n) loadTexture(n.panorama).catch(() => {}); });
+  statusEl.classList.add('hidden');
+  if (fade) { requestAnimationFrame(() => faderEl.classList.remove('on')); }
+}
+function travelTo(id) { if (id && id !== current?.id) showNode(id, { fade: true }); }
+
+/* ---------- frame loop ---------- */
+const q = new pc.Quat();
+const qYaw = new pc.Quat();
+const qPitch = new pc.Quat();
+app.on('update', (dt) => {
+  const a = Math.min(1, dt * 10);
+  if (gyro) {
+    // build orientation from device angles (radians)
+    const z = pc.math.DEG_TO_RAD * (gyro.alpha - (gyro.base ?? gyro.alpha));
+    const x = pc.math.DEG_TO_RAD * gyro.beta;
+    const y = pc.math.DEG_TO_RAD * gyro.gamma;
+    const cZ = Math.cos(z/2), sZ = Math.sin(z/2);
+    const cX = Math.cos(x/2), sX = Math.sin(x/2);
+    const cY = Math.cos(y/2), sY = Math.sin(y/2);
+    // ZXY order, then correct for the camera looking down -Z and the screen angle
+    q.set(
+      sX * cY * cZ - cX * sY * sZ,
+      cX * sY * cZ + sX * cY * sZ,
+      cX * cY * sZ + sX * sY * cZ,
+      cX * cY * cZ - sX * sY * sZ,
+    );
+    const s = -pc.math.DEG_TO_RAD * screenAngle() / 2;
+    qYaw.set(0, 0, Math.sin(s), Math.cos(s));
+    q.mul(qYaw);
+    qPitch.setFromAxisAngle(pc.Vec3.RIGHT, -90);
+    camera.setRotation(new pc.Quat().mul2(q, qPitch));
+  } else {
+    view.yaw   += (view.tYaw - view.yaw) * a;
+    view.pitch += (view.tPitch - view.pitch) * a;
+    qYaw.setFromEulerAngles(0, view.yaw, 0);
+    qPitch.setFromEulerAngles(view.pitch, 0, 0);
+    camera.setRotation(qYaw.mul(qPitch));
+  }
+  view.fov += (view.tFov - view.fov) * a;
+  camera.camera.fov = view.fov;
+  positionHotspots();
+});
+
+/* ---------- boot ---------- */
+(async () => {
+  try {
+    app.start();
+    TOUR = await loadTour();
+    if (!TOUR.nodes || !TOUR.nodes.length) throw new Error('tour manifest has no nodes');
+    nodeById = new Map(TOUR.nodes.map((n) => [n.id, n]));
+    document.title = `SODAR — ${TOUR.title || 'panorama tour'}`;
+    const start = qs.get('node') || TOUR.start_node || TOUR.nodes[0].id;
+    statusMsg.textContent = 'Loading panorama…';
+    await showNode(start, { fade: false });
+  } catch (e) {
+    fail(e.message, e);
+  }
+})();
+</script>
+</body>
+</html>

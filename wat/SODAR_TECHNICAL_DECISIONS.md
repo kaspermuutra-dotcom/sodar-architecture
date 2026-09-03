@@ -91,19 +91,39 @@ in-process fallback and `PTGuiStitcher` evaluated if quality demands it.
 `ViewerBuilder`, using its virtual-tour + markers plugins. **Pannellum** kept as
 the ultra-light fallback.
 
+**Verdict (2026-09-03, confirmed by measured bake-off E-VIEW):** stands. A
+parallel session built a working bespoke viewer on the pinned PlayCanvas engine
+(`viewer/`) as a measured challenge. Result: PlayCanvas's engine is **595 KB gz
+vs PSV's 318 KB of libs → +33% transferred bytes to first interactive frame**
+(registered gate: ≤ +10%, because R7 is the named risk), and the bespoke viewer
+is **385 LOC vs ~48** for the PSV shell on the maintained `VirtualTourPlugin`.
+PlayCanvas fails the byte gate; under the pre-registered rule the phone
+perf/gyro metrics (pending a device) cannot overturn that. `viewer/` is retained
+as the **E3 splat-viewer reference** (see TD-007). **Confidence: high** on the
+selection; **medium** that PSV clears R7 on a real phone at 6–8K without tiling —
+the 535 KB panorama alone blows the "< ~2 s on 3G" target for *either* viewer, so
+**tiled / progressive panorama loading is required regardless and is
+viewer-agnostic.**
+
+**Output contract:** [`schemas/tour.v0.json`](../../schemas/tour.v0.json) is the
+canonical `ViewerBuilder.build()` output (snake_case `start_node` / `hotspots` /
+`to`, degrees as numbers, consistent with the `rooms` table). Every viewer
+template consumes this one file.
+
 - **Candidates:** Photo Sphere Viewer · Pannellum · Marzipano (Google) ·
-  build direct on Three.js.
+  build direct on Three.js · **PlayCanvas engine (added + measured 2026-09, E-VIEW — rejected on bytes).**
 - **Evidence:** all three support equirectangular panoramas, hotspots, and
   multi-scene tours under permissive licences. PSV has "the most advanced marker
   system with HTML content support"; Pannellum is "21KB gzipped … zero
   dependencies"; Marzipano ships a tour builder but is less actively maintained.
 - **Recommendation:** PSV for feature headroom (markers, transitions, plugin
   API), Pannellum if bundle size / simplicity wins in testing.
-- **Confidence:** high (mature, widely deployed libraries).
+- **Confidence:** high (mature, widely deployed libraries; bake-off confirmed).
 - **Cost:** $0; static hosting.
 - **Latency:** first panorama interactive in < ~2 s on broadband for a
-  ~6–8 K equirectangular JPEG; use tiled/multiresolution output if load time
-  fails AC.
+  ~6–8 K equirectangular JPEG; **E-VIEW measured a single 6K panorama at ~535 KB
+  → ~11 s at Fast-3G downlink for the image alone**, so tiled / multiresolution
+  output is not optional for portal-visitor conditions.
 - **Data requirements:** equirectangular images; a scene graph (JSON) with
   hotspot positions.
 - **Failure modes:** large panoramas slow on mid-range phones (portal visitors,
@@ -204,6 +224,13 @@ protocol a real agent will actually follow.
   usually fails to correctly perform COLMAP" and textureless indoor surfaces
   cause "camera-near floaters" and degenerate poses. Browser playback is solved
   (SuperSplat/PlayCanvas, Spark + `.spz`, 5–10× smaller than PLY).
+- **Splat viewer (assessed 2026-09, PlayCanvas):** the PlayCanvas engine /
+  SuperSplat is the standard `.spz`/`.ply` splat viewer and is the right tool
+  *here* — behind `GaussianSplatReconstructor`, only if E3 greenlights. It is
+  **not** a candidate for the Phase-1 panorama viewer (see TD-003): full
+  game-engine runtime (~1–2 MB) worsens R7, and tour/hotspot infrastructure that
+  Photo Sphere Viewer gives for free would be hand-rolled. Revisit at E3, not
+  before.
 - **Recommendation:** run E3 on a GS-friendly capture; if it needs a protocol
   too strict for agents (R3), shelve as R&D and cap the product at panoramas +
   depth parallax.

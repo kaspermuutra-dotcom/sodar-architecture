@@ -1,0 +1,6 @@
+# Pinned engine — fetch with vendor/fetch-engine.sh (2.3 MB, not source)
+vendor/*.mjs
+
+# Demo panoramas — regenerate with panoramas/make_demo_panoramas.py
+panoramas/*.jpg
+panoramas/*.png

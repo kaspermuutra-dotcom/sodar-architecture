@@ -19,3 +19,6 @@ third_party/weights/
 
 # Per-machine Claude Code state (MCP trust decisions) — not shared.
 .claude/settings.local.json
+
+# generated viewer spike bundles (regenerate: scripts/psv_tour_spike.py)
+artifacts/tours/

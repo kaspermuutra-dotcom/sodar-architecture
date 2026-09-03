@@ -7,3 +7,6 @@
 [submodule "third_party/lama"]
 	path = third_party/lama
 	url = https://github.com/advimman/lama.git
+[submodule "third_party/photo-sphere-viewer"]
+	path = third_party/photo-sphere-viewer
+	url = https://github.com/mistic100/Photo-Sphere-Viewer.git

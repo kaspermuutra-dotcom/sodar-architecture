@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sodar.io/schemas/tour.v0.json",
+  "title": "SODAR connected-panorama tour manifest, version 0",
+  "description": "The output contract of ViewerBuilder.build() (build_tour.py, Phase 1 step 4): a connected equirectangular-panorama room graph. Viewer-neutral — every viewer template (Photo Sphere Viewer per TD-003; the PlayCanvas spike) consumes this same file and adapts it to its runtime shape. Angles are degrees as numbers, clockwise from the panorama's forward column; snake_case, consistent with the rest of schemas/ and the `rooms` table.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "scan_id", "start_node", "nodes"],
+  "properties": {
+    "schema_version": { "const": "tour.v0" },
+    "scan_id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string" },
+    "start_node": {
+      "type": "string",
+      "minLength": 1,
+      "description": "id of the node the viewer opens on; must be one of nodes[].id"
+    },
+    "nodes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "room", "panorama", "hotspots"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "description": "stable node id; maps to rooms.id"
+          },
+          "room": { "type": "string", "minLength": 1, "description": "display label" },
+          "panorama": {
+            "type": "string",
+            "minLength": 1,
+            "description": "equirectangular image path, relative to the bundle root"
+          },
+          "north_offset_deg": {
+            "type": "number",
+            "default": 0,
+            "description": "stitcher yaw 0 vs building north (reserved; 0 until the stitcher reports it)"
+          },
+          "initial_yaw_deg": {
+            "type": "number",
+            "default": 0,
+            "description": "camera heading on entering this node"
+          },
+          "hotspots": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["to", "label", "yaw_deg"],
+              "properties": {
+                "to": { "type": "string", "description": "target node id (a graph edge)" },
+                "label": { "type": "string", "minLength": 1 },
+                "yaw_deg": { "type": "number" },
+                "pitch_deg": { "type": "number", "default": 0 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

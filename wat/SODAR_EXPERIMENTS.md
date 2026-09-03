@@ -24,6 +24,7 @@ Run by the **Benchmark / Evaluation Agent** via `tools/` only. Artifacts go to
 | U5 | What is the minimum capture protocol an agent can follow that still yields processable input? | TD-009, capture app spec | E1 (styles), E3 |
 | U6 | Does image enhancement measurably improve perceived quality without hallucinating detail? | TD-004 | E5 |
 | U7 | What is the per-scan compute cost and latency for each reconstruction path at target quality? | unit economics, R5 | E6 |
+| U8 | Does a heavier engine (PlayCanvas) beat Photo Sphere Viewer on a real mid-range phone by enough to overturn TD-003? | TD-003, `build_tour.py` | E-VIEW |
 
 ---
 
@@ -151,10 +152,87 @@ Run by the **Benchmark / Evaluation Agent** via `tools/` only. Artifacts go to
   3DGS stays experimental regardless of E3 quality.
 - **Status:** NOT STARTED.
 
+## E-VIEW — Browser viewer: PlayCanvas vs Photo Sphere Viewer (TD-003 bake-off)
+
+- **Unknown (U8):** TD-003 picked Photo Sphere Viewer on reasoning. A parallel
+  session then built a working bespoke viewer on the pinned PlayCanvas engine
+  (`viewer/`) as a measured challenge. The harness rule forbids settling this on
+  reasoning alone.
+- **Hypothesis:** PlayCanvas does *not* beat PSV by enough on a real mid-range
+  phone to justify a ~2× engine payload and a bespoke viewer to maintain.
+- **Method:** both spikes, same phone, same two 6K panoramas
+  (`viewer/panoramas/make_demo_panoramas.py` and `scripts/psv_tour_spike.py`
+  regenerate byte-identical `living-room.jpg`), same throttle (Fast 3G / 4× CPU).
+  Serve: `viewer/serve.sh` (:8777) and
+  `python3 scripts/psv_tour_spike.py && (cd artifacts/tours/psv-spike && python3 -m http.server 8080)`.
+- **Decision rule — registered before any phone run.** Bytes-to-first-frame and
+  maintenance LOC are computable now from artifact sizes and are recorded below;
+  FPS, room-change smoothness, throttled TTI, and gyro feel need the phone and do
+  not yet exist.
+  - **Gate 1 (bytes):** PlayCanvas overturns TD-003 only if its transferred bytes
+    to first interactive frame are within **+10%** of PSV's. R7 (portal visitors
+    on mid-range phones / mobile data) is the named risk; a large fixed payload
+    penalty is disqualifying on its own.
+  - **Gate 2 (phone perf):** *and* PlayCanvas must **clearly win** ≥ 2 of
+    {sustained drag FPS, frame drops on room change, gyro feel on real sensors},
+    losing none.
+  - Fail either gate → **TD-003 stands**, PSV is the `ViewerBuilder`, `viewer/`
+    becomes the **E3 splat-viewer reference** (per TD-007).
+  - Maintenance LOC is a tiebreaker only, applied if Gates 1–2 are ambiguous.
+- **Results:**
+  - **Bytes to first interactive frame** (gzip; one panorama; shell + JS/CSS +
+    `tour.json` + first `.jpg`):
+    - PSV: three.js 258 KB + PSV core 45 KB + virtual-tour 11 KB + CSS 4 KB +
+      shell ~1 KB + pano 535 KB ≈ **≈ 854 KB**
+    - PlayCanvas: engine 595 KB + shell ~4 KB + pano 535 KB ≈ **≈ 1,134 KB**
+    - PlayCanvas is **+33%** (+280 KB), driven entirely by the engine (595 KB gz
+      vs PSV's 318 KB of libs). **Gate 1: FAIL.**
+    - Fairness notes: PSV's 318 KB is 5 requests to jsDelivr (third-party origin,
+      CSP + supply-chain concern) — the shipped bundle must self-host these to be
+      "self-contained" (TD-003), which with brotli lands ~270 KB, still well under
+      PlayCanvas. PlayCanvas's 595 KB is one repo-pinned file (better CSP posture,
+      ~2× the bytes). At 6K, the 535 KB panorama dominates both and blows the
+      TD-003 "< ~2 s" target on 3G regardless of viewer → **6–8K panoramas need
+      tiling / progressive load, a viewer-agnostic task.**
+  - **Maintenance LOC:** PlayCanvas viewer `viewer/index.html` = **385 lines** of
+    bespoke inverted-sphere render + hand-rolled hotspot projection + gyro math
+    (its README: "the math is provisional"). PSV spike shell = **~48 lines** on
+    the maintained `VirtualTourPlugin`. **~8× in PSV's favour.**
+  - **FPS / room-change drops / throttled TTI / gyro feel:** *PENDING — needs the
+    phone.* Note: PlayCanvas's engine is ~2× the parse/compile CPU on a
+    4×-throttled device (hurts TTI); the workload (one textured sphere + a few
+    DOM markers) is trivially GPU-bound so a large FPS gap either way is unlikely;
+    PSV's `GyroscopePlugin` is maintained where PlayCanvas's gyro is self-flagged
+    provisional.
+- **Verdict:** **PlayCanvas fails Gate 1 (+33% bytes vs a +10% ceiling).** Under
+  the registered rule the phone-perf metrics cannot overturn this, so **TD-003
+  stands: Photo Sphere Viewer is the `ViewerBuilder`.** `viewer/` is retained as
+  the **E3 splat-viewer reference** (TD-007 — PlayCanvas/SuperSplat is the splat
+  playback path). The phone run is still worth doing to confirm PSV clears
+  R7 / AC-4 on a real device (the original E2-adjacent question), but it is no
+  longer a viewer *selection* question.
+- **Contract:** `schemas/tour.v0.json` is now the canonical `ViewerBuilder.build()`
+  output — the `viewer/README.md` shape (snake_case, `start_node` / `hotspots` /
+  `to` / degrees-as-numbers, consistent with `rooms`). `scripts/psv_tour_spike.py`
+  consumes it and adapts to PSV in-browser. **Follow-up for the psv_viewer.py
+  owner:** its input/output currently uses `startNodeId` / `links` / `nodeId` —
+  converge to `tour.v0`.
+- **Status:** DECIDED on bytes + LOC (2026-09-03). Phone perf PENDING (cannot
+  change the verdict; run only to confirm PSV clears R7 / AC-4 on a device).
+  Runbook — one mid-range phone on the LAN, DevTools remote-inspect with Fast 3G
+  + 4× CPU throttle:
+  1. `python3 scripts/psv_tour_spike.py`
+  2. terminal A: `cd artifacts/tours/psv-spike && python3 -m http.server 8080`
+  3. terminal B: `viewer/serve.sh` (:8777)
+  4. phone → `http://<mac-LAN-ip>:8080` and `:8777`; record from the Network +
+     Performance panels: transferred bytes to first frame, TTI, 10 s drag-FPS
+     trace, frame count on a room switch, and gyro drift/lag by hand.
+  5. paste the five numbers per viewer into the E-VIEW results table.
+
 ---
 
 ## Result log
 
 | Date | Exp | Result summary | Decision taken | Lesson → |
 |---|---|---|---|---|
-| — | — | (none yet) | — | — |
+| 2026-09-03 | E-VIEW | PlayCanvas engine 595 KB gz vs PSV libs 318 KB → +33% bytes to first frame (gate: +10%); PlayCanvas viewer 385 LOC vs PSV 48. Phone FPS/gyro pending, non-overturning. | **TD-003 stands — Photo Sphere Viewer.** `viewer/` → E3 splat reference. `schemas/tour.v0.json` canonical. | 6–8K panoramas need tiling regardless of viewer; decide payload-sensitive UI choices on transferred bytes first. |
