@@ -1,17 +1,8 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "Sodar",
-  description: "Sodar — coming soon.",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+// Root layout is intentionally a pass-through: the real <html>/<body> live in
+// app/[locale]/layout.tsx so `lang` tracks the active locale (next-intl App
+// Router pattern).
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return children;
 }

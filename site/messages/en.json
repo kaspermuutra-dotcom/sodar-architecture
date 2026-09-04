@@ -1,0 +1,42 @@
+{
+  "Meta": {
+    "title": "Sodar — AI walkthroughs that close more deals",
+    "description": "Scan a property with your phone. Sodar turns guided room captures into an immersive, listing-ready walkthrough, previews the first two rooms free, and publishes straight into your CRM listing."
+  },
+  "Nav": {
+    "product": "Product",
+    "integrations": "Integrations",
+    "partners": "Partners",
+    "pricing": "Pricing",
+    "signIn": "Log in",
+    "getStarted": "Scan a property"
+  },
+  "Hero": {
+    "eyebrow": "Sodar",
+    "headline": "AI walkthroughs that close more deals.",
+    "sub": "Open sodar.io on your phone, walk the property once, and get an immersive walkthrough buyers can step inside — published into the listing you already have.",
+    "ctaPrimary": "Scan your first property",
+    "ctaSecondary": "See how it works"
+  },
+  "ScanReveal": {
+    "flatLabel": "Phone capture",
+    "revealedLabel": "Sodar walkthrough"
+  },
+  "Footer": {
+    "tagline": "Every listing, scanned into a place buyers can walk through.",
+    "columns": {
+      "product": { "title": "Product", "items": [["Product", "/product"], ["How it works", "/product#pipeline"], ["Workspace preview", "/terminal"], ["Security", "/security"]] },
+      "integrations": { "title": "Integrations", "items": [["Integration hub", "/integrations"], ["CRM publishing", "/integrations#crm"], ["Embedded viewer", "/integrations#embed"], ["API access", "/integrations#api"]] },
+      "partners": { "title": "Partners", "items": [["Partner program", "/partners"], ["Become a partner", "/partners#apply"], ["Partner dashboard", "/partners#dashboard"]] },
+      "company": { "title": "Company", "items": [["About", "/about"], ["Careers", "/careers"], ["Field notes", "/blog"], ["Enterprise", "/enterprise"]] },
+      "legal": { "title": "Legal", "items": [["Privacy", "/legal/privacy"], ["Terms", "/legal/terms"], ["Data processing", "/legal/data-processing"], ["Cookies", "/legal/cookies"]] }
+    },
+    "language": "Language",
+    "social": "Elsewhere",
+    "copyright": "Sodar Technologies OÜ"
+  },
+  "Scaffold": {
+    "phase": "Phase 1 — design & structure",
+    "note": "Payments, CRM OAuth, and the AI pipeline are mocked placeholder states. No backend calls."
+  }
+}

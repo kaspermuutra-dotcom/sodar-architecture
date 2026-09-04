@@ -1,5 +1,12 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
-const nextConfig: NextConfig = {};
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
-export default nextConfig;
+const nextConfig: NextConfig = {
+  outputFileTracingRoot: process.cwd(),
+  poweredByHeader: false,
+  compress: true,
+};
+
+export default withNextIntl(nextConfig);
