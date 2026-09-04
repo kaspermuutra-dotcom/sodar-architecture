@@ -1,0 +1,1002 @@
+{
+  "Meta": {
+    "title": "Sodar — KI-Rundgänge, die mehr Abschlüsse bringen",
+    "description": "Scannen Sie eine Immobilie mit dem Smartphone. Sodar verwandelt geführte Raumaufnahmen in einen immersiven, exposéfertigen Rundgang, zeigt die ersten zwei Räume kostenlos als Vorschau und veröffentlicht direkt in Ihrem CRM-Inserat."
+  },
+  "Nav": {
+    "product": "Produkt",
+    "integrations": "Integrationen",
+    "partners": "Partner",
+    "pricing": "Preise",
+    "signIn": "Anmelden",
+    "getStarted": "Immobilie scannen",
+    "menu": "Menü umschalten",
+    "home": "Sodar Startseite"
+  },
+  "Hero": {
+    "headline1": "KI-Rundgänge,",
+    "headline2": "die mehr Abschlüsse bringen.",
+    "sub": "Öffnen Sie sodar.io auf dem Smartphone, gehen Sie einmal durch die Immobilie und erhalten Sie einen immersiven Rundgang, den Käufer betreten können — veröffentlicht im Inserat, das Sie bereits haben.",
+    "ctaPrimary": "Erste Immobilie scannen",
+    "ctaSecondary": "So funktioniert es",
+    "status": [
+      "AUFNAHME ▸ Wohnzimmer · 12/12 Bilder · Abdeckung 98 %",
+      "ASSISTENT ▸ 4° nach unten neigen · halten · gutes Licht",
+      "STITCHING ▸ Küche · equirektangular · 8192×4096",
+      "VORSCHAU ▸ 2 von 6 Räumen fertig · kostenlos",
+      "ANGEBOT ▸ Einmalpreis berechnet · 6 Räume · 14 Panoramen",
+      "VERÖFFENTLICHT ▸ CRM-Inserat #48213 · Viewer eingebettet"
+    ]
+  },
+  "Marquee": {
+    "rooms": [
+      "Wohnzimmer",
+      "Küche",
+      "Schlafzimmer",
+      "Bad",
+      "Flur",
+      "Balkon",
+      "Arbeitszimmer",
+      "Esszimmer",
+      "Gästezimmer",
+      "Eingang",
+      "Terrasse",
+      "Garage"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "These",
+    "lines": [
+      "Kein Exposéfoto ist je selbst durch die Wohnung gegangen.",
+      "Käufer überspringen, was sie nicht betreten können.",
+      "Also haben wir aus einem Smartphone einen Scanner gemacht,",
+      "und aus einem Scan einen Ort."
+    ],
+    "body": "Ein Makler öffnet sodar.io auf dem Smartphone, geht einmal durch jeden Raum, während ein KI-Aufnahmeassistent die Aufnahme anleitet, und erhält einen Rundgang, durch den sich Käufer bewegen können. Die ersten zwei Räume gibt es kostenlos als Vorschau. Eine Zahlung vervollständigt die Immobilie. Die Veröffentlichung im CRM-Inserat ist ein Klick."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "Räume kostenlos",
+        "note": "Funktionierende Vorschau vor jeder Zahlung"
+      },
+      {
+        "label": "Einmalpreis",
+        "note": "Auf die Immobilie zugeschnitten. Kein Abo"
+      },
+      {
+        "label": "Partnermarge",
+        "note": "Für CRMs, die Sodar vertreiben"
+      },
+      {
+        "label": "pro Raum",
+        "note": "Panorama-Aufnahme live von KI geführt"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Scrollen",
+    "frames": "/12 Bilder",
+    "assistantLabel": "Aufnahmeassistent",
+    "assist": [
+      "4° nach unten neigen",
+      "Still halten…",
+      "Gutes Licht. Weiterdrehen",
+      "Überlappung 40 % — langsamer",
+      "Raum abgeschlossen"
+    ],
+    "rooms": [
+      "Wohnzimmer",
+      "Küche",
+      "Schlafzimmer",
+      "Bad",
+      "Arbeitszimmer",
+      "Balkon"
+    ],
+    "ready": "Fertig",
+    "locked": "Gesperrt",
+    "photosOnly": "Nur Fotos",
+    "panels": {
+      "capture": {
+        "label": "Aufnahme",
+        "title": "Einmal durch die Immobilie gehen.",
+        "body": "Öffnen Sie sodar.io auf dem Smartphone. Die Kamera führt Sie Raum für Raum, während der KI-Aufnahmeassistent Abdeckung, Position und Licht korrigiert — live, während Sie noch vor Ort stehen."
+      },
+      "preview": {
+        "label": "Vorschau",
+        "title": "Zwei Räume, fertig, kostenlos.",
+        "body": "Sodar verarbeitet die ersten Aufnahmen zu einem funktionierenden Rundgang der ersten zwei Räume. Sie erleben die fertige Qualität, bevor Sie etwas bezahlen."
+      },
+      "unlock": {
+        "label": "Freischalten",
+        "title": "Ein Preis. Eine Zahlung.",
+        "body": "Sodar berechnet einen Einmalpreis für die gesamte Immobilie — Größe, Anzahl der Panoramen, Verarbeitung, Hosting und Wartung sind enthalten. Einmal über Stripe bezahlen, und die restlichen Räume werden verarbeitet."
+      },
+      "publish": {
+        "label": "Veröffentlichen",
+        "title": "Im Inserat, das Sie bereits haben.",
+        "body": "CRM verbinden, Inserat auswählen, veröffentlichen. Der Rundgang lebt im Inserat über den eingebetteten Sodar-Viewer — und Sie können die freigegebenen Darstellungseinstellungen jederzeit anpassen."
+      }
+    },
+    "quoteLabel": "Angebot · 84 Kesklinn Ave",
+    "quoteRows": [
+      {
+        "k": "6 Räume · 14 Panoramen",
+        "v": "enthalten"
+      },
+      {
+        "k": "Verarbeitung & KI-Rechenleistung",
+        "v": "enthalten"
+      },
+      {
+        "k": "Speicher & Viewer-Hosting",
+        "v": "12 Monate"
+      },
+      {
+        "k": "Wartung",
+        "v": "enthalten"
+      }
+    ],
+    "oneTime": "einmalig · kein Abo",
+    "paidLabel": "Bezahlt",
+    "paidBody": "Die restlichen 4 Räume werden verarbeitet. Sie werden benachrichtigt, sobald der Rundgang fertig ist.",
+    "pay": "Mit Stripe bezahlen",
+    "paying": "Verbindung zu Stripe…",
+    "mockNote": "Demo-Checkout — es wird keine Karte belastet.",
+    "crmHeader": "Ihr CRM · Inserat #48213",
+    "publishBtn": "Rundgang veröffentlichen",
+    "publishedBtn": "Veröffentlicht",
+    "viewerBadge": "Sodar-Viewer · 360°",
+    "listingMeta": "3 Zimmer · 78 m² · 395.000 €",
+    "status": "Status",
+    "statusPublished": "veröffentlicht",
+    "statusReady": "bereit",
+    "viewer": "Viewer",
+    "viewerEmbedded": "eingebettet",
+    "opened": "geöffnet",
+    "openedValue": "128 Besucher"
+  },
+  "Capabilities": {
+    "kicker": "Was geliefert wird",
+    "intro": "Drei verbundene Oberflächen — eine öffentliche Website, ein geführter mobiler Scan und ein Makler-Workspace — hinter einem Rundgang.",
+    "title": "Ein Scan, sieben Dinge, die ein Inserat gewinnt.",
+    "items": [
+      {
+        "title": "Geführte Smartphone-Aufnahme",
+        "desc": "Kein Stativ, kein Fotograf. Die Kamera führt Sie als Panorama durch jeden Raum, direkt aus dem Browser."
+      },
+      {
+        "title": "KI-Aufnahmeassistent",
+        "desc": "Live-Anleitung zu Abdeckung, Position und Bildqualität, während Sie noch in der Immobilie sind."
+      },
+      {
+        "title": "Kostenlose Vorschau von zwei Räumen",
+        "desc": "Ein funktionierender Rundgang der ersten zwei Räume vor jeder Zahlung, damit Sie die fertige Qualität zuerst beurteilen."
+      },
+      {
+        "title": "Einmalpreis pro Immobilie",
+        "desc": "Ein einziges Angebot, zugeschnitten auf die Immobilie — Panoramen, Rechenleistung, Hosting und Wartung inklusive."
+      },
+      {
+        "title": "CRM-Veröffentlichung",
+        "desc": "CRM verbinden, Inserat auswählen, veröffentlichen. Der Rundgang bleibt über den eingebetteten Viewer im Inserat."
+      },
+      {
+        "title": "Freigegebene Darstellung",
+        "desc": "Passen Sie das Aussehen des Viewers innerhalb der freigegebenen Einstellungen an, damit es zum Inserat passt."
+      },
+      {
+        "title": "Makler-Workspace",
+        "desc": "Immobilien verwalten, Verarbeitungs- und Veröffentlichungsstatus verfolgen und sehen, wie viele Besucher den Viewer geöffnet haben."
+      }
+    ],
+    "cta": {
+      "title": "Immobilie scannen",
+      "desc": "Zwei Räume kostenlos. Starten Sie auf dem Smartphone.",
+      "start": "Starten"
+    }
+  },
+  "Integration": {
+    "kicker": "Dort, wo Sie bereits arbeiten",
+    "intro": "Verbinden Sie das CRM, das Sie bereits nutzen. Inserat auswählen. Veröffentlichen. Der Rundgang erscheint darin über einen eingebetteten Viewer oder iframe — nichts zu kopieren, nichts zu hosten.",
+    "title": "Fügen Sie Sodar einfach Ihrem CRM hinzu.",
+    "crmHeader": "Ihr CRM · Inserate",
+    "published": "Rundgang veröffentlicht",
+    "addWalkthrough": "+ Rundgang hinzufügen",
+    "listings": [
+      {
+        "name": "84 Kesklinn Ave",
+        "meta": "3 Zimmer · 395.000 €"
+      },
+      {
+        "name": "12 Harbour Res.",
+        "meta": "2 Zimmer · 260.000 €"
+      },
+      {
+        "name": "7 Nõmme Villa",
+        "meta": "6 Zimmer · 890.000 €"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Illustrativ · noch nicht gemessen",
+    "title": "Der Unterschied, den ein Scan macht.",
+    "beforeLabel": "Vorher",
+    "afterLabel": "Nachher · mit Sodar",
+    "before": [
+      "Fotografen buchen",
+      "2–3 Tage warten",
+      "Flache Fotos",
+      "Käufer scrollen vorbei",
+      "Nichts gemessen"
+    ],
+    "after": [
+      "Ein Smartphone, ein Rundgang",
+      "Vorschau in Minuten",
+      "Immersiver Rundgang",
+      "Käufer treten ein",
+      "Jedes Öffnen des Viewers gezählt"
+    ]
+  },
+  "Workspace": {
+    "kicker": "Zurück am Schreibtisch",
+    "intro": "Jede gescannte Immobilie, ihr Verarbeitungs- und Veröffentlichungsstatus und wie viele Besucher den Viewer geöffnet haben — in einem Workspace pro Makler.",
+    "title": "Ihre Immobilien, immer im Blick.",
+    "cta": "Makler-Workspace ansehen",
+    "mock": {
+      "title": "Workspace",
+      "live": "Live-Vorschau",
+      "properties": "Immobilien",
+      "cols": [
+        "Immobilie",
+        "Status",
+        "Viewer geöffnet",
+        "Veröffentlichung"
+      ],
+      "statuses": {
+        "published": "Veröffentlicht",
+        "processing": "In Verarbeitung",
+        "preview": "Vorschau",
+        "capturing": "Aufnahme"
+      },
+      "rows": [
+        {
+          "name": "84 Kesklinn Ave",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "12 Harbour Res.",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "7 Nõmme Villa",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 Räume"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 Räume kostenlos"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "status": "capturing",
+          "views": "—",
+          "pub": "auf dem Smartphone"
+        }
+      ],
+      "engagement": "Raum-Engagement · 84 Kesklinn Ave",
+      "rooms": [
+        "Wohnzimmer",
+        "Küche",
+        "Schlafzimmer",
+        "Bad",
+        "Balkon"
+      ],
+      "processing": "Verarbeitung",
+      "jobs": [
+        {
+          "name": "7 Nõmme Villa",
+          "step": "Stitching · Schlafzimmer",
+          "n": "4 / 6"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "step": "Vorschau fertig",
+          "n": "2 / 2"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "step": "Aufnahme am Smartphone",
+          "n": "—"
+        }
+      ],
+      "week": "Diese Woche",
+      "weekTitle": "701 Viewer-Öffnungen",
+      "weekSub": "über 2 veröffentlichte Rundgänge"
+    }
+  },
+  "Scans": {
+    "kicker": "Scans dieser Woche",
+    "title": "Jede Art von Inserat wird gleich gescannt.",
+    "items": [
+      {
+        "label": "Wohnung",
+        "meta": "3 Zimmer · Kesklinn"
+      },
+      {
+        "label": "Neubau",
+        "meta": "4 Zimmer · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 Zimmer · Pirita"
+      },
+      {
+        "label": "Mietobjekt",
+        "meta": "1 Zimmer · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "Gebaut, um mit Inseraten vertraut zu werden",
+    "title": "Compliance ist kein Nachgedanke.",
+    "items": [
+      {
+        "title": "Kamerazugriff, ausdrücklich",
+        "desc": "Sodar fragt die Gerätekamera nur an, wenn Sie einen Scan starten, und nutzt sie nur für diese Aufnahme."
+      },
+      {
+        "title": "KI-Kennzeichnung",
+        "desc": "Jeder veröffentlichte Rundgang trägt einen klaren, sichtbaren Hinweis, dass es sich um eine KI-verarbeitete Rekonstruktion handelt."
+      },
+      {
+        "title": "Sicherheit",
+        "desc": "Von Anfang an auf SOC 2 und DSGVO ausgerichtet — verschlüsselter Speicher, begrenzte CRM-Zugangsdaten, Audit-Logs pro Immobilie."
+      },
+      {
+        "title": "Dateneigentum beim Makler",
+        "desc": "Aufnahmen, Rundgänge und Engagement-Daten gehören dem Makler. Wer Sodar trennt, exportiert alles."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "Für CRM-Anbieter",
+    "title": "Vertreiben Sie Sodar an Ihr Maklernetzwerk. Behalten Sie 15 %.",
+    "body": "CRM-Partner stellen Sodar ihren Maklern zur Verfügung und erhalten 15 % Marge auf qualifizierte Rundgang-Käufe — kein Minimum, automatisch ausgezahlt.",
+    "cta": "Partnerprogramm ansehen"
+  },
+  "PricingTeaser": {
+    "kicker": "Einfach nach Design",
+    "title1": "Eine Immobilie.",
+    "title2": "Ein Preis. Einmal.",
+    "body": "Sehen Sie die ersten zwei Räume kostenlos. Dann nennt Sodar einen einzigen Einmalpreis für die Fertigstellung der Immobilie — kein Abo, kein Jahresvertrag.",
+    "cta": "So wird der Preis berechnet",
+    "card": {
+      "label": "Typische 3-Zimmer-Wohnung",
+      "price": "99–149 €",
+      "note": "einmalig · Angebot nach der kostenlosen Vorschau",
+      "factors": [
+        "Größe der Immobilie",
+        "Aufgenommene Panoramen",
+        "Verarbeitung & KI-Rechenleistung",
+        "Speicher & Viewer-Hosting",
+        "Laufende Wartung"
+      ],
+      "cta": "Immobilie scannen"
+    }
+  },
+  "Language": {
+    "kicker": "Wo auch immer Ihre Käufer suchen",
+    "title1": "Ein Rundgang.",
+    "title2": "Jede Sprache, die ein Käufer liest.",
+    "body": "Einmal veröffentlichen — Raumbezeichnungen und Bedienelemente des Viewers folgen der Sprache, die der Käufer eingestellt hat. Website und Viewer sind heute in sechzehn Sprachen verfügbar."
+  },
+  "Switcher": {
+    "search": "Sprachen durchsuchen…",
+    "none": "Keine passende Sprache.",
+    "active": "Aktiv",
+    "comingSoon": "Bald verfügbar",
+    "choose": "Sprache wählen",
+    "notice": "{language} ist noch nicht übersetzt — Inserate werden bis dahin auf Englisch angezeigt."
+  },
+  "Footer": {
+    "tagline": "Jedes Inserat, gescannt zu einem Ort, den Käufer durchlaufen können.",
+    "columns": {
+      "product": {
+        "title": "Produkt",
+        "items": [
+          [
+            "Produkt",
+            "/product"
+          ],
+          [
+            "So funktioniert es",
+            "/product#pipeline"
+          ],
+          [
+            "Workspace-Vorschau",
+            "/terminal"
+          ],
+          [
+            "Sicherheit",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Integrationen",
+        "items": [
+          [
+            "Integrations-Hub",
+            "/integrations"
+          ],
+          [
+            "CRM-Veröffentlichung",
+            "/integrations#crm"
+          ],
+          [
+            "Eingebetteter Viewer",
+            "/integrations#embed"
+          ],
+          [
+            "API-Zugang",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "Partner",
+        "items": [
+          [
+            "Partnerprogramm",
+            "/partners"
+          ],
+          [
+            "Partner werden",
+            "/partners#apply"
+          ],
+          [
+            "Partner-Dashboard",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Unternehmen",
+        "items": [
+          [
+            "Über uns",
+            "/about"
+          ],
+          [
+            "Karriere",
+            "/careers"
+          ],
+          [
+            "Feldnotizen",
+            "/blog"
+          ],
+          [
+            "Enterprise",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "items": [
+          [
+            "Datenschutz",
+            "/legal/privacy"
+          ],
+          [
+            "AGB",
+            "/legal/terms"
+          ],
+          [
+            "Auftragsverarbeitung",
+            "/legal/data-processing"
+          ],
+          [
+            "Cookies",
+            "/legal/cookies"
+          ]
+        ]
+      }
+    },
+    "language": "Sprache",
+    "social": "Anderswo",
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallinn, Estland · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Produkt — Sodar",
+    "metaDesc": "Wie aus einem geführten Smartphone-Scan ein immersiver, exposéfertiger Rundgang wird.",
+    "eyebrow": "Das Produkt",
+    "title": "Ein Smartphone, ein Rundgang, ein Ort, den Käufer betreten können.",
+    "sub": "Sodar verwandelt geführte Immobilienscans in immersive, exposéfertige Rundgänge — aufgenommen mit dem Smartphone, das Sie ohnehin dabeihaben, veröffentlicht im CRM, das Sie ohnehin nutzen.",
+    "ctaPrimary": "Erste Immobilie scannen",
+    "ctaSecondary": "Workspace ansehen",
+    "flatLabel": "Smartphone-Aufnahme",
+    "revealedLabel": "Sodar-Rundgang",
+    "stagesKicker": "Vom Gang zum Rundgang",
+    "stagesTitle": "Drei Stufen, eine Pipeline.",
+    "stages": [
+      {
+        "label": "Aufnahme",
+        "sub": "Smartphone · Browser · Kamerazugriff",
+        "desc": "Jeder Raum wird als Panorama aufgenommen, mit Live-Anleitung durch den KI-Aufnahmeassistenten."
+      },
+      {
+        "label": "Verarbeitung",
+        "sub": "Stitching · Verbesserung · Verknüpfung",
+        "desc": "Panoramen werden zusammengefügt, bereinigt und zu einem einzigen Rundgang verknüpft. Die ersten zwei Räume kommen kostenlos zurück."
+      },
+      {
+        "label": "Veröffentlichung",
+        "sub": "CRM · eingebetteter Viewer · Darstellung",
+        "desc": "CRM verbinden, Inserat auswählen, veröffentlichen. Der Viewer lebt im Inserat; Sie stimmen seine freigegebene Darstellung ab."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Testen Sie es an einer echten Immobilie",
+      "title": "Zwei Räume kostenlos als Vorschau. Einmal für den Rest zahlen.",
+      "sub": "Öffnen Sie sodar.io auf dem Smartphone und starten Sie einen Scan — keine Karte nötig, bis Sie den vollständigen Rundgang freischalten.",
+      "label": "Erste Immobilie scannen"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Preise — Sodar",
+    "metaDesc": "Einmalpreis pro Immobilie, angeboten nach einer kostenlosen Vorschau von zwei Räumen. Mengenpreise für Maklerbüros, 15 % Marge für CRM-Partner.",
+    "eyebrow": "Einfach nach Design",
+    "title": "Eine Immobilie. Ein Preis. Einmal.",
+    "sub": "Zwei Räume kostenlos ansehen, dann einen einzigen Einmalpreis zahlen, der auf die Immobilie zugeschnitten ist. Mengenpreise für Maklerbüros, eine feste Marge von 15 % für CRM-Partner.",
+    "badge": "Die meisten Maklerbüros",
+    "tiers": [
+      {
+        "name": "Pro Immobilie",
+        "price": "Ab 99 €",
+        "unit": "einmalig, Angebot nach der kostenlosen Vorschau",
+        "desc": "Für Makler, die Inserate einzeln scannen.",
+        "features": [
+          "Geführte Smartphone-Aufnahme + KI-Assistent",
+          "Die ersten zwei Räume kostenlos als Vorschau",
+          "Vollständiger Rundgang nach einer Stripe-Zahlung",
+          "CRM-Veröffentlichung & eingebetteter Viewer",
+          "Workspace mit Status & Viewer-Öffnungen"
+        ],
+        "cta": "Erste Immobilie scannen"
+      },
+      {
+        "name": "Maklerbüro",
+        "price": "Mengenpreis",
+        "unit": "pro Immobilie, sinkend mit dem Volumen",
+        "desc": "Für Büros, die Dutzende Inserate pro Monat veröffentlichen.",
+        "features": [
+          "Alles aus „Pro Immobilie“",
+          "Büroweite Workspace-Übersicht",
+          "Bevorzugte Verarbeitung",
+          "Dedizierte CRM-Einrichtung",
+          "Viewer mit Co-Branding"
+        ],
+        "cta": "Mit dem Vertrieb sprechen"
+      },
+      {
+        "name": "CRM-Partner",
+        "price": "15 %",
+        "unit": "Marge auf qualifizierte Käufe",
+        "desc": "Für CRM-Anbieter, die Sodar an ihre Makler vertreiben.",
+        "features": [
+          "Sodar direkt in Ihrer Plattform",
+          "Partner-Dashboard",
+          "Monatliche automatische Auszahlung",
+          "Kein Mindestvolumen"
+        ],
+        "cta": "Als Partner bewerben"
+      }
+    ],
+    "factorsKicker": "So entsteht das Angebot",
+    "factorsTitle": "Nach Immobilie bepreist, nicht nach Tarif.",
+    "factors": [
+      {
+        "title": "Größe der Immobilie",
+        "desc": "Wohnfläche und Anzahl der aufgenommenen Räume."
+      },
+      {
+        "title": "Panorama-Volumen",
+        "desc": "Wie viele Panoramen der Scan erzeugt hat und in welcher Auflösung."
+      },
+      {
+        "title": "Verarbeitung",
+        "desc": "Stitching, Verbesserung und die KI-Rechenleistung hinter dem Rundgang."
+      },
+      {
+        "title": "Speicher & Hosting",
+        "desc": "Den Rundgang und seinen Viewer in Ihrem Inserat online halten."
+      },
+      {
+        "title": "Wartung",
+        "desc": "Laufende Viewer-Updates und die CRM-Integration selbst."
+      },
+      {
+        "title": "Partnermarge",
+        "desc": "Wo ein CRM-Partner Sodar vertreibt, ist seine Marge im Angebot enthalten."
+      }
+    ],
+    "faqKicker": "Fragen",
+    "faqTitle": "Preis-FAQ.",
+    "faq": [
+      {
+        "q": "Wann sehe ich den Preis?",
+        "a": "Nach der kostenlosen Vorschau. Sodar berechnet einen Einmalpreis für die Fertigstellung der Immobilie, sobald die ersten zwei Räume verarbeitet sind."
+      },
+      {
+        "q": "Ist die Vorschau wirklich kostenlos?",
+        "a": "Ja — die ersten zwei Räume werden ohne Zahlung zu einem funktionierenden Rundgang verarbeitet. Sie zahlen nur, um die Immobilie fertigzustellen und zu veröffentlichen."
+      },
+      {
+        "q": "Gibt es ein Abo?",
+        "a": "Nein. Jede Immobilie ist eine einzige Einmalzahlung über Stripe. Nichts verlängert sich."
+      },
+      {
+        "q": "Wie wird die CRM-Partnermarge ausgezahlt?",
+        "a": "Automatisch, monatlich, auf qualifizierte Rundgang-Käufe von Maklern auf der Plattform des Partners."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Früher Zugang",
+      "title": "Ihr nächstes Inserat verdient mehr als Fotos.",
+      "sub": "Wir nehmen zuerst eine kleine Gruppe vorausschauender Makler auf.",
+      "label": "Frühen Zugang anfragen"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Workspace-Vorschau — Sodar",
+    "metaDesc": "Eine öffentliche Vorschau des Makler-Workspace ohne Anmeldung. Keine echten Daten.",
+    "eyebrow": "Öffentliche Vorschau · kein Login, keine echten Daten",
+    "title": "Jede Immobilie, ihr Status und wer sie geöffnet hat.",
+    "sub": "Dies ist eine statische Vorschau des Workspace, den jeder Makler erhält — Immobilien, Verarbeitungs- und Veröffentlichungsstatus und wie viele Besucher jeden Rundgang-Viewer geöffnet haben.",
+    "cta": {
+      "eyebrow": "Ihrer, sobald Sie veröffentlichen",
+      "title": "Ihr Workspace beginnt leer — bis zu Ihrem ersten Scan.",
+      "sub": "Scannen Sie eine Immobilie, und echte Zahlen ersetzen diese Vorschau.",
+      "label": "Erste Immobilie scannen"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "Partner — Sodar",
+    "metaDesc": "CRM-Plattformen verdienen eine feste Marge von 15 %, wenn sie Sodar an ihr Maklernetzwerk vertreiben.",
+    "eyebrow": "Für CRM-Plattformen",
+    "title": "Vertreiben Sie Sodar an Ihre Makler. Behalten Sie 15 %.",
+    "sub": "Eine feste Marge auf jeden qualifizierten Rundgang, den die Makler Ihrer Plattform kaufen — kein Minimum, automatische Auszahlung, kein Entwicklungsaufwand über einen Empfehlungslink hinaus.",
+    "apply": "Als Partner bewerben",
+    "stepsKicker": "So funktioniert es",
+    "stepsTitle": "Drei Schritte zu einer festen Marge.",
+    "steps": [
+      {
+        "title": "Bewerben",
+        "desc": "Sagen Sie uns, welche Makler oder Agenturen auf Ihrer Plattform arbeiten und ungefähr wie viele aktive Inserate."
+      },
+      {
+        "title": "Integrieren",
+        "desc": "Ein Empfehlungslink und optional ein nativer Einstiegspunkt in Ihrer App für Ihre Nutzer."
+      },
+      {
+        "title": "Verdienen",
+        "desc": "15 % jedes qualifizierten Rundgang-Kaufs eines Maklers, der über Ihre Plattform beigetreten ist, monatlich ausgezahlt."
+      }
+    ],
+    "dashKicker": "Partner-Dashboard",
+    "dashTitle": "Empfohlene Makler und Marge an einem Ort verfolgen.",
+    "dash": [
+      {
+        "label": "Empfohlene Makler",
+        "value": "142"
+      },
+      {
+        "label": "Gekaufte Rundgänge",
+        "value": "3.018"
+      },
+      {
+        "label": "Marge diesen Monat",
+        "value": "6.240 €"
+      }
+    ],
+    "applyKicker": "Loslegen",
+    "applyTitle": "Als Partner bewerben.",
+    "applyBody": "Eine kurze Bewerbung — wir prüfen die Plattform-Passung und das typische Inseratsvolumen, bevor wir einen Empfehlungslink ausstellen.",
+    "form": {
+      "company": "Firmen- / Plattformname",
+      "companyPh": "Acme CRM",
+      "email": "Geschäftliche E-Mail",
+      "emailPh": "sie@firma.de",
+      "brokers": "Aktive Makler auf Ihrer Plattform",
+      "brokersPh": "z. B. 50–200",
+      "submit": "Bewerbung absenden"
+    },
+    "faqKicker": "Fragen",
+    "faqTitle": "Partner-FAQ.",
+    "faq": [
+      {
+        "q": "Gibt es eine Mindestverpflichtung?",
+        "a": "Nein. Die Marge von 15 % gilt ab dem ersten gekauften Rundgang — ohne Volumenuntergrenze."
+      },
+      {
+        "q": "Wem gehört die Maklerbeziehung?",
+        "a": "Ihnen. Sodar rechnet direkt mit dem Makler ab und weist Ihre Marge aus; Makler bleiben Ihre Kunden."
+      },
+      {
+        "q": "Können wir den Rundgang mit Co-Branding versehen?",
+        "a": "Ja — ein Partnerkonto kann einen Co-Branding-Rahmen um den eingebetteten Rundgang legen."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Bereit, wenn Sie es sind",
+      "title": "Geben Sie Ihren Maklern einen Grund, mehr zu veröffentlichen.",
+      "sub": "Einmal bewerben — wir melden uns mit einem Empfehlungslink und Integrationshinweisen.",
+      "label": "Als Partner bewerben"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Integrationen — Sodar",
+    "metaDesc": "Verbinden Sie ein CRM oder gewähren Sie API-Zugang, damit veröffentlichte Rundgänge direkt in Ihre Inserate eingebettet werden.",
+    "eyebrow": "Integrations-Hub",
+    "title": "Einmal verbinden. Jedes weitere Inserat ist ein Klick.",
+    "sub": "Per OAuth in Ihr CRM, oder gewähren Sie Sodar begrenzten API-Zugang — Inserat auswählen, veröffentlichen, und der Rundgang ist ohne zweiten Schritt eingebettet.",
+    "connKicker": "Verbindungen",
+    "connTitle": "Wählen Sie, wie Sodar Ihre Inserate erreicht.",
+    "conns": [
+      {
+        "name": "Generisches CRM-OAuth",
+        "action": "Verbinden"
+      },
+      {
+        "name": "City24-MLS-Feed",
+        "action": "Verbinden"
+      },
+      {
+        "name": "Eigene REST-API",
+        "action": "Schlüssel erzeugen"
+      },
+      {
+        "name": "Zapier / Webhook",
+        "action": "Bald verfügbar"
+      }
+    ],
+    "notConnected": "Status: nicht verbunden",
+    "mockTitle": "Demo-Verbindung — wird in Phase 2 angebunden",
+    "embedKicker": "Kein CRM? Kein Problem",
+    "embedTitle": "Ein iframe, überall einsetzbar.",
+    "embedBody": "Jeder gekaufte Rundgang erhält eine stabile Einbettungs-URL. Fügen Sie sie in jedes Immobilienportal ein, das einen eigenen iframe akzeptiert.",
+    "cta": {
+      "eyebrow": "Bringen Sie Ihr CRM mit",
+      "title": "Sodar passt zu den Tools, die Sie bereits nutzen.",
+      "sub": "Sprechen Sie mit uns über eine prioritäre Integration oder starten Sie heute mit der generischen Einbettung.",
+      "label": "Partnerprogramm entdecken"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Enterprise — Sodar",
+    "metaDesc": "Team-Lizenzen, Massen-Scans und gemeinsame Workspace-Übersichten für Maklerbüros.",
+    "eyebrow": "Für Maklerbüros",
+    "title": "Ein Workspace für jeden Makler in Ihrem Team.",
+    "sub": "Massen-Scans, Mengenpreise und eine büroweite Engagement-Übersicht — gebaut für Maklerbüros, die Dutzende Inserate pro Monat veröffentlichen.",
+    "talk": "Mit dem Vertrieb sprechen",
+    "featKicker": "Für Teams gebaut",
+    "featTitle": "Alles aus Self-Service, plus das, was ein Büro braucht.",
+    "features": [
+      {
+        "title": "Team-Lizenzen",
+        "desc": "Jeder Makler erhält seinen eigenen Workspace; darüber liegt eine büroweite Übersicht für Manager."
+      },
+      {
+        "title": "Massen-Scans",
+        "desc": "Scannen Sie ein ganzes Portfolio an Immobilien statt einer nach der anderen."
+      },
+      {
+        "title": "Mengenpreise",
+        "desc": "Der Preis pro Immobilie sinkt mit dem monatlichen Volumen Ihres Büros."
+      },
+      {
+        "title": "Dedizierte CRM-Einrichtung",
+        "desc": "Wir übernehmen die OAuth-/API-Anbindung für den spezifischen CRM-Stack Ihres Büros."
+      },
+      {
+        "title": "Co-Branding",
+        "desc": "Versehen Sie jeden eingebetteten Rundgang mit dem Zeichen Ihres Maklerbüros."
+      },
+      {
+        "title": "Bevorzugte Verarbeitung",
+        "desc": "Enterprise-Immobilien werden vor der Self-Service-Warteschlange verarbeitet."
+      }
+    ],
+    "priceKicker": "Preise, die mit der Menge sinken",
+    "priceTitle1": "Mengenpreise,",
+    "priceTitle2": "ein Vertrag.",
+    "priceBody": "Ein individueller Preis pro Immobilie basierend auf dem Monatsvolumen, plus eine feste Lizenzgebühr pro Makler. Sprechen Sie mit dem Vertrieb für ein Angebot in der Größe Ihres Büros.",
+    "priceNote": "Illustrativ, pro Immobilie",
+    "tiers": [
+      {
+        "tier": "1–20 Immobilien / Monat",
+        "price": "ab 99 €"
+      },
+      {
+        "tier": "21–100 Immobilien / Monat",
+        "price": "ab 79 €"
+      },
+      {
+        "tier": "100+ Immobilien / Monat",
+        "price": "Individuell"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Enterprise",
+      "title": "Bringen Sie die Inserate Ihres ganzen Büros online.",
+      "sub": "Wir richten Ihre CRM-Verbindung und Lizenzstruktur gemeinsam ein.",
+      "label": "Mit dem Vertrieb sprechen"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Sicherheit & Compliance — Sodar",
+    "metaDesc": "Datenverarbeitung, KI-Kennzeichnung und Compliance-Stand der Sodar-Pipeline.",
+    "eyebrow": "Vertrauen & Compliance",
+    "title": "Gebaut, um mit dem Inserat eines anderen vertraut zu werden.",
+    "sub": "Sodar ist von Anfang an auf SOC 2 und DSGVO ausgelegt — diese Seite ist die Arbeitszusammenfassung; formale Berichte und AV-Verträge sind auf Anfrage erhältlich.",
+    "detailKicker": "Im Detail",
+    "detailTitle": "Wie Daten tatsächlich fließen.",
+    "details": [
+      {
+        "title": "Kamerazugriff",
+        "desc": "Die Gerätekamera wird nur beim Start eines Scans angefragt, mit ausdrücklicher Erlaubnis, und nur für diese Aufnahme genutzt."
+      },
+      {
+        "title": "Speicherung",
+        "desc": "Aufnahmen und gerenderte Rundgänge sind im Ruhezustand und bei der Übertragung verschlüsselt; der Zugriff ist pro Maklerkonto begrenzt."
+      },
+      {
+        "title": "KI-Kennzeichnung",
+        "desc": "Jeder öffentliche Rundgang trägt einen sichtbaren Hinweis, der ihn als KI-verarbeitete Rekonstruktion kennzeichnet."
+      },
+      {
+        "title": "Aufbewahrung",
+        "desc": "Aufnahmen und Rundgänge werden für die Laufzeit des Inserats plus eine feste Nachfrist aufbewahrt und dann auf Anfrage gelöscht."
+      },
+      {
+        "title": "Zugriffskontrolle",
+        "desc": "CRM-Zugangsdaten und API-Schlüssel sind auf die minimalen Berechtigungen beschränkt, die die Integration benötigt."
+      },
+      {
+        "title": "Unterauftragsverarbeiter",
+        "desc": "Externe Verarbeitungs- und Zahlungsanbieter sind im Zusatz zur Auftragsverarbeitung aufgeführt."
+      }
+    ],
+    "seeAlso": "Siehe auch:",
+    "privacy": "Datenschutzerklärung",
+    "dpa": "Zusatz zur Auftragsverarbeitung",
+    "cta": {
+      "eyebrow": "Fragen für die Sicherheitsprüfung",
+      "title": "Brauchen Sie einen ausgefüllten Sicherheitsfragebogen?",
+      "sub": "Melden Sie sich, und wir liefern einen ausgefüllten Fragebogen oder den SOC-2-Status direkt zurück.",
+      "label": "Sicherheitsteam kontaktieren"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "Über uns — Sodar",
+    "metaDesc": "Warum es Sodar gibt: das Argument, ein Inserat als Ort zu behandeln, nicht als Fotogalerie.",
+    "eyebrow": "Unternehmen",
+    "title": "Ein Exposéfoto ist ein Versprechen. Wir machen es begehbar.",
+    "sub": "Sodar entstand aus einer Beobachtung: Käufer scrollen an flachen Fotos vorbei, verweilen aber in einem Raum, durch den sie sich tatsächlich bewegen können. Wir bauen die Pipeline, die das Erste in das Zweite verwandelt.",
+    "thesisKicker": "These",
+    "thesisTitle": "Orientierung verkauft Inserate.",
+    "thesis": [
+      "Wer auf einem Immobilienportal scrollt, entscheidet in Sekunden über Behalten oder Überspringen — auf Basis von Fotos, die kein Gefühl für den Fluss zwischen den Räumen vermitteln. Ein Rundgang beantwortet die Frage, die ein Foto nicht beantworten kann: Wie fühlt es sich an, wirklich dort zu sein.",
+      "Sodar existiert, um diesen Rundgang so günstig und so schnell zu machen, dass er zum Standard für jedes Inserat wird — kein Luxus, der dem obersten Marktsegment vorbehalten bleibt."
+    ],
+    "valuesKicker": "Woran wir festhalten",
+    "valuesTitle": "Drei Dinge, die wir nicht eintauschen.",
+    "values": [
+      {
+        "title": "Scannen, nicht inszenieren",
+        "desc": "Die echte Immobilie ist die Wahrheit. Unsere Aufgabe ist es, sie treu wiederzugeben, nicht eine Fantasieversion zu erfinden."
+      },
+      {
+        "title": "Die Daten gehören dem Makler",
+        "desc": "Aufnahmen, Rundgänge und Engagement-Daten gehören dem Makler, der sie erstellt hat — immer exportierbar, nie eingeschlossen."
+      },
+      {
+        "title": "Kennzeichnung als Standard",
+        "desc": "Ein KI-verarbeiteter Raum sollte das sagen. Jeder öffentliche Rundgang ist gekennzeichnet, ohne Ausnahme."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Kommen Sie zu uns",
+      "title": "Wir sind ein kleines Team und nehmen früh auf.",
+      "sub": "Wenn die These bei Ihnen ankommt, stellen wir ein — oder sprechen Sie einfach mit uns über Ihre Inserate.",
+      "label": "Offene Stellen ansehen"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Karriere — Sodar",
+    "metaDesc": "Offene Stellen bei Sodar.",
+    "eyebrow": "Karriere",
+    "title": "Helfen Sie, dass jedes Inserat richtig gerendert wird.",
+    "sub": "Kleines Team, frühe Phase, echte Makler scannen bereits Immobilien. Wir stellen in Rekonstruktion, Produkt und Go-to-Market ein.",
+    "rolesKicker": "Offene Stellen",
+    "rolesTitle": "Aktuell gesucht.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Rekonstruktion",
+        "location": "Remote / Tallinn"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Produkt",
+        "location": "Remote / Tallinn"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Go-to-Market",
+        "location": "Tallinn"
+      }
+    ],
+    "noFit": "Nichts Passendes dabei? Schreiben Sie trotzdem an careers@sodar.io.",
+    "cta": {
+      "eyebrow": "Noch keine passende Stelle?",
+      "title": "Wir sind klein genug, dass eine E-Mail einen Gründer erreicht.",
+      "sub": "Sagen Sie uns, woran Sie arbeiten möchten.",
+      "label": "E-Mail an careers@sodar.io"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Feldnotizen — Sodar",
+    "metaDesc": "Fallstudien von Maklern und Maklerbüros, die Immobilien mit Sodar scannen.",
+    "eyebrow": "Feldnotizen",
+    "title": "Fallstudien, keine Pressemitteilungen.",
+    "sub": "Was wirklich passiert, wenn eine Immobilie gescannt wird — geschrieben vom Team, das die Pipeline baut.",
+    "posts": [
+      {
+        "title": "Wie ein Tallinner Büro mit 4 Maklern die Inseratsvorbereitung auf 15 Minuten verkürzte",
+        "tag": "Fallstudie",
+        "read": "6 Min. Lesezeit"
+      },
+      {
+        "title": "Was wir nach den ersten 500 Rundgängen geändert haben",
+        "tag": "Produktnotizen",
+        "read": "4 Min. Lesezeit"
+      },
+      {
+        "title": "Raum-Engagement lesen: Was Viewer-Öffnungen wirklich verraten",
+        "tag": "Leitfaden",
+        "read": "5 Min. Lesezeit"
+      },
+      {
+        "title": "Warum die kostenlose Vorschau zwei Räume umfasst, nicht einen oder fünf",
+        "tag": "Produktnotizen",
+        "read": "3 Min. Lesezeit"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Entwurf — Phase 1",
+    "notice": "Dies ist ein struktureller Platzhalter aus Phase 1, kein endgültiger Rechtstext.",
+    "englishOnly": "Rechtliche Dokumente werden derzeit nur auf Englisch veröffentlicht; die englische Fassung ist maßgeblich.",
+    "titles": {
+      "privacy": "Datenschutzerklärung",
+      "terms": "Nutzungsbedingungen",
+      "data-processing": "Zusatz zur Auftragsverarbeitung",
+      "cookies": "Cookie-Richtlinie"
+    }
+  },
+  "Scaffold": {
+    "phase": "Phase 1 — Design & Struktur",
+    "note": "Zahlungen, CRM-OAuth und die KI-Pipeline sind simulierte Platzhalterzustände. Keine Backend-Aufrufe."
+  }
+}

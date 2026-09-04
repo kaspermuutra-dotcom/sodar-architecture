@@ -1,0 +1,1002 @@
+{
+  "Meta": {
+    "title": "Sodar — Spacery AI, które domykają więcej transakcji",
+    "description": "Zeskanuj nieruchomość telefonem. Sodar zamienia prowadzone ujęcia pomieszczeń w immersyjny, gotowy do ogłoszenia spacer, pokazuje dwa pierwsze pomieszczenia za darmo i publikuje prosto w Twoim ogłoszeniu w CRM."
+  },
+  "Nav": {
+    "product": "Produkt",
+    "integrations": "Integracje",
+    "partners": "Partnerzy",
+    "pricing": "Cennik",
+    "signIn": "Zaloguj się",
+    "getStarted": "Zeskanuj nieruchomość",
+    "menu": "Przełącz menu",
+    "home": "Strona główna Sodar"
+  },
+  "Hero": {
+    "headline1": "Spacery AI,",
+    "headline2": "które domykają więcej transakcji.",
+    "sub": "Otwórz sodar.io na telefonie, przejdź nieruchomość jeden raz i otrzymaj immersyjny spacer, do którego kupujący mogą wejść — opublikowany w ogłoszeniu, które już masz.",
+    "ctaPrimary": "Zeskanuj pierwszą nieruchomość",
+    "ctaSecondary": "Zobacz, jak to działa",
+    "status": [
+      "UJĘCIE   ▸ salon · 12/12 klatek · pokrycie 98%",
+      "ASYSTENT ▸ pochyl o 4° w dół · trzymaj · dobre światło",
+      "ŁĄCZENIE ▸ kuchnia · ekwirektangularny · 8192×4096",
+      "PODGLĄD  ▸ 2 z 6 pomieszczeń gotowe · za darmo",
+      "WYCENA   ▸ cena jednorazowa policzona · 6 pomieszczeń · 14 panoram",
+      "OPUBLIKOWANO ▸ ogłoszenie CRM #48213 · przeglądarka osadzona"
+    ]
+  },
+  "Marquee": {
+    "rooms": [
+      "Salon",
+      "Kuchnia",
+      "Sypialnia",
+      "Łazienka",
+      "Korytarz",
+      "Balkon",
+      "Gabinet",
+      "Jadalnia",
+      "Pokój gościnny",
+      "Wejście",
+      "Taras",
+      "Garaż"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "Teza",
+    "lines": [
+      "Żadne zdjęcie z ogłoszenia nigdy nie przeszło samo siebie.",
+      "Kupujący pomijają to, do czego nie mogą wejść.",
+      "Więc zamieniliśmy telefon w skaner,",
+      "a skan w miejsce."
+    ],
+    "body": "Pośrednik otwiera sodar.io na telefonie, przechodzi każde pomieszczenie raz, a asystent ujęć AI prowadzi kadr, i dostaje spacer, po którym kupujący mogą się poruszać. Dwa pierwsze pomieszczenia można obejrzeć za darmo. Jedna płatność kończy nieruchomość. Publikacja w ogłoszeniu CRM to jedno kliknięcie."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "pomieszczenia za darmo",
+        "note": "Działający podgląd przed jakąkolwiek płatnością"
+      },
+      {
+        "label": "cena jednorazowa",
+        "note": "Dopasowana do nieruchomości. Bez subskrypcji"
+      },
+      {
+        "label": "marża partnera",
+        "note": "Dla systemów CRM dystrybuujących Sodar"
+      },
+      {
+        "label": "na pomieszczenie",
+        "note": "Ujęcie panoramiczne prowadzone na żywo przez AI"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Przewiń",
+    "frames": "/12 klatek",
+    "assistantLabel": "Asystent ujęć",
+    "assist": [
+      "Pochyl o 4° w dół",
+      "Trzymaj nieruchomo…",
+      "Dobre światło. Obracaj dalej",
+      "Nakładanie 40% — wolniej",
+      "Pomieszczenie gotowe"
+    ],
+    "rooms": [
+      "Salon",
+      "Kuchnia",
+      "Sypialnia",
+      "Łazienka",
+      "Gabinet",
+      "Balkon"
+    ],
+    "ready": "Gotowe",
+    "locked": "Zablokowane",
+    "photosOnly": "Tylko zdjęcia",
+    "panels": {
+      "capture": {
+        "label": "Ujęcie",
+        "title": "Przejdź nieruchomość jeden raz.",
+        "body": "Otwórz sodar.io na telefonie. Aparat prowadzi Cię pomieszczenie po pomieszczeniu, a asystent ujęć AI koryguje pokrycie, pozycję i światło — na żywo, gdy jeszcze tam stoisz."
+      },
+      "preview": {
+        "label": "Podgląd",
+        "title": "Dwa pomieszczenia, gotowe, za darmo.",
+        "body": "Sodar przetwarza pierwsze ujęcia w działający spacer po dwóch pierwszych pomieszczeniach. Doświadczasz finalnej jakości, zanim cokolwiek zapłacisz."
+      },
+      "unlock": {
+        "label": "Odblokuj",
+        "title": "Jedna cena. Jedna płatność.",
+        "body": "Sodar wycenia całą nieruchomość jednorazowo — z uwzględnieniem wielkości, liczby panoram, przetwarzania, hostingu i utrzymania. Zapłać raz przez Stripe, a pozostałe pomieszczenia zostaną przetworzone."
+      },
+      "publish": {
+        "label": "Opublikuj",
+        "title": "W ogłoszeniu, które już masz.",
+        "body": "Połącz CRM, wybierz ogłoszenie, opublikuj. Spacer żyje w ogłoszeniu dzięki osadzonej przeglądarce Sodar — a zatwierdzone ustawienia wyglądu możesz zmieniać w każdej chwili."
+      }
+    },
+    "quoteLabel": "Wycena · 84 Kesklinn Ave",
+    "quoteRows": [
+      {
+        "k": "6 pomieszczeń · 14 panoram",
+        "v": "w cenie"
+      },
+      {
+        "k": "Przetwarzanie i obliczenia AI",
+        "v": "w cenie"
+      },
+      {
+        "k": "Przechowywanie i hosting",
+        "v": "12 miesięcy"
+      },
+      {
+        "k": "Utrzymanie",
+        "v": "w cenie"
+      }
+    ],
+    "oneTime": "jednorazowo · bez subskrypcji",
+    "paidLabel": "Opłacono",
+    "paidBody": "Przetwarzamy pozostałe 4 pomieszczenia. Powiadomimy Cię, gdy spacer będzie kompletny.",
+    "pay": "Zapłać przez Stripe",
+    "paying": "Łączenie ze Stripe…",
+    "mockNote": "Demonstracyjna płatność — żadna karta nie zostanie obciążona.",
+    "crmHeader": "Twój CRM · Ogłoszenie #48213",
+    "publishBtn": "Opublikuj spacer",
+    "publishedBtn": "Opublikowano",
+    "viewerBadge": "Przeglądarka Sodar · 360°",
+    "listingMeta": "3 pokoje · 78 m² · 395 000 €",
+    "status": "status",
+    "statusPublished": "opublikowano",
+    "statusReady": "gotowe",
+    "viewer": "przeglądarka",
+    "viewerEmbedded": "osadzona",
+    "opened": "otwarcia",
+    "openedValue": "128 odwiedzających"
+  },
+  "Capabilities": {
+    "kicker": "Co dostajesz",
+    "intro": "Trzy połączone warstwy — publiczna strona, prowadzony skan mobilny i przestrzeń robocza pośrednika — za jednym spacerem.",
+    "title": "Jeden skan, siedem rzeczy, które zyskuje ogłoszenie.",
+    "items": [
+      {
+        "title": "Prowadzone ujęcia telefonem",
+        "desc": "Bez sprzętu, bez fotografa. Aparat prowadzi Cię przez każde pomieszczenie jako panoramę, prosto z przeglądarki."
+      },
+      {
+        "title": "Asystent ujęć AI",
+        "desc": "Wskazówki na żywo dotyczące pokrycia, pozycji i jakości obrazu, gdy jeszcze jesteś w nieruchomości."
+      },
+      {
+        "title": "Darmowy podgląd dwóch pomieszczeń",
+        "desc": "Działający spacer po dwóch pierwszych pomieszczeniach przed jakąkolwiek płatnością, byś najpierw ocenił finalną jakość."
+      },
+      {
+        "title": "Jednorazowa cena za nieruchomość",
+        "desc": "Jedna wycena dopasowana do nieruchomości — panoramy, obliczenia, hosting i utrzymanie w cenie."
+      },
+      {
+        "title": "Publikacja w CRM",
+        "desc": "Połącz CRM, wybierz ogłoszenie, opublikuj. Spacer zostaje w ogłoszeniu dzięki osadzonej przeglądarce."
+      },
+      {
+        "title": "Zatwierdzony wygląd",
+        "desc": "Dostosuj wygląd przeglądarki w ramach zatwierdzonych ustawień, by pasowała do ogłoszenia, w którym żyje."
+      },
+      {
+        "title": "Przestrzeń robocza pośrednika",
+        "desc": "Zarządzaj nieruchomościami, śledź status przetwarzania i publikacji oraz sprawdzaj, ilu odwiedzających otworzyło przeglądarkę."
+      }
+    ],
+    "cta": {
+      "title": "Zeskanuj nieruchomość",
+      "desc": "Dwa pomieszczenia za darmo. Zacznij na telefonie.",
+      "start": "Start"
+    }
+  },
+  "Integration": {
+    "kicker": "Tam, gdzie już pracujesz",
+    "intro": "Połącz CRM, którego już używasz. Wybierz ogłoszenie. Opublikuj. Spacer pojawia się w nim dzięki osadzonej przeglądarce lub iframe — nic do kopiowania, nic do hostowania.",
+    "title": "Po prostu dodaj Sodar do swojego CRM.",
+    "crmHeader": "Twój CRM · Ogłoszenia",
+    "published": "Spacer opublikowany",
+    "addWalkthrough": "+ dodaj spacer",
+    "listings": [
+      {
+        "name": "84 Kesklinn Ave",
+        "meta": "3 pokoje · 395 000 €"
+      },
+      {
+        "name": "12 Harbour Res.",
+        "meta": "2 pokoje · 260 000 €"
+      },
+      {
+        "name": "7 Nõmme Villa",
+        "meta": "6 pokoi · 890 000 €"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Poglądowo · jeszcze niezmierzone",
+    "title": "Różnica, jaką robi skan.",
+    "beforeLabel": "Przed",
+    "afterLabel": "Po · z Sodar",
+    "before": [
+      "Umówić fotografa",
+      "Czekać 2–3 dni",
+      "Płaskie zdjęcia",
+      "Kupujący przewijają dalej",
+      "Nic nie jest mierzone"
+    ],
+    "after": [
+      "Jeden telefon, jedno przejście",
+      "Podgląd w minuty",
+      "Immersyjny spacer",
+      "Kupujący wchodzą do środka",
+      "Każde otwarcie przeglądarki policzone"
+    ]
+  },
+  "Workspace": {
+    "kicker": "Z powrotem przy biurku",
+    "intro": "Każda zeskanowana nieruchomość, jej status przetwarzania i publikacji oraz liczba odwiedzających, którzy otworzyli przeglądarkę — w jednej przestrzeni roboczej na pośrednika.",
+    "title": "Twoje nieruchomości, zawsze w zasięgu wzroku.",
+    "cta": "Zobacz przestrzeń roboczą pośrednika",
+    "mock": {
+      "title": "Przestrzeń robocza",
+      "live": "Podgląd na żywo",
+      "properties": "Nieruchomości",
+      "cols": [
+        "Nieruchomość",
+        "Status",
+        "Otwarcia przeglądarki",
+        "Publikacja"
+      ],
+      "statuses": {
+        "published": "Opublikowano",
+        "processing": "Przetwarzanie",
+        "preview": "Podgląd",
+        "capturing": "Ujęcia"
+      },
+      "rows": [
+        {
+          "name": "84 Kesklinn Ave",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "12 Harbour Res.",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "7 Nõmme Villa",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 pomieszczeń"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 pomieszczenia za darmo"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "status": "capturing",
+          "views": "—",
+          "pub": "na telefonie"
+        }
+      ],
+      "engagement": "Zainteresowanie pomieszczeniami · 84 Kesklinn Ave",
+      "rooms": [
+        "Salon",
+        "Kuchnia",
+        "Sypialnia",
+        "Łazienka",
+        "Balkon"
+      ],
+      "processing": "Przetwarzanie",
+      "jobs": [
+        {
+          "name": "7 Nõmme Villa",
+          "step": "Łączenie · sypialnia",
+          "n": "4 / 6"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "step": "Podgląd gotowy",
+          "n": "2 / 2"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "step": "Ujęcia na telefonie",
+          "n": "—"
+        }
+      ],
+      "week": "W tym tygodniu",
+      "weekTitle": "701 otwarć przeglądarki",
+      "weekSub": "w 2 opublikowanych spacerach"
+    }
+  },
+  "Scans": {
+    "kicker": "Skany z tego tygodnia",
+    "title": "Każdy rodzaj ogłoszenia skanuje się tak samo.",
+    "items": [
+      {
+        "label": "Mieszkanie",
+        "meta": "3 pokoje · Kesklinn"
+      },
+      {
+        "label": "Nowe budownictwo",
+        "meta": "4 pokoje · Ülemiste"
+      },
+      {
+        "label": "Willa",
+        "meta": "6 pokoi · Pirita"
+      },
+      {
+        "label": "Wynajem",
+        "meta": "1 pokój · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "Zbudowane, by powierzać mu ogłoszenia",
+    "title": "Zgodność nie jest dodatkiem.",
+    "items": [
+      {
+        "title": "Wyraźna zgoda na aparat",
+        "desc": "Sodar prosi o aparat urządzenia tylko wtedy, gdy rozpoczynasz skan, i używa go tylko do tego ujęcia."
+      },
+      {
+        "title": "Oznaczenie AI",
+        "desc": "Każdy opublikowany spacer ma wyraźne, widoczne oznaczenie, że jest rekonstrukcją przetworzoną przez AI."
+      },
+      {
+        "title": "Bezpieczeństwo",
+        "desc": "Od pierwszego dnia budowane w kierunku SOC 2 i RODO — szyfrowane przechowywanie, ograniczone poświadczenia CRM, logi audytu dla każdej nieruchomości."
+      },
+      {
+        "title": "Dane należą do pośrednika",
+        "desc": "Ujęcia, spacery i dane o zainteresowaniu należą do pośrednika. Odłączenie Sodar eksportuje wszystko."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "Dla dostawców CRM",
+    "title": "Dystrybuuj Sodar w swojej sieci pośredników. Zachowaj 15%.",
+    "body": "Partnerzy CRM udostępniają Sodar swoim pośrednikom i otrzymują 15% marży od kwalifikujących się zakupów spacerów — bez minimum, wypłacane automatycznie.",
+    "cta": "Zobacz program partnerski"
+  },
+  "PricingTeaser": {
+    "kicker": "Prosty z założenia",
+    "title1": "Jedna nieruchomość.",
+    "title2": "Jedna cena. Raz.",
+    "body": "Obejrzyj dwa pierwsze pomieszczenia za darmo. Potem Sodar wycenia dokończenie nieruchomości jedną jednorazową ceną — bez subskrypcji, bez rocznej umowy.",
+    "cta": "Jak liczona jest cena",
+    "card": {
+      "label": "Typowe mieszkanie 3-pokojowe",
+      "price": "99–149 €",
+      "note": "jednorazowo · wycena po darmowym podglądzie",
+      "factors": [
+        "Wielkość nieruchomości",
+        "Uchwycone panoramy",
+        "Przetwarzanie i obliczenia AI",
+        "Przechowywanie i hosting",
+        "Bieżące utrzymanie"
+      ],
+      "cta": "Zeskanuj nieruchomość"
+    }
+  },
+  "Language": {
+    "kicker": "Gdziekolwiek szukają Twoi kupujący",
+    "title1": "Jeden spacer.",
+    "title2": "Każdy język, w którym czyta kupujący.",
+    "body": "Opublikuj raz — etykiety pomieszczeń i sterowanie przeglądarki podążają za językiem ustawionym przez kupującego. Strona i przeglądarka są dziś dostępne w szesnastu językach."
+  },
+  "Switcher": {
+    "search": "Szukaj języka…",
+    "none": "Brak pasującego języka.",
+    "active": "Aktywny",
+    "comingSoon": "Wkrótce",
+    "choose": "Wybierz język",
+    "notice": "{language} nie jest jeszcze przetłumaczony — ogłoszenia pozostaną po angielsku do czasu udostępnienia."
+  },
+  "Footer": {
+    "tagline": "Każde ogłoszenie zeskanowane w miejsce, po którym kupujący mogą przejść.",
+    "columns": {
+      "product": {
+        "title": "Produkt",
+        "items": [
+          [
+            "Produkt",
+            "/product"
+          ],
+          [
+            "Jak to działa",
+            "/product#pipeline"
+          ],
+          [
+            "Podgląd przestrzeni roboczej",
+            "/terminal"
+          ],
+          [
+            "Bezpieczeństwo",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Integracje",
+        "items": [
+          [
+            "Centrum integracji",
+            "/integrations"
+          ],
+          [
+            "Publikacja w CRM",
+            "/integrations#crm"
+          ],
+          [
+            "Osadzona przeglądarka",
+            "/integrations#embed"
+          ],
+          [
+            "Dostęp API",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "Partnerzy",
+        "items": [
+          [
+            "Program partnerski",
+            "/partners"
+          ],
+          [
+            "Zostań partnerem",
+            "/partners#apply"
+          ],
+          [
+            "Panel partnera",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Firma",
+        "items": [
+          [
+            "O nas",
+            "/about"
+          ],
+          [
+            "Kariera",
+            "/careers"
+          ],
+          [
+            "Notatki z terenu",
+            "/blog"
+          ],
+          [
+            "Dla firm",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Prawne",
+        "items": [
+          [
+            "Prywatność",
+            "/legal/privacy"
+          ],
+          [
+            "Regulamin",
+            "/legal/terms"
+          ],
+          [
+            "Przetwarzanie danych",
+            "/legal/data-processing"
+          ],
+          [
+            "Pliki cookie",
+            "/legal/cookies"
+          ]
+        ]
+      }
+    },
+    "language": "Język",
+    "social": "Gdzie indziej",
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallinn, Estonia · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Produkt — Sodar",
+    "metaDesc": "Jak prowadzony skan telefonem staje się immersyjnym, gotowym do ogłoszenia spacerem.",
+    "eyebrow": "Produkt",
+    "title": "Telefon, jedno przejście, miejsce, do którego kupujący mogą wejść.",
+    "sub": "Sodar zamienia prowadzone skany nieruchomości w immersyjne, gotowe do ogłoszenia spacery — nagrane telefonem, który już masz przy sobie, opublikowane w CRM, którego już używasz.",
+    "ctaPrimary": "Zeskanuj pierwszą nieruchomość",
+    "ctaSecondary": "Zobacz przestrzeń roboczą",
+    "flatLabel": "Ujęcie z telefonu",
+    "revealedLabel": "Spacer Sodar",
+    "stagesKicker": "Od przejścia do spaceru",
+    "stagesTitle": "Trzy etapy, jeden proces.",
+    "stages": [
+      {
+        "label": "Ujęcie",
+        "sub": "Telefon · przeglądarka · zgoda na aparat",
+        "desc": "Każde pomieszczenie jest uchwycone jako panorama, z podpowiedziami asystenta ujęć AI na żywo."
+      },
+      {
+        "label": "Przetwarzanie",
+        "sub": "Łączenie · poprawa · powiązanie",
+        "desc": "Panoramy są łączone, czyszczone i powiązane w jeden spacer. Dwa pierwsze pomieszczenia wracają za darmo."
+      },
+      {
+        "label": "Publikacja",
+        "sub": "CRM · osadzona przeglądarka · wygląd",
+        "desc": "Połącz CRM, wybierz ogłoszenie, opublikuj. Przeglądarka żyje w ogłoszeniu; Ty dostrajasz jej zatwierdzony wygląd."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Wypróbuj na prawdziwej nieruchomości",
+      "title": "Obejrzyj dwa pomieszczenia za darmo. Zapłać raz za resztę.",
+      "sub": "Otwórz sodar.io na telefonie i rozpocznij skan — bez karty, dopóki nie odblokujesz pełnego spaceru.",
+      "label": "Zeskanuj pierwszą nieruchomość"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Cennik — Sodar",
+    "metaDesc": "Jednorazowa cena za nieruchomość, wyceniana po darmowym podglądzie dwóch pomieszczeń. Ceny wolumenowe dla biur, 15% marży dla partnerów CRM.",
+    "eyebrow": "Prosty z założenia",
+    "title": "Jedna nieruchomość. Jedna cena. Raz.",
+    "sub": "Obejrzyj dwa pomieszczenia za darmo, a potem zapłać jedną jednorazową cenę dopasowaną do nieruchomości. Ceny wolumenowe dla biur, stała marża 15% dla partnerów CRM.",
+    "badge": "Większość biur",
+    "tiers": [
+      {
+        "name": "Za nieruchomość",
+        "price": "Od 99 €",
+        "unit": "jednorazowo, wycena po darmowym podglądzie",
+        "desc": "Dla pośredników skanujących ogłoszenia pojedynczo.",
+        "features": [
+          "Prowadzone ujęcia telefonem + asystent AI",
+          "Dwa pierwsze pomieszczenia za darmo w podglądzie",
+          "Pełny spacer po jednej płatności Stripe",
+          "Publikacja w CRM i osadzona przeglądarka",
+          "Przestrzeń robocza ze statusami i otwarciami"
+        ],
+        "cta": "Zeskanuj pierwszą nieruchomość"
+      },
+      {
+        "name": "Biuro",
+        "price": "Wolumen",
+        "unit": "za nieruchomość, malejąca z wolumenem",
+        "desc": "Dla biur publikujących dziesiątki ogłoszeń miesięcznie.",
+        "features": [
+          "Wszystko z planu Za nieruchomość",
+          "Zbiorczy widok całego biura",
+          "Priorytetowa kolejka przetwarzania",
+          "Dedykowana konfiguracja CRM",
+          "Przeglądarka z co-brandingiem"
+        ],
+        "cta": "Porozmawiaj ze sprzedażą"
+      },
+      {
+        "name": "Partner CRM",
+        "price": "15%",
+        "unit": "marży od kwalifikujących się zakupów",
+        "desc": "Dla dostawców CRM dystrybuujących Sodar wśród swoich pośredników.",
+        "features": [
+          "Sodar dostępny w Twojej platformie",
+          "Panel partnera",
+          "Comiesięczna automatyczna wypłata",
+          "Bez minimalnego wolumenu"
+        ],
+        "cta": "Zostań partnerem"
+      }
+    ],
+    "factorsKicker": "Jak powstaje wycena",
+    "factorsTitle": "Cena według nieruchomości, nie według planu.",
+    "factors": [
+      {
+        "title": "Wielkość nieruchomości",
+        "desc": "Powierzchnia i liczba uchwyconych pomieszczeń."
+      },
+      {
+        "title": "Liczba panoram",
+        "desc": "Ile panoram wytworzył skan i w jakiej rozdzielczości."
+      },
+      {
+        "title": "Przetwarzanie",
+        "desc": "Łączenie, poprawa i obliczenia AI stojące za spacerem."
+      },
+      {
+        "title": "Przechowywanie i hosting",
+        "desc": "Utrzymanie spaceru i jego przeglądarki online w Twoim ogłoszeniu."
+      },
+      {
+        "title": "Utrzymanie",
+        "desc": "Bieżące aktualizacje przeglądarki i sama integracja z CRM."
+      },
+      {
+        "title": "Marża partnera",
+        "desc": "Tam, gdzie Sodar dystrybuuje partner CRM, jego marża jest wliczona w wycenę."
+      }
+    ],
+    "faqKicker": "Pytania",
+    "faqTitle": "FAQ cennika.",
+    "faq": [
+      {
+        "q": "Kiedy zobaczę cenę?",
+        "a": "Po darmowym podglądzie. Sodar liczy jednorazową cenę dokończenia nieruchomości, gdy dwa pierwsze pomieszczenia są przetworzone."
+      },
+      {
+        "q": "Czy podgląd jest naprawdę darmowy?",
+        "a": "Tak — dwa pierwsze pomieszczenia są przetwarzane w działający spacer bez płatności. Płacisz tylko za dokończenie i publikację nieruchomości."
+      },
+      {
+        "q": "Czy jest subskrypcja?",
+        "a": "Nie. Każda nieruchomość to jedna jednorazowa płatność przez Stripe. Nic się nie odnawia."
+      },
+      {
+        "q": "Jak wypłacana jest marża partnera CRM?",
+        "a": "Automatycznie, co miesiąc, od kwalifikujących się zakupów spacerów przez pośredników na platformie partnera."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Wczesny dostęp",
+      "title": "Twoje następne ogłoszenie zasługuje na więcej niż zdjęcia.",
+      "sub": "Najpierw przyjmujemy niewielką grupę pośredników patrzących w przyszłość.",
+      "label": "Poproś o wczesny dostęp"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Podgląd przestrzeni roboczej — Sodar",
+    "metaDesc": "Publiczny podgląd przestrzeni roboczej pośrednika bez logowania. Bez prawdziwych danych.",
+    "eyebrow": "Publiczny podgląd · bez logowania, bez prawdziwych danych",
+    "title": "Każda nieruchomość, jej status i kto ją otworzył.",
+    "sub": "To statyczny podgląd przestrzeni roboczej, którą dostaje każdy pośrednik — nieruchomości, status przetwarzania i publikacji oraz liczba odwiedzających, którzy otworzyli każdą przeglądarkę spaceru.",
+    "cta": {
+      "eyebrow": "Twoja, gdy tylko opublikujesz",
+      "title": "Twoja przestrzeń robocza zaczyna pusta — do pierwszego skanu.",
+      "sub": "Zeskanuj nieruchomość, a prawdziwe liczby zastąpią ten podgląd.",
+      "label": "Zeskanuj pierwszą nieruchomość"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "Partnerzy — Sodar",
+    "metaDesc": "Platformy CRM zarabiają stałą marżę 15%, dystrybuując Sodar w swojej sieci pośredników.",
+    "eyebrow": "Dla platform CRM",
+    "title": "Dystrybuuj Sodar wśród swoich pośredników. Zachowaj 15%.",
+    "sub": "Stała marża od każdego kwalifikującego się spaceru kupionego przez pośredników z Twojej platformy — bez minimum, wypłacana automatycznie, bez prac wdrożeniowych poza linkiem polecającym.",
+    "apply": "Zostań partnerem",
+    "stepsKicker": "Jak to działa",
+    "stepsTitle": "Trzy kroki do stałej marży.",
+    "steps": [
+      {
+        "title": "Zgłoś się",
+        "desc": "Powiedz nam, którzy pośrednicy lub biura działają na Twojej platformie i mniej więcej ile mają aktywnych ogłoszeń."
+      },
+      {
+        "title": "Zintegruj",
+        "desc": "Link polecający i opcjonalnie natywny punkt wejścia w Twojej aplikacji dla użytkowników."
+      },
+      {
+        "title": "Zarabiaj",
+        "desc": "15% od każdego kwalifikującego się zakupu spaceru przez pośrednika, który dołączył przez Twoją platformę, wypłacane co miesiąc."
+      }
+    ],
+    "dashKicker": "Panel partnera",
+    "dashTitle": "Śledź poleconych pośredników i marżę w jednym miejscu.",
+    "dash": [
+      {
+        "label": "Poleceni pośrednicy",
+        "value": "142"
+      },
+      {
+        "label": "Kupione spacery",
+        "value": "3 018"
+      },
+      {
+        "label": "Marża w tym miesiącu",
+        "value": "6 240 €"
+      }
+    ],
+    "applyKicker": "Zacznij",
+    "applyTitle": "Zostań partnerem.",
+    "applyBody": "Krótkie zgłoszenie — przed wydaniem linku polecającego oceniamy dopasowanie platformy i typowy wolumen ogłoszeń.",
+    "form": {
+      "company": "Nazwa firmy / platformy",
+      "companyPh": "Acme CRM",
+      "email": "Służbowy e-mail",
+      "emailPh": "ty@firma.pl",
+      "brokers": "Aktywni pośrednicy na Twojej platformie",
+      "brokersPh": "np. 50–200",
+      "submit": "Wyślij zgłoszenie"
+    },
+    "faqKicker": "Pytania",
+    "faqTitle": "FAQ partnerów.",
+    "faq": [
+      {
+        "q": "Czy jest minimalne zobowiązanie?",
+        "a": "Nie. Marża 15% obowiązuje od pierwszego kupionego spaceru — bez progu wolumenu."
+      },
+      {
+        "q": "Do kogo należy relacja z pośrednikiem?",
+        "a": "Do Ciebie. Sodar rozlicza się bezpośrednio z pośrednikiem i raportuje Twoją marżę; pośrednicy pozostają Twoimi klientami."
+      },
+      {
+        "q": "Czy możemy oznaczyć spacer własną marką?",
+        "a": "Tak — konto partnerskie może dodać ramkę z co-brandingiem wokół osadzonego spaceru."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Gotowi, kiedy Ty",
+      "title": "Daj swoim pośrednikom powód, by publikować więcej.",
+      "sub": "Zgłoś się raz — odezwiemy się z linkiem polecającym i notatkami integracyjnymi.",
+      "label": "Zostań partnerem"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Integracje — Sodar",
+    "metaDesc": "Połącz CRM lub przyznaj dostęp API, by opublikowane spacery osadzały się prosto w Twoich ogłoszeniach.",
+    "eyebrow": "Centrum integracji",
+    "title": "Połącz raz. Każde kolejne ogłoszenie to jedno kliknięcie.",
+    "sub": "Zaloguj się do CRM przez OAuth albo przyznaj Sodar ograniczony dostęp API — wybierz ogłoszenie, opublikuj, a spacer zostanie osadzony bez drugiego kroku.",
+    "connKicker": "Połączenia",
+    "connTitle": "Wybierz, jak Sodar dociera do Twoich ogłoszeń.",
+    "conns": [
+      {
+        "name": "Ogólny OAuth CRM",
+        "action": "Połącz"
+      },
+      {
+        "name": "Kanał MLS City24",
+        "action": "Połącz"
+      },
+      {
+        "name": "Własne REST API",
+        "action": "Wygeneruj klucz"
+      },
+      {
+        "name": "Zapier / webhook",
+        "action": "Wkrótce"
+      }
+    ],
+    "notConnected": "status: niepołączono",
+    "mockTitle": "Połączenie demonstracyjne — podłączane w fazie 2",
+    "embedKicker": "Brak CRM? Żaden problem",
+    "embedTitle": "Jeden iframe, do wstawienia gdziekolwiek.",
+    "embedBody": "Każdy kupiony spacer dostaje stały adres osadzenia. Wklej go do dowolnego portalu ogłoszeniowego, który akceptuje własny iframe.",
+    "cta": {
+      "eyebrow": "Przynieś swój CRM",
+      "title": "Sodar pasuje do narzędzi, których już używasz.",
+      "sub": "Porozmawiaj z nami o priorytetowej integracji albo zacznij już dziś od ogólnego osadzenia.",
+      "label": "Poznaj program partnerski"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Dla firm — Sodar",
+    "metaDesc": "Stanowiska zespołowe, skany hurtowe i wspólne widoki przestrzeni roboczej dla biur nieruchomości.",
+    "eyebrow": "Dla biur",
+    "title": "Jedna przestrzeń robocza dla każdego pośrednika w Twoim zespole.",
+    "sub": "Skanowanie hurtowe, ceny wolumenowe i zbiorczy widok zainteresowania całego biura — zbudowane dla biur publikujących dziesiątki ogłoszeń miesięcznie.",
+    "talk": "Porozmawiaj ze sprzedażą",
+    "featKicker": "Zbudowane dla zespołów",
+    "featTitle": "Wszystko z samoobsługi, plus to, czego potrzebuje biuro.",
+    "features": [
+      {
+        "title": "Stanowiska zespołowe",
+        "desc": "Każdy pośrednik dostaje własną przestrzeń roboczą; nad nią zbiorczy widok całego biura dla menedżerów."
+      },
+      {
+        "title": "Skanowanie hurtowe",
+        "desc": "Skanuj cały portfel nieruchomości zamiast pojedynczo."
+      },
+      {
+        "title": "Ceny wolumenowe",
+        "desc": "Cena za nieruchomość maleje wraz ze wzrostem miesięcznego wolumenu Twojego biura."
+      },
+      {
+        "title": "Dedykowana konfiguracja CRM",
+        "desc": "Zajmiemy się podłączeniem OAuth / API do konkretnego CRM Twojego biura."
+      },
+      {
+        "title": "Co-branding",
+        "desc": "Umieść znak swojego biura na każdym osadzonym spacerze."
+      },
+      {
+        "title": "Priorytetowe przetwarzanie",
+        "desc": "Nieruchomości firmowe są przetwarzane przed kolejką samoobsługową."
+      }
+    ],
+    "priceKicker": "Ceny, które maleją z wolumenem",
+    "priceTitle1": "Ceny wolumenowe,",
+    "priceTitle2": "jedna umowa.",
+    "priceBody": "Indywidualna stawka za nieruchomość zależna od miesięcznego wolumenu, plus stała opłata za stanowisko pośrednika. Porozmawiaj ze sprzedażą o wycenie dopasowanej do Twojego biura.",
+    "priceNote": "Poglądowo, za nieruchomość",
+    "tiers": [
+      {
+        "tier": "1–20 nieruchomości / mies.",
+        "price": "od 99 €"
+      },
+      {
+        "tier": "21–100 nieruchomości / mies.",
+        "price": "od 79 €"
+      },
+      {
+        "tier": "100+ nieruchomości / mies.",
+        "price": "Indywidualnie"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Dla firm",
+      "title": "Przenieś ogłoszenia całego biura online.",
+      "sub": "Wspólnie skonfigurujemy Twoje połączenie z CRM i strukturę stanowisk.",
+      "label": "Porozmawiaj ze sprzedażą"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Bezpieczeństwo i zgodność — Sodar",
+    "metaDesc": "Przetwarzanie danych, oznaczenie AI i stan zgodności procesu Sodar.",
+    "eyebrow": "Zaufanie i zgodność",
+    "title": "Zbudowane, by powierzać mu cudze ogłoszenie.",
+    "sub": "Sodar od pierwszego dnia projektowany jest w kierunku SOC 2 i RODO — ta strona to robocze podsumowanie; formalne raporty i umowy powierzenia dostępne na życzenie.",
+    "detailKicker": "Szczegółowo",
+    "detailTitle": "Jak naprawdę przepływają dane.",
+    "details": [
+      {
+        "title": "Dostęp do aparatu",
+        "desc": "Aparat urządzenia jest wywoływany tylko przy rozpoczęciu skanu, za wyraźną zgodą, i używany tylko do tego ujęcia."
+      },
+      {
+        "title": "Przechowywanie",
+        "desc": "Ujęcia i wyrenderowane spacery są szyfrowane w spoczynku i w transmisji; dostęp jest ograniczony do konta pośrednika."
+      },
+      {
+        "title": "Oznaczenie AI",
+        "desc": "Każdy publiczny spacer ma widoczne oznaczenie identyfikujące go jako rekonstrukcję przetworzoną przez AI."
+      },
+      {
+        "title": "Retencja danych",
+        "desc": "Ujęcia i spacery są przechowywane przez czas życia ogłoszenia plus stały okres karencji, a potem usuwane na życzenie."
+      },
+      {
+        "title": "Kontrola dostępu",
+        "desc": "Poświadczenia CRM i klucze API są ograniczone do minimalnych uprawnień, jakich potrzebuje integracja."
+      },
+      {
+        "title": "Podwykonawcy przetwarzania",
+        "desc": "Zewnętrzni dostawcy przetwarzania i płatności są wymienieni w załączniku o przetwarzaniu danych."
+      }
+    ],
+    "seeAlso": "Zobacz też:",
+    "privacy": "Polityka prywatności",
+    "dpa": "Załącznik o przetwarzaniu danych",
+    "cta": {
+      "eyebrow": "Pytania do przeglądu bezpieczeństwa",
+      "title": "Potrzebujesz wypełnionej ankiety bezpieczeństwa?",
+      "sub": "Odezwij się, a odeślemy wypełnioną ankietę lub status SOC 2 bezpośrednio.",
+      "label": "Skontaktuj się z zespołem bezpieczeństwa"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "O nas — Sodar",
+    "metaDesc": "Dlaczego istnieje Sodar: argument za traktowaniem ogłoszenia jak miejsca, a nie galerii zdjęć.",
+    "eyebrow": "Firma",
+    "title": "Zdjęcie z ogłoszenia to obietnica. My czynimy je przechodnim.",
+    "sub": "Sodar zaczął się od jednej obserwacji: kupujący przewijają płaskie zdjęcia, ale zatrzymują się w przestrzeni, po której naprawdę mogą się poruszać. Budujemy proces, który zamienia pierwsze w drugie.",
+    "thesisKicker": "Teza",
+    "thesisTitle": "Orientacja sprzedaje ogłoszenia.",
+    "thesis": [
+      "Kupujący przewijający portal ogłoszeniowy decyduje w sekundy, czy zostać, czy pominąć, na podstawie zdjęć, które nie dają żadnego poczucia przepływu między pomieszczeniami. Spacer odpowiada na pytanie, na które zdjęcie nie może: jak to jest naprawdę tam być.",
+      "Sodar istnieje po to, by ten spacer był na tyle tani i szybki, że stanie się standardem każdego ogłoszenia, a nie luksusem zarezerwowanym dla szczytu rynku."
+    ],
+    "valuesKicker": "Czego się trzymamy",
+    "valuesTitle": "Trzy rzeczy, których nie oddamy.",
+    "values": [
+      {
+        "title": "Skanuj, nie inscenizuj",
+        "desc": "Prawdziwa nieruchomość jest źródłem prawdy. Naszym zadaniem jest wiernie ją oddać, a nie wymyślać wersję z fantazji."
+      },
+      {
+        "title": "Dane należą do pośrednika",
+        "desc": "Ujęcia, spacery i dane o zainteresowaniu należą do pośrednika, który je stworzył — zawsze do eksportu, nigdy zamknięte."
+      },
+      {
+        "title": "Oznaczenie domyślnie",
+        "desc": "Przestrzeń przetworzona przez AI powinna to mówić. Każdy publiczny spacer jest oznaczony, bez wyjątków."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Dołącz do nas",
+      "title": "Jesteśmy małym zespołem, który przyjmuje wcześnie.",
+      "sub": "Jeśli teza do Ciebie przemawia, rekrutujemy — albo po prostu porozmawiaj z nami o swoich ogłoszeniach.",
+      "label": "Zobacz otwarte stanowiska"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Kariera — Sodar",
+    "metaDesc": "Otwarte stanowiska w Sodar.",
+    "eyebrow": "Kariera",
+    "title": "Pomóż każdemu ogłoszeniu renderować się jak należy.",
+    "sub": "Mały zespół, wczesny etap, prawdziwi pośrednicy już skanują nieruchomości. Rekrutujemy w obszarach rekonstrukcji, produktu i go-to-market.",
+    "rolesKicker": "Otwarte stanowiska",
+    "rolesTitle": "Obecnie rekrutujemy.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Rekonstrukcja",
+        "location": "Zdalnie / Tallinn"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Produkt",
+        "location": "Zdalnie / Tallinn"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Go-to-market",
+        "location": "Tallinn"
+      }
+    ],
+    "noFit": "Nie widzisz dopasowania? I tak napisz na careers@sodar.io.",
+    "cta": {
+      "eyebrow": "Jeszcze nie ma stanowiska dla Ciebie?",
+      "title": "Jesteśmy na tyle mali, że jeden e-mail trafia do założyciela.",
+      "sub": "Powiedz nam, nad czym chciałbyś pracować.",
+      "label": "Napisz na careers@sodar.io"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Notatki z terenu — Sodar",
+    "metaDesc": "Studia przypadków pośredników i biur skanujących nieruchomości z Sodar.",
+    "eyebrow": "Notatki z terenu",
+    "title": "Studia przypadków, nie komunikaty prasowe.",
+    "sub": "Co naprawdę dzieje się, gdy nieruchomość jest skanowana — napisane przez zespół budujący proces.",
+    "posts": [
+      {
+        "title": "Jak tallińskie biuro z 4 pośrednikami skróciło przygotowanie ogłoszenia do 15 minut",
+        "tag": "Studium przypadku",
+        "read": "6 min czytania"
+      },
+      {
+        "title": "Co zmieniliśmy po pierwszych 500 spacerach",
+        "tag": "Notatki produktowe",
+        "read": "4 min czytania"
+      },
+      {
+        "title": "Czytanie zainteresowania pomieszczeniami: co naprawdę mówią otwarcia przeglądarki",
+        "tag": "Poradnik",
+        "read": "5 min czytania"
+      },
+      {
+        "title": "Dlaczego darmowy podgląd to dwa pomieszczenia, a nie jedno czy pięć",
+        "tag": "Notatki produktowe",
+        "read": "3 min czytania"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Szkic — faza 1",
+    "notice": "To strukturalny szkic z fazy 1, a nie ostateczna treść prawna.",
+    "englishOnly": "Dokumenty prawne są obecnie publikowane wyłącznie po angielsku; wersja angielska jest wiążąca.",
+    "titles": {
+      "privacy": "Polityka prywatności",
+      "terms": "Regulamin",
+      "data-processing": "Załącznik o przetwarzaniu danych",
+      "cookies": "Polityka plików cookie"
+    }
+  },
+  "Scaffold": {
+    "phase": "Faza 1 — projekt i struktura",
+    "note": "Płatności, OAuth CRM i proces AI to symulowane stany zastępcze. Brak wywołań backendu."
+  }
+}

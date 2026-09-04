@@ -1,0 +1,1002 @@
+{
+  "Meta": {
+    "title": "Sodar — AI-ringkäigud, mis sõlmivad rohkem tehinguid",
+    "description": "Skanni kinnisvara oma telefoniga. Sodar muudab juhendatud ruumide jäädvustused kaasahaaravaks, kuulutusevalmis ringkäiguks, näitab kaht esimest ruumi tasuta eelvaates ja avaldab otse sinu CRM-i kuulutusse."
+  },
+  "Nav": {
+    "product": "Toode",
+    "integrations": "Integratsioonid",
+    "partners": "Partnerid",
+    "pricing": "Hinnad",
+    "signIn": "Logi sisse",
+    "getStarted": "Skanni kinnisvara",
+    "menu": "Ava menüü",
+    "home": "Sodari avaleht"
+  },
+  "Hero": {
+    "headline1": "AI-ringkäigud,",
+    "headline2": "mis sõlmivad rohkem tehinguid.",
+    "sub": "Ava sodar.io telefonis, käi kinnisvara ühe korra läbi ja saad kaasahaarava ringkäigu, kuhu ostjad saavad sisse astuda — avaldatuna kuulutusse, mis sul juba on.",
+    "ctaPrimary": "Skanni oma esimene objekt",
+    "ctaSecondary": "Vaata, kuidas see töötab",
+    "status": [
+      "JÄÄDVUSTUS ▸ elutuba · 12/12 kaadrit · katvus 98%",
+      "ABILINE  ▸ kalluta 4° alla · hoia paigal · hea valgus",
+      "ÜHENDAMINE ▸ köök · ekvirektangulaarne · 8192×4096",
+      "EELVAADE ▸ 2/6 ruumi valmis · tasuta",
+      "PAKKUMINE ▸ ühekordne hind arvutatud · 6 ruumi · 14 panoraami",
+      "AVALDATUD ▸ CRM-i kuulutus #48213 · vaatur manustatud"
+    ]
+  },
+  "Marquee": {
+    "rooms": [
+      "Elutuba",
+      "Köök",
+      "Magamistuba",
+      "Vannituba",
+      "Koridor",
+      "Rõdu",
+      "Kabinet",
+      "Söögituba",
+      "Külalistetuba",
+      "Esik",
+      "Terrass",
+      "Garaaž"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "Tees",
+    "lines": [
+      "Ükski kuulutusfoto pole kunagi iseennast läbi käinud.",
+      "Ostjad jätavad vahele selle, kuhu nad sisse ei saa.",
+      "Nii et tegime telefonist skanneri",
+      "ja skannist koha."
+    ],
+    "body": "Maakler avab telefonis sodar.io, käib iga ruumi ühe korra läbi, samal ajal kui AI-jäädvustusabiline juhendab võtet, ja saab vastu ringkäigu, milles ostjad saavad liikuda. Kaks esimest ruumi on eelvaates tasuta. Üks makse viimistleb objekti. Avaldamine CRM-i kuulutusse on üks klõps."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "ruumi tasuta",
+        "note": "Toimiv eelvaade enne mistahes makset"
+      },
+      {
+        "label": "ühekordne hind",
+        "note": "Objekti järgi mõõdetud. Ilma tellimuseta"
+      },
+      {
+        "label": "partneri marginaal",
+        "note": "CRM-idele, kes Sodarit levitavad"
+      },
+      {
+        "label": "ruumi kohta",
+        "note": "Panoraamjäädvustus, mida AI juhendab reaalajas"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Keri",
+    "frames": "/12 kaadrit",
+    "assistantLabel": "Jäädvustusabiline",
+    "assist": [
+      "Kalluta 4° alla",
+      "Hoia paigal…",
+      "Hea valgus. Jätka pööramist",
+      "Kattuvus 40% — aeglasemalt",
+      "Ruum valmis"
+    ],
+    "rooms": [
+      "Elutuba",
+      "Köök",
+      "Magamistuba",
+      "Vannituba",
+      "Kabinet",
+      "Rõdu"
+    ],
+    "ready": "Valmis",
+    "locked": "Lukus",
+    "photosOnly": "Ainult fotod",
+    "panels": {
+      "capture": {
+        "label": "Jäädvustus",
+        "title": "Käi objekt ühe korra läbi.",
+        "body": "Ava sodar.io telefonis. Kaamera juhib sind ruumist ruumi, samal ajal kui AI-jäädvustusabiline parandab katvust, asendit ja valgust — reaalajas, kuni sa veel kohapeal seisad."
+      },
+      "preview": {
+        "label": "Eelvaade",
+        "title": "Kaks ruumi, valmis, tasuta.",
+        "body": "Sodar töötleb esimesed jäädvustused kahe esimese ruumi toimivaks ringkäiguks. Näed lõplikku kvaliteeti enne, kui midagi maksad."
+      },
+      "unlock": {
+        "label": "Ava",
+        "title": "Üks hind. Üks makse.",
+        "body": "Sodar arvutab kogu objektile ühekordse hinna — suurus, panoraamide arv, töötlus, majutus ja hooldus on kõik arvesse võetud. Maksa üks kord Stripe’i kaudu ja ülejäänud ruumid töödeldakse."
+      },
+      "publish": {
+        "label": "Avalda",
+        "title": "Kuulutusse, mis sul juba on.",
+        "body": "Ühenda oma CRM, vali objekti kuulutus, avalda. Ringkäik elab kuulutuse sees Sodari manustatud vaaturi kaudu — ja heakskiidetud välimuse seadeid saad igal ajal kohandada."
+      }
+    },
+    "quoteLabel": "Pakkumine · Kesklinna 84",
+    "quoteRows": [
+      {
+        "k": "6 ruumi · 14 panoraami",
+        "v": "sisaldub"
+      },
+      {
+        "k": "Töötlus ja AI-arvutus",
+        "v": "sisaldub"
+      },
+      {
+        "k": "Salvestus ja vaaturi majutus",
+        "v": "12 kuud"
+      },
+      {
+        "k": "Hooldus",
+        "v": "sisaldub"
+      }
+    ],
+    "oneTime": "ühekordne · ilma tellimuseta",
+    "paidLabel": "Makstud",
+    "paidBody": "Töötleme ülejäänud 4 ruumi. Anname teada, kui ringkäik on valmis.",
+    "pay": "Maksa Stripe’iga",
+    "paying": "Ühendame Stripe’iga…",
+    "mockNote": "Näidiskassa — ühtegi kaarti ei debiteerita.",
+    "crmHeader": "Sinu CRM · Kuulutus #48213",
+    "publishBtn": "Avalda ringkäik",
+    "publishedBtn": "Avaldatud",
+    "viewerBadge": "Sodari vaatur · 360°",
+    "listingMeta": "3 tuba · 78 m² · 395 000 €",
+    "status": "olek",
+    "statusPublished": "avaldatud",
+    "statusReady": "valmis",
+    "viewer": "vaatur",
+    "viewerEmbedded": "manustatud",
+    "opened": "avatud",
+    "openedValue": "128 külastajat"
+  },
+  "Capabilities": {
+    "kicker": "Mida sa saad",
+    "intro": "Kolm omavahel seotud pinda — avalik veebileht, juhendatud mobiilne skann ja maakleri tööruum — ühe ringkäigu taga.",
+    "title": "Üks skann, seitse asja, mida kuulutus juurde saab.",
+    "items": [
+      {
+        "title": "Juhendatud jäädvustus telefoniga",
+        "desc": "Ei mingit varustust ega fotograafi. Kaamera juhib sind läbi iga ruumi panoraamina, otse brauserist."
+      },
+      {
+        "title": "AI-jäädvustusabiline",
+        "desc": "Reaalajas juhendamine katvuse, asendi ja pildikvaliteedi osas, kuni sa veel objektil viibid."
+      },
+      {
+        "title": "Kahe ruumi tasuta eelvaade",
+        "desc": "Kahe esimese ruumi toimiv ringkäik enne mistahes makset, et hindaksid lõplikku kvaliteeti kõigepealt."
+      },
+      {
+        "title": "Ühekordne hind objekti kohta",
+        "desc": "Üks objekti järgi mõõdetud pakkumine — panoraamid, arvutus, majutus ja hooldus kaasa arvatud."
+      },
+      {
+        "title": "Avaldamine CRM-i",
+        "desc": "Ühenda CRM, vali kuulutus, avalda. Ringkäik jääb kuulutuse sisse manustatud vaaturi kaudu."
+      },
+      {
+        "title": "Heakskiidetud välimus",
+        "desc": "Kohanda vaaturi välimust heakskiidetud seadete piires, et see sobiks kuulutusega, milles ta elab."
+      },
+      {
+        "title": "Maakleri tööruum",
+        "desc": "Halda objekte, jälgi töötluse ja avaldamise olekut ning vaata, kui palju külastajaid vaaturi avas."
+      }
+    ],
+    "cta": {
+      "title": "Skanni kinnisvara",
+      "desc": "Kaks ruumi tasuta. Alusta telefonis.",
+      "start": "Alusta"
+    }
+  },
+  "Integration": {
+    "kicker": "Seal, kus sa juba töötad",
+    "intro": "Ühenda CRM, mida sa juba kasutad. Vali kuulutus. Avalda. Ringkäik ilmub selle sisse manustatud vaaturi või iframe’i kaudu — pole midagi kopeerida ega majutada.",
+    "title": "Lihtsalt lisa Sodar oma CRM-i.",
+    "crmHeader": "Sinu CRM · Kuulutused",
+    "published": "Ringkäik avaldatud",
+    "addWalkthrough": "+ lisa ringkäik",
+    "listings": [
+      {
+        "name": "Kesklinna 84",
+        "meta": "3 tuba · 395 000 €"
+      },
+      {
+        "name": "Sadama 12",
+        "meta": "2 tuba · 260 000 €"
+      },
+      {
+        "name": "Nõmme villa 7",
+        "meta": "6 tuba · 890 000 €"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Illustratiivne · pole veel mõõdetud",
+    "title": "Vahe, mille skann teeb.",
+    "beforeLabel": "Enne",
+    "afterLabel": "Pärast · Sodariga",
+    "before": [
+      "Broneeri fotograaf",
+      "Oota 2–3 päeva",
+      "Lamedad fotod",
+      "Ostjad kerivad mööda",
+      "Midagi ei mõõdeta"
+    ],
+    "after": [
+      "Üks telefon, üks läbikäik",
+      "Eelvaade minutitega",
+      "Kaasahaarav ringkäik",
+      "Ostjad astuvad sisse",
+      "Iga vaaturi avamine loetud"
+    ]
+  },
+  "Workspace": {
+    "kicker": "Tagasi laua taga",
+    "intro": "Iga objekt, mille skannid, selle töötluse ja avaldamise olek ning see, kui palju külastajaid vaaturi avas — ühes tööruumis maakleri kohta.",
+    "title": "Sinu objektid, alati silme ees.",
+    "cta": "Vaata maakleri tööruumi",
+    "mock": {
+      "title": "Tööruum",
+      "live": "Reaalajas eelvaade",
+      "properties": "Objektid",
+      "cols": [
+        "Objekt",
+        "Olek",
+        "Vaatur avatud",
+        "Avaldamine"
+      ],
+      "statuses": {
+        "published": "Avaldatud",
+        "processing": "Töötluses",
+        "preview": "Eelvaade",
+        "capturing": "Jäädvustus"
+      },
+      "rows": [
+        {
+          "name": "Kesklinna 84",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "Sadama 12",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "Nõmme villa 7",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 ruumi"
+        },
+        {
+          "name": "Vanalinna loft 3",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 ruumi tasuta"
+        },
+        {
+          "name": "Pirita tee 19",
+          "status": "capturing",
+          "views": "—",
+          "pub": "telefonis"
+        }
+      ],
+      "engagement": "Ruumide huvi · Kesklinna 84",
+      "rooms": [
+        "Elutuba",
+        "Köök",
+        "Magamistuba",
+        "Vannituba",
+        "Rõdu"
+      ],
+      "processing": "Töötlus",
+      "jobs": [
+        {
+          "name": "Nõmme villa 7",
+          "step": "Ühendamine · magamistuba",
+          "n": "4 / 6"
+        },
+        {
+          "name": "Vanalinna loft 3",
+          "step": "Eelvaade valmis",
+          "n": "2 / 2"
+        },
+        {
+          "name": "Pirita tee 19",
+          "step": "Jäädvustus telefonis",
+          "n": "—"
+        }
+      ],
+      "week": "Sel nädalal",
+      "weekTitle": "701 vaaturi avamist",
+      "weekSub": "2 avaldatud ringkäigu peale"
+    }
+  },
+  "Scans": {
+    "kicker": "Selle nädala skannid",
+    "title": "Iga liiki kuulutus skannitakse ühtmoodi.",
+    "items": [
+      {
+        "label": "Korter",
+        "meta": "3 tuba · Kesklinn"
+      },
+      {
+        "label": "Uusarendus",
+        "meta": "4 tuba · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 tuba · Pirita"
+      },
+      {
+        "label": "Üürikorter",
+        "meta": "1 tuba · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "Ehitatud, et kuulutusi usaldada",
+    "title": "Nõuetele vastavus pole tagantjärele mõte.",
+    "items": [
+      {
+        "title": "Selgesõnaline kaameraluba",
+        "desc": "Sodar küsib seadme kaamerat ainult siis, kui alustad skanni, ja kasutab seda ainult selleks jäädvustuseks."
+      },
+      {
+        "title": "AI-märgistus",
+        "desc": "Igal avaldatud ringkäigul on selge ja nähtav märgis, et tegemist on AI-ga töödeldud rekonstruktsiooniga."
+      },
+      {
+        "title": "Turvalisus",
+        "desc": "Esimesest päevast ehitatud SOC 2 ja GDPR-i suunas — krüpteeritud salvestus, piiratud CRM-i tunnused, auditilogid iga objekti kohta."
+      },
+      {
+        "title": "Andmed kuuluvad maaklerile",
+        "desc": "Jäädvustused, ringkäigud ja huviandmed kuuluvad maaklerile. Sodari lahtiühendamine ekspordib kõik."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "CRM-i pakkujatele",
+    "title": "Levita Sodarit oma maaklerivõrgustikule. Jäta endale 15%.",
+    "body": "CRM-partnerid teevad Sodari oma maakleritele kättesaadavaks ja saavad 15% marginaali kvalifitseeruvatelt ringkäiguostudelt — ilma miinimumita, automaatselt välja makstud.",
+    "cta": "Vaata partnerprogrammi"
+  },
+  "PricingTeaser": {
+    "kicker": "Lihtne juba disainilt",
+    "title1": "Üks objekt.",
+    "title2": "Üks hind. Üks kord.",
+    "body": "Vaata kaht esimest ruumi tasuta eelvaates. Seejärel pakub Sodar objekti viimistlemiseks ühe ühekordse hinna — ilma tellimuseta, ilma aastalepinguta.",
+    "cta": "Kuidas hind arvutatakse",
+    "card": {
+      "label": "Tüüpiline 3-toaline korter",
+      "price": "99–149 €",
+      "note": "ühekordne · pakkumine pärast tasuta eelvaadet",
+      "factors": [
+        "Objekti suurus",
+        "Jäädvustatud panoraamid",
+        "Töötlus ja AI-arvutus",
+        "Salvestus ja vaaturi majutus",
+        "Pidev hooldus"
+      ],
+      "cta": "Skanni kinnisvara"
+    }
+  },
+  "Language": {
+    "kicker": "Kus iganes sinu ostjad otsivad",
+    "title1": "Üks ringkäik.",
+    "title2": "Iga keel, mida ostja loeb.",
+    "body": "Avalda üks kord — vaaturi ruumisildid ja juhtnupud järgivad keelt, mille ostja on seadnud. Veebileht ja vaatur on täna saadaval kuueteistkümnes keeles."
+  },
+  "Switcher": {
+    "search": "Otsi keeli…",
+    "none": "Sobivat keelt ei leitud.",
+    "active": "Aktiivne",
+    "comingSoon": "Peagi",
+    "choose": "Vali keel",
+    "notice": "{language} pole veel tõlgitud — kuulutused kuvatakse inglise keeles, kuni tõlge valmib."
+  },
+  "Footer": {
+    "tagline": "Iga kuulutus, skannitud kohaks, mida ostjad saavad läbi käia.",
+    "columns": {
+      "product": {
+        "title": "Toode",
+        "items": [
+          [
+            "Toode",
+            "/product"
+          ],
+          [
+            "Kuidas see töötab",
+            "/product#pipeline"
+          ],
+          [
+            "Tööruumi eelvaade",
+            "/terminal"
+          ],
+          [
+            "Turvalisus",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Integratsioonid",
+        "items": [
+          [
+            "Integratsioonikeskus",
+            "/integrations"
+          ],
+          [
+            "Avaldamine CRM-i",
+            "/integrations#crm"
+          ],
+          [
+            "Manustatud vaatur",
+            "/integrations#embed"
+          ],
+          [
+            "API juurdepääs",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "Partnerid",
+        "items": [
+          [
+            "Partnerprogramm",
+            "/partners"
+          ],
+          [
+            "Hakka partneriks",
+            "/partners#apply"
+          ],
+          [
+            "Partneri töölaud",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Ettevõte",
+        "items": [
+          [
+            "Meist",
+            "/about"
+          ],
+          [
+            "Karjäär",
+            "/careers"
+          ],
+          [
+            "Välimärkmed",
+            "/blog"
+          ],
+          [
+            "Ettevõtetele",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Juriidiline",
+        "items": [
+          [
+            "Privaatsus",
+            "/legal/privacy"
+          ],
+          [
+            "Tingimused",
+            "/legal/terms"
+          ],
+          [
+            "Andmetöötlus",
+            "/legal/data-processing"
+          ],
+          [
+            "Küpsised",
+            "/legal/cookies"
+          ]
+        ]
+      }
+    },
+    "language": "Keel",
+    "social": "Mujal",
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallinn, Eesti · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Toode — Sodar",
+    "metaDesc": "Kuidas juhendatud telefoniskannist saab kaasahaarav, kuulutusevalmis ringkäik.",
+    "eyebrow": "Toode",
+    "title": "Telefon, üks läbikäik, koht, kuhu ostjad saavad sisse astuda.",
+    "sub": "Sodar muudab juhendatud kinnisvaraskannid kaasahaaravateks, kuulutusevalmis ringkäikudeks — jäädvustatud telefoniga, mis sul juba kaasas on, avaldatud CRM-i, mida sa juba kasutad.",
+    "ctaPrimary": "Skanni oma esimene objekt",
+    "ctaSecondary": "Vaata tööruumi",
+    "flatLabel": "Telefoni jäädvustus",
+    "revealedLabel": "Sodari ringkäik",
+    "stagesKicker": "Läbikäigust ringkäiguni",
+    "stagesTitle": "Kolm etappi, üks protsess.",
+    "stages": [
+      {
+        "label": "Jäädvustus",
+        "sub": "Telefon · brauser · kaameraluba",
+        "desc": "Iga ruum jäädvustatakse panoraamina AI-jäädvustusabilise reaalajas juhendamisel."
+      },
+      {
+        "label": "Töötlus",
+        "sub": "Ühendamine · parandamine · sidumine",
+        "desc": "Panoraamid ühendatakse, puhastatakse ja seotakse üheks ringkäiguks. Kaks esimest ruumi tulevad tagasi tasuta."
+      },
+      {
+        "label": "Avaldamine",
+        "sub": "CRM · manustatud vaatur · välimus",
+        "desc": "Ühenda CRM, vali kuulutus, avalda. Vaatur elab kuulutuse sees; sina häälestad selle heakskiidetud välimust."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Proovi päris objektil",
+      "title": "Vaata kaht ruumi tasuta. Maksa ülejäänu eest üks kord.",
+      "sub": "Ava sodar.io telefonis ja alusta skanni — kaarti pole vaja enne, kui avad täieliku ringkäigu.",
+      "label": "Skanni oma esimene objekt"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Hinnad — Sodar",
+    "metaDesc": "Ühekordne hind objekti kohta, pakutakse pärast kahe ruumi tasuta eelvaadet. Mahuhinnad büroodele, 15% marginaal CRM-partneritele.",
+    "eyebrow": "Lihtne juba disainilt",
+    "title": "Üks objekt. Üks hind. Üks kord.",
+    "sub": "Vaata kaht ruumi tasuta, seejärel maksa üks objekti järgi mõõdetud ühekordne hind. Mahuhinnad büroodele, püsiv 15% marginaal CRM-partneritele.",
+    "badge": "Enamik büroosid",
+    "tiers": [
+      {
+        "name": "Objekti kohta",
+        "price": "Alates 99 €",
+        "unit": "ühekordne, pakkumine pärast tasuta eelvaadet",
+        "desc": "Maakleritele, kes skannivad kuulutusi ühekaupa.",
+        "features": [
+          "Juhendatud jäädvustus telefoniga + AI-abiline",
+          "Kaks esimest ruumi tasuta eelvaates",
+          "Täielik ringkäik pärast üht Stripe’i makset",
+          "Avaldamine CRM-i ja manustatud vaatur",
+          "Tööruum olekute ja vaaturi avamistega"
+        ],
+        "cta": "Skanni oma esimene objekt"
+      },
+      {
+        "name": "Büroo",
+        "price": "Maht",
+        "unit": "objekti kohta, mahu kasvades langeb",
+        "desc": "Büroodele, kes avaldavad kümneid kuulutusi kuus.",
+        "features": [
+          "Kõik, mis Objekti kohta paketis",
+          "Bürooülene tööruumi koond",
+          "Eelisjärjekord töötluses",
+          "Personaalne CRM-i seadistus",
+          "Ühisbrändiga vaatur"
+        ],
+        "cta": "Räägi müügiga"
+      },
+      {
+        "name": "CRM-partner",
+        "price": "15%",
+        "unit": "marginaal kvalifitseeruvatelt ostudelt",
+        "desc": "CRM-i pakkujatele, kes levitavad Sodarit oma maakleritele.",
+        "features": [
+          "Sodar saadaval sinu platvormi sees",
+          "Partneri töölaud",
+          "Igakuine automaatne väljamakse",
+          "Ilma miinimummahuta"
+        ],
+        "cta": "Kandideeri partneriks"
+      }
+    ],
+    "factorsKicker": "Kuidas pakkumine kujuneb",
+    "factorsTitle": "Hind objekti, mitte paketi järgi.",
+    "factors": [
+      {
+        "title": "Objekti suurus",
+        "desc": "Pindala ja jäädvustatud ruumide arv."
+      },
+      {
+        "title": "Panoraamide maht",
+        "desc": "Kui palju panoraame skann tootis ja millise eraldusvõimega."
+      },
+      {
+        "title": "Töötlus",
+        "desc": "Ühendamine, parandamine ja ringkäigu taga olev AI-arvutus."
+      },
+      {
+        "title": "Salvestus ja majutus",
+        "desc": "Ringkäigu ja selle vaaturi hoidmine sinu kuulutuse sees võrgus."
+      },
+      {
+        "title": "Hooldus",
+        "desc": "Vaaturi pidevad uuendused ja CRM-i integratsioon ise."
+      },
+      {
+        "title": "Partneri marginaal",
+        "desc": "Kui Sodarit levitab CRM-partner, sisaldub tema marginaal pakkumises."
+      }
+    ],
+    "faqKicker": "Küsimused",
+    "faqTitle": "Hindade KKK.",
+    "faq": [
+      {
+        "q": "Millal ma hinda näen?",
+        "a": "Pärast tasuta eelvaadet. Sodar arvutab objekti viimistlemise ühekordse hinna, kui kaks esimest ruumi on töödeldud."
+      },
+      {
+        "q": "Kas eelvaade on tõesti tasuta?",
+        "a": "Jah — kaks esimest ruumi töödeldakse toimivaks ringkäiguks ilma makseta. Maksad ainult objekti viimistlemise ja avaldamise eest."
+      },
+      {
+        "q": "Kas on tellimus?",
+        "a": "Ei. Iga objekt on üks ühekordne makse Stripe’i kaudu. Miski ei uuene."
+      },
+      {
+        "q": "Kuidas makstakse CRM-partneri marginaal?",
+        "a": "Automaatselt, igakuiselt, partneri platvormi maaklerite kvalifitseeruvatelt ringkäiguostudelt."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Varajane ligipääs",
+      "title": "Sinu järgmine kuulutus väärib enamat kui fotosid.",
+      "sub": "Võtame kõigepealt vastu väikese rühma ettevaatavaid maaklereid.",
+      "label": "Taotle varajast ligipääsu"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Tööruumi eelvaade — Sodar",
+    "metaDesc": "Avalik, sisselogimiseta eelvaade maakleri tööruumist. Päris andmeid pole.",
+    "eyebrow": "Avalik eelvaade · ilma sisselogimiseta, ilma päris andmeteta",
+    "title": "Iga objekt, selle olek ja kes selle avas.",
+    "sub": "See on staatiline eelvaade tööruumist, mille iga maakler saab — objektid, töötluse ja avaldamise olek ning see, kui palju külastajaid iga ringkäigu vaaturi avas.",
+    "cta": {
+      "eyebrow": "Sinu oma kohe, kui avaldad",
+      "title": "Sinu tööruum algab tühjana — kuni esimese skannini.",
+      "sub": "Skanni objekt ja päris numbrid asendavad selle eelvaate.",
+      "label": "Skanni oma esimene objekt"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "Partnerid — Sodar",
+    "metaDesc": "CRM-platvormid teenivad püsiva 15% marginaali, levitades Sodarit oma maaklerivõrgustikule.",
+    "eyebrow": "CRM-platvormidele",
+    "title": "Levita Sodarit oma maakleritele. Jäta endale 15%.",
+    "sub": "Püsiv marginaal igalt kvalifitseeruvalt ringkäigult, mille sinu platvormi maaklerid ostavad — ilma miinimumita, automaatselt välja makstud, arendustööd vaid soovituslingi jagu.",
+    "apply": "Kandideeri partneriks",
+    "stepsKicker": "Kuidas see töötab",
+    "stepsTitle": "Kolm sammu püsiva marginaalini.",
+    "steps": [
+      {
+        "title": "Kandideeri",
+        "desc": "Ütle meile, millised maaklerid või bürood sinu platvormil töötavad ja umbes kui palju aktiivseid kuulutusi neil on."
+      },
+      {
+        "title": "Integreeri",
+        "desc": "Soovituslink ja soovi korral natiivne sisenemispunkt sinu rakenduses kasutajate jaoks."
+      },
+      {
+        "title": "Teeni",
+        "desc": "15% igalt kvalifitseeruvalt ringkäiguostult maaklerilt, kes liitus sinu platvormi kaudu, makstakse välja igakuiselt."
+      }
+    ],
+    "dashKicker": "Partneri töölaud",
+    "dashTitle": "Jälgi soovitatud maaklereid ja marginaali ühes kohas.",
+    "dash": [
+      {
+        "label": "Soovitatud maaklerid",
+        "value": "142"
+      },
+      {
+        "label": "Ostetud ringkäigud",
+        "value": "3 018"
+      },
+      {
+        "label": "Marginaal sel kuul",
+        "value": "6 240 €"
+      }
+    ],
+    "applyKicker": "Alusta",
+    "applyTitle": "Kandideeri partneriks.",
+    "applyBody": "Lühike taotlus — hindame platvormi sobivust ja tüüpilist kuulutuste mahtu enne soovituslingi väljastamist.",
+    "form": {
+      "company": "Ettevõtte / platvormi nimi",
+      "companyPh": "Acme CRM",
+      "email": "Töömeil",
+      "emailPh": "sina@ettevote.ee",
+      "brokers": "Aktiivsed maaklerid sinu platvormil",
+      "brokersPh": "nt 50–200",
+      "submit": "Saada taotlus"
+    },
+    "faqKicker": "Küsimused",
+    "faqTitle": "Partnerite KKK.",
+    "faq": [
+      {
+        "q": "Kas on miinimumkohustus?",
+        "a": "Ei. 15% marginaal kehtib alates esimesest ostetud ringkäigust — mahu alampiiri pole."
+      },
+      {
+        "q": "Kellele kuulub suhe maakleriga?",
+        "a": "Sulle. Sodar esitab arve otse maaklerile ja raporteerib sinu marginaali; maaklerid jäävad sinu klientideks."
+      },
+      {
+        "q": "Kas saame ringkäigule oma brändi lisada?",
+        "a": "Jah — partneritaseme konto saab manustatud ringkäigu ümber lisada ühisbrändiga raami."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Valmis, kui sina oled",
+      "title": "Anna oma maakleritele põhjus rohkem avaldada.",
+      "sub": "Kandideeri üks kord — võtame ühendust soovituslingi ja integratsioonijuhistega.",
+      "label": "Kandideeri partneriks"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Integratsioonid — Sodar",
+    "metaDesc": "Ühenda CRM või anna API juurdepääs, et avaldatud ringkäigud manustuksid otse sinu kuulutustesse.",
+    "eyebrow": "Integratsioonikeskus",
+    "title": "Ühenda üks kord. Iga järgmine kuulutus on üks klõps.",
+    "sub": "Logi oma CRM-i OAuthiga või anna Sodarile piiratud API juurdepääs — vali kuulutus, avalda, ja ringkäik manustatakse ilma teise sammuta.",
+    "connKicker": "Ühendused",
+    "connTitle": "Vali, kuidas Sodar sinu kuulutusteni jõuab.",
+    "conns": [
+      {
+        "name": "Üldine CRM-i OAuth",
+        "action": "Ühenda"
+      },
+      {
+        "name": "City24 MLS-i voog",
+        "action": "Ühenda"
+      },
+      {
+        "name": "Kohandatud REST API",
+        "action": "Loo võti"
+      },
+      {
+        "name": "Zapier / webhook",
+        "action": "Peagi"
+      }
+    ],
+    "notConnected": "olek: ühendamata",
+    "mockTitle": "Näidisühendus — ühendatakse 2. etapis",
+    "embedKicker": "CRM-i pole? Pole probleemi",
+    "embedTitle": "Üks iframe, mis sobib kõikjale.",
+    "embedBody": "Iga ostetud ringkäik saab püsiva manustamis-URL-i. Kleebi see mistahes kinnisvaraportaali, mis lubab kohandatud iframe’i.",
+    "cta": {
+      "eyebrow": "Võta oma CRM kaasa",
+      "title": "Sodar sobib tööriistadega, mida sa juba kasutad.",
+      "sub": "Räägi meiega eelisjärjekorras integratsioonist või alusta juba täna üldise manustamisega.",
+      "label": "Tutvu partnerprogrammiga"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Ettevõtetele — Sodar",
+    "metaDesc": "Meeskonnakohad, hulgiskannid ja jagatud tööruumi koondvaated büroodele.",
+    "eyebrow": "Büroodele",
+    "title": "Üks tööruum igale maaklerile sinu meeskonnas.",
+    "sub": "Hulgiskann, mahuhinnad ja bürooülene huvi koondvaade — ehitatud büroodele, kes avaldavad kümneid kuulutusi kuus.",
+    "talk": "Räägi müügiga",
+    "featKicker": "Ehitatud meeskondadele",
+    "featTitle": "Kogu iseteenindus, pluss see, mida büroo vajab.",
+    "features": [
+      {
+        "title": "Meeskonnakohad",
+        "desc": "Iga maakler saab oma tööruumi; selle kohal on bürooülene koondvaade juhtidele."
+      },
+      {
+        "title": "Hulgiskann",
+        "desc": "Skanni terve objektiportfell, mitte üks objekt korraga."
+      },
+      {
+        "title": "Mahuhinnad",
+        "desc": "Objekti hind langeb, kui sinu büroo kuumaht kasvab."
+      },
+      {
+        "title": "Personaalne CRM-i seadistus",
+        "desc": "Hoolitseme OAuthi / API ühenduste eest sinu büroo konkreetse CRM-i jaoks."
+      },
+      {
+        "title": "Ühisbränd",
+        "desc": "Lisa oma büroo märk igale manustatud ringkäigule."
+      },
+      {
+        "title": "Eelistöötlus",
+        "desc": "Ettevõtte objekte töödeldakse enne iseteeninduse järjekorda."
+      }
+    ],
+    "priceKicker": "Hinnad, mis mahuga langevad",
+    "priceTitle1": "Mahuhinnad,",
+    "priceTitle2": "üks leping.",
+    "priceBody": "Kohandatud objektihind kuumahu põhjal pluss fikseeritud kohatasu maakleri kohta. Räägi müügiga, et saada sinu büroo suurusele vastav pakkumine.",
+    "priceNote": "Illustratiivne, objekti kohta",
+    "tiers": [
+      {
+        "tier": "1–20 objekti / kuus",
+        "price": "alates 99 €"
+      },
+      {
+        "tier": "21–100 objekti / kuus",
+        "price": "alates 79 €"
+      },
+      {
+        "tier": "100+ objekti / kuus",
+        "price": "Kokkuleppel"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Ettevõtetele",
+      "title": "Too kogu oma büroo kuulutused veebi.",
+      "sub": "Seadistame sinu CRM-i ühenduse ja kohtade struktuuri koos.",
+      "label": "Räägi müügiga"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Turvalisus ja vastavus — Sodar",
+    "metaDesc": "Andmete käitlemine, AI-märgistus ja Sodari protsessi vastavus nõuetele.",
+    "eyebrow": "Usaldus ja vastavus",
+    "title": "Ehitatud, et usaldada kellegi teise kuulutust.",
+    "sub": "Sodar on esimesest päevast disainitud SOC 2 ja GDPR-i suunas — see leht on töökokkuvõte; ametlikud aruanded ja andmetöötluslepingud on saadaval soovi korral.",
+    "detailKicker": "Üksikasjalikult",
+    "detailTitle": "Kuidas andmed tegelikult liiguvad.",
+    "details": [
+      {
+        "title": "Kaamera juurdepääs",
+        "desc": "Seadme kaamerat küsitakse ainult skanni alustamisel, selgesõnalise loaga, ja kasutatakse ainult selleks jäädvustuseks."
+      },
+      {
+        "title": "Salvestus",
+        "desc": "Jäädvustused ja renderdatud ringkäigud on krüpteeritud nii salvestuses kui edastusel; juurdepääs on piiratud maakleri konto kaupa."
+      },
+      {
+        "title": "AI-märgistus",
+        "desc": "Igal avalikul ringkäigul on nähtav märgis, mis tuvastab selle AI-ga töödeldud rekonstruktsioonina."
+      },
+      {
+        "title": "Andmete säilitamine",
+        "desc": "Jäädvustusi ja ringkäike säilitatakse kuulutuse eluea jooksul pluss kindel lisaperiood, seejärel kustutatakse soovi korral."
+      },
+      {
+        "title": "Juurdepääsu kontroll",
+        "desc": "CRM-i tunnused ja API võtmed on piiratud minimaalsete õigustega, mida integratsioon vajab."
+      },
+      {
+        "title": "Alltöötlejad",
+        "desc": "Kolmandate osapoolte töötlus- ja makseteenuse pakkujad on loetletud andmetöötluse lisas."
+      }
+    ],
+    "seeAlso": "Vaata ka:",
+    "privacy": "Privaatsuspoliitika",
+    "dpa": "Andmetöötluse lisa",
+    "cta": {
+      "eyebrow": "Küsimused turvaülevaatuseks",
+      "title": "Vajad täidetud turvaküsimustikku?",
+      "sub": "Võta ühendust ja saadame täidetud küsimustiku või SOC 2 seisu otse tagasi.",
+      "label": "Võta ühendust turvameeskonnaga"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "Meist — Sodar",
+    "metaDesc": "Miks Sodar on olemas: põhjendus, miks kohelda kuulutust kohana, mitte fotogaleriina.",
+    "eyebrow": "Ettevõte",
+    "title": "Kuulutusfoto on lubadus. Meie teeme selle läbikäidavaks.",
+    "sub": "Sodar sai alguse ühest tähelepanekust: ostjad kerivad lamedatest fotodest mööda, kuid jäävad pidama ruumis, kus nad saavad päriselt liikuda. Me ehitame protsessi, mis muudab esimese teiseks.",
+    "thesisKicker": "Tees",
+    "thesisTitle": "Orienteerumine müüb kuulutusi.",
+    "thesis": [
+      "Kinnisvaraportaali keriv ostja otsustab sekunditega, kas jätkata või vahele jätta, fotode põhjal, mis ei anna mingit aimu ruumide vahelisest liikumisest. Ringkäik vastab küsimusele, millele foto ei saa: mis tunne on seal päriselt olla.",
+      "Sodar on olemas selleks, et teha see ringkäik nii odavaks ja kiireks, et sellest saab iga kuulutuse vaikeväärtus, mitte turu tipule reserveeritud luksus."
+    ],
+    "valuesKicker": "Millest me kinni hoiame",
+    "valuesTitle": "Kolm asja, mida me ära ei vaheta.",
+    "values": [
+      {
+        "title": "Skanni, ära lavasta",
+        "desc": "Päris objekt on tõe allikas. Meie töö on seda truult edasi anda, mitte fantaasiaversiooni välja mõelda."
+      },
+      {
+        "title": "Andmed kuuluvad maaklerile",
+        "desc": "Jäädvustused, ringkäigud ja huviandmed kuuluvad maaklerile, kes need lõi — alati eksporditavad, mitte kunagi lukus."
+      },
+      {
+        "title": "Märgistus vaikimisi",
+        "desc": "AI-ga töödeldud ruum peaks seda ütlema. Iga avalik ringkäik on märgistatud, eranditeta."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Liitu meiega",
+      "title": "Oleme väike meeskond, kes võtab varakult vastu.",
+      "sub": "Kui tees kõnetab, siis me värbame — või räägi meile lihtsalt oma kuulutustest.",
+      "label": "Vaata vabu kohti"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Karjäär — Sodar",
+    "metaDesc": "Vabad kohad Sodaris.",
+    "eyebrow": "Karjäär",
+    "title": "Aita igal kuulutusel korralikult renderdada.",
+    "sub": "Väike meeskond, varajane faas, päris maaklerid juba skannivad objekte. Värbame rekonstruktsiooni, toote ja go-to-marketi valdkonda.",
+    "rolesKicker": "Vabad kohad",
+    "rolesTitle": "Otsime praegu.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Rekonstruktsioon",
+        "location": "Kaugtöö / Tallinn"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Toode",
+        "location": "Kaugtöö / Tallinn"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Go-to-market",
+        "location": "Tallinn"
+      }
+    ],
+    "noFit": "Ei leia sobivat? Kirjuta ikkagi aadressile careers@sodar.io.",
+    "cta": {
+      "eyebrow": "Sobivat rolli veel pole?",
+      "title": "Oleme piisavalt väikesed, et üks meil jõuab asutajani.",
+      "sub": "Ütle meile, millega sa tahaksid tegeleda.",
+      "label": "Kirjuta careers@sodar.io"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Välimärkmed — Sodar",
+    "metaDesc": "Juhtumiuuringud maakleritelt ja büroodelt, kes skannivad objekte Sodariga.",
+    "eyebrow": "Välimärkmed",
+    "title": "Juhtumiuuringud, mitte pressiteated.",
+    "sub": "Mis päriselt juhtub, kui objekt skannitakse — kirjutanud meeskond, kes protsessi ehitab.",
+    "posts": [
+      {
+        "title": "Kuidas nelja maakleriga Tallinna büroo lühendas kuulutuse ettevalmistuse 15 minutile",
+        "tag": "Juhtumiuuring",
+        "read": "6 min lugemist"
+      },
+      {
+        "title": "Mida me muutsime pärast esimest 500 ringkäiku",
+        "tag": "Tootemärkmed",
+        "read": "4 min lugemist"
+      },
+      {
+        "title": "Ruumide huvi lugemine: mida vaaturi avamised tegelikult ütlevad",
+        "tag": "Juhend",
+        "read": "5 min lugemist"
+      },
+      {
+        "title": "Miks tasuta eelvaade on kaks ruumi, mitte üks või viis",
+        "tag": "Tootemärkmed",
+        "read": "3 min lugemist"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Mustand — 1. etapp",
+    "notice": "See on 1. etapi struktuurne kohatäide, mitte lõplik juriidiline tekst.",
+    "englishOnly": "Juriidilised dokumendid on praegu avaldatud ainult inglise keeles; ingliskeelne versioon on ülimuslik.",
+    "titles": {
+      "privacy": "Privaatsuspoliitika",
+      "terms": "Kasutustingimused",
+      "data-processing": "Andmetöötluse lisa",
+      "cookies": "Küpsiste poliitika"
+    }
+  },
+  "Scaffold": {
+    "phase": "1. etapp — disain ja struktuur",
+    "note": "Maksed, CRM-i OAuth ja AI-protsess on simuleeritud kohatäite-olekud. Taustsüsteemi päringuid pole."
+  }
+}

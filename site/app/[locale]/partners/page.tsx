@@ -1,67 +1,63 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { localeAlternates } from "@/lib/seo";
 import { PageShell } from "@/components/page-shell";
 import { PageHero } from "@/components/page-hero";
 import { CtaBanner } from "@/components/cta-banner";
 import { PartnerApplyForm } from "@/components/partner-apply-form";
 
-export const metadata: Metadata = {
-  title: "Partners — Sodar",
-  description: "CRM platforms earn a standing 15% margin marketing Sodar to their realtor base.",
-};
+type Params = { params: Promise<{ locale: string }> };
 
-const STEPS: [string, string][] = [
-  ["Apply", "Tell us which brokers or agencies run on your platform, and roughly how many active listings."],
-  ["Integrate", "A referral link and, optionally, a native in-app entry point for your users."],
-  ["Earn", "15% of every listing unlock from a broker who joined through your platform, paid out monthly."],
-];
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "PartnersPage" });
+  return { title: t("metaTitle"), description: t("metaDesc"), alternates: localeAlternates(locale, "/partners") };
+}
 
-const FAQ: [string, string][] = [
-  ["Is there a minimum commitment?", "No. The 15% margin applies from the first unlocked listing — no volume floor."],
-  ["Who owns the broker relationship?", "You do. Sodar bills the broker directly and reports your margin; brokers stay your customer."],
-  ["Can we co-brand the walkthrough?", "Yes — a partner-tier account can apply a co-branded frame around the embedded walkthrough."],
-];
-
-export default async function PartnersPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function PartnersPage({ params }: Params) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("PartnersPage");
+  const steps = t.raw("steps") as { title: string; desc: string }[];
+  const dash = t.raw("dash") as { label: string; value: string }[];
+  const faq = t.raw("faq") as { q: string; a: string }[];
 
   return (
     <PageShell>
       <PageHero
-        eyebrow="For CRM platforms"
-        title="Market Sodar to your brokers. Keep 15%."
-        subtitle="A standing margin on every listing your platform's brokers unlock — no minimum, paid out automatically, no engineering lift beyond a referral link."
-        actions={<a href="#apply" className="button-primary">Apply as a partner <span>↗</span></a>}
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        subtitle={t("sub")}
+        actions={
+          <a href="#apply" className="button-primary">
+            {t("apply")} <span aria-hidden>↗</span>
+          </a>
+        }
       />
 
       <section className="section-shell border-t border-border">
-        <div className="section-kicker">How it works</div>
-        <h2 className="section-title mt-7">Three steps to a standing margin.</h2>
+        <p className="section-kicker">{t("stepsKicker")}</p>
+        <h2 className="section-title mt-7">{t("stepsTitle")}</h2>
         <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-3">
-          {STEPS.map(([title, desc], i) => (
-            <article key={title} className="bg-bg p-8 sm:p-10">
-              <span className="font-mono text-xs text-accent">0{i + 1}</span>
-              <h3 className="mt-8 text-2xl tracking-tight">{title}</h3>
-              <p className="mt-3 leading-relaxed text-text-muted">{desc}</p>
+          {steps.map((s, i) => (
+            <article key={s.title} className="bg-bg p-8 sm:p-10">
+              <span className="font-mono text-xs text-text-faint">0{i + 1}</span>
+              <h3 className="display mt-8 text-3xl text-text">{s.title}</h3>
+              <p className="mt-3 leading-relaxed text-text-muted">{s.desc}</p>
             </article>
           ))}
         </div>
       </section>
 
       <section id="dashboard" className="section-shell border-t border-border">
-        <div className="section-kicker">Partner dashboard</div>
-        <h2 className="section-title mt-7">Track referred brokers and margin in one place.</h2>
+        <p className="section-kicker">{t("dashKicker")}</p>
+        <h2 className="section-title mt-7">{t("dashTitle")}</h2>
         <div className="mt-14 overflow-hidden rounded-3xl border border-border bg-bg-raised">
           <div className="grid divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-            {[
-              ["Referred brokers", "142"],
-              ["Listings unlocked", "3,018"],
-              ["Margin this month", "$6,240"],
-            ].map(([label, value]) => (
-              <div key={label} className="p-8">
-                <p className="font-mono text-[11px] uppercase tracking-[.16em] text-text-muted">{label}</p>
-                <p className="mt-3 text-4xl tracking-[-.03em]">{value}</p>
+            {dash.map((d) => (
+              <div key={d.label} className="p-8">
+                <p className="mono-label">{d.label}</p>
+                <p className="display mt-3 text-4xl text-text" dir="ltr">{d.value}</p>
               </div>
             ))}
           </div>
@@ -72,37 +68,28 @@ export default async function PartnersPage({ params }: { params: Promise<{ local
       <section id="apply" className="section-shell border-t border-border">
         <div className="grid gap-12 lg:grid-cols-[1fr_.9fr] lg:items-start">
           <div>
-            <div className="section-kicker">Get started</div>
-            <h2 className="section-title mt-7">Apply as a partner.</h2>
-            <p className="mt-7 max-w-md text-lg text-text-muted">
-              A short application — we review platform fit and typical listing volume before issuing a referral
-              link.
-            </p>
+            <p className="section-kicker">{t("applyKicker")}</p>
+            <h2 className="section-title mt-7">{t("applyTitle")}</h2>
+            <p className="mt-7 max-w-md text-lg text-text-muted">{t("applyBody")}</p>
           </div>
           <PartnerApplyForm />
         </div>
       </section>
 
       <section className="section-shell border-t border-border">
-        <div className="section-kicker">Questions</div>
-        <h2 className="section-title mt-7">Partner FAQ.</h2>
+        <p className="section-kicker">{t("faqKicker")}</p>
+        <h2 className="section-title mt-7">{t("faqTitle")}</h2>
         <div className="mt-14 divide-y divide-border border-y border-border">
-          {FAQ.map(([q, a]) => (
-            <div key={q} className="grid gap-2 py-6 sm:grid-cols-[1fr_1.4fr] sm:gap-8">
-              <p className="text-text">{q}</p>
-              <p className="text-text-muted">{a}</p>
+          {faq.map((item) => (
+            <div key={item.q} className="grid gap-2 py-6 sm:grid-cols-[1fr_1.4fr] sm:gap-8">
+              <p className="text-text">{item.q}</p>
+              <p className="text-text-muted">{item.a}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <CtaBanner
-        eyebrow="Ready when you are"
-        title="Give your brokers a reason to publish more."
-        subtitle="Apply once — we'll follow up with a referral link and integration notes."
-        ctaLabel="Apply as a partner"
-        ctaHref="/partners#apply"
-      />
+      <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/partners#apply" />
     </PageShell>
   );
 }

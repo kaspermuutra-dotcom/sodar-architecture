@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { LOCALE_OPTIONS } from "@/lib/locales";
 
@@ -10,14 +10,13 @@ import { LOCALE_OPTIONS } from "@/lib/locales";
  * `compact` renders as a nav trigger + popover; the non-compact form is the
  * standalone "language moment" section on the homepage.
  *
- * Only `en` is wired into `i18n/routing.ts`, so it's the only option that
- * actually navigates — every other locale is real UI (searchable, focusable,
- * shows its native name) that reports itself as not-yet-translated instead of
- * routing into a 404. TODO(phase-2): as each locale ships messages, move it
- * from a disabled row here into `routing.ts`.
+ * Enabled locales preserve the current path while switching language. The
+ * disabled state remains available for future locales that are listed before
+ * their message catalog ships.
  */
 export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
   const activeLocale = useLocale();
+  const t = useTranslations("Switcher");
   const pathname = usePathname();
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
@@ -38,9 +37,9 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
   const list = (
     <div className="max-h-72 overflow-y-auto">
       {results.length === 0 ? (
-        <p className="px-4 py-6 text-sm text-text-muted">No matching language.</p>
+        <p className="px-4 py-6 text-sm text-text-muted">{t("none")}</p>
       ) : (
-        <ul role="listbox" aria-label="Choose a language" className="py-2">
+        <ul role="listbox" aria-label={t("choose")} className="py-2">
           {results.map((l) => {
             const isActive = l.code === activeLocale;
             const row = (
@@ -52,11 +51,11 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
                   ) : null}
                 </span>
                 {isActive ? (
-                  <span className="font-mono text-[10px] uppercase tracking-[.14em] text-accent">Active</span>
+                  <span className="font-mono text-[10px] uppercase tracking-[.14em] text-accent">{t("active")}</span>
                 ) : l.enabled ? (
                   <span className="font-mono text-[10px] uppercase tracking-[.14em] text-text-muted">{l.code}</span>
                 ) : (
-                  <span className="font-mono text-[10px] uppercase tracking-[.14em] text-text-muted/70">Coming soon</span>
+                  <span className="font-mono text-[10px] uppercase tracking-[.14em] text-text-muted/70">{t("comingSoon")}</span>
                 )}
               </span>
             );
@@ -90,8 +89,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
       )}
       {pendingCode ? (
         <p className="border-t border-border px-4 py-3 font-mono text-[11px] text-text-muted">
-          {LOCALE_OPTIONS.find((l) => l.code === pendingCode)?.englishName} isn&apos;t translated yet — listings will keep
-          rendering in English until it ships.
+          {t("notice", { language: LOCALE_OPTIONS.find((l) => l.code === pendingCode)?.englishName ?? "" })}
         </p>
       ) : null}
     </div>
@@ -104,8 +102,8 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         type="text"
-        placeholder="Search languages…"
-        aria-label="Search languages"
+        placeholder={t("search")}
+        aria-label={t("search")}
         className="w-full bg-transparent font-mono text-sm text-text placeholder:text-text-muted focus:outline-none"
       />
     </div>

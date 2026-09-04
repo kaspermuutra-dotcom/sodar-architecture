@@ -1,63 +1,53 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { localeAlternates } from "@/lib/seo";
 import { PageShell } from "@/components/page-shell";
 import { PageHero } from "@/components/page-hero";
 import { CtaBanner } from "@/components/cta-banner";
 
-export const metadata: Metadata = {
-  title: "Careers — Sodar",
-  description: "Open roles at Sodar.",
-};
+type Params = { params: Promise<{ locale: string }> };
 
-const ROLES: [string, string, string][] = [
-  ["Spatial ML Engineer", "Reconstruction", "Remote / Tallinn"],
-  ["Founding Frontend Engineer", "Product", "Remote / Tallinn"],
-  ["Broker Success Lead", "Go-to-market", "Tallinn"],
-];
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "CareersPage" });
+  return { title: t("metaTitle"), description: t("metaDesc"), alternates: localeAlternates(locale, "/careers") };
+}
 
-export default async function CareersPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function CareersPage({ params }: Params) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("CareersPage");
+  const roles = t.raw("roles") as { title: string; team: string; location: string }[];
 
   return (
     <PageShell>
-      <PageHero
-        eyebrow="Careers"
-        title="Help every listing render properly."
-        subtitle="Small team, early stage, real customers already scanning listings. We're hiring across reconstruction, product, and go-to-market."
-      />
+      <PageHero eyebrow={t("eyebrow")} title={t("title")} subtitle={t("sub")} />
 
       <section className="section-shell border-t border-border">
-        <div className="section-kicker">Open roles</div>
-        <h2 className="section-title mt-7">Currently hiring.</h2>
+        <p className="section-kicker">{t("rolesKicker")}</p>
+        <h2 className="section-title mt-7">{t("rolesTitle")}</h2>
         <div className="mt-14 divide-y divide-border border-y border-border">
-          {ROLES.map(([title, team, location]) => (
+          {roles.map((r) => (
             <a
-              key={title}
-              href={`mailto:careers@sodar.io?subject=${encodeURIComponent(title)}`}
-              className="group flex flex-col justify-between gap-2 py-6 transition-colors hover:text-accent sm:flex-row sm:items-center"
+              key={r.title}
+              href={`mailto:careers@sodar.io?subject=${encodeURIComponent(r.title)}`}
+              className="group flex flex-col justify-between gap-2 py-6 sm:flex-row sm:items-center"
             >
               <div>
-                <p className="text-lg text-text group-hover:text-accent">{title}</p>
-                <p className="mt-1 font-mono text-xs text-text-muted">{team}</p>
+                <p className="text-lg text-text">{r.title}</p>
+                <p className="mt-1 font-mono text-xs text-text-muted">{r.team}</p>
               </div>
               <div className="flex items-center gap-6">
-                <span className="text-sm text-text-muted">{location}</span>
-                <span aria-hidden className="text-text-muted transition-transform group-hover:translate-x-1 group-hover:text-accent">↗</span>
+                <span className="text-sm text-text-muted">{r.location}</span>
+                <span aria-hidden className="text-text-muted transition-transform group-hover:translate-x-1 group-hover:text-text">↗</span>
               </div>
             </a>
           ))}
         </div>
-        <p className="mt-8 text-sm text-text-muted">Don&apos;t see a fit? Write to careers@sodar.io anyway.</p>
+        <p className="mt-8 text-sm text-text-muted">{t("noFit")}</p>
       </section>
 
-      <CtaBanner
-        eyebrow="No open role yet?"
-        title="We're small enough that one email reaches a founder."
-        subtitle="Tell us what you'd want to work on."
-        ctaLabel="Email careers@sodar.io"
-        ctaHref="/careers"
-      />
+      <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/careers" />
     </PageShell>
   );
 }

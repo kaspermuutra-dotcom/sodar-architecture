@@ -1,0 +1,1002 @@
+{
+  "Meta": {
+    "title": "Sodar — AI-visningar som stänger fler affärer",
+    "description": "Skanna en bostad med telefonen. Sodar förvandlar guidade rumsinspelningar till en uppslukande, annonsfärdig visning, förhandsvisar de två första rummen gratis och publicerar direkt i din CRM-annons."
+  },
+  "Nav": {
+    "product": "Produkt",
+    "integrations": "Integrationer",
+    "partners": "Partner",
+    "pricing": "Priser",
+    "signIn": "Logga in",
+    "getStarted": "Skanna en bostad",
+    "menu": "Växla meny",
+    "home": "Sodar startsida"
+  },
+  "Hero": {
+    "headline1": "AI-visningar",
+    "headline2": "som stänger fler affärer.",
+    "sub": "Öppna sodar.io i telefonen, gå genom bostaden en gång och få en uppslukande visning som köpare kan kliva in i — publicerad i annonsen du redan har.",
+    "ctaPrimary": "Skanna din första bostad",
+    "ctaSecondary": "Se hur det fungerar",
+    "status": [
+      "INSPELNING ▸ vardagsrum · 12/12 bilder · täckning 98 %",
+      "ASSISTENT ▸ luta 4° nedåt · håll stilla · bra ljus",
+      "SAMMANFOGNING ▸ kök · ekvirektangulär · 8192×4096",
+      "FÖRHANDSVISNING ▸ 2 av 6 rum klara · gratis",
+      "OFFERT   ▸ engångspris beräknat · 6 rum · 14 panoramor",
+      "PUBLICERAD ▸ CRM-annons #48213 · visare inbäddad"
+    ]
+  },
+  "Marquee": {
+    "rooms": [
+      "Vardagsrum",
+      "Kök",
+      "Sovrum",
+      "Badrum",
+      "Hall",
+      "Balkong",
+      "Arbetsrum",
+      "Matsal",
+      "Gästrum",
+      "Entré",
+      "Terrass",
+      "Garage"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "Tes",
+    "lines": [
+      "Inget annonsfoto har någonsin gått genom sig självt.",
+      "Köpare hoppar över det de inte kan kliva in i.",
+      "Så vi gjorde en telefon till en skanner,",
+      "och en skanning till en plats."
+    ],
+    "body": "En mäklare öppnar sodar.io i telefonen, går genom varje rum en gång medan en AI-inspelningsassistent guidar tagningen, och får tillbaka en visning som köpare kan röra sig i. De två första rummen är gratis att förhandsvisa. En betalning gör bostaden klar. Publicering i CRM-annonsen är ett klick."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "rum gratis",
+        "note": "Fungerande förhandsvisning före betalning"
+      },
+      {
+        "label": "engångspris",
+        "note": "Anpassat till bostaden. Ingen prenumeration"
+      },
+      {
+        "label": "partnermarginal",
+        "note": "För CRM som distribuerar Sodar"
+      },
+      {
+        "label": "per rum",
+        "note": "Panoramainspelning guidad live av AI"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Skrolla",
+    "frames": "/12 bilder",
+    "assistantLabel": "Inspelningsassistent",
+    "assist": [
+      "Luta 4° nedåt",
+      "Håll stilla…",
+      "Bra ljus. Fortsätt vrida",
+      "Överlapp 40 % — långsammare",
+      "Rummet klart"
+    ],
+    "rooms": [
+      "Vardagsrum",
+      "Kök",
+      "Sovrum",
+      "Badrum",
+      "Arbetsrum",
+      "Balkong"
+    ],
+    "ready": "Klart",
+    "locked": "Låst",
+    "photosOnly": "Bara foton",
+    "panels": {
+      "capture": {
+        "label": "Inspelning",
+        "title": "Gå genom bostaden en gång.",
+        "body": "Öppna sodar.io i telefonen. Kameran guidar dig rum för rum medan AI-inspelningsassistenten korrigerar täckning, position och ljus — live, medan du fortfarande står där."
+      },
+      "preview": {
+        "label": "Förhandsvisning",
+        "title": "Två rum, klara, gratis.",
+        "body": "Sodar bearbetar de första inspelningarna till en fungerande visning av de två första rummen. Du upplever den färdiga kvaliteten innan du betalar något."
+      },
+      "unlock": {
+        "label": "Lås upp",
+        "title": "Ett pris. En betalning.",
+        "body": "Sodar beräknar ett engångspris för hela bostaden — storlek, antal panoramor, bearbetning, hosting och underhåll inräknat. Betala en gång via Stripe så bearbetas resterande rum."
+      },
+      "publish": {
+        "label": "Publicera",
+        "title": "I annonsen du redan har.",
+        "body": "Koppla ditt CRM, välj annonsen, publicera. Visningen lever inne i annonsen via Sodars inbäddade visare — och du kan justera de godkända utseendeinställningarna när som helst."
+      }
+    },
+    "quoteLabel": "Offert · 84 Kesklinn Ave",
+    "quoteRows": [
+      {
+        "k": "6 rum · 14 panoramor",
+        "v": "ingår"
+      },
+      {
+        "k": "Bearbetning & AI-beräkning",
+        "v": "ingår"
+      },
+      {
+        "k": "Lagring & hosting av visare",
+        "v": "12 månader"
+      },
+      {
+        "k": "Underhåll",
+        "v": "ingår"
+      }
+    ],
+    "oneTime": "engångsbelopp · ingen prenumeration",
+    "paidLabel": "Betalt",
+    "paidBody": "Bearbetar de återstående 4 rummen. Du får besked när visningen är komplett.",
+    "pay": "Betala med Stripe",
+    "paying": "Kontaktar Stripe…",
+    "mockNote": "Demokassa — inget kort debiteras.",
+    "crmHeader": "Ditt CRM · Annons #48213",
+    "publishBtn": "Publicera visning",
+    "publishedBtn": "Publicerad",
+    "viewerBadge": "Sodar-visare · 360°",
+    "listingMeta": "3 rum · 78 m² · 395 000 €",
+    "status": "status",
+    "statusPublished": "publicerad",
+    "statusReady": "klar",
+    "viewer": "visare",
+    "viewerEmbedded": "inbäddad",
+    "opened": "öppnad",
+    "openedValue": "128 besökare"
+  },
+  "Capabilities": {
+    "kicker": "Vad som levereras",
+    "intro": "Tre sammankopplade ytor — en publik webbplats, en guidad mobil skanning och en arbetsyta för mäklare — bakom en enda visning.",
+    "title": "En skanning, sju saker en annons vinner.",
+    "items": [
+      {
+        "title": "Guidad telefoninspelning",
+        "desc": "Ingen utrustning, ingen fotograf. Kameran leder dig genom varje rum som ett panorama, direkt från webbläsaren."
+      },
+      {
+        "title": "AI-inspelningsassistent",
+        "desc": "Livecoachning kring täckning, position och bildkvalitet medan du fortfarande är inne i bostaden."
+      },
+      {
+        "title": "Gratis förhandsvisning av två rum",
+        "desc": "En fungerande visning av de två första rummen före betalning, så att du bedömer den färdiga kvaliteten först."
+      },
+      {
+        "title": "Engångspris per bostad",
+        "desc": "En enda offert anpassad till bostaden — panoramor, beräkning, hosting och underhåll ingår."
+      },
+      {
+        "title": "CRM-publicering",
+        "desc": "Koppla ditt CRM, välj annonsen, publicera. Visningen stannar i annonsen via den inbäddade visaren."
+      },
+      {
+        "title": "Godkänt utseende",
+        "desc": "Justera visarens utseende inom de godkända inställningarna så att den passar annonsen den lever i."
+      },
+      {
+        "title": "Arbetsyta för mäklare",
+        "desc": "Hantera bostäder, följ bearbetnings- och publiceringsstatus och se hur många besökare som öppnat visaren."
+      }
+    ],
+    "cta": {
+      "title": "Skanna en bostad",
+      "desc": "Två rum gratis. Börja i telefonen.",
+      "start": "Börja"
+    }
+  },
+  "Integration": {
+    "kicker": "Där du redan arbetar",
+    "intro": "Koppla det CRM du redan använder. Välj annonsen. Publicera. Visningen dyker upp inuti via en inbäddad visare eller iframe — inget att kopiera, inget att hosta.",
+    "title": "Lägg bara till Sodar i ditt CRM.",
+    "crmHeader": "Ditt CRM · Annonser",
+    "published": "Visning publicerad",
+    "addWalkthrough": "+ lägg till visning",
+    "listings": [
+      {
+        "name": "84 Kesklinn Ave",
+        "meta": "3 rum · 395 000 €"
+      },
+      {
+        "name": "12 Harbour Res.",
+        "meta": "2 rum · 260 000 €"
+      },
+      {
+        "name": "7 Nõmme Villa",
+        "meta": "6 rum · 890 000 €"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Illustrativt · inte uppmätt ännu",
+    "title": "Skillnaden en skanning gör.",
+    "beforeLabel": "Före",
+    "afterLabel": "Efter · med Sodar",
+    "before": [
+      "Boka en fotograf",
+      "Vänta 2–3 dagar",
+      "Platta foton",
+      "Köpare skrollar förbi",
+      "Inget mäts"
+    ],
+    "after": [
+      "En telefon, en runda",
+      "Förhandsvisning på minuter",
+      "Uppslukande visning",
+      "Köpare kliver in",
+      "Varje öppnad visare räknas"
+    ]
+  },
+  "Workspace": {
+    "kicker": "Tillbaka vid skrivbordet",
+    "intro": "Varje bostad du skannar, dess bearbetnings- och publiceringsstatus, och hur många besökare som öppnat visaren — i en arbetsyta per mäklare.",
+    "title": "Dina bostäder, alltid i sikte.",
+    "cta": "Se mäklarens arbetsyta",
+    "mock": {
+      "title": "Arbetsyta",
+      "live": "Liveförhandsvisning",
+      "properties": "Bostäder",
+      "cols": [
+        "Bostad",
+        "Status",
+        "Visare öppnad",
+        "Publicering"
+      ],
+      "statuses": {
+        "published": "Publicerad",
+        "processing": "Bearbetas",
+        "preview": "Förhandsvisning",
+        "capturing": "Spelas in"
+      },
+      "rows": [
+        {
+          "name": "84 Kesklinn Ave",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "12 Harbour Res.",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "7 Nõmme Villa",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 rum"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 rum gratis"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "status": "capturing",
+          "views": "—",
+          "pub": "i telefonen"
+        }
+      ],
+      "engagement": "Engagemang per rum · 84 Kesklinn Ave",
+      "rooms": [
+        "Vardagsrum",
+        "Kök",
+        "Sovrum",
+        "Badrum",
+        "Balkong"
+      ],
+      "processing": "Bearbetning",
+      "jobs": [
+        {
+          "name": "7 Nõmme Villa",
+          "step": "Sammanfogning · sovrum",
+          "n": "4 / 6"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "step": "Förhandsvisning klar",
+          "n": "2 / 2"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "step": "Spelas in i telefonen",
+          "n": "—"
+        }
+      ],
+      "week": "Denna vecka",
+      "weekTitle": "701 öppnade visare",
+      "weekSub": "över 2 publicerade visningar"
+    }
+  },
+  "Scans": {
+    "kicker": "Veckans skanningar",
+    "title": "Alla typer av annonser skannas på samma sätt.",
+    "items": [
+      {
+        "label": "Lägenhet",
+        "meta": "3 rum · Kesklinn"
+      },
+      {
+        "label": "Nyproduktion",
+        "meta": "4 rum · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 rum · Pirita"
+      },
+      {
+        "label": "Hyresbostad",
+        "meta": "1 rum · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "Byggt för att anförtros annonser",
+    "title": "Regelefterlevnad är ingen eftertanke.",
+    "items": [
+      {
+        "title": "Uttryckligt kameratillstånd",
+        "desc": "Sodar ber om enhetens kamera bara när du startar en skanning och använder den bara för den inspelningen."
+      },
+      {
+        "title": "AI-märkning",
+        "desc": "Varje publicerad visning bär en tydlig, synlig märkning om att den är en AI-bearbetad rekonstruktion."
+      },
+      {
+        "title": "Säkerhet",
+        "desc": "Byggt mot SOC 2 och GDPR från dag ett — krypterad lagring, avgränsade CRM-uppgifter, granskningsloggar per bostad."
+      },
+      {
+        "title": "Mäklaren äger datan",
+        "desc": "Inspelningar, visningar och engagemangsdata tillhör mäklaren. Att koppla bort Sodar exporterar allt."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "För CRM-leverantörer",
+    "title": "Distribuera Sodar till ditt mäklarnätverk. Behåll 15 %.",
+    "body": "CRM-partner gör Sodar tillgängligt för sina mäklare och får 15 % marginal på kvalificerade visningsköp — inget minimum, utbetalas automatiskt.",
+    "cta": "Se partnerprogrammet"
+  },
+  "PricingTeaser": {
+    "kicker": "Enkelt av design",
+    "title1": "En bostad.",
+    "title2": "Ett pris. En gång.",
+    "body": "Förhandsvisa de två första rummen gratis. Sedan ger Sodar ett enda engångspris för att göra bostaden klar — ingen prenumeration, inget årsavtal.",
+    "cta": "Så beräknas priset",
+    "card": {
+      "label": "Typisk 3-rumslägenhet",
+      "price": "99–149 €",
+      "note": "engångsbelopp · offert efter den gratis förhandsvisningen",
+      "factors": [
+        "Bostadens storlek",
+        "Inspelade panoramor",
+        "Bearbetning & AI-beräkning",
+        "Lagring & hosting av visare",
+        "Löpande underhåll"
+      ],
+      "cta": "Skanna en bostad"
+    }
+  },
+  "Language": {
+    "kicker": "Var dina köpare än söker",
+    "title1": "En visning.",
+    "title2": "Varje språk en köpare läser.",
+    "body": "Publicera en gång — visarens rumsetiketter och reglage följer språket köparen valt. Webbplatsen och visaren finns idag på sexton språk."
+  },
+  "Switcher": {
+    "search": "Sök språk…",
+    "none": "Inget matchande språk.",
+    "active": "Aktivt",
+    "comingSoon": "Kommer snart",
+    "choose": "Välj språk",
+    "notice": "{language} är inte översatt ännu — annonser visas på engelska tills det är klart."
+  },
+  "Footer": {
+    "tagline": "Varje annons, skannad till en plats köpare kan gå genom.",
+    "columns": {
+      "product": {
+        "title": "Produkt",
+        "items": [
+          [
+            "Produkt",
+            "/product"
+          ],
+          [
+            "Så fungerar det",
+            "/product#pipeline"
+          ],
+          [
+            "Förhandsvisning av arbetsytan",
+            "/terminal"
+          ],
+          [
+            "Säkerhet",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Integrationer",
+        "items": [
+          [
+            "Integrationshubb",
+            "/integrations"
+          ],
+          [
+            "CRM-publicering",
+            "/integrations#crm"
+          ],
+          [
+            "Inbäddad visare",
+            "/integrations#embed"
+          ],
+          [
+            "API-åtkomst",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "Partner",
+        "items": [
+          [
+            "Partnerprogram",
+            "/partners"
+          ],
+          [
+            "Bli partner",
+            "/partners#apply"
+          ],
+          [
+            "Partnerpanel",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Företag",
+        "items": [
+          [
+            "Om oss",
+            "/about"
+          ],
+          [
+            "Karriär",
+            "/careers"
+          ],
+          [
+            "Fältanteckningar",
+            "/blog"
+          ],
+          [
+            "Enterprise",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Juridik",
+        "items": [
+          [
+            "Integritet",
+            "/legal/privacy"
+          ],
+          [
+            "Villkor",
+            "/legal/terms"
+          ],
+          [
+            "Databehandling",
+            "/legal/data-processing"
+          ],
+          [
+            "Cookies",
+            "/legal/cookies"
+          ]
+        ]
+      }
+    },
+    "language": "Språk",
+    "social": "På andra ställen",
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallinn, Estland · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Produkt — Sodar",
+    "metaDesc": "Hur en guidad telefonskanning blir en uppslukande, annonsfärdig visning.",
+    "eyebrow": "Produkten",
+    "title": "En telefon, en runda, en plats köpare kan kliva in i.",
+    "sub": "Sodar förvandlar guidade bostadsskanningar till uppslukande, annonsfärdiga visningar — inspelade med telefonen du redan bär, publicerade i det CRM du redan använder.",
+    "ctaPrimary": "Skanna din första bostad",
+    "ctaSecondary": "Se arbetsytan",
+    "flatLabel": "Telefoninspelning",
+    "revealedLabel": "Sodar-visning",
+    "stagesKicker": "Från en runda till en visning",
+    "stagesTitle": "Tre steg, en pipeline.",
+    "stages": [
+      {
+        "label": "Inspelning",
+        "sub": "Telefon · webbläsare · kameratillstånd",
+        "desc": "Varje rum spelas in som ett panorama med livecoachning från AI-inspelningsassistenten."
+      },
+      {
+        "label": "Bearbetning",
+        "sub": "Sammanfogning · förbättring · länkning",
+        "desc": "Panoramor sammanfogas, rensas och länkas till en enda visning. De två första rummen kommer tillbaka gratis."
+      },
+      {
+        "label": "Publicering",
+        "sub": "CRM · inbäddad visare · utseende",
+        "desc": "Koppla ditt CRM, välj annonsen, publicera. Visaren lever i annonsen; du finjusterar dess godkända utseende."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Prova på en riktig bostad",
+      "title": "Förhandsvisa två rum gratis. Betala en gång för resten.",
+      "sub": "Öppna sodar.io i telefonen och starta en skanning — inget kort förrän du låser upp hela visningen.",
+      "label": "Skanna din första bostad"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Priser — Sodar",
+    "metaDesc": "Engångspris per bostad, offererat efter en gratis förhandsvisning av två rum. Volympriser för byråer, 15 % marginal för CRM-partner.",
+    "eyebrow": "Enkelt av design",
+    "title": "En bostad. Ett pris. En gång.",
+    "sub": "Förhandsvisa två rum gratis, betala sedan ett enda engångspris anpassat till bostaden. Volympriser för byråer, en fast marginal på 15 % för CRM-partner.",
+    "badge": "De flesta byråer",
+    "tiers": [
+      {
+        "name": "Per bostad",
+        "price": "Från 99 €",
+        "unit": "engångsbelopp, offert efter den gratis förhandsvisningen",
+        "desc": "För mäklare som skannar annonser en i taget.",
+        "features": [
+          "Guidad telefoninspelning + AI-assistent",
+          "Två första rummen gratis att förhandsvisa",
+          "Full visning efter en Stripe-betalning",
+          "CRM-publicering & inbäddad visare",
+          "Arbetsyta med status & öppnade visare"
+        ],
+        "cta": "Skanna din första bostad"
+      },
+      {
+        "name": "Byrå",
+        "price": "Volym",
+        "unit": "per bostad, sjunkande med volymen",
+        "desc": "För byråer som publicerar dussintals annonser i månaden.",
+        "features": [
+          "Allt i Per bostad",
+          "Byråövergripande arbetsyta",
+          "Prioriterad bearbetningskö",
+          "Dedikerad CRM-uppsättning",
+          "Visare med gemensam profil"
+        ],
+        "cta": "Prata med sälj"
+      },
+      {
+        "name": "CRM-partner",
+        "price": "15 %",
+        "unit": "marginal på kvalificerade köp",
+        "desc": "För CRM-leverantörer som distribuerar Sodar till sina mäklare.",
+        "features": [
+          "Sodar tillgängligt i din plattform",
+          "Partnerpanel",
+          "Månatlig automatisk utbetalning",
+          "Ingen minimivolym"
+        ],
+        "cta": "Ansök som partner"
+      }
+    ],
+    "factorsKicker": "Så byggs offerten",
+    "factorsTitle": "Prissatt efter bostaden, inte efter planen.",
+    "factors": [
+      {
+        "title": "Bostadens storlek",
+        "desc": "Boyta och antal inspelade rum."
+      },
+      {
+        "title": "Panoramavolym",
+        "desc": "Hur många panoramor skanningen gav och deras upplösning."
+      },
+      {
+        "title": "Bearbetning",
+        "desc": "Sammanfogning, förbättring och AI-beräkningen bakom visningen."
+      },
+      {
+        "title": "Lagring & hosting",
+        "desc": "Att hålla visningen och dess visare online i din annons."
+      },
+      {
+        "title": "Underhåll",
+        "desc": "Löpande uppdateringar av visaren och själva CRM-integrationen."
+      },
+      {
+        "title": "Partnermarginal",
+        "desc": "När en CRM-partner distribuerar Sodar ingår deras marginal i offerten."
+      }
+    ],
+    "faqKicker": "Frågor",
+    "faqTitle": "Vanliga frågor om priser.",
+    "faq": [
+      {
+        "q": "När ser jag priset?",
+        "a": "Efter den gratis förhandsvisningen. Sodar beräknar ett engångspris för att göra bostaden klar när de två första rummen är bearbetade."
+      },
+      {
+        "q": "Är förhandsvisningen verkligen gratis?",
+        "a": "Ja — de två första rummen bearbetas till en fungerande visning utan betalning. Du betalar bara för att göra klart och publicera bostaden."
+      },
+      {
+        "q": "Finns det en prenumeration?",
+        "a": "Nej. Varje bostad är en enda engångsbetalning via Stripe. Inget förnyas."
+      },
+      {
+        "q": "Hur betalas CRM-partnerns marginal ut?",
+        "a": "Automatiskt, varje månad, på kvalificerade visningsköp från mäklare på partnerns plattform."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Tidig åtkomst",
+      "title": "Din nästa annons förtjänar mer än foton.",
+      "sub": "Vi tar först in en liten grupp framåtblickande mäklare.",
+      "label": "Begär tidig åtkomst"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Förhandsvisning av arbetsytan — Sodar",
+    "metaDesc": "En publik förhandsvisning av mäklarens arbetsyta utan inloggning. Ingen riktig data.",
+    "eyebrow": "Publik förhandsvisning · ingen inloggning, ingen riktig data",
+    "title": "Varje bostad, dess status och vem som öppnade den.",
+    "sub": "Detta är en statisk förhandsvisning av arbetsytan varje mäklare får — bostäder, bearbetnings- och publiceringsstatus, och hur många besökare som öppnat varje visare.",
+    "cta": {
+      "eyebrow": "Din så snart du publicerar",
+      "title": "Din arbetsyta börjar tom — tills din första skanning.",
+      "sub": "Skanna en bostad så ersätter riktiga siffror den här förhandsvisningen.",
+      "label": "Skanna din första bostad"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "Partner — Sodar",
+    "metaDesc": "CRM-plattformar tjänar en fast marginal på 15 % genom att distribuera Sodar till sitt mäklarnätverk.",
+    "eyebrow": "För CRM-plattformar",
+    "title": "Distribuera Sodar till dina mäklare. Behåll 15 %.",
+    "sub": "En fast marginal på varje kvalificerad visning som mäklare på din plattform köper — inget minimum, automatisk utbetalning, ingen utveckling utöver en referenslänk.",
+    "apply": "Ansök som partner",
+    "stepsKicker": "Så fungerar det",
+    "stepsTitle": "Tre steg till en fast marginal.",
+    "steps": [
+      {
+        "title": "Ansök",
+        "desc": "Berätta vilka mäklare eller byråer som använder din plattform och ungefär hur många aktiva annonser."
+      },
+      {
+        "title": "Integrera",
+        "desc": "En referenslänk och, valfritt, en inbyggd ingång i din app för dina användare."
+      },
+      {
+        "title": "Tjäna",
+        "desc": "15 % av varje kvalificerat visningsköp från en mäklare som anslöt via din plattform, utbetalt månadsvis."
+      }
+    ],
+    "dashKicker": "Partnerpanel",
+    "dashTitle": "Följ hänvisade mäklare och marginal på ett ställe.",
+    "dash": [
+      {
+        "label": "Hänvisade mäklare",
+        "value": "142"
+      },
+      {
+        "label": "Köpta visningar",
+        "value": "3 018"
+      },
+      {
+        "label": "Marginal denna månad",
+        "value": "6 240 €"
+      }
+    ],
+    "applyKicker": "Kom igång",
+    "applyTitle": "Ansök som partner.",
+    "applyBody": "En kort ansökan — vi bedömer plattformens passform och typisk annonsvolym innan vi utfärdar en referenslänk.",
+    "form": {
+      "company": "Företags- / plattformsnamn",
+      "companyPh": "Acme CRM",
+      "email": "Jobbmejl",
+      "emailPh": "du@foretag.se",
+      "brokers": "Aktiva mäklare på din plattform",
+      "brokersPh": "t.ex. 50–200",
+      "submit": "Skicka ansökan"
+    },
+    "faqKicker": "Frågor",
+    "faqTitle": "Vanliga partnerfrågor.",
+    "faq": [
+      {
+        "q": "Finns det ett minimiåtagande?",
+        "a": "Nej. Marginalen på 15 % gäller från den första köpta visningen — inget volymgolv."
+      },
+      {
+        "q": "Vem äger mäklarrelationen?",
+        "a": "Du. Sodar fakturerar mäklaren direkt och redovisar din marginal; mäklarna förblir dina kunder."
+      },
+      {
+        "q": "Kan vi sätta vår profil på visningen?",
+        "a": "Ja — ett partnerkonto kan lägga en ram med gemensam profil runt den inbäddade visningen."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Redo när du är",
+      "title": "Ge dina mäklare en anledning att publicera mer.",
+      "sub": "Ansök en gång — vi återkommer med en referenslänk och integrationsanteckningar.",
+      "label": "Ansök som partner"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Integrationer — Sodar",
+    "metaDesc": "Koppla ett CRM eller ge API-åtkomst så att publicerade visningar bäddas in direkt i dina annonser.",
+    "eyebrow": "Integrationshubb",
+    "title": "Koppla en gång. Varje annons därefter är ett klick.",
+    "sub": "Logga in i ditt CRM via OAuth, eller ge Sodar avgränsad API-åtkomst — välj annonsen, publicera, så bäddas visningen in utan ett andra steg.",
+    "connKicker": "Kopplingar",
+    "connTitle": "Välj hur Sodar når dina annonser.",
+    "conns": [
+      {
+        "name": "Generisk CRM-OAuth",
+        "action": "Koppla"
+      },
+      {
+        "name": "City24 MLS-flöde",
+        "action": "Koppla"
+      },
+      {
+        "name": "Eget REST-API",
+        "action": "Generera nyckel"
+      },
+      {
+        "name": "Zapier / webhook",
+        "action": "Kommer snart"
+      }
+    ],
+    "notConnected": "status: inte kopplad",
+    "mockTitle": "Demokoppling — kopplas in i fas 2",
+    "embedKicker": "Inget CRM? Inga problem",
+    "embedTitle": "En iframe, placerad var som helst.",
+    "embedBody": "Varje köpt visning får en stabil inbäddnings-URL. Klistra in den i vilken bostadsportal som helst som accepterar en egen iframe.",
+    "cta": {
+      "eyebrow": "Ta med ditt CRM",
+      "title": "Sodar passar verktygen du redan använder.",
+      "sub": "Prata med oss om en prioriterad integration, eller börja med den generiska inbäddningen idag.",
+      "label": "Utforska partnerprogrammet"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Enterprise — Sodar",
+    "metaDesc": "Teamplatser, massskanning och delade arbetsyteöversikter för mäklarbyråer.",
+    "eyebrow": "För byråer",
+    "title": "En arbetsyta för varje mäklare i ditt team.",
+    "sub": "Massskanning, volympriser och en byråövergripande engagemangsöversikt — byggt för byråer som publicerar dussintals annonser i månaden.",
+    "talk": "Prata med sälj",
+    "featKicker": "Byggt för team",
+    "featTitle": "Allt i självbetjäning, plus det en byrå behöver.",
+    "features": [
+      {
+        "title": "Teamplatser",
+        "desc": "Varje mäklare får sin egen arbetsyta; ovanpå finns en byråövergripande översikt för chefer."
+      },
+      {
+        "title": "Massskanning",
+        "desc": "Skanna en hel portfölj av bostäder i stället för en i taget."
+      },
+      {
+        "title": "Volympriser",
+        "desc": "Priset per bostad sjunker när din byrås månadsvolym växer."
+      },
+      {
+        "title": "Dedikerad CRM-uppsättning",
+        "desc": "Vi sköter OAuth-/API-kopplingen för din byrås specifika CRM-stack."
+      },
+      {
+        "title": "Gemensam profil",
+        "desc": "Sätt din byrås märke på varje inbäddad visning."
+      },
+      {
+        "title": "Prioriterad bearbetning",
+        "desc": "Enterprise-bostäder bearbetas före självbetjäningskön."
+      }
+    ],
+    "priceKicker": "Priser som sjunker med volymen",
+    "priceTitle1": "Volympriser,",
+    "priceTitle2": "ett avtal.",
+    "priceBody": "Ett anpassat pris per bostad baserat på månadsvolym, plus en fast avgift per mäklarplats. Prata med sälj för en offert anpassad till din byrå.",
+    "priceNote": "Illustrativt, per bostad",
+    "tiers": [
+      {
+        "tier": "1–20 bostäder / mån",
+        "price": "från 99 €"
+      },
+      {
+        "tier": "21–100 bostäder / mån",
+        "price": "från 79 €"
+      },
+      {
+        "tier": "100+ bostäder / mån",
+        "price": "Anpassat"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Enterprise",
+      "title": "Ta hela byråns annonser online.",
+      "sub": "Vi sätter upp din CRM-koppling och platsstruktur tillsammans.",
+      "label": "Prata med sälj"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Säkerhet & regelefterlevnad — Sodar",
+    "metaDesc": "Datahantering, AI-märkning och efterlevnadsläge för Sodars pipeline.",
+    "eyebrow": "Förtroende & regelefterlevnad",
+    "title": "Byggt för att anförtros någon annans annons.",
+    "sub": "Sodar är utformat mot SOC 2 och GDPR från dag ett — den här sidan är arbetssammanfattningen; formella rapporter och personuppgiftsbiträdesavtal finns på begäran.",
+    "detailKicker": "I detalj",
+    "detailTitle": "Hur data faktiskt rör sig.",
+    "details": [
+      {
+        "title": "Kameraåtkomst",
+        "desc": "Enhetens kamera begärs bara när en skanning startar, med uttryckligt tillstånd, och används bara för den inspelningen."
+      },
+      {
+        "title": "Lagring",
+        "desc": "Inspelningar och renderade visningar krypteras i vila och under överföring; åtkomsten avgränsas per mäklarkonto."
+      },
+      {
+        "title": "AI-märkning",
+        "desc": "Varje publik visning bär en synlig märkning som identifierar den som en AI-bearbetad rekonstruktion."
+      },
+      {
+        "title": "Datalagring",
+        "desc": "Inspelningar och visningar sparas under annonsens livstid plus en fast karenstid, och raderas därefter på begäran."
+      },
+      {
+        "title": "Åtkomstkontroll",
+        "desc": "CRM-uppgifter och API-nycklar avgränsas till de minsta behörigheter integrationen behöver."
+      },
+      {
+        "title": "Underbiträden",
+        "desc": "Externa bearbetnings- och betalningsleverantörer listas i tillägget om databehandling."
+      }
+    ],
+    "seeAlso": "Se även:",
+    "privacy": "Integritetspolicy",
+    "dpa": "Tillägg om databehandling",
+    "cta": {
+      "eyebrow": "Frågor inför din säkerhetsgranskning",
+      "title": "Behöver du ett ifyllt säkerhetsformulär?",
+      "sub": "Hör av dig så returnerar vi ett ifyllt formulär eller SOC 2-status direkt.",
+      "label": "Kontakta säkerhet"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "Om oss — Sodar",
+    "metaDesc": "Varför Sodar finns: argumentet för att behandla en annons som en plats, inte ett fotogalleri.",
+    "eyebrow": "Företag",
+    "title": "Ett annonsfoto är ett löfte. Vi gör det gångbart.",
+    "sub": "Sodar började med en observation: köpare skrollar förbi platta foton, men dröjer sig kvar i ett utrymme de faktiskt kan röra sig i. Vi bygger pipelinen som förvandlar det första till det andra.",
+    "thesisKicker": "Tes",
+    "thesisTitle": "Orientering säljer annonser.",
+    "thesis": [
+      "En köpare som skrollar en bostadsportal fattar ett behåll/hoppa över-beslut på sekunder, baserat på foton som inte ger någon känsla för flödet mellan rummen. En visning besvarar frågan ett foto inte kan: hur känns det att faktiskt vara där.",
+      "Sodar finns för att göra den visningen så billig och så snabb att den blir standard för varje annons, inte en lyx förbehållen toppen av marknaden."
+    ],
+    "valuesKicker": "Det vi håller fast vid",
+    "valuesTitle": "Tre saker vi inte byter bort.",
+    "values": [
+      {
+        "title": "Skanna, inte iscensätt",
+        "desc": "Den verkliga bostaden är sanningskällan. Vårt jobb är att återge den troget, inte hitta på en fantasiversion."
+      },
+      {
+        "title": "Mäklaren äger datan",
+        "desc": "Inspelningar, visningar och engagemangsdata tillhör mäklaren som skapade dem — alltid exporterbara, aldrig inlåsta."
+      },
+      {
+        "title": "Märkning som standard",
+        "desc": "Ett AI-bearbetat utrymme ska säga det. Varje publik visning är märkt, utan undantag."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Kom med",
+      "title": "Vi är ett litet team som tar in tidigt.",
+      "sub": "Om tesen känns rätt så rekryterar vi — eller prata bara med oss om dina annonser.",
+      "label": "Se lediga roller"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Karriär — Sodar",
+    "metaDesc": "Lediga roller på Sodar.",
+    "eyebrow": "Karriär",
+    "title": "Hjälp varje annons att renderas rätt.",
+    "sub": "Litet team, tidigt skede, riktiga mäklare skannar redan bostäder. Vi rekryterar inom rekonstruktion, produkt och go-to-market.",
+    "rolesKicker": "Lediga roller",
+    "rolesTitle": "Vi rekryterar.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Rekonstruktion",
+        "location": "Distans / Tallinn"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Produkt",
+        "location": "Distans / Tallinn"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Go-to-market",
+        "location": "Tallinn"
+      }
+    ],
+    "noFit": "Hittar du inget som passar? Skriv ändå till careers@sodar.io.",
+    "cta": {
+      "eyebrow": "Ingen roll ännu?",
+      "title": "Vi är små nog att ett mejl når en grundare.",
+      "sub": "Berätta vad du skulle vilja jobba med.",
+      "label": "Mejla careers@sodar.io"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Fältanteckningar — Sodar",
+    "metaDesc": "Fallstudier från mäklare och byråer som skannar bostäder med Sodar.",
+    "eyebrow": "Fältanteckningar",
+    "title": "Fallstudier, inte pressmeddelanden.",
+    "sub": "Vad som faktiskt händer när en bostad skannas — skrivet av teamet som bygger pipelinen.",
+    "posts": [
+      {
+        "title": "Hur en Tallinnbyrå med 4 mäklare kortade annonsförberedelsen till 15 minuter",
+        "tag": "Fallstudie",
+        "read": "6 min läsning"
+      },
+      {
+        "title": "Vad vi ändrade efter de första 500 visningarna",
+        "tag": "Produktanteckningar",
+        "read": "4 min läsning"
+      },
+      {
+        "title": "Att läsa rumsengagemang: vad öppnade visare faktiskt säger",
+        "tag": "Guide",
+        "read": "5 min läsning"
+      },
+      {
+        "title": "Varför den gratis förhandsvisningen är två rum, inte ett eller fem",
+        "tag": "Produktanteckningar",
+        "read": "3 min läsning"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Utkast — fas 1",
+    "notice": "Detta är en strukturell platshållare från fas 1, inte slutlig juridisk text.",
+    "englishOnly": "Juridiska dokument publiceras för närvarande endast på engelska; den engelska versionen gäller.",
+    "titles": {
+      "privacy": "Integritetspolicy",
+      "terms": "Användarvillkor",
+      "data-processing": "Tillägg om databehandling",
+      "cookies": "Cookiepolicy"
+    }
+  },
+  "Scaffold": {
+    "phase": "Fas 1 — design & struktur",
+    "note": "Betalningar, CRM-OAuth och AI-pipelinen är simulerade platshållartillstånd. Inga backend-anrop."
+  }
+}

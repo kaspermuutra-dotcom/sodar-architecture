@@ -1,0 +1,1002 @@
+{
+  "Meta": {
+    "title": "Sodar — Des visites IA qui concluent plus de ventes",
+    "description": "Scannez un bien avec votre téléphone. Sodar transforme des captures guidées pièce par pièce en une visite immersive prête pour l’annonce, prévisualise les deux premières pièces gratuitement et publie directement dans votre annonce CRM."
+  },
+  "Nav": {
+    "product": "Produit",
+    "integrations": "Intégrations",
+    "partners": "Partenaires",
+    "pricing": "Tarifs",
+    "signIn": "Connexion",
+    "getStarted": "Scanner un bien",
+    "menu": "Ouvrir le menu",
+    "home": "Accueil Sodar"
+  },
+  "Hero": {
+    "headline1": "Des visites IA",
+    "headline2": "qui concluent plus de ventes.",
+    "sub": "Ouvrez sodar.io sur votre téléphone, parcourez le bien une seule fois et obtenez une visite immersive dans laquelle les acheteurs peuvent entrer — publiée dans l’annonce que vous avez déjà.",
+    "ctaPrimary": "Scanner votre premier bien",
+    "ctaSecondary": "Voir comment ça marche",
+    "status": [
+      "CAPTURE  ▸ salon · 12/12 images · couverture 98 %",
+      "ASSISTANT ▸ inclinez de 4° · maintenez · bonne lumière",
+      "ASSEMBLAGE ▸ cuisine · équirectangulaire · 8192×4096",
+      "APERÇU   ▸ 2 pièces sur 6 prêtes · gratuit",
+      "DEVIS    ▸ prix unique calculé · 6 pièces · 14 panoramas",
+      "PUBLIÉ   ▸ annonce CRM #48213 · visionneuse intégrée"
+    ]
+  },
+  "Marquee": {
+    "rooms": [
+      "Salon",
+      "Cuisine",
+      "Chambre principale",
+      "Salle de bain",
+      "Couloir",
+      "Balcon",
+      "Bureau",
+      "Salle à manger",
+      "Chambre d’amis",
+      "Entrée",
+      "Terrasse",
+      "Garage"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "Thèse",
+    "lines": [
+      "Aucune photo d’annonce ne s’est jamais visitée elle-même.",
+      "Les acheteurs passent ce qu’ils ne peuvent pas parcourir.",
+      "Alors nous avons fait d’un téléphone un scanner,",
+      "et d’un scan un lieu."
+    ],
+    "body": "Un agent ouvre sodar.io sur son téléphone, parcourt chaque pièce une fois pendant qu’un assistant de capture IA guide la prise de vue, et reçoit une visite dans laquelle les acheteurs peuvent se déplacer. Les deux premières pièces sont gratuites en aperçu. Un seul paiement termine le bien. La publication dans l’annonce CRM se fait en un clic."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "pièces gratuites",
+        "note": "Un aperçu fonctionnel avant tout paiement"
+      },
+      {
+        "label": "prix unique",
+        "note": "Adapté au bien. Sans abonnement"
+      },
+      {
+        "label": "marge partenaire",
+        "note": "Pour les CRM qui distribuent Sodar"
+      },
+      {
+        "label": "par pièce",
+        "note": "Capture panoramique guidée en direct par l’IA"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Défiler",
+    "frames": "/12 images",
+    "assistantLabel": "Assistant de capture",
+    "assist": [
+      "Inclinez de 4° vers le bas",
+      "Ne bougez plus…",
+      "Bonne lumière. Continuez à tourner",
+      "Chevauchement 40 % — ralentissez",
+      "Pièce terminée"
+    ],
+    "rooms": [
+      "Salon",
+      "Cuisine",
+      "Chambre principale",
+      "Salle de bain",
+      "Bureau",
+      "Balcon"
+    ],
+    "ready": "Prêt",
+    "locked": "Verrouillé",
+    "photosOnly": "Photos seules",
+    "panels": {
+      "capture": {
+        "label": "Capture",
+        "title": "Parcourez le bien une seule fois.",
+        "body": "Ouvrez sodar.io sur votre téléphone. La caméra vous guide pièce par pièce pendant que l’assistant de capture IA corrige la couverture, la position et la lumière — en direct, pendant que vous êtes encore sur place."
+      },
+      "preview": {
+        "label": "Aperçu",
+        "title": "Deux pièces, terminées, gratuites.",
+        "body": "Sodar traite les premières captures en une visite fonctionnelle des deux premières pièces. Vous découvrez la qualité finale avant de payer quoi que ce soit."
+      },
+      "unlock": {
+        "label": "Déverrouiller",
+        "title": "Un prix. Un paiement.",
+        "body": "Sodar calcule un prix unique pour l’ensemble du bien — taille, nombre de panoramas, traitement, hébergement et maintenance compris. Payez une fois via Stripe et les pièces restantes sont traitées."
+      },
+      "publish": {
+        "label": "Publier",
+        "title": "Dans l’annonce que vous avez déjà.",
+        "body": "Connectez votre CRM, choisissez l’annonce, publiez. La visite vit dans l’annonce grâce à la visionneuse intégrée de Sodar — et vous pouvez ajuster les réglages d’apparence approuvés à tout moment."
+      }
+    },
+    "quoteLabel": "Devis · 84 Kesklinn Ave",
+    "quoteRows": [
+      {
+        "k": "6 pièces · 14 panoramas",
+        "v": "inclus"
+      },
+      {
+        "k": "Traitement & calcul IA",
+        "v": "inclus"
+      },
+      {
+        "k": "Stockage & hébergement",
+        "v": "12 mois"
+      },
+      {
+        "k": "Maintenance",
+        "v": "inclus"
+      }
+    ],
+    "oneTime": "paiement unique · sans abonnement",
+    "paidLabel": "Payé",
+    "paidBody": "Traitement des 4 pièces restantes en cours. Vous serez averti dès que la visite sera complète.",
+    "pay": "Payer avec Stripe",
+    "paying": "Connexion à Stripe…",
+    "mockNote": "Paiement de démonstration — aucune carte n’est débitée.",
+    "crmHeader": "Votre CRM · Annonce #48213",
+    "publishBtn": "Publier la visite",
+    "publishedBtn": "Publiée",
+    "viewerBadge": "Visionneuse Sodar · 360°",
+    "listingMeta": "3 pièces · 78 m² · 395 000 €",
+    "status": "statut",
+    "statusPublished": "publiée",
+    "statusReady": "prête",
+    "viewer": "visionneuse",
+    "viewerEmbedded": "intégrée",
+    "opened": "ouvertures",
+    "openedValue": "128 visiteurs"
+  },
+  "Capabilities": {
+    "kicker": "Ce que vous obtenez",
+    "intro": "Trois surfaces reliées — un site public, un scan mobile guidé et un espace de travail pour agents — derrière une seule visite.",
+    "title": "Un scan, sept atouts pour une annonce.",
+    "items": [
+      {
+        "title": "Capture guidée au téléphone",
+        "desc": "Ni matériel, ni photographe. La caméra vous guide dans chaque pièce en panorama, directement depuis le navigateur."
+      },
+      {
+        "title": "Assistant de capture IA",
+        "desc": "Des conseils en direct sur la couverture, la position et la qualité d’image pendant que vous êtes encore dans le bien."
+      },
+      {
+        "title": "Aperçu gratuit de deux pièces",
+        "desc": "Une visite fonctionnelle des deux premières pièces avant tout paiement, pour juger la qualité finale d’abord."
+      },
+      {
+        "title": "Prix unique par bien",
+        "desc": "Un seul devis adapté au bien — panoramas, calcul, hébergement et maintenance inclus."
+      },
+      {
+        "title": "Publication CRM",
+        "desc": "Connectez votre CRM, choisissez l’annonce, publiez. La visite reste dans l’annonce via la visionneuse intégrée."
+      },
+      {
+        "title": "Apparence approuvée",
+        "desc": "Ajustez l’aspect de la visionneuse dans les limites approuvées pour qu’elle s’accorde à l’annonce qui l’accueille."
+      },
+      {
+        "title": "Espace de travail agent",
+        "desc": "Gérez vos biens, suivez l’état du traitement et de la publication, et voyez combien de visiteurs ont ouvert la visionneuse."
+      }
+    ],
+    "cta": {
+      "title": "Scanner un bien",
+      "desc": "Deux pièces gratuites. Commencez sur votre téléphone.",
+      "start": "Commencer"
+    }
+  },
+  "Integration": {
+    "kicker": "Là où vous travaillez déjà",
+    "intro": "Connectez le CRM que vous utilisez déjà. Choisissez l’annonce. Publiez. La visite y apparaît via une visionneuse intégrée ou un iframe — rien à copier, rien à héberger.",
+    "title": "Ajoutez simplement Sodar à votre CRM.",
+    "crmHeader": "Votre CRM · Annonces",
+    "published": "Visite publiée",
+    "addWalkthrough": "+ ajouter une visite",
+    "listings": [
+      {
+        "name": "84 Kesklinn Ave",
+        "meta": "3 pièces · 395 000 €"
+      },
+      {
+        "name": "12 Harbour Res.",
+        "meta": "2 pièces · 260 000 €"
+      },
+      {
+        "name": "7 Nõmme Villa",
+        "meta": "6 pièces · 890 000 €"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Illustratif · pas encore mesuré",
+    "title": "La différence qu’un scan fait.",
+    "beforeLabel": "Avant",
+    "afterLabel": "Après · avec Sodar",
+    "before": [
+      "Réserver un photographe",
+      "Attendre 2–3 jours",
+      "Photos plates",
+      "Les acheteurs passent",
+      "Rien de mesuré"
+    ],
+    "after": [
+      "Un téléphone, un parcours",
+      "Aperçu en quelques minutes",
+      "Visite immersive",
+      "Les acheteurs entrent",
+      "Chaque ouverture de visionneuse comptée"
+    ]
+  },
+  "Workspace": {
+    "kicker": "De retour au bureau",
+    "intro": "Chaque bien scanné, son état de traitement et de publication, et le nombre de visiteurs ayant ouvert la visionneuse — dans un espace de travail par agent.",
+    "title": "Vos biens, toujours sous les yeux.",
+    "cta": "Voir l’espace de travail agent",
+    "mock": {
+      "title": "Espace de travail",
+      "live": "Aperçu en direct",
+      "properties": "Biens",
+      "cols": [
+        "Bien",
+        "Statut",
+        "Ouvertures",
+        "Publication"
+      ],
+      "statuses": {
+        "published": "Publié",
+        "processing": "En traitement",
+        "preview": "Aperçu",
+        "capturing": "Capture"
+      },
+      "rows": [
+        {
+          "name": "84 Kesklinn Ave",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "12 Harbour Res.",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "7 Nõmme Villa",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 pièces"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 pièces gratuites"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "status": "capturing",
+          "views": "—",
+          "pub": "sur téléphone"
+        }
+      ],
+      "engagement": "Engagement par pièce · 84 Kesklinn Ave",
+      "rooms": [
+        "Salon",
+        "Cuisine",
+        "Chambre principale",
+        "Salle de bain",
+        "Balcon"
+      ],
+      "processing": "Traitement",
+      "jobs": [
+        {
+          "name": "7 Nõmme Villa",
+          "step": "Assemblage · chambre",
+          "n": "4 / 6"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "step": "Aperçu prêt",
+          "n": "2 / 2"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "step": "Capture sur téléphone",
+          "n": "—"
+        }
+      ],
+      "week": "Cette semaine",
+      "weekTitle": "701 ouvertures",
+      "weekSub": "sur 2 visites publiées"
+    }
+  },
+  "Scans": {
+    "kicker": "Les scans de la semaine",
+    "title": "Chaque type d’annonce se scanne de la même façon.",
+    "items": [
+      {
+        "label": "Appartement",
+        "meta": "3 pièces · Kesklinn"
+      },
+      {
+        "label": "Construction neuve",
+        "meta": "4 pièces · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 pièces · Pirita"
+      },
+      {
+        "label": "Location",
+        "meta": "1 pièce · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "Conçu pour mériter la confiance sur vos annonces",
+    "title": "La conformité n’est pas une réflexion après coup.",
+    "items": [
+      {
+        "title": "Permission caméra explicite",
+        "desc": "Sodar ne demande l’accès à la caméra qu’au démarrage d’un scan et ne l’utilise que pour cette capture."
+      },
+      {
+        "title": "Mention IA",
+        "desc": "Chaque visite publiée porte une mention claire et visible indiquant qu’il s’agit d’une reconstruction traitée par IA."
+      },
+      {
+        "title": "Sécurité",
+        "desc": "Conçu dès le premier jour vers SOC 2 et le RGPD — stockage chiffré, identifiants CRM limités, journaux d’audit par bien."
+      },
+      {
+        "title": "Les données appartiennent à l’agent",
+        "desc": "Captures, visites et données d’engagement appartiennent à l’agent. Déconnecter Sodar exporte tout."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "Pour les éditeurs de CRM",
+    "title": "Distribuez Sodar à votre réseau d’agents. Gardez 15 %.",
+    "body": "Les partenaires CRM mettent Sodar à disposition de leurs agents et reçoivent une marge de 15 % sur les achats de visites éligibles — sans minimum, versée automatiquement.",
+    "cta": "Voir le programme partenaires"
+  },
+  "PricingTeaser": {
+    "kicker": "Simple par conception",
+    "title1": "Un bien.",
+    "title2": "Un prix. Une fois.",
+    "body": "Prévisualisez les deux premières pièces gratuitement. Puis Sodar propose un seul prix unique pour terminer le bien — sans abonnement, sans contrat annuel.",
+    "cta": "Comment le prix est calculé",
+    "card": {
+      "label": "Appartement 3 pièces typique",
+      "price": "99–149 €",
+      "note": "paiement unique · devis après l’aperçu gratuit",
+      "factors": [
+        "Taille du bien",
+        "Panoramas capturés",
+        "Traitement & calcul IA",
+        "Stockage & hébergement",
+        "Maintenance continue"
+      ],
+      "cta": "Scanner un bien"
+    }
+  },
+  "Language": {
+    "kicker": "Où que vos acheteurs cherchent",
+    "title1": "Une visite.",
+    "title2": "Toutes les langues qu’un acheteur lit.",
+    "body": "Publiez une fois — les libellés de pièces et les commandes de la visionneuse suivent la langue choisie par l’acheteur. Le site et la visionneuse sont disponibles en seize langues aujourd’hui."
+  },
+  "Switcher": {
+    "search": "Rechercher une langue…",
+    "none": "Aucune langue correspondante.",
+    "active": "Active",
+    "comingSoon": "Bientôt",
+    "choose": "Choisir une langue",
+    "notice": "{language} n’est pas encore traduit — les annonces resteront en anglais jusqu’à sa sortie."
+  },
+  "Footer": {
+    "tagline": "Chaque annonce, scannée en un lieu que les acheteurs peuvent parcourir.",
+    "columns": {
+      "product": {
+        "title": "Produit",
+        "items": [
+          [
+            "Produit",
+            "/product"
+          ],
+          [
+            "Comment ça marche",
+            "/product#pipeline"
+          ],
+          [
+            "Aperçu de l’espace de travail",
+            "/terminal"
+          ],
+          [
+            "Sécurité",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Intégrations",
+        "items": [
+          [
+            "Hub d’intégrations",
+            "/integrations"
+          ],
+          [
+            "Publication CRM",
+            "/integrations#crm"
+          ],
+          [
+            "Visionneuse intégrée",
+            "/integrations#embed"
+          ],
+          [
+            "Accès API",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "Partenaires",
+        "items": [
+          [
+            "Programme partenaires",
+            "/partners"
+          ],
+          [
+            "Devenir partenaire",
+            "/partners#apply"
+          ],
+          [
+            "Tableau de bord partenaire",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Entreprise",
+        "items": [
+          [
+            "À propos",
+            "/about"
+          ],
+          [
+            "Carrières",
+            "/careers"
+          ],
+          [
+            "Notes de terrain",
+            "/blog"
+          ],
+          [
+            "Entreprise",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Mentions légales",
+        "items": [
+          [
+            "Confidentialité",
+            "/legal/privacy"
+          ],
+          [
+            "Conditions",
+            "/legal/terms"
+          ],
+          [
+            "Traitement des données",
+            "/legal/data-processing"
+          ],
+          [
+            "Cookies",
+            "/legal/cookies"
+          ]
+        ]
+      }
+    },
+    "language": "Langue",
+    "social": "Ailleurs",
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallinn, Estonie · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Produit — Sodar",
+    "metaDesc": "Comment un scan guidé au téléphone devient une visite immersive prête pour l’annonce.",
+    "eyebrow": "Le produit",
+    "title": "Un téléphone, un parcours, un lieu où les acheteurs peuvent entrer.",
+    "sub": "Sodar transforme des scans guidés en visites immersives prêtes pour l’annonce — capturées avec le téléphone que vous avez déjà, publiées dans le CRM que vous utilisez déjà.",
+    "ctaPrimary": "Scanner votre premier bien",
+    "ctaSecondary": "Voir l’espace de travail",
+    "flatLabel": "Capture téléphone",
+    "revealedLabel": "Visite Sodar",
+    "stagesKicker": "D’un parcours à une visite",
+    "stagesTitle": "Trois étapes, une seule chaîne.",
+    "stages": [
+      {
+        "label": "Capture",
+        "sub": "Téléphone · navigateur · permission caméra",
+        "desc": "Chaque pièce est capturée en panorama, avec les conseils en direct de l’assistant de capture IA."
+      },
+      {
+        "label": "Traitement",
+        "sub": "Assemblage · amélioration · liaison",
+        "desc": "Les panoramas sont assemblés, nettoyés et reliés en une seule visite. Les deux premières pièces reviennent gratuitement."
+      },
+      {
+        "label": "Publication",
+        "sub": "CRM · visionneuse intégrée · apparence",
+        "desc": "Connectez votre CRM, choisissez l’annonce, publiez. La visionneuse vit dans l’annonce ; vous en réglez l’apparence approuvée."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Essayez sur un vrai bien",
+      "title": "Deux pièces gratuites en aperçu. Payez une fois pour le reste.",
+      "sub": "Ouvrez sodar.io sur votre téléphone et lancez un scan — aucune carte requise avant de déverrouiller la visite complète.",
+      "label": "Scanner votre premier bien"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Tarifs — Sodar",
+    "metaDesc": "Prix unique par bien, proposé après un aperçu gratuit de deux pièces. Tarifs dégressifs pour les agences, marge de 15 % pour les partenaires CRM.",
+    "eyebrow": "Simple par conception",
+    "title": "Un bien. Un prix. Une fois.",
+    "sub": "Prévisualisez deux pièces gratuitement, puis payez un seul prix unique adapté au bien. Tarifs dégressifs pour les agences, marge fixe de 15 % pour les partenaires CRM.",
+    "badge": "La plupart des agences",
+    "tiers": [
+      {
+        "name": "Par bien",
+        "price": "Dès 99 €",
+        "unit": "paiement unique, devis après l’aperçu gratuit",
+        "desc": "Pour les agents qui scannent leurs annonces une par une.",
+        "features": [
+          "Capture guidée au téléphone + assistant IA",
+          "Deux premières pièces gratuites en aperçu",
+          "Visite complète après un paiement Stripe",
+          "Publication CRM & visionneuse intégrée",
+          "Espace de travail avec statuts & ouvertures"
+        ],
+        "cta": "Scanner votre premier bien"
+      },
+      {
+        "name": "Agence",
+        "price": "Volume",
+        "unit": "par bien, dégressif avec le volume",
+        "desc": "Pour les agences publiant des dizaines d’annonces par mois.",
+        "features": [
+          "Tout le forfait par bien",
+          "Vue consolidée de l’agence",
+          "File de traitement prioritaire",
+          "Configuration CRM dédiée",
+          "Visionneuse co-brandée"
+        ],
+        "cta": "Parler aux ventes"
+      },
+      {
+        "name": "Partenaire CRM",
+        "price": "15 %",
+        "unit": "de marge sur les achats éligibles",
+        "desc": "Pour les éditeurs de CRM qui distribuent Sodar à leurs agents.",
+        "features": [
+          "Sodar disponible dans votre plateforme",
+          "Tableau de bord partenaire",
+          "Versement mensuel automatique",
+          "Aucun volume minimum"
+        ],
+        "cta": "Devenir partenaire"
+      }
+    ],
+    "factorsKicker": "Comment le devis est construit",
+    "factorsTitle": "Tarifé selon le bien, pas selon le forfait.",
+    "factors": [
+      {
+        "title": "Taille du bien",
+        "desc": "Surface et nombre de pièces capturées."
+      },
+      {
+        "title": "Volume de panoramas",
+        "desc": "Le nombre de panoramas produits par le scan et leur résolution."
+      },
+      {
+        "title": "Traitement",
+        "desc": "Assemblage, amélioration et calcul IA derrière la visite."
+      },
+      {
+        "title": "Stockage & hébergement",
+        "desc": "Garder la visite et sa visionneuse en ligne dans votre annonce."
+      },
+      {
+        "title": "Maintenance",
+        "desc": "Les mises à jour de la visionneuse et l’intégration CRM elle-même."
+      },
+      {
+        "title": "Marge partenaire",
+        "desc": "Lorsqu’un partenaire CRM distribue Sodar, sa marge est incluse dans le devis."
+      }
+    ],
+    "faqKicker": "Questions",
+    "faqTitle": "FAQ tarifs.",
+    "faq": [
+      {
+        "q": "Quand vois-je le prix ?",
+        "a": "Après l’aperçu gratuit. Sodar calcule un prix unique pour terminer le bien une fois les deux premières pièces traitées."
+      },
+      {
+        "q": "L’aperçu est-il vraiment gratuit ?",
+        "a": "Oui — les deux premières pièces sont traitées en une visite fonctionnelle sans paiement. Vous ne payez que pour terminer et publier le bien."
+      },
+      {
+        "q": "Y a-t-il un abonnement ?",
+        "a": "Non. Chaque bien correspond à un seul paiement unique via Stripe. Rien ne se renouvelle."
+      },
+      {
+        "q": "Comment la marge partenaire CRM est-elle versée ?",
+        "a": "Automatiquement, chaque mois, sur les achats de visites éligibles des agents présents sur la plateforme du partenaire."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Accès anticipé",
+      "title": "Votre prochaine annonce mérite mieux que des photos.",
+      "sub": "Nous accueillons d’abord un petit groupe d’agents tournés vers l’avenir.",
+      "label": "Demander un accès anticipé"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Aperçu de l’espace de travail — Sodar",
+    "metaDesc": "Un aperçu public, sans connexion, de l’espace de travail agent. Aucune donnée réelle.",
+    "eyebrow": "Aperçu public · sans connexion, sans données réelles",
+    "title": "Chaque bien, son statut et qui l’a ouvert.",
+    "sub": "Ceci est un aperçu statique de l’espace de travail que reçoit chaque agent — biens, état du traitement et de la publication, et nombre de visiteurs ayant ouvert chaque visionneuse.",
+    "cta": {
+      "eyebrow": "À vous dès que vous publiez",
+      "title": "Votre espace de travail commence vide — jusqu’à votre premier scan.",
+      "sub": "Scannez un bien pour voir de vrais chiffres remplacer cet aperçu.",
+      "label": "Scanner votre premier bien"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "Partenaires — Sodar",
+    "metaDesc": "Les plateformes CRM gagnent une marge fixe de 15 % en distribuant Sodar à leur réseau d’agents.",
+    "eyebrow": "Pour les plateformes CRM",
+    "title": "Distribuez Sodar à vos agents. Gardez 15 %.",
+    "sub": "Une marge fixe sur chaque visite éligible achetée par les agents de votre plateforme — sans minimum, versée automatiquement, sans développement au-delà d’un lien de parrainage.",
+    "apply": "Devenir partenaire",
+    "stepsKicker": "Comment ça marche",
+    "stepsTitle": "Trois étapes vers une marge fixe.",
+    "steps": [
+      {
+        "title": "Candidater",
+        "desc": "Dites-nous quels agents ou agences utilisent votre plateforme, et approximativement combien d’annonces actives."
+      },
+      {
+        "title": "Intégrer",
+        "desc": "Un lien de parrainage et, en option, un point d’entrée natif dans votre application."
+      },
+      {
+        "title": "Gagner",
+        "desc": "15 % de chaque achat de visite éligible d’un agent arrivé via votre plateforme, versés chaque mois."
+      }
+    ],
+    "dashKicker": "Tableau de bord partenaire",
+    "dashTitle": "Suivez les agents parrainés et la marge au même endroit.",
+    "dash": [
+      {
+        "label": "Agents parrainés",
+        "value": "142"
+      },
+      {
+        "label": "Visites achetées",
+        "value": "3 018"
+      },
+      {
+        "label": "Marge ce mois-ci",
+        "value": "6 240 €"
+      }
+    ],
+    "applyKicker": "Commencer",
+    "applyTitle": "Devenir partenaire.",
+    "applyBody": "Une courte candidature — nous examinons l’adéquation de la plateforme et le volume d’annonces typique avant d’émettre un lien de parrainage.",
+    "form": {
+      "company": "Nom de l’entreprise / plateforme",
+      "companyPh": "Acme CRM",
+      "email": "E-mail professionnel",
+      "emailPh": "vous@entreprise.fr",
+      "brokers": "Agents actifs sur votre plateforme",
+      "brokersPh": "ex. 50–200",
+      "submit": "Envoyer la candidature"
+    },
+    "faqKicker": "Questions",
+    "faqTitle": "FAQ partenaires.",
+    "faq": [
+      {
+        "q": "Y a-t-il un engagement minimum ?",
+        "a": "Non. La marge de 15 % s’applique dès la première visite achetée — sans plancher de volume."
+      },
+      {
+        "q": "À qui appartient la relation avec l’agent ?",
+        "a": "À vous. Sodar facture l’agent directement et vous reverse votre marge ; les agents restent vos clients."
+      },
+      {
+        "q": "Peut-on co-brander la visite ?",
+        "a": "Oui — un compte partenaire peut appliquer un cadre co-brandé autour de la visite intégrée."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Prêts quand vous l’êtes",
+      "title": "Donnez à vos agents une raison de publier davantage.",
+      "sub": "Candidatez une fois — nous reviendrons vers vous avec un lien de parrainage et des notes d’intégration.",
+      "label": "Devenir partenaire"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Intégrations — Sodar",
+    "metaDesc": "Connectez un CRM ou accordez un accès API pour que les visites publiées s’intègrent directement dans vos annonces.",
+    "eyebrow": "Hub d’intégrations",
+    "title": "Connectez une fois. Chaque annonce suivante tient en un clic.",
+    "sub": "Connectez votre CRM en OAuth, ou accordez à Sodar un accès API limité — choisissez l’annonce, publiez, et la visite est intégrée sans seconde étape.",
+    "connKicker": "Connexions",
+    "connTitle": "Choisissez comment Sodar atteint vos annonces.",
+    "conns": [
+      {
+        "name": "OAuth CRM générique",
+        "action": "Connecter"
+      },
+      {
+        "name": "Flux MLS City24",
+        "action": "Connecter"
+      },
+      {
+        "name": "API REST personnalisée",
+        "action": "Générer une clé"
+      },
+      {
+        "name": "Zapier / webhook",
+        "action": "Bientôt"
+      }
+    ],
+    "notConnected": "statut : non connecté",
+    "mockTitle": "Connexion de démonstration — câblée en phase 2",
+    "embedKicker": "Pas de CRM ? Pas de problème",
+    "embedTitle": "Un iframe, à déposer n’importe où.",
+    "embedBody": "Chaque visite achetée reçoit une URL d’intégration stable. Collez-la dans n’importe quel portail d’annonces qui accepte un iframe personnalisé.",
+    "cta": {
+      "eyebrow": "Venez avec votre CRM",
+      "title": "Sodar s’adapte aux outils que vous utilisez déjà.",
+      "sub": "Parlons d’une intégration prioritaire, ou commencez dès aujourd’hui avec l’intégration générique.",
+      "label": "Découvrir le programme partenaires"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Entreprise — Sodar",
+    "metaDesc": "Sièges d’équipe, scans en volume et vues consolidées de l’espace de travail pour les agences.",
+    "eyebrow": "Pour les agences",
+    "title": "Un espace de travail pour chaque agent de votre équipe.",
+    "sub": "Scans en volume, tarifs dégressifs et vue d’engagement consolidée — conçu pour les agences publiant des dizaines d’annonces par mois.",
+    "talk": "Parler aux ventes",
+    "featKicker": "Conçu pour les équipes",
+    "featTitle": "Tout le libre-service, plus ce dont une agence a besoin.",
+    "features": [
+      {
+        "title": "Sièges d’équipe",
+        "desc": "Chaque agent a son propre espace de travail ; une vue consolidée de l’agence s’ajoute au-dessus pour les managers."
+      },
+      {
+        "title": "Scans en volume",
+        "desc": "Scannez tout un portefeuille de biens au lieu d’un par un."
+      },
+      {
+        "title": "Tarifs dégressifs",
+        "desc": "Le prix par bien diminue à mesure que le volume mensuel de votre agence augmente."
+      },
+      {
+        "title": "Configuration CRM dédiée",
+        "desc": "Nous prenons en charge le câblage OAuth / API pour la pile CRM propre à votre agence."
+      },
+      {
+        "title": "Co-branding",
+        "desc": "Apposez la marque de votre agence sur chaque visite intégrée."
+      },
+      {
+        "title": "Traitement prioritaire",
+        "desc": "Les biens Entreprise sont traités avant la file en libre-service."
+      }
+    ],
+    "priceKicker": "Des tarifs qui baissent avec le volume",
+    "priceTitle1": "Tarifs dégressifs,",
+    "priceTitle2": "un seul contrat.",
+    "priceBody": "Un tarif par bien sur mesure selon le volume mensuel, plus un forfait fixe par siège d’agent. Contactez les ventes pour un devis à la taille de votre agence.",
+    "priceNote": "Illustratif, par bien",
+    "tiers": [
+      {
+        "tier": "1–20 biens / mois",
+        "price": "dès 99 €"
+      },
+      {
+        "tier": "21–100 biens / mois",
+        "price": "dès 79 €"
+      },
+      {
+        "tier": "100+ biens / mois",
+        "price": "Sur mesure"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Entreprise",
+      "title": "Mettez en ligne les annonces de toute votre agence.",
+      "sub": "Nous configurerons ensemble votre connexion CRM et votre structure de sièges.",
+      "label": "Parler aux ventes"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Sécurité & conformité — Sodar",
+    "metaDesc": "Traitement des données, mention IA et posture de conformité de la chaîne Sodar.",
+    "eyebrow": "Confiance & conformité",
+    "title": "Conçu pour mériter la confiance sur l’annonce d’un autre.",
+    "sub": "Sodar est conçu dès le premier jour vers SOC 2 et le RGPD — cette page en est le résumé de travail ; rapports formels et DPA disponibles sur demande.",
+    "detailKicker": "En détail",
+    "detailTitle": "Comment les données circulent réellement.",
+    "details": [
+      {
+        "title": "Accès caméra",
+        "desc": "La caméra de l’appareil n’est demandée qu’au démarrage d’un scan, avec permission explicite, et utilisée uniquement pour cette capture."
+      },
+      {
+        "title": "Stockage",
+        "desc": "Captures et visites rendues sont chiffrées au repos et en transit ; l’accès est limité à chaque compte agent."
+      },
+      {
+        "title": "Mention IA",
+        "desc": "Chaque visite publique porte une mention visible l’identifiant comme une reconstruction traitée par IA."
+      },
+      {
+        "title": "Conservation des données",
+        "desc": "Captures et visites sont conservées pendant la durée de l’annonce plus un délai de grâce fixe, puis purgées sur demande."
+      },
+      {
+        "title": "Contrôle d’accès",
+        "desc": "Identifiants CRM et clés API sont limités aux permissions minimales dont l’intégration a besoin."
+      },
+      {
+        "title": "Sous-traitants",
+        "desc": "Les prestataires tiers de traitement et de paiement sont listés dans l’avenant de traitement des données."
+      }
+    ],
+    "seeAlso": "Voir aussi :",
+    "privacy": "Politique de confidentialité",
+    "dpa": "Avenant de traitement des données",
+    "cta": {
+      "eyebrow": "Questions pour votre revue de sécurité",
+      "title": "Besoin d’un questionnaire de sécurité rempli ?",
+      "sub": "Contactez-nous et nous vous renverrons un questionnaire complété ou notre statut SOC 2 directement.",
+      "label": "Contacter la sécurité"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "À propos — Sodar",
+    "metaDesc": "Pourquoi Sodar existe : plaidoyer pour traiter une annonce comme un lieu, pas comme une galerie de photos.",
+    "eyebrow": "Entreprise",
+    "title": "Une photo d’annonce est une promesse. Nous la rendons praticable.",
+    "sub": "Sodar est né d’une observation : les acheteurs passent devant les photos plates, mais s’attardent dans un espace qu’ils peuvent réellement parcourir. Nous construisons la chaîne qui transforme la première en la seconde.",
+    "thesisKicker": "Thèse",
+    "thesisTitle": "L’orientation vend les annonces.",
+    "thesis": [
+      "Un acheteur qui fait défiler un portail décide en quelques secondes de garder ou de passer, sur la base de photos qui ne donnent aucune idée de la circulation entre les pièces. Une visite répond à la question qu’une photo ne peut pas poser : qu’est-ce que ça fait d’être vraiment là.",
+      "Sodar existe pour rendre cette visite assez abordable et assez rapide pour qu’elle devienne la norme de chaque annonce, et non un luxe réservé au haut du marché."
+    ],
+    "valuesKicker": "Ce à quoi nous tenons",
+    "valuesTitle": "Trois choses que nous ne négocierons pas.",
+    "values": [
+      {
+        "title": "Scanner, pas mettre en scène",
+        "desc": "Le vrai bien est la source de vérité. Notre travail est de le restituer fidèlement, pas d’inventer une version fantasmée."
+      },
+      {
+        "title": "Les données appartiennent à l’agent",
+        "desc": "Captures, visites et données d’engagement appartiennent à l’agent qui les a créées — toujours exportables, jamais verrouillées."
+      },
+      {
+        "title": "La mention par défaut",
+        "desc": "Un espace traité par IA doit le dire. Chaque visite publique est étiquetée, sans exception."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Rejoignez-nous",
+      "title": "Nous sommes une petite équipe, en phase d’accueil précoce.",
+      "sub": "Si la thèse vous parle, nous recrutons — ou parlez-nous simplement de vos annonces.",
+      "label": "Voir les postes ouverts"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Carrières — Sodar",
+    "metaDesc": "Postes ouverts chez Sodar.",
+    "eyebrow": "Carrières",
+    "title": "Aidez chaque annonce à se rendre correctement.",
+    "sub": "Petite équipe, stade précoce, de vrais agents scannent déjà des biens. Nous recrutons en reconstruction, produit et go-to-market.",
+    "rolesKicker": "Postes ouverts",
+    "rolesTitle": "Nous recrutons.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Reconstruction",
+        "location": "Télétravail / Tallinn"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Produit",
+        "location": "Télétravail / Tallinn"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Go-to-market",
+        "location": "Tallinn"
+      }
+    ],
+    "noFit": "Rien qui corresponde ? Écrivez quand même à careers@sodar.io.",
+    "cta": {
+      "eyebrow": "Pas encore de poste pour vous ?",
+      "title": "Nous sommes assez petits pour qu’un e-mail atteigne un fondateur.",
+      "sub": "Dites-nous sur quoi vous aimeriez travailler.",
+      "label": "Écrire à careers@sodar.io"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Notes de terrain — Sodar",
+    "metaDesc": "Études de cas d’agents et d’agences qui scannent des biens avec Sodar.",
+    "eyebrow": "Notes de terrain",
+    "title": "Des études de cas, pas des communiqués.",
+    "sub": "Ce qui se passe vraiment quand un bien est scanné — écrit par l’équipe qui construit la chaîne.",
+    "posts": [
+      {
+        "title": "Comment une agence tallinnoise de 4 agents a réduit la préparation d’annonce à 15 minutes",
+        "tag": "Étude de cas",
+        "read": "6 min de lecture"
+      },
+      {
+        "title": "Ce que nous avons changé après les 500 premières visites",
+        "tag": "Notes produit",
+        "read": "4 min de lecture"
+      },
+      {
+        "title": "Lire l’engagement par pièce : ce que révèlent vraiment les ouvertures",
+        "tag": "Guide",
+        "read": "5 min de lecture"
+      },
+      {
+        "title": "Pourquoi l’aperçu gratuit fait deux pièces, ni une ni cinq",
+        "tag": "Notes produit",
+        "read": "3 min de lecture"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Brouillon — phase 1",
+    "notice": "Ceci est un gabarit structurel de phase 1, pas un texte juridique définitif.",
+    "englishOnly": "Les documents juridiques sont pour l’instant publiés en anglais uniquement ; la version anglaise fait foi.",
+    "titles": {
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d’utilisation",
+      "data-processing": "Avenant de traitement des données",
+      "cookies": "Politique de cookies"
+    }
+  },
+  "Scaffold": {
+    "phase": "Phase 1 — design & structure",
+    "note": "Paiements, OAuth CRM et chaîne IA sont des états simulés. Aucun appel backend."
+  }
+}

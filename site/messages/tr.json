@@ -1,0 +1,1002 @@
+{
+  "Meta": {
+    "title": "Sodar — Daha çok satış kapatan yapay zekâ turları",
+    "description": "Bir mülkü telefonunuzla tarayın. Sodar, yönlendirmeli oda çekimlerini ilana hazır, sürükleyici bir tura dönüştürür, ilk iki odayı ücretsiz önizletir ve doğrudan CRM ilanınıza yayınlar."
+  },
+  "Nav": {
+    "product": "Ürün",
+    "integrations": "Entegrasyonlar",
+    "partners": "İş ortakları",
+    "pricing": "Fiyatlar",
+    "signIn": "Giriş yap",
+    "getStarted": "Mülk tara",
+    "menu": "Menüyü aç/kapat",
+    "home": "Sodar ana sayfa"
+  },
+  "Hero": {
+    "headline1": "Daha çok satış kapatan",
+    "headline2": "yapay zekâ turları.",
+    "sub": "Telefonunuzda sodar.io’yu açın, mülkü bir kez dolaşın ve alıcıların içine adım atabileceği sürükleyici bir tur edinin — zaten sahip olduğunuz ilanda yayınlanmış olarak.",
+    "ctaPrimary": "İlk mülkünüzü tarayın",
+    "ctaSecondary": "Nasıl çalıştığını görün",
+    "status": [
+      "ÇEKİM    ▸ salon · 12/12 kare · kapsama %98",
+      "ASİSTAN  ▸ 4° aşağı eğ · sabit tut · iyi ışık",
+      "BİRLEŞTİRME ▸ mutfak · eşdörtgen · 8192×4096",
+      "ÖNİZLEME ▸ 6 odadan 2’si hazır · ücretsiz",
+      "TEKLİF   ▸ tek seferlik fiyat hesaplandı · 6 oda · 14 panorama",
+      "YAYINLANDI ▸ CRM ilanı #48213 · görüntüleyici gömüldü"
+    ]
+  },
+  "Marquee": {
+    "rooms": [
+      "Salon",
+      "Mutfak",
+      "Ebeveyn yatak odası",
+      "Banyo",
+      "Koridor",
+      "Balkon",
+      "Çalışma odası",
+      "Yemek odası",
+      "Misafir odası",
+      "Giriş",
+      "Teras",
+      "Garaj"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "Tez",
+    "lines": [
+      "Hiçbir ilan fotoğrafı kendi içinde dolaşmadı.",
+      "Alıcılar, içine giremedikleri şeyi atlar.",
+      "Biz de telefonu tarayıcıya,",
+      "taramayı da bir mekâna dönüştürdük."
+    ],
+    "body": "Bir danışman telefonunda sodar.io’yu açar, yapay zekâ çekim asistanı kareyi yönlendirirken her odayı bir kez dolaşır ve alıcıların içinde gezebileceği bir tur alır. İlk iki oda ücretsiz önizlenir. Tek bir ödeme mülkü tamamlar. CRM ilanına yayınlamak tek tıktır."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "oda ücretsiz",
+        "note": "Herhangi bir ödemeden önce çalışan önizleme"
+      },
+      {
+        "label": "tek seferlik fiyat",
+        "note": "Mülke göre belirlenir. Abonelik yok"
+      },
+      {
+        "label": "iş ortağı payı",
+        "note": "Sodar’ı dağıtan CRM’ler için"
+      },
+      {
+        "label": "oda başına",
+        "note": "Yapay zekânın canlı yönlendirdiği panorama çekimi"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Kaydır",
+    "frames": "/12 kare",
+    "assistantLabel": "Çekim asistanı",
+    "assist": [
+      "4° aşağı eğin",
+      "Sabit tutun…",
+      "İyi ışık. Dönmeye devam edin",
+      "Örtüşme %40 — daha yavaş",
+      "Oda tamamlandı"
+    ],
+    "rooms": [
+      "Salon",
+      "Mutfak",
+      "Ebeveyn yatak odası",
+      "Banyo",
+      "Çalışma odası",
+      "Balkon"
+    ],
+    "ready": "Hazır",
+    "locked": "Kilitli",
+    "photosOnly": "Yalnızca fotoğraf",
+    "panels": {
+      "capture": {
+        "label": "Çekim",
+        "title": "Mülkü bir kez dolaşın.",
+        "body": "Telefonunuzda sodar.io’yu açın. Kamera sizi oda oda yönlendirirken yapay zekâ çekim asistanı kapsamayı, konumu ve ışığı düzeltir — canlı olarak, siz hâlâ oradayken."
+      },
+      "preview": {
+        "label": "Önizleme",
+        "title": "İki oda, tamamlanmış, ücretsiz.",
+        "body": "Sodar ilk çekimleri ilk iki odanın çalışan bir turuna dönüştürür. Herhangi bir ödeme yapmadan önce bitmiş kaliteyi deneyimlersiniz."
+      },
+      "unlock": {
+        "label": "Kilidi aç",
+        "title": "Tek fiyat. Tek ödeme.",
+        "body": "Sodar tüm mülk için tek seferlik bir fiyat verir — büyüklük, panorama sayısı, işleme, barındırma ve bakım hesaba katılır. Stripe üzerinden bir kez ödeyin, kalan odalar işlensin."
+      },
+      "publish": {
+        "label": "Yayınla",
+        "title": "Zaten sahip olduğunuz ilanda.",
+        "body": "CRM’inizi bağlayın, mülk ilanını seçin, yayınlayın. Tur, Sodar’ın gömülü görüntüleyicisi sayesinde ilanın içinde yaşar — onaylı görünüm ayarlarını istediğiniz zaman değiştirebilirsiniz."
+      }
+    },
+    "quoteLabel": "Teklif · 84 Kesklinn Ave",
+    "quoteRows": [
+      {
+        "k": "6 oda · 14 panorama",
+        "v": "dahil"
+      },
+      {
+        "k": "İşleme ve yapay zekâ hesaplama",
+        "v": "dahil"
+      },
+      {
+        "k": "Depolama ve görüntüleyici barındırma",
+        "v": "12 ay"
+      },
+      {
+        "k": "Bakım",
+        "v": "dahil"
+      }
+    ],
+    "oneTime": "tek seferlik · abonelik yok",
+    "paidLabel": "Ödendi",
+    "paidBody": "Kalan 4 oda işleniyor. Tur tamamlandığında bilgilendirileceksiniz.",
+    "pay": "Stripe ile öde",
+    "paying": "Stripe’a bağlanıyor…",
+    "mockNote": "Demo ödeme — hiçbir karttan çekim yapılmaz.",
+    "crmHeader": "CRM’iniz · İlan #48213",
+    "publishBtn": "Turu yayınla",
+    "publishedBtn": "Yayınlandı",
+    "viewerBadge": "Sodar görüntüleyici · 360°",
+    "listingMeta": "3 oda · 78 m² · 395.000 €",
+    "status": "durum",
+    "statusPublished": "yayında",
+    "statusReady": "hazır",
+    "viewer": "görüntüleyici",
+    "viewerEmbedded": "gömülü",
+    "opened": "açılma",
+    "openedValue": "128 ziyaretçi"
+  },
+  "Capabilities": {
+    "kicker": "Neler sunuluyor",
+    "intro": "Tek bir turun arkasında birbirine bağlı üç yüzey — herkese açık bir site, yönlendirmeli bir mobil tarama ve bir danışman çalışma alanı.",
+    "title": "Tek tarama, bir ilanın kazandığı yedi şey.",
+    "items": [
+      {
+        "title": "Yönlendirmeli telefon çekimi",
+        "desc": "Ekipman yok, fotoğrafçı yok. Kamera sizi doğrudan tarayıcıdan her odada panorama olarak yönlendirir."
+      },
+      {
+        "title": "Yapay zekâ çekim asistanı",
+        "desc": "Siz hâlâ mülkün içindeyken kapsama, konum ve görüntü kalitesi hakkında canlı koçluk."
+      },
+      {
+        "title": "Ücretsiz iki oda önizlemesi",
+        "desc": "Herhangi bir ödemeden önce ilk iki odanın çalışan turu; böylece önce bitmiş kaliteyi değerlendirirsiniz."
+      },
+      {
+        "title": "Mülk başına tek seferlik fiyat",
+        "desc": "Mülke göre belirlenen tek bir teklif — panoramalar, hesaplama, barındırma ve bakım dahil."
+      },
+      {
+        "title": "CRM’e yayınlama",
+        "desc": "CRM’inizi bağlayın, ilanı seçin, yayınlayın. Tur, gömülü görüntüleyici sayesinde ilanın içinde kalır."
+      },
+      {
+        "title": "Onaylı görünüm",
+        "desc": "Görüntüleyicinin görünümünü onaylı ayarlar içinde düzenleyin; içinde yaşadığı ilanla uyumlu olsun."
+      },
+      {
+        "title": "Danışman çalışma alanı",
+        "desc": "Mülkleri yönetin, işleme ve yayın durumunu izleyin, görüntüleyiciyi kaç ziyaretçinin açtığını görün."
+      }
+    ],
+    "cta": {
+      "title": "Mülk tara",
+      "desc": "İki oda ücretsiz. Telefonunuzdan başlayın.",
+      "start": "Başla"
+    }
+  },
+  "Integration": {
+    "kicker": "Zaten çalıştığınız yerde",
+    "intro": "Zaten kullandığınız CRM’i bağlayın. İlanı seçin. Yayınlayın. Tur, gömülü bir görüntüleyici veya iframe ile ilanın içinde belirir — kopyalanacak, barındırılacak bir şey yok.",
+    "title": "Sodar’ı CRM’inize eklemeniz yeter.",
+    "crmHeader": "CRM’iniz · İlanlar",
+    "published": "Tur yayınlandı",
+    "addWalkthrough": "+ tur ekle",
+    "listings": [
+      {
+        "name": "84 Kesklinn Ave",
+        "meta": "3 oda · 395.000 €"
+      },
+      {
+        "name": "12 Harbour Res.",
+        "meta": "2 oda · 260.000 €"
+      },
+      {
+        "name": "7 Nõmme Villa",
+        "meta": "6 oda · 890.000 €"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Örnek amaçlı · henüz ölçülmedi",
+    "title": "Bir taramanın yarattığı fark.",
+    "beforeLabel": "Önce",
+    "afterLabel": "Sonra · Sodar ile",
+    "before": [
+      "Fotoğrafçı ayarla",
+      "2–3 gün bekle",
+      "Düz fotoğraflar",
+      "Alıcılar kaydırıp geçer",
+      "Hiçbir şey ölçülmez"
+    ],
+    "after": [
+      "Bir telefon, bir tur",
+      "Dakikalar içinde önizleme",
+      "Sürükleyici tur",
+      "Alıcılar içeri adım atar",
+      "Her görüntüleyici açılışı sayılır"
+    ]
+  },
+  "Workspace": {
+    "kicker": "Masaya döndüğünüzde",
+    "intro": "Taradığınız her mülk, işleme ve yayın durumu ve görüntüleyiciyi kaç ziyaretçinin açtığı — danışman başına tek bir çalışma alanında.",
+    "title": "Mülkleriniz, her zaman gözünüzün önünde.",
+    "cta": "Danışman çalışma alanını görün",
+    "mock": {
+      "title": "Çalışma alanı",
+      "live": "Canlı önizleme",
+      "properties": "Mülkler",
+      "cols": [
+        "Mülk",
+        "Durum",
+        "Görüntüleyici açıldı",
+        "Yayın"
+      ],
+      "statuses": {
+        "published": "Yayında",
+        "processing": "İşleniyor",
+        "preview": "Önizleme",
+        "capturing": "Çekiliyor"
+      },
+      "rows": [
+        {
+          "name": "84 Kesklinn Ave",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "12 Harbour Res.",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "7 Nõmme Villa",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 oda"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 oda ücretsiz"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "status": "capturing",
+          "views": "—",
+          "pub": "telefonda"
+        }
+      ],
+      "engagement": "Oda etkileşimi · 84 Kesklinn Ave",
+      "rooms": [
+        "Salon",
+        "Mutfak",
+        "Ebeveyn yatak odası",
+        "Banyo",
+        "Balkon"
+      ],
+      "processing": "İşleme",
+      "jobs": [
+        {
+          "name": "7 Nõmme Villa",
+          "step": "Birleştirme · yatak odası",
+          "n": "4 / 6"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "step": "Önizleme hazır",
+          "n": "2 / 2"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "step": "Telefonda çekiliyor",
+          "n": "—"
+        }
+      ],
+      "week": "Bu hafta",
+      "weekTitle": "701 görüntüleyici açılışı",
+      "weekSub": "2 yayınlanmış turda"
+    }
+  },
+  "Scans": {
+    "kicker": "Bu haftanın taramaları",
+    "title": "Her tür ilan aynı şekilde taranır.",
+    "items": [
+      {
+        "label": "Daire",
+        "meta": "3 oda · Kesklinn"
+      },
+      {
+        "label": "Yeni yapı",
+        "meta": "4 oda · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 oda · Pirita"
+      },
+      {
+        "label": "Kiralık",
+        "meta": "1 oda · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "İlanlar emanet edilecek şekilde tasarlandı",
+    "title": "Uyumluluk sonradan akla gelen bir şey değil.",
+    "items": [
+      {
+        "title": "Açık kamera izni",
+        "desc": "Sodar cihaz kamerasını yalnızca tarama başlattığınızda ister ve yalnızca o çekim için kullanır."
+      },
+      {
+        "title": "Yapay zekâ bildirimi",
+        "desc": "Yayınlanan her tur, yapay zekâ ile işlenmiş bir rekonstrüksiyon olduğunu belirten açık ve görünür bir etiket taşır."
+      },
+      {
+        "title": "Güvenlik",
+        "desc": "İlk günden SOC 2 ve GDPR hedefiyle kuruldu — şifreli depolama, kapsamı sınırlı CRM kimlik bilgileri, mülk başına denetim kayıtları."
+      },
+      {
+        "title": "Veri danışmanındır",
+        "desc": "Çekimler, turlar ve etkileşim verileri danışmana aittir. Sodar’ın bağlantısını kesmek her şeyi dışa aktarır."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "CRM sağlayıcıları için",
+    "title": "Sodar’ı danışman ağınıza dağıtın. %15’i sizde kalsın.",
+    "body": "CRM iş ortakları Sodar’ı danışmanlarına sunar ve uygun tur satın alımlarından %15 pay alır — minimum yok, otomatik ödeme.",
+    "cta": "İş ortağı programını görün"
+  },
+  "PricingTeaser": {
+    "kicker": "Tasarımı gereği basit",
+    "title1": "Tek mülk.",
+    "title2": "Tek fiyat. Bir kez.",
+    "body": "İlk iki odayı ücretsiz önizleyin. Ardından Sodar mülkü tamamlamak için tek seferlik tek bir fiyat verir — abonelik yok, yıllık sözleşme yok.",
+    "cta": "Fiyat nasıl hesaplanır",
+    "card": {
+      "label": "Tipik 3 odalı daire",
+      "price": "99–149 €",
+      "note": "tek seferlik · ücretsiz önizlemeden sonra teklif",
+      "factors": [
+        "Mülkün büyüklüğü",
+        "Çekilen panoramalar",
+        "İşleme ve yapay zekâ hesaplama",
+        "Depolama ve görüntüleyici barındırma",
+        "Sürekli bakım"
+      ],
+      "cta": "Mülk tara"
+    }
+  },
+  "Language": {
+    "kicker": "Alıcılarınız nerede ararsa arasın",
+    "title1": "Tek tur.",
+    "title2": "Bir alıcının okuduğu her dil.",
+    "body": "Bir kez yayınlayın — görüntüleyicinin oda etiketleri ve kontrolleri alıcının ayarladığı dili izler. Site ve görüntüleyici bugün on altı dilde sunuluyor."
+  },
+  "Switcher": {
+    "search": "Dil ara…",
+    "none": "Eşleşen dil yok.",
+    "active": "Etkin",
+    "comingSoon": "Yakında",
+    "choose": "Dil seçin",
+    "notice": "{language} henüz çevrilmedi — hazır olana kadar ilanlar İngilizce gösterilecek."
+  },
+  "Footer": {
+    "tagline": "Her ilan, alıcıların içinde dolaşabileceği bir mekâna taranır.",
+    "columns": {
+      "product": {
+        "title": "Ürün",
+        "items": [
+          [
+            "Ürün",
+            "/product"
+          ],
+          [
+            "Nasıl çalışır",
+            "/product#pipeline"
+          ],
+          [
+            "Çalışma alanı önizlemesi",
+            "/terminal"
+          ],
+          [
+            "Güvenlik",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Entegrasyonlar",
+        "items": [
+          [
+            "Entegrasyon merkezi",
+            "/integrations"
+          ],
+          [
+            "CRM’e yayınlama",
+            "/integrations#crm"
+          ],
+          [
+            "Gömülü görüntüleyici",
+            "/integrations#embed"
+          ],
+          [
+            "API erişimi",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "İş ortakları",
+        "items": [
+          [
+            "İş ortağı programı",
+            "/partners"
+          ],
+          [
+            "İş ortağı olun",
+            "/partners#apply"
+          ],
+          [
+            "İş ortağı paneli",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Şirket",
+        "items": [
+          [
+            "Hakkımızda",
+            "/about"
+          ],
+          [
+            "Kariyer",
+            "/careers"
+          ],
+          [
+            "Saha notları",
+            "/blog"
+          ],
+          [
+            "Kurumsal",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Yasal",
+        "items": [
+          [
+            "Gizlilik",
+            "/legal/privacy"
+          ],
+          [
+            "Koşullar",
+            "/legal/terms"
+          ],
+          [
+            "Veri işleme",
+            "/legal/data-processing"
+          ],
+          [
+            "Çerezler",
+            "/legal/cookies"
+          ]
+        ]
+      }
+    },
+    "language": "Dil",
+    "social": "Başka yerlerde",
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallinn, Estonya · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Ürün — Sodar",
+    "metaDesc": "Yönlendirmeli bir telefon taraması nasıl ilana hazır, sürükleyici bir tura dönüşür.",
+    "eyebrow": "Ürün",
+    "title": "Bir telefon, bir tur, alıcıların içine adım atabileceği bir mekân.",
+    "sub": "Sodar yönlendirmeli mülk taramalarını ilana hazır, sürükleyici turlara dönüştürür — zaten yanınızda taşıdığınız telefonla çekilir, zaten kullandığınız CRM’e yayınlanır.",
+    "ctaPrimary": "İlk mülkünüzü tarayın",
+    "ctaSecondary": "Çalışma alanını görün",
+    "flatLabel": "Telefon çekimi",
+    "revealedLabel": "Sodar turu",
+    "stagesKicker": "Bir dolaşmadan bir tura",
+    "stagesTitle": "Üç aşama, tek hat.",
+    "stages": [
+      {
+        "label": "Çekim",
+        "sub": "Telefon · tarayıcı · kamera izni",
+        "desc": "Her oda, yapay zekâ çekim asistanının canlı koçluğuyla panorama olarak çekilir."
+      },
+      {
+        "label": "İşleme",
+        "sub": "Birleştirme · iyileştirme · bağlama",
+        "desc": "Panoramalar birleştirilir, temizlenir ve tek bir tura bağlanır. İlk iki oda ücretsiz olarak geri döner."
+      },
+      {
+        "label": "Yayın",
+        "sub": "CRM · gömülü görüntüleyici · görünüm",
+        "desc": "CRM’inizi bağlayın, ilanı seçin, yayınlayın. Görüntüleyici ilanın içinde yaşar; onaylı görünümünü siz ayarlarsınız."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Gerçek bir mülkte deneyin",
+      "title": "İki odayı ücretsiz önizleyin. Gerisi için bir kez ödeyin.",
+      "sub": "Telefonunuzda sodar.io’yu açın ve bir tarama başlatın — tam turun kilidini açana kadar kart gerekmez.",
+      "label": "İlk mülkünüzü tarayın"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Fiyatlar — Sodar",
+    "metaDesc": "Ücretsiz iki oda önizlemesinden sonra teklif edilen, mülk başına tek seferlik fiyat. Ofisler için hacim fiyatlandırması, CRM iş ortakları için %15 pay.",
+    "eyebrow": "Tasarımı gereği basit",
+    "title": "Tek mülk. Tek fiyat. Bir kez.",
+    "sub": "İki odayı ücretsiz önizleyin, ardından mülke göre belirlenen tek seferlik tek bir fiyat ödeyin. Ofisler için hacim fiyatlandırması, CRM iş ortakları için sabit %15 pay.",
+    "badge": "Çoğu ofis",
+    "tiers": [
+      {
+        "name": "Mülk başına",
+        "price": "99 €’dan itibaren",
+        "unit": "tek seferlik, ücretsiz önizlemeden sonra teklif",
+        "desc": "İlanları tek tek tarayan danışmanlar için.",
+        "features": [
+          "Yönlendirmeli telefon çekimi + yapay zekâ asistanı",
+          "İlk iki oda ücretsiz önizleme",
+          "Tek Stripe ödemesinden sonra tam tur",
+          "CRM’e yayınlama ve gömülü görüntüleyici",
+          "Durum ve görüntüleyici açılışlarıyla çalışma alanı"
+        ],
+        "cta": "İlk mülkünüzü tarayın"
+      },
+      {
+        "name": "Ofis",
+        "price": "Hacim",
+        "unit": "mülk başına, hacimle düşen",
+        "desc": "Ayda onlarca ilan yayınlayan ofisler için.",
+        "features": [
+          "Mülk başına planındaki her şey",
+          "Ofis geneli çalışma alanı özeti",
+          "Öncelikli işleme sırası",
+          "Özel CRM kurulumu",
+          "Ortak markalı görüntüleyici"
+        ],
+        "cta": "Satışla görüşün"
+      },
+      {
+        "name": "CRM iş ortağı",
+        "price": "%15",
+        "unit": "uygun satın alımlardan pay",
+        "desc": "Sodar’ı danışmanlarına dağıtan CRM sağlayıcıları için.",
+        "features": [
+          "Sodar platformunuzun içinde kullanılabilir",
+          "İş ortağı paneli",
+          "Aylık otomatik ödeme",
+          "Minimum hacim yok"
+        ],
+        "cta": "İş ortağı olarak başvurun"
+      }
+    ],
+    "factorsKicker": "Teklif nasıl oluşur",
+    "factorsTitle": "Plana göre değil, mülke göre fiyatlandırılır.",
+    "factors": [
+      {
+        "title": "Mülkün büyüklüğü",
+        "desc": "Alan ve çekilen oda sayısı."
+      },
+      {
+        "title": "Panorama hacmi",
+        "desc": "Taramanın ürettiği panorama sayısı ve çözünürlükleri."
+      },
+      {
+        "title": "İşleme",
+        "desc": "Birleştirme, iyileştirme ve turun arkasındaki yapay zekâ hesaplaması."
+      },
+      {
+        "title": "Depolama ve barındırma",
+        "desc": "Turu ve görüntüleyicisini ilanınızın içinde çevrimiçi tutmak."
+      },
+      {
+        "title": "Bakım",
+        "desc": "Sürekli görüntüleyici güncellemeleri ve CRM entegrasyonunun kendisi."
+      },
+      {
+        "title": "İş ortağı payı",
+        "desc": "Sodar’ı bir CRM iş ortağı dağıtıyorsa, payı teklife dahildir."
+      }
+    ],
+    "faqKicker": "Sorular",
+    "faqTitle": "Fiyat SSS.",
+    "faq": [
+      {
+        "q": "Fiyatı ne zaman görürüm?",
+        "a": "Ücretsiz önizlemeden sonra. İlk iki oda işlendiğinde Sodar mülkü tamamlamak için tek seferlik bir fiyat hesaplar."
+      },
+      {
+        "q": "Önizleme gerçekten ücretsiz mi?",
+        "a": "Evet — ilk iki oda ödeme olmadan çalışan bir tura dönüştürülür. Yalnızca mülkü tamamlamak ve yayınlamak için ödersiniz."
+      },
+      {
+        "q": "Abonelik var mı?",
+        "a": "Hayır. Her mülk Stripe üzerinden tek seferlik tek bir ödemedir. Hiçbir şey yenilenmez."
+      },
+      {
+        "q": "CRM iş ortağı payı nasıl ödenir?",
+        "a": "Otomatik olarak, aylık, iş ortağının platformundaki danışmanların uygun tur satın alımları üzerinden."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Erken erişim",
+      "title": "Bir sonraki ilanınız fotoğraftan fazlasını hak ediyor.",
+      "sub": "Önce ileri görüşlü küçük bir danışman grubunu dahil ediyoruz.",
+      "label": "Erken erişim isteyin"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Çalışma alanı önizlemesi — Sodar",
+    "metaDesc": "Danışman çalışma alanının herkese açık, giriş gerektirmeyen önizlemesi. Gerçek veri yok.",
+    "eyebrow": "Herkese açık önizleme · giriş yok, gerçek veri yok",
+    "title": "Her mülk, durumu ve kimin açtığı.",
+    "sub": "Bu, her danışmanın aldığı çalışma alanının statik bir önizlemesidir — mülkler, işleme ve yayın durumu ve her tur görüntüleyicisini kaç ziyaretçinin açtığı.",
+    "cta": {
+      "eyebrow": "Yayınladığınız anda sizin",
+      "title": "Çalışma alanınız boş başlar — ilk taramanıza kadar.",
+      "sub": "Bir mülk tarayın, gerçek rakamlar bu önizlemenin yerini alsın.",
+      "label": "İlk mülkünüzü tarayın"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "İş ortakları — Sodar",
+    "metaDesc": "CRM platformları Sodar’ı danışman ağlarına dağıtarak sabit %15 pay kazanır.",
+    "eyebrow": "CRM platformları için",
+    "title": "Sodar’ı danışmanlarınıza dağıtın. %15’i sizde kalsın.",
+    "sub": "Platformunuzdaki danışmanların satın aldığı her uygun turdan sabit bir pay — minimum yok, otomatik ödeme, bir yönlendirme bağlantısı dışında mühendislik yükü yok.",
+    "apply": "İş ortağı olarak başvurun",
+    "stepsKicker": "Nasıl çalışır",
+    "stepsTitle": "Sabit paya giden üç adım.",
+    "steps": [
+      {
+        "title": "Başvurun",
+        "desc": "Platformunuzda hangi danışman veya ofislerin çalıştığını ve yaklaşık kaç aktif ilan olduğunu bize söyleyin."
+      },
+      {
+        "title": "Entegre edin",
+        "desc": "Bir yönlendirme bağlantısı ve isteğe bağlı olarak uygulamanızda kullanıcılarınız için yerel bir giriş noktası."
+      },
+      {
+        "title": "Kazanın",
+        "desc": "Platformunuz üzerinden katılan bir danışmanın her uygun tur satın alımının %15’i, aylık ödenir."
+      }
+    ],
+    "dashKicker": "İş ortağı paneli",
+    "dashTitle": "Yönlendirilen danışmanları ve payı tek yerden izleyin.",
+    "dash": [
+      {
+        "label": "Yönlendirilen danışmanlar",
+        "value": "142"
+      },
+      {
+        "label": "Satın alınan turlar",
+        "value": "3.018"
+      },
+      {
+        "label": "Bu ayki pay",
+        "value": "6.240 €"
+      }
+    ],
+    "applyKicker": "Başlayın",
+    "applyTitle": "İş ortağı olarak başvurun.",
+    "applyBody": "Kısa bir başvuru — yönlendirme bağlantısı vermeden önce platform uyumunu ve tipik ilan hacmini inceleriz.",
+    "form": {
+      "company": "Şirket / platform adı",
+      "companyPh": "Acme CRM",
+      "email": "İş e-postası",
+      "emailPh": "siz@sirket.com",
+      "brokers": "Platformunuzdaki aktif danışmanlar",
+      "brokersPh": "örn. 50–200",
+      "submit": "Başvuruyu gönder"
+    },
+    "faqKicker": "Sorular",
+    "faqTitle": "İş ortağı SSS.",
+    "faq": [
+      {
+        "q": "Minimum taahhüt var mı?",
+        "a": "Hayır. %15 pay ilk satın alınan turdan itibaren geçerlidir — hacim tabanı yok."
+      },
+      {
+        "q": "Danışman ilişkisi kime ait?",
+        "a": "Size. Sodar danışmanı doğrudan faturalandırır ve payınızı raporlar; danışmanlar sizin müşteriniz olarak kalır."
+      },
+      {
+        "q": "Tura kendi markamızı ekleyebilir miyiz?",
+        "a": "Evet — iş ortağı seviyesindeki bir hesap gömülü turun etrafına ortak markalı bir çerçeve uygulayabilir."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Siz hazır olduğunuzda hazırız",
+      "title": "Danışmanlarınıza daha çok yayınlamak için bir neden verin.",
+      "sub": "Bir kez başvurun — yönlendirme bağlantısı ve entegrasyon notlarıyla size döneriz.",
+      "label": "İş ortağı olarak başvurun"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Entegrasyonlar — Sodar",
+    "metaDesc": "Yayınlanan turların doğrudan ilanlarınıza gömülmesi için bir CRM bağlayın veya API erişimi verin.",
+    "eyebrow": "Entegrasyon merkezi",
+    "title": "Bir kez bağlayın. Sonraki her ilan tek tık.",
+    "sub": "CRM’inize OAuth ile giriş yapın ya da Sodar’a kapsamı sınırlı API erişimi verin — ilanı seçin, yayınlayın, tur ikinci bir adım olmadan gömülür.",
+    "connKicker": "Bağlantılar",
+    "connTitle": "Sodar’ın ilanlarınıza nasıl ulaşacağını seçin.",
+    "conns": [
+      {
+        "name": "Genel CRM OAuth",
+        "action": "Bağlan"
+      },
+      {
+        "name": "City24 MLS akışı",
+        "action": "Bağlan"
+      },
+      {
+        "name": "Özel REST API",
+        "action": "Anahtar oluştur"
+      },
+      {
+        "name": "Zapier / webhook",
+        "action": "Yakında"
+      }
+    ],
+    "notConnected": "durum: bağlı değil",
+    "mockTitle": "Demo bağlantı — 2. aşamada bağlanacak",
+    "embedKicker": "CRM yok mu? Sorun değil",
+    "embedTitle": "Tek iframe, her yere bırakılır.",
+    "embedBody": "Satın alınan her tur sabit bir gömme URL’si alır. Özel iframe kabul eden herhangi bir ilan portalına yapıştırın.",
+    "cta": {
+      "eyebrow": "CRM’inizi getirin",
+      "title": "Sodar zaten kullandığınız araçlara uyar.",
+      "sub": "Öncelikli bir entegrasyon için bizimle konuşun ya da bugün genel gömmeyle başlayın.",
+      "label": "İş ortağı programını keşfedin"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Kurumsal — Sodar",
+    "metaDesc": "Ofisler için ekip koltukları, toplu mülk taramaları ve paylaşılan çalışma alanı özetleri.",
+    "eyebrow": "Ofisler için",
+    "title": "Ekibinizdeki her danışman için tek bir çalışma alanı.",
+    "sub": "Toplu tarama, hacim fiyatlandırması ve ofis geneli etkileşim özeti — ayda onlarca ilan yayınlayan ofisler için tasarlandı.",
+    "talk": "Satışla görüşün",
+    "featKicker": "Ekipler için tasarlandı",
+    "featTitle": "Self servisteki her şey, artı bir ofisin ihtiyaç duyduğu parçalar.",
+    "features": [
+      {
+        "title": "Ekip koltukları",
+        "desc": "Her danışman kendi çalışma alanını alır; üstünde yöneticiler için ofis geneli bir özet bulunur."
+      },
+      {
+        "title": "Toplu tarama",
+        "desc": "Tek tek yerine tüm bir mülk portföyünü tarayın."
+      },
+      {
+        "title": "Hacim fiyatlandırması",
+        "desc": "Ofisinizin aylık hacmi büyüdükçe mülk başına fiyat düşer."
+      },
+      {
+        "title": "Özel CRM kurulumu",
+        "desc": "Ofisinizin özel CRM yığını için OAuth / API bağlantısını biz hallederiz."
+      },
+      {
+        "title": "Ortak marka",
+        "desc": "Ofisinizin işaretini her gömülü tura uygulayın."
+      },
+      {
+        "title": "Öncelikli işleme",
+        "desc": "Kurumsal mülkler self servis sırasının önünde işlenir."
+      }
+    ],
+    "priceKicker": "Hacimle düşen fiyatlar",
+    "priceTitle1": "Hacim fiyatlandırması,",
+    "priceTitle2": "tek sözleşme.",
+    "priceBody": "Aylık hacme göre özel mülk başına ücret, artı danışman başına sabit koltuk ücreti. Ofisinize göre bir teklif için satışla görüşün.",
+    "priceNote": "Örnek amaçlı, mülk başına",
+    "tiers": [
+      {
+        "tier": "Ayda 1–20 mülk",
+        "price": "99 €’dan itibaren"
+      },
+      {
+        "tier": "Ayda 21–100 mülk",
+        "price": "79 €’dan itibaren"
+      },
+      {
+        "tier": "Ayda 100+ mülk",
+        "price": "Özel"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Kurumsal",
+      "title": "Tüm ofisinizin ilanlarını çevrimiçine taşıyın.",
+      "sub": "CRM bağlantınızı ve koltuk yapınızı birlikte kuracağız.",
+      "label": "Satışla görüşün"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Güvenlik ve uyumluluk — Sodar",
+    "metaDesc": "Sodar hattı için veri işleme, yapay zekâ bildirimi ve uyumluluk duruşu.",
+    "eyebrow": "Güven ve uyumluluk",
+    "title": "Başkasının ilanı emanet edilecek şekilde tasarlandı.",
+    "sub": "Sodar ilk günden SOC 2 ve GDPR hedefiyle tasarlandı — bu sayfa çalışma özetidir; resmi raporlar ve veri işleme sözleşmeleri talep üzerine sunulur.",
+    "detailKicker": "Ayrıntılı",
+    "detailTitle": "Veri gerçekte nasıl hareket eder.",
+    "details": [
+      {
+        "title": "Kamera erişimi",
+        "desc": "Cihaz kamerası yalnızca tarama başladığında, açık izinle istenir ve yalnızca o çekim için kullanılır."
+      },
+      {
+        "title": "Depolama",
+        "desc": "Çekimler ve oluşturulan turlar beklemede ve aktarımda şifrelenir; erişim danışman hesabı başına sınırlandırılır."
+      },
+      {
+        "title": "Yapay zekâ bildirimi",
+        "desc": "Herkese açık her tur, onu yapay zekâ ile işlenmiş bir rekonstrüksiyon olarak tanımlayan görünür bir etiket taşır."
+      },
+      {
+        "title": "Veri saklama",
+        "desc": "Çekimler ve turlar ilanın ömrü artı sabit bir ek süre boyunca saklanır, ardından talep üzerine silinir."
+      },
+      {
+        "title": "Erişim kontrolü",
+        "desc": "CRM kimlik bilgileri ve API anahtarları entegrasyonun ihtiyaç duyduğu en düşük izinlerle sınırlandırılır."
+      },
+      {
+        "title": "Alt işleyiciler",
+        "desc": "Üçüncü taraf işleme ve ödeme sağlayıcıları Veri İşleme ekinde listelenir."
+      }
+    ],
+    "seeAlso": "Ayrıca bakın:",
+    "privacy": "Gizlilik Politikası",
+    "dpa": "Veri İşleme Eki",
+    "cta": {
+      "eyebrow": "Güvenlik incelemesi için sorular",
+      "title": "Doldurulmuş bir güvenlik anketine mi ihtiyacınız var?",
+      "sub": "Bize ulaşın, doldurulmuş bir anket veya SOC 2 durumunu doğrudan iletelim.",
+      "label": "Güvenlikle iletişime geçin"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "Hakkımızda — Sodar",
+    "metaDesc": "Sodar neden var: bir ilanı fotoğraf galerisi değil, bir mekân olarak ele almanın gerekçesi.",
+    "eyebrow": "Şirket",
+    "title": "Bir ilan fotoğrafı bir vaattir. Biz onu dolaşılabilir kılarız.",
+    "sub": "Sodar tek bir gözlemle başladı: alıcılar düz fotoğrafları kaydırıp geçer ama gerçekten hareket edebildikleri bir mekânda oyalanırlar. Biz ilkini ikincisine dönüştüren hattı kuruyoruz.",
+    "thesisKicker": "Tez",
+    "thesisTitle": "Yön duygusu ilan satar.",
+    "thesis": [
+      "Bir ilan portalını kaydıran alıcı, odalar arasındaki akış hakkında hiçbir fikir vermeyen fotoğraflara dayanarak saniyeler içinde kal/geç kararı verir. Bir tur, fotoğrafın cevaplayamadığı soruyu cevaplar: gerçekten orada olmak nasıl bir his.",
+      "Sodar, bu turu pazarın üst segmentine ayrılmış bir lüks değil, her ilanın varsayılanı olacak kadar ucuz ve hızlı hale getirmek için var."
+    ],
+    "valuesKicker": "Bağlı kaldığımız şeyler",
+    "valuesTitle": "Vazgeçmeyeceğimiz üç şey.",
+    "values": [
+      {
+        "title": "Sahnelemeyin, tarayın",
+        "desc": "Gerçek mülk, gerçeğin kaynağıdır. İşimiz onu sadakatle aktarmak, hayali bir versiyon uydurmak değil."
+      },
+      {
+        "title": "Veri danışmanındır",
+        "desc": "Çekimler, turlar ve etkileşim verileri onları oluşturan danışmana aittir — her zaman dışa aktarılabilir, asla kilitli değil."
+      },
+      {
+        "title": "Varsayılan olarak bildirim",
+        "desc": "Yapay zekâ ile işlenmiş bir mekân bunu söylemelidir. Herkese açık her tur etiketlidir, istisnasız."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Bize katılın",
+      "title": "Erken aşamada kullanıcı alan küçük bir ekibiz.",
+      "sub": "Tez size hitap ediyorsa işe alıyoruz — ya da sadece ilanlarınız hakkında bizimle konuşun.",
+      "label": "Açık pozisyonları görün"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Kariyer — Sodar",
+    "metaDesc": "Sodar’daki açık pozisyonlar.",
+    "eyebrow": "Kariyer",
+    "title": "Her ilanın düzgün oluşturulmasına yardım edin.",
+    "sub": "Küçük ekip, erken aşama, gerçek danışmanlar zaten mülk tarıyor. Rekonstrüksiyon, ürün ve pazara giriş alanlarında işe alıyoruz.",
+    "rolesKicker": "Açık pozisyonlar",
+    "rolesTitle": "Şu anda işe alıyoruz.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Rekonstrüksiyon",
+        "location": "Uzaktan / Tallinn"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Ürün",
+        "location": "Uzaktan / Tallinn"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Pazara giriş",
+        "location": "Tallinn"
+      }
+    ],
+    "noFit": "Uygun bir pozisyon göremiyor musunuz? Yine de careers@sodar.io adresine yazın.",
+    "cta": {
+      "eyebrow": "Henüz size uygun bir rol yok mu?",
+      "title": "Tek bir e-postanın kurucuya ulaşacağı kadar küçüğüz.",
+      "sub": "Ne üzerinde çalışmak istediğinizi bize anlatın.",
+      "label": "careers@sodar.io adresine yazın"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Saha notları — Sodar",
+    "metaDesc": "Sodar ile mülk tarayan danışman ve ofislerden vaka çalışmaları.",
+    "eyebrow": "Saha notları",
+    "title": "Basın bültenleri değil, vaka çalışmaları.",
+    "sub": "Bir mülk tarandığında gerçekte ne olur — hattı kuran ekip tarafından yazıldı.",
+    "posts": [
+      {
+        "title": "4 danışmanlı bir Tallinn ofisi ilan hazırlığını nasıl 15 dakikaya indirdi",
+        "tag": "Vaka çalışması",
+        "read": "6 dk okuma"
+      },
+      {
+        "title": "İlk 500 turdan sonra neleri değiştirdik",
+        "tag": "Ürün notları",
+        "read": "4 dk okuma"
+      },
+      {
+        "title": "Oda etkileşimini okumak: görüntüleyici açılışları gerçekte ne söyler",
+        "tag": "Rehber",
+        "read": "5 dk okuma"
+      },
+      {
+        "title": "Ücretsiz önizleme neden bir ya da beş değil de iki oda",
+        "tag": "Ürün notları",
+        "read": "3 dk okuma"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Taslak — 1. aşama",
+    "notice": "Bu, 1. aşamanın yapısal bir yer tutucusudur, nihai yasal metin değildir.",
+    "englishOnly": "Yasal belgeler şu anda yalnızca İngilizce yayınlanmaktadır; İngilizce sürüm esastır.",
+    "titles": {
+      "privacy": "Gizlilik Politikası",
+      "terms": "Hizmet Koşulları",
+      "data-processing": "Veri İşleme Eki",
+      "cookies": "Çerez Politikası"
+    }
+  },
+  "Scaffold": {
+    "phase": "1. aşama — tasarım ve yapı",
+    "note": "Ödemeler, CRM OAuth ve yapay zekâ hattı simüle edilmiş yer tutucu durumlardır. Arka uç çağrısı yok."
+  }
+}

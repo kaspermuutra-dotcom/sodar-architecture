@@ -1,0 +1,1002 @@
+{
+  "Meta": {
+    "title": "Sodar — Tekoälykierrokset, jotka päättävät useampia kauppoja",
+    "description": "Skannaa kohde puhelimella. Sodar muuntaa ohjatut huonekuvaukset immersiiviseksi, ilmoitusvalmiiksi kierrokseksi, esikatselee kaksi ensimmäistä huonetta ilmaiseksi ja julkaisee suoraan CRM-ilmoitukseesi."
+  },
+  "Nav": {
+    "product": "Tuote",
+    "integrations": "Integraatiot",
+    "partners": "Kumppanit",
+    "pricing": "Hinnat",
+    "signIn": "Kirjaudu",
+    "getStarted": "Skannaa kohde",
+    "menu": "Avaa valikko",
+    "home": "Sodarin etusivu"
+  },
+  "Hero": {
+    "headline1": "Tekoälykierrokset,",
+    "headline2": "jotka päättävät useampia kauppoja.",
+    "sub": "Avaa sodar.io puhelimessa, kävele kohde läpi kerran ja saat immersiivisen kierroksen, johon ostajat voivat astua sisään — julkaistuna ilmoitukseen, joka sinulla jo on.",
+    "ctaPrimary": "Skannaa ensimmäinen kohteesi",
+    "ctaSecondary": "Katso miten se toimii",
+    "status": [
+      "KUVAUS   ▸ olohuone · 12/12 kuvaa · kattavuus 98 %",
+      "AVUSTAJA ▸ kallista 4° alas · pidä paikallaan · hyvä valo",
+      "YHDISTYS ▸ keittiö · ekvirektangulaarinen · 8192×4096",
+      "ESIKATSELU ▸ 2/6 huonetta valmiina · ilmaiseksi",
+      "TARJOUS  ▸ kertahinta laskettu · 6 huonetta · 14 panoraamaa",
+      "JULKAISTU ▸ CRM-ilmoitus #48213 · katselin upotettu"
+    ]
+  },
+  "Marquee": {
+    "rooms": [
+      "Olohuone",
+      "Keittiö",
+      "Makuuhuone",
+      "Kylpyhuone",
+      "Eteinen",
+      "Parveke",
+      "Työhuone",
+      "Ruokailutila",
+      "Vierashuone",
+      "Sisäänkäynti",
+      "Terassi",
+      "Autotalli"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "Teesi",
+    "lines": [
+      "Yksikään ilmoituskuva ei ole koskaan kävellyt itseään läpi.",
+      "Ostajat ohittavat sen, mihin eivät voi astua.",
+      "Joten teimme puhelimesta skannerin,",
+      "ja skannauksesta paikan."
+    ],
+    "body": "Välittäjä avaa sodar.io:n puhelimessa, kävelee jokaisen huoneen läpi kerran tekoälyavustajan ohjatessa kuvausta, ja saa kierroksen, jossa ostajat voivat liikkua. Kaksi ensimmäistä huonetta ovat ilmaisia esikatseluun. Yksi maksu viimeistelee kohteen. Julkaisu CRM-ilmoitukseen on yksi klikkaus."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "huonetta ilmaiseksi",
+        "note": "Toimiva esikatselu ennen maksua"
+      },
+      {
+        "label": "kertahinta",
+        "note": "Mitoitettu kohteen mukaan. Ei tilausta"
+      },
+      {
+        "label": "kumppanikate",
+        "note": "Sodaria jakeleville CRM-järjestelmille"
+      },
+      {
+        "label": "per huone",
+        "note": "Panoraamakuvaus tekoälyn ohjaamana reaaliajassa"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Vieritä",
+    "frames": "/12 kuvaa",
+    "assistantLabel": "Kuvausavustaja",
+    "assist": [
+      "Kallista 4° alas",
+      "Pidä paikallaan…",
+      "Hyvä valo. Jatka kääntymistä",
+      "Päällekkäisyys 40 % — hitaammin",
+      "Huone valmis"
+    ],
+    "rooms": [
+      "Olohuone",
+      "Keittiö",
+      "Makuuhuone",
+      "Kylpyhuone",
+      "Työhuone",
+      "Parveke"
+    ],
+    "ready": "Valmis",
+    "locked": "Lukittu",
+    "photosOnly": "Vain kuvat",
+    "panels": {
+      "capture": {
+        "label": "Kuvaus",
+        "title": "Kävele kohde läpi kerran.",
+        "body": "Avaa sodar.io puhelimessa. Kamera ohjaa sinut huone huoneelta, ja tekoälyavustaja korjaa kattavuutta, asentoa ja valoa — reaaliajassa, kun olet vielä paikalla."
+      },
+      "preview": {
+        "label": "Esikatselu",
+        "title": "Kaksi huonetta, valmiina, ilmaiseksi.",
+        "body": "Sodar käsittelee ensimmäiset kuvaukset kahden ensimmäisen huoneen toimivaksi kierrokseksi. Näet lopullisen laadun ennen kuin maksat mitään."
+      },
+      "unlock": {
+        "label": "Avaa",
+        "title": "Yksi hinta. Yksi maksu.",
+        "body": "Sodar laskee kertahinnan koko kohteelle — koko, panoraamojen määrä, käsittely, hosting ja ylläpito huomioituna. Maksa kerran Stripen kautta, ja loput huoneet käsitellään."
+      },
+      "publish": {
+        "label": "Julkaise",
+        "title": "Ilmoitukseen, joka sinulla jo on.",
+        "body": "Yhdistä CRM, valitse kohteen ilmoitus, julkaise. Kierros elää ilmoituksen sisällä Sodarin upotetun katselimen kautta — ja voit säätää hyväksyttyjä ulkoasuasetuksia milloin tahansa."
+      }
+    },
+    "quoteLabel": "Tarjous · 84 Kesklinn Ave",
+    "quoteRows": [
+      {
+        "k": "6 huonetta · 14 panoraamaa",
+        "v": "sisältyy"
+      },
+      {
+        "k": "Käsittely & tekoälylaskenta",
+        "v": "sisältyy"
+      },
+      {
+        "k": "Tallennus & katselimen hosting",
+        "v": "12 kuukautta"
+      },
+      {
+        "k": "Ylläpito",
+        "v": "sisältyy"
+      }
+    ],
+    "oneTime": "kertamaksu · ei tilausta",
+    "paidLabel": "Maksettu",
+    "paidBody": "Käsitellään loput 4 huonetta. Saat ilmoituksen, kun kierros on valmis.",
+    "pay": "Maksa Stripellä",
+    "paying": "Yhdistetään Stripeen…",
+    "mockNote": "Demokassa — korttia ei veloiteta.",
+    "crmHeader": "Sinun CRM · Ilmoitus #48213",
+    "publishBtn": "Julkaise kierros",
+    "publishedBtn": "Julkaistu",
+    "viewerBadge": "Sodar-katselin · 360°",
+    "listingMeta": "3 huonetta · 78 m² · 395 000 €",
+    "status": "tila",
+    "statusPublished": "julkaistu",
+    "statusReady": "valmis",
+    "viewer": "katselin",
+    "viewerEmbedded": "upotettu",
+    "opened": "avattu",
+    "openedValue": "128 kävijää"
+  },
+  "Capabilities": {
+    "kicker": "Mitä toimitetaan",
+    "intro": "Kolme yhteen kytkettyä pintaa — julkinen sivusto, ohjattu mobiiliskannaus ja välittäjän työtila — yhden kierroksen takana.",
+    "title": "Yksi skannaus, seitsemän asiaa, jotka ilmoitus saa.",
+    "items": [
+      {
+        "title": "Ohjattu puhelinkuvaus",
+        "desc": "Ei laitteistoa, ei valokuvaajaa. Kamera opastaa sinut jokaisen huoneen läpi panoraamana, suoraan selaimesta."
+      },
+      {
+        "title": "Tekoälykuvausavustaja",
+        "desc": "Reaaliaikaista opastusta kattavuudesta, asennosta ja kuvanlaadusta, kun olet vielä kohteessa."
+      },
+      {
+        "title": "Kahden huoneen ilmainen esikatselu",
+        "desc": "Toimiva kierros kahdesta ensimmäisestä huoneesta ennen maksua, jotta arvioit lopullisen laadun ensin."
+      },
+      {
+        "title": "Kertahinta per kohde",
+        "desc": "Yksi kohteen mukaan mitoitettu tarjous — panoraamat, laskenta, hosting ja ylläpito sisältyvät."
+      },
+      {
+        "title": "CRM-julkaisu",
+        "desc": "Yhdistä CRM, valitse ilmoitus, julkaise. Kierros pysyy ilmoituksen sisällä upotetun katselimen kautta."
+      },
+      {
+        "title": "Hyväksytty ulkoasu",
+        "desc": "Säädä katselimen ulkoasua hyväksyttyjen asetusten rajoissa, jotta se sopii ilmoitukseen, jossa se elää."
+      },
+      {
+        "title": "Välittäjän työtila",
+        "desc": "Hallitse kohteita, seuraa käsittelyn ja julkaisun tilaa ja näe, kuinka moni kävijä avasi katselimen."
+      }
+    ],
+    "cta": {
+      "title": "Skannaa kohde",
+      "desc": "Kaksi huonetta ilmaiseksi. Aloita puhelimella.",
+      "start": "Aloita"
+    }
+  },
+  "Integration": {
+    "kicker": "Siellä missä jo työskentelet",
+    "intro": "Yhdistä CRM, jota jo käytät. Valitse ilmoitus. Julkaise. Kierros ilmestyy sen sisälle upotetun katselimen tai iframen kautta — ei mitään kopioitavaa, ei mitään hostattavaa.",
+    "title": "Lisää Sodar vain CRM:ääsi.",
+    "crmHeader": "Sinun CRM · Ilmoitukset",
+    "published": "Kierros julkaistu",
+    "addWalkthrough": "+ lisää kierros",
+    "listings": [
+      {
+        "name": "84 Kesklinn Ave",
+        "meta": "3 huonetta · 395 000 €"
+      },
+      {
+        "name": "12 Harbour Res.",
+        "meta": "2 huonetta · 260 000 €"
+      },
+      {
+        "name": "7 Nõmme Villa",
+        "meta": "6 huonetta · 890 000 €"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Havainnollistava · ei vielä mitattu",
+    "title": "Ero, jonka skannaus tekee.",
+    "beforeLabel": "Ennen",
+    "afterLabel": "Jälkeen · Sodarin kanssa",
+    "before": [
+      "Varaa valokuvaaja",
+      "Odota 2–3 päivää",
+      "Litteitä kuvia",
+      "Ostajat vierittävät ohi",
+      "Mitään ei mitata"
+    ],
+    "after": [
+      "Yksi puhelin, yksi kävely",
+      "Esikatselu minuuteissa",
+      "Immersiivinen kierros",
+      "Ostajat astuvat sisään",
+      "Jokainen katselimen avaus lasketaan"
+    ]
+  },
+  "Workspace": {
+    "kicker": "Takaisin työpöydän ääressä",
+    "intro": "Jokainen skannaamasi kohde, sen käsittelyn ja julkaisun tila sekä se, kuinka moni kävijä avasi katselimen — yhdessä työtilassa välittäjää kohden.",
+    "title": "Kohteesi, aina näkyvissä.",
+    "cta": "Katso välittäjän työtila",
+    "mock": {
+      "title": "Työtila",
+      "live": "Live-esikatselu",
+      "properties": "Kohteet",
+      "cols": [
+        "Kohde",
+        "Tila",
+        "Katselin avattu",
+        "Julkaisu"
+      ],
+      "statuses": {
+        "published": "Julkaistu",
+        "processing": "Käsittelyssä",
+        "preview": "Esikatselu",
+        "capturing": "Kuvataan"
+      },
+      "rows": [
+        {
+          "name": "84 Kesklinn Ave",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "12 Harbour Res.",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "7 Nõmme Villa",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 huonetta"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 huonetta ilmaiseksi"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "status": "capturing",
+          "views": "—",
+          "pub": "puhelimella"
+        }
+      ],
+      "engagement": "Huonekohtainen kiinnostus · 84 Kesklinn Ave",
+      "rooms": [
+        "Olohuone",
+        "Keittiö",
+        "Makuuhuone",
+        "Kylpyhuone",
+        "Parveke"
+      ],
+      "processing": "Käsittely",
+      "jobs": [
+        {
+          "name": "7 Nõmme Villa",
+          "step": "Yhdistys · makuuhuone",
+          "n": "4 / 6"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "step": "Esikatselu valmis",
+          "n": "2 / 2"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "step": "Kuvataan puhelimella",
+          "n": "—"
+        }
+      ],
+      "week": "Tällä viikolla",
+      "weekTitle": "701 katselimen avausta",
+      "weekSub": "2 julkaistussa kierroksessa"
+    }
+  },
+  "Scans": {
+    "kicker": "Tämän viikon skannaukset",
+    "title": "Kaikenlaiset ilmoitukset skannataan samalla tavalla.",
+    "items": [
+      {
+        "label": "Kerrostaloasunto",
+        "meta": "3 huonetta · Kesklinn"
+      },
+      {
+        "label": "Uudiskohde",
+        "meta": "4 huonetta · Ülemiste"
+      },
+      {
+        "label": "Huvila",
+        "meta": "6 huonetta · Pirita"
+      },
+      {
+        "label": "Vuokrakohde",
+        "meta": "1 huone · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "Rakennettu ansaitsemaan luottamus ilmoituksiin",
+    "title": "Vaatimustenmukaisuus ei ole jälkiajatus.",
+    "items": [
+      {
+        "title": "Nimenomainen kameralupa",
+        "desc": "Sodar pyytää laitteen kameraa vain, kun aloitat skannauksen, ja käyttää sitä vain siihen kuvaukseen."
+      },
+      {
+        "title": "Tekoälymerkintä",
+        "desc": "Jokaisessa julkaistussa kierroksessa on selkeä, näkyvä merkintä siitä, että se on tekoälyllä käsitelty rekonstruktio."
+      },
+      {
+        "title": "Tietoturva",
+        "desc": "Rakennettu SOC 2:ta ja GDPR:ää kohti ensimmäisestä päivästä — salattu tallennus, rajatut CRM-tunnukset, auditointilokit per kohde."
+      },
+      {
+        "title": "Välittäjä omistaa datan",
+        "desc": "Kuvaukset, kierrokset ja kiinnostusdata kuuluvat välittäjälle. Sodarin irrottaminen vie kaiken mukanaan."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "CRM-toimittajille",
+    "title": "Jakele Sodaria välittäjäverkostollesi. Pidä 15 %.",
+    "body": "CRM-kumppanit tarjoavat Sodarin välittäjilleen ja saavat 15 %:n katteen hyväksytyistä kierrosostoista — ei minimiä, maksetaan automaattisesti.",
+    "cta": "Katso kumppaniohjelma"
+  },
+  "PricingTeaser": {
+    "kicker": "Yksinkertainen tarkoituksella",
+    "title1": "Yksi kohde.",
+    "title2": "Yksi hinta. Kerran.",
+    "body": "Esikatsele kaksi ensimmäistä huonetta ilmaiseksi. Sitten Sodar antaa yhden kertahinnan kohteen viimeistelystä — ei tilausta, ei vuosisopimusta.",
+    "cta": "Näin hinta lasketaan",
+    "card": {
+      "label": "Tyypillinen kolmio",
+      "price": "99–149 €",
+      "note": "kertamaksu · tarjous ilmaisen esikatselun jälkeen",
+      "factors": [
+        "Kohteen koko",
+        "Kuvatut panoraamat",
+        "Käsittely & tekoälylaskenta",
+        "Tallennus & katselimen hosting",
+        "Jatkuva ylläpito"
+      ],
+      "cta": "Skannaa kohde"
+    }
+  },
+  "Language": {
+    "kicker": "Missä ostajasi sitten hakevatkin",
+    "title1": "Yksi kierros.",
+    "title2": "Jokainen kieli, jota ostaja lukee.",
+    "body": "Julkaise kerran — katselimen huonenimet ja säätimet seuraavat ostajan valitsemaa kieltä. Sivusto ja katselin ovat tänään saatavilla kuudellatoista kielellä."
+  },
+  "Switcher": {
+    "search": "Hae kieliä…",
+    "none": "Ei vastaavaa kieltä.",
+    "active": "Käytössä",
+    "comingSoon": "Tulossa",
+    "choose": "Valitse kieli",
+    "notice": "{language} ei ole vielä käännetty — ilmoitukset näytetään englanniksi, kunnes se julkaistaan."
+  },
+  "Footer": {
+    "tagline": "Jokainen ilmoitus, skannattuna paikaksi, jonka ostajat voivat kävellä läpi.",
+    "columns": {
+      "product": {
+        "title": "Tuote",
+        "items": [
+          [
+            "Tuote",
+            "/product"
+          ],
+          [
+            "Miten se toimii",
+            "/product#pipeline"
+          ],
+          [
+            "Työtilan esikatselu",
+            "/terminal"
+          ],
+          [
+            "Tietoturva",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Integraatiot",
+        "items": [
+          [
+            "Integraatiokeskus",
+            "/integrations"
+          ],
+          [
+            "CRM-julkaisu",
+            "/integrations#crm"
+          ],
+          [
+            "Upotettu katselin",
+            "/integrations#embed"
+          ],
+          [
+            "API-pääsy",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "Kumppanit",
+        "items": [
+          [
+            "Kumppaniohjelma",
+            "/partners"
+          ],
+          [
+            "Ryhdy kumppaniksi",
+            "/partners#apply"
+          ],
+          [
+            "Kumppanin hallintapaneeli",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Yritys",
+        "items": [
+          [
+            "Tietoa meistä",
+            "/about"
+          ],
+          [
+            "Ura",
+            "/careers"
+          ],
+          [
+            "Kenttämuistiinpanot",
+            "/blog"
+          ],
+          [
+            "Yrityksille",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Oikeudellinen",
+        "items": [
+          [
+            "Tietosuoja",
+            "/legal/privacy"
+          ],
+          [
+            "Ehdot",
+            "/legal/terms"
+          ],
+          [
+            "Tietojenkäsittely",
+            "/legal/data-processing"
+          ],
+          [
+            "Evästeet",
+            "/legal/cookies"
+          ]
+        ]
+      }
+    },
+    "language": "Kieli",
+    "social": "Muualla",
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallinna, Viro · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Tuote — Sodar",
+    "metaDesc": "Miten ohjatusta puhelinskannauksesta tulee immersiivinen, ilmoitusvalmis kierros.",
+    "eyebrow": "Tuote",
+    "title": "Puhelin, yksi kävely, paikka johon ostajat voivat astua.",
+    "sub": "Sodar muuntaa ohjatut kohdeskannaukset immersiivisiksi, ilmoitusvalmiiksi kierroksiksi — kuvattuna puhelimella, joka sinulla jo on, julkaistuna CRM:ään, jota jo käytät.",
+    "ctaPrimary": "Skannaa ensimmäinen kohteesi",
+    "ctaSecondary": "Katso työtila",
+    "flatLabel": "Puhelinkuvaus",
+    "revealedLabel": "Sodar-kierros",
+    "stagesKicker": "Kävelystä kierrokseksi",
+    "stagesTitle": "Kolme vaihetta, yksi putki.",
+    "stages": [
+      {
+        "label": "Kuvaus",
+        "sub": "Puhelin · selain · kameralupa",
+        "desc": "Jokainen huone kuvataan panoraamana tekoälyavustajan reaaliaikaisessa ohjauksessa."
+      },
+      {
+        "label": "Käsittely",
+        "sub": "Yhdistys · parannus · linkitys",
+        "desc": "Panoraamat yhdistetään, siistitään ja linkitetään yhdeksi kierrokseksi. Kaksi ensimmäistä huonetta palautuvat ilmaiseksi."
+      },
+      {
+        "label": "Julkaisu",
+        "sub": "CRM · upotettu katselin · ulkoasu",
+        "desc": "Yhdistä CRM, valitse ilmoitus, julkaise. Katselin elää ilmoituksen sisällä; sinä säädät sen hyväksyttyä ulkoasua."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Kokeile oikealla kohteella",
+      "title": "Esikatsele kaksi huonetta ilmaiseksi. Maksa kerran lopuista.",
+      "sub": "Avaa sodar.io puhelimessa ja aloita skannaus — ei korttia ennen kuin avaat koko kierroksen.",
+      "label": "Skannaa ensimmäinen kohteesi"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Hinnat — Sodar",
+    "metaDesc": "Kertahinta per kohde, tarjotaan kahden huoneen ilmaisen esikatselun jälkeen. Volyymihinnat välitysliikkeille, 15 %:n kate CRM-kumppaneille.",
+    "eyebrow": "Yksinkertainen tarkoituksella",
+    "title": "Yksi kohde. Yksi hinta. Kerran.",
+    "sub": "Esikatsele kaksi huonetta ilmaiseksi ja maksa sitten yksi kohteen mukaan mitoitettu kertahinta. Volyymihinnat välitysliikkeille, kiinteä 15 %:n kate CRM-kumppaneille.",
+    "badge": "Useimmat välitysliikkeet",
+    "tiers": [
+      {
+        "name": "Per kohde",
+        "price": "Alkaen 99 €",
+        "unit": "kertamaksu, tarjous ilmaisen esikatselun jälkeen",
+        "desc": "Välittäjille, jotka skannaavat ilmoituksia yksi kerrallaan.",
+        "features": [
+          "Ohjattu puhelinkuvaus + tekoälyavustaja",
+          "Kaksi ensimmäistä huonetta ilmaiseksi esikatseluun",
+          "Koko kierros yhden Stripe-maksun jälkeen",
+          "CRM-julkaisu & upotettu katselin",
+          "Työtila tiloineen & katselimen avauksineen"
+        ],
+        "cta": "Skannaa ensimmäinen kohteesi"
+      },
+      {
+        "name": "Välitysliike",
+        "price": "Volyymi",
+        "unit": "per kohde, laskee volyymin myötä",
+        "desc": "Liikkeille, jotka julkaisevat kymmeniä ilmoituksia kuukaudessa.",
+        "features": [
+          "Kaikki Per kohde -tasosta",
+          "Liikkeen laajuinen työtilakooste",
+          "Etusijalla käsittelyjonossa",
+          "Oma CRM-käyttöönotto",
+          "Yhteisbrändätty katselin"
+        ],
+        "cta": "Ota yhteyttä myyntiin"
+      },
+      {
+        "name": "CRM-kumppani",
+        "price": "15 %",
+        "unit": "kate hyväksytyistä ostoista",
+        "desc": "CRM-toimittajille, jotka jakelevat Sodaria välittäjilleen.",
+        "features": [
+          "Sodar saatavilla alustasi sisällä",
+          "Kumppanin hallintapaneeli",
+          "Kuukausittainen automaattinen tilitys",
+          "Ei minimivolyymia"
+        ],
+        "cta": "Hae kumppaniksi"
+      }
+    ],
+    "factorsKicker": "Näin tarjous muodostuu",
+    "factorsTitle": "Hinnoiteltu kohteen, ei paketin mukaan.",
+    "factors": [
+      {
+        "title": "Kohteen koko",
+        "desc": "Pinta-ala ja kuvattujen huoneiden määrä."
+      },
+      {
+        "title": "Panoraamojen määrä",
+        "desc": "Kuinka monta panoraamaa skannaus tuotti ja millä resoluutiolla."
+      },
+      {
+        "title": "Käsittely",
+        "desc": "Yhdistys, parannus ja kierroksen taustalla oleva tekoälylaskenta."
+      },
+      {
+        "title": "Tallennus & hosting",
+        "desc": "Kierroksen ja sen katselimen pitäminen verkossa ilmoituksesi sisällä."
+      },
+      {
+        "title": "Ylläpito",
+        "desc": "Katselimen jatkuvat päivitykset ja itse CRM-integraatio."
+      },
+      {
+        "title": "Kumppanikate",
+        "desc": "Kun CRM-kumppani jakelee Sodaria, sen kate sisältyy tarjoukseen."
+      }
+    ],
+    "faqKicker": "Kysymyksiä",
+    "faqTitle": "Hinnoittelun UKK.",
+    "faq": [
+      {
+        "q": "Milloin näen hinnan?",
+        "a": "Ilmaisen esikatselun jälkeen. Sodar laskee kertahinnan kohteen viimeistelylle, kun kaksi ensimmäistä huonetta on käsitelty."
+      },
+      {
+        "q": "Onko esikatselu oikeasti ilmainen?",
+        "a": "Kyllä — kaksi ensimmäistä huonetta käsitellään toimivaksi kierrokseksi ilman maksua. Maksat vain kohteen viimeistelystä ja julkaisusta."
+      },
+      {
+        "q": "Onko tilausta?",
+        "a": "Ei. Jokainen kohde on yksi kertamaksu Stripen kautta. Mikään ei uusiudu."
+      },
+      {
+        "q": "Miten CRM-kumppanin kate maksetaan?",
+        "a": "Automaattisesti, kuukausittain, kumppanin alustan välittäjien hyväksytyistä kierrosostoista."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Varhainen pääsy",
+      "title": "Seuraava ilmoituksesi ansaitsee enemmän kuin kuvia.",
+      "sub": "Otamme ensin mukaan pienen joukon edelläkävijävälittäjiä.",
+      "label": "Pyydä varhaista pääsyä"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Työtilan esikatselu — Sodar",
+    "metaDesc": "Julkinen, kirjautumaton esikatselu välittäjän työtilasta. Ei oikeaa dataa.",
+    "eyebrow": "Julkinen esikatselu · ei kirjautumista, ei oikeaa dataa",
+    "title": "Jokainen kohde, sen tila ja kuka sen avasi.",
+    "sub": "Tämä on staattinen esikatselu työtilasta, jonka jokainen välittäjä saa — kohteet, käsittelyn ja julkaisun tila sekä kuinka moni kävijä avasi kunkin kierroksen katselimen.",
+    "cta": {
+      "eyebrow": "Sinun heti kun julkaiset",
+      "title": "Työtilasi alkaa tyhjänä — ensimmäiseen skannaukseesi asti.",
+      "sub": "Skannaa kohde, niin oikeat luvut korvaavat tämän esikatselun.",
+      "label": "Skannaa ensimmäinen kohteesi"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "Kumppanit — Sodar",
+    "metaDesc": "CRM-alustat ansaitsevat kiinteän 15 %:n katteen jakelemalla Sodaria välittäjäverkostolleen.",
+    "eyebrow": "CRM-alustoille",
+    "title": "Jakele Sodaria välittäjillesi. Pidä 15 %.",
+    "sub": "Kiinteä kate jokaisesta hyväksytystä kierroksesta, jonka alustasi välittäjät ostavat — ei minimiä, maksetaan automaattisesti, ei kehitystyötä suosittelulinkin lisäksi.",
+    "apply": "Hae kumppaniksi",
+    "stepsKicker": "Miten se toimii",
+    "stepsTitle": "Kolme askelta kiinteään katteeseen.",
+    "steps": [
+      {
+        "title": "Hae",
+        "desc": "Kerro, mitkä välittäjät tai toimistot käyttävät alustaasi ja suunnilleen kuinka monta aktiivista ilmoitusta niillä on."
+      },
+      {
+        "title": "Integroi",
+        "desc": "Suosittelulinkki ja halutessasi natiivi sisäänkäynti sovelluksessasi käyttäjillesi."
+      },
+      {
+        "title": "Ansaitse",
+        "desc": "15 % jokaisesta hyväksytystä kierrosostosta välittäjältä, joka liittyi alustasi kautta, maksettuna kuukausittain."
+      }
+    ],
+    "dashKicker": "Kumppanin hallintapaneeli",
+    "dashTitle": "Seuraa suositeltuja välittäjiä ja katetta yhdessä paikassa.",
+    "dash": [
+      {
+        "label": "Suositellut välittäjät",
+        "value": "142"
+      },
+      {
+        "label": "Ostetut kierrokset",
+        "value": "3 018"
+      },
+      {
+        "label": "Kate tässä kuussa",
+        "value": "6 240 €"
+      }
+    ],
+    "applyKicker": "Aloita",
+    "applyTitle": "Hae kumppaniksi.",
+    "applyBody": "Lyhyt hakemus — arvioimme alustan sopivuuden ja tyypillisen ilmoitusvolyymin ennen suosittelulinkin myöntämistä.",
+    "form": {
+      "company": "Yrityksen / alustan nimi",
+      "companyPh": "Acme CRM",
+      "email": "Työsähköposti",
+      "emailPh": "sinä@yritys.fi",
+      "brokers": "Aktiiviset välittäjät alustallasi",
+      "brokersPh": "esim. 50–200",
+      "submit": "Lähetä hakemus"
+    },
+    "faqKicker": "Kysymyksiä",
+    "faqTitle": "Kumppanien UKK.",
+    "faq": [
+      {
+        "q": "Onko minimisitoumusta?",
+        "a": "Ei. 15 %:n kate koskee ensimmäisestä ostetusta kierroksesta alkaen — ei volyymialarajaa."
+      },
+      {
+        "q": "Kuka omistaa välittäjäsuhteen?",
+        "a": "Sinä. Sodar laskuttaa välittäjää suoraan ja raportoi katteesi; välittäjät pysyvät sinun asiakkainasi."
+      },
+      {
+        "q": "Voimmeko yhteisbrändätä kierroksen?",
+        "a": "Kyllä — kumppanitason tili voi lisätä yhteisbrändätyn kehyksen upotetun kierroksen ympärille."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Valmiina kun sinä olet",
+      "title": "Anna välittäjillesi syy julkaista enemmän.",
+      "sub": "Hae kerran — palaamme asiaan suosittelulinkin ja integraatio-ohjeiden kanssa.",
+      "label": "Hae kumppaniksi"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Integraatiot — Sodar",
+    "metaDesc": "Yhdistä CRM tai myönnä API-pääsy, jotta julkaistut kierrokset upottuvat suoraan ilmoituksiisi.",
+    "eyebrow": "Integraatiokeskus",
+    "title": "Yhdistä kerran. Jokainen ilmoitus sen jälkeen on yksi klikkaus.",
+    "sub": "Kirjaudu CRM:ääsi OAuthilla tai anna Sodarille rajattu API-pääsy — valitse ilmoitus, julkaise, ja kierros upotetaan ilman toista vaihetta.",
+    "connKicker": "Yhteydet",
+    "connTitle": "Valitse, miten Sodar tavoittaa ilmoituksesi.",
+    "conns": [
+      {
+        "name": "Yleinen CRM-OAuth",
+        "action": "Yhdistä"
+      },
+      {
+        "name": "City24 MLS -syöte",
+        "action": "Yhdistä"
+      },
+      {
+        "name": "Oma REST-API",
+        "action": "Luo avain"
+      },
+      {
+        "name": "Zapier / webhook",
+        "action": "Tulossa"
+      }
+    ],
+    "notConnected": "tila: ei yhdistetty",
+    "mockTitle": "Demoyhteys — kytketään vaiheessa 2",
+    "embedKicker": "Ei CRM:ää? Ei hätää",
+    "embedTitle": "Yksi iframe, minne tahansa.",
+    "embedBody": "Jokainen ostettu kierros saa pysyvän upotus-URL:n. Liitä se mihin tahansa kiinteistöportaaliin, joka hyväksyy oman iframen.",
+    "cta": {
+      "eyebrow": "Tuo oma CRM:si",
+      "title": "Sodar sopii työkaluihin, joita jo käytät.",
+      "sub": "Keskustele kanssamme ensisijaisesta integraatiosta tai aloita jo tänään yleisellä upotuksella.",
+      "label": "Tutustu kumppaniohjelmaan"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Yrityksille — Sodar",
+    "metaDesc": "Tiimipaikat, massaskannaukset ja jaetut työtilakoosteet välitysliikkeille.",
+    "eyebrow": "Välitysliikkeille",
+    "title": "Yksi työtila jokaiselle tiimisi välittäjälle.",
+    "sub": "Massaskannaus, volyymihinnat ja liikkeen laajuinen kiinnostuskooste — rakennettu välitysliikkeille, jotka julkaisevat kymmeniä ilmoituksia kuukaudessa.",
+    "talk": "Ota yhteyttä myyntiin",
+    "featKicker": "Rakennettu tiimeille",
+    "featTitle": "Kaikki itsepalvelusta, plus se mitä liike tarvitsee.",
+    "features": [
+      {
+        "title": "Tiimipaikat",
+        "desc": "Jokainen välittäjä saa oman työtilansa; sen päällä on liikkeen laajuinen kooste esihenkilöille."
+      },
+      {
+        "title": "Massaskannaus",
+        "desc": "Skannaa kokonainen kohdesalkku yhden kerrallaan sijaan."
+      },
+      {
+        "title": "Volyymihinnat",
+        "desc": "Kohdekohtainen hinta laskee liikkeesi kuukausivolyymin kasvaessa."
+      },
+      {
+        "title": "Oma CRM-käyttöönotto",
+        "desc": "Hoidamme OAuth-/API-kytkennät liikkeesi omaan CRM-ympäristöön."
+      },
+      {
+        "title": "Yhteisbrändäys",
+        "desc": "Lisää välitysliikkeesi tunnus jokaiseen upotettuun kierrokseen."
+      },
+      {
+        "title": "Ensisijainen käsittely",
+        "desc": "Yrityskohteet käsitellään ennen itsepalvelujonoa."
+      }
+    ],
+    "priceKicker": "Hinnat, jotka laskevat volyymin myötä",
+    "priceTitle1": "Volyymihinnat,",
+    "priceTitle2": "yksi sopimus.",
+    "priceBody": "Räätälöity kohdekohtainen hinta kuukausivolyymin perusteella sekä kiinteä paikkamaksu per välittäjä. Ota yhteyttä myyntiin saadaksesi liikkeesi kokoisen tarjouksen.",
+    "priceNote": "Havainnollistava, per kohde",
+    "tiers": [
+      {
+        "tier": "1–20 kohdetta / kk",
+        "price": "alkaen 99 €"
+      },
+      {
+        "tier": "21–100 kohdetta / kk",
+        "price": "alkaen 79 €"
+      },
+      {
+        "tier": "100+ kohdetta / kk",
+        "price": "Räätälöity"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Yrityksille",
+      "title": "Tuo koko liikkeesi ilmoitukset verkkoon.",
+      "sub": "Rakennamme CRM-yhteytesi ja paikkarakenteesi yhdessä.",
+      "label": "Ota yhteyttä myyntiin"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Tietoturva & vaatimustenmukaisuus — Sodar",
+    "metaDesc": "Tietojenkäsittely, tekoälymerkintä ja Sodarin putken vaatimustenmukaisuus.",
+    "eyebrow": "Luottamus & vaatimustenmukaisuus",
+    "title": "Rakennettu ansaitsemaan luottamus jonkun toisen ilmoitukseen.",
+    "sub": "Sodar on suunniteltu SOC 2:ta ja GDPR:ää kohti ensimmäisestä päivästä — tämä sivu on työtiivistelmä; viralliset raportit ja tietojenkäsittelysopimukset saa pyynnöstä.",
+    "detailKicker": "Yksityiskohtaisesti",
+    "detailTitle": "Miten data oikeasti liikkuu.",
+    "details": [
+      {
+        "title": "Kamerapääsy",
+        "desc": "Laitteen kameraa pyydetään vain skannauksen alkaessa, nimenomaisella luvalla, ja sitä käytetään vain siihen kuvaukseen."
+      },
+      {
+        "title": "Tallennus",
+        "desc": "Kuvaukset ja renderöidyt kierrokset salataan levossa ja siirrossa; pääsy rajataan välittäjätilikohtaisesti."
+      },
+      {
+        "title": "Tekoälymerkintä",
+        "desc": "Jokaisessa julkisessa kierroksessa on näkyvä merkintä, joka tunnistaa sen tekoälyllä käsitellyksi rekonstruktioksi."
+      },
+      {
+        "title": "Tietojen säilytys",
+        "desc": "Kuvaukset ja kierrokset säilytetään ilmoituksen elinkaaren ajan sekä kiinteän lisäajan, minkä jälkeen ne poistetaan pyynnöstä."
+      },
+      {
+        "title": "Pääsynhallinta",
+        "desc": "CRM-tunnukset ja API-avaimet rajataan pienimpiin oikeuksiin, joita integraatio tarvitsee."
+      },
+      {
+        "title": "Alikäsittelijät",
+        "desc": "Kolmannen osapuolen käsittely- ja maksupalveluntarjoajat luetellaan tietojenkäsittelyliitteessä."
+      }
+    ],
+    "seeAlso": "Katso myös:",
+    "privacy": "Tietosuojakäytäntö",
+    "dpa": "Tietojenkäsittelyliite",
+    "cta": {
+      "eyebrow": "Kysymyksiä tietoturva-arviointiin",
+      "title": "Tarvitsetko täytetyn tietoturvakyselyn?",
+      "sub": "Ota yhteyttä, niin palautamme täytetyn kyselyn tai SOC 2 -tilanteen suoraan.",
+      "label": "Ota yhteyttä tietoturvaan"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "Tietoa meistä — Sodar",
+    "metaDesc": "Miksi Sodar on olemassa: perustelu sille, että ilmoitusta kohdellaan paikkana, ei kuvagalleriana.",
+    "eyebrow": "Yritys",
+    "title": "Ilmoituskuva on lupaus. Me teemme siitä käveltävän.",
+    "sub": "Sodar sai alkunsa yhdestä havainnosta: ostajat vierittävät litteiden kuvien ohi, mutta viipyvät tilassa, jossa he voivat oikeasti liikkua. Rakennamme putken, joka muuttaa ensimmäisen jälkimmäiseksi.",
+    "thesisKicker": "Teesi",
+    "thesisTitle": "Suunnistus myy ilmoituksia.",
+    "thesis": [
+      "Kiinteistöportaalia selaava ostaja tekee jatka/ohita-päätöksen sekunneissa kuvien perusteella, jotka eivät kerro mitään huoneiden välisestä kulusta. Kierros vastaa kysymykseen, johon kuva ei voi: miltä tuntuu olla oikeasti siellä.",
+      "Sodar on olemassa tehdäkseen siitä kierroksesta niin edullisen ja nopean, että siitä tulee jokaisen ilmoituksen oletus, ei markkinoiden huipulle varattu ylellisyys."
+    ],
+    "valuesKicker": "Mistä pidämme kiinni",
+    "valuesTitle": "Kolme asiaa, joista emme tingi.",
+    "values": [
+      {
+        "title": "Skannaa, älä lavasta",
+        "desc": "Oikea kohde on totuuden lähde. Tehtävämme on toistaa se uskollisesti, ei keksiä fantasiaversiota."
+      },
+      {
+        "title": "Välittäjä omistaa datan",
+        "desc": "Kuvaukset, kierrokset ja kiinnostusdata kuuluvat ne luoneelle välittäjälle — aina vietävissä, ei koskaan lukittuna."
+      },
+      {
+        "title": "Merkintä oletuksena",
+        "desc": "Tekoälyllä käsitellyn tilan pitää kertoa se. Jokainen julkinen kierros on merkitty, poikkeuksetta."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Liity mukaan",
+      "title": "Olemme pieni tiimi, joka ottaa mukaan varhain.",
+      "sub": "Jos teesi puhuttelee, rekrytoimme — tai kerro meille vain ilmoituksistasi.",
+      "label": "Katso avoimet paikat"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Ura — Sodar",
+    "metaDesc": "Avoimet paikat Sodarilla.",
+    "eyebrow": "Ura",
+    "title": "Auta jokaista ilmoitusta renderöitymään kunnolla.",
+    "sub": "Pieni tiimi, varhainen vaihe, oikeat välittäjät skannaavat jo kohteita. Rekrytoimme rekonstruktioon, tuotteeseen ja go-to-marketiin.",
+    "rolesKicker": "Avoimet paikat",
+    "rolesTitle": "Rekrytoimme nyt.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Rekonstruktio",
+        "location": "Etä / Tallinna"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Tuote",
+        "location": "Etä / Tallinna"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Go-to-market",
+        "location": "Tallinna"
+      }
+    ],
+    "noFit": "Eikö sopivaa löydy? Kirjoita silti osoitteeseen careers@sodar.io.",
+    "cta": {
+      "eyebrow": "Ei vielä sopivaa roolia?",
+      "title": "Olemme niin pieniä, että yksi sähköposti tavoittaa perustajan.",
+      "sub": "Kerro, minkä parissa haluaisit työskennellä.",
+      "label": "Lähetä sähköpostia careers@sodar.io"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Kenttämuistiinpanot — Sodar",
+    "metaDesc": "Tapaustutkimuksia välittäjiltä ja välitysliikkeiltä, jotka skannaavat kohteita Sodarilla.",
+    "eyebrow": "Kenttämuistiinpanot",
+    "title": "Tapaustutkimuksia, ei lehdistötiedotteita.",
+    "sub": "Mitä oikeasti tapahtuu, kun kohde skannataan — putkea rakentavan tiimin kirjoittamana.",
+    "posts": [
+      {
+        "title": "Miten neljän välittäjän tallinnalainen liike lyhensi ilmoituksen valmistelun 15 minuuttiin",
+        "tag": "Tapaustutkimus",
+        "read": "6 min lukuaika"
+      },
+      {
+        "title": "Mitä muutimme ensimmäisten 500 kierroksen jälkeen",
+        "tag": "Tuotemuistiinpanot",
+        "read": "4 min lukuaika"
+      },
+      {
+        "title": "Huonekohtaisen kiinnostuksen lukeminen: mitä katselimen avaukset oikeasti kertovat",
+        "tag": "Opas",
+        "read": "5 min lukuaika"
+      },
+      {
+        "title": "Miksi ilmainen esikatselu on kaksi huonetta, ei yksi tai viisi",
+        "tag": "Tuotemuistiinpanot",
+        "read": "3 min lukuaika"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Luonnos — vaihe 1",
+    "notice": "Tämä on vaiheen 1 rakenteellinen paikkamerkki, ei lopullinen oikeudellinen teksti.",
+    "englishOnly": "Oikeudelliset asiakirjat julkaistaan toistaiseksi vain englanniksi; englanninkielinen versio on määräävä.",
+    "titles": {
+      "privacy": "Tietosuojakäytäntö",
+      "terms": "Käyttöehdot",
+      "data-processing": "Tietojenkäsittelyliite",
+      "cookies": "Evästekäytäntö"
+    }
+  },
+  "Scaffold": {
+    "phase": "Vaihe 1 — suunnittelu & rakenne",
+    "note": "Maksut, CRM-OAuth ja tekoälyputki ovat simuloituja paikkamerkkitiloja. Ei backend-kutsuja."
+  }
+}

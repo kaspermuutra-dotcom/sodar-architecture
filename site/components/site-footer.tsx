@@ -61,7 +61,7 @@ export function SiteFooter() {
 
         <div className="mt-16 flex flex-col gap-3 border-t border-border pt-6 text-xs text-text-muted sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} {t("copyright")}</span>
-          <span className="font-mono">Tallinn, Estonia · sodar.io</span>
+          <span className="font-mono">{t("location")}</span>
         </div>
       </div>
 

@@ -9,31 +9,991 @@
     "partners": "Partners",
     "pricing": "Pricing",
     "signIn": "Log in",
-    "getStarted": "Scan a property"
+    "getStarted": "Scan a property",
+    "menu": "Toggle menu",
+    "home": "Sodar home"
   },
   "Hero": {
-    "eyebrow": "Sodar",
-    "headline": "AI walkthroughs that close more deals.",
+    "headline1": "AI walkthroughs",
+    "headline2": "that close more deals.",
     "sub": "Open sodar.io on your phone, walk the property once, and get an immersive walkthrough buyers can step inside — published into the listing you already have.",
     "ctaPrimary": "Scan your first property",
-    "ctaSecondary": "See how it works"
+    "ctaSecondary": "See how it works",
+    "status": [
+      "CAPTURE  ▸ living room · 12/12 frames · coverage 98%",
+      "ASSIST   ▸ tilt down 4° · hold · good light",
+      "STITCH   ▸ kitchen · equirectangular · 8192×4096",
+      "PREVIEW  ▸ 2 of 6 rooms ready · free",
+      "QUOTE    ▸ one-time price computed · 6 rooms · 14 panoramas",
+      "PUBLISH  ▸ CRM listing #48213 · viewer embedded"
+    ]
   },
-  "ScanReveal": {
-    "flatLabel": "Phone capture",
-    "revealedLabel": "Sodar walkthrough"
+  "Marquee": {
+    "rooms": [
+      "Living room",
+      "Kitchen",
+      "Primary bedroom",
+      "Bathroom",
+      "Hallway",
+      "Balcony",
+      "Study",
+      "Dining",
+      "Guest room",
+      "Entrance",
+      "Terrace",
+      "Garage"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "Thesis",
+    "lines": [
+      "No listing photo has ever walked itself.",
+      "Buyers skip what they can’t step inside.",
+      "So we turned a phone into a scanner,",
+      "and a scan into a place."
+    ],
+    "body": "A broker opens sodar.io on their phone, walks each room once while an AI capture assistant coaches the shot, and gets back a walkthrough buyers can move through. The first two rooms are free to preview. One payment finishes the property. Publishing into the CRM listing is one click."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "rooms free",
+        "note": "Working preview before any payment"
+      },
+      {
+        "label": "one-time price",
+        "note": "Sized to the property. No subscription"
+      },
+      {
+        "label": "partner margin",
+        "note": "For CRMs distributing Sodar"
+      },
+      {
+        "label": "per room",
+        "note": "Panorama capture guided live by AI"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Scroll",
+    "frames": "/12 frames",
+    "assistantLabel": "Capture assistant",
+    "assist": [
+      "Tilt down 4°",
+      "Hold still…",
+      "Good light. Keep turning",
+      "Overlap 40% — go slower",
+      "Room complete"
+    ],
+    "rooms": [
+      "Living room",
+      "Kitchen",
+      "Primary bedroom",
+      "Bathroom",
+      "Study",
+      "Balcony"
+    ],
+    "ready": "Ready",
+    "locked": "Locked",
+    "photosOnly": "Photos only",
+    "panels": {
+      "capture": {
+        "label": "Capture",
+        "title": "Walk the property once.",
+        "body": "Open sodar.io on your phone. The camera guides you room by room while the AI capture assistant corrects coverage, position and light — live, while you’re still standing there."
+      },
+      "preview": {
+        "label": "Preview",
+        "title": "Two rooms, finished, free.",
+        "body": "Sodar processes the first captures into a working walkthrough of the first two rooms. You experience the finished quality before paying anything."
+      },
+      "unlock": {
+        "label": "Unlock",
+        "title": "One price. One payment.",
+        "body": "Sodar quotes a one-time price for the whole property — size, number of panoramas, processing, hosting and maintenance all accounted for. Pay once through Stripe and the remaining rooms are processed."
+      },
+      "publish": {
+        "label": "Publish",
+        "title": "Into the listing you already have.",
+        "body": "Connect your CRM, pick the property listing, publish. The walkthrough lives inside the listing through Sodar’s embedded viewer — and you can adjust the approved appearance settings any time."
+      }
+    },
+    "quoteLabel": "Quote · 84 Kesklinn Ave",
+    "quoteRows": [
+      {
+        "k": "6 rooms · 14 panoramas",
+        "v": "included"
+      },
+      {
+        "k": "Processing & AI compute",
+        "v": "included"
+      },
+      {
+        "k": "Storage & viewer hosting",
+        "v": "12 months"
+      },
+      {
+        "k": "Maintenance",
+        "v": "included"
+      }
+    ],
+    "oneTime": "one-time · no subscription",
+    "paidLabel": "Paid",
+    "paidBody": "Processing the remaining 4 rooms. You’ll be notified when the walkthrough is complete.",
+    "pay": "Pay with Stripe",
+    "paying": "Contacting Stripe…",
+    "mockNote": "Mock checkout — no card is charged.",
+    "crmHeader": "Your CRM · Listing #48213",
+    "publishBtn": "Publish walkthrough",
+    "publishedBtn": "Published",
+    "viewerBadge": "Sodar viewer · 360°",
+    "listingMeta": "3 rooms · 78 m² · €395,000",
+    "status": "status",
+    "statusPublished": "published",
+    "statusReady": "ready",
+    "viewer": "viewer",
+    "viewerEmbedded": "embedded",
+    "opened": "opened",
+    "openedValue": "128 visitors"
+  },
+  "Capabilities": {
+    "kicker": "What ships",
+    "intro": "Three connected surfaces — a public site, a guided mobile scan, and a broker workspace — behind one walkthrough.",
+    "title": "One scan, seven things a listing gains.",
+    "items": [
+      {
+        "title": "Guided phone capture",
+        "desc": "No rig, no photographer. The camera walks you through each room as a panorama, straight from the browser."
+      },
+      {
+        "title": "AI capture assistant",
+        "desc": "Live coaching on coverage, position and image quality while you’re still inside the property."
+      },
+      {
+        "title": "Free two-room preview",
+        "desc": "A working walkthrough of the first two rooms before any payment, so you judge the finished quality first."
+      },
+      {
+        "title": "One-time property price",
+        "desc": "A single quote sized to the property — panoramas, compute, hosting and maintenance included."
+      },
+      {
+        "title": "CRM publishing",
+        "desc": "Connect your CRM, pick the listing, publish. The walkthrough stays inside the listing through the embedded viewer."
+      },
+      {
+        "title": "Approved appearance",
+        "desc": "Adjust the viewer’s look within the approved settings so it matches the listing it lives in."
+      },
+      {
+        "title": "Broker workspace",
+        "desc": "Manage properties, watch processing and publication status, and see how many visitors opened the viewer."
+      }
+    ],
+    "cta": {
+      "title": "Scan a property",
+      "desc": "Two rooms free. Start on your phone.",
+      "start": "Start"
+    }
+  },
+  "Integration": {
+    "kicker": "Lives where you already work",
+    "intro": "Connect the CRM you already use. Choose the listing. Publish. The walkthrough appears inside it through an embedded viewer or iframe — nothing to copy, nothing to host.",
+    "title": "Just add Sodar to your CRM.",
+    "crmHeader": "Your CRM · Listings",
+    "published": "Walkthrough published",
+    "addWalkthrough": "+ add walkthrough",
+    "listings": [
+      {
+        "name": "84 Kesklinn Ave",
+        "meta": "3 rooms · €395,000"
+      },
+      {
+        "name": "12 Harbour Res.",
+        "meta": "2 rooms · €260,000"
+      },
+      {
+        "name": "7 Nõmme Villa",
+        "meta": "6 rooms · €890,000"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Illustrative · not measured yet",
+    "title": "The difference a scan makes.",
+    "beforeLabel": "Before",
+    "afterLabel": "After · with Sodar",
+    "before": [
+      "Book a photographer",
+      "Wait 2–3 days",
+      "Flat photos",
+      "Buyers scroll past",
+      "Nothing measured"
+    ],
+    "after": [
+      "One phone, one walk",
+      "Preview in minutes",
+      "Immersive walkthrough",
+      "Buyers step inside",
+      "Every viewer opened, counted"
+    ]
+  },
+  "Workspace": {
+    "kicker": "Back at the desk",
+    "intro": "Every property you scan, its processing and publication status, and how many visitors opened the viewer — in one workspace per broker.",
+    "title": "Your properties, always in view.",
+    "cta": "See the broker workspace",
+    "mock": {
+      "title": "Workspace",
+      "live": "Live preview",
+      "properties": "Properties",
+      "cols": [
+        "Property",
+        "Status",
+        "Viewer opened",
+        "Publication"
+      ],
+      "statuses": {
+        "published": "Published",
+        "processing": "Processing",
+        "preview": "Preview",
+        "capturing": "Capturing"
+      },
+      "rows": [
+        {
+          "name": "84 Kesklinn Ave",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "12 Harbour Res.",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "7 Nõmme Villa",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 rooms"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 rooms free"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "status": "capturing",
+          "views": "—",
+          "pub": "on phone"
+        }
+      ],
+      "engagement": "Room engagement · 84 Kesklinn Ave",
+      "rooms": [
+        "Living room",
+        "Kitchen",
+        "Primary bedroom",
+        "Bathroom",
+        "Balcony"
+      ],
+      "processing": "Processing",
+      "jobs": [
+        {
+          "name": "7 Nõmme Villa",
+          "step": "Stitching · bedroom",
+          "n": "4 / 6"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "step": "Preview ready",
+          "n": "2 / 2"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "step": "Capturing on phone",
+          "n": "—"
+        }
+      ],
+      "week": "This week",
+      "weekTitle": "701 viewer opens",
+      "weekSub": "across 2 published walkthroughs"
+    }
+  },
+  "Scans": {
+    "kicker": "This week’s scans",
+    "title": "Every kind of listing scans the same way.",
+    "items": [
+      {
+        "label": "Apartment",
+        "meta": "3 rooms · Kesklinn"
+      },
+      {
+        "label": "New construction",
+        "meta": "4 rooms · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 rooms · Pirita"
+      },
+      {
+        "label": "Rental",
+        "meta": "1 room · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "Built to be trusted with listings",
+    "title": "Compliance isn’t an afterthought.",
+    "items": [
+      {
+        "title": "Camera permission, explicit",
+        "desc": "Sodar asks for the device camera only when you start a scan and uses it only for that capture."
+      },
+      {
+        "title": "AI disclosure",
+        "desc": "Every published walkthrough carries a clear, visible label that it is an AI-processed reconstruction."
+      },
+      {
+        "title": "Security",
+        "desc": "Built toward SOC 2 and GDPR from day one — encrypted storage, scoped CRM credentials, audit logs per property."
+      },
+      {
+        "title": "Broker data ownership",
+        "desc": "Captures, walkthroughs and engagement data belong to the broker. Disconnecting Sodar exports everything."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "For CRM providers",
+    "title": "Distribute Sodar to your broker network. Keep 15%.",
+    "body": "CRM partners make Sodar available to their brokers and receive a 15% margin on qualifying walkthrough purchases — no minimum, paid out automatically.",
+    "cta": "See the partner program"
+  },
+  "PricingTeaser": {
+    "kicker": "Simple by design",
+    "title1": "One property.",
+    "title2": "One price. Once.",
+    "body": "Preview the first two rooms free. Then Sodar quotes a single one-time price for finishing the property — no subscription, no annual contract.",
+    "cta": "How the price is computed",
+    "card": {
+      "label": "Typical 3-room apartment",
+      "price": "€99–149",
+      "note": "one-time · quoted after the free preview",
+      "factors": [
+        "Property size",
+        "Panoramas captured",
+        "Processing & AI compute",
+        "Storage & viewer hosting",
+        "Ongoing maintenance"
+      ],
+      "cta": "Scan a property"
+    }
+  },
+  "Language": {
+    "kicker": "Wherever your buyers search",
+    "title1": "One walkthrough.",
+    "title2": "Every language a buyer reads.",
+    "body": "Publish once — the viewer’s room labels and controls follow the language the buyer set. The site and viewer ship in sixteen languages today."
+  },
+  "Switcher": {
+    "search": "Search languages…",
+    "none": "No matching language.",
+    "active": "Active",
+    "comingSoon": "Coming soon",
+    "choose": "Choose a language",
+    "notice": "{language} isn’t translated yet — listings will keep rendering in English until it ships."
   },
   "Footer": {
     "tagline": "Every listing, scanned into a place buyers can walk through.",
     "columns": {
-      "product": { "title": "Product", "items": [["Product", "/product"], ["How it works", "/product#pipeline"], ["Workspace preview", "/terminal"], ["Security", "/security"]] },
-      "integrations": { "title": "Integrations", "items": [["Integration hub", "/integrations"], ["CRM publishing", "/integrations#crm"], ["Embedded viewer", "/integrations#embed"], ["API access", "/integrations#api"]] },
-      "partners": { "title": "Partners", "items": [["Partner program", "/partners"], ["Become a partner", "/partners#apply"], ["Partner dashboard", "/partners#dashboard"]] },
-      "company": { "title": "Company", "items": [["About", "/about"], ["Careers", "/careers"], ["Field notes", "/blog"], ["Enterprise", "/enterprise"]] },
-      "legal": { "title": "Legal", "items": [["Privacy", "/legal/privacy"], ["Terms", "/legal/terms"], ["Data processing", "/legal/data-processing"], ["Cookies", "/legal/cookies"]] }
+      "product": {
+        "title": "Product",
+        "items": [
+          [
+            "Product",
+            "/product"
+          ],
+          [
+            "How it works",
+            "/product#pipeline"
+          ],
+          [
+            "Workspace preview",
+            "/terminal"
+          ],
+          [
+            "Security",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Integrations",
+        "items": [
+          [
+            "Integration hub",
+            "/integrations"
+          ],
+          [
+            "CRM publishing",
+            "/integrations#crm"
+          ],
+          [
+            "Embedded viewer",
+            "/integrations#embed"
+          ],
+          [
+            "API access",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "Partners",
+        "items": [
+          [
+            "Partner program",
+            "/partners"
+          ],
+          [
+            "Become a partner",
+            "/partners#apply"
+          ],
+          [
+            "Partner dashboard",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Company",
+        "items": [
+          [
+            "About",
+            "/about"
+          ],
+          [
+            "Careers",
+            "/careers"
+          ],
+          [
+            "Field notes",
+            "/blog"
+          ],
+          [
+            "Enterprise",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "items": [
+          [
+            "Privacy",
+            "/legal/privacy"
+          ],
+          [
+            "Terms",
+            "/legal/terms"
+          ],
+          [
+            "Data processing",
+            "/legal/data-processing"
+          ],
+          [
+            "Cookies",
+            "/legal/cookies"
+          ]
+        ]
+      }
     },
     "language": "Language",
     "social": "Elsewhere",
-    "copyright": "Sodar Technologies OÜ"
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallinn, Estonia · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Product — Sodar",
+    "metaDesc": "How a guided phone scan becomes an immersive, listing-ready walkthrough.",
+    "eyebrow": "The product",
+    "title": "A phone, one walk, a place buyers can step inside.",
+    "sub": "Sodar turns guided property scans into immersive, listing-ready walkthroughs — captured on the phone you already carry, published into the CRM you already use.",
+    "ctaPrimary": "Scan your first property",
+    "ctaSecondary": "See the workspace",
+    "flatLabel": "Phone capture",
+    "revealedLabel": "Sodar walkthrough",
+    "stagesKicker": "From a walk to a walkthrough",
+    "stagesTitle": "Three stages, one pipeline.",
+    "stages": [
+      {
+        "label": "Capture",
+        "sub": "Phone · browser · camera permission",
+        "desc": "Each room is captured as a panorama with live coaching from the AI capture assistant."
+      },
+      {
+        "label": "Process",
+        "sub": "Stitching · enhancement · linking",
+        "desc": "Panoramas are stitched, cleaned and linked into a single walkthrough. The first two rooms come back free."
+      },
+      {
+        "label": "Publish",
+        "sub": "CRM · embedded viewer · appearance",
+        "desc": "Connect your CRM, pick the listing, publish. The viewer lives inside the listing; you tune its approved appearance."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Try it on a real property",
+      "title": "Preview two rooms free. Pay once for the rest.",
+      "sub": "Open sodar.io on your phone and start a scan — no card until you unlock the full walkthrough.",
+      "label": "Scan your first property"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Pricing — Sodar",
+    "metaDesc": "One-time price per property, quoted after a free two-room preview. Volume pricing for brokerages, a 15% margin for CRM partners.",
+    "eyebrow": "Simple by design",
+    "title": "One property. One price. Once.",
+    "sub": "Preview two rooms free, then pay a single one-time price sized to the property. Volume pricing for brokerages, a standing 15% margin for CRM partners.",
+    "badge": "Most brokerages",
+    "tiers": [
+      {
+        "name": "Per property",
+        "price": "From €99",
+        "unit": "one-time, quoted after the free preview",
+        "desc": "For brokers scanning listings one at a time.",
+        "features": [
+          "Guided phone capture + AI assistant",
+          "First two rooms free to preview",
+          "Full walkthrough after one Stripe payment",
+          "CRM publishing & embedded viewer",
+          "Workspace with status & viewer opens"
+        ],
+        "cta": "Scan your first property"
+      },
+      {
+        "name": "Brokerage",
+        "price": "Volume",
+        "unit": "per property, stepping down with volume",
+        "desc": "For firms publishing dozens of listings a month.",
+        "features": [
+          "Everything per property",
+          "Firm-wide workspace rollup",
+          "Priority processing queue",
+          "Dedicated CRM setup",
+          "Co-branded viewer"
+        ],
+        "cta": "Talk to sales"
+      },
+      {
+        "name": "CRM partner",
+        "price": "15%",
+        "unit": "margin on qualifying purchases",
+        "desc": "For CRM providers distributing Sodar to their brokers.",
+        "features": [
+          "Sodar available inside your platform",
+          "Partner dashboard",
+          "Monthly automatic payout",
+          "No minimum volume"
+        ],
+        "cta": "Apply as a partner"
+      }
+    ],
+    "factorsKicker": "How the quote is built",
+    "factorsTitle": "Priced to the property, not the plan.",
+    "factors": [
+      {
+        "title": "Property size",
+        "desc": "Floor area and number of rooms captured."
+      },
+      {
+        "title": "Panorama volume",
+        "desc": "How many panoramas the scan produced and their resolution."
+      },
+      {
+        "title": "Processing",
+        "desc": "Stitching, enhancement and the AI compute behind the walkthrough."
+      },
+      {
+        "title": "Storage & hosting",
+        "desc": "Keeping the walkthrough and its viewer online inside your listing."
+      },
+      {
+        "title": "Maintenance",
+        "desc": "Ongoing viewer updates and the CRM integration itself."
+      },
+      {
+        "title": "Partner margin",
+        "desc": "Where a CRM partner distributes Sodar, their margin is included in the quote."
+      }
+    ],
+    "faqKicker": "Questions",
+    "faqTitle": "Pricing FAQ.",
+    "faq": [
+      {
+        "q": "When do I see the price?",
+        "a": "After the free preview. Sodar computes a one-time price for completing the property once the first two rooms are processed."
+      },
+      {
+        "q": "Is the preview really free?",
+        "a": "Yes — the first two rooms are processed into a working walkthrough with no payment. You pay only to finish and publish the property."
+      },
+      {
+        "q": "Is there a subscription?",
+        "a": "No. Each property is a single one-time payment through Stripe. Nothing renews."
+      },
+      {
+        "q": "How does the CRM partner margin get paid?",
+        "a": "Automatically, monthly, on qualifying walkthrough purchases from brokers on the partner’s platform."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Early access",
+      "title": "Your next listing deserves more than photos.",
+      "sub": "We’re onboarding a small group of forward-looking brokers first.",
+      "label": "Request early access"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Workspace preview — Sodar",
+    "metaDesc": "A public, unauthenticated preview of the broker workspace. No real data.",
+    "eyebrow": "Public preview · no login, no real data",
+    "title": "Every property, its status, and who opened it.",
+    "sub": "This is a static preview of the workspace every broker gets — properties, processing and publication status, and how many visitors opened each walkthrough viewer.",
+    "cta": {
+      "eyebrow": "Yours once you publish",
+      "title": "Your workspace starts empty — until your first scan.",
+      "sub": "Scan a property to see real numbers replace this preview.",
+      "label": "Scan your first property"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "Partners — Sodar",
+    "metaDesc": "CRM platforms earn a standing 15% margin distributing Sodar to their broker network.",
+    "eyebrow": "For CRM platforms",
+    "title": "Distribute Sodar to your brokers. Keep 15%.",
+    "sub": "A standing margin on every qualifying walkthrough your platform’s brokers purchase — no minimum, paid out automatically, no engineering lift beyond a referral link.",
+    "apply": "Apply as a partner",
+    "stepsKicker": "How it works",
+    "stepsTitle": "Three steps to a standing margin.",
+    "steps": [
+      {
+        "title": "Apply",
+        "desc": "Tell us which brokers or agencies run on your platform, and roughly how many active listings."
+      },
+      {
+        "title": "Integrate",
+        "desc": "A referral link and, optionally, a native in-app entry point for your users."
+      },
+      {
+        "title": "Earn",
+        "desc": "15% of every qualifying walkthrough purchase from a broker who joined through your platform, paid out monthly."
+      }
+    ],
+    "dashKicker": "Partner dashboard",
+    "dashTitle": "Track referred brokers and margin in one place.",
+    "dash": [
+      {
+        "label": "Referred brokers",
+        "value": "142"
+      },
+      {
+        "label": "Walkthroughs purchased",
+        "value": "3,018"
+      },
+      {
+        "label": "Margin this month",
+        "value": "€6,240"
+      }
+    ],
+    "applyKicker": "Get started",
+    "applyTitle": "Apply as a partner.",
+    "applyBody": "A short application — we review platform fit and typical listing volume before issuing a referral link.",
+    "form": {
+      "company": "Company / platform name",
+      "companyPh": "Acme CRM",
+      "email": "Work email",
+      "emailPh": "you@company.com",
+      "brokers": "Active brokers on your platform",
+      "brokersPh": "e.g. 50–200",
+      "submit": "Submit application"
+    },
+    "faqKicker": "Questions",
+    "faqTitle": "Partner FAQ.",
+    "faq": [
+      {
+        "q": "Is there a minimum commitment?",
+        "a": "No. The 15% margin applies from the first purchased walkthrough — no volume floor."
+      },
+      {
+        "q": "Who owns the broker relationship?",
+        "a": "You do. Sodar bills the broker directly and reports your margin; brokers stay your customer."
+      },
+      {
+        "q": "Can we co-brand the walkthrough?",
+        "a": "Yes — a partner-tier account can apply a co-branded frame around the embedded walkthrough."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Ready when you are",
+      "title": "Give your brokers a reason to publish more.",
+      "sub": "Apply once — we’ll follow up with a referral link and integration notes.",
+      "label": "Apply as a partner"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Integrations — Sodar",
+    "metaDesc": "Connect a CRM or grant API access so published walkthroughs embed straight into your listings.",
+    "eyebrow": "Integration hub",
+    "title": "Connect once. Every listing after that is one click.",
+    "sub": "OAuth into your CRM, or grant Sodar scoped API access — pick the listing, publish, and the walkthrough is embedded without a second step.",
+    "connKicker": "Connections",
+    "connTitle": "Pick how Sodar reaches your listings.",
+    "conns": [
+      {
+        "name": "Generic CRM OAuth",
+        "action": "Connect"
+      },
+      {
+        "name": "City24 MLS feed",
+        "action": "Connect"
+      },
+      {
+        "name": "Custom REST API",
+        "action": "Generate key"
+      },
+      {
+        "name": "Zapier / webhook",
+        "action": "Coming soon"
+      }
+    ],
+    "notConnected": "status: not connected",
+    "mockTitle": "Mock connection — wired in phase 2",
+    "embedKicker": "No CRM? No problem",
+    "embedTitle": "One iframe, dropped anywhere.",
+    "embedBody": "Every purchased walkthrough gets a stable embed URL. Paste it into any listing portal that accepts a custom iframe.",
+    "cta": {
+      "eyebrow": "Bring your CRM",
+      "title": "Sodar fits the tools you already use.",
+      "sub": "Talk to us about a launch-priority integration, or start with the generic embed today.",
+      "label": "Explore the partner program"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Enterprise — Sodar",
+    "metaDesc": "Team seats, bulk property scans, and shared workspace rollups for brokerages.",
+    "eyebrow": "For brokerages",
+    "title": "One workspace for every agent on your team.",
+    "sub": "Bulk scanning, volume pricing, and a firm-wide engagement rollup — built for brokerages publishing dozens of listings a month.",
+    "talk": "Talk to sales",
+    "featKicker": "Built for teams",
+    "featTitle": "Everything self-serve, plus the parts a firm needs.",
+    "features": [
+      {
+        "title": "Team seats",
+        "desc": "Every agent gets their own workspace; a firm-wide rollup sits above it for managers."
+      },
+      {
+        "title": "Bulk scanning",
+        "desc": "Scan a whole portfolio of properties instead of one at a time."
+      },
+      {
+        "title": "Volume pricing",
+        "desc": "The per-property price steps down as your firm’s monthly volume grows."
+      },
+      {
+        "title": "Dedicated CRM setup",
+        "desc": "We handle the OAuth / API wiring for your firm’s specific CRM stack."
+      },
+      {
+        "title": "Co-branding",
+        "desc": "Apply your brokerage’s mark to every embedded walkthrough."
+      },
+      {
+        "title": "Priority processing",
+        "desc": "Enterprise properties are processed ahead of the self-serve queue."
+      }
+    ],
+    "priceKicker": "Pricing that scales down",
+    "priceTitle1": "Volume pricing,",
+    "priceTitle2": "one contract.",
+    "priceBody": "A custom per-property rate based on monthly volume, plus a flat seat fee per agent. Talk to sales for a quote sized to your firm.",
+    "priceNote": "Illustrative, per property",
+    "tiers": [
+      {
+        "tier": "1–20 properties / mo",
+        "price": "from €99"
+      },
+      {
+        "tier": "21–100 properties / mo",
+        "price": "from €79"
+      },
+      {
+        "tier": "100+ properties / mo",
+        "price": "Custom"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Enterprise",
+      "title": "Bring your whole firm’s listings online.",
+      "sub": "We’ll set up your CRM connection and seat structure together.",
+      "label": "Talk to sales"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Security & compliance — Sodar",
+    "metaDesc": "Data handling, AI disclosure, and compliance posture for the Sodar pipeline.",
+    "eyebrow": "Trust & compliance",
+    "title": "Built to be trusted with someone else’s listing.",
+    "sub": "Sodar is designed toward SOC 2 and GDPR from day one — this page is the working summary; formal reports and DPAs are available on request.",
+    "detailKicker": "In detail",
+    "detailTitle": "How data actually moves.",
+    "details": [
+      {
+        "title": "Camera access",
+        "desc": "The device camera is requested only when a scan starts, with explicit permission, and used only for that capture."
+      },
+      {
+        "title": "Storage",
+        "desc": "Captures and rendered walkthroughs are encrypted at rest and in transit; access is scoped per broker account."
+      },
+      {
+        "title": "AI disclosure",
+        "desc": "Every public walkthrough carries a visible label identifying it as an AI-processed reconstruction."
+      },
+      {
+        "title": "Data retention",
+        "desc": "Captures and walkthroughs are retained for the life of the listing plus a fixed grace period, then purged on request."
+      },
+      {
+        "title": "Access control",
+        "desc": "CRM credentials and API keys are scoped to the minimum permissions the integration needs."
+      },
+      {
+        "title": "Sub-processors",
+        "desc": "Third-party processing and payment providers are listed in the Data Processing addendum."
+      }
+    ],
+    "seeAlso": "See also:",
+    "privacy": "Privacy Policy",
+    "dpa": "Data Processing Addendum",
+    "cta": {
+      "eyebrow": "Questions for security review",
+      "title": "Need a security questionnaire answered?",
+      "sub": "Reach out and we’ll return a completed questionnaire or SOC 2 status directly.",
+      "label": "Contact security"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "About — Sodar",
+    "metaDesc": "Why Sodar exists: the case for treating a listing as a place, not a photo gallery.",
+    "eyebrow": "Company",
+    "title": "A listing photo is a promise. We make it walkable.",
+    "sub": "Sodar started from one observation: buyers scroll past flat photos, but they linger inside a space they can actually move through. We build the pipeline that turns the first into the second.",
+    "thesisKicker": "Thesis",
+    "thesisTitle": "Orientation sells listings.",
+    "thesis": [
+      "A buyer scrolling a listing portal makes a keep/skip decision in seconds, based on photos that give no sense of flow between rooms. A walkthrough answers the question a photo can’t: what does it feel like to actually be there.",
+      "Sodar exists to make that walkthrough cheap enough and fast enough that it becomes the default for every listing, not a luxury reserved for the top of the market."
+    ],
+    "valuesKicker": "What we hold to",
+    "valuesTitle": "Three things we won’t trade away.",
+    "values": [
+      {
+        "title": "Scan, don’t stage",
+        "desc": "The real property is the source of truth. Our job is to render it faithfully, not invent a fantasy version."
+      },
+      {
+        "title": "The broker owns the data",
+        "desc": "Captures, walkthroughs and engagement data belong to the broker who made them — always exportable, never locked in."
+      },
+      {
+        "title": "Disclosure by default",
+        "desc": "An AI-processed space should say so. Every public walkthrough is labeled, no exceptions."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Join us",
+      "title": "We’re a small team, onboarding early.",
+      "sub": "If the thesis resonates, we’re hiring — or just talk to us about your listings.",
+      "label": "See open roles"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Careers — Sodar",
+    "metaDesc": "Open roles at Sodar.",
+    "eyebrow": "Careers",
+    "title": "Help every listing render properly.",
+    "sub": "Small team, early stage, real brokers already scanning properties. We’re hiring across reconstruction, product, and go-to-market.",
+    "rolesKicker": "Open roles",
+    "rolesTitle": "Currently hiring.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Reconstruction",
+        "location": "Remote / Tallinn"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Product",
+        "location": "Remote / Tallinn"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Go-to-market",
+        "location": "Tallinn"
+      }
+    ],
+    "noFit": "Don’t see a fit? Write to careers@sodar.io anyway.",
+    "cta": {
+      "eyebrow": "No open role yet?",
+      "title": "We’re small enough that one email reaches a founder.",
+      "sub": "Tell us what you’d want to work on.",
+      "label": "Email careers@sodar.io"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Field notes — Sodar",
+    "metaDesc": "Case studies from brokers and brokerages scanning properties with Sodar.",
+    "eyebrow": "Field notes",
+    "title": "Case studies, not press releases.",
+    "sub": "What actually happens when a property gets scanned — written by the team building the pipeline.",
+    "posts": [
+      {
+        "title": "How a 4-agent Tallinn brokerage cut listing prep to 15 minutes",
+        "tag": "Case study",
+        "read": "6 min read"
+      },
+      {
+        "title": "What we changed after the first 500 walkthroughs",
+        "tag": "Product notes",
+        "read": "4 min read"
+      },
+      {
+        "title": "Reading room engagement: what viewer opens actually tell you",
+        "tag": "Guide",
+        "read": "5 min read"
+      },
+      {
+        "title": "Why the free preview is two rooms, not one or five",
+        "tag": "Product notes",
+        "read": "3 min read"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Draft — phase 1",
+    "notice": "This is a phase-1 structural placeholder, not final legal copy.",
+    "englishOnly": "Legal documents are currently published in English only; the English version governs.",
+    "titles": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "data-processing": "Data Processing Addendum",
+      "cookies": "Cookie Policy"
+    }
   },
   "Scaffold": {
     "phase": "Phase 1 — design & structure",

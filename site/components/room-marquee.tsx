@@ -1,10 +1,12 @@
-const ROOMS = ["Living room", "Kitchen", "Primary bedroom", "Bathroom", "Hallway", "Balcony", "Study", "Dining", "Guest room", "Entrance", "Terrace", "Garage"];
+import { useTranslations } from "next-intl";
 
 /** Thin scrolling strip of room names — the site's "always scanning" heartbeat. */
 export function RoomMarquee() {
-  const items = [...ROOMS, ...ROOMS];
+  const t = useTranslations("Marquee");
+  const rooms = t.raw("rooms") as string[];
+  const items = [...rooms, ...rooms];
   return (
-    <div className="relative overflow-hidden border-y border-border py-3" aria-hidden>
+    <div className="relative overflow-hidden border-y border-border py-3" aria-hidden dir="ltr">
       <div className="marquee gap-10 whitespace-nowrap font-mono text-[11px] uppercase tracking-[.2em] text-text-faint">
         {items.map((r, i) => (
           <span key={i} className="flex items-center gap-10">

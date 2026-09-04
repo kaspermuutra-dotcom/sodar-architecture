@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { localeAlternates } from "@/lib/seo";
 import { PageShell } from "@/components/page-shell";
 
 const DOCS: Record<string, { title: string; updated: string; sections: [string, string][] }> = {
@@ -49,10 +50,12 @@ export function generateStaticParams() {
   return Object.keys(DOCS).map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }): Promise<Metadata> {
+  const { locale, slug } = await params;
   const doc = DOCS[slug];
-  return { title: doc ? `${doc.title} — Sodar` : "Sodar" };
+  if (!doc) return { title: "Sodar" };
+  const t = await getTranslations({ locale, namespace: "LegalPage" });
+  return { title: `${t(`titles.${slug}`)} — Sodar`, alternates: localeAlternates(locale, `/legal/${slug}`) };
 }
 
 export default async function LegalPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
@@ -60,17 +63,19 @@ export default async function LegalPage({ params }: { params: Promise<{ locale: 
   setRequestLocale(locale);
   const doc = DOCS[slug];
   if (!doc) notFound();
+  const t = await getTranslations("LegalPage");
 
   return (
     <PageShell>
       <section className="mx-auto max-w-3xl px-5 pb-24 pt-20 sm:px-8 sm:pt-28 lg:px-12">
-        <p className="font-mono text-xs uppercase tracking-[.16em] text-text-muted">{doc.updated}</p>
-        <h1 className="mt-4 text-[clamp(2.4rem,5vw,3.6rem)] font-medium leading-[1] tracking-[-.04em]">{doc.title}</h1>
+        <p className="font-mono text-xs uppercase tracking-[.16em] text-text-muted">{t("updated")}</p>
+        <h1 className="display mt-4 text-[clamp(2.4rem,5vw,3.6rem)]">{t(`titles.${slug}`)}</h1>
         <p className="mt-6 text-text-muted">
-          This is a phase-1 structural placeholder, not final legal copy.{" "}
+          {t("notice")}
           {/* TODO(phase-2): replace with counsel-reviewed legal text before launch. */}
         </p>
-        <div className="mt-12 space-y-10 border-t border-border pt-10">
+        {locale !== "en" ? <p className="mt-3 font-mono text-[11px] text-text-faint">{t("englishOnly")}</p> : null}
+        <div className="mt-12 space-y-10 border-t border-border pt-10" lang="en" dir="ltr">
           {doc.sections.map(([title, body]) => (
             <div key={title}>
               <h2 className="text-xl tracking-tight">{title}</h2>

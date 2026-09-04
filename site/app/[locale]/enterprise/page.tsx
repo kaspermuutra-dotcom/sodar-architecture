@@ -1,44 +1,46 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { localeAlternates } from "@/lib/seo";
 import { PageShell } from "@/components/page-shell";
 import { PageHero } from "@/components/page-hero";
 import { CtaBanner } from "@/components/cta-banner";
 
-export const metadata: Metadata = {
-  title: "Enterprise — Sodar",
-  description: "Team seats, bulk listing scans, and shared Terminal rollups for brokerages.",
-};
+type Params = { params: Promise<{ locale: string }> };
 
-const FEATURES: [string, string][] = [
-  ["Team seats", "Every agent gets their own Terminal; a firm-wide rollup sits above it for managers."],
-  ["Bulk scanning", "Batch-submit a whole portfolio of listings instead of one at a time."],
-  ["Volume pricing", "Per-listing price steps down as your firm's monthly volume grows."],
-  ["Dedicated CRM setup", "We handle the OAuth / API wiring for your firm's specific CRM stack."],
-  ["Co-branding", "Apply your brokerage's mark to every embedded walkthrough."],
-  ["Priority render queue", "Enterprise listings render ahead of the self-serve queue."],
-];
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "EnterprisePage" });
+  return { title: t("metaTitle"), description: t("metaDesc"), alternates: localeAlternates(locale, "/enterprise") };
+}
 
-export default async function EnterprisePage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function EnterprisePage({ params }: Params) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("EnterprisePage");
+  const features = t.raw("features") as { title: string; desc: string }[];
+  const tiers = t.raw("tiers") as { tier: string; price: string }[];
 
   return (
     <PageShell>
       <PageHero
-        eyebrow="For brokerages"
-        title="One Terminal for every agent on your team."
-        subtitle="Bulk scanning, volume pricing, and a firm-wide engagement rollup — built for brokerages publishing dozens of listings a month."
-        actions={<a href="mailto:sales@sodar.io?subject=Sodar enterprise" className="button-primary">Talk to sales <span>↗</span></a>}
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        subtitle={t("sub")}
+        actions={
+          <a href="mailto:sales@sodar.io?subject=Sodar enterprise" className="button-primary">
+            {t("talk")} <span aria-hidden>↗</span>
+          </a>
+        }
       />
 
       <section className="section-shell border-t border-border">
-        <div className="section-kicker">Built for teams</div>
-        <h2 className="section-title mt-7">Everything self-serve, plus the parts a firm needs.</h2>
+        <p className="section-kicker">{t("featKicker")}</p>
+        <h2 className="section-title mt-7">{t("featTitle")}</h2>
         <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {FEATURES.map(([title, desc]) => (
-            <div key={title} className="card-scan bg-bg p-8 transition-colors hover:bg-bg-raised">
-              <h3 className="text-lg tracking-tight">{title}</h3>
-              <p className="mt-2.5 text-sm leading-relaxed text-text-muted">{desc}</p>
+          {features.map((f) => (
+            <div key={f.title} className="card-scan bg-bg p-8 transition-colors hover:bg-bg-raised">
+              <h3 className="display text-2xl text-text">{f.title}</h3>
+              <p className="mt-2.5 text-sm leading-relaxed text-text-muted">{f.desc}</p>
             </div>
           ))}
         </div>
@@ -47,28 +49,21 @@ export default async function EnterprisePage({ params }: { params: Promise<{ loc
       <section className="section-shell border-t border-border">
         <div className="grid gap-12 lg:grid-cols-[1fr_.8fr] lg:items-center">
           <div>
-            <div className="section-kicker">Pricing that scales down</div>
+            <p className="section-kicker">{t("priceKicker")}</p>
             <h2 className="section-title mt-7">
-              Volume pricing,
+              {t("priceTitle1")}
               <br />
-              one contract.
+              {t("priceTitle2")}
             </h2>
-            <p className="mt-7 max-w-xl text-lg text-text-muted">
-              Custom per-listing rate based on monthly volume, plus a flat seat fee per agent. Talk to sales for a
-              quote sized to your firm.
-            </p>
+            <p className="mt-7 max-w-xl text-lg text-text-muted">{t("priceBody")}</p>
           </div>
           <div className="rounded-3xl border border-border bg-bg-raised p-8 sm:p-10">
-            <p className="text-sm text-text-muted">Illustrative, per listing</p>
+            <p className="text-sm text-text-muted">{t("priceNote")}</p>
             <div className="mt-6 space-y-4 font-mono text-sm">
-              {[
-                ["1–20 listings / mo", "$49"],
-                ["21–100 listings / mo", "$39"],
-                ["100+ listings / mo", "Custom"],
-              ].map(([tier, price]) => (
-                <div key={tier} className="flex items-center justify-between border-b border-border pb-4">
-                  <span className="text-text-muted">{tier}</span>
-                  <span className="text-text">{price}</span>
+              {tiers.map((row) => (
+                <div key={row.tier} className="flex items-center justify-between gap-4 border-b border-border pb-4">
+                  <span className="text-text-muted">{row.tier}</span>
+                  <span className="text-text">{row.price}</span>
                 </div>
               ))}
             </div>
@@ -76,13 +71,7 @@ export default async function EnterprisePage({ params }: { params: Promise<{ loc
         </div>
       </section>
 
-      <CtaBanner
-        eyebrow="Enterprise"
-        title="Bring your whole firm's listings online."
-        subtitle="We'll set up your CRM connection and seat structure together."
-        ctaLabel="Talk to sales"
-        ctaHref="/enterprise"
-      />
+      <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/enterprise" />
     </PageShell>
   );
 }

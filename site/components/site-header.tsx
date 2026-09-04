@@ -44,7 +44,7 @@ export function SiteHeader() {
   return (
     <header ref={headerRef} className="sticky top-0 z-50 border-b" style={{ borderColor: "transparent" }}>
       <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-12">
-        <Link href="/" aria-label="Sodar home" className="flex items-center gap-3">
+        <Link href="/" aria-label={t("home")} className="flex items-center gap-3">
           <SodarMark size={22} className="text-text" />
           <span className="sr-only">Sodar</span>
         </Link>
@@ -62,7 +62,7 @@ export function SiteHeader() {
           <Link href="/terminal" className="text-sm text-text-muted transition-colors hover:text-text">
             {t("signIn")}
           </Link>
-          <Link href="/product" className="button-mini">
+          <Link href="/scan" target="_blank" rel="noopener noreferrer" className="button-mini">
             {t("getStarted")} <span aria-hidden>↗</span>
           </Link>
         </div>
@@ -70,7 +70,7 @@ export function SiteHeader() {
         <button
           type="button"
           className="grid h-9 w-9 place-items-center rounded-full border border-border-strong md:hidden"
-          aria-label="Toggle menu"
+          aria-label={t("menu")}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((v) => !v)}
         >
@@ -93,7 +93,7 @@ export function SiteHeader() {
               {t("signIn")}
             </Link>
           </nav>
-          <Link href="/product" className="button-primary mt-6 w-full justify-center">
+          <Link href="/scan" target="_blank" rel="noopener noreferrer" className="button-primary mt-6 w-full justify-center">
             {t("getStarted")} <span aria-hidden>↗</span>
           </Link>
           <div className="mt-6">

@@ -1,0 +1,1002 @@
+{
+  "Meta": {
+    "title": "Sodar — Visitas com IA que fecham mais negócios",
+    "description": "Digitalize um imóvel com o telemóvel. A Sodar transforma capturas guiadas divisão a divisão numa visita imersiva pronta para o anúncio, mostra as duas primeiras divisões gratuitamente e publica diretamente no seu anúncio do CRM."
+  },
+  "Nav": {
+    "product": "Produto",
+    "integrations": "Integrações",
+    "partners": "Parceiros",
+    "pricing": "Preços",
+    "signIn": "Entrar",
+    "getStarted": "Digitalizar um imóvel",
+    "menu": "Abrir menu",
+    "home": "Início Sodar"
+  },
+  "Hero": {
+    "headline1": "Visitas com IA",
+    "headline2": "que fecham mais negócios.",
+    "sub": "Abra o sodar.io no telemóvel, percorra o imóvel uma única vez e obtenha uma visita imersiva onde os compradores podem entrar — publicada no anúncio que já tem.",
+    "ctaPrimary": "Digitalize o seu primeiro imóvel",
+    "ctaSecondary": "Ver como funciona",
+    "status": [
+      "CAPTURA  ▸ sala · 12/12 fotogramas · cobertura 98%",
+      "ASSISTENTE ▸ incline 4° para baixo · segure · boa luz",
+      "UNIÃO    ▸ cozinha · equirretangular · 8192×4096",
+      "PRÉ-VISUALIZAÇÃO ▸ 2 de 6 divisões prontas · grátis",
+      "ORÇAMENTO ▸ preço único calculado · 6 divisões · 14 panoramas",
+      "PUBLICADO ▸ anúncio CRM #48213 · visualizador incorporado"
+    ]
+  },
+  "Marquee": {
+    "rooms": [
+      "Sala",
+      "Cozinha",
+      "Quarto principal",
+      "Casa de banho",
+      "Corredor",
+      "Varanda",
+      "Escritório",
+      "Sala de jantar",
+      "Quarto de hóspedes",
+      "Entrada",
+      "Terraço",
+      "Garagem"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "Tese",
+    "lines": [
+      "Nenhuma foto de anúncio alguma vez se percorreu a si própria.",
+      "Os compradores saltam o que não podem pisar.",
+      "Por isso transformámos um telemóvel num scanner,",
+      "e uma digitalização num lugar."
+    ],
+    "body": "Um agente abre o sodar.io no telemóvel, percorre cada divisão uma vez enquanto um assistente de captura com IA orienta a filmagem, e recebe uma visita pela qual os compradores podem circular. As duas primeiras divisões são gratuitas em pré-visualização. Um único pagamento completa o imóvel. Publicar no anúncio do CRM é um clique."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "divisões grátis",
+        "note": "Pré-visualização funcional antes de qualquer pagamento"
+      },
+      {
+        "label": "preço único",
+        "note": "À medida do imóvel. Sem subscrição"
+      },
+      {
+        "label": "margem de parceiro",
+        "note": "Para CRMs que distribuem a Sodar"
+      },
+      {
+        "label": "por divisão",
+        "note": "Captura panorâmica guiada em direto por IA"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Deslize",
+    "frames": "/12 fotogramas",
+    "assistantLabel": "Assistente de captura",
+    "assist": [
+      "Incline 4° para baixo",
+      "Mantenha parado…",
+      "Boa luz. Continue a rodar",
+      "Sobreposição 40% — mais devagar",
+      "Divisão concluída"
+    ],
+    "rooms": [
+      "Sala",
+      "Cozinha",
+      "Quarto principal",
+      "Casa de banho",
+      "Escritório",
+      "Varanda"
+    ],
+    "ready": "Pronto",
+    "locked": "Bloqueado",
+    "photosOnly": "Só fotos",
+    "panels": {
+      "capture": {
+        "label": "Captura",
+        "title": "Percorra o imóvel uma única vez.",
+        "body": "Abra o sodar.io no telemóvel. A câmara guia-o divisão a divisão enquanto o assistente de captura com IA corrige cobertura, posição e luz — em direto, enquanto ainda está no local."
+      },
+      "preview": {
+        "label": "Pré-visualização",
+        "title": "Duas divisões, terminadas, grátis.",
+        "body": "A Sodar processa as primeiras capturas numa visita funcional das duas primeiras divisões. Vê a qualidade final antes de pagar seja o que for."
+      },
+      "unlock": {
+        "label": "Desbloquear",
+        "title": "Um preço. Um pagamento.",
+        "body": "A Sodar calcula um preço único para todo o imóvel — dimensão, número de panoramas, processamento, alojamento e manutenção incluídos. Pague uma vez através do Stripe e as restantes divisões são processadas."
+      },
+      "publish": {
+        "label": "Publicar",
+        "title": "No anúncio que já tem.",
+        "body": "Ligue o seu CRM, escolha o anúncio, publique. A visita vive dentro do anúncio através do visualizador incorporado da Sodar — e pode ajustar as definições de aparência aprovadas a qualquer momento."
+      }
+    },
+    "quoteLabel": "Orçamento · 84 Kesklinn Ave",
+    "quoteRows": [
+      {
+        "k": "6 divisões · 14 panoramas",
+        "v": "incluído"
+      },
+      {
+        "k": "Processamento e computação IA",
+        "v": "incluído"
+      },
+      {
+        "k": "Armazenamento e alojamento",
+        "v": "12 meses"
+      },
+      {
+        "k": "Manutenção",
+        "v": "incluído"
+      }
+    ],
+    "oneTime": "pagamento único · sem subscrição",
+    "paidLabel": "Pago",
+    "paidBody": "A processar as 4 divisões restantes. Será notificado quando a visita estiver completa.",
+    "pay": "Pagar com Stripe",
+    "paying": "A contactar o Stripe…",
+    "mockNote": "Pagamento de demonstração — nenhum cartão é cobrado.",
+    "crmHeader": "O seu CRM · Anúncio #48213",
+    "publishBtn": "Publicar visita",
+    "publishedBtn": "Publicado",
+    "viewerBadge": "Visualizador Sodar · 360°",
+    "listingMeta": "3 divisões · 78 m² · 395.000 €",
+    "status": "estado",
+    "statusPublished": "publicado",
+    "statusReady": "pronto",
+    "viewer": "visualizador",
+    "viewerEmbedded": "incorporado",
+    "opened": "aberturas",
+    "openedValue": "128 visitantes"
+  },
+  "Capabilities": {
+    "kicker": "O que inclui",
+    "intro": "Três superfícies ligadas — um site público, uma digitalização móvel guiada e um espaço de trabalho para agentes — por trás de uma única visita.",
+    "title": "Uma digitalização, sete coisas que um anúncio ganha.",
+    "items": [
+      {
+        "title": "Captura guiada por telemóvel",
+        "desc": "Sem equipamento, sem fotógrafo. A câmara guia-o por cada divisão em panorama, diretamente do browser."
+      },
+      {
+        "title": "Assistente de captura com IA",
+        "desc": "Orientação em direto sobre cobertura, posição e qualidade de imagem enquanto ainda está dentro do imóvel."
+      },
+      {
+        "title": "Pré-visualização gratuita de duas divisões",
+        "desc": "Uma visita funcional das duas primeiras divisões antes de qualquer pagamento, para avaliar primeiro a qualidade final."
+      },
+      {
+        "title": "Preço único por imóvel",
+        "desc": "Um único orçamento à medida do imóvel — panoramas, computação, alojamento e manutenção incluídos."
+      },
+      {
+        "title": "Publicação no CRM",
+        "desc": "Ligue o CRM, escolha o anúncio, publique. A visita fica dentro do anúncio através do visualizador incorporado."
+      },
+      {
+        "title": "Aparência aprovada",
+        "desc": "Ajuste o aspeto do visualizador dentro das definições aprovadas para combinar com o anúncio onde vive."
+      },
+      {
+        "title": "Espaço de trabalho do agente",
+        "desc": "Gira imóveis, acompanhe o estado de processamento e publicação e veja quantos visitantes abriram o visualizador."
+      }
+    ],
+    "cta": {
+      "title": "Digitalizar um imóvel",
+      "desc": "Duas divisões grátis. Comece no telemóvel.",
+      "start": "Começar"
+    }
+  },
+  "Integration": {
+    "kicker": "Onde já trabalha",
+    "intro": "Ligue o CRM que já usa. Escolha o anúncio. Publique. A visita aparece lá dentro através de um visualizador incorporado ou iframe — nada para copiar, nada para alojar.",
+    "title": "Basta adicionar a Sodar ao seu CRM.",
+    "crmHeader": "O seu CRM · Anúncios",
+    "published": "Visita publicada",
+    "addWalkthrough": "+ adicionar visita",
+    "listings": [
+      {
+        "name": "84 Kesklinn Ave",
+        "meta": "3 divisões · 395.000 €"
+      },
+      {
+        "name": "12 Harbour Res.",
+        "meta": "2 divisões · 260.000 €"
+      },
+      {
+        "name": "7 Nõmme Villa",
+        "meta": "6 divisões · 890.000 €"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Ilustrativo · ainda não medido",
+    "title": "A diferença que uma digitalização faz.",
+    "beforeLabel": "Antes",
+    "afterLabel": "Depois · com a Sodar",
+    "before": [
+      "Marcar um fotógrafo",
+      "Esperar 2–3 dias",
+      "Fotos planas",
+      "Os compradores passam à frente",
+      "Nada medido"
+    ],
+    "after": [
+      "Um telemóvel, um percurso",
+      "Pré-visualização em minutos",
+      "Visita imersiva",
+      "Os compradores entram",
+      "Cada abertura do visualizador, contada"
+    ]
+  },
+  "Workspace": {
+    "kicker": "De volta à secretária",
+    "intro": "Cada imóvel que digitaliza, o seu estado de processamento e publicação, e quantos visitantes abriram o visualizador — num espaço de trabalho por agente.",
+    "title": "Os seus imóveis, sempre à vista.",
+    "cta": "Ver o espaço de trabalho do agente",
+    "mock": {
+      "title": "Espaço de trabalho",
+      "live": "Pré-visualização em direto",
+      "properties": "Imóveis",
+      "cols": [
+        "Imóvel",
+        "Estado",
+        "Aberturas",
+        "Publicação"
+      ],
+      "statuses": {
+        "published": "Publicado",
+        "processing": "Em processamento",
+        "preview": "Pré-visualização",
+        "capturing": "Em captura"
+      },
+      "rows": [
+        {
+          "name": "84 Kesklinn Ave",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "12 Harbour Res.",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "7 Nõmme Villa",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 divisões"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 divisões grátis"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "status": "capturing",
+          "views": "—",
+          "pub": "no telemóvel"
+        }
+      ],
+      "engagement": "Interesse por divisão · 84 Kesklinn Ave",
+      "rooms": [
+        "Sala",
+        "Cozinha",
+        "Quarto principal",
+        "Casa de banho",
+        "Varanda"
+      ],
+      "processing": "Processamento",
+      "jobs": [
+        {
+          "name": "7 Nõmme Villa",
+          "step": "União · quarto",
+          "n": "4 / 6"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "step": "Pré-visualização pronta",
+          "n": "2 / 2"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "step": "Em captura no telemóvel",
+          "n": "—"
+        }
+      ],
+      "week": "Esta semana",
+      "weekTitle": "701 aberturas",
+      "weekSub": "em 2 visitas publicadas"
+    }
+  },
+  "Scans": {
+    "kicker": "Digitalizações desta semana",
+    "title": "Todo o tipo de anúncio se digitaliza da mesma forma.",
+    "items": [
+      {
+        "label": "Apartamento",
+        "meta": "3 divisões · Kesklinn"
+      },
+      {
+        "label": "Construção nova",
+        "meta": "4 divisões · Ülemiste"
+      },
+      {
+        "label": "Moradia",
+        "meta": "6 divisões · Pirita"
+      },
+      {
+        "label": "Arrendamento",
+        "meta": "1 divisão · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "Feito para merecer confiança com anúncios",
+    "title": "A conformidade não é um detalhe tardio.",
+    "items": [
+      {
+        "title": "Permissão de câmara explícita",
+        "desc": "A Sodar só pede a câmara do dispositivo quando inicia uma digitalização e usa-a apenas para essa captura."
+      },
+      {
+        "title": "Aviso de IA",
+        "desc": "Cada visita publicada tem uma etiqueta clara e visível a indicar que é uma reconstrução processada por IA."
+      },
+      {
+        "title": "Segurança",
+        "desc": "Construída desde o primeiro dia a caminho de SOC 2 e RGPD — armazenamento cifrado, credenciais de CRM limitadas, registos de auditoria por imóvel."
+      },
+      {
+        "title": "Os dados são do agente",
+        "desc": "Capturas, visitas e dados de interesse pertencem ao agente. Desligar a Sodar exporta tudo."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "Para fornecedores de CRM",
+    "title": "Distribua a Sodar à sua rede de agentes. Fique com 15%.",
+    "body": "Os parceiros de CRM disponibilizam a Sodar aos seus agentes e recebem uma margem de 15% nas compras de visitas elegíveis — sem mínimo, paga automaticamente.",
+    "cta": "Ver o programa de parceiros"
+  },
+  "PricingTeaser": {
+    "kicker": "Simples por desenho",
+    "title1": "Um imóvel.",
+    "title2": "Um preço. Uma vez.",
+    "body": "Pré-visualize as duas primeiras divisões gratuitamente. Depois a Sodar apresenta um único preço para terminar o imóvel — sem subscrição, sem contrato anual.",
+    "cta": "Como o preço é calculado",
+    "card": {
+      "label": "Apartamento típico de 3 divisões",
+      "price": "99–149 €",
+      "note": "pagamento único · orçamento após a pré-visualização gratuita",
+      "factors": [
+        "Dimensão do imóvel",
+        "Panoramas capturados",
+        "Processamento e computação IA",
+        "Armazenamento e alojamento",
+        "Manutenção contínua"
+      ],
+      "cta": "Digitalizar um imóvel"
+    }
+  },
+  "Language": {
+    "kicker": "Onde quer que os seus compradores procurem",
+    "title1": "Uma visita.",
+    "title2": "Todas as línguas que um comprador lê.",
+    "body": "Publique uma vez — as etiquetas das divisões e os controlos do visualizador seguem a língua definida pelo comprador. O site e o visualizador estão hoje disponíveis em dezasseis línguas."
+  },
+  "Switcher": {
+    "search": "Procurar língua…",
+    "none": "Nenhuma língua corresponde.",
+    "active": "Ativa",
+    "comingSoon": "Brevemente",
+    "choose": "Escolher uma língua",
+    "notice": "{language} ainda não está traduzido — os anúncios continuarão em inglês até estar disponível."
+  },
+  "Footer": {
+    "tagline": "Cada anúncio, digitalizado num lugar que os compradores podem percorrer.",
+    "columns": {
+      "product": {
+        "title": "Produto",
+        "items": [
+          [
+            "Produto",
+            "/product"
+          ],
+          [
+            "Como funciona",
+            "/product#pipeline"
+          ],
+          [
+            "Pré-visualização do espaço de trabalho",
+            "/terminal"
+          ],
+          [
+            "Segurança",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Integrações",
+        "items": [
+          [
+            "Centro de integrações",
+            "/integrations"
+          ],
+          [
+            "Publicação no CRM",
+            "/integrations#crm"
+          ],
+          [
+            "Visualizador incorporado",
+            "/integrations#embed"
+          ],
+          [
+            "Acesso API",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "Parceiros",
+        "items": [
+          [
+            "Programa de parceiros",
+            "/partners"
+          ],
+          [
+            "Tornar-se parceiro",
+            "/partners#apply"
+          ],
+          [
+            "Painel de parceiro",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Empresa",
+        "items": [
+          [
+            "Sobre nós",
+            "/about"
+          ],
+          [
+            "Carreiras",
+            "/careers"
+          ],
+          [
+            "Notas de campo",
+            "/blog"
+          ],
+          [
+            "Empresas",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Legal",
+        "items": [
+          [
+            "Privacidade",
+            "/legal/privacy"
+          ],
+          [
+            "Termos",
+            "/legal/terms"
+          ],
+          [
+            "Tratamento de dados",
+            "/legal/data-processing"
+          ],
+          [
+            "Cookies",
+            "/legal/cookies"
+          ]
+        ]
+      }
+    },
+    "language": "Língua",
+    "social": "Noutros sítios",
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallinn, Estónia · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Produto — Sodar",
+    "metaDesc": "Como uma digitalização guiada por telemóvel se torna uma visita imersiva pronta para o anúncio.",
+    "eyebrow": "O produto",
+    "title": "Um telemóvel, um percurso, um lugar onde os compradores podem entrar.",
+    "sub": "A Sodar transforma digitalizações guiadas em visitas imersivas prontas para o anúncio — capturadas com o telemóvel que já traz consigo, publicadas no CRM que já usa.",
+    "ctaPrimary": "Digitalize o seu primeiro imóvel",
+    "ctaSecondary": "Ver o espaço de trabalho",
+    "flatLabel": "Captura por telemóvel",
+    "revealedLabel": "Visita Sodar",
+    "stagesKicker": "De um percurso a uma visita",
+    "stagesTitle": "Três etapas, um único processo.",
+    "stages": [
+      {
+        "label": "Captura",
+        "sub": "Telemóvel · browser · permissão de câmara",
+        "desc": "Cada divisão é capturada em panorama com orientação em direto do assistente de captura com IA."
+      },
+      {
+        "label": "Processamento",
+        "sub": "União · melhoria · ligação",
+        "desc": "Os panoramas são unidos, limpos e ligados numa única visita. As duas primeiras divisões voltam gratuitamente."
+      },
+      {
+        "label": "Publicação",
+        "sub": "CRM · visualizador incorporado · aparência",
+        "desc": "Ligue o CRM, escolha o anúncio, publique. O visualizador vive dentro do anúncio; afina a sua aparência aprovada."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Experimente num imóvel real",
+      "title": "Pré-visualize duas divisões grátis. Pague uma vez pelo resto.",
+      "sub": "Abra o sodar.io no telemóvel e inicie uma digitalização — sem cartão até desbloquear a visita completa.",
+      "label": "Digitalize o seu primeiro imóvel"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Preços — Sodar",
+    "metaDesc": "Preço único por imóvel, orçamentado após uma pré-visualização gratuita de duas divisões. Preços por volume para agências, margem de 15% para parceiros de CRM.",
+    "eyebrow": "Simples por desenho",
+    "title": "Um imóvel. Um preço. Uma vez.",
+    "sub": "Pré-visualize duas divisões grátis, depois pague um único preço à medida do imóvel. Preços por volume para agências, margem fixa de 15% para parceiros de CRM.",
+    "badge": "A maioria das agências",
+    "tiers": [
+      {
+        "name": "Por imóvel",
+        "price": "Desde 99 €",
+        "unit": "pagamento único, orçamento após a pré-visualização gratuita",
+        "desc": "Para agentes que digitalizam anúncios um de cada vez.",
+        "features": [
+          "Captura guiada por telemóvel + assistente IA",
+          "Duas primeiras divisões grátis em pré-visualização",
+          "Visita completa após um pagamento Stripe",
+          "Publicação no CRM e visualizador incorporado",
+          "Espaço de trabalho com estados e aberturas"
+        ],
+        "cta": "Digitalize o seu primeiro imóvel"
+      },
+      {
+        "name": "Agência",
+        "price": "Volume",
+        "unit": "por imóvel, decrescente com o volume",
+        "desc": "Para agências que publicam dezenas de anúncios por mês.",
+        "features": [
+          "Tudo do plano Por imóvel",
+          "Vista consolidada da agência",
+          "Fila de processamento prioritária",
+          "Configuração de CRM dedicada",
+          "Visualizador co-branded"
+        ],
+        "cta": "Falar com vendas"
+      },
+      {
+        "name": "Parceiro CRM",
+        "price": "15%",
+        "unit": "de margem em compras elegíveis",
+        "desc": "Para fornecedores de CRM que distribuem a Sodar aos seus agentes.",
+        "features": [
+          "Sodar disponível dentro da sua plataforma",
+          "Painel de parceiro",
+          "Pagamento mensal automático",
+          "Sem volume mínimo"
+        ],
+        "cta": "Candidatar-se a parceiro"
+      }
+    ],
+    "factorsKicker": "Como o orçamento é construído",
+    "factorsTitle": "Preço pelo imóvel, não pelo plano.",
+    "factors": [
+      {
+        "title": "Dimensão do imóvel",
+        "desc": "Área e número de divisões capturadas."
+      },
+      {
+        "title": "Volume de panoramas",
+        "desc": "Quantos panoramas a digitalização produziu e a sua resolução."
+      },
+      {
+        "title": "Processamento",
+        "desc": "União, melhoria e a computação IA por trás da visita."
+      },
+      {
+        "title": "Armazenamento e alojamento",
+        "desc": "Manter a visita e o seu visualizador online dentro do seu anúncio."
+      },
+      {
+        "title": "Manutenção",
+        "desc": "Atualizações contínuas do visualizador e a própria integração com o CRM."
+      },
+      {
+        "title": "Margem de parceiro",
+        "desc": "Quando um parceiro de CRM distribui a Sodar, a sua margem está incluída no orçamento."
+      }
+    ],
+    "faqKicker": "Perguntas",
+    "faqTitle": "Perguntas sobre preços.",
+    "faq": [
+      {
+        "q": "Quando vejo o preço?",
+        "a": "Após a pré-visualização gratuita. A Sodar calcula um preço único para completar o imóvel assim que as duas primeiras divisões estão processadas."
+      },
+      {
+        "q": "A pré-visualização é mesmo gratuita?",
+        "a": "Sim — as duas primeiras divisões são processadas numa visita funcional sem pagamento. Só paga para terminar e publicar o imóvel."
+      },
+      {
+        "q": "Há subscrição?",
+        "a": "Não. Cada imóvel é um único pagamento através do Stripe. Nada se renova."
+      },
+      {
+        "q": "Como é paga a margem do parceiro de CRM?",
+        "a": "Automaticamente, mensalmente, sobre compras de visitas elegíveis de agentes na plataforma do parceiro."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Acesso antecipado",
+      "title": "O seu próximo anúncio merece mais do que fotos.",
+      "sub": "Estamos a integrar primeiro um pequeno grupo de agentes com visão de futuro.",
+      "label": "Pedir acesso antecipado"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Pré-visualização do espaço de trabalho — Sodar",
+    "metaDesc": "Uma pré-visualização pública e sem autenticação do espaço de trabalho do agente. Sem dados reais.",
+    "eyebrow": "Pré-visualização pública · sem login, sem dados reais",
+    "title": "Cada imóvel, o seu estado e quem o abriu.",
+    "sub": "Esta é uma pré-visualização estática do espaço de trabalho que cada agente recebe — imóveis, estado de processamento e publicação, e quantos visitantes abriram cada visualizador.",
+    "cta": {
+      "eyebrow": "Seu assim que publicar",
+      "title": "O seu espaço de trabalho começa vazio — até à sua primeira digitalização.",
+      "sub": "Digitalize um imóvel para ver números reais substituírem esta pré-visualização.",
+      "label": "Digitalize o seu primeiro imóvel"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "Parceiros — Sodar",
+    "metaDesc": "As plataformas de CRM ganham uma margem fixa de 15% ao distribuir a Sodar à sua rede de agentes.",
+    "eyebrow": "Para plataformas de CRM",
+    "title": "Distribua a Sodar aos seus agentes. Fique com 15%.",
+    "sub": "Uma margem fixa sobre cada visita elegível comprada pelos agentes da sua plataforma — sem mínimo, paga automaticamente, sem mais desenvolvimento do que um link de referência.",
+    "apply": "Candidatar-se a parceiro",
+    "stepsKicker": "Como funciona",
+    "stepsTitle": "Três passos para uma margem fixa.",
+    "steps": [
+      {
+        "title": "Candidatar",
+        "desc": "Diga-nos que agentes ou agências operam na sua plataforma e aproximadamente quantos anúncios ativos têm."
+      },
+      {
+        "title": "Integrar",
+        "desc": "Um link de referência e, opcionalmente, um ponto de entrada nativo na sua aplicação."
+      },
+      {
+        "title": "Ganhar",
+        "desc": "15% de cada compra de visita elegível de um agente que aderiu através da sua plataforma, pago mensalmente."
+      }
+    ],
+    "dashKicker": "Painel de parceiro",
+    "dashTitle": "Acompanhe agentes referenciados e margem num só lugar.",
+    "dash": [
+      {
+        "label": "Agentes referenciados",
+        "value": "142"
+      },
+      {
+        "label": "Visitas compradas",
+        "value": "3.018"
+      },
+      {
+        "label": "Margem este mês",
+        "value": "6.240 €"
+      }
+    ],
+    "applyKicker": "Começar",
+    "applyTitle": "Candidatar-se a parceiro.",
+    "applyBody": "Uma candidatura curta — avaliamos a adequação da plataforma e o volume típico de anúncios antes de emitir um link de referência.",
+    "form": {
+      "company": "Nome da empresa / plataforma",
+      "companyPh": "Acme CRM",
+      "email": "Email profissional",
+      "emailPh": "voce@empresa.pt",
+      "brokers": "Agentes ativos na sua plataforma",
+      "brokersPh": "ex. 50–200",
+      "submit": "Enviar candidatura"
+    },
+    "faqKicker": "Perguntas",
+    "faqTitle": "Perguntas de parceiros.",
+    "faq": [
+      {
+        "q": "Há um compromisso mínimo?",
+        "a": "Não. A margem de 15% aplica-se desde a primeira visita comprada — sem volume mínimo."
+      },
+      {
+        "q": "De quem é a relação com o agente?",
+        "a": "Sua. A Sodar fatura o agente diretamente e reporta a sua margem; os agentes continuam a ser seus clientes."
+      },
+      {
+        "q": "Podemos colocar a nossa marca na visita?",
+        "a": "Sim — uma conta de parceiro pode aplicar uma moldura co-branded à volta da visita incorporada."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Prontos quando estiver",
+      "title": "Dê aos seus agentes uma razão para publicar mais.",
+      "sub": "Candidate-se uma vez — responderemos com um link de referência e notas de integração.",
+      "label": "Candidatar-se a parceiro"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Integrações — Sodar",
+    "metaDesc": "Ligue um CRM ou conceda acesso API para que as visitas publicadas se incorporem diretamente nos seus anúncios.",
+    "eyebrow": "Centro de integrações",
+    "title": "Ligue uma vez. Cada anúncio depois é um clique.",
+    "sub": "Entre no seu CRM por OAuth, ou conceda à Sodar acesso API limitado — escolha o anúncio, publique, e a visita fica incorporada sem um segundo passo.",
+    "connKicker": "Ligações",
+    "connTitle": "Escolha como a Sodar chega aos seus anúncios.",
+    "conns": [
+      {
+        "name": "OAuth de CRM genérico",
+        "action": "Ligar"
+      },
+      {
+        "name": "Feed MLS City24",
+        "action": "Ligar"
+      },
+      {
+        "name": "API REST personalizada",
+        "action": "Gerar chave"
+      },
+      {
+        "name": "Zapier / webhook",
+        "action": "Brevemente"
+      }
+    ],
+    "notConnected": "estado: não ligado",
+    "mockTitle": "Ligação de demonstração — ativada na fase 2",
+    "embedKicker": "Sem CRM? Sem problema",
+    "embedTitle": "Um iframe, colocado em qualquer lado.",
+    "embedBody": "Cada visita comprada recebe um URL de incorporação estável. Cole-o em qualquer portal imobiliário que aceite um iframe personalizado.",
+    "cta": {
+      "eyebrow": "Traga o seu CRM",
+      "title": "A Sodar encaixa nas ferramentas que já usa.",
+      "sub": "Fale connosco sobre uma integração prioritária, ou comece hoje com a incorporação genérica.",
+      "label": "Explorar o programa de parceiros"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Empresas — Sodar",
+    "metaDesc": "Lugares de equipa, digitalizações em massa e vistas consolidadas do espaço de trabalho para agências.",
+    "eyebrow": "Para agências",
+    "title": "Um espaço de trabalho para cada agente da sua equipa.",
+    "sub": "Digitalização em massa, preços por volume e uma vista consolidada de interesse — construído para agências que publicam dezenas de anúncios por mês.",
+    "talk": "Falar com vendas",
+    "featKicker": "Feito para equipas",
+    "featTitle": "Todo o self-service, mais o que uma agência precisa.",
+    "features": [
+      {
+        "title": "Lugares de equipa",
+        "desc": "Cada agente tem o seu próprio espaço de trabalho; por cima, uma vista consolidada da agência para os responsáveis."
+      },
+      {
+        "title": "Digitalização em massa",
+        "desc": "Digitalize uma carteira inteira de imóveis em vez de um de cada vez."
+      },
+      {
+        "title": "Preços por volume",
+        "desc": "O preço por imóvel desce à medida que o volume mensal da sua agência cresce."
+      },
+      {
+        "title": "Configuração de CRM dedicada",
+        "desc": "Tratamos da ligação OAuth / API para o CRM específico da sua agência."
+      },
+      {
+        "title": "Co-branding",
+        "desc": "Aplique a marca da sua agência a cada visita incorporada."
+      },
+      {
+        "title": "Processamento prioritário",
+        "desc": "Os imóveis Enterprise são processados antes da fila self-service."
+      }
+    ],
+    "priceKicker": "Preços que descem com o volume",
+    "priceTitle1": "Preços por volume,",
+    "priceTitle2": "um só contrato.",
+    "priceBody": "Uma tarifa por imóvel à medida com base no volume mensal, mais uma taxa fixa por lugar de agente. Fale com vendas para um orçamento à dimensão da sua agência.",
+    "priceNote": "Ilustrativo, por imóvel",
+    "tiers": [
+      {
+        "tier": "1–20 imóveis / mês",
+        "price": "desde 99 €"
+      },
+      {
+        "tier": "21–100 imóveis / mês",
+        "price": "desde 79 €"
+      },
+      {
+        "tier": "100+ imóveis / mês",
+        "price": "À medida"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Empresas",
+      "title": "Coloque online os anúncios de toda a sua agência.",
+      "sub": "Configuraremos juntos a sua ligação ao CRM e a estrutura de lugares.",
+      "label": "Falar com vendas"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Segurança e conformidade — Sodar",
+    "metaDesc": "Tratamento de dados, aviso de IA e postura de conformidade do processo da Sodar.",
+    "eyebrow": "Confiança e conformidade",
+    "title": "Feito para merecer confiança com o anúncio de outra pessoa.",
+    "sub": "A Sodar é desenhada desde o primeiro dia a caminho de SOC 2 e RGPD — esta página é o resumo de trabalho; relatórios formais e DPAs disponíveis a pedido.",
+    "detailKicker": "Em detalhe",
+    "detailTitle": "Como os dados realmente circulam.",
+    "details": [
+      {
+        "title": "Acesso à câmara",
+        "desc": "A câmara do dispositivo só é pedida ao iniciar uma digitalização, com permissão explícita, e usada apenas para essa captura."
+      },
+      {
+        "title": "Armazenamento",
+        "desc": "Capturas e visitas renderizadas são cifradas em repouso e em trânsito; o acesso é limitado por conta de agente."
+      },
+      {
+        "title": "Aviso de IA",
+        "desc": "Cada visita pública tem uma etiqueta visível que a identifica como reconstrução processada por IA."
+      },
+      {
+        "title": "Retenção de dados",
+        "desc": "Capturas e visitas são mantidas durante a vida do anúncio mais um período de tolerância fixo, e depois eliminadas a pedido."
+      },
+      {
+        "title": "Controlo de acesso",
+        "desc": "Credenciais de CRM e chaves API estão limitadas às permissões mínimas de que a integração precisa."
+      },
+      {
+        "title": "Subcontratantes",
+        "desc": "Os fornecedores externos de processamento e pagamento estão listados no adendo de tratamento de dados."
+      }
+    ],
+    "seeAlso": "Ver também:",
+    "privacy": "Política de privacidade",
+    "dpa": "Adendo de tratamento de dados",
+    "cta": {
+      "eyebrow": "Perguntas para a sua revisão de segurança",
+      "title": "Precisa de um questionário de segurança preenchido?",
+      "sub": "Contacte-nos e devolveremos um questionário preenchido ou o estado SOC 2 diretamente.",
+      "label": "Contactar segurança"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "Sobre nós — Sodar",
+    "metaDesc": "Porque existe a Sodar: o argumento para tratar um anúncio como um lugar, não como uma galeria de fotos.",
+    "eyebrow": "Empresa",
+    "title": "Uma foto de anúncio é uma promessa. Nós tornamo-la percorrível.",
+    "sub": "A Sodar nasceu de uma observação: os compradores passam pelas fotos planas, mas demoram-se num espaço por onde podem realmente circular. Construímos o processo que transforma o primeiro no segundo.",
+    "thesisKicker": "Tese",
+    "thesisTitle": "A orientação vende anúncios.",
+    "thesis": [
+      "Um comprador a percorrer um portal decide em segundos se fica ou salta, com base em fotos que não dão qualquer noção do fluxo entre divisões. Uma visita responde à pergunta que uma foto não consegue: como é estar realmente ali.",
+      "A Sodar existe para tornar essa visita tão barata e tão rápida que se torne o padrão de todos os anúncios, não um luxo reservado ao topo do mercado."
+    ],
+    "valuesKicker": "Aquilo a que nos mantemos fiéis",
+    "valuesTitle": "Três coisas de que não abdicamos.",
+    "values": [
+      {
+        "title": "Digitalizar, não encenar",
+        "desc": "O imóvel real é a fonte de verdade. O nosso trabalho é reproduzi-lo fielmente, não inventar uma versão de fantasia."
+      },
+      {
+        "title": "Os dados são do agente",
+        "desc": "Capturas, visitas e dados de interesse pertencem ao agente que os criou — sempre exportáveis, nunca bloqueados."
+      },
+      {
+        "title": "Aviso por defeito",
+        "desc": "Um espaço processado por IA deve dizê-lo. Cada visita pública tem etiqueta, sem exceções."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Junte-se a nós",
+      "title": "Somos uma equipa pequena, a integrar cedo.",
+      "sub": "Se a tese fizer sentido para si, estamos a contratar — ou fale-nos simplesmente dos seus anúncios.",
+      "label": "Ver vagas abertas"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Carreiras — Sodar",
+    "metaDesc": "Vagas abertas na Sodar.",
+    "eyebrow": "Carreiras",
+    "title": "Ajude cada anúncio a ser renderizado como deve ser.",
+    "sub": "Equipa pequena, fase inicial, agentes reais já a digitalizar imóveis. Estamos a contratar em reconstrução, produto e go-to-market.",
+    "rolesKicker": "Vagas abertas",
+    "rolesTitle": "A contratar.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Reconstrução",
+        "location": "Remoto / Tallinn"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Produto",
+        "location": "Remoto / Tallinn"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Go-to-market",
+        "location": "Tallinn"
+      }
+    ],
+    "noFit": "Não encontra a vaga certa? Escreva na mesma para careers@sodar.io.",
+    "cta": {
+      "eyebrow": "Ainda sem vaga para si?",
+      "title": "Somos pequenos o suficiente para um email chegar a um fundador.",
+      "sub": "Diga-nos em que gostaria de trabalhar.",
+      "label": "Escrever para careers@sodar.io"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Notas de campo — Sodar",
+    "metaDesc": "Casos de estudo de agentes e agências que digitalizam imóveis com a Sodar.",
+    "eyebrow": "Notas de campo",
+    "title": "Casos de estudo, não comunicados de imprensa.",
+    "sub": "O que realmente acontece quando um imóvel é digitalizado — escrito pela equipa que constrói o processo.",
+    "posts": [
+      {
+        "title": "Como uma agência de Tallinn com 4 agentes reduziu a preparação do anúncio a 15 minutos",
+        "tag": "Caso de estudo",
+        "read": "6 min de leitura"
+      },
+      {
+        "title": "O que mudámos após as primeiras 500 visitas",
+        "tag": "Notas de produto",
+        "read": "4 min de leitura"
+      },
+      {
+        "title": "Ler o interesse por divisão: o que as aberturas do visualizador realmente dizem",
+        "tag": "Guia",
+        "read": "5 min de leitura"
+      },
+      {
+        "title": "Porque é que a pré-visualização gratuita são duas divisões, não uma nem cinco",
+        "tag": "Notas de produto",
+        "read": "3 min de leitura"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Rascunho — fase 1",
+    "notice": "Isto é um marcador estrutural da fase 1, não texto legal definitivo.",
+    "englishOnly": "Os documentos legais estão, por agora, publicados apenas em inglês; prevalece a versão inglesa.",
+    "titles": {
+      "privacy": "Política de privacidade",
+      "terms": "Termos de serviço",
+      "data-processing": "Adendo de tratamento de dados",
+      "cookies": "Política de cookies"
+    }
+  },
+  "Scaffold": {
+    "phase": "Fase 1 — design e estrutura",
+    "note": "Pagamentos, OAuth de CRM e o processo de IA são estados simulados. Sem chamadas ao backend."
+  }
+}

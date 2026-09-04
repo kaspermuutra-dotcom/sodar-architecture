@@ -1,0 +1,1002 @@
+{
+  "Meta": {
+    "title": "Sodar — MI apskates, kas noslēdz vairāk darījumu",
+    "description": "Skenējiet īpašumu ar tālruni. Sodar pārvērš vadītus telpu uzņēmumus iegremdējošā, sludinājumam gatavā apskatē, bez maksas priekšskata pirmās divas telpas un publicē tieši jūsu CRM sludinājumā."
+  },
+  "Nav": {
+    "product": "Produkts",
+    "integrations": "Integrācijas",
+    "partners": "Partneri",
+    "pricing": "Cenas",
+    "signIn": "Pieteikties",
+    "getStarted": "Skenēt īpašumu",
+    "menu": "Atvērt izvēlni",
+    "home": "Sodar sākumlapa"
+  },
+  "Hero": {
+    "headline1": "MI apskates,",
+    "headline2": "kas noslēdz vairāk darījumu.",
+    "sub": "Atveriet sodar.io tālrunī, izstaigājiet īpašumu vienu reizi un saņemiet iegremdējošu apskati, kurā pircēji var ieiet — publicētu sludinājumā, kas jums jau ir.",
+    "ctaPrimary": "Skenējiet savu pirmo īpašumu",
+    "ctaSecondary": "Skatīt, kā tas darbojas",
+    "status": [
+      "UZŅEMŠANA ▸ viesistaba · 12/12 kadri · pārklājums 98%",
+      "ASISTENTS ▸ nolieciet par 4° · turiet · laba gaisma",
+      "SAVIENOŠANA ▸ virtuve · ekvirektangulārs · 8192×4096",
+      "PRIEKŠSKATS ▸ 2 no 6 telpām gatavas · bez maksas",
+      "PIEDĀVĀJUMS ▸ vienreizēja cena aprēķināta · 6 telpas · 14 panorāmas",
+      "PUBLICĒTS ▸ CRM sludinājums #48213 · skatītājs iegults"
+    ]
+  },
+  "Marquee": {
+    "rooms": [
+      "Viesistaba",
+      "Virtuve",
+      "Guļamistaba",
+      "Vannas istaba",
+      "Gaitenis",
+      "Balkons",
+      "Kabinets",
+      "Ēdamistaba",
+      "Viesu istaba",
+      "Ieeja",
+      "Terase",
+      "Garāža"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "Tēze",
+    "lines": [
+      "Neviena sludinājuma fotogrāfija nekad nav izstaigājusi pati sevi.",
+      "Pircēji izlaiž to, kur nevar iekāpt.",
+      "Tāpēc mēs pārvērtām tālruni par skeneri",
+      "un skenējumu par vietu."
+    ],
+    "body": "Mākleris atver sodar.io tālrunī, vienu reizi izstaigā katru telpu, kamēr MI uzņemšanas asistents vada kadru, un saņem apskati, kurā pircēji var pārvietoties. Pirmās divas telpas priekšskatā ir bez maksas. Viens maksājums pabeidz īpašumu. Publicēšana CRM sludinājumā ir viens klikšķis."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "telpas bez maksas",
+        "note": "Darbojošs priekšskats pirms jebkāda maksājuma"
+      },
+      {
+        "label": "vienreizēja cena",
+        "note": "Pielāgota īpašumam. Bez abonementa"
+      },
+      {
+        "label": "partnera peļņa",
+        "note": "CRM, kas izplata Sodar"
+      },
+      {
+        "label": "katrā telpā",
+        "note": "Panorāmas uzņemšana, ko MI vada reāllaikā"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Ritiniet",
+    "frames": "/12 kadri",
+    "assistantLabel": "Uzņemšanas asistents",
+    "assist": [
+      "Nolieciet par 4° uz leju",
+      "Turiet nekustīgi…",
+      "Laba gaisma. Turpiniet griezties",
+      "Pārklāšanās 40% — lēnāk",
+      "Telpa pabeigta"
+    ],
+    "rooms": [
+      "Viesistaba",
+      "Virtuve",
+      "Guļamistaba",
+      "Vannas istaba",
+      "Kabinets",
+      "Balkons"
+    ],
+    "ready": "Gatavs",
+    "locked": "Bloķēts",
+    "photosOnly": "Tikai foto",
+    "panels": {
+      "capture": {
+        "label": "Uzņemšana",
+        "title": "Izstaigājiet īpašumu vienu reizi.",
+        "body": "Atveriet sodar.io tālrunī. Kamera vada jūs no telpas uz telpu, kamēr MI uzņemšanas asistents labo pārklājumu, pozīciju un gaismu — reāllaikā, kamēr vēl esat uz vietas."
+      },
+      "preview": {
+        "label": "Priekšskats",
+        "title": "Divas telpas, pabeigtas, bez maksas.",
+        "body": "Sodar apstrādā pirmos uzņēmumus darbojošā pirmo divu telpu apskatē. Jūs redzat gatavo kvalitāti, pirms kaut ko maksājat."
+      },
+      "unlock": {
+        "label": "Atbloķēt",
+        "title": "Viena cena. Viens maksājums.",
+        "body": "Sodar aprēķina vienreizēju cenu visam īpašumam — ņemot vērā izmēru, panorāmu skaitu, apstrādi, mitināšanu un uzturēšanu. Samaksājiet vienreiz caur Stripe, un pārējās telpas tiek apstrādātas."
+      },
+      "publish": {
+        "label": "Publicēt",
+        "title": "Sludinājumā, kas jums jau ir.",
+        "body": "Pievienojiet savu CRM, izvēlieties īpašuma sludinājumu, publicējiet. Apskate dzīvo sludinājumā caur Sodar iegulto skatītāju — un apstiprinātos izskata iestatījumus varat pielāgot jebkurā laikā."
+      }
+    },
+    "quoteLabel": "Piedāvājums · 84 Kesklinn Ave",
+    "quoteRows": [
+      {
+        "k": "6 telpas · 14 panorāmas",
+        "v": "iekļauts"
+      },
+      {
+        "k": "Apstrāde un MI skaitļošana",
+        "v": "iekļauts"
+      },
+      {
+        "k": "Glabāšana un skatītāja mitināšana",
+        "v": "12 mēneši"
+      },
+      {
+        "k": "Uzturēšana",
+        "v": "iekļauts"
+      }
+    ],
+    "oneTime": "vienreizējs · bez abonementa",
+    "paidLabel": "Samaksāts",
+    "paidBody": "Apstrādā atlikušās 4 telpas. Jūs saņemsiet paziņojumu, kad apskate būs pabeigta.",
+    "pay": "Maksāt ar Stripe",
+    "paying": "Savienojas ar Stripe…",
+    "mockNote": "Demonstrācijas kase — neviena karte netiek debetēta.",
+    "crmHeader": "Jūsu CRM · Sludinājums #48213",
+    "publishBtn": "Publicēt apskati",
+    "publishedBtn": "Publicēts",
+    "viewerBadge": "Sodar skatītājs · 360°",
+    "listingMeta": "3 istabas · 78 m² · 395 000 €",
+    "status": "statuss",
+    "statusPublished": "publicēts",
+    "statusReady": "gatavs",
+    "viewer": "skatītājs",
+    "viewerEmbedded": "iegults",
+    "opened": "atvērts",
+    "openedValue": "128 apmeklētāji"
+  },
+  "Capabilities": {
+    "kicker": "Kas tiek piegādāts",
+    "intro": "Trīs savstarpēji saistītas virsmas — publiska vietne, vadīta mobilā skenēšana un māklera darbvieta — aiz vienas apskates.",
+    "title": "Viens skenējums, septiņas lietas, ko sludinājums iegūst.",
+    "items": [
+      {
+        "title": "Vadīta uzņemšana ar tālruni",
+        "desc": "Bez aprīkojuma, bez fotogrāfa. Kamera vada jūs cauri katrai telpai kā panorāmai, tieši no pārlūka."
+      },
+      {
+        "title": "MI uzņemšanas asistents",
+        "desc": "Reāllaika norādes par pārklājumu, pozīciju un attēla kvalitāti, kamēr vēl esat īpašumā."
+      },
+      {
+        "title": "Bezmaksas divu telpu priekšskats",
+        "desc": "Darbojoša pirmo divu telpu apskate pirms jebkāda maksājuma, lai vispirms novērtētu gatavo kvalitāti."
+      },
+      {
+        "title": "Vienreizēja cena par īpašumu",
+        "desc": "Viens īpašumam pielāgots piedāvājums — panorāmas, skaitļošana, mitināšana un uzturēšana iekļautas."
+      },
+      {
+        "title": "Publicēšana CRM",
+        "desc": "Pievienojiet CRM, izvēlieties sludinājumu, publicējiet. Apskate paliek sludinājumā caur iegulto skatītāju."
+      },
+      {
+        "title": "Apstiprināts izskats",
+        "desc": "Pielāgojiet skatītāja izskatu apstiprināto iestatījumu robežās, lai tas atbilstu sludinājumam, kurā tas dzīvo."
+      },
+      {
+        "title": "Māklera darbvieta",
+        "desc": "Pārvaldiet īpašumus, sekojiet apstrādes un publicēšanas statusam un redziet, cik apmeklētāju atvēra skatītāju."
+      }
+    ],
+    "cta": {
+      "title": "Skenēt īpašumu",
+      "desc": "Divas telpas bez maksas. Sāciet tālrunī.",
+      "start": "Sākt"
+    }
+  },
+  "Integration": {
+    "kicker": "Tur, kur jūs jau strādājat",
+    "intro": "Pievienojiet CRM, ko jau lietojat. Izvēlieties sludinājumu. Publicējiet. Apskate parādās tajā caur iegulto skatītāju vai iframe — nekas nav jākopē, nekas nav jāmitina.",
+    "title": "Vienkārši pievienojiet Sodar savam CRM.",
+    "crmHeader": "Jūsu CRM · Sludinājumi",
+    "published": "Apskate publicēta",
+    "addWalkthrough": "+ pievienot apskati",
+    "listings": [
+      {
+        "name": "84 Kesklinn Ave",
+        "meta": "3 istabas · 395 000 €"
+      },
+      {
+        "name": "12 Harbour Res.",
+        "meta": "2 istabas · 260 000 €"
+      },
+      {
+        "name": "7 Nõmme Villa",
+        "meta": "6 istabas · 890 000 €"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Ilustratīvi · vēl nav izmērīts",
+    "title": "Atšķirība, ko rada skenējums.",
+    "beforeLabel": "Pirms",
+    "afterLabel": "Pēc · ar Sodar",
+    "before": [
+      "Rezervēt fotogrāfu",
+      "Gaidīt 2–3 dienas",
+      "Plakanas fotogrāfijas",
+      "Pircēji ritina garām",
+      "Nekas netiek mērīts"
+    ],
+    "after": [
+      "Viens tālrunis, viena pastaiga",
+      "Priekšskats dažās minūtēs",
+      "Iegremdējoša apskate",
+      "Pircēji ieiet iekšā",
+      "Katra skatītāja atvēršana saskaitīta"
+    ]
+  },
+  "Workspace": {
+    "kicker": "Atpakaļ pie galda",
+    "intro": "Katrs īpašums, ko skenējat, tā apstrādes un publicēšanas statuss un cik apmeklētāju atvēra skatītāju — vienā darbvietā katram mākleram.",
+    "title": "Jūsu īpašumi, vienmēr redzeslokā.",
+    "cta": "Skatīt māklera darbvietu",
+    "mock": {
+      "title": "Darbvieta",
+      "live": "Tiešraides priekšskats",
+      "properties": "Īpašumi",
+      "cols": [
+        "Īpašums",
+        "Statuss",
+        "Skatītājs atvērts",
+        "Publicēšana"
+      ],
+      "statuses": {
+        "published": "Publicēts",
+        "processing": "Apstrādē",
+        "preview": "Priekšskats",
+        "capturing": "Uzņemšana"
+      },
+      "rows": [
+        {
+          "name": "84 Kesklinn Ave",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "12 Harbour Res.",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "7 Nõmme Villa",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 telpas"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 telpas bez maksas"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "status": "capturing",
+          "views": "—",
+          "pub": "tālrunī"
+        }
+      ],
+      "engagement": "Telpu interese · 84 Kesklinn Ave",
+      "rooms": [
+        "Viesistaba",
+        "Virtuve",
+        "Guļamistaba",
+        "Vannas istaba",
+        "Balkons"
+      ],
+      "processing": "Apstrāde",
+      "jobs": [
+        {
+          "name": "7 Nõmme Villa",
+          "step": "Savienošana · guļamistaba",
+          "n": "4 / 6"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "step": "Priekšskats gatavs",
+          "n": "2 / 2"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "step": "Uzņemšana tālrunī",
+          "n": "—"
+        }
+      ],
+      "week": "Šonedēļ",
+      "weekTitle": "701 skatītāja atvēršana",
+      "weekSub": "2 publicētās apskatēs"
+    }
+  },
+  "Scans": {
+    "kicker": "Šīs nedēļas skenējumi",
+    "title": "Katra veida sludinājums tiek skenēts vienādi.",
+    "items": [
+      {
+        "label": "Dzīvoklis",
+        "meta": "3 istabas · Kesklinn"
+      },
+      {
+        "label": "Jaunbūve",
+        "meta": "4 istabas · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 istabas · Pirita"
+      },
+      {
+        "label": "Īres dzīvoklis",
+        "meta": "1 istaba · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "Veidots, lai tam uzticētu sludinājumus",
+    "title": "Atbilstība nav pēcdoma.",
+    "items": [
+      {
+        "title": "Skaidra kameras atļauja",
+        "desc": "Sodar pieprasa ierīces kameru tikai tad, kad sākat skenēšanu, un izmanto to tikai šai uzņemšanai."
+      },
+      {
+        "title": "MI atklāšana",
+        "desc": "Katrai publicētajai apskatei ir skaidrs, redzams marķējums, ka tā ir ar MI apstrādāta rekonstrukcija."
+      },
+      {
+        "title": "Drošība",
+        "desc": "No pirmās dienas veidots SOC 2 un VDAR virzienā — šifrēta glabāšana, ierobežoti CRM akreditācijas dati, audita žurnāli katram īpašumam."
+      },
+      {
+        "title": "Dati pieder mākleram",
+        "desc": "Uzņēmumi, apskates un intereses dati pieder mākleram. Atvienojot Sodar, viss tiek eksportēts."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "CRM nodrošinātājiem",
+    "title": "Izplatiet Sodar savam mākleru tīklam. Paturiet 15%.",
+    "body": "CRM partneri padara Sodar pieejamu saviem mākleriem un saņem 15% peļņu no kvalificētiem apskašu pirkumiem — bez minimuma, izmaksāta automātiski.",
+    "cta": "Skatīt partneru programmu"
+  },
+  "PricingTeaser": {
+    "kicker": "Vienkāršs pēc būtības",
+    "title1": "Viens īpašums.",
+    "title2": "Viena cena. Vienreiz.",
+    "body": "Priekšskatiet pirmās divas telpas bez maksas. Tad Sodar piedāvā vienu vienreizēju cenu īpašuma pabeigšanai — bez abonementa, bez gada līguma.",
+    "cta": "Kā tiek aprēķināta cena",
+    "card": {
+      "label": "Tipisks 3 istabu dzīvoklis",
+      "price": "99–149 €",
+      "note": "vienreizējs · piedāvājums pēc bezmaksas priekšskata",
+      "factors": [
+        "Īpašuma izmērs",
+        "Uzņemtās panorāmas",
+        "Apstrāde un MI skaitļošana",
+        "Glabāšana un skatītāja mitināšana",
+        "Pastāvīga uzturēšana"
+      ],
+      "cta": "Skenēt īpašumu"
+    }
+  },
+  "Language": {
+    "kicker": "Lai kur jūsu pircēji meklētu",
+    "title1": "Viena apskate.",
+    "title2": "Katra valoda, ko pircējs lasa.",
+    "body": "Publicējiet vienreiz — skatītāja telpu nosaukumi un vadīklas seko valodai, ko pircējs iestatījis. Vietne un skatītājs šodien pieejami sešpadsmit valodās."
+  },
+  "Switcher": {
+    "search": "Meklēt valodas…",
+    "none": "Nav atbilstošas valodas.",
+    "active": "Aktīva",
+    "comingSoon": "Drīzumā",
+    "choose": "Izvēlieties valodu",
+    "notice": "{language} vēl nav iztulkota — sludinājumi būs angļu valodā, līdz tulkojums būs gatavs."
+  },
+  "Footer": {
+    "tagline": "Katrs sludinājums, skenēts par vietu, kuru pircēji var izstaigāt.",
+    "columns": {
+      "product": {
+        "title": "Produkts",
+        "items": [
+          [
+            "Produkts",
+            "/product"
+          ],
+          [
+            "Kā tas darbojas",
+            "/product#pipeline"
+          ],
+          [
+            "Darbvietas priekšskats",
+            "/terminal"
+          ],
+          [
+            "Drošība",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Integrācijas",
+        "items": [
+          [
+            "Integrāciju centrs",
+            "/integrations"
+          ],
+          [
+            "Publicēšana CRM",
+            "/integrations#crm"
+          ],
+          [
+            "Iegultais skatītājs",
+            "/integrations#embed"
+          ],
+          [
+            "API piekļuve",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "Partneri",
+        "items": [
+          [
+            "Partneru programma",
+            "/partners"
+          ],
+          [
+            "Kļūt par partneri",
+            "/partners#apply"
+          ],
+          [
+            "Partnera panelis",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Uzņēmums",
+        "items": [
+          [
+            "Par mums",
+            "/about"
+          ],
+          [
+            "Karjera",
+            "/careers"
+          ],
+          [
+            "Lauka piezīmes",
+            "/blog"
+          ],
+          [
+            "Uzņēmumiem",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Juridiskā informācija",
+        "items": [
+          [
+            "Privātums",
+            "/legal/privacy"
+          ],
+          [
+            "Noteikumi",
+            "/legal/terms"
+          ],
+          [
+            "Datu apstrāde",
+            "/legal/data-processing"
+          ],
+          [
+            "Sīkdatnes",
+            "/legal/cookies"
+          ]
+        ]
+      }
+    },
+    "language": "Valoda",
+    "social": "Citur",
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallina, Igaunija · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Produkts — Sodar",
+    "metaDesc": "Kā vadīta tālruņa skenēšana kļūst par iegremdējošu, sludinājumam gatavu apskati.",
+    "eyebrow": "Produkts",
+    "title": "Tālrunis, viena pastaiga, vieta, kur pircēji var ieiet.",
+    "sub": "Sodar pārvērš vadītus īpašumu skenējumus iegremdējošās, sludinājumam gatavās apskatēs — uzņemtās ar tālruni, kas jums jau ir līdzi, publicētās CRM, ko jau lietojat.",
+    "ctaPrimary": "Skenējiet savu pirmo īpašumu",
+    "ctaSecondary": "Skatīt darbvietu",
+    "flatLabel": "Tālruņa uzņēmums",
+    "revealedLabel": "Sodar apskate",
+    "stagesKicker": "No pastaigas līdz apskatei",
+    "stagesTitle": "Trīs posmi, viens process.",
+    "stages": [
+      {
+        "label": "Uzņemšana",
+        "sub": "Tālrunis · pārlūks · kameras atļauja",
+        "desc": "Katra telpa tiek uzņemta kā panorāma ar MI uzņemšanas asistenta reāllaika norādēm."
+      },
+      {
+        "label": "Apstrāde",
+        "sub": "Savienošana · uzlabošana · sasaiste",
+        "desc": "Panorāmas tiek savienotas, attīrītas un sasaistītas vienā apskatē. Pirmās divas telpas atgriežas bez maksas."
+      },
+      {
+        "label": "Publicēšana",
+        "sub": "CRM · iegultais skatītājs · izskats",
+        "desc": "Pievienojiet CRM, izvēlieties sludinājumu, publicējiet. Skatītājs dzīvo sludinājumā; jūs pielāgojat tā apstiprināto izskatu."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Izmēģiniet uz īsta īpašuma",
+      "title": "Priekšskatiet divas telpas bez maksas. Samaksājiet vienreiz par pārējo.",
+      "sub": "Atveriet sodar.io tālrunī un sāciet skenēšanu — karte nav vajadzīga, līdz atbloķējat pilno apskati.",
+      "label": "Skenējiet savu pirmo īpašumu"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Cenas — Sodar",
+    "metaDesc": "Vienreizēja cena par īpašumu, piedāvāta pēc bezmaksas divu telpu priekšskata. Apjoma cenas aģentūrām, 15% peļņa CRM partneriem.",
+    "eyebrow": "Vienkāršs pēc būtības",
+    "title": "Viens īpašums. Viena cena. Vienreiz.",
+    "sub": "Priekšskatiet divas telpas bez maksas, tad samaksājiet vienu vienreizēju, īpašumam pielāgotu cenu. Apjoma cenas aģentūrām, pastāvīga 15% peļņa CRM partneriem.",
+    "badge": "Vairums aģentūru",
+    "tiers": [
+      {
+        "name": "Par īpašumu",
+        "price": "No 99 €",
+        "unit": "vienreizējs, piedāvājums pēc bezmaksas priekšskata",
+        "desc": "Mākleriem, kas skenē sludinājumus pa vienam.",
+        "features": [
+          "Vadīta uzņemšana ar tālruni + MI asistents",
+          "Pirmās divas telpas bez maksas priekšskatā",
+          "Pilna apskate pēc viena Stripe maksājuma",
+          "Publicēšana CRM un iegultais skatītājs",
+          "Darbvieta ar statusiem un skatītāja atvēršanām"
+        ],
+        "cta": "Skenējiet savu pirmo īpašumu"
+      },
+      {
+        "name": "Aģentūra",
+        "price": "Apjoms",
+        "unit": "par īpašumu, samazinās līdz ar apjomu",
+        "desc": "Aģentūrām, kas publicē desmitiem sludinājumu mēnesī.",
+        "features": [
+          "Viss no plāna Par īpašumu",
+          "Aģentūras mēroga darbvietas kopsavilkums",
+          "Prioritāra apstrādes rinda",
+          "Individuāla CRM iestatīšana",
+          "Kopzīmola skatītājs"
+        ],
+        "cta": "Sazināties ar pārdošanu"
+      },
+      {
+        "name": "CRM partneris",
+        "price": "15%",
+        "unit": "peļņa no kvalificētiem pirkumiem",
+        "desc": "CRM nodrošinātājiem, kas izplata Sodar saviem mākleriem.",
+        "features": [
+          "Sodar pieejams jūsu platformā",
+          "Partnera panelis",
+          "Ikmēneša automātiska izmaksa",
+          "Bez minimālā apjoma"
+        ],
+        "cta": "Pieteikties kā partnerim"
+      }
+    ],
+    "factorsKicker": "Kā veidojas piedāvājums",
+    "factorsTitle": "Cena pēc īpašuma, nevis pēc plāna.",
+    "factors": [
+      {
+        "title": "Īpašuma izmērs",
+        "desc": "Platība un uzņemto telpu skaits."
+      },
+      {
+        "title": "Panorāmu apjoms",
+        "desc": "Cik panorāmu skenējums saražoja un kādā izšķirtspējā."
+      },
+      {
+        "title": "Apstrāde",
+        "desc": "Savienošana, uzlabošana un MI skaitļošana aiz apskates."
+      },
+      {
+        "title": "Glabāšana un mitināšana",
+        "desc": "Apskates un tās skatītāja uzturēšana tiešsaistē jūsu sludinājumā."
+      },
+      {
+        "title": "Uzturēšana",
+        "desc": "Pastāvīgi skatītāja atjauninājumi un pati CRM integrācija."
+      },
+      {
+        "title": "Partnera peļņa",
+        "desc": "Ja Sodar izplata CRM partneris, tā peļņa ir iekļauta piedāvājumā."
+      }
+    ],
+    "faqKicker": "Jautājumi",
+    "faqTitle": "Cenu BUJ.",
+    "faq": [
+      {
+        "q": "Kad es redzu cenu?",
+        "a": "Pēc bezmaksas priekšskata. Sodar aprēķina vienreizēju cenu īpašuma pabeigšanai, tiklīdz pirmās divas telpas ir apstrādātas."
+      },
+      {
+        "q": "Vai priekšskats tiešām ir bez maksas?",
+        "a": "Jā — pirmās divas telpas tiek apstrādātas darbojošā apskatē bez maksājuma. Jūs maksājat tikai par īpašuma pabeigšanu un publicēšanu."
+      },
+      {
+        "q": "Vai ir abonements?",
+        "a": "Nē. Katrs īpašums ir viens vienreizējs maksājums caur Stripe. Nekas neatjaunojas."
+      },
+      {
+        "q": "Kā tiek izmaksāta CRM partnera peļņa?",
+        "a": "Automātiski, katru mēnesi, no partnera platformas mākleru kvalificētiem apskašu pirkumiem."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Agrīna piekļuve",
+      "title": "Jūsu nākamais sludinājums ir pelnījis vairāk nekā fotogrāfijas.",
+      "sub": "Vispirms uzņemam nelielu grupu uz nākotni vērstu mākleru.",
+      "label": "Pieprasīt agrīnu piekļuvi"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Darbvietas priekšskats — Sodar",
+    "metaDesc": "Publisks, bez pieteikšanās pieejams māklera darbvietas priekšskats. Bez reāliem datiem.",
+    "eyebrow": "Publisks priekšskats · bez pieteikšanās, bez reāliem datiem",
+    "title": "Katrs īpašums, tā statuss un kas to atvēra.",
+    "sub": "Šis ir statisks priekšskats darbvietai, ko saņem katrs mākleris — īpašumi, apstrādes un publicēšanas statuss un cik apmeklētāju atvēra katras apskates skatītāju.",
+    "cta": {
+      "eyebrow": "Jūsu, tiklīdz publicējat",
+      "title": "Jūsu darbvieta sākas tukša — līdz pirmajam skenējumam.",
+      "sub": "Skenējiet īpašumu, lai reāli skaitļi aizstātu šo priekšskatu.",
+      "label": "Skenējiet savu pirmo īpašumu"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "Partneri — Sodar",
+    "metaDesc": "CRM platformas nopelna pastāvīgu 15% peļņu, izplatot Sodar savam mākleru tīklam.",
+    "eyebrow": "CRM platformām",
+    "title": "Izplatiet Sodar saviem mākleriem. Paturiet 15%.",
+    "sub": "Pastāvīga peļņa no katras kvalificētas apskates, ko iegādājas jūsu platformas mākleri — bez minimuma, izmaksāta automātiski, bez izstrādes darba, izņemot ieteikuma saiti.",
+    "apply": "Pieteikties kā partnerim",
+    "stepsKicker": "Kā tas darbojas",
+    "stepsTitle": "Trīs soļi līdz pastāvīgai peļņai.",
+    "steps": [
+      {
+        "title": "Piesakieties",
+        "desc": "Pastāstiet, kuri mākleri vai aģentūras darbojas jūsu platformā un aptuveni cik aktīvu sludinājumu tiem ir."
+      },
+      {
+        "title": "Integrējiet",
+        "desc": "Ieteikuma saite un pēc izvēles vietējs ieejas punkts jūsu lietotnē jūsu lietotājiem."
+      },
+      {
+        "title": "Pelniet",
+        "desc": "15% no katra kvalificēta apskates pirkuma, ko veic mākleris, kurš pievienojies caur jūsu platformu, izmaksāts katru mēnesi."
+      }
+    ],
+    "dashKicker": "Partnera panelis",
+    "dashTitle": "Sekojiet ieteiktajiem mākleriem un peļņai vienuviet.",
+    "dash": [
+      {
+        "label": "Ieteiktie mākleri",
+        "value": "142"
+      },
+      {
+        "label": "Iegādātās apskates",
+        "value": "3 018"
+      },
+      {
+        "label": "Peļņa šomēnes",
+        "value": "6 240 €"
+      }
+    ],
+    "applyKicker": "Sākt",
+    "applyTitle": "Pieteikties kā partnerim.",
+    "applyBody": "Īss pieteikums — mēs izvērtējam platformas atbilstību un tipisko sludinājumu apjomu, pirms izsniedzam ieteikuma saiti.",
+    "form": {
+      "company": "Uzņēmuma / platformas nosaukums",
+      "companyPh": "Acme CRM",
+      "email": "Darba e-pasts",
+      "emailPh": "jus@uznemums.lv",
+      "brokers": "Aktīvie mākleri jūsu platformā",
+      "brokersPh": "piem., 50–200",
+      "submit": "Iesniegt pieteikumu"
+    },
+    "faqKicker": "Jautājumi",
+    "faqTitle": "Partneru BUJ.",
+    "faq": [
+      {
+        "q": "Vai ir minimālās saistības?",
+        "a": "Nē. 15% peļņa attiecas no pirmās iegādātās apskates — bez apjoma sliekšņa."
+      },
+      {
+        "q": "Kam pieder attiecības ar mākleri?",
+        "a": "Jums. Sodar izraksta rēķinu mākleram tieši un atskaitās par jūsu peļņu; mākleri paliek jūsu klienti."
+      },
+      {
+        "q": "Vai varam apskatei pievienot savu zīmolu?",
+        "a": "Jā — partnera līmeņa konts var pievienot kopzīmola ietvaru ap iegulto apskati."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Gatavi, kad jūs esat",
+      "title": "Dodiet saviem mākleriem iemeslu publicēt vairāk.",
+      "sub": "Piesakieties vienreiz — mēs atbildēsim ar ieteikuma saiti un integrācijas piezīmēm.",
+      "label": "Pieteikties kā partnerim"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Integrācijas — Sodar",
+    "metaDesc": "Pievienojiet CRM vai piešķiriet API piekļuvi, lai publicētās apskates tiktu iegultas tieši jūsu sludinājumos.",
+    "eyebrow": "Integrāciju centrs",
+    "title": "Pievienojiet vienreiz. Katrs nākamais sludinājums ir viens klikšķis.",
+    "sub": "Pieslēdzieties savam CRM ar OAuth vai piešķiriet Sodar ierobežotu API piekļuvi — izvēlieties sludinājumu, publicējiet, un apskate tiek iegulta bez otra soļa.",
+    "connKicker": "Savienojumi",
+    "connTitle": "Izvēlieties, kā Sodar sasniedz jūsu sludinājumus.",
+    "conns": [
+      {
+        "name": "Vispārīgs CRM OAuth",
+        "action": "Pievienot"
+      },
+      {
+        "name": "City24 MLS plūsma",
+        "action": "Pievienot"
+      },
+      {
+        "name": "Pielāgots REST API",
+        "action": "Ģenerēt atslēgu"
+      },
+      {
+        "name": "Zapier / webhook",
+        "action": "Drīzumā"
+      }
+    ],
+    "notConnected": "statuss: nav pievienots",
+    "mockTitle": "Demonstrācijas savienojums — tiks pieslēgts 2. posmā",
+    "embedKicker": "Nav CRM? Nav problēmu",
+    "embedTitle": "Viens iframe, ievietojams jebkur.",
+    "embedBody": "Katra iegādātā apskate saņem stabilu iegulšanas URL. Ielīmējiet to jebkurā sludinājumu portālā, kas pieņem pielāgotu iframe.",
+    "cta": {
+      "eyebrow": "Ņemiet līdzi savu CRM",
+      "title": "Sodar iederas rīkos, ko jau lietojat.",
+      "sub": "Runājiet ar mums par prioritāru integrāciju vai sāciet jau šodien ar vispārīgo iegulšanu.",
+      "label": "Izpētīt partneru programmu"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Uzņēmumiem — Sodar",
+    "metaDesc": "Komandas vietas, masveida skenēšana un kopīgi darbvietas kopsavilkumi aģentūrām.",
+    "eyebrow": "Aģentūrām",
+    "title": "Viena darbvieta katram jūsu komandas mākleram.",
+    "sub": "Masveida skenēšana, apjoma cenas un aģentūras mēroga intereses kopsavilkums — veidots aģentūrām, kas publicē desmitiem sludinājumu mēnesī.",
+    "talk": "Sazināties ar pārdošanu",
+    "featKicker": "Veidots komandām",
+    "featTitle": "Viss no pašapkalpošanās, plus tas, kas vajadzīgs aģentūrai.",
+    "features": [
+      {
+        "title": "Komandas vietas",
+        "desc": "Katrs mākleris saņem savu darbvietu; virs tās — aģentūras mēroga kopsavilkums vadītājiem."
+      },
+      {
+        "title": "Masveida skenēšana",
+        "desc": "Skenējiet visu īpašumu portfeli, nevis pa vienam."
+      },
+      {
+        "title": "Apjoma cenas",
+        "desc": "Cena par īpašumu samazinās, pieaugot jūsu aģentūras mēneša apjomam."
+      },
+      {
+        "title": "Individuāla CRM iestatīšana",
+        "desc": "Mēs parūpējamies par OAuth / API pieslēgumu jūsu aģentūras konkrētajam CRM."
+      },
+      {
+        "title": "Kopzīmols",
+        "desc": "Pievienojiet savas aģentūras zīmi katrai iegultajai apskatei."
+      },
+      {
+        "title": "Prioritāra apstrāde",
+        "desc": "Uzņēmumu īpašumi tiek apstrādāti pirms pašapkalpošanās rindas."
+      }
+    ],
+    "priceKicker": "Cenas, kas samazinās līdz ar apjomu",
+    "priceTitle1": "Apjoma cenas,",
+    "priceTitle2": "viens līgums.",
+    "priceBody": "Individuāla cena par īpašumu, balstīta uz mēneša apjomu, plus fiksēta maksa par katru māklera vietu. Sazinieties ar pārdošanu, lai saņemtu jūsu aģentūrai piemērotu piedāvājumu.",
+    "priceNote": "Ilustratīvi, par īpašumu",
+    "tiers": [
+      {
+        "tier": "1–20 īpašumi / mēn.",
+        "price": "no 99 €"
+      },
+      {
+        "tier": "21–100 īpašumi / mēn.",
+        "price": "no 79 €"
+      },
+      {
+        "tier": "100+ īpašumi / mēn.",
+        "price": "Individuāli"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Uzņēmumiem",
+      "title": "Ievietojiet tiešsaistē visas savas aģentūras sludinājumus.",
+      "sub": "Mēs kopā iestatīsim jūsu CRM savienojumu un vietu struktūru.",
+      "label": "Sazināties ar pārdošanu"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Drošība un atbilstība — Sodar",
+    "metaDesc": "Datu apstrāde, MI atklāšana un Sodar procesa atbilstības nostāja.",
+    "eyebrow": "Uzticība un atbilstība",
+    "title": "Veidots, lai tam uzticētu kāda cita sludinājumu.",
+    "sub": "Sodar no pirmās dienas ir veidots SOC 2 un VDAR virzienā — šī lapa ir darba kopsavilkums; oficiālie ziņojumi un datu apstrādes līgumi pieejami pēc pieprasījuma.",
+    "detailKicker": "Detalizēti",
+    "detailTitle": "Kā dati patiesībā pārvietojas.",
+    "details": [
+      {
+        "title": "Kameras piekļuve",
+        "desc": "Ierīces kamera tiek pieprasīta tikai skenēšanas sākumā, ar skaidru atļauju, un izmantota tikai šai uzņemšanai."
+      },
+      {
+        "title": "Glabāšana",
+        "desc": "Uzņēmumi un renderētās apskates ir šifrētas glabāšanā un pārsūtīšanā; piekļuve ierobežota katram māklera kontam."
+      },
+      {
+        "title": "MI atklāšana",
+        "desc": "Katrai publiskai apskatei ir redzams marķējums, kas to identificē kā ar MI apstrādātu rekonstrukciju."
+      },
+      {
+        "title": "Datu glabāšanas ilgums",
+        "desc": "Uzņēmumi un apskates tiek glabātas sludinājuma darbības laiku plus noteiktu papildu periodu, pēc tam pēc pieprasījuma dzēstas."
+      },
+      {
+        "title": "Piekļuves kontrole",
+        "desc": "CRM akreditācijas dati un API atslēgas ir ierobežotas līdz minimālajām atļaujām, kas integrācijai nepieciešamas."
+      },
+      {
+        "title": "Apakšapstrādātāji",
+        "desc": "Trešo pušu apstrādes un maksājumu pakalpojumu sniedzēji ir uzskaitīti datu apstrādes pielikumā."
+      }
+    ],
+    "seeAlso": "Skatīt arī:",
+    "privacy": "Privātuma politika",
+    "dpa": "Datu apstrādes pielikums",
+    "cta": {
+      "eyebrow": "Jautājumi drošības pārbaudei",
+      "title": "Nepieciešama aizpildīta drošības anketa?",
+      "sub": "Sazinieties, un mēs tieši atsūtīsim aizpildītu anketu vai SOC 2 statusu.",
+      "label": "Sazināties ar drošības komandu"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "Par mums — Sodar",
+    "metaDesc": "Kāpēc pastāv Sodar: arguments par to, ka sludinājums jāuztver kā vieta, nevis fotogalerija.",
+    "eyebrow": "Uzņēmums",
+    "title": "Sludinājuma fotogrāfija ir solījums. Mēs to padarām izstaigājamu.",
+    "sub": "Sodar sākās ar vienu novērojumu: pircēji ritina garām plakanām fotogrāfijām, bet uzkavējas telpā, kurā var patiešām pārvietoties. Mēs veidojam procesu, kas pirmo pārvērš otrajā.",
+    "thesisKicker": "Tēze",
+    "thesisTitle": "Orientēšanās pārdod sludinājumus.",
+    "thesis": [
+      "Pircējs, kas ritina sludinājumu portālu, sekundēs izlemj palikt vai izlaist, balstoties uz fotogrāfijām, kas nedod nekādu izpratni par plūsmu starp telpām. Apskate atbild uz jautājumu, uz kuru fotogrāfija nevar: kāda ir sajūta tur patiešām atrasties.",
+      "Sodar pastāv, lai padarītu šo apskati tik lētu un ātru, ka tā kļūst par noklusējumu katram sludinājumam, nevis greznību, kas rezervēta tirgus augšgalam."
+    ],
+    "valuesKicker": "Pie kā mēs turamies",
+    "valuesTitle": "Trīs lietas, ko mēs nemainīsim.",
+    "values": [
+      {
+        "title": "Skenēt, nevis iestudēt",
+        "desc": "Īstais īpašums ir patiesības avots. Mūsu darbs ir to uzticami attēlot, nevis izdomāt fantāzijas versiju."
+      },
+      {
+        "title": "Dati pieder mākleram",
+        "desc": "Uzņēmumi, apskates un intereses dati pieder mākleram, kas tos radīja — vienmēr eksportējami, nekad neieslēgti."
+      },
+      {
+        "title": "Atklāšana pēc noklusējuma",
+        "desc": "Ar MI apstrādātai telpai tas ir jāsaka. Katra publiskā apskate ir marķēta, bez izņēmumiem."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Pievienojieties mums",
+      "title": "Mēs esam maza komanda, kas uzņem agrīni.",
+      "sub": "Ja tēze uzrunā, mēs pieņemam darbā — vai vienkārši pastāstiet mums par saviem sludinājumiem.",
+      "label": "Skatīt atvērtās vakances"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Karjera — Sodar",
+    "metaDesc": "Atvērtās vakances Sodar.",
+    "eyebrow": "Karjera",
+    "title": "Palīdziet katram sludinājumam renderēties pareizi.",
+    "sub": "Maza komanda, agrīns posms, īsti mākleri jau skenē īpašumus. Mēs pieņemam darbā rekonstrukcijas, produkta un go-to-market jomās.",
+    "rolesKicker": "Atvērtās vakances",
+    "rolesTitle": "Pašlaik meklējam.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Rekonstrukcija",
+        "location": "Attālināti / Tallina"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Produkts",
+        "location": "Attālināti / Tallina"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Go-to-market",
+        "location": "Tallina"
+      }
+    ],
+    "noFit": "Neredzat piemērotu? Rakstiet tik un tā uz careers@sodar.io.",
+    "cta": {
+      "eyebrow": "Vēl nav piemērotas vakances?",
+      "title": "Mēs esam pietiekami mazi, lai viens e-pasts sasniegtu dibinātāju.",
+      "sub": "Pastāstiet, pie kā vēlētos strādāt.",
+      "label": "Rakstīt uz careers@sodar.io"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Lauka piezīmes — Sodar",
+    "metaDesc": "Gadījumu izpētes no mākleriem un aģentūrām, kas skenē īpašumus ar Sodar.",
+    "eyebrow": "Lauka piezīmes",
+    "title": "Gadījumu izpētes, nevis preses relīzes.",
+    "sub": "Kas patiesībā notiek, kad īpašums tiek skenēts — rakstījusi komanda, kas veido procesu.",
+    "posts": [
+      {
+        "title": "Kā Tallinas aģentūra ar 4 mākleriem saīsināja sludinājuma sagatavošanu līdz 15 minūtēm",
+        "tag": "Gadījuma izpēte",
+        "read": "6 min lasīšana"
+      },
+      {
+        "title": "Ko mēs mainījām pēc pirmajām 500 apskatēm",
+        "tag": "Produkta piezīmes",
+        "read": "4 min lasīšana"
+      },
+      {
+        "title": "Telpu intereses lasīšana: ko skatītāja atvēršanas patiesībā stāsta",
+        "tag": "Ceļvedis",
+        "read": "5 min lasīšana"
+      },
+      {
+        "title": "Kāpēc bezmaksas priekšskats ir divas telpas, nevis viena vai piecas",
+        "tag": "Produkta piezīmes",
+        "read": "3 min lasīšana"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Melnraksts — 1. posms",
+    "notice": "Šis ir 1. posma strukturāls vietturis, nevis galīgais juridiskais teksts.",
+    "englishOnly": "Juridiskie dokumenti pašlaik ir publicēti tikai angļu valodā; noteicošā ir angļu versija.",
+    "titles": {
+      "privacy": "Privātuma politika",
+      "terms": "Pakalpojuma noteikumi",
+      "data-processing": "Datu apstrādes pielikums",
+      "cookies": "Sīkdatņu politika"
+    }
+  },
+  "Scaffold": {
+    "phase": "1. posms — dizains un struktūra",
+    "note": "Maksājumi, CRM OAuth un MI process ir simulēti vietturu stāvokļi. Bez aizmugursistēmas izsaukumiem."
+  }
+}

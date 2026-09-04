@@ -1,56 +1,46 @@
 import type { Metadata } from "next";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { localeAlternates } from "@/lib/seo";
 import { PageShell } from "@/components/page-shell";
 import { PageHero } from "@/components/page-hero";
 import { CtaBanner } from "@/components/cta-banner";
 import { IntegrationShowcase } from "@/components/integration-showcase";
 
-export const metadata: Metadata = {
-  title: "Integrations — Sodar",
-  description: "Connect a CRM or grant API access so new listings auto-embed their Sodar walkthrough.",
-};
+type Params = { params: Promise<{ locale: string }> };
 
-const CRMS: [string, string][] = [
-  ["Generic CRM OAuth", "Connect"],
-  ["City24 MLS feed", "Connect"],
-  ["Custom REST API", "Generate key"],
-  ["Zapier / webhook", "Coming soon"],
-];
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "IntegrationsPage" });
+  return { title: t("metaTitle"), description: t("metaDesc"), alternates: localeAlternates(locale, "/integrations") };
+}
 
-export default async function IntegrationsPage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function IntegrationsPage({ params }: Params) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("IntegrationsPage");
+  const conns = t.raw("conns") as { name: string; action: string }[];
 
   return (
     <PageShell>
-      <PageHero
-        eyebrow="Integration hub"
-        title="Connect once. Every listing after that is automatic."
-        subtitle="OAuth into your CRM, or grant Sodar scoped API access — new listings scan, render, and embed without a second click."
-      />
+      <PageHero eyebrow={t("eyebrow")} title={t("title")} subtitle={t("sub")} />
 
       <IntegrationShowcase />
 
       <section id="api" className="section-shell border-t border-border">
-        <div className="section-kicker">Connections</div>
-        <h2 className="section-title mt-7">Pick how Sodar reaches your listings.</h2>
+        <p className="section-kicker">{t("connKicker")}</p>
+        <h2 className="section-title mt-7">{t("connTitle")}</h2>
         <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2">
-          {CRMS.map(([name, action]) => (
-            <div key={name} className="card-scan flex items-center justify-between gap-4 bg-bg p-6">
+          {conns.map((c) => (
+            <div key={c.name} className="card-scan flex items-center justify-between gap-4 bg-bg p-6">
               <div>
-                <p className="text-text">{name}</p>
+                <p className="text-text">{c.name}</p>
                 <p className="mt-1 font-mono text-[11px] text-text-muted">
                   {/* TODO(phase-2): real CRM OAuth / API-key issuance flow. */}
-                  status: not connected
+                  {t("notConnected")}
                 </p>
               </div>
-              <button
-                type="button"
-                disabled
-                title="Mock connection — wired in phase 2"
-                className="button-mini shrink-0 opacity-60"
-              >
-                {action}
+              <button type="button" disabled title={t("mockTitle")} className="button-mini shrink-0 opacity-60">
+                {c.action}
               </button>
             </div>
           ))}
@@ -58,14 +48,11 @@ export default async function IntegrationsPage({ params }: { params: Promise<{ l
       </section>
 
       <section id="embed" className="section-shell border-t border-border">
-        <div className="section-kicker">No CRM? No problem</div>
-        <h2 className="section-title mt-7">One iframe, dropped anywhere.</h2>
-        <p className="mt-7 max-w-xl text-lg text-text-muted">
-          Every unlocked walkthrough gets a stable embed URL. Paste it into any listing portal that accepts a
-          custom iframe.
-        </p>
-        <div className="mt-8 overflow-x-auto rounded-2xl border border-border bg-bg-raised p-5">
-          <code className="whitespace-pre font-mono text-sm text-accent">
+        <p className="section-kicker">{t("embedKicker")}</p>
+        <h2 className="section-title mt-7">{t("embedTitle")}</h2>
+        <p className="mt-7 max-w-xl text-lg text-text-muted">{t("embedBody")}</p>
+        <div className="mt-8 overflow-x-auto rounded-2xl border border-border bg-bg-raised p-5" dir="ltr">
+          <code className="whitespace-pre font-mono text-sm text-text">
 {`<iframe
   src="https://view.sodar.io/l/84-kesklinn-ave"
   width="100%" height="600" loading="lazy"
@@ -75,13 +62,7 @@ export default async function IntegrationsPage({ params }: { params: Promise<{ l
         </div>
       </section>
 
-      <CtaBanner
-        eyebrow="Bring your CRM"
-        title="Sodar fits the tools you already use."
-        subtitle="Talk to us about a launch-priority integration, or start with the generic embed today."
-        ctaLabel="Explore the partner program"
-        ctaHref="/partners"
-      />
+      <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/partners" />
     </PageShell>
   );
 }

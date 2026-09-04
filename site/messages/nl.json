@@ -1,0 +1,1002 @@
+{
+  "Meta": {
+    "title": "Sodar — AI-rondleidingen die meer deals sluiten",
+    "description": "Scan een woning met je telefoon. Sodar zet begeleide kameropnames per kamer om in een meeslepende, advertentieklare rondleiding, toont de eerste twee kamers gratis als preview en publiceert rechtstreeks in je CRM-advertentie."
+  },
+  "Nav": {
+    "product": "Product",
+    "integrations": "Integraties",
+    "partners": "Partners",
+    "pricing": "Prijzen",
+    "signIn": "Inloggen",
+    "getStarted": "Woning scannen",
+    "menu": "Menu openen",
+    "home": "Sodar startpagina"
+  },
+  "Hero": {
+    "headline1": "AI-rondleidingen",
+    "headline2": "die meer deals sluiten.",
+    "sub": "Open sodar.io op je telefoon, loop één keer door de woning en krijg een meeslepende rondleiding waar kopers in kunnen stappen — gepubliceerd in de advertentie die je al hebt.",
+    "ctaPrimary": "Scan je eerste woning",
+    "ctaSecondary": "Zie hoe het werkt",
+    "status": [
+      "OPNAME   ▸ woonkamer · 12/12 frames · dekking 98%",
+      "ASSISTENT ▸ 4° omlaag kantelen · stilhouden · goed licht",
+      "STITCHEN ▸ keuken · equirectangulair · 8192×4096",
+      "PREVIEW  ▸ 2 van 6 kamers klaar · gratis",
+      "OFFERTE  ▸ eenmalige prijs berekend · 6 kamers · 14 panorama’s",
+      "GEPUBLICEERD ▸ CRM-advertentie #48213 · viewer ingebed"
+    ]
+  },
+  "Marquee": {
+    "rooms": [
+      "Woonkamer",
+      "Keuken",
+      "Hoofdslaapkamer",
+      "Badkamer",
+      "Gang",
+      "Balkon",
+      "Werkkamer",
+      "Eetkamer",
+      "Logeerkamer",
+      "Entree",
+      "Terras",
+      "Garage"
+    ]
+  },
+  "Manifesto": {
+    "kicker": "These",
+    "lines": [
+      "Geen enkele advertentiefoto heeft ooit zichzelf doorlopen.",
+      "Kopers slaan over wat ze niet kunnen betreden.",
+      "Dus maakten we van een telefoon een scanner,",
+      "en van een scan een plek."
+    ],
+    "body": "Een makelaar opent sodar.io op de telefoon, loopt één keer door elke kamer terwijl een AI-opname-assistent de opname begeleidt, en krijgt een rondleiding terug waar kopers doorheen kunnen bewegen. De eerste twee kamers zijn gratis te bekijken. Eén betaling maakt de woning af. Publiceren in de CRM-advertentie is één klik."
+  },
+  "Stats": {
+    "items": [
+      {
+        "label": "kamers gratis",
+        "note": "Werkende preview vóór enige betaling"
+      },
+      {
+        "label": "eenmalige prijs",
+        "note": "Afgestemd op de woning. Geen abonnement"
+      },
+      {
+        "label": "partnermarge",
+        "note": "Voor CRM’s die Sodar verspreiden"
+      },
+      {
+        "label": "per kamer",
+        "note": "Panorama-opname live begeleid door AI"
+      }
+    ]
+  },
+  "Pipeline": {
+    "scroll": "Scroll",
+    "frames": "/12 frames",
+    "assistantLabel": "Opname-assistent",
+    "assist": [
+      "4° omlaag kantelen",
+      "Stilhouden…",
+      "Goed licht. Blijf draaien",
+      "Overlap 40% — langzamer",
+      "Kamer voltooid"
+    ],
+    "rooms": [
+      "Woonkamer",
+      "Keuken",
+      "Hoofdslaapkamer",
+      "Badkamer",
+      "Werkkamer",
+      "Balkon"
+    ],
+    "ready": "Klaar",
+    "locked": "Vergrendeld",
+    "photosOnly": "Alleen foto’s",
+    "panels": {
+      "capture": {
+        "label": "Opname",
+        "title": "Loop één keer door de woning.",
+        "body": "Open sodar.io op je telefoon. De camera leidt je kamer voor kamer terwijl de AI-opname-assistent dekking, positie en licht corrigeert — live, terwijl je er nog staat."
+      },
+      "preview": {
+        "label": "Preview",
+        "title": "Twee kamers, af, gratis.",
+        "body": "Sodar verwerkt de eerste opnames tot een werkende rondleiding van de eerste twee kamers. Je ervaart de uiteindelijke kwaliteit voordat je iets betaalt."
+      },
+      "unlock": {
+        "label": "Ontgrendelen",
+        "title": "Eén prijs. Eén betaling.",
+        "body": "Sodar berekent een eenmalige prijs voor de hele woning — grootte, aantal panorama’s, verwerking, hosting en onderhoud inbegrepen. Betaal één keer via Stripe en de overige kamers worden verwerkt."
+      },
+      "publish": {
+        "label": "Publiceren",
+        "title": "In de advertentie die je al hebt.",
+        "body": "Koppel je CRM, kies de advertentie, publiceer. De rondleiding leeft in de advertentie via de ingebedde viewer van Sodar — en je kunt de goedgekeurde weergave-instellingen altijd aanpassen."
+      }
+    },
+    "quoteLabel": "Offerte · 84 Kesklinn Ave",
+    "quoteRows": [
+      {
+        "k": "6 kamers · 14 panorama’s",
+        "v": "inbegrepen"
+      },
+      {
+        "k": "Verwerking & AI-rekenkracht",
+        "v": "inbegrepen"
+      },
+      {
+        "k": "Opslag & viewer-hosting",
+        "v": "12 maanden"
+      },
+      {
+        "k": "Onderhoud",
+        "v": "inbegrepen"
+      }
+    ],
+    "oneTime": "eenmalig · geen abonnement",
+    "paidLabel": "Betaald",
+    "paidBody": "De overige 4 kamers worden verwerkt. Je krijgt bericht zodra de rondleiding compleet is.",
+    "pay": "Betalen met Stripe",
+    "paying": "Verbinden met Stripe…",
+    "mockNote": "Demo-checkout — er wordt geen kaart belast.",
+    "crmHeader": "Jouw CRM · Advertentie #48213",
+    "publishBtn": "Rondleiding publiceren",
+    "publishedBtn": "Gepubliceerd",
+    "viewerBadge": "Sodar-viewer · 360°",
+    "listingMeta": "3 kamers · 78 m² · € 395.000",
+    "status": "status",
+    "statusPublished": "gepubliceerd",
+    "statusReady": "gereed",
+    "viewer": "viewer",
+    "viewerEmbedded": "ingebed",
+    "opened": "geopend",
+    "openedValue": "128 bezoekers"
+  },
+  "Capabilities": {
+    "kicker": "Wat je krijgt",
+    "intro": "Drie verbonden oppervlakken — een openbare site, een begeleide mobiele scan en een makelaarswerkruimte — achter één rondleiding.",
+    "title": "Eén scan, zeven dingen die een advertentie wint.",
+    "items": [
+      {
+        "title": "Begeleide telefoonopname",
+        "desc": "Geen apparatuur, geen fotograaf. De camera leidt je door elke kamer als panorama, rechtstreeks vanuit de browser."
+      },
+      {
+        "title": "AI-opname-assistent",
+        "desc": "Live begeleiding bij dekking, positie en beeldkwaliteit terwijl je nog in de woning bent."
+      },
+      {
+        "title": "Gratis preview van twee kamers",
+        "desc": "Een werkende rondleiding van de eerste twee kamers vóór enige betaling, zodat je eerst de kwaliteit beoordeelt."
+      },
+      {
+        "title": "Eenmalige prijs per woning",
+        "desc": "Eén offerte afgestemd op de woning — panorama’s, rekenkracht, hosting en onderhoud inbegrepen."
+      },
+      {
+        "title": "CRM-publicatie",
+        "desc": "Koppel je CRM, kies de advertentie, publiceer. De rondleiding blijft in de advertentie via de ingebedde viewer."
+      },
+      {
+        "title": "Goedgekeurde weergave",
+        "desc": "Pas het uiterlijk van de viewer aan binnen de goedgekeurde instellingen zodat het past bij de advertentie."
+      },
+      {
+        "title": "Makelaarswerkruimte",
+        "desc": "Beheer woningen, volg verwerkings- en publicatiestatus en zie hoeveel bezoekers de viewer openden."
+      }
+    ],
+    "cta": {
+      "title": "Woning scannen",
+      "desc": "Twee kamers gratis. Begin op je telefoon.",
+      "start": "Start"
+    }
+  },
+  "Integration": {
+    "kicker": "Waar je al werkt",
+    "intro": "Koppel het CRM dat je al gebruikt. Kies de advertentie. Publiceer. De rondleiding verschijnt erin via een ingebedde viewer of iframe — niets te kopiëren, niets te hosten.",
+    "title": "Voeg Sodar gewoon toe aan je CRM.",
+    "crmHeader": "Jouw CRM · Advertenties",
+    "published": "Rondleiding gepubliceerd",
+    "addWalkthrough": "+ rondleiding toevoegen",
+    "listings": [
+      {
+        "name": "84 Kesklinn Ave",
+        "meta": "3 kamers · € 395.000"
+      },
+      {
+        "name": "12 Harbour Res.",
+        "meta": "2 kamers · € 260.000"
+      },
+      {
+        "name": "7 Nõmme Villa",
+        "meta": "6 kamers · € 890.000"
+      }
+    ]
+  },
+  "Impact": {
+    "kicker": "Illustratief · nog niet gemeten",
+    "title": "Het verschil dat een scan maakt.",
+    "beforeLabel": "Voor",
+    "afterLabel": "Na · met Sodar",
+    "before": [
+      "Fotograaf boeken",
+      "2–3 dagen wachten",
+      "Platte foto’s",
+      "Kopers scrollen voorbij",
+      "Niets gemeten"
+    ],
+    "after": [
+      "Eén telefoon, één ronde",
+      "Preview in minuten",
+      "Meeslepende rondleiding",
+      "Kopers stappen binnen",
+      "Elke geopende viewer geteld"
+    ]
+  },
+  "Workspace": {
+    "kicker": "Terug op kantoor",
+    "intro": "Elke woning die je scant, de verwerkings- en publicatiestatus, en hoeveel bezoekers de viewer openden — in één werkruimte per makelaar.",
+    "title": "Je woningen, altijd in beeld.",
+    "cta": "Bekijk de makelaarswerkruimte",
+    "mock": {
+      "title": "Werkruimte",
+      "live": "Live preview",
+      "properties": "Woningen",
+      "cols": [
+        "Woning",
+        "Status",
+        "Viewer geopend",
+        "Publicatie"
+      ],
+      "statuses": {
+        "published": "Gepubliceerd",
+        "processing": "In verwerking",
+        "preview": "Preview",
+        "capturing": "Opname"
+      },
+      "rows": [
+        {
+          "name": "84 Kesklinn Ave",
+          "status": "published",
+          "views": "412",
+          "pub": "CRM · #48213"
+        },
+        {
+          "name": "12 Harbour Res.",
+          "status": "published",
+          "views": "289",
+          "pub": "CRM · #48190"
+        },
+        {
+          "name": "7 Nõmme Villa",
+          "status": "processing",
+          "views": "—",
+          "pub": "4 / 6 kamers"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "status": "preview",
+          "views": "—",
+          "pub": "2 kamers gratis"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "status": "capturing",
+          "views": "—",
+          "pub": "op telefoon"
+        }
+      ],
+      "engagement": "Betrokkenheid per kamer · 84 Kesklinn Ave",
+      "rooms": [
+        "Woonkamer",
+        "Keuken",
+        "Hoofdslaapkamer",
+        "Badkamer",
+        "Balkon"
+      ],
+      "processing": "Verwerking",
+      "jobs": [
+        {
+          "name": "7 Nõmme Villa",
+          "step": "Stitchen · slaapkamer",
+          "n": "4 / 6"
+        },
+        {
+          "name": "3 Old Town Loft",
+          "step": "Preview klaar",
+          "n": "2 / 2"
+        },
+        {
+          "name": "19 Pirita Rd",
+          "step": "Opname op telefoon",
+          "n": "—"
+        }
+      ],
+      "week": "Deze week",
+      "weekTitle": "701 keer geopend",
+      "weekSub": "over 2 gepubliceerde rondleidingen"
+    }
+  },
+  "Scans": {
+    "kicker": "Scans van deze week",
+    "title": "Elk soort advertentie scant op dezelfde manier.",
+    "items": [
+      {
+        "label": "Appartement",
+        "meta": "3 kamers · Kesklinn"
+      },
+      {
+        "label": "Nieuwbouw",
+        "meta": "4 kamers · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 kamers · Pirita"
+      },
+      {
+        "label": "Huurwoning",
+        "meta": "1 kamer · Kalamaja"
+      }
+    ]
+  },
+  "Trust": {
+    "kicker": "Gebouwd om vertrouwd te worden met advertenties",
+    "title": "Compliance is geen bijzaak.",
+    "items": [
+      {
+        "title": "Expliciete cameratoestemming",
+        "desc": "Sodar vraagt de camera alleen wanneer je een scan start en gebruikt hem alleen voor die opname."
+      },
+      {
+        "title": "AI-vermelding",
+        "desc": "Elke gepubliceerde rondleiding draagt een duidelijk, zichtbaar label dat het een door AI verwerkte reconstructie is."
+      },
+      {
+        "title": "Beveiliging",
+        "desc": "Vanaf dag één gebouwd richting SOC 2 en AVG — versleutelde opslag, beperkte CRM-gegevens, auditlogs per woning."
+      },
+      {
+        "title": "Data-eigendom bij de makelaar",
+        "desc": "Opnames, rondleidingen en betrokkenheidsdata zijn van de makelaar. Sodar loskoppelen exporteert alles."
+      }
+    ]
+  },
+  "Partner": {
+    "eyebrow": "Voor CRM-aanbieders",
+    "title": "Verspreid Sodar naar je makelaarsnetwerk. Houd 15%.",
+    "body": "CRM-partners maken Sodar beschikbaar voor hun makelaars en ontvangen 15% marge op in aanmerking komende aankopen van rondleidingen — geen minimum, automatisch uitbetaald.",
+    "cta": "Bekijk het partnerprogramma"
+  },
+  "PricingTeaser": {
+    "kicker": "Eenvoudig door ontwerp",
+    "title1": "Eén woning.",
+    "title2": "Eén prijs. Eén keer.",
+    "body": "Bekijk de eerste twee kamers gratis. Daarna noemt Sodar één eenmalige prijs om de woning af te maken — geen abonnement, geen jaarcontract.",
+    "cta": "Hoe de prijs wordt berekend",
+    "card": {
+      "label": "Typisch 3-kamerappartement",
+      "price": "€ 99–149",
+      "note": "eenmalig · offerte na de gratis preview",
+      "factors": [
+        "Grootte van de woning",
+        "Opgenomen panorama’s",
+        "Verwerking & AI-rekenkracht",
+        "Opslag & viewer-hosting",
+        "Doorlopend onderhoud"
+      ],
+      "cta": "Woning scannen"
+    }
+  },
+  "Language": {
+    "kicker": "Waar je kopers ook zoeken",
+    "title1": "Eén rondleiding.",
+    "title2": "Elke taal die een koper leest.",
+    "body": "Publiceer één keer — de kamerlabels en bediening van de viewer volgen de taal die de koper instelt. Site en viewer zijn vandaag in zestien talen beschikbaar."
+  },
+  "Switcher": {
+    "search": "Talen zoeken…",
+    "none": "Geen overeenkomende taal.",
+    "active": "Actief",
+    "comingSoon": "Binnenkort",
+    "choose": "Kies een taal",
+    "notice": "{language} is nog niet vertaald — advertenties blijven in het Engels tot het beschikbaar is."
+  },
+  "Footer": {
+    "tagline": "Elke advertentie, gescand tot een plek waar kopers doorheen kunnen lopen.",
+    "columns": {
+      "product": {
+        "title": "Product",
+        "items": [
+          [
+            "Product",
+            "/product"
+          ],
+          [
+            "Hoe het werkt",
+            "/product#pipeline"
+          ],
+          [
+            "Werkruimte-preview",
+            "/terminal"
+          ],
+          [
+            "Beveiliging",
+            "/security"
+          ]
+        ]
+      },
+      "integrations": {
+        "title": "Integraties",
+        "items": [
+          [
+            "Integratiehub",
+            "/integrations"
+          ],
+          [
+            "CRM-publicatie",
+            "/integrations#crm"
+          ],
+          [
+            "Ingebedde viewer",
+            "/integrations#embed"
+          ],
+          [
+            "API-toegang",
+            "/integrations#api"
+          ]
+        ]
+      },
+      "partners": {
+        "title": "Partners",
+        "items": [
+          [
+            "Partnerprogramma",
+            "/partners"
+          ],
+          [
+            "Partner worden",
+            "/partners#apply"
+          ],
+          [
+            "Partnerdashboard",
+            "/partners#dashboard"
+          ]
+        ]
+      },
+      "company": {
+        "title": "Bedrijf",
+        "items": [
+          [
+            "Over ons",
+            "/about"
+          ],
+          [
+            "Vacatures",
+            "/careers"
+          ],
+          [
+            "Veldnotities",
+            "/blog"
+          ],
+          [
+            "Enterprise",
+            "/enterprise"
+          ]
+        ]
+      },
+      "legal": {
+        "title": "Juridisch",
+        "items": [
+          [
+            "Privacy",
+            "/legal/privacy"
+          ],
+          [
+            "Voorwaarden",
+            "/legal/terms"
+          ],
+          [
+            "Gegevensverwerking",
+            "/legal/data-processing"
+          ],
+          [
+            "Cookies",
+            "/legal/cookies"
+          ]
+        ]
+      }
+    },
+    "language": "Taal",
+    "social": "Elders",
+    "copyright": "Sodar Technologies OÜ",
+    "location": "Tallinn, Estland · sodar.io"
+  },
+  "ProductPage": {
+    "metaTitle": "Product — Sodar",
+    "metaDesc": "Hoe een begeleide telefoonscan een meeslepende, advertentieklare rondleiding wordt.",
+    "eyebrow": "Het product",
+    "title": "Een telefoon, één ronde, een plek waar kopers in kunnen stappen.",
+    "sub": "Sodar zet begeleide woningscans om in meeslepende, advertentieklare rondleidingen — opgenomen met de telefoon die je al bij je hebt, gepubliceerd in het CRM dat je al gebruikt.",
+    "ctaPrimary": "Scan je eerste woning",
+    "ctaSecondary": "Bekijk de werkruimte",
+    "flatLabel": "Telefoonopname",
+    "revealedLabel": "Sodar-rondleiding",
+    "stagesKicker": "Van een ronde naar een rondleiding",
+    "stagesTitle": "Drie stappen, één pipeline.",
+    "stages": [
+      {
+        "label": "Opname",
+        "sub": "Telefoon · browser · cameratoestemming",
+        "desc": "Elke kamer wordt als panorama opgenomen met live begeleiding van de AI-opname-assistent."
+      },
+      {
+        "label": "Verwerking",
+        "sub": "Stitchen · verbeteren · koppelen",
+        "desc": "Panorama’s worden gestitcht, opgeschoond en gekoppeld tot één rondleiding. De eerste twee kamers komen gratis terug."
+      },
+      {
+        "label": "Publicatie",
+        "sub": "CRM · ingebedde viewer · weergave",
+        "desc": "Koppel je CRM, kies de advertentie, publiceer. De viewer leeft in de advertentie; jij stemt de goedgekeurde weergave af."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Probeer het op een echte woning",
+      "title": "Bekijk twee kamers gratis. Betaal één keer voor de rest.",
+      "sub": "Open sodar.io op je telefoon en start een scan — geen kaart nodig tot je de volledige rondleiding ontgrendelt.",
+      "label": "Scan je eerste woning"
+    }
+  },
+  "PricingPage": {
+    "metaTitle": "Prijzen — Sodar",
+    "metaDesc": "Eenmalige prijs per woning, geoffreerd na een gratis preview van twee kamers. Volumeprijzen voor kantoren, 15% marge voor CRM-partners.",
+    "eyebrow": "Eenvoudig door ontwerp",
+    "title": "Eén woning. Eén prijs. Eén keer.",
+    "sub": "Bekijk twee kamers gratis en betaal daarna één eenmalige prijs afgestemd op de woning. Volumeprijzen voor kantoren, een vaste marge van 15% voor CRM-partners.",
+    "badge": "De meeste kantoren",
+    "tiers": [
+      {
+        "name": "Per woning",
+        "price": "Vanaf € 99",
+        "unit": "eenmalig, offerte na de gratis preview",
+        "desc": "Voor makelaars die advertenties één voor één scannen.",
+        "features": [
+          "Begeleide telefoonopname + AI-assistent",
+          "Eerste twee kamers gratis als preview",
+          "Volledige rondleiding na één Stripe-betaling",
+          "CRM-publicatie & ingebedde viewer",
+          "Werkruimte met status & geopende viewers"
+        ],
+        "cta": "Scan je eerste woning"
+      },
+      {
+        "name": "Kantoor",
+        "price": "Volume",
+        "unit": "per woning, dalend met het volume",
+        "desc": "Voor kantoren die tientallen advertenties per maand publiceren.",
+        "features": [
+          "Alles van Per woning",
+          "Kantoorbrede werkruimte-overzicht",
+          "Prioriteit in de verwerkingswachtrij",
+          "Toegewijde CRM-inrichting",
+          "Viewer met co-branding"
+        ],
+        "cta": "Praat met sales"
+      },
+      {
+        "name": "CRM-partner",
+        "price": "15%",
+        "unit": "marge op in aanmerking komende aankopen",
+        "desc": "Voor CRM-aanbieders die Sodar naar hun makelaars verspreiden.",
+        "features": [
+          "Sodar beschikbaar in je platform",
+          "Partnerdashboard",
+          "Maandelijkse automatische uitbetaling",
+          "Geen minimumvolume"
+        ],
+        "cta": "Aanmelden als partner"
+      }
+    ],
+    "factorsKicker": "Hoe de offerte wordt opgebouwd",
+    "factorsTitle": "Geprijsd naar de woning, niet naar het plan.",
+    "factors": [
+      {
+        "title": "Grootte van de woning",
+        "desc": "Vloeroppervlak en aantal opgenomen kamers."
+      },
+      {
+        "title": "Panoramavolume",
+        "desc": "Hoeveel panorama’s de scan opleverde en in welke resolutie."
+      },
+      {
+        "title": "Verwerking",
+        "desc": "Stitchen, verbeteren en de AI-rekenkracht achter de rondleiding."
+      },
+      {
+        "title": "Opslag & hosting",
+        "desc": "De rondleiding en de viewer online houden in je advertentie."
+      },
+      {
+        "title": "Onderhoud",
+        "desc": "Doorlopende viewer-updates en de CRM-integratie zelf."
+      },
+      {
+        "title": "Partnermarge",
+        "desc": "Waar een CRM-partner Sodar verspreidt, is zijn marge in de offerte inbegrepen."
+      }
+    ],
+    "faqKicker": "Vragen",
+    "faqTitle": "Prijzen-FAQ.",
+    "faq": [
+      {
+        "q": "Wanneer zie ik de prijs?",
+        "a": "Na de gratis preview. Sodar berekent een eenmalige prijs om de woning af te maken zodra de eerste twee kamers verwerkt zijn."
+      },
+      {
+        "q": "Is de preview echt gratis?",
+        "a": "Ja — de eerste twee kamers worden zonder betaling verwerkt tot een werkende rondleiding. Je betaalt alleen om de woning af te maken en te publiceren."
+      },
+      {
+        "q": "Is er een abonnement?",
+        "a": "Nee. Elke woning is één eenmalige betaling via Stripe. Niets verlengt."
+      },
+      {
+        "q": "Hoe wordt de marge van de CRM-partner uitbetaald?",
+        "a": "Automatisch, maandelijks, over in aanmerking komende aankopen van rondleidingen door makelaars op het platform van de partner."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Vroege toegang",
+      "title": "Je volgende advertentie verdient meer dan foto’s.",
+      "sub": "We nemen eerst een kleine groep vooruitdenkende makelaars aan boord.",
+      "label": "Vroege toegang aanvragen"
+    }
+  },
+  "WorkspacePage": {
+    "metaTitle": "Werkruimte-preview — Sodar",
+    "metaDesc": "Een openbare preview van de makelaarswerkruimte zonder inloggen. Geen echte data.",
+    "eyebrow": "Openbare preview · geen login, geen echte data",
+    "title": "Elke woning, de status en wie hem opende.",
+    "sub": "Dit is een statische preview van de werkruimte die elke makelaar krijgt — woningen, verwerkings- en publicatiestatus, en hoeveel bezoekers elke viewer openden.",
+    "cta": {
+      "eyebrow": "Van jou zodra je publiceert",
+      "title": "Je werkruimte begint leeg — tot je eerste scan.",
+      "sub": "Scan een woning en zie echte cijfers deze preview vervangen.",
+      "label": "Scan je eerste woning"
+    }
+  },
+  "PartnersPage": {
+    "metaTitle": "Partners — Sodar",
+    "metaDesc": "CRM-platforms verdienen een vaste marge van 15% door Sodar naar hun makelaarsnetwerk te verspreiden.",
+    "eyebrow": "Voor CRM-platforms",
+    "title": "Verspreid Sodar naar je makelaars. Houd 15%.",
+    "sub": "Een vaste marge op elke in aanmerking komende rondleiding die makelaars op je platform kopen — geen minimum, automatisch uitbetaald, geen ontwikkelwerk buiten een verwijzingslink.",
+    "apply": "Aanmelden als partner",
+    "stepsKicker": "Hoe het werkt",
+    "stepsTitle": "Drie stappen naar een vaste marge.",
+    "steps": [
+      {
+        "title": "Aanmelden",
+        "desc": "Vertel ons welke makelaars of kantoren op je platform werken en ongeveer hoeveel actieve advertenties."
+      },
+      {
+        "title": "Integreren",
+        "desc": "Een verwijzingslink en, optioneel, een native ingang in je app voor je gebruikers."
+      },
+      {
+        "title": "Verdienen",
+        "desc": "15% van elke in aanmerking komende aankoop van een makelaar die via je platform kwam, maandelijks uitbetaald."
+      }
+    ],
+    "dashKicker": "Partnerdashboard",
+    "dashTitle": "Volg verwezen makelaars en marge op één plek.",
+    "dash": [
+      {
+        "label": "Verwezen makelaars",
+        "value": "142"
+      },
+      {
+        "label": "Gekochte rondleidingen",
+        "value": "3.018"
+      },
+      {
+        "label": "Marge deze maand",
+        "value": "€ 6.240"
+      }
+    ],
+    "applyKicker": "Aan de slag",
+    "applyTitle": "Aanmelden als partner.",
+    "applyBody": "Een korte aanmelding — we beoordelen de platformfit en het typische advertentievolume voordat we een verwijzingslink uitgeven.",
+    "form": {
+      "company": "Bedrijfs- / platformnaam",
+      "companyPh": "Acme CRM",
+      "email": "Zakelijk e-mailadres",
+      "emailPh": "jij@bedrijf.nl",
+      "brokers": "Actieve makelaars op je platform",
+      "brokersPh": "bijv. 50–200",
+      "submit": "Aanmelding versturen"
+    },
+    "faqKicker": "Vragen",
+    "faqTitle": "Partner-FAQ.",
+    "faq": [
+      {
+        "q": "Is er een minimale verplichting?",
+        "a": "Nee. De marge van 15% geldt vanaf de eerste gekochte rondleiding — geen volumedrempel."
+      },
+      {
+        "q": "Van wie is de relatie met de makelaar?",
+        "a": "Van jou. Sodar factureert de makelaar rechtstreeks en rapporteert je marge; makelaars blijven jouw klant."
+      },
+      {
+        "q": "Kunnen we de rondleiding co-branden?",
+        "a": "Ja — een partneraccount kan een co-branded kader om de ingebedde rondleiding plaatsen."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Klaar wanneer jij het bent",
+      "title": "Geef je makelaars een reden om meer te publiceren.",
+      "sub": "Meld je één keer aan — we komen terug met een verwijzingslink en integratienotities.",
+      "label": "Aanmelden als partner"
+    }
+  },
+  "IntegrationsPage": {
+    "metaTitle": "Integraties — Sodar",
+    "metaDesc": "Koppel een CRM of geef API-toegang zodat gepubliceerde rondleidingen rechtstreeks in je advertenties worden ingebed.",
+    "eyebrow": "Integratiehub",
+    "title": "Koppel één keer. Elke advertentie daarna is één klik.",
+    "sub": "Log via OAuth in op je CRM, of geef Sodar beperkte API-toegang — kies de advertentie, publiceer, en de rondleiding is ingebed zonder tweede stap.",
+    "connKicker": "Koppelingen",
+    "connTitle": "Kies hoe Sodar je advertenties bereikt.",
+    "conns": [
+      {
+        "name": "Generieke CRM-OAuth",
+        "action": "Koppelen"
+      },
+      {
+        "name": "City24 MLS-feed",
+        "action": "Koppelen"
+      },
+      {
+        "name": "Eigen REST-API",
+        "action": "Sleutel genereren"
+      },
+      {
+        "name": "Zapier / webhook",
+        "action": "Binnenkort"
+      }
+    ],
+    "notConnected": "status: niet gekoppeld",
+    "mockTitle": "Demo-koppeling — aangesloten in fase 2",
+    "embedKicker": "Geen CRM? Geen probleem",
+    "embedTitle": "Eén iframe, overal te plaatsen.",
+    "embedBody": "Elke gekochte rondleiding krijgt een stabiele embed-URL. Plak hem in elk woningportaal dat een eigen iframe accepteert.",
+    "cta": {
+      "eyebrow": "Neem je CRM mee",
+      "title": "Sodar past bij de tools die je al gebruikt.",
+      "sub": "Praat met ons over een prioritaire integratie, of begin vandaag met de generieke embed.",
+      "label": "Ontdek het partnerprogramma"
+    }
+  },
+  "EnterprisePage": {
+    "metaTitle": "Enterprise — Sodar",
+    "metaDesc": "Teamlicenties, bulkscans en gedeelde werkruimte-overzichten voor makelaarskantoren.",
+    "eyebrow": "Voor kantoren",
+    "title": "Eén werkruimte voor elke makelaar in je team.",
+    "sub": "Bulkscannen, volumeprijzen en een kantoorbreed betrokkenheidsoverzicht — gebouwd voor kantoren die tientallen advertenties per maand publiceren.",
+    "talk": "Praat met sales",
+    "featKicker": "Gebouwd voor teams",
+    "featTitle": "Alles van selfservice, plus wat een kantoor nodig heeft.",
+    "features": [
+      {
+        "title": "Teamlicenties",
+        "desc": "Elke makelaar krijgt een eigen werkruimte; daarboven een kantoorbreed overzicht voor managers."
+      },
+      {
+        "title": "Bulkscannen",
+        "desc": "Scan een hele portefeuille woningen in plaats van één tegelijk."
+      },
+      {
+        "title": "Volumeprijzen",
+        "desc": "De prijs per woning daalt naarmate het maandvolume van je kantoor groeit."
+      },
+      {
+        "title": "Toegewijde CRM-inrichting",
+        "desc": "Wij regelen de OAuth-/API-koppeling voor de specifieke CRM-stack van je kantoor."
+      },
+      {
+        "title": "Co-branding",
+        "desc": "Zet het merk van je kantoor op elke ingebedde rondleiding."
+      },
+      {
+        "title": "Prioriteitsverwerking",
+        "desc": "Enterprise-woningen worden vóór de selfservice-wachtrij verwerkt."
+      }
+    ],
+    "priceKicker": "Prijzen die dalen met volume",
+    "priceTitle1": "Volumeprijzen,",
+    "priceTitle2": "één contract.",
+    "priceBody": "Een maatwerktarief per woning op basis van maandvolume, plus een vast licentiebedrag per makelaar. Praat met sales voor een offerte op maat van je kantoor.",
+    "priceNote": "Illustratief, per woning",
+    "tiers": [
+      {
+        "tier": "1–20 woningen / maand",
+        "price": "vanaf € 99"
+      },
+      {
+        "tier": "21–100 woningen / maand",
+        "price": "vanaf € 79"
+      },
+      {
+        "tier": "100+ woningen / maand",
+        "price": "Maatwerk"
+      }
+    ],
+    "cta": {
+      "eyebrow": "Enterprise",
+      "title": "Breng de advertenties van je hele kantoor online.",
+      "sub": "We richten samen je CRM-koppeling en licentiestructuur in.",
+      "label": "Praat met sales"
+    }
+  },
+  "SecurityPage": {
+    "metaTitle": "Beveiliging & compliance — Sodar",
+    "metaDesc": "Gegevensverwerking, AI-vermelding en compliancehouding van de Sodar-pipeline.",
+    "eyebrow": "Vertrouwen & compliance",
+    "title": "Gebouwd om vertrouwd te worden met andermans advertentie.",
+    "sub": "Sodar is vanaf dag één ontworpen richting SOC 2 en AVG — deze pagina is de werksamenvatting; formele rapporten en verwerkersovereenkomsten zijn op verzoek beschikbaar.",
+    "detailKicker": "In detail",
+    "detailTitle": "Hoe data werkelijk beweegt.",
+    "details": [
+      {
+        "title": "Cameratoegang",
+        "desc": "De camera wordt alleen gevraagd bij het starten van een scan, met expliciete toestemming, en alleen voor die opname gebruikt."
+      },
+      {
+        "title": "Opslag",
+        "desc": "Opnames en gerenderde rondleidingen zijn versleuteld in rust en tijdens transport; toegang is beperkt per makelaarsaccount."
+      },
+      {
+        "title": "AI-vermelding",
+        "desc": "Elke openbare rondleiding draagt een zichtbaar label dat hem identificeert als door AI verwerkte reconstructie."
+      },
+      {
+        "title": "Bewaartermijn",
+        "desc": "Opnames en rondleidingen worden bewaard zolang de advertentie loopt plus een vaste respijtperiode, daarna op verzoek gewist."
+      },
+      {
+        "title": "Toegangsbeheer",
+        "desc": "CRM-gegevens en API-sleutels zijn beperkt tot de minimale rechten die de integratie nodig heeft."
+      },
+      {
+        "title": "Subverwerkers",
+        "desc": "Externe verwerkings- en betaalproviders staan vermeld in het addendum gegevensverwerking."
+      }
+    ],
+    "seeAlso": "Zie ook:",
+    "privacy": "Privacybeleid",
+    "dpa": "Addendum gegevensverwerking",
+    "cta": {
+      "eyebrow": "Vragen voor je beveiligingsreview",
+      "title": "Een ingevulde beveiligingsvragenlijst nodig?",
+      "sub": "Neem contact op en we sturen een ingevulde vragenlijst of onze SOC 2-status rechtstreeks terug.",
+      "label": "Contact met beveiliging"
+    }
+  },
+  "AboutPage": {
+    "metaTitle": "Over ons — Sodar",
+    "metaDesc": "Waarom Sodar bestaat: het pleidooi om een advertentie als een plek te behandelen, niet als een fotogalerij.",
+    "eyebrow": "Bedrijf",
+    "title": "Een advertentiefoto is een belofte. Wij maken hem beloopbaar.",
+    "sub": "Sodar begon met één observatie: kopers scrollen langs platte foto’s, maar blijven hangen in een ruimte waar ze echt doorheen kunnen bewegen. Wij bouwen de pipeline die het eerste in het tweede verandert.",
+    "thesisKicker": "These",
+    "thesisTitle": "Oriëntatie verkoopt advertenties.",
+    "thesis": [
+      "Een koper die door een portaal scrollt, beslist in seconden of hij blijft of verdergaat, op basis van foto’s die geen gevoel geven voor de loop tussen kamers. Een rondleiding beantwoordt de vraag die een foto niet kan: hoe voelt het om er echt te zijn.",
+      "Sodar bestaat om die rondleiding zo goedkoop en zo snel te maken dat hij de standaard wordt voor elke advertentie, geen luxe voor de top van de markt."
+    ],
+    "valuesKicker": "Waar we aan vasthouden",
+    "valuesTitle": "Drie dingen die we niet inruilen.",
+    "values": [
+      {
+        "title": "Scannen, niet stylen",
+        "desc": "De echte woning is de bron van waarheid. Ons werk is hem getrouw weer te geven, niet een fantasieversie te verzinnen."
+      },
+      {
+        "title": "De makelaar bezit de data",
+        "desc": "Opnames, rondleidingen en betrokkenheidsdata zijn van de makelaar die ze maakte — altijd exporteerbaar, nooit vergrendeld."
+      },
+      {
+        "title": "Vermelding als standaard",
+        "desc": "Een door AI verwerkte ruimte hoort dat te zeggen. Elke openbare rondleiding is gelabeld, zonder uitzondering."
+      }
+    ],
+    "cta": {
+      "eyebrow": "Kom bij ons",
+      "title": "We zijn een klein team dat vroeg aan boord neemt.",
+      "sub": "Spreekt de these je aan? We werven — of praat gewoon met ons over je advertenties.",
+      "label": "Bekijk openstaande vacatures"
+    }
+  },
+  "CareersPage": {
+    "metaTitle": "Vacatures — Sodar",
+    "metaDesc": "Openstaande vacatures bij Sodar.",
+    "eyebrow": "Vacatures",
+    "title": "Help elke advertentie goed te renderen.",
+    "sub": "Klein team, vroege fase, echte makelaars scannen al woningen. We werven in reconstructie, product en go-to-market.",
+    "rolesKicker": "Openstaande vacatures",
+    "rolesTitle": "We werven.",
+    "roles": [
+      {
+        "title": "Spatial ML Engineer",
+        "team": "Reconstructie",
+        "location": "Remote / Tallinn"
+      },
+      {
+        "title": "Founding Frontend Engineer",
+        "team": "Product",
+        "location": "Remote / Tallinn"
+      },
+      {
+        "title": "Broker Success Lead",
+        "team": "Go-to-market",
+        "location": "Tallinn"
+      }
+    ],
+    "noFit": "Niets passends? Schrijf toch naar careers@sodar.io.",
+    "cta": {
+      "eyebrow": "Nog geen passende vacature?",
+      "title": "We zijn klein genoeg dat één e-mail een oprichter bereikt.",
+      "sub": "Vertel ons waaraan je zou willen werken.",
+      "label": "Mail naar careers@sodar.io"
+    }
+  },
+  "BlogPage": {
+    "metaTitle": "Veldnotities — Sodar",
+    "metaDesc": "Casestudies van makelaars en kantoren die woningen scannen met Sodar.",
+    "eyebrow": "Veldnotities",
+    "title": "Casestudies, geen persberichten.",
+    "sub": "Wat er echt gebeurt als een woning wordt gescand — geschreven door het team dat de pipeline bouwt.",
+    "posts": [
+      {
+        "title": "Hoe een Tallinns kantoor met 4 makelaars de advertentievoorbereiding terugbracht tot 15 minuten",
+        "tag": "Casestudy",
+        "read": "6 min lezen"
+      },
+      {
+        "title": "Wat we veranderden na de eerste 500 rondleidingen",
+        "tag": "Productnotities",
+        "read": "4 min lezen"
+      },
+      {
+        "title": "Betrokkenheid per kamer lezen: wat geopende viewers je echt vertellen",
+        "tag": "Gids",
+        "read": "5 min lezen"
+      },
+      {
+        "title": "Waarom de gratis preview twee kamers is, geen één of vijf",
+        "tag": "Productnotities",
+        "read": "3 min lezen"
+      }
+    ]
+  },
+  "LegalPage": {
+    "updated": "Concept — fase 1",
+    "notice": "Dit is een structurele placeholder uit fase 1, geen definitieve juridische tekst.",
+    "englishOnly": "Juridische documenten worden momenteel alleen in het Engels gepubliceerd; de Engelse versie is leidend.",
+    "titles": {
+      "privacy": "Privacybeleid",
+      "terms": "Gebruiksvoorwaarden",
+      "data-processing": "Addendum gegevensverwerking",
+      "cookies": "Cookiebeleid"
+    }
+  },
+  "Scaffold": {
+    "phase": "Fase 1 — ontwerp & structuur",
+    "note": "Betalingen, CRM-OAuth en de AI-pipeline zijn gesimuleerde placeholders. Geen backend-aanroepen."
+  }
+}

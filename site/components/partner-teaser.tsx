@@ -1,7 +1,9 @@
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 /** One-card teaser for the CRM partner program. */
 export function PartnerTeaser() {
+  const t = useTranslations("Partner");
   return (
     <section className="section-shell border-t border-border">
       <Link
@@ -11,18 +13,13 @@ export function PartnerTeaser() {
         <div>
           <p className="eyebrow">
             <span />
-            For CRM providers
+            {t("eyebrow")}
           </p>
-          <h2 className="display mt-5 max-w-2xl text-[clamp(2rem,4.4vw,3.6rem)] text-text">
-            Distribute Sodar to your broker network. Keep 15%.
-          </h2>
-          <p className="mt-4 max-w-xl text-text-muted">
-            CRM partners make Sodar available to their brokers and receive a 15% margin on qualifying walkthrough
-            purchases — no minimum, paid out automatically.
-          </p>
+          <h2 className="display mt-5 max-w-2xl text-[clamp(2rem,4.4vw,3.6rem)] text-text">{t("title")}</h2>
+          <p className="mt-4 max-w-xl text-text-muted">{t("body")}</p>
         </div>
         <span className="button-secondary shrink-0">
-          See the partner program <span aria-hidden>↗</span>
+          {t("cta")} <span aria-hidden>↗</span>
         </span>
       </Link>
     </section>
