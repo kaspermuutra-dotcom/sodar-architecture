@@ -1051,7 +1051,8 @@
     "exit": "Quitter",
     "savedLocally": "Enregistré sur cet appareil. Connectez-vous pour envoyer et assembler.",
     "uploading": "Envoi des images…",
-    "queued": "Pièce en file d’attente pour l’assemblage."
+    "queued": "Pièce en file d’attente pour l’assemblage.",
+    "export": "Exporter les images (zip)"
   },
   "Contact": {
     "metaTitle": "Contact — Sodar",

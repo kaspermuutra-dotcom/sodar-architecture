@@ -1051,7 +1051,8 @@
     "exit": "Išeiti",
     "savedLocally": "Išsaugota šiame įrenginyje. Prisijunkite, kad įkeltumėte ir sujungtumėte.",
     "uploading": "Įkeliami kadrai…",
-    "queued": "Kambarys eilėje sujungimui."
+    "queued": "Kambarys eilėje sujungimui.",
+    "export": "Eksportuoti kadrus (zip)"
   },
   "Contact": {
     "metaTitle": "Kontaktai — Sodar",

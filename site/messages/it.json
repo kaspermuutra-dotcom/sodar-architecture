@@ -1051,7 +1051,8 @@
     "exit": "Esci",
     "savedLocally": "Salvato su questo dispositivo. Accedi per caricare e unire.",
     "uploading": "Caricamento fotogrammi…",
-    "queued": "Stanza in coda per lo stitching."
+    "queued": "Stanza in coda per lo stitching.",
+    "export": "Esporta fotogrammi (zip)"
   },
   "Contact": {
     "metaTitle": "Contatti — Sodar",

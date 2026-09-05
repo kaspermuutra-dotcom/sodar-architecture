@@ -1051,7 +1051,8 @@
     "exit": "Välju",
     "savedLocally": "Salvestatud sellesse seadmesse. Logi sisse, et üles laadida ja kokku panna.",
     "uploading": "Laadime kaadreid üles…",
-    "queued": "Ruum on kokkupanekuks järjekorras."
+    "queued": "Ruum on kokkupanekuks järjekorras.",
+    "export": "Ekspordi kaadrid (zip)"
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",

@@ -1051,7 +1051,8 @@
     "exit": "Poistu",
     "savedLocally": "Tallennettu tälle laitteelle. Kirjaudu sisään lähettääksesi ja yhdistääksesi.",
     "uploading": "Lähetetään kuvia…",
-    "queued": "Huone jonossa yhdistämiseen."
+    "queued": "Huone jonossa yhdistämiseen.",
+    "export": "Vie kuvat (zip)"
   },
   "Contact": {
     "metaTitle": "Yhteystiedot — Sodar",

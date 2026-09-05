@@ -1,0 +1,5 @@
+# Pinned Photo Sphere Viewer + three.js browser bundle — fetch with fetch-vendor.sh
+# (~700 KB, built output, not source; the source lives at
+# third_party/photo-sphere-viewer as a pinned git submodule).
+*.js
+*.css

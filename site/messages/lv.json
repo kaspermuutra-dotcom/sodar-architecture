@@ -1051,7 +1051,8 @@
     "exit": "Iziet",
     "savedLocally": "Saglabāts šajā ierīcē. Piesakieties, lai augšupielādētu un savienotu.",
     "uploading": "Augšupielādē kadrus…",
-    "queued": "Telpa rindā savienošanai."
+    "queued": "Telpa rindā savienošanai.",
+    "export": "Eksportēt kadrus (zip)"
   },
   "Contact": {
     "metaTitle": "Kontakti — Sodar",

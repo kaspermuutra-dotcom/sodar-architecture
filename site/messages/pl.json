@@ -1051,7 +1051,8 @@
     "exit": "Wyjdź",
     "savedLocally": "Zapisano na tym urządzeniu. Zaloguj się, aby przesłać i połączyć.",
     "uploading": "Przesyłanie klatek…",
-    "queued": "Pomieszczenie w kolejce do łączenia."
+    "queued": "Pomieszczenie w kolejce do łączenia.",
+    "export": "Eksportuj klatki (zip)"
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",

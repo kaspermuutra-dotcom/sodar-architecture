@@ -1051,7 +1051,8 @@
     "exit": "Beenden",
     "savedLocally": "Auf diesem Gerät gespeichert. Melden Sie sich an, um hochzuladen und zusammenzufügen.",
     "uploading": "Bilder werden hochgeladen…",
-    "queued": "Raum zum Zusammenfügen eingereiht."
+    "queued": "Raum zum Zusammenfügen eingereiht.",
+    "export": "Bilder exportieren (ZIP)"
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",

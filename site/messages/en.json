@@ -1051,7 +1051,8 @@
     "exit": "Exit",
     "savedLocally": "Saved on this device. Sign in to upload and stitch.",
     "uploading": "Uploading frames…",
-    "queued": "Room queued for stitching."
+    "queued": "Room queued for stitching.",
+    "export": "Export frames (zip)"
   },
   "Contact": {
     "metaTitle": "Contact — Sodar",

@@ -1,0 +1,81 @@
+{
+  "schema": "sodar-frames.v1",
+  "fov": {
+    "horizontal": 55.0,
+    "vertical": 72.0
+  },
+  "frames": [
+    {
+      "file": "input/frame-001.jpg",
+      "yaw": 1.507,
+      "elevation": -0.576,
+      "roll": 0.812
+    },
+    {
+      "file": "input/frame-002.jpg",
+      "yaw": 27.255,
+      "elevation": -0.065,
+      "roll": 0.863
+    },
+    {
+      "file": "input/frame-003.jpg",
+      "yaw": 62.985,
+      "elevation": 2.136,
+      "roll": -0.165
+    },
+    {
+      "file": "input/frame-004.jpg",
+      "yaw": 91.45,
+      "elevation": -2.02,
+      "roll": -0.048
+    },
+    {
+      "file": "input/frame-005.jpg",
+      "yaw": 118.21,
+      "elevation": -1.303,
+      "roll": -0.478
+    },
+    {
+      "file": "input/frame-006.jpg",
+      "yaw": 151.073,
+      "elevation": 1.533,
+      "roll": 2.293
+    },
+    {
+      "file": "input/frame-007.jpg",
+      "yaw": 177.655,
+      "elevation": 0.553,
+      "roll": 0.747
+    },
+    {
+      "file": "input/frame-008.jpg",
+      "yaw": 212.685,
+      "elevation": 2.826,
+      "roll": 0.779
+    },
+    {
+      "file": "input/frame-009.jpg",
+      "yaw": 245.71,
+      "elevation": 1.116,
+      "roll": -0.032
+    },
+    {
+      "file": "input/frame-010.jpg",
+      "yaw": 269.576,
+      "elevation": 0.156,
+      "roll": -0.97
+    },
+    {
+      "file": "input/frame-011.jpg",
+      "yaw": 300.249,
+      "elevation": -1.213,
+      "roll": -0.96
+    },
+    {
+      "file": "input/frame-012.jpg",
+      "yaw": 327.373,
+      "elevation": 0.268,
+      "roll": -0.168
+    }
+  ]
+}

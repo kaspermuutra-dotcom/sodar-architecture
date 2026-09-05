@@ -164,6 +164,25 @@ Providers:
 |---|---|---|
 | `dummy` | none | deterministic reference provider |
 | `opencv-stitch` | `opencv-python-headless` (Apache-2.0), optional extra `[opencv]` | OpenCV panorama stitching; output is not byte-reproducible — see [`docs/HARNESS_NOTES.md`](docs/HARNESS_NOTES.md) |
+| `posed-stitch` | `numpy`, `pillow` (+ `opencv-python-headless` for ORB yaw refinement) | Pose-guided equirectangular stitching from scanner frames + orientations — the Photo Sphere method (`third_party/360-photo-app`, MIT) in Python. Always produces a panorama; see [`docs/PANORAMA_STACK.md`](docs/PANORAMA_STACK.md) |
+| `ai-fill` | network: `OPENAI_API_KEY` (GPT Image 2 edit) **or** a logged-in `higgsfield` CLI | Fills the uncovered zenith/nadir bands and seams of a stitched panorama with GPT Image 2 |
+| `psv-viewer` | optional local asset (`src/sodar/viewer_assets/psv/vendor/fetch-vendor.sh`) | Photo Sphere Viewer static tour bundle (TD-003) |
 
 Install an optional provider's dependency with e.g. `pip install -e ".[opencv]"`.
-The default install stays dependency-free.
+The default install stays dependency-free. On macOS the system Python is
+externally managed, so use a venv on a Python with OpenCV wheels
+(`python3.12 -m venv .venv && .venv/bin/pip install opencv-python-headless numpy pillow`).
+
+### From a phone scan to a walkthrough
+
+```
+sodar stitch <frames-export.zip> --out artifacts/tours/<name> [--fill] [--width 4096]
+```
+
+`/scan` on sodar.io exports every captured frame plus `frames.json` (yaw,
+elevation, roll, FOV per frame). `stitch` runs `posed-stitch` per room, optionally
+`ai-fill` (GPT Image 2) to paint the missing ceiling/floor bands, links the rooms,
+and writes a Photo Sphere Viewer bundle under `<out>/tour/` — serve it with
+`python3 -m http.server`. Verified on `fixtures/valid/panorama-posed-001`
+(12 posed frames of a synthetic room): 40% coverage from one equator ring,
+19.7 dB PSNR against the source panorama, and the tour opens in the viewer.

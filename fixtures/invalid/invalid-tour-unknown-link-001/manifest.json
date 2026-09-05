@@ -1,0 +1,12 @@
+{
+  "fixture_id": "invalid-tour-unknown-link-001",
+  "schema_version": "fixture.v1",
+  "kind": "invalid",
+  "description": "tour.json is well-formed JSON but its one link points at a node id that does not exist. The psv-viewer provider must reject it during input validation.",
+  "inputs": ["input/tour.json", "input/living-room.png"],
+  "expected_artifacts": [],
+  "expect": {
+    "provider_validation": "fail",
+    "reason_contains": "links to unknown node"
+  }
+}

@@ -8,6 +8,7 @@ import { AlignmentGate, createTargetPlan, focalLength, projectTarget, type Field
 import { deleteFrame, latestSession, roomFrames, saveFrame, saveSession, updateFrameUpload, type Room, type ScanSession } from "@/lib/scanner/db";
 import { httpScannerBackend, type FrameMetadata } from "@/lib/scanner/contracts";
 import { RoomPreview } from "./room-preview";
+import { buildZip, type ZipEntry } from "@/lib/scanner/zip";
 
 /**
  * Guided panorama capture. Geometry is the Photo Sphere Android port in
@@ -295,6 +296,34 @@ export function Scanner() {
     return { left: window.innerWidth / 2 + (view.x / z) * f, top: window.innerHeight / 2 - (view.y / z) * f, visible: view.inFront, near: view.angularDistance < 4 };
   }, [orientation, target]);
 
+  /** Download every captured frame plus frames.json (poses, fov) as one zip — the input for `sodar stitch`. */
+  const exportFrames = async () => {
+    if (!session) return;
+    const entries: ZipEntry[] = [];
+    const rooms: Array<Record<string, unknown>> = [];
+    for (const [ri, room] of session.rooms.entries()) {
+      const frames = await roomFrames(room.id);
+      const dir = `room-${String(ri + 1).padStart(2, "0")}`;
+      const list: Array<Record<string, unknown>> = [];
+      for (const [fi, frame] of frames.entries()) {
+        const file = `${dir}/frame-${String(fi + 1).padStart(3, "0")}.jpg`;
+        entries.push({ name: file, data: new Uint8Array(await frame.jpeg.arrayBuffer()) });
+        const m = frame.metadata;
+        list.push({ file, yaw: m.yaw, pitch: m.pitch, roll: m.roll, elevation: m.checkpoint.elevation, checkpoint: m.checkpoint, timestamp: m.timestamp, width: m.width, height: m.height });
+      }
+      rooms.push({ id: room.id, name: room.name, fov: DEFAULT_FOV, targetCount: room.targetCount, frames: list });
+    }
+    const manifest = { schema: "sodar-frames.v1", sessionId: session.id, exportedAt: new Date().toISOString(), rooms };
+    entries.push({ name: "frames.json", data: new TextEncoder().encode(JSON.stringify(manifest, null, 2)) });
+    const blob = buildZip(entries);
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `sodar-scan-${session.id.slice(0, 8)}.zip`;
+    a.click();
+    window.setTimeout(() => URL.revokeObjectURL(url), 5_000);
+  };
+
   const restart = () => {
     setSession(newSession(roomName(1)));
     setPlan(undefined);
@@ -411,6 +440,9 @@ export function Scanner() {
               <Link href="/terminal" className="button-primary mt-8 w-full justify-center">
                 {t("workspace")} <span aria-hidden>↗</span>
               </Link>
+              <button type="button" onClick={exportFrames} className="button-secondary mt-3 w-full justify-center">
+                {t("export")} <span aria-hidden>↓</span>
+              </button>
               <button type="button" onClick={restart} className="button-secondary mt-3 w-full justify-center">
                 {t("again")}
               </button>

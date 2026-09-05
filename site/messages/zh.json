@@ -1051,7 +1051,8 @@
     "exit": "退出",
     "savedLocally": "已保存在此设备上。登录后即可上传并拼接。",
     "uploading": "正在上传画面…",
-    "queued": "房间已排队等待拼接。"
+    "queued": "房间已排队等待拼接。",
+    "export": "导出画面（zip）"
   },
   "Contact": {
     "metaTitle": "联系我们 — Sodar",

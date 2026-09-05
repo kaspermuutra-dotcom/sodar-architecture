@@ -1,0 +1,29 @@
+{
+  "fixture_id": "panorama-posed-001",
+  "schema_version": "fixture.v1",
+  "kind": "valid",
+  "description": "Twelve posed 480x640 pinhole views (55x72 FOV, 30 deg apart, +-3 deg compass noise) rendered from a seeded synthetic room panorama, with the scanner's frames.json. For the posed-stitch provider; truth.jpg is the source panorama. Regenerate with make_inputs.py.",
+  "inputs": [
+    "input/frames.json",
+    "input/frame-001.jpg",
+    "input/frame-002.jpg",
+    "input/frame-003.jpg",
+    "input/frame-004.jpg",
+    "input/frame-005.jpg",
+    "input/frame-006.jpg",
+    "input/frame-007.jpg",
+    "input/frame-008.jpg",
+    "input/frame-009.jpg",
+    "input/frame-010.jpg",
+    "input/frame-011.jpg",
+    "input/frame-012.jpg"
+  ],
+  "expected_artifacts": [
+    "panorama.jpg",
+    "panorama-mask.png",
+    "stitch_metadata.json"
+  ],
+  "expect": {
+    "provider_validation": "pass"
+  }
+}

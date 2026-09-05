@@ -1051,7 +1051,8 @@
     "exit": "Sair",
     "savedLocally": "Guardado neste dispositivo. Inicie sessão para enviar e unir.",
     "uploading": "A enviar fotogramas…",
-    "queued": "Divisão em fila para união."
+    "queued": "Divisão em fila para união.",
+    "export": "Exportar fotogramas (zip)"
   },
   "Contact": {
     "metaTitle": "Contacto — Sodar",

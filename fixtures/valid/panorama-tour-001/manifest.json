@@ -1,0 +1,25 @@
+{
+  "fixture_id": "panorama-tour-001",
+  "schema_version": "fixture.v1",
+  "kind": "valid",
+  "description": "Two-node room graph (living-room <-> kitchen) with two small synthetic 512x256 equirectangular panoramas. For the psv-viewer provider. Regenerate with make_inputs.py.",
+  "inputs": ["input/tour.json", "input/living-room.png", "input/kitchen.png"],
+  "expected_artifacts": [
+    "tour.json",
+    "index.html",
+    "tour_metadata.json",
+    "vendor/psv-core.module.js",
+    "vendor/psv-core.min.css",
+    "vendor/psv-virtual-tour.module.js",
+    "vendor/psv-virtual-tour.min.css",
+    "vendor/psv-markers.module.js",
+    "vendor/psv-markers.min.css",
+    "vendor/psv-gyroscope.module.js",
+    "vendor/three.module.min.js",
+    "panoramas/living-room.png",
+    "panoramas/kitchen.png"
+  ],
+  "expect": {
+    "provider_validation": "pass"
+  }
+}

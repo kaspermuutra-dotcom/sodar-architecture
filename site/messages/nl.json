@@ -1051,7 +1051,8 @@
     "exit": "Afsluiten",
     "savedLocally": "Opgeslagen op dit apparaat. Log in om te uploaden en te stitchen.",
     "uploading": "Frames uploaden…",
-    "queued": "Kamer in de wachtrij voor stitchen."
+    "queued": "Kamer in de wachtrij voor stitchen.",
+    "export": "Frames exporteren (zip)"
   },
   "Contact": {
     "metaTitle": "Contact — Sodar",

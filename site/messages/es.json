@@ -1051,7 +1051,8 @@
     "exit": "Salir",
     "savedLocally": "Guardado en este dispositivo. Inicia sesión para subir y unir.",
     "uploading": "Subiendo fotogramas…",
-    "queued": "Estancia en cola para unir."
+    "queued": "Estancia en cola para unir.",
+    "export": "Exportar fotogramas (zip)"
   },
   "Contact": {
     "metaTitle": "Contacto — Sodar",

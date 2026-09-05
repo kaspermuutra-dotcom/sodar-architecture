@@ -1051,7 +1051,8 @@
     "exit": "Çık",
     "savedLocally": "Bu cihaza kaydedildi. Yüklemek ve birleştirmek için giriş yapın.",
     "uploading": "Kareler yükleniyor…",
-    "queued": "Oda birleştirme için sıraya alındı."
+    "queued": "Oda birleştirme için sıraya alındı.",
+    "export": "Kareleri dışa aktar (zip)"
   },
   "Contact": {
     "metaTitle": "İletişim — Sodar",

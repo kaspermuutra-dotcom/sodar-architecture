@@ -1051,7 +1051,8 @@
     "exit": "Avsluta",
     "savedLocally": "Sparat på den här enheten. Logga in för att ladda upp och sammanfoga.",
     "uploading": "Laddar upp bilder…",
-    "queued": "Rummet köat för sammanfogning."
+    "queued": "Rummet köat för sammanfogning.",
+    "export": "Exportera bilder (zip)"
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",
