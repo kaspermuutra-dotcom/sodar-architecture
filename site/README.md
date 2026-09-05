@@ -50,11 +50,13 @@ Capture → Preview → Unlock → Publish), `components/manifesto.tsx`
 
 Every white "Scan a property" button opens `/scan`: a full-screen guided
 capture built on the Photo Sphere Android app's logic
-(`third_party/360-photo-app`, MIT), ported to the browser in `lib/scanner/`:
-`plan.ts` (ring of yaw targets), `gate.ts` (dwell-based auto shutter),
-`orientation.ts` (DeviceOrientation → yaw/elevation, iOS permission). The UI is
-`components/scanner/scanner.tsx`. Frames stay in memory on the phone in this
-preview; stitching is the Python pipeline's job (`src/sodar/providers`).
+(`third_party/360-photo-app`, MIT), ported to the browser in `lib/scanner/sphere.ts` (target plan, projection,
+alignment gate). Frames persist in IndexedDB (`lib/scanner/db.ts`); finishing a
+room uploads them through `app/api/scanner/*` (Supabase auth + storage,
+`lib/scanner/contracts.ts`) and queues a stitch job, then
+`components/scanner/room-preview.tsx` shows the two stitched rooms in Photo
+Sphere Viewer. Without a signed-in session frames stay on the phone. Default
+scope is one ring per room; `/scan?scope=sphere` captures the full sphere.
 
 ## Contact
 

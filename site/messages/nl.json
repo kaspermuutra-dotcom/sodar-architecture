@@ -1048,7 +1048,10 @@
     "doneBody": "In het echte product verschijnt hier de rondleiding, samen met een eenmalige prijs voor de overige kamers.",
     "workspace": "Werkruimte-preview openen",
     "again": "Opnieuw scannen",
-    "exit": "Afsluiten"
+    "exit": "Afsluiten",
+    "savedLocally": "Opgeslagen op dit apparaat. Log in om te uploaden en te stitchen.",
+    "uploading": "Frames uploaden…",
+    "queued": "Kamer in de wachtrij voor stitchen."
   },
   "Contact": {
     "metaTitle": "Contact — Sodar",

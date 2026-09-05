@@ -1048,7 +1048,10 @@
     "doneBody": "En el producto real, el recorrido aparece aquí junto con un precio único para las estancias restantes.",
     "workspace": "Abrir la vista previa del espacio de trabajo",
     "again": "Escanear de nuevo",
-    "exit": "Salir"
+    "exit": "Salir",
+    "savedLocally": "Guardado en este dispositivo. Inicia sesión para subir y unir.",
+    "uploading": "Subiendo fotogramas…",
+    "queued": "Estancia en cola para unir."
   },
   "Contact": {
     "metaTitle": "Contacto — Sodar",

@@ -1048,7 +1048,10 @@
     "doneBody": "Gerçek üründe tur burada, kalan odalar için tek seferlik bir fiyatla birlikte görünür.",
     "workspace": "Çalışma alanı önizlemesini aç",
     "again": "Yeniden tara",
-    "exit": "Çık"
+    "exit": "Çık",
+    "savedLocally": "Bu cihaza kaydedildi. Yüklemek ve birleştirmek için giriş yapın.",
+    "uploading": "Kareler yükleniyor…",
+    "queued": "Oda birleştirme için sıraya alındı."
   },
   "Contact": {
     "metaTitle": "İletişim — Sodar",

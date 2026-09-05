@@ -1048,7 +1048,10 @@
     "doneBody": "Īstajā produktā šeit parādās apskate kopā ar vienreizēju cenu par atlikušajām telpām.",
     "workspace": "Atvērt darbvietas priekšskatu",
     "again": "Skenēt vēlreiz",
-    "exit": "Iziet"
+    "exit": "Iziet",
+    "savedLocally": "Saglabāts šajā ierīcē. Piesakieties, lai augšupielādētu un savienotu.",
+    "uploading": "Augšupielādē kadrus…",
+    "queued": "Telpa rindā savienošanai."
   },
   "Contact": {
     "metaTitle": "Kontakti — Sodar",

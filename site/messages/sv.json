@@ -1048,7 +1048,10 @@
     "doneBody": "I den riktiga produkten visas visningen här, tillsammans med ett engångspris för resterande rum.",
     "workspace": "Öppna förhandsvisningen av arbetsytan",
     "again": "Skanna igen",
-    "exit": "Avsluta"
+    "exit": "Avsluta",
+    "savedLocally": "Sparat på den här enheten. Logga in för att ladda upp och sammanfoga.",
+    "uploading": "Laddar upp bilder…",
+    "queued": "Rummet köat för sammanfogning."
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",

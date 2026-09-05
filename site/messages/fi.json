@@ -1048,7 +1048,10 @@
     "doneBody": "Oikeassa tuotteessa kierros näkyy tässä yhdessä loppujen huoneiden kertahinnan kanssa.",
     "workspace": "Avaa työtilan esikatselu",
     "again": "Skannaa uudelleen",
-    "exit": "Poistu"
+    "exit": "Poistu",
+    "savedLocally": "Tallennettu tälle laitteelle. Kirjaudu sisään lähettääksesi ja yhdistääksesi.",
+    "uploading": "Lähetetään kuvia…",
+    "queued": "Huone jonossa yhdistämiseen."
   },
   "Contact": {
     "metaTitle": "Yhteystiedot — Sodar",

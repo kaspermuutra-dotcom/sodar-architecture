@@ -1048,7 +1048,10 @@
     "doneBody": "In the live product the walkthrough appears here, together with a one-time price for the remaining rooms.",
     "workspace": "Open the workspace preview",
     "again": "Scan again",
-    "exit": "Exit"
+    "exit": "Exit",
+    "savedLocally": "Saved on this device. Sign in to upload and stitch.",
+    "uploading": "Uploading frames…",
+    "queued": "Room queued for stitching."
   },
   "Contact": {
     "metaTitle": "Contact — Sodar",

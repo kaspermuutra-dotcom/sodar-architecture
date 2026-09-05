@@ -1048,7 +1048,10 @@
     "doneBody": "Päris tootes ilmub siia ringkäik koos ülejäänud ruumide ühekordse hinnaga.",
     "workspace": "Ava tööruumi eelvaade",
     "again": "Skanni uuesti",
-    "exit": "Välju"
+    "exit": "Välju",
+    "savedLocally": "Salvestatud sellesse seadmesse. Logi sisse, et üles laadida ja kokku panna.",
+    "uploading": "Laadime kaadreid üles…",
+    "queued": "Ruum on kokkupanekuks järjekorras."
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",

@@ -1048,7 +1048,10 @@
     "doneBody": "在正式产品中，漫游会显示在这里，并附上其余房间的一次性价格。",
     "workspace": "打开工作台预览",
     "again": "再次扫描",
-    "exit": "退出"
+    "exit": "退出",
+    "savedLocally": "已保存在此设备上。登录后即可上传并拼接。",
+    "uploading": "正在上传画面…",
+    "queued": "房间已排队等待拼接。"
   },
   "Contact": {
     "metaTitle": "联系我们 — Sodar",

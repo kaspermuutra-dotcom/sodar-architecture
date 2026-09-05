@@ -1048,7 +1048,10 @@
     "doneBody": "Tikrame produkte čia rodoma apžvalga kartu su vienkartine kaina už likusius kambarius.",
     "workspace": "Atidaryti darbo erdvės peržiūrą",
     "again": "Skenuoti dar kartą",
-    "exit": "Išeiti"
+    "exit": "Išeiti",
+    "savedLocally": "Išsaugota šiame įrenginyje. Prisijunkite, kad įkeltumėte ir sujungtumėte.",
+    "uploading": "Įkeliami kadrai…",
+    "queued": "Kambarys eilėje sujungimui."
   },
   "Contact": {
     "metaTitle": "Kontaktai — Sodar",

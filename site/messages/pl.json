@@ -1048,7 +1048,10 @@
     "doneBody": "W prawdziwym produkcie tutaj pojawia się spacer wraz z jednorazową ceną za pozostałe pomieszczenia.",
     "workspace": "Otwórz podgląd przestrzeni roboczej",
     "again": "Skanuj ponownie",
-    "exit": "Wyjdź"
+    "exit": "Wyjdź",
+    "savedLocally": "Zapisano na tym urządzeniu. Zaloguj się, aby przesłać i połączyć.",
+    "uploading": "Przesyłanie klatek…",
+    "queued": "Pomieszczenie w kolejce do łączenia."
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",

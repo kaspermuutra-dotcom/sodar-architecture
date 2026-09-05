@@ -1048,7 +1048,10 @@
     "doneBody": "Dans le produit réel, la visite apparaît ici avec un prix unique pour les pièces restantes.",
     "workspace": "Ouvrir l’aperçu de l’espace de travail",
     "again": "Scanner à nouveau",
-    "exit": "Quitter"
+    "exit": "Quitter",
+    "savedLocally": "Enregistré sur cet appareil. Connectez-vous pour envoyer et assembler.",
+    "uploading": "Envoi des images…",
+    "queued": "Pièce en file d’attente pour l’assemblage."
   },
   "Contact": {
     "metaTitle": "Contact — Sodar",

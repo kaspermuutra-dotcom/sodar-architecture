@@ -1048,7 +1048,10 @@
     "doneBody": "Nel prodotto reale qui compare il tour, insieme a un prezzo unico per le stanze restanti.",
     "workspace": "Apri l’anteprima dello spazio di lavoro",
     "again": "Scansiona di nuovo",
-    "exit": "Esci"
+    "exit": "Esci",
+    "savedLocally": "Salvato su questo dispositivo. Accedi per caricare e unire.",
+    "uploading": "Caricamento fotogrammi…",
+    "queued": "Stanza in coda per lo stitching."
   },
   "Contact": {
     "metaTitle": "Contatti — Sodar",

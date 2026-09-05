@@ -1048,7 +1048,10 @@
     "doneBody": "No produto real, a visita aparece aqui, juntamente com um preço único para as restantes divisões.",
     "workspace": "Abrir a pré-visualização do espaço de trabalho",
     "again": "Digitalizar de novo",
-    "exit": "Sair"
+    "exit": "Sair",
+    "savedLocally": "Guardado neste dispositivo. Inicie sessão para enviar e unir.",
+    "uploading": "A enviar fotogramas…",
+    "queued": "Divisão em fila para união."
   },
   "Contact": {
     "metaTitle": "Contacto — Sodar",

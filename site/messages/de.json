@@ -1048,7 +1048,10 @@
     "doneBody": "Im echten Produkt erscheint hier der Rundgang, zusammen mit einem Einmalpreis für die restlichen Räume.",
     "workspace": "Workspace-Vorschau öffnen",
     "again": "Erneut scannen",
-    "exit": "Beenden"
+    "exit": "Beenden",
+    "savedLocally": "Auf diesem Gerät gespeichert. Melden Sie sich an, um hochzuladen und zusammenzufügen.",
+    "uploading": "Bilder werden hochgeladen…",
+    "queued": "Raum zum Zusammenfügen eingereiht."
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",
