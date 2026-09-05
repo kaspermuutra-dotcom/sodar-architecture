@@ -1,135 +1,328 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { AlignmentGate, createTargetPlan, focalLength, projectTarget, type FieldOfView, type Orientation, type SpherePlan } from "@/lib/scanner/sphere";
-import { deleteFrame, latestSession, roomFrames, saveFrame, saveSession, updateFrameUpload, type Room, type ScanSession } from "@/lib/scanner/db";
-import { httpScannerBackend, type FrameMetadata } from "@/lib/scanner/contracts";
-import { RoomPreview } from "./room-preview";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { SodarMark } from "@/components/logo";
+import { AlignmentGate } from "@/lib/scanner/gate";
+import { createPlan, angularDistance, yawDelta, normalizeDegrees, type SphereTargetPlan } from "@/lib/scanner/plan";
+import { requestOrientationPermission, subscribeOrientation, type Orientation } from "@/lib/scanner/orientation";
 
-const DEFAULT_FOV: FieldOfView = { horizontal: 55, vertical: 72 };
-const newRoom = (n: number): Room => ({ id: crypto.randomUUID(), name: `Room ${n}`, status: "capturing", captured: 0, targetCount: 0 });
-const newSession = (): ScanSession => { const room = newRoom(1); const now = new Date().toISOString(); return { id: crypto.randomUUID(), createdAt: now, updatedAt: now, activeRoomId: room.id, rooms: [room] }; };
+type Phase = "idle" | "requesting" | "capturing" | "roomDone" | "processing" | "done";
+type Frame = { url: string; yaw: number; elevation: number };
 
-function readOrientation(event: DeviceOrientationEvent): Orientation {
-  const compass = (event as DeviceOrientationEvent & { webkitCompassHeading?: number }).webkitCompassHeading;
-  return { yaw: compass ?? event.alpha ?? 0, pitch: Math.max(-90, Math.min(90, (event.beta ?? 90) - 90)), roll: event.gamma ?? 0 };
-}
+const PX_PER_DEGREE = 9;
+const ROOMS_IN_PREVIEW = 2;
 
+/**
+ * Guided panorama capture in the browser. Mirrors the Photo Sphere Android
+ * flow: a ring of yaw targets, the next target drawn relative to where the
+ * phone points, and an alignment gate that fires the shutter once the camera
+ * settles on it. Frames stay in memory on the device — this is the capture
+ * half of the product; stitching happens server-side in the real pipeline.
+ */
 export function Scanner() {
-  const video = useRef<HTMLVideoElement>(null);
-  const cameraStream = useRef<MediaStream | null>(null);
-  const gate = useRef(new AlignmentGate());
-  const capturing = useRef(false);
-  const [session, setSession] = useState<ScanSession>();
-  const [orientation, setOrientation] = useState<Orientation>();
-  const [plan, setPlan] = useState<SpherePlan>();
-  const [permission, setPermission] = useState<"idle" | "ready" | "error">("idle");
-  const [message, setMessage] = useState("Tap start and allow camera + motion access");
+  const t = useTranslations("Scanner");
+  const roomNames = t.raw("rooms") as string[];
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const streamRef = useRef<MediaStream | null>(null);
+  const gateRef = useRef(new AlignmentGate());
+  const orientationRef = useRef<Orientation | null>(null);
+  const lastRef = useRef<Orientation | null>(null);
+  const rafRef = useRef<number | null>(null);
+  const planRef = useRef<SphereTargetPlan>(createPlan(0, "ring"));
+
+  const [phase, setPhase] = useState<Phase>("idle");
+  const [error, setError] = useState<string | null>(null);
+  const [hasGyro, setHasGyro] = useState<boolean | null>(null);
+  const [room, setRoom] = useState(0);
+  const [frames, setFrames] = useState<Frame[]>([]);
+  const [allFrames, setAllFrames] = useState<Frame[][]>([]);
+  const [hint, setHint] = useState<string>("");
+  const [targetPos, setTargetPos] = useState<{ x: number; y: number; dist: number } | null>(null);
   const [dwell, setDwell] = useState(0);
-  const activeRoom = session?.rooms.find((room) => room.id === session.activeRoomId);
-  const target = plan?.targets[activeRoom?.captured ?? 0];
-  const updateRoom = useCallback((id: string, change: (room: Room) => Room) => setSession((old) => old ? { ...old, rooms: old.rooms.map((r) => r.id === id ? change(r) : r) } : old), []);
+  const [flash, setFlash] = useState(false);
+  const [progress, setProgress] = useState(0);
 
-  useEffect(() => { void latestSession().then((saved) => setSession(saved && saved.rooms.some((r) => r.status !== "complete") ? saved : newSession())); }, []);
-  useEffect(() => () => cameraStream.current?.getTracks().forEach((track) => track.stop()), []);
-  useEffect(() => { if (session) void saveSession(session); }, [session]);
+  const total = planRef.current.targets.length;
+  const isMobile = useMemo(() => (typeof navigator !== "undefined" ? /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) : false), []);
 
+  const stopStream = useCallback(() => {
+    streamRef.current?.getTracks().forEach((tr) => tr.stop());
+    streamRef.current = null;
+  }, []);
+
+  const captureFrame = useCallback(
+    (yaw: number, elevation: number) => {
+      const video = videoRef.current;
+      const canvas = canvasRef.current;
+      if (!video || !canvas || video.videoWidth === 0) return;
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      ctx.drawImage(video, 0, 0);
+      const url = canvas.toDataURL("image/jpeg", 0.9);
+      setFrames((f) => [...f, { url, yaw, elevation }]);
+      setFlash(true);
+      window.setTimeout(() => setFlash(false), 120);
+      try {
+        navigator.vibrate?.(20);
+      } catch {}
+    },
+    [],
+  );
+
+  // Main loop: compare orientation to the next target, drive the gate.
   useEffect(() => {
-    const pending = session?.rooms.filter((room) => room.job && room.status === "processing") ?? [];
-    if (!pending.length) return;
-    const timer = window.setInterval(() => {
-      pending.forEach((room) => void httpScannerBackend.getJob(room.job!.id).then((job) => {
-        updateRoom(room.id, (current) => ({ ...current, job, status: job.status === "succeeded" ? "complete" : current.status, panoramaUrl: job.privatePreviewUrl ?? current.panoramaUrl }));
-      }).catch(() => undefined));
-      if (session) void httpScannerBackend.getPreview(session.id).then((preview) => {
-        preview.manifest?.nodes.forEach((node) => updateRoom(node.id, (room) => ({ ...room, status: "complete", panoramaUrl: node.panorama })));
-      }).catch(() => undefined);
-    }, 4_000);
-    return () => window.clearInterval(timer);
-  }, [session?.rooms, updateRoom]);
-
-  const capture = useCallback(async (pose: Orientation) => {
-    if (!video.current || !session || !activeRoom || !target || capturing.current) return;
-    capturing.current = true;
-    setMessage("Capturing…");
-    try {
-      const canvas = document.createElement("canvas");
-      canvas.width = video.current.videoWidth; canvas.height = video.current.videoHeight;
-      canvas.getContext("2d", { alpha: false })?.drawImage(video.current, 0, 0);
-      const jpeg = await new Promise<Blob>((resolve, reject) => canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error("JPEG encoding failed")), "image/jpeg", 0.95));
-      const id = crypto.randomUUID();
-      const metadata: FrameMetadata = { id, roomId: activeRoom.id, sessionId: session.id, ...pose, fov: DEFAULT_FOV, timestamp: new Date().toISOString(), checkpoint: { index: target.index, ring: target.ring, yaw: target.yaw, pitch: target.pitch, elevation: target.elevation }, width: canvas.width, height: canvas.height, mimeType: "image/jpeg" };
-      await saveFrame({ id, metadata, jpeg });
-      updateRoom(activeRoom.id, (room) => ({ ...room, captured: room.captured + 1 }));
-      gate.current.reset();
-      navigator.vibrate?.(35);
-      setMessage("Frame saved privately on this device");
-    } catch (error) { setMessage(error instanceof Error ? error.message : "Capture failed"); }
-    finally { capturing.current = false; }
-  }, [activeRoom, session, target, updateRoom]);
-
-  useEffect(() => {
-    if (permission !== "ready") return;
-    const onOrientation = (event: DeviceOrientationEvent) => {
-      const next = readOrientation(event); setOrientation(next);
-      if (!plan) { const created = createTargetPlan(next.yaw, DEFAULT_FOV); setPlan(created); if (activeRoom) updateRoom(activeRoom.id, (room) => ({ ...room, targetCount: created.targets.length })); return; }
-      const activeTarget = plan.targets[activeRoom?.captured ?? 0]; if (!activeTarget) return;
-      const reading = gate.current.update(projectTarget(next, activeTarget).angularDistance, performance.now()); setDwell(reading.progress);
-      if (reading.triggered) void capture(next);
-    };
-    window.addEventListener("deviceorientation", onOrientation, true);
-    return () => window.removeEventListener("deviceorientation", onOrientation, true);
-  }, [permission, plan, activeRoom, capture, updateRoom]);
-
-  const start = async () => {
-    try {
-      const requestMotion = (DeviceOrientationEvent as typeof DeviceOrientationEvent & { requestPermission?: () => Promise<PermissionState> }).requestPermission;
-      if (requestMotion && await requestMotion() !== "granted") throw new Error("Motion access was not granted");
-      const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: "environment" }, width: { ideal: 4096 }, height: { ideal: 3072 } }, audio: false });
-      cameraStream.current = stream;
-      if (!video.current) return; video.current.srcObject = stream; await video.current.play(); setPermission("ready"); setMessage("Move the dot into the centre and hold still");
-    } catch (error) { setPermission("error"); setMessage(error instanceof Error ? error.message : "Camera access failed"); }
-  };
-
-  const finishRoom = async () => {
-    if (!session || !activeRoom || !activeRoom.captured) return;
-    updateRoom(activeRoom.id, (room) => ({ ...room, status: "processing" })); setMessage("Uploading original frames…");
-    try {
-      await httpScannerBackend.createScan(session.id);
-      await Promise.all(session.rooms.map((room, index) => httpScannerBackend.createRoom(session.id, room.id, room.name, index + 1, room.targetCount)));
-      const frames = await roomFrames(activeRoom.id); const keys: string[] = [];
-      for (const frame of frames) {
-        if (frame.upload && "completedAt" in frame.upload) { keys.push(frame.upload.privateObjectKey); continue; }
-        let ticket = frame.upload ?? await httpScannerBackend.beginUpload(frame.metadata, frame.jpeg.size);
-        await updateFrameUpload(frame, ticket);
-        while (ticket.offset < frame.jpeg.size) {
-          const result = await httpScannerBackend.uploadPart(ticket, frame.jpeg, { frameId: frame.id, offset: ticket.offset, size: Math.min(5 * 1024 * 1024, frame.jpeg.size - ticket.offset) });
-          await updateFrameUpload(frame, result);
-          if ("completedAt" in result) { keys.push(result.privateObjectKey); await deleteFrame(frame.id); break; } ticket = result;
+    if (phase !== "capturing" || hasGyro === false) return;
+    const tick = () => {
+      const o = orientationRef.current;
+      const idx = frames.length;
+      const target = planRef.current.targets[idx];
+      if (o && target) {
+        const dYaw = yawDelta(o.yaw, target.yaw);
+        const dEl = target.elevation - o.elevation;
+        const dist = angularDistance(o.yaw, o.elevation, target);
+        setTargetPos({ x: Math.max(-160, Math.min(160, dYaw * PX_PER_DEGREE)), y: Math.max(-160, Math.min(160, -dEl * PX_PER_DEGREE)), dist });
+        const last = lastRef.current;
+        const speed = last ? Math.abs(yawDelta(last.yaw, o.yaw)) / Math.max(1, o.t - last.t) * 1000 : 0;
+        lastRef.current = o;
+        const reading = gateRef.current.update(dist, performance.now());
+        setDwell(reading.dwellProgress);
+        if (reading.isTriggered) {
+          captureFrame(o.yaw, o.elevation);
+          gateRef.current.reset();
         }
+        if (reading.isAligned) setHint(t("hold"));
+        else if (speed > 60) setHint(t("slower"));
+        else if (Math.abs(dYaw) > Math.abs(dEl)) setHint(dYaw > 0 ? t("turnRight") : t("turnLeft"));
+        else setHint(dEl > 0 ? t("tiltUp") : t("tiltDown"));
       }
-      const job = await httpScannerBackend.startJob({ sessionId: session.id, roomId: activeRoom.id, stage: "stitch", inputObjectKeys: keys, preserveInputs: true });
-      updateRoom(activeRoom.id, (room) => ({ ...room, job })); setMessage("Room queued for stitching");
-    } catch (error) { setMessage(`Saved locally. Upload can resume: ${error instanceof Error ? error.message : "offline"}`); }
-  };
+      rafRef.current = requestAnimationFrame(tick);
+    };
+    rafRef.current = requestAnimationFrame(tick);
+    return () => {
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
+  }, [phase, frames.length, hasGyro, captureFrame, t]);
 
+  // Room complete when the ring is full.
   useEffect(() => {
-    const resume = () => { if (activeRoom?.status === "processing") void finishRoom(); };
-    window.addEventListener("online", resume);
-    return () => window.removeEventListener("online", resume);
-  }, [activeRoom?.id, activeRoom?.status, session?.id]);
+    if (phase === "capturing" && frames.length >= total) setPhase("roomDone");
+  }, [frames.length, phase, total]);
 
-  const addRoom = () => setSession((old) => { if (!old) return old; const room = newRoom(old.rooms.length + 1); setPlan(undefined); gate.current.reset(); return { ...old, activeRoomId: room.id, rooms: [...old.rooms, room] }; });
-  const marker = useMemo(() => { if (!orientation || !target || !video.current) return; const view = projectTarget(orientation, target); const f = focalLength(innerWidth, innerHeight, DEFAULT_FOV); return { left: innerWidth / 2 + view.x / view.z * f, top: innerHeight / 2 - view.y / view.z * f, visible: view.inFront }; }, [orientation, target]);
+  // Fake processing bar for the preview state.
+  useEffect(() => {
+    if (phase !== "processing") return;
+    setProgress(0);
+    const id = window.setInterval(() => {
+      setProgress((p) => {
+        if (p >= 100) {
+          window.clearInterval(id);
+          setPhase("done");
+          return 100;
+        }
+        return p + 2;
+      });
+    }, 80);
+    return () => window.clearInterval(id);
+  }, [phase]);
 
-  return <main className="relative h-dvh w-screen overflow-hidden bg-black text-white">
-    <video ref={video} playsInline muted className="absolute inset-0 h-full w-full object-cover" />
-    <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_35%,rgba(0,0,0,.55))]" />
-    {permission === "idle" && <div className="absolute inset-0 z-30 grid place-items-center bg-black px-8 text-center"><div><p className="mb-3 font-mono text-xs uppercase tracking-[.24em] text-white/55">Private mobile capture</p><h1 className="font-serif text-5xl">Scan this room</h1><p className="mx-auto mt-4 max-w-sm text-sm leading-6 text-white/60">Frames stay on this device until you finish a room and start its private upload.</p><button onClick={start} className="mt-8 rounded-full bg-white px-6 py-3 font-medium text-black">Start camera</button></div></div>}
-    <div className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/70" style={{ background: `conic-gradient(white ${dwell * 360}deg, transparent 0)` }}><div className="absolute inset-1 rounded-full bg-black/50" /></div>
-    {marker?.visible && <div className="pointer-events-none absolute h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_20px_white]" style={{ left: marker.left, top: marker.top }} />}
-    <header className="absolute inset-x-0 top-0 flex items-center justify-between p-4"><span className="font-mono text-xs uppercase tracking-widest">{activeRoom?.name ?? "Scanner"}</span><span className="rounded-full bg-black/50 px-3 py-2 font-mono text-[10px]">{activeRoom?.captured ?? 0} / {activeRoom?.targetCount ?? "—"}</span></header>
-    <footer className="absolute inset-x-0 bottom-0 p-4"><p className="mb-3 text-center text-xs text-white/70">{message}</p><div className="flex justify-center gap-2"><button disabled={!activeRoom?.captured} onClick={finishRoom} className="rounded-full border border-white/30 bg-black/50 px-4 py-2 text-xs disabled:opacity-30">Finish room</button><button onClick={addRoom} className="rounded-full bg-white px-4 py-2 text-xs text-black">Add room</button></div></footer>
-    {session && <RoomPreview rooms={session.rooms} />}
-  </main>;
+  useEffect(() => () => stopStream(), [stopStream]);
+
+  async function start() {
+    setError(null);
+    setPhase("requesting");
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: "environment" }, width: { ideal: 1920 }, height: { ideal: 1080 } }, audio: false });
+      streamRef.current = stream;
+      if (videoRef.current) {
+        videoRef.current.srcObject = stream;
+        await videoRef.current.play();
+      }
+    } catch (e) {
+      const name = (e as DOMException)?.name;
+      setError(name === "NotAllowedError" ? t("denied") : t("noCamera"));
+      setPhase("idle");
+      return;
+    }
+    const status = await requestOrientationPermission();
+    if (status !== "ok") {
+      setHasGyro(false);
+    } else {
+      let got = false;
+      const unsub = subscribeOrientation((o) => {
+        orientationRef.current = o;
+        if (!got) {
+          got = true;
+          setHasGyro(true);
+          // Start the ring where the phone is pointing now, like the Android app.
+          planRef.current = createPlan(normalizeDegrees(o.yaw), "ring");
+        }
+      });
+      window.setTimeout(() => {
+        if (!got) setHasGyro(false);
+      }, 1500);
+      (window as unknown as { __sodarUnsub?: () => void }).__sodarUnsub = unsub;
+    }
+    setFrames([]);
+    gateRef.current.reset();
+    setPhase("capturing");
+  }
+
+  function manualCapture() {
+    const o = orientationRef.current;
+    captureFrame(o?.yaw ?? frames.length * 30, o?.elevation ?? 0);
+  }
+
+  function finishRoom() {
+    setAllFrames((a) => [...a, frames]);
+    if (room + 1 >= ROOMS_IN_PREVIEW) {
+      stopStream();
+      setPhase("processing");
+    } else {
+      setRoom((r) => r + 1);
+      setFrames([]);
+      gateRef.current.reset();
+      const o = orientationRef.current;
+      planRef.current = createPlan(normalizeDegrees(o?.yaw ?? 0), "ring");
+      setPhase("capturing");
+    }
+  }
+
+  const roomName = roomNames[room] ?? `${t("room")} ${room + 1}`;
+
+  return (
+    <div className="relative min-h-dvh bg-bg text-text">
+      <canvas ref={canvasRef} className="hidden" />
+
+      {/* top bar */}
+      <div className="absolute inset-x-0 top-0 z-30 flex items-center justify-between px-4 py-3">
+        <span className="flex items-center gap-2">
+          <SodarMark size={18} className="text-text" />
+          <span className="wordmark text-[.7rem]">Sodar</span>
+        </span>
+        <Link href="/" onClick={stopStream} className="rounded-full border border-white/25 bg-black/40 px-3 py-1 font-mono text-[11px] text-text backdrop-blur">
+          {t("exit")}
+        </Link>
+      </div>
+
+      {/* viewfinder (kept mounted so the stream can attach before capture starts) */}
+      <video ref={videoRef} playsInline muted autoPlay className={`absolute inset-0 h-full w-full object-cover ${phase === "capturing" || phase === "roomDone" ? "opacity-100" : "opacity-0"}`} />
+      {flash ? <div className="pointer-events-none absolute inset-0 z-20 bg-white/80" /> : null}
+
+      {phase === "idle" || phase === "requesting" ? (
+        <div className="relative z-10 mx-auto flex min-h-dvh max-w-md flex-col justify-end px-6 pb-10 pt-24">
+          <p className="eyebrow">
+            <span /> {t("eyebrow")}
+          </p>
+          <h1 className="display mt-4 text-[clamp(2.4rem,9vw,3.6rem)]">{t("title")}</h1>
+          <p className="mt-4 text-text-muted">{t("intro")}</p>
+          {!isMobile ? <p className="mt-3 font-mono text-[11px] text-text-faint">{t("desktopHint")}</p> : null}
+          {error ? <p className="mt-4 rounded-xl border border-border-strong bg-bg-raised p-3 text-sm text-text">{error}</p> : null}
+          <button type="button" onClick={start} disabled={phase === "requesting"} className="button-primary mt-8 w-full justify-center">
+            {phase === "requesting" ? t("requesting") : t("start")} <span aria-hidden>↗</span>
+          </button>
+          <p className="mt-3 text-center font-mono text-[10px] text-text-faint">{t("privacyNote")}</p>
+        </div>
+      ) : null}
+
+      {phase === "capturing" || phase === "roomDone" ? (
+        <div className="absolute inset-0 z-10">
+          {/* horizon + reticle */}
+          <div className="absolute inset-x-8 top-1/2 h-px bg-white/30" />
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <svg width="96" height="96" viewBox="0 0 100 100" className="-rotate-90">
+              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,.45)" strokeWidth="2" fill="none" />
+              <circle cx="50" cy="50" r="44" stroke="#f4f2ee" strokeWidth="3" fill="none" strokeDasharray="276" strokeDashoffset={276 * (1 - dwell)} strokeLinecap="round" />
+            </svg>
+          </div>
+          {/* next target, positioned relative to the reticle */}
+          {phase === "capturing" && targetPos && hasGyro ? (
+            <div className="absolute left-1/2 top-1/2" style={{ transform: `translate(calc(-50% + ${targetPos.x}px), calc(-50% + ${targetPos.y}px))` }}>
+              <div className={`h-12 w-12 rounded-full border-2 ${targetPos.dist < 4 ? "border-text bg-text/30" : "border-white/70 border-dashed"}`} />
+            </div>
+          ) : null}
+
+          {/* HUD */}
+          <div className="absolute left-4 top-14 font-mono text-[11px] text-text" dir="ltr">
+            <span className="num">{String(frames.length).padStart(2, "0")}</span>
+            <span className="text-text-muted">/{total} {t("frames")}</span>
+          </div>
+          <div className="absolute right-4 top-14 rounded-full border border-white/25 bg-black/40 px-2.5 py-1 font-mono text-[10px] text-text backdrop-blur">
+            {roomName}
+          </div>
+
+          {/* thumbnails */}
+          <div className="absolute inset-x-0 bottom-36 flex gap-1 overflow-x-auto px-4" dir="ltr">
+            {frames.map((f, i) => (
+              <img key={i} src={f.url} alt="" className="h-10 w-14 shrink-0 rounded object-cover" />
+            ))}
+          </div>
+
+          {/* assistant */}
+          <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/15 bg-black/55 p-4 backdrop-blur">
+            <p className="font-mono text-[10px] uppercase tracking-[.16em] text-text-muted">{t("assistant")}</p>
+            {phase === "roomDone" ? (
+              <>
+                <p className="mt-1 text-sm text-text">{t("roomDone")}</p>
+                <button type="button" onClick={finishRoom} className="button-primary mt-3 w-full justify-center">
+                  {room + 1 >= ROOMS_IN_PREVIEW ? t("finish") : t("nextRoom")} <span aria-hidden>↗</span>
+                </button>
+              </>
+            ) : hasGyro === false ? (
+              <>
+                <p className="mt-1 text-sm text-text">{t("noGyro")}</p>
+                <div className="mt-3 flex gap-2">
+                  <button type="button" onClick={manualCapture} className="button-primary flex-1 justify-center">{t("manual")}</button>
+                  {frames.length >= 6 ? <button type="button" onClick={() => setPhase("roomDone")} className="button-secondary">{t("finishRoom")}</button> : null}
+                </div>
+              </>
+            ) : (
+              <>
+                <p className="mt-1 text-sm text-text">{hint || t("hold")}</p>
+                {frames.length >= 6 ? (
+                  <button type="button" onClick={() => setPhase("roomDone")} className="button-mini mt-3">{t("finishRoom")}</button>
+                ) : null}
+              </>
+            )}
+          </div>
+        </div>
+      ) : null}
+
+      {phase === "processing" || phase === "done" ? (
+        <div className="relative z-10 mx-auto flex min-h-dvh max-w-md flex-col justify-center px-6 py-24">
+          <p className="eyebrow">
+            <span /> {phase === "done" ? t("done") : t("processingLabel")}
+          </p>
+          <h2 className="display mt-4 text-[clamp(2.2rem,8vw,3.2rem)]">{phase === "done" ? t("doneTitle") : t("processing")}</h2>
+          <div className="mt-6 h-1 w-full overflow-hidden rounded-full bg-white/10">
+            <div className="h-full bg-text transition-[width] duration-100" style={{ width: `${progress}%` }} />
+          </div>
+          <p className="mt-2 font-mono text-[11px] text-text-muted" dir="ltr">
+            {allFrames.reduce((n, r) => n + r.length, 0)} {t("frames")} · {allFrames.length} {t("roomsLabel")}
+          </p>
+          {phase === "done" ? (
+            <>
+              <p className="mt-6 text-text-muted">{t("doneBody")}</p>
+              <div className="mt-4 grid grid-cols-4 gap-1">
+                {allFrames.flat().slice(0, 8).map((f, i) => (
+                  <img key={i} src={f.url} alt="" className="aspect-[4/3] w-full rounded object-cover" />
+                ))}
+              </div>
+              <Link href="/terminal" className="button-primary mt-8 w-full justify-center">
+                {t("workspace")} <span aria-hidden>↗</span>
+              </Link>
+              <button type="button" onClick={() => { setAllFrames([]); setRoom(0); setPhase("idle"); }} className="button-secondary mt-3 w-full justify-center">
+                {t("again")}
+              </button>
+            </>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
+  );
 }

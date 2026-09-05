@@ -11,7 +11,8 @@
     "signIn": "Entrar",
     "getStarted": "Digitalizar um imóvel",
     "menu": "Abrir menu",
-    "home": "Início Sodar"
+    "home": "Início Sodar",
+    "contact": "Contacto"
   },
   "Hero": {
     "headline1": "Visitas com IA",
@@ -486,6 +487,10 @@
           [
             "Empresas",
             "/enterprise"
+          ],
+          [
+            "Contacto",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Termos de serviço",
       "data-processing": "Adendo de tratamento de dados",
       "cookies": "Política de cookies"
-    }
+    },
+    "privacyContact": "Questões de privacidade:"
   },
   "Scaffold": {
     "phase": "Fase 1 — design e estrutura",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "agências já digitalizam com a Sodar",
     "note": "Acesso antecipado · Tallinn e além"
+  },
+  "Scanner": {
+    "metaTitle": "Digitalizar um imóvel — Sodar",
+    "eyebrow": "Captura guiada",
+    "title": "Digitalize esta divisão.",
+    "intro": "A Sodar usa a câmara e os sensores de movimento para captar a divisão como panorama. Segure o telemóvel na vertical, siga o alvo e o disparo acontece sozinho.",
+    "desktopHint": "Funciona melhor num telemóvel. Abra sodar.io/scan no seu telemóvel ou continue aqui.",
+    "start": "Permitir câmara e começar",
+    "requesting": "A pedir a câmara…",
+    "denied": "O acesso à câmara foi recusado. Permita-o nas definições do browser e tente de novo.",
+    "noCamera": "Não foi encontrada nenhuma câmara neste dispositivo.",
+    "privacyNote": "Nesta pré-visualização, as imagens ficam no seu dispositivo.",
+    "assistant": "Assistente de captura",
+    "room": "Divisão",
+    "rooms": [
+      "Sala",
+      "Cozinha"
+    ],
+    "frames": "fotogramas",
+    "roomsLabel": "divisões",
+    "hold": "Mantenha parado…",
+    "turnLeft": "Vire à esquerda",
+    "turnRight": "Vire à direita",
+    "tiltUp": "Incline para cima",
+    "tiltDown": "Incline para baixo",
+    "slower": "Mais devagar",
+    "roomDone": "Divisão concluída.",
+    "nextRoom": "Próxima divisão",
+    "finishRoom": "Terminar divisão",
+    "finish": "Processar pré-visualização",
+    "manual": "Captar",
+    "noGyro": "Sem sensores de movimento — rode cerca de 30° entre capturas.",
+    "processingLabel": "A processar",
+    "processing": "A criar a sua pré-visualização de duas divisões…",
+    "done": "Pré-visualização pronta",
+    "doneTitle": "Duas divisões captadas.",
+    "doneBody": "No produto real, a visita aparece aqui, juntamente com um preço único para as restantes divisões.",
+    "workspace": "Abrir a pré-visualização do espaço de trabalho",
+    "again": "Digitalizar de novo",
+    "exit": "Sair"
+  },
+  "Contact": {
+    "metaTitle": "Contacto — Sodar",
+    "eyebrow": "Fale connosco",
+    "title": "Diga-nos quem é.",
+    "sub": "Agentes, agências, fornecedores de CRM e portais recebem respostas diferentes — escolha o seu perfil e respondemos da secretária certa.",
+    "phoneLabel": "Telefone",
+    "emailLabel": "Email",
+    "roleLabel": "Sou",
+    "roles": {
+      "broker": "Agente imobiliário",
+      "brokerage": "Agência",
+      "crm": "Fornecedor de CRM",
+      "portal": "Portal imobiliário",
+      "other": "Outro"
+    },
+    "name": "Nome",
+    "company": "Empresa",
+    "email": "Email profissional",
+    "message": "Mensagem",
+    "consent": "Aceito que a Sodar guarde esta mensagem para me responder. Ver a política de privacidade.",
+    "submit": "Enviar mensagem",
+    "sending": "A enviar…",
+    "sent": "Mensagem enviada.",
+    "sentBody": "Respondemos no prazo de um dia útil.",
+    "another": "Enviar outra",
+    "error": "O envio falhou. Escreva diretamente para team@sodar.io.",
+    "fallbackNote": "Abre a sua aplicação de email até o serviço de formulários estar ligado."
+  },
+  "Intro": {
+    "kicker": "Introdução",
+    "title": "A Sodar em trinta segundos.",
+    "body": "Percorra uma vez, pré-visualize duas divisões grátis, pague uma vez, publique no anúncio que já tem."
   }
 }

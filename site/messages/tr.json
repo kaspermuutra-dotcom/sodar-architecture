@@ -11,7 +11,8 @@
     "signIn": "Giriş yap",
     "getStarted": "Mülk tara",
     "menu": "Menüyü aç/kapat",
-    "home": "Sodar ana sayfa"
+    "home": "Sodar ana sayfa",
+    "contact": "İletişim"
   },
   "Hero": {
     "headline1": "Daha çok satış kapatan",
@@ -486,6 +487,10 @@
           [
             "Kurumsal",
             "/enterprise"
+          ],
+          [
+            "İletişim",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Hizmet Koşulları",
       "data-processing": "Veri İşleme Eki",
       "cookies": "Çerez Politikası"
-    }
+    },
+    "privacyContact": "Gizlilik soruları:"
   },
   "Scaffold": {
     "phase": "1. aşama — tasarım ve yapı",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "ofis şimdiden Sodar ile tarıyor",
     "note": "Erken erişim · Tallinn ve ötesi"
+  },
+  "Scanner": {
+    "metaTitle": "Mülk tara — Sodar",
+    "eyebrow": "Yönlendirmeli çekim",
+    "title": "Bu odayı tarayın.",
+    "intro": "Sodar, odayı panorama olarak çekmek için kameranızı ve hareket sensörlerinizi kullanır. Telefonu dik tutun, hedefi izleyin; deklanşör kendiliğinden çalışır.",
+    "desktopHint": "Telefonda en iyi çalışır. Mobilde sodar.io/scan adresini açın ya da burada devam edin.",
+    "start": "Kameraya izin ver ve başla",
+    "requesting": "Kamera isteniyor…",
+    "denied": "Kamera erişimi reddedildi. Tarayıcı ayarlarından izin verip tekrar deneyin.",
+    "noCamera": "Bu cihazda kamera bulunamadı.",
+    "privacyNote": "Bu önizlemede kareler cihazınızda kalır.",
+    "assistant": "Çekim asistanı",
+    "room": "Oda",
+    "rooms": [
+      "Salon",
+      "Mutfak"
+    ],
+    "frames": "kare",
+    "roomsLabel": "oda",
+    "hold": "Sabit tutun…",
+    "turnLeft": "Sola dönün",
+    "turnRight": "Sağa dönün",
+    "tiltUp": "Yukarı eğin",
+    "tiltDown": "Aşağı eğin",
+    "slower": "Daha yavaş",
+    "roomDone": "Oda tamamlandı.",
+    "nextRoom": "Sonraki oda",
+    "finishRoom": "Odayı bitir",
+    "finish": "Önizlemeyi işle",
+    "manual": "Çek",
+    "noGyro": "Hareket sensörü bulunamadı — çekimler arasında yaklaşık 30° dönün.",
+    "processingLabel": "İşleniyor",
+    "processing": "İki odalık önizlemeniz oluşturuluyor…",
+    "done": "Önizleme hazır",
+    "doneTitle": "İki oda çekildi.",
+    "doneBody": "Gerçek üründe tur burada, kalan odalar için tek seferlik bir fiyatla birlikte görünür.",
+    "workspace": "Çalışma alanı önizlemesini aç",
+    "again": "Yeniden tara",
+    "exit": "Çık"
+  },
+  "Contact": {
+    "metaTitle": "İletişim — Sodar",
+    "eyebrow": "Bizimle konuşun",
+    "title": "Kim olduğunuzu söyleyin.",
+    "sub": "Danışmanlar, ofisler, CRM sağlayıcıları ve portallar farklı yanıtlar alır — rolünüzü seçin, doğru masadan yanıtlayalım.",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-posta",
+    "roleLabel": "Ben bir",
+    "roles": {
+      "broker": "Danışman / temsilci",
+      "brokerage": "Emlak ofisi",
+      "crm": "CRM sağlayıcısı",
+      "portal": "Emlak portalı",
+      "other": "Diğer"
+    },
+    "name": "Ad",
+    "company": "Şirket",
+    "email": "İş e-postası",
+    "message": "Mesaj",
+    "consent": "Sodar’ın bana yanıt vermek için bu mesajı saklamasını kabul ediyorum. Gizlilik politikasına bakın.",
+    "submit": "Mesaj gönder",
+    "sending": "Gönderiliyor…",
+    "sent": "Mesaj gönderildi.",
+    "sentBody": "Bir iş günü içinde yanıtlıyoruz.",
+    "another": "Bir tane daha gönder",
+    "error": "Gönderim başarısız oldu. Lütfen doğrudan team@sodar.io adresine yazın.",
+    "fallbackNote": "Form hizmeti bağlanana kadar e-posta uygulamanızı açar."
+  },
+  "Intro": {
+    "kicker": "Tanıtım",
+    "title": "Otuz saniyede Sodar.",
+    "body": "Bir kez dolaşın, iki odayı ücretsiz önizleyin, bir kez ödeyin, zaten sahip olduğunuz ilanda yayınlayın."
   }
 }

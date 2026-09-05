@@ -11,7 +11,8 @@
     "signIn": "Inloggen",
     "getStarted": "Woning scannen",
     "menu": "Menu openen",
-    "home": "Sodar startpagina"
+    "home": "Sodar startpagina",
+    "contact": "Contact"
   },
   "Hero": {
     "headline1": "AI-rondleidingen",
@@ -486,6 +487,10 @@
           [
             "Enterprise",
             "/enterprise"
+          ],
+          [
+            "Contact",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Gebruiksvoorwaarden",
       "data-processing": "Addendum gegevensverwerking",
       "cookies": "Cookiebeleid"
-    }
+    },
+    "privacyContact": "Privacyvragen:"
   },
   "Scaffold": {
     "phase": "Fase 1 — ontwerp & structuur",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "makelaarskantoren scannen al met Sodar",
     "note": "Vroege toegang · Tallinn en verder"
+  },
+  "Scanner": {
+    "metaTitle": "Woning scannen — Sodar",
+    "eyebrow": "Begeleide opname",
+    "title": "Scan deze kamer.",
+    "intro": "Sodar gebruikt je camera en bewegingssensoren om de kamer als panorama vast te leggen. Houd de telefoon rechtop, volg het doel en de sluiter gaat vanzelf af.",
+    "desktopHint": "Werkt het best op een telefoon. Open sodar.io/scan op je mobiel of ga hier verder.",
+    "start": "Camera toestaan en starten",
+    "requesting": "Camera wordt gevraagd…",
+    "denied": "Cameratoegang is geweigerd. Sta het toe in je browserinstellingen en probeer opnieuw.",
+    "noCamera": "Geen camera gevonden op dit apparaat.",
+    "privacyNote": "In deze preview blijven de beelden op je apparaat.",
+    "assistant": "Opname-assistent",
+    "room": "Kamer",
+    "rooms": [
+      "Woonkamer",
+      "Keuken"
+    ],
+    "frames": "frames",
+    "roomsLabel": "kamers",
+    "hold": "Stilhouden…",
+    "turnLeft": "Draai naar links",
+    "turnRight": "Draai naar rechts",
+    "tiltUp": "Kantel omhoog",
+    "tiltDown": "Kantel omlaag",
+    "slower": "Langzamer",
+    "roomDone": "Kamer voltooid.",
+    "nextRoom": "Volgende kamer",
+    "finishRoom": "Kamer afronden",
+    "finish": "Preview verwerken",
+    "manual": "Vastleggen",
+    "noGyro": "Geen bewegingssensoren gevonden — draai ongeveer 30° tussen opnames.",
+    "processingLabel": "Verwerken",
+    "processing": "Je preview van twee kamers wordt gemaakt…",
+    "done": "Preview klaar",
+    "doneTitle": "Twee kamers vastgelegd.",
+    "doneBody": "In het echte product verschijnt hier de rondleiding, samen met een eenmalige prijs voor de overige kamers.",
+    "workspace": "Werkruimte-preview openen",
+    "again": "Opnieuw scannen",
+    "exit": "Afsluiten"
+  },
+  "Contact": {
+    "metaTitle": "Contact — Sodar",
+    "eyebrow": "Praat met ons",
+    "title": "Vertel ons wie je bent.",
+    "sub": "Makelaars, kantoren, CRM-aanbieders en portalen krijgen elk een ander antwoord — kies je rol en we antwoorden vanaf het juiste bureau.",
+    "phoneLabel": "Telefoon",
+    "emailLabel": "E-mail",
+    "roleLabel": "Ik ben",
+    "roles": {
+      "broker": "Makelaar / agent",
+      "brokerage": "Makelaarskantoor",
+      "crm": "CRM-aanbieder",
+      "portal": "Woningportaal",
+      "other": "Anders"
+    },
+    "name": "Naam",
+    "company": "Bedrijf",
+    "email": "Zakelijk e-mailadres",
+    "message": "Bericht",
+    "consent": "Ik ga ermee akkoord dat Sodar dit bericht bewaart om mij te antwoorden. Zie het privacybeleid.",
+    "submit": "Bericht versturen",
+    "sending": "Versturen…",
+    "sent": "Bericht verstuurd.",
+    "sentBody": "We antwoorden binnen één werkdag.",
+    "another": "Nog een versturen",
+    "error": "Versturen mislukt. Mail rechtstreeks naar team@sodar.io.",
+    "fallbackNote": "Opent je e-mailapp totdat de formulierdienst is gekoppeld."
+  },
+  "Intro": {
+    "kicker": "Introductie",
+    "title": "Sodar in dertig seconden.",
+    "body": "Eén keer lopen, twee kamers gratis bekijken, één keer betalen, publiceren in de advertentie die je al hebt."
   }
 }

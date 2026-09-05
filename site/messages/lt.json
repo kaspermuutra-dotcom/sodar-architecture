@@ -11,7 +11,8 @@
     "signIn": "Prisijungti",
     "getStarted": "Skenuoti būstą",
     "menu": "Atidaryti meniu",
-    "home": "Sodar pradžia"
+    "home": "Sodar pradžia",
+    "contact": "Kontaktai"
   },
   "Hero": {
     "headline1": "DI apžvalgos,",
@@ -486,6 +487,10 @@
           [
             "Verslui",
             "/enterprise"
+          ],
+          [
+            "Kontaktai",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Paslaugų teikimo sąlygos",
       "data-processing": "Duomenų tvarkymo priedas",
       "cookies": "Slapukų politika"
-    }
+    },
+    "privacyContact": "Privatumo klausimai:"
   },
   "Scaffold": {
     "phase": "1 etapas — dizainas ir struktūra",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "agentūros jau skenuoja su Sodar",
     "note": "Ankstyva prieiga · Talinas ir toliau"
+  },
+  "Scanner": {
+    "metaTitle": "Skenuoti būstą — Sodar",
+    "eyebrow": "Vadovaujamas įrašymas",
+    "title": "Nuskenuokite šį kambarį.",
+    "intro": "Sodar naudoja kamerą ir judesio jutiklius, kad įrašytų kambarį kaip panoramą. Laikykite telefoną vertikaliai, sekite taikinį — užraktas suveiks pats.",
+    "desktopHint": "Geriausiai veikia telefone. Atidarykite sodar.io/scan mobiliajame įrenginyje arba tęskite čia.",
+    "start": "Leisti kamerą ir pradėti",
+    "requesting": "Prašoma kameros…",
+    "denied": "Prieiga prie kameros atmesta. Leiskite ją naršyklės nustatymuose ir bandykite dar kartą.",
+    "noCamera": "Šiame įrenginyje kamera nerasta.",
+    "privacyNote": "Šioje peržiūroje kadrai lieka jūsų įrenginyje.",
+    "assistant": "Įrašymo asistentas",
+    "room": "Kambarys",
+    "rooms": [
+      "Svetainė",
+      "Virtuvė"
+    ],
+    "frames": "kadrų",
+    "roomsLabel": "kambariai",
+    "hold": "Laikykite ramiai…",
+    "turnLeft": "Sukitės į kairę",
+    "turnRight": "Sukitės į dešinę",
+    "tiltUp": "Pakreipkite aukštyn",
+    "tiltDown": "Pakreipkite žemyn",
+    "slower": "Lėčiau",
+    "roomDone": "Kambarys baigtas.",
+    "nextRoom": "Kitas kambarys",
+    "finishRoom": "Baigti kambarį",
+    "finish": "Apdoroti peržiūrą",
+    "manual": "Įrašyti",
+    "noGyro": "Judesio jutiklių nerasta — tarp kadrų pasisukite maždaug 30°.",
+    "processingLabel": "Apdorojama",
+    "processing": "Kuriama jūsų dviejų kambarių peržiūra…",
+    "done": "Peržiūra paruošta",
+    "doneTitle": "Du kambariai įrašyti.",
+    "doneBody": "Tikrame produkte čia rodoma apžvalga kartu su vienkartine kaina už likusius kambarius.",
+    "workspace": "Atidaryti darbo erdvės peržiūrą",
+    "again": "Skenuoti dar kartą",
+    "exit": "Išeiti"
+  },
+  "Contact": {
+    "metaTitle": "Kontaktai — Sodar",
+    "eyebrow": "Pasikalbėkime",
+    "title": "Pasakykite, kas esate.",
+    "sub": "Brokeriai, agentūros, CRM tiekėjai ir portalai gauna skirtingus atsakymus — pasirinkite savo vaidmenį, ir atsakysime iš tinkamo stalo.",
+    "phoneLabel": "Telefonas",
+    "emailLabel": "El. paštas",
+    "roleLabel": "Aš esu",
+    "roles": {
+      "broker": "Brokeris / agentas",
+      "brokerage": "Agentūra",
+      "crm": "CRM tiekėjas",
+      "portal": "NT portalas",
+      "other": "Kita"
+    },
+    "name": "Vardas",
+    "company": "Įmonė",
+    "email": "Darbo el. paštas",
+    "message": "Žinutė",
+    "consent": "Sutinku, kad Sodar saugotų šią žinutę, kad galėtų man atsakyti. Žr. privatumo politiką.",
+    "submit": "Siųsti žinutę",
+    "sending": "Siunčiama…",
+    "sent": "Žinutė išsiųsta.",
+    "sentBody": "Atsakome per vieną darbo dieną.",
+    "another": "Siųsti kitą",
+    "error": "Išsiųsti nepavyko. Rašykite tiesiogiai team@sodar.io.",
+    "fallbackNote": "Atidaro jūsų el. pašto programą, kol formų paslauga dar neprijungta."
+  },
+  "Intro": {
+    "kicker": "Įžanga",
+    "title": "Sodar per trisdešimt sekundžių.",
+    "body": "Pereikite vieną kartą, peržiūrėkite du kambarius nemokamai, sumokėkite vieną kartą, publikuokite skelbime, kurį jau turite."
   }
 }

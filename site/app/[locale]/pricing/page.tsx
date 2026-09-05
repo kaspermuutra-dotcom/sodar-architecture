@@ -8,7 +8,7 @@ import { Link } from "@/i18n/navigation";
 
 type Params = { params: Promise<{ locale: string }> };
 type Tier = { name: string; price: string; unit: string; desc: string; features: string[]; cta: string };
-const TIER_HREFS = ["/product", "/enterprise", "/partners"];
+const TIER_HREFS = ["/scan", "/enterprise", "/partners"];
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { locale } = await params;
@@ -85,7 +85,7 @@ export default async function PricingPage({ params }: Params) {
         </div>
       </section>
 
-      <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/product" />
+      <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/scan" />
     </PageShell>
   );
 }

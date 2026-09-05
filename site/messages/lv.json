@@ -11,7 +11,8 @@
     "signIn": "Pieteikties",
     "getStarted": "Skenēt īpašumu",
     "menu": "Atvērt izvēlni",
-    "home": "Sodar sākumlapa"
+    "home": "Sodar sākumlapa",
+    "contact": "Kontakti"
   },
   "Hero": {
     "headline1": "MI apskates,",
@@ -486,6 +487,10 @@
           [
             "Uzņēmumiem",
             "/enterprise"
+          ],
+          [
+            "Kontakti",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Pakalpojuma noteikumi",
       "data-processing": "Datu apstrādes pielikums",
       "cookies": "Sīkdatņu politika"
-    }
+    },
+    "privacyContact": "Jautājumi par privātumu:"
   },
   "Scaffold": {
     "phase": "1. posms — dizains un struktūra",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "aģentūras jau skenē ar Sodar",
     "note": "Agrīna piekļuve · Tallina un tālāk"
+  },
+  "Scanner": {
+    "metaTitle": "Skenēt īpašumu — Sodar",
+    "eyebrow": "Vadīta uzņemšana",
+    "title": "Skenējiet šo telpu.",
+    "intro": "Sodar izmanto kameru un kustību sensorus, lai uzņemtu telpu kā panorāmu. Turiet tālruni vertikāli, sekojiet mērķim, un aizvars nostrādā pats.",
+    "desktopHint": "Vislabāk darbojas tālrunī. Atveriet sodar.io/scan mobilajā ierīcē vai turpiniet šeit.",
+    "start": "Atļaut kameru un sākt",
+    "requesting": "Pieprasa kameru…",
+    "denied": "Piekļuve kamerai tika liegta. Atļaujiet to pārlūka iestatījumos un mēģiniet vēlreiz.",
+    "noCamera": "Šajā ierīcē kamera netika atrasta.",
+    "privacyNote": "Šajā priekšskatā kadri paliek jūsu ierīcē.",
+    "assistant": "Uzņemšanas asistents",
+    "room": "Telpa",
+    "rooms": [
+      "Viesistaba",
+      "Virtuve"
+    ],
+    "frames": "kadri",
+    "roomsLabel": "telpas",
+    "hold": "Turiet nekustīgi…",
+    "turnLeft": "Pagriezieties pa kreisi",
+    "turnRight": "Pagriezieties pa labi",
+    "tiltUp": "Nolieciet uz augšu",
+    "tiltDown": "Nolieciet uz leju",
+    "slower": "Lēnāk",
+    "roomDone": "Telpa pabeigta.",
+    "nextRoom": "Nākamā telpa",
+    "finishRoom": "Pabeigt telpu",
+    "finish": "Apstrādāt priekšskatu",
+    "manual": "Uzņemt",
+    "noGyro": "Kustību sensori nav atrasti — starp uzņēmumiem pagriezieties par aptuveni 30°.",
+    "processingLabel": "Apstrāde",
+    "processing": "Veido jūsu divu telpu priekšskatu…",
+    "done": "Priekšskats gatavs",
+    "doneTitle": "Divas telpas uzņemtas.",
+    "doneBody": "Īstajā produktā šeit parādās apskate kopā ar vienreizēju cenu par atlikušajām telpām.",
+    "workspace": "Atvērt darbvietas priekšskatu",
+    "again": "Skenēt vēlreiz",
+    "exit": "Iziet"
+  },
+  "Contact": {
+    "metaTitle": "Kontakti — Sodar",
+    "eyebrow": "Runājiet ar mums",
+    "title": "Pastāstiet, kas jūs esat.",
+    "sub": "Mākleri, aģentūras, CRM nodrošinātāji un portāli katrs saņem citu atbildi — izvēlieties savu lomu, un mēs atbildēsim no īstā galda.",
+    "phoneLabel": "Tālrunis",
+    "emailLabel": "E-pasts",
+    "roleLabel": "Es esmu",
+    "roles": {
+      "broker": "Mākleris / aģents",
+      "brokerage": "Aģentūra",
+      "crm": "CRM nodrošinātājs",
+      "portal": "Nekustamo īpašumu portāls",
+      "other": "Cits"
+    },
+    "name": "Vārds",
+    "company": "Uzņēmums",
+    "email": "Darba e-pasts",
+    "message": "Ziņa",
+    "consent": "Piekrītu, ka Sodar saglabā šo ziņu, lai man atbildētu. Skatīt privātuma politiku.",
+    "submit": "Sūtīt ziņu",
+    "sending": "Sūta…",
+    "sent": "Ziņa nosūtīta.",
+    "sentBody": "Atbildam vienas darba dienas laikā.",
+    "another": "Sūtīt vēl vienu",
+    "error": "Sūtīšana neizdevās. Rakstiet tieši uz team@sodar.io.",
+    "fallbackNote": "Atver jūsu e-pasta lietotni, līdz formu pakalpojums ir pievienots."
+  },
+  "Intro": {
+    "kicker": "Ievads",
+    "title": "Sodar trīsdesmit sekundēs.",
+    "body": "Izstaigājiet vienreiz, priekšskatiet divas telpas bez maksas, samaksājiet vienreiz, publicējiet sludinājumā, kas jums jau ir."
   }
 }

@@ -11,7 +11,8 @@
     "signIn": "Logga in",
     "getStarted": "Skanna en bostad",
     "menu": "Växla meny",
-    "home": "Sodar startsida"
+    "home": "Sodar startsida",
+    "contact": "Kontakt"
   },
   "Hero": {
     "headline1": "AI-visningar",
@@ -486,6 +487,10 @@
           [
             "Enterprise",
             "/enterprise"
+          ],
+          [
+            "Kontakt",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Användarvillkor",
       "data-processing": "Tillägg om databehandling",
       "cookies": "Cookiepolicy"
-    }
+    },
+    "privacyContact": "Frågor om integritet:"
   },
   "Scaffold": {
     "phase": "Fas 1 — design & struktur",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "mäklarbyråer skannar redan med Sodar",
     "note": "Tidig åtkomst · Tallinn och vidare"
+  },
+  "Scanner": {
+    "metaTitle": "Skanna en bostad — Sodar",
+    "eyebrow": "Guidad inspelning",
+    "title": "Skanna det här rummet.",
+    "intro": "Sodar använder kameran och rörelsesensorerna för att fånga rummet som ett panorama. Håll telefonen upprätt, följ målet så utlöses slutaren av sig själv.",
+    "desktopHint": "Fungerar bäst på en telefon. Öppna sodar.io/scan på mobilen eller fortsätt här.",
+    "start": "Tillåt kamera och starta",
+    "requesting": "Begär kamera…",
+    "denied": "Kameraåtkomst nekades. Tillåt den i webbläsarens inställningar och försök igen.",
+    "noCamera": "Ingen kamera hittades på den här enheten.",
+    "privacyNote": "I den här förhandsvisningen stannar bilderna på din enhet.",
+    "assistant": "Inspelningsassistent",
+    "room": "Rum",
+    "rooms": [
+      "Vardagsrum",
+      "Kök"
+    ],
+    "frames": "bilder",
+    "roomsLabel": "rum",
+    "hold": "Håll stilla…",
+    "turnLeft": "Vrid åt vänster",
+    "turnRight": "Vrid åt höger",
+    "tiltUp": "Luta uppåt",
+    "tiltDown": "Luta nedåt",
+    "slower": "Långsammare",
+    "roomDone": "Rummet klart.",
+    "nextRoom": "Nästa rum",
+    "finishRoom": "Avsluta rummet",
+    "finish": "Bearbeta förhandsvisning",
+    "manual": "Ta bild",
+    "noGyro": "Inga rörelsesensorer hittades — vrid cirka 30° mellan bilderna.",
+    "processingLabel": "Bearbetar",
+    "processing": "Bygger din förhandsvisning av två rum…",
+    "done": "Förhandsvisning klar",
+    "doneTitle": "Två rum inspelade.",
+    "doneBody": "I den riktiga produkten visas visningen här, tillsammans med ett engångspris för resterande rum.",
+    "workspace": "Öppna förhandsvisningen av arbetsytan",
+    "again": "Skanna igen",
+    "exit": "Avsluta"
+  },
+  "Contact": {
+    "metaTitle": "Kontakt — Sodar",
+    "eyebrow": "Prata med oss",
+    "title": "Berätta vem du är.",
+    "sub": "Mäklare, byråer, CRM-leverantörer och portaler får olika svar — välj din roll så svarar vi från rätt bord.",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-post",
+    "roleLabel": "Jag är",
+    "roles": {
+      "broker": "Mäklare / agent",
+      "brokerage": "Mäklarbyrå",
+      "crm": "CRM-leverantör",
+      "portal": "Bostadsportal",
+      "other": "Annat"
+    },
+    "name": "Namn",
+    "company": "Företag",
+    "email": "Jobbmejl",
+    "message": "Meddelande",
+    "consent": "Jag godkänner att Sodar sparar det här meddelandet för att svara mig. Se integritetspolicyn.",
+    "submit": "Skicka meddelande",
+    "sending": "Skickar…",
+    "sent": "Meddelandet skickat.",
+    "sentBody": "Vi svarar inom en arbetsdag.",
+    "another": "Skicka ett till",
+    "error": "Sändningen misslyckades. Mejla direkt till team@sodar.io.",
+    "fallbackNote": "Öppnar din e-postapp tills formulärtjänsten är ansluten."
+  },
+  "Intro": {
+    "kicker": "Introduktion",
+    "title": "Sodar på trettio sekunder.",
+    "body": "Gå en gång, förhandsvisa två rum gratis, betala en gång, publicera i annonsen du redan har."
   }
 }

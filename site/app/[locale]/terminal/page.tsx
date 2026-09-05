@@ -30,7 +30,7 @@ export default async function TerminalPage({ params }: Params) {
       <section className="section-shell pt-0">
         <TerminalMock variant="full" />
       </section>
-      <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/product" />
+      <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/scan" />
     </PageShell>
   );
 }

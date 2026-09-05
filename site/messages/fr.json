@@ -11,7 +11,8 @@
     "signIn": "Connexion",
     "getStarted": "Scanner un bien",
     "menu": "Ouvrir le menu",
-    "home": "Accueil Sodar"
+    "home": "Accueil Sodar",
+    "contact": "Contact"
   },
   "Hero": {
     "headline1": "Des visites IA",
@@ -486,6 +487,10 @@
           [
             "Entreprise",
             "/enterprise"
+          ],
+          [
+            "Contact",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Conditions d’utilisation",
       "data-processing": "Avenant de traitement des données",
       "cookies": "Politique de cookies"
-    }
+    },
+    "privacyContact": "Questions sur la confidentialité :"
   },
   "Scaffold": {
     "phase": "Phase 1 — design & structure",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "agences scannent déjà avec Sodar",
     "note": "Accès anticipé · Tallinn et au-delà"
+  },
+  "Scanner": {
+    "metaTitle": "Scanner un bien — Sodar",
+    "eyebrow": "Capture guidée",
+    "title": "Scannez cette pièce.",
+    "intro": "Sodar utilise votre caméra et les capteurs de mouvement pour capturer la pièce en panorama. Tenez le téléphone droit, suivez la cible : le déclencheur se déclenche tout seul.",
+    "desktopHint": "Fonctionne mieux sur un téléphone. Ouvrez sodar.io/scan sur votre mobile, ou continuez ici.",
+    "start": "Autoriser la caméra et commencer",
+    "requesting": "Demande d’accès à la caméra…",
+    "denied": "L’accès à la caméra a été refusé. Autorisez-le dans les réglages du navigateur et réessayez.",
+    "noCamera": "Aucune caméra trouvée sur cet appareil.",
+    "privacyNote": "Dans cet aperçu, les images restent sur votre appareil.",
+    "assistant": "Assistant de capture",
+    "room": "Pièce",
+    "rooms": [
+      "Salon",
+      "Cuisine"
+    ],
+    "frames": "images",
+    "roomsLabel": "pièces",
+    "hold": "Ne bougez plus…",
+    "turnLeft": "Tournez à gauche",
+    "turnRight": "Tournez à droite",
+    "tiltUp": "Inclinez vers le haut",
+    "tiltDown": "Inclinez vers le bas",
+    "slower": "Plus lentement",
+    "roomDone": "Pièce terminée.",
+    "nextRoom": "Pièce suivante",
+    "finishRoom": "Terminer la pièce",
+    "finish": "Traiter l’aperçu",
+    "manual": "Capturer",
+    "noGyro": "Aucun capteur de mouvement — tournez d’environ 30° entre les captures.",
+    "processingLabel": "Traitement",
+    "processing": "Création de votre aperçu de deux pièces…",
+    "done": "Aperçu prêt",
+    "doneTitle": "Deux pièces capturées.",
+    "doneBody": "Dans le produit réel, la visite apparaît ici avec un prix unique pour les pièces restantes.",
+    "workspace": "Ouvrir l’aperçu de l’espace de travail",
+    "again": "Scanner à nouveau",
+    "exit": "Quitter"
+  },
+  "Contact": {
+    "metaTitle": "Contact — Sodar",
+    "eyebrow": "Parlons-en",
+    "title": "Dites-nous qui vous êtes.",
+    "sub": "Agents, agences, éditeurs de CRM et portails reçoivent chacun une réponse différente — choisissez votre profil et nous répondons du bon bureau.",
+    "phoneLabel": "Téléphone",
+    "emailLabel": "E-mail",
+    "roleLabel": "Je suis",
+    "roles": {
+      "broker": "Agent immobilier",
+      "brokerage": "Agence",
+      "crm": "Éditeur de CRM",
+      "portal": "Portail immobilier",
+      "other": "Autre"
+    },
+    "name": "Nom",
+    "company": "Entreprise",
+    "email": "E-mail professionnel",
+    "message": "Message",
+    "consent": "J’accepte que Sodar conserve ce message pour me répondre. Voir la politique de confidentialité.",
+    "submit": "Envoyer le message",
+    "sending": "Envoi…",
+    "sent": "Message envoyé.",
+    "sentBody": "Nous répondons sous un jour ouvré.",
+    "another": "En envoyer un autre",
+    "error": "L’envoi a échoué. Écrivez directement à team@sodar.io.",
+    "fallbackNote": "Ouvre votre application e-mail tant que le service de formulaire n’est pas connecté."
+  },
+  "Intro": {
+    "kicker": "Introduction",
+    "title": "Sodar en trente secondes.",
+    "body": "Parcourez une fois, prévisualisez deux pièces gratuitement, payez une fois, publiez dans l’annonce que vous avez déjà."
   }
 }

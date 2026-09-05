@@ -20,7 +20,7 @@ export function CapabilityGrid() {
             <p className="mt-2.5 text-sm leading-relaxed text-text-muted">{item.desc}</p>
           </div>
         ))}
-        <Link href="/product" className="card-scan group flex flex-col justify-between bg-bg-raised p-8 transition-colors hover:bg-bg-elevated sm:p-9">
+        <Link href="/scan" className="card-scan group flex flex-col justify-between bg-bg-raised p-8 transition-colors hover:bg-bg-elevated sm:p-9">
           <span className="font-mono text-[11px] text-text-faint">{String(items.length + 1).padStart(2, "0")}</span>
           <div>
             <h3 className="display text-2xl text-text">{t("cta.title")}</h3>

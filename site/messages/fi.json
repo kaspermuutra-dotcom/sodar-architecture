@@ -11,7 +11,8 @@
     "signIn": "Kirjaudu",
     "getStarted": "Skannaa kohde",
     "menu": "Avaa valikko",
-    "home": "Sodarin etusivu"
+    "home": "Sodarin etusivu",
+    "contact": "Yhteystiedot"
   },
   "Hero": {
     "headline1": "Tekoälykierrokset,",
@@ -486,6 +487,10 @@
           [
             "Yrityksille",
             "/enterprise"
+          ],
+          [
+            "Yhteystiedot",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Käyttöehdot",
       "data-processing": "Tietojenkäsittelyliite",
       "cookies": "Evästekäytäntö"
-    }
+    },
+    "privacyContact": "Tietosuojakysymykset:"
   },
   "Scaffold": {
     "phase": "Vaihe 1 — suunnittelu & rakenne",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "välitysliikettä skannaa jo Sodarilla",
     "note": "Varhainen pääsy · Tallinna ja muualla"
+  },
+  "Scanner": {
+    "metaTitle": "Skannaa kohde — Sodar",
+    "eyebrow": "Ohjattu kuvaus",
+    "title": "Skannaa tämä huone.",
+    "intro": "Sodar käyttää kameraa ja liikeantureita huoneen kuvaamiseen panoraamana. Pidä puhelin pystyssä, seuraa kohdetta, ja laukaisin laukeaa itsestään.",
+    "desktopHint": "Toimii parhaiten puhelimella. Avaa sodar.io/scan mobiilissa tai jatka tässä.",
+    "start": "Salli kamera ja aloita",
+    "requesting": "Pyydetään kameraa…",
+    "denied": "Kameran käyttö evättiin. Salli se selaimen asetuksista ja yritä uudelleen.",
+    "noCamera": "Tältä laitteelta ei löytynyt kameraa.",
+    "privacyNote": "Tässä esikatselussa kuvat pysyvät laitteellasi.",
+    "assistant": "Kuvausavustaja",
+    "room": "Huone",
+    "rooms": [
+      "Olohuone",
+      "Keittiö"
+    ],
+    "frames": "kuvaa",
+    "roomsLabel": "huonetta",
+    "hold": "Pidä paikallaan…",
+    "turnLeft": "Käänny vasemmalle",
+    "turnRight": "Käänny oikealle",
+    "tiltUp": "Kallista ylös",
+    "tiltDown": "Kallista alas",
+    "slower": "Hitaammin",
+    "roomDone": "Huone valmis.",
+    "nextRoom": "Seuraava huone",
+    "finishRoom": "Lopeta huone",
+    "finish": "Käsittele esikatselu",
+    "manual": "Kuvaa",
+    "noGyro": "Liikeantureita ei löytynyt — käänny noin 30° kuvien välillä.",
+    "processingLabel": "Käsitellään",
+    "processing": "Rakennetaan kahden huoneen esikatselua…",
+    "done": "Esikatselu valmis",
+    "doneTitle": "Kaksi huonetta kuvattu.",
+    "doneBody": "Oikeassa tuotteessa kierros näkyy tässä yhdessä loppujen huoneiden kertahinnan kanssa.",
+    "workspace": "Avaa työtilan esikatselu",
+    "again": "Skannaa uudelleen",
+    "exit": "Poistu"
+  },
+  "Contact": {
+    "metaTitle": "Yhteystiedot — Sodar",
+    "eyebrow": "Ota yhteyttä",
+    "title": "Kerro, kuka olet.",
+    "sub": "Välittäjät, välitysliikkeet, CRM-toimittajat ja portaalit saavat kukin eri vastauksen — valitse roolisi, niin vastaamme oikealta pöydältä.",
+    "phoneLabel": "Puhelin",
+    "emailLabel": "Sähköposti",
+    "roleLabel": "Olen",
+    "roles": {
+      "broker": "Välittäjä / agentti",
+      "brokerage": "Välitysliike",
+      "crm": "CRM-toimittaja",
+      "portal": "Kiinteistöportaali",
+      "other": "Muu"
+    },
+    "name": "Nimi",
+    "company": "Yritys",
+    "email": "Työsähköposti",
+    "message": "Viesti",
+    "consent": "Hyväksyn, että Sodar tallentaa tämän viestin vastatakseen minulle. Katso tietosuojakäytäntö.",
+    "submit": "Lähetä viesti",
+    "sending": "Lähetetään…",
+    "sent": "Viesti lähetetty.",
+    "sentBody": "Vastaamme yhden työpäivän kuluessa.",
+    "another": "Lähetä toinen",
+    "error": "Lähetys epäonnistui. Lähetä sähköpostia suoraan osoitteeseen team@sodar.io.",
+    "fallbackNote": "Avaa sähköpostisovelluksesi, kunnes lomakepalvelu on kytketty."
+  },
+  "Intro": {
+    "kicker": "Esittely",
+    "title": "Sodar kolmessakymmenessä sekunnissa.",
+    "body": "Kävele kerran, esikatsele kaksi huonetta ilmaiseksi, maksa kerran, julkaise ilmoitukseen, joka sinulla jo on."
   }
 }

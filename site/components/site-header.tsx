@@ -13,6 +13,7 @@ const NAV_ITEMS: [string, string][] = [
   ["integrations", "/integrations"],
   ["partners", "/partners"],
   ["pricing", "/pricing"],
+  ["contact", "/contact"],
 ];
 
 /** Sticky header: transparent over the hero, fades to near-black glass on scroll. */

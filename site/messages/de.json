@@ -11,7 +11,8 @@
     "signIn": "Anmelden",
     "getStarted": "Immobilie scannen",
     "menu": "Menü umschalten",
-    "home": "Sodar Startseite"
+    "home": "Sodar Startseite",
+    "contact": "Kontakt"
   },
   "Hero": {
     "headline1": "KI-Rundgänge,",
@@ -486,6 +487,10 @@
           [
             "Enterprise",
             "/enterprise"
+          ],
+          [
+            "Kontakt",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Nutzungsbedingungen",
       "data-processing": "Zusatz zur Auftragsverarbeitung",
       "cookies": "Cookie-Richtlinie"
-    }
+    },
+    "privacyContact": "Fragen zum Datenschutz:"
   },
   "Scaffold": {
     "phase": "Phase 1 — Design & Struktur",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "Maklerbüros scannen bereits mit Sodar",
     "note": "Früher Zugang · Tallinn und darüber hinaus"
+  },
+  "Scanner": {
+    "metaTitle": "Immobilie scannen — Sodar",
+    "eyebrow": "Geführte Aufnahme",
+    "title": "Diesen Raum scannen.",
+    "intro": "Sodar nutzt Kamera und Bewegungssensoren, um den Raum als Panorama aufzunehmen. Halten Sie das Telefon aufrecht, folgen Sie dem Ziel — der Auslöser löst von selbst aus.",
+    "desktopHint": "Funktioniert am besten am Smartphone. Öffnen Sie sodar.io/scan auf dem Handy oder fahren Sie hier fort.",
+    "start": "Kamera erlauben und starten",
+    "requesting": "Kamera wird angefragt…",
+    "denied": "Der Kamerazugriff wurde abgelehnt. Erlauben Sie ihn in den Browser-Einstellungen und versuchen Sie es erneut.",
+    "noCamera": "Auf diesem Gerät wurde keine Kamera gefunden.",
+    "privacyNote": "In dieser Vorschau bleiben die Bilder auf Ihrem Gerät.",
+    "assistant": "Aufnahmeassistent",
+    "room": "Raum",
+    "rooms": [
+      "Wohnzimmer",
+      "Küche"
+    ],
+    "frames": "Bilder",
+    "roomsLabel": "Räume",
+    "hold": "Still halten…",
+    "turnLeft": "Nach links drehen",
+    "turnRight": "Nach rechts drehen",
+    "tiltUp": "Nach oben neigen",
+    "tiltDown": "Nach unten neigen",
+    "slower": "Langsamer",
+    "roomDone": "Raum abgeschlossen.",
+    "nextRoom": "Nächster Raum",
+    "finishRoom": "Raum beenden",
+    "finish": "Vorschau verarbeiten",
+    "manual": "Aufnehmen",
+    "noGyro": "Keine Bewegungssensoren gefunden — drehen Sie sich zwischen den Aufnahmen um etwa 30°.",
+    "processingLabel": "Verarbeitung",
+    "processing": "Ihre Vorschau mit zwei Räumen wird erstellt…",
+    "done": "Vorschau fertig",
+    "doneTitle": "Zwei Räume, aufgenommen.",
+    "doneBody": "Im echten Produkt erscheint hier der Rundgang, zusammen mit einem Einmalpreis für die restlichen Räume.",
+    "workspace": "Workspace-Vorschau öffnen",
+    "again": "Erneut scannen",
+    "exit": "Beenden"
+  },
+  "Contact": {
+    "metaTitle": "Kontakt — Sodar",
+    "eyebrow": "Sprechen Sie mit uns",
+    "title": "Sagen Sie uns, wer Sie sind.",
+    "sub": "Makler, Maklerbüros, CRM-Anbieter und Portale bekommen jeweils eine andere Antwort — wählen Sie Ihre Rolle, und wir antworten vom richtigen Schreibtisch.",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-Mail",
+    "roleLabel": "Ich bin",
+    "roles": {
+      "broker": "Makler / Agent",
+      "brokerage": "Maklerbüro",
+      "crm": "CRM-Anbieter",
+      "portal": "Immobilienportal",
+      "other": "Sonstiges"
+    },
+    "name": "Name",
+    "company": "Unternehmen",
+    "email": "Geschäftliche E-Mail",
+    "message": "Nachricht",
+    "consent": "Ich bin einverstanden, dass Sodar diese Nachricht speichert, um mir zu antworten. Siehe Datenschutzerklärung.",
+    "submit": "Nachricht senden",
+    "sending": "Wird gesendet…",
+    "sent": "Nachricht gesendet.",
+    "sentBody": "Wir antworten innerhalb eines Werktags.",
+    "another": "Weitere senden",
+    "error": "Senden fehlgeschlagen. Bitte schreiben Sie direkt an team@sodar.io.",
+    "fallbackNote": "Öffnet Ihr E-Mail-Programm, bis der Formulardienst verbunden ist."
+  },
+  "Intro": {
+    "kicker": "Einführung",
+    "title": "Sodar in dreißig Sekunden.",
+    "body": "Einmal durchgehen, zwei Räume kostenlos ansehen, einmal zahlen, ins vorhandene Inserat veröffentlichen."
   }
 }

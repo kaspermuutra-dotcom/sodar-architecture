@@ -11,7 +11,8 @@
     "signIn": "Accedi",
     "getStarted": "Scansiona un immobile",
     "menu": "Apri il menu",
-    "home": "Home di Sodar"
+    "home": "Home di Sodar",
+    "contact": "Contatti"
   },
   "Hero": {
     "headline1": "Tour con IA",
@@ -486,6 +487,10 @@
           [
             "Enterprise",
             "/enterprise"
+          ],
+          [
+            "Contatti",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Termini di servizio",
       "data-processing": "Addendum sul trattamento dei dati",
       "cookies": "Informativa sui cookie"
-    }
+    },
+    "privacyContact": "Domande sulla privacy:"
   },
   "Scaffold": {
     "phase": "Fase 1 — design e struttura",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "agenzie scansionano già con Sodar",
     "note": "Accesso anticipato · Tallinn e oltre"
+  },
+  "Scanner": {
+    "metaTitle": "Scansiona un immobile — Sodar",
+    "eyebrow": "Ripresa guidata",
+    "title": "Scansiona questa stanza.",
+    "intro": "Sodar usa la fotocamera e i sensori di movimento per riprendere la stanza come panorama. Tieni il telefono in verticale, segui il bersaglio e lo scatto parte da solo.",
+    "desktopHint": "Funziona meglio su un telefono. Apri sodar.io/scan sul mobile oppure continua qui.",
+    "start": "Consenti la fotocamera e inizia",
+    "requesting": "Richiesta fotocamera…",
+    "denied": "L’accesso alla fotocamera è stato negato. Consentilo nelle impostazioni del browser e riprova.",
+    "noCamera": "Nessuna fotocamera trovata su questo dispositivo.",
+    "privacyNote": "In questa anteprima le immagini restano sul tuo dispositivo.",
+    "assistant": "Assistente di ripresa",
+    "room": "Stanza",
+    "rooms": [
+      "Soggiorno",
+      "Cucina"
+    ],
+    "frames": "fotogrammi",
+    "roomsLabel": "stanze",
+    "hold": "Fermo…",
+    "turnLeft": "Gira a sinistra",
+    "turnRight": "Gira a destra",
+    "tiltUp": "Inclina verso l’alto",
+    "tiltDown": "Inclina verso il basso",
+    "slower": "Più lento",
+    "roomDone": "Stanza completata.",
+    "nextRoom": "Stanza successiva",
+    "finishRoom": "Termina stanza",
+    "finish": "Elabora anteprima",
+    "manual": "Scatta",
+    "noGyro": "Nessun sensore di movimento: ruota di circa 30° tra uno scatto e l’altro.",
+    "processingLabel": "Elaborazione",
+    "processing": "Creazione dell’anteprima di due stanze…",
+    "done": "Anteprima pronta",
+    "doneTitle": "Due stanze riprese.",
+    "doneBody": "Nel prodotto reale qui compare il tour, insieme a un prezzo unico per le stanze restanti.",
+    "workspace": "Apri l’anteprima dello spazio di lavoro",
+    "again": "Scansiona di nuovo",
+    "exit": "Esci"
+  },
+  "Contact": {
+    "metaTitle": "Contatti — Sodar",
+    "eyebrow": "Parliamone",
+    "title": "Dicci chi sei.",
+    "sub": "Agenti, agenzie, fornitori di CRM e portali ricevono risposte diverse: scegli il tuo profilo e ti rispondiamo dal tavolo giusto.",
+    "phoneLabel": "Telefono",
+    "emailLabel": "Email",
+    "roleLabel": "Sono",
+    "roles": {
+      "broker": "Agente immobiliare",
+      "brokerage": "Agenzia",
+      "crm": "Fornitore di CRM",
+      "portal": "Portale immobiliare",
+      "other": "Altro"
+    },
+    "name": "Nome",
+    "company": "Azienda",
+    "email": "Email di lavoro",
+    "message": "Messaggio",
+    "consent": "Accetto che Sodar conservi questo messaggio per rispondermi. Vedi l’informativa sulla privacy.",
+    "submit": "Invia messaggio",
+    "sending": "Invio…",
+    "sent": "Messaggio inviato.",
+    "sentBody": "Rispondiamo entro un giorno lavorativo.",
+    "another": "Inviane un altro",
+    "error": "Invio non riuscito. Scrivi direttamente a team@sodar.io.",
+    "fallbackNote": "Apre la tua app di posta finché il servizio moduli non è collegato."
+  },
+  "Intro": {
+    "kicker": "Introduzione",
+    "title": "Sodar in trenta secondi.",
+    "body": "Percorri una volta, guarda due stanze gratis, paga una volta, pubblica nell’annuncio che hai già."
   }
 }

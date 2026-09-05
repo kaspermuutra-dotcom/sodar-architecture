@@ -32,7 +32,7 @@ export default async function ProductPage({ params }: Params) {
         subtitle={t("sub")}
         actions={
           <>
-            <Link href="/pricing" className="button-primary">
+            <Link href="/scan" className="button-primary">
               {t("ctaPrimary")} <span aria-hidden>↗</span>
             </Link>
             <Link href="/terminal" className="button-secondary">
@@ -71,7 +71,7 @@ export default async function ProductPage({ params }: Params) {
 
       <CapabilityGrid />
 
-      <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/pricing" />
+      <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/scan" />
     </PageShell>
   );
 }

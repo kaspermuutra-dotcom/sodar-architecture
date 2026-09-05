@@ -11,7 +11,8 @@
     "signIn": "Zaloguj się",
     "getStarted": "Zeskanuj nieruchomość",
     "menu": "Przełącz menu",
-    "home": "Strona główna Sodar"
+    "home": "Strona główna Sodar",
+    "contact": "Kontakt"
   },
   "Hero": {
     "headline1": "Spacery AI,",
@@ -486,6 +487,10 @@
           [
             "Dla firm",
             "/enterprise"
+          ],
+          [
+            "Kontakt",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Regulamin",
       "data-processing": "Załącznik o przetwarzaniu danych",
       "cookies": "Polityka plików cookie"
-    }
+    },
+    "privacyContact": "Pytania o prywatność:"
   },
   "Scaffold": {
     "phase": "Faza 1 — projekt i struktura",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "biur nieruchomości już skanuje z Sodar",
     "note": "Wczesny dostęp · Tallinn i dalej"
+  },
+  "Scanner": {
+    "metaTitle": "Zeskanuj nieruchomość — Sodar",
+    "eyebrow": "Prowadzone ujęcia",
+    "title": "Zeskanuj to pomieszczenie.",
+    "intro": "Sodar używa aparatu i czujników ruchu, by uchwycić pomieszczenie jako panoramę. Trzymaj telefon pionowo, podążaj za celem, a migawka zwolni się sama.",
+    "desktopHint": "Działa najlepiej na telefonie. Otwórz sodar.io/scan na komórce albo kontynuuj tutaj.",
+    "start": "Zezwól na aparat i zacznij",
+    "requesting": "Prośba o aparat…",
+    "denied": "Odmówiono dostępu do aparatu. Zezwól na niego w ustawieniach przeglądarki i spróbuj ponownie.",
+    "noCamera": "Nie znaleziono aparatu na tym urządzeniu.",
+    "privacyNote": "W tym podglądzie klatki zostają na Twoim urządzeniu.",
+    "assistant": "Asystent ujęć",
+    "room": "Pomieszczenie",
+    "rooms": [
+      "Salon",
+      "Kuchnia"
+    ],
+    "frames": "klatek",
+    "roomsLabel": "pomieszczeń",
+    "hold": "Trzymaj nieruchomo…",
+    "turnLeft": "Obróć w lewo",
+    "turnRight": "Obróć w prawo",
+    "tiltUp": "Pochyl w górę",
+    "tiltDown": "Pochyl w dół",
+    "slower": "Wolniej",
+    "roomDone": "Pomieszczenie gotowe.",
+    "nextRoom": "Następne pomieszczenie",
+    "finishRoom": "Zakończ pomieszczenie",
+    "finish": "Przetwórz podgląd",
+    "manual": "Uchwyć",
+    "noGyro": "Brak czujników ruchu — obróć się o około 30° między ujęciami.",
+    "processingLabel": "Przetwarzanie",
+    "processing": "Budujemy Twój podgląd dwóch pomieszczeń…",
+    "done": "Podgląd gotowy",
+    "doneTitle": "Dwa pomieszczenia uchwycone.",
+    "doneBody": "W prawdziwym produkcie tutaj pojawia się spacer wraz z jednorazową ceną za pozostałe pomieszczenia.",
+    "workspace": "Otwórz podgląd przestrzeni roboczej",
+    "again": "Skanuj ponownie",
+    "exit": "Wyjdź"
+  },
+  "Contact": {
+    "metaTitle": "Kontakt — Sodar",
+    "eyebrow": "Porozmawiajmy",
+    "title": "Powiedz nam, kim jesteś.",
+    "sub": "Pośrednicy, biura, dostawcy CRM i portale dostają różne odpowiedzi — wybierz swoją rolę, a odpowiemy z właściwego biurka.",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-mail",
+    "roleLabel": "Jestem",
+    "roles": {
+      "broker": "Pośrednik / agent",
+      "brokerage": "Biuro nieruchomości",
+      "crm": "Dostawca CRM",
+      "portal": "Portal nieruchomości",
+      "other": "Inne"
+    },
+    "name": "Imię i nazwisko",
+    "company": "Firma",
+    "email": "Służbowy e-mail",
+    "message": "Wiadomość",
+    "consent": "Zgadzam się, by Sodar przechował tę wiadomość w celu odpowiedzi. Zobacz politykę prywatności.",
+    "submit": "Wyślij wiadomość",
+    "sending": "Wysyłanie…",
+    "sent": "Wiadomość wysłana.",
+    "sentBody": "Odpowiadamy w ciągu jednego dnia roboczego.",
+    "another": "Wyślij kolejną",
+    "error": "Wysyłanie nie powiodło się. Napisz bezpośrednio na team@sodar.io.",
+    "fallbackNote": "Otwiera Twoją aplikację pocztową, dopóki usługa formularzy nie zostanie podłączona."
+  },
+  "Intro": {
+    "kicker": "Wprowadzenie",
+    "title": "Sodar w trzydzieści sekund.",
+    "body": "Przejdź raz, obejrzyj dwa pomieszczenia za darmo, zapłać raz, opublikuj w ogłoszeniu, które już masz."
   }
 }

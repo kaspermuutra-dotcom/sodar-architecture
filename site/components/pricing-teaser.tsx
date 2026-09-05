@@ -32,7 +32,7 @@ export function PricingTeaser() {
               </li>
             ))}
           </ul>
-          <Link href="/product" className="button-primary w-full justify-center">
+          <Link href="/scan" className="button-primary w-full justify-center">
             {t("card.cta")} <span aria-hidden>↗</span>
           </Link>
         </div>

@@ -11,7 +11,8 @@
     "signIn": "登录",
     "getStarted": "扫描房源",
     "menu": "切换菜单",
-    "home": "Sodar 首页"
+    "home": "Sodar 首页",
+    "contact": "联系我们"
   },
   "Hero": {
     "headline1": "AI 实景漫游，",
@@ -486,6 +487,10 @@
           [
             "企业版",
             "/enterprise"
+          ],
+          [
+            "联系我们",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "服务条款",
       "data-processing": "数据处理附录",
       "cookies": "Cookie 政策"
-    }
+    },
+    "privacyContact": "隐私相关问题："
   },
   "Scaffold": {
     "phase": "第一阶段 — 设计与结构",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "家中介公司已在使用 Sodar 扫描",
     "note": "抢先体验 · 塔林及更多城市"
+  },
+  "Scanner": {
+    "metaTitle": "扫描房源 — Sodar",
+    "eyebrow": "引导式拍摄",
+    "title": "扫描这个房间。",
+    "intro": "Sodar 使用你的相机和运动传感器把房间拍成全景。竖直握持手机，跟随目标，快门会自动触发。",
+    "desktopHint": "在手机上效果最佳。请在手机上打开 sodar.io/scan，或在此继续。",
+    "start": "允许使用相机并开始",
+    "requesting": "正在请求相机…",
+    "denied": "相机访问被拒绝。请在浏览器设置中允许后重试。",
+    "noCamera": "此设备上未找到相机。",
+    "privacyNote": "在此预览中，画面仅保存在你的设备上。",
+    "assistant": "拍摄助手",
+    "room": "房间",
+    "rooms": [
+      "客厅",
+      "厨房"
+    ],
+    "frames": "帧",
+    "roomsLabel": "个房间",
+    "hold": "保持不动…",
+    "turnLeft": "向左转",
+    "turnRight": "向右转",
+    "tiltUp": "向上倾斜",
+    "tiltDown": "向下倾斜",
+    "slower": "慢一点",
+    "roomDone": "房间完成。",
+    "nextRoom": "下一个房间",
+    "finishRoom": "结束该房间",
+    "finish": "处理预览",
+    "manual": "拍摄",
+    "noGyro": "未找到运动传感器——每次拍摄之间请转动约 30°。",
+    "processingLabel": "处理中",
+    "processing": "正在生成你的两个房间预览…",
+    "done": "预览已就绪",
+    "doneTitle": "两个房间已拍摄。",
+    "doneBody": "在正式产品中，漫游会显示在这里，并附上其余房间的一次性价格。",
+    "workspace": "打开工作台预览",
+    "again": "再次扫描",
+    "exit": "退出"
+  },
+  "Contact": {
+    "metaTitle": "联系我们 — Sodar",
+    "eyebrow": "与我们交流",
+    "title": "告诉我们你是谁。",
+    "sub": "经纪人、中介公司、CRM 服务商和门户各自会得到不同的答复——选择你的身份，我们会由对应的团队回复。",
+    "phoneLabel": "电话",
+    "emailLabel": "邮箱",
+    "roleLabel": "我是",
+    "roles": {
+      "broker": "经纪人 / 代理",
+      "brokerage": "中介公司",
+      "crm": "CRM 服务商",
+      "portal": "房产门户",
+      "other": "其他"
+    },
+    "name": "姓名",
+    "company": "公司",
+    "email": "工作邮箱",
+    "message": "留言",
+    "consent": "我同意 Sodar 保存此留言以便回复我。参见隐私政策。",
+    "submit": "发送留言",
+    "sending": "发送中…",
+    "sent": "留言已发送。",
+    "sentBody": "我们会在一个工作日内回复。",
+    "another": "再发一条",
+    "error": "发送失败。请直接发邮件至 team@sodar.io。",
+    "fallbackNote": "在表单服务接入前，将打开你的邮件应用。"
+  },
+  "Intro": {
+    "kicker": "简介",
+    "title": "三十秒了解 Sodar。",
+    "body": "走一遍，免费预览两个房间，付款一次，发布到你已有的房源中。"
   }
 }

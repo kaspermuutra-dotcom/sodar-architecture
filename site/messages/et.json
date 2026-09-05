@@ -11,7 +11,8 @@
     "signIn": "Logi sisse",
     "getStarted": "Skanni kinnisvara",
     "menu": "Ava menüü",
-    "home": "Sodari avaleht"
+    "home": "Sodari avaleht",
+    "contact": "Kontakt"
   },
   "Hero": {
     "headline1": "AI-ringkäigud,",
@@ -486,6 +487,10 @@
           [
             "Ettevõtetele",
             "/enterprise"
+          ],
+          [
+            "Kontakt",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Kasutustingimused",
       "data-processing": "Andmetöötluse lisa",
       "cookies": "Küpsiste poliitika"
-    }
+    },
+    "privacyContact": "Privaatsusküsimused:"
   },
   "Scaffold": {
     "phase": "1. etapp — disain ja struktuur",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "maaklerbürood juba skannivad Sodariga",
     "note": "Varajane ligipääs · Tallinn ja kaugemal"
+  },
+  "Scanner": {
+    "metaTitle": "Skanni kinnisvara — Sodar",
+    "eyebrow": "Juhendatud jäädvustus",
+    "title": "Skanni see ruum.",
+    "intro": "Sodar kasutab kaamerat ja liikumisandureid, et jäädvustada ruum panoraamina. Hoia telefoni püsti, järgi sihtmärki ja päästik vallandub ise.",
+    "desktopHint": "Töötab kõige paremini telefonis. Ava sodar.io/scan mobiilis või jätka siin.",
+    "start": "Luba kaamera ja alusta",
+    "requesting": "Küsime kaamera luba…",
+    "denied": "Kaamera juurdepääs keelati. Luba see brauseri seadetes ja proovi uuesti.",
+    "noCamera": "Sellel seadmel kaamerat ei leitud.",
+    "privacyNote": "Selles eelvaates jäävad kaadrid sinu seadmesse.",
+    "assistant": "Jäädvustusabiline",
+    "room": "Ruum",
+    "rooms": [
+      "Elutuba",
+      "Köök"
+    ],
+    "frames": "kaadrit",
+    "roomsLabel": "ruumi",
+    "hold": "Hoia paigal…",
+    "turnLeft": "Pööra vasakule",
+    "turnRight": "Pööra paremale",
+    "tiltUp": "Kalluta üles",
+    "tiltDown": "Kalluta alla",
+    "slower": "Aeglasemalt",
+    "roomDone": "Ruum valmis.",
+    "nextRoom": "Järgmine ruum",
+    "finishRoom": "Lõpeta ruum",
+    "finish": "Töötle eelvaade",
+    "manual": "Jäädvusta",
+    "noGyro": "Liikumisandureid ei leitud — pööra jäädvustuste vahel umbes 30°.",
+    "processingLabel": "Töötlus",
+    "processing": "Koostame sinu kahe ruumi eelvaadet…",
+    "done": "Eelvaade valmis",
+    "doneTitle": "Kaks ruumi jäädvustatud.",
+    "doneBody": "Päris tootes ilmub siia ringkäik koos ülejäänud ruumide ühekordse hinnaga.",
+    "workspace": "Ava tööruumi eelvaade",
+    "again": "Skanni uuesti",
+    "exit": "Välju"
+  },
+  "Contact": {
+    "metaTitle": "Kontakt — Sodar",
+    "eyebrow": "Räägi meiega",
+    "title": "Ütle meile, kes sa oled.",
+    "sub": "Maaklerid, bürood, CRM-i pakkujad ja portaalid saavad igaüks erineva vastuse — vali oma roll ja me vastame õigelt laualt.",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-post",
+    "roleLabel": "Ma olen",
+    "roles": {
+      "broker": "Maakler / agent",
+      "brokerage": "Maaklerbüroo",
+      "crm": "CRM-i pakkuja",
+      "portal": "Kinnisvaraportaal",
+      "other": "Muu"
+    },
+    "name": "Nimi",
+    "company": "Ettevõte",
+    "email": "Töömeil",
+    "message": "Sõnum",
+    "consent": "Nõustun, et Sodar säilitab selle sõnumi mulle vastamiseks. Vaata privaatsuspoliitikat.",
+    "submit": "Saada sõnum",
+    "sending": "Saadame…",
+    "sent": "Sõnum saadetud.",
+    "sentBody": "Vastame ühe tööpäeva jooksul.",
+    "another": "Saada veel üks",
+    "error": "Saatmine ebaõnnestus. Kirjuta otse aadressile team@sodar.io.",
+    "fallbackNote": "Avab sinu e-posti rakenduse, kuni vormiteenus on ühendatud."
+  },
+  "Intro": {
+    "kicker": "Tutvustus",
+    "title": "Sodar kolmekümne sekundiga.",
+    "body": "Käi üks kord läbi, vaata kaht ruumi tasuta, maksa üks kord, avalda kuulutusse, mis sul juba on."
   }
 }

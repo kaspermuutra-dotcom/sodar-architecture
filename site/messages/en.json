@@ -11,7 +11,8 @@
     "signIn": "Log in",
     "getStarted": "Scan a property",
     "menu": "Toggle menu",
-    "home": "Sodar home"
+    "home": "Sodar home",
+    "contact": "Contact"
   },
   "Hero": {
     "headline1": "AI walkthroughs",
@@ -486,6 +487,10 @@
           [
             "Enterprise",
             "/enterprise"
+          ],
+          [
+            "Contact",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Terms of Service",
       "data-processing": "Data Processing Addendum",
       "cookies": "Cookie Policy"
-    }
+    },
+    "privacyContact": "Privacy questions:"
   },
   "Scaffold": {
     "phase": "Phase 1 — design & structure",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "brokerages already scanning with Sodar",
     "note": "Early access · Tallinn and beyond"
+  },
+  "Scanner": {
+    "metaTitle": "Scan a property — Sodar",
+    "eyebrow": "Guided capture",
+    "title": "Scan this room.",
+    "intro": "Sodar uses your camera and motion sensors to capture the room as a panorama. Hold the phone upright, follow the target, and the shutter fires by itself.",
+    "desktopHint": "Works best on a phone. Open sodar.io/scan on your mobile, or continue here.",
+    "start": "Allow camera and start",
+    "requesting": "Asking for camera…",
+    "denied": "Camera access was declined. Allow it in your browser settings and try again.",
+    "noCamera": "No camera was found on this device.",
+    "privacyNote": "In this preview, frames stay on your device.",
+    "assistant": "Capture assistant",
+    "room": "Room",
+    "rooms": [
+      "Living room",
+      "Kitchen"
+    ],
+    "frames": "frames",
+    "roomsLabel": "rooms",
+    "hold": "Hold still…",
+    "turnLeft": "Turn left",
+    "turnRight": "Turn right",
+    "tiltUp": "Tilt up",
+    "tiltDown": "Tilt down",
+    "slower": "Slower",
+    "roomDone": "Room complete.",
+    "nextRoom": "Next room",
+    "finishRoom": "Finish room",
+    "finish": "Process preview",
+    "manual": "Capture",
+    "noGyro": "No motion sensors found — turn about 30° between captures.",
+    "processingLabel": "Processing",
+    "processing": "Building your two-room preview…",
+    "done": "Preview ready",
+    "doneTitle": "Two rooms, captured.",
+    "doneBody": "In the live product the walkthrough appears here, together with a one-time price for the remaining rooms.",
+    "workspace": "Open the workspace preview",
+    "again": "Scan again",
+    "exit": "Exit"
+  },
+  "Contact": {
+    "metaTitle": "Contact — Sodar",
+    "eyebrow": "Talk to us",
+    "title": "Tell us who you are.",
+    "sub": "Brokers, brokerages, CRM providers and portals each get a different answer — pick yours and we reply from the right desk.",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "roleLabel": "I am a",
+    "roles": {
+      "broker": "Broker / agent",
+      "brokerage": "Brokerage",
+      "crm": "CRM provider",
+      "portal": "Property portal",
+      "other": "Other"
+    },
+    "name": "Name",
+    "company": "Company",
+    "email": "Work email",
+    "message": "Message",
+    "consent": "I agree that Sodar stores this message to reply to me. See the privacy policy.",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "sent": "Message sent.",
+    "sentBody": "We reply within one working day.",
+    "another": "Send another",
+    "error": "Sending failed. Please email team@sodar.io directly.",
+    "fallbackNote": "Opens your email app until the form service is connected."
+  },
+  "Intro": {
+    "kicker": "Introduction",
+    "title": "Sodar in thirty seconds.",
+    "body": "Walk once, preview two rooms free, pay once, publish into the listing you already have."
   }
 }

@@ -46,6 +46,23 @@ scan sweep, cursor drift), `components/pipeline.tsx` (pinned, scroll-scrubbed
 Capture → Preview → Unlock → Publish), `components/manifesto.tsx`
 (scroll-lit thesis lines), `components/stats-band.tsx` (counters).
 
+## Scanner (`/scan`)
+
+Every white "Scan a property" button opens `/scan`: a full-screen guided
+capture built on the Photo Sphere Android app's logic
+(`third_party/360-photo-app`, MIT), ported to the browser in `lib/scanner/`:
+`plan.ts` (ring of yaw targets), `gate.ts` (dwell-based auto shutter),
+`orientation.ts` (DeviceOrientation → yaw/elevation, iOS permission). The UI is
+`components/scanner/scanner.tsx`. Frames stay in memory on the phone in this
+preview; stitching is the Python pipeline's job (`src/sodar/providers`).
+
+## Contact
+
+`components/contact-form.tsx` posts to Formspree when
+`NEXT_PUBLIC_FORMSPREE_ID` is set (messages land at team@sodar.io) and falls
+back to a pre-filled `mailto:` otherwise. The "I am a…" role is required.
+Phone: +372 56666760. The form also sits under the privacy policy.
+
 ## Media
 
 Generated assets go under `public/media/` — see [`MEDIA_PLAN.md`](MEDIA_PLAN.md)

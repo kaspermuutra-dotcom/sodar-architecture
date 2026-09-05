@@ -11,7 +11,8 @@
     "signIn": "Iniciar sesión",
     "getStarted": "Escanear una propiedad",
     "menu": "Abrir menú",
-    "home": "Inicio de Sodar"
+    "home": "Inicio de Sodar",
+    "contact": "Contacto"
   },
   "Hero": {
     "headline1": "Recorridos con IA",
@@ -486,6 +487,10 @@
           [
             "Empresas",
             "/enterprise"
+          ],
+          [
+            "Contacto",
+            "/contact"
           ]
         ]
       },
@@ -993,7 +998,8 @@
       "terms": "Condiciones del servicio",
       "data-processing": "Anexo de tratamiento de datos",
       "cookies": "Política de cookies"
-    }
+    },
+    "privacyContact": "Preguntas sobre privacidad:"
   },
   "Scaffold": {
     "phase": "Fase 1 — diseño y estructura",
@@ -1003,5 +1009,78 @@
     "count": "5+",
     "line": "agencias ya escanean con Sodar",
     "note": "Acceso anticipado · Tallin y más allá"
+  },
+  "Scanner": {
+    "metaTitle": "Escanear una propiedad — Sodar",
+    "eyebrow": "Captura guiada",
+    "title": "Escanea esta estancia.",
+    "intro": "Sodar usa tu cámara y los sensores de movimiento para capturar la estancia como panorámica. Sujeta el móvil en vertical, sigue el objetivo y el disparador se activa solo.",
+    "desktopHint": "Funciona mejor en un móvil. Abre sodar.io/scan en tu teléfono o continúa aquí.",
+    "start": "Permitir cámara y empezar",
+    "requesting": "Solicitando cámara…",
+    "denied": "Se denegó el acceso a la cámara. Permítelo en los ajustes del navegador e inténtalo de nuevo.",
+    "noCamera": "No se encontró ninguna cámara en este dispositivo.",
+    "privacyNote": "En esta vista previa, las imágenes se quedan en tu dispositivo.",
+    "assistant": "Asistente de captura",
+    "room": "Estancia",
+    "rooms": [
+      "Salón",
+      "Cocina"
+    ],
+    "frames": "fotogramas",
+    "roomsLabel": "estancias",
+    "hold": "Mantén quieto…",
+    "turnLeft": "Gira a la izquierda",
+    "turnRight": "Gira a la derecha",
+    "tiltUp": "Inclina hacia arriba",
+    "tiltDown": "Inclina hacia abajo",
+    "slower": "Más despacio",
+    "roomDone": "Estancia completada.",
+    "nextRoom": "Siguiente estancia",
+    "finishRoom": "Terminar estancia",
+    "finish": "Procesar vista previa",
+    "manual": "Capturar",
+    "noGyro": "No hay sensores de movimiento: gira unos 30° entre capturas.",
+    "processingLabel": "Procesando",
+    "processing": "Creando tu vista previa de dos estancias…",
+    "done": "Vista previa lista",
+    "doneTitle": "Dos estancias capturadas.",
+    "doneBody": "En el producto real, el recorrido aparece aquí junto con un precio único para las estancias restantes.",
+    "workspace": "Abrir la vista previa del espacio de trabajo",
+    "again": "Escanear de nuevo",
+    "exit": "Salir"
+  },
+  "Contact": {
+    "metaTitle": "Contacto — Sodar",
+    "eyebrow": "Hablemos",
+    "title": "Cuéntanos quién eres.",
+    "sub": "Agentes, agencias, proveedores de CRM y portales reciben respuestas distintas: elige la tuya y te contestamos desde la mesa adecuada.",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo",
+    "roleLabel": "Soy",
+    "roles": {
+      "broker": "Agente inmobiliario",
+      "brokerage": "Agencia",
+      "crm": "Proveedor de CRM",
+      "portal": "Portal inmobiliario",
+      "other": "Otro"
+    },
+    "name": "Nombre",
+    "company": "Empresa",
+    "email": "Correo de trabajo",
+    "message": "Mensaje",
+    "consent": "Acepto que Sodar guarde este mensaje para responderme. Consulta la política de privacidad.",
+    "submit": "Enviar mensaje",
+    "sending": "Enviando…",
+    "sent": "Mensaje enviado.",
+    "sentBody": "Respondemos en un día laborable.",
+    "another": "Enviar otro",
+    "error": "El envío falló. Escribe directamente a team@sodar.io.",
+    "fallbackNote": "Abre tu aplicación de correo hasta que el servicio de formularios esté conectado."
+  },
+  "Intro": {
+    "kicker": "Introducción",
+    "title": "Sodar en treinta segundos.",
+    "body": "Recorre una vez, previsualiza dos estancias gratis, paga una vez, publica en el anuncio que ya tienes."
   }
 }
