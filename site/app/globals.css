@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "@photo-sphere-viewer/core/index.css";
+@import "@photo-sphere-viewer/virtual-tour-plugin/index.css";
 
 /*
   Sodar design system — "Mono Scan".

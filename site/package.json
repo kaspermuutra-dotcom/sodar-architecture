@@ -6,11 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
-    "@supabase/supabase-js": "^2.45.0",
+    "@photo-sphere-viewer/core": "^5.15.1",
+    "@photo-sphere-viewer/virtual-tour-plugin": "^5.15.1",
+    "@supabase/ssr": "0.7.0",
+    "@supabase/supabase-js": "2.45.0",
     "gsap": "^3.15.0",
     "next": "^15.5.0",
     "next-intl": "^3.26.0",
@@ -23,6 +27,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "tailwindcss": "^4.0.0",
-    "typescript": "^5.6.0"
+    "typescript": "^5.6.0",
+    "vitest": "3.2.4"
   }
 }
