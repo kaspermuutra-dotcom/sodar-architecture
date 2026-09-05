@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "Faza 1 — projekt i struktura",
     "note": "Płatności, OAuth CRM i proces AI to symulowane stany zastępcze. Brak wywołań backendu."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "biur nieruchomości już skanuje z Sodar",
+    "note": "Wczesny dostęp · Tallinn i dalej"
   }
 }

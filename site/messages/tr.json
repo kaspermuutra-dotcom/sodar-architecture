@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "1. aşama — tasarım ve yapı",
     "note": "Ödemeler, CRM OAuth ve yapay zekâ hattı simüle edilmiş yer tutucu durumlardır. Arka uç çağrısı yok."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "ofis şimdiden Sodar ile tarıyor",
+    "note": "Erken erişim · Tallinn ve ötesi"
   }
 }

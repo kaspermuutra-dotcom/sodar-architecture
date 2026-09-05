@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "Fase 1 — design e estrutura",
     "note": "Pagamentos, OAuth de CRM e o processo de IA são estados simulados. Sem chamadas ao backend."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "agências já digitalizam com a Sodar",
+    "note": "Acesso antecipado · Tallinn e além"
   }
 }

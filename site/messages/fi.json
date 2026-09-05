@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "Vaihe 1 — suunnittelu & rakenne",
     "note": "Maksut, CRM-OAuth ja tekoälyputki ovat simuloituja paikkamerkkitiloja. Ei backend-kutsuja."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "välitysliikettä skannaa jo Sodarilla",
+    "note": "Varhainen pääsy · Tallinna ja muualla"
   }
 }

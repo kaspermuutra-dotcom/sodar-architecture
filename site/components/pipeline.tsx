@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { prefersReducedMotion } from "@/lib/motion";
+import { LoopVideo } from "@/components/loop-video";
 
 const TILE = (n: number) => `/media/rooms/tile-${String(n).padStart(2, "0")}.jpg`;
 
@@ -95,7 +96,7 @@ export function Pipeline() {
           {/* 01 — Capture */}
           <Panel index="01" label={t("panels.capture.label")} title={t("panels.capture.title")} body={t("panels.capture.body")}>
             <div className="relative mx-auto aspect-[9/17] w-full max-w-[300px] overflow-hidden rounded-[2.2rem] border border-border-strong bg-bg-elevated shadow-[0_40px_120px_rgba(0,0,0,.7)]">
-              <img src={TILE(3)} alt="" className="absolute inset-0 h-full w-full object-cover grayscale-[.3] brightness-[.8]" />
+              <LoopVideo src="/media/pipeline-capture.mp4" poster={TILE(3)} className="grayscale-[.2] brightness-[.85]" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.55),transparent_25%,transparent_70%,rgba(0,0,0,.7))]" />
               <div className="absolute inset-x-6 top-1/2 h-px bg-white/30" />
               <div className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/60" />

@@ -27,6 +27,14 @@ under `@theme`.
 - Logo: `components/logo.tsx` — SVG approximation of the S mark. Replace the
   `<path>` with the real mark's path when exported.
 
+### Light bands
+
+`.theme-light` (in `globals.css`) re-maps every design token to the cream
+palette, so wrapping a group of sections in `<div className="theme-light">`
+flips them Zobi-style without touching the components. The homepage alternates
+dark hero / light thesis / dark pipeline / light capabilities / dark workspace /
+light trust + pricing.
+
 ## Motion
 
 Every GSAP effect checks `prefersReducedMotion()` from `lib/motion.ts`, which is

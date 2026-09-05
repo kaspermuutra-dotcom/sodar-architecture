@@ -66,7 +66,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
                     href={pathname}
                     locale={l.code}
                     onClick={() => setOpen(false)}
-                    className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors hover:bg-white/[.06] ${isActive ? "bg-white/[.04]" : ""}`}
+                    className={`flex items-center gap-3 px-4 py-2.5 text-sm transition-colors hover:bg-text/[.06] ${isActive ? "bg-text/[.04]" : ""}`}
                   >
                     {row}
                   </Link>
@@ -78,7 +78,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
                 <button
                   type="button"
                   onClick={() => setPendingCode(l.code)}
-                  className="flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm text-text-muted transition-colors hover:bg-white/[.06]"
+                  className="flex w-full items-center gap-3 px-4 py-2.5 text-left text-sm text-text-muted transition-colors hover:bg-text/[.06]"
                 >
                   {row}
                 </button>

@@ -72,6 +72,35 @@ a:focus-visible, button:focus-visible { outline: 1px solid var(--color-text); ou
   mask-image: radial-gradient(70% 60% at 50% 40%, #000 20%, transparent 100%);
 }
 
+
+/* ---------- light bands (Zobi-style cream sections) ----------
+   Tailwind utilities resolve to var(--color-*) at runtime, so overriding the
+   tokens on a wrapper flips every child section to the light palette. */
+.theme-light {
+  --color-bg: #f4f2ee;
+  --color-bg-raised: #ffffff;
+  --color-bg-elevated: #e9e6e0;
+  --color-text: #0b0b0b;
+  --color-text-muted: #66635e;
+  --color-text-faint: #a19d96;
+  --color-accent: #0b0b0b;
+  --color-accent-2: #3a3a3a;
+  --color-border: rgba(11, 11, 11, 0.1);
+  --color-border-strong: rgba(11, 11, 11, 0.24);
+  --color-ink: #0b0b0b;
+  --color-ink-raised: #151515;
+  --color-ink-border: rgba(11, 11, 11, 0.1);
+  --color-ink-fg: #0b0b0b;
+  --color-ink-muted: #66635e;
+  background: var(--color-bg);
+  color: var(--color-text);
+  color-scheme: light;
+}
+.theme-light ::selection { background: #0b0b0b; color: #f4f2ee; }
+.theme-light .eyebrow > span { box-shadow: none; }
+.theme-light .card-scan::after { box-shadow: none; }
+.theme-light .button-primary:hover { background: #000; }
+
 /* ---------- typography helpers ---------- */
 .display { font-family: var(--font-serif); font-weight: 400; letter-spacing: -.02em; line-height: .96; }
 .display i, .display em { font-style: italic; }

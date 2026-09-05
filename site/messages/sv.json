@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "Fas 1 — design & struktur",
     "note": "Betalningar, CRM-OAuth och AI-pipelinen är simulerade platshållartillstånd. Inga backend-anrop."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "mäklarbyråer skannar redan med Sodar",
+    "note": "Tidig åtkomst · Tallinn och vidare"
   }
 }

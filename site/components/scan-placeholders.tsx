@@ -2,9 +2,12 @@
 // apartment still that already ships in /public; the "flat" layer is the
 // phone capture (desaturated, vignetted), the "revealed" layer is the Sodar
 // walkthrough (full colour, navigation hotspots, viewer chrome).
-// TODO(phase-2): swap `SRC` for the Higgsfield-generated capture/walkthrough pair.
+// The revealed layer plays the Higgsfield-generated dolly loop over the still.
+
+import { LoopVideo } from "@/components/loop-video";
 
 const SRC = "/sodar-apartment-hero.png";
+const LOOP = "/media/hero-scan-loop.mp4";
 
 export function FlatListingPhoto({ label }: { label?: string }) {
   return (
@@ -22,7 +25,7 @@ export function FlatListingPhoto({ label }: { label?: string }) {
 export function SodarWalkthroughFrame({ label }: { label?: string }) {
   return (
     <div className="relative h-full w-full bg-bg">
-      <img src={SRC} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <LoopVideo src={LOOP} poster={SRC} />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.25),transparent_30%,transparent_70%,rgba(0,0,0,.45))]" />
       {/* navigation hotspots */}
       {[

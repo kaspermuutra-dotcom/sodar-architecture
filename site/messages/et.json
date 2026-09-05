@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "1. etapp — disain ja struktuur",
     "note": "Maksed, CRM-i OAuth ja AI-protsess on simuleeritud kohatäite-olekud. Taustsüsteemi päringuid pole."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "maaklerbürood juba skannivad Sodariga",
+    "note": "Varajane ligipääs · Tallinn ja kaugemal"
   }
 }

@@ -1,5 +1,13 @@
 # Sodar site — media plan (Higgsfield)
 
+**Status 2026-09-05:** Higgsfield is now connected as an MCP connector (no CLI
+login needed). Generated so far, all from `public/sodar-apartment-hero.png` as
+the start frame with Kling 3.0 (5 s, std), then made palindromic 10 s loops at
+960 px with ffmpeg: `hero-scan-loop.mp4` (dolly), `pipeline-capture.mp4`
+(panorama pan), `scans-orbit.mp4`, `scans-window.mp4`. One GPT Image 2 still:
+`kitchen-gpt-image-2.jpg`. `components/loop-video.tsx` plays each clip over its
+poster still. Remaining slots below are still open.
+
 Every generated asset has a fixed path under `public/media/`. Components already
 point at these paths, so dropping a file in is the whole swap. Until then the
 site uses PIL crops of `public/sodar-apartment-hero.png` as stand-ins for the

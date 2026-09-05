@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "Fase 1 — ontwerp & structuur",
     "note": "Betalingen, CRM-OAuth en de AI-pipeline zijn gesimuleerde placeholders. Geen backend-aanroepen."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "makelaarskantoren scannen al met Sodar",
+    "note": "Vroege toegang · Tallinn en verder"
   }
 }

@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "1. posms — dizains un struktūra",
     "note": "Maksājumi, CRM OAuth un MI process ir simulēti vietturu stāvokļi. Bez aizmugursistēmas izsaukumiem."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "aģentūras jau skenē ar Sodar",
+    "note": "Agrīna piekļuve · Tallina un tālāk"
   }
 }

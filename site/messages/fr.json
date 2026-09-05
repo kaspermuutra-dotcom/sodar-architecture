@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "Phase 1 — design & structure",
     "note": "Paiements, OAuth CRM et chaîne IA sont des états simulés. Aucun appel backend."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "agences scannent déjà avec Sodar",
+    "note": "Accès anticipé · Tallinn et au-delà"
   }
 }

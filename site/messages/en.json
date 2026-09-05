@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "Phase 1 — design & structure",
     "note": "Payments, CRM OAuth, and the AI pipeline are mocked placeholder states. No backend calls."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "brokerages already scanning with Sodar",
+    "note": "Early access · Tallinn and beyond"
   }
 }

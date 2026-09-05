@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "Fase 1 — design e struttura",
     "note": "Pagamenti, OAuth CRM e la pipeline IA sono stati segnaposto simulati. Nessuna chiamata al backend."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "agenzie scansionano già con Sodar",
+    "note": "Accesso anticipato · Tallinn e oltre"
   }
 }

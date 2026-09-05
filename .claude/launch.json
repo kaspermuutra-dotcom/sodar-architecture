@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["--prefix", "site", "run", "dev"],
       "port": 3000
+    },
+    {
+      "name": "psv-tour",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8080", "-d", "artifacts/tours/psv-viewer-check"],
+      "port": 8080
     }
   ]
 }

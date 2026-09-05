@@ -5,6 +5,7 @@ import { Hero } from "@/components/hero";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { RoomMarquee } from "@/components/room-marquee";
+import { ProofStrip } from "@/components/proof-strip";
 import { Manifesto } from "@/components/manifesto";
 import { StatsBand } from "@/components/stats-band";
 import { Pipeline } from "@/components/pipeline";
@@ -32,19 +33,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <SiteHeader />
       <main>
         <Hero />
+        <ProofStrip />
         <RoomMarquee />
-        <Manifesto />
-        <StatsBand />
+        <div className="theme-light">
+          <Manifesto />
+          <StatsBand />
+        </div>
         <Pipeline />
-        <CapabilityGrid />
+        <div className="theme-light">
+          <CapabilityGrid />
+          <ImpactStats />
+        </div>
         <IntegrationShowcase />
-        <ImpactStats />
         <TerminalPreviewSection />
         <ScansGrid />
-        <TrustPillars />
-        <PartnerTeaser />
-        <PricingTeaser />
-        <LanguageSection />
+        <div className="theme-light">
+          <TrustPillars />
+          <PartnerTeaser />
+          <PricingTeaser />
+          <LanguageSection />
+        </div>
       </main>
       <SiteFooter />
     </>

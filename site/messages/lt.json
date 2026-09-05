@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "1 etapas — dizainas ir struktūra",
     "note": "Mokėjimai, CRM OAuth ir DI procesas yra imituojamos pakaitinės būsenos. Be užklausų į serverį."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "agentūros jau skenuoja su Sodar",
+    "note": "Ankstyva prieiga · Talinas ir toliau"
   }
 }

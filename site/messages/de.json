@@ -998,5 +998,10 @@
   "Scaffold": {
     "phase": "Phase 1 — Design & Struktur",
     "note": "Zahlungen, CRM-OAuth und die KI-Pipeline sind simulierte Platzhalterzustände. Keine Backend-Aufrufe."
+  },
+  "Proof": {
+    "count": "5+",
+    "line": "Maklerbüros scannen bereits mit Sodar",
+    "note": "Früher Zugang · Tallinn und darüber hinaus"
   }
 }
