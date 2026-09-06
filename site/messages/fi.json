@@ -1052,7 +1052,12 @@
     "savedLocally": "Tallennettu tälle laitteelle. Kirjaudu sisään lähettääksesi ja yhdistääksesi.",
     "uploading": "Lähetetään kuvia…",
     "queued": "Huone jonossa yhdistämiseen.",
-    "export": "Vie kuvat (zip)"
+    "export": "Vie kuvat (zip)",
+    "stitching": "Yhdistetään huonetta…",
+    "filling": "Täytetään kattoa ja lattiaa GPT Image 2:lla…",
+    "openPreview": "Avaa kierroksen esikatselu",
+    "previewLabel": "Esikatselu laitteella",
+    "demoLink": "Kokeile demohuonetta"
   },
   "Contact": {
     "metaTitle": "Yhteystiedot — Sodar",

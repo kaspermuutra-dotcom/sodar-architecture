@@ -1052,7 +1052,12 @@
     "savedLocally": "Saved on this device. Sign in to upload and stitch.",
     "uploading": "Uploading frames…",
     "queued": "Room queued for stitching.",
-    "export": "Export frames (zip)"
+    "export": "Export frames (zip)",
+    "stitching": "Stitching the room…",
+    "filling": "Filling ceiling and floor with GPT Image 2…",
+    "openPreview": "Open the walkthrough preview",
+    "previewLabel": "On-device preview",
+    "demoLink": "Try the demo room"
   },
   "Contact": {
     "metaTitle": "Contact — Sodar",

@@ -1052,7 +1052,12 @@
     "savedLocally": "Išsaugota šiame įrenginyje. Prisijunkite, kad įkeltumėte ir sujungtumėte.",
     "uploading": "Įkeliami kadrai…",
     "queued": "Kambarys eilėje sujungimui.",
-    "export": "Eksportuoti kadrus (zip)"
+    "export": "Eksportuoti kadrus (zip)",
+    "stitching": "Sujungiamas kambarys…",
+    "filling": "Lubos ir grindys užpildomos su GPT Image 2…",
+    "openPreview": "Atidaryti apžvalgos peržiūrą",
+    "previewLabel": "Peržiūra įrenginyje",
+    "demoLink": "Išbandyti demo kambarį"
   },
   "Contact": {
     "metaTitle": "Kontaktai — Sodar",

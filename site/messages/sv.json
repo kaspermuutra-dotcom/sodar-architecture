@@ -1052,7 +1052,12 @@
     "savedLocally": "Sparat på den här enheten. Logga in för att ladda upp och sammanfoga.",
     "uploading": "Laddar upp bilder…",
     "queued": "Rummet köat för sammanfogning.",
-    "export": "Exportera bilder (zip)"
+    "export": "Exportera bilder (zip)",
+    "stitching": "Sammanfogar rummet…",
+    "filling": "Fyller tak och golv med GPT Image 2…",
+    "openPreview": "Öppna visningsförhandsvisningen",
+    "previewLabel": "Förhandsvisning på enheten",
+    "demoLink": "Prova demorummet"
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",

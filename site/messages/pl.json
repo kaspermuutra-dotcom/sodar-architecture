@@ -1052,7 +1052,12 @@
     "savedLocally": "Zapisano na tym urządzeniu. Zaloguj się, aby przesłać i połączyć.",
     "uploading": "Przesyłanie klatek…",
     "queued": "Pomieszczenie w kolejce do łączenia.",
-    "export": "Eksportuj klatki (zip)"
+    "export": "Eksportuj klatki (zip)",
+    "stitching": "Łączenie pomieszczenia…",
+    "filling": "Wypełnianie sufitu i podłogi przez GPT Image 2…",
+    "openPreview": "Otwórz podgląd spaceru",
+    "previewLabel": "Podgląd na urządzeniu",
+    "demoLink": "Wypróbuj pokój demo"
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",

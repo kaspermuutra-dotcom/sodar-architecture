@@ -1052,7 +1052,12 @@
     "savedLocally": "Guardado neste dispositivo. Inicie sessão para enviar e unir.",
     "uploading": "A enviar fotogramas…",
     "queued": "Divisão em fila para união.",
-    "export": "Exportar fotogramas (zip)"
+    "export": "Exportar fotogramas (zip)",
+    "stitching": "A unir a divisão…",
+    "filling": "A preencher teto e chão com GPT Image 2…",
+    "openPreview": "Abrir a pré-visualização da visita",
+    "previewLabel": "Pré-visualização no dispositivo",
+    "demoLink": "Experimentar a divisão de demonstração"
   },
   "Contact": {
     "metaTitle": "Contacto — Sodar",

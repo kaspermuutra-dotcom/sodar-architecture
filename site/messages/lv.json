@@ -1052,7 +1052,12 @@
     "savedLocally": "Saglabāts šajā ierīcē. Piesakieties, lai augšupielādētu un savienotu.",
     "uploading": "Augšupielādē kadrus…",
     "queued": "Telpa rindā savienošanai.",
-    "export": "Eksportēt kadrus (zip)"
+    "export": "Eksportēt kadrus (zip)",
+    "stitching": "Savieno telpu…",
+    "filling": "Aizpilda griestus un grīdu ar GPT Image 2…",
+    "openPreview": "Atvērt apskates priekšskatu",
+    "previewLabel": "Priekšskats ierīcē",
+    "demoLink": "Izmēģināt demo telpu"
   },
   "Contact": {
     "metaTitle": "Kontakti — Sodar",

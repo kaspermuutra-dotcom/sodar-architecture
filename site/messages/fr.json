@@ -1052,7 +1052,12 @@
     "savedLocally": "Enregistré sur cet appareil. Connectez-vous pour envoyer et assembler.",
     "uploading": "Envoi des images…",
     "queued": "Pièce en file d’attente pour l’assemblage.",
-    "export": "Exporter les images (zip)"
+    "export": "Exporter les images (zip)",
+    "stitching": "Assemblage de la pièce…",
+    "filling": "Remplissage du plafond et du sol avec GPT Image 2…",
+    "openPreview": "Ouvrir l’aperçu de la visite",
+    "previewLabel": "Aperçu sur l’appareil",
+    "demoLink": "Essayer la pièce de démo"
   },
   "Contact": {
     "metaTitle": "Contact — Sodar",

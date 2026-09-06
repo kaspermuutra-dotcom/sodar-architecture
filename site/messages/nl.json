@@ -1052,7 +1052,12 @@
     "savedLocally": "Opgeslagen op dit apparaat. Log in om te uploaden en te stitchen.",
     "uploading": "Frames uploaden…",
     "queued": "Kamer in de wachtrij voor stitchen.",
-    "export": "Frames exporteren (zip)"
+    "export": "Frames exporteren (zip)",
+    "stitching": "Kamer wordt gestitcht…",
+    "filling": "Plafond en vloer worden ingevuld met GPT Image 2…",
+    "openPreview": "Rondleiding-preview openen",
+    "previewLabel": "Preview op het apparaat",
+    "demoLink": "Probeer de demokamer"
   },
   "Contact": {
     "metaTitle": "Contact — Sodar",

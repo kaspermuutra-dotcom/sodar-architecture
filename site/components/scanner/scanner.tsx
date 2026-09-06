@@ -9,6 +9,9 @@ import { deleteFrame, latestSession, roomFrames, saveFrame, saveSession, updateF
 import { httpScannerBackend, type FrameMetadata } from "@/lib/scanner/contracts";
 import { RoomPreview } from "./room-preview";
 import { buildZip, type ZipEntry } from "@/lib/scanner/zip";
+import { stitchFrames } from "@/lib/scanner/stitch";
+import { savePanorama, sessionPanoramas } from "@/lib/scanner/panoramas";
+import { aiFillEnabled, aiFillPanorama } from "@/lib/scanner/ai-fill";
 
 /**
  * Guided panorama capture. Geometry is the Photo Sphere Android port in
@@ -35,7 +38,7 @@ const newSession = (name: string): ScanSession => {
 
 function readOrientation(event: DeviceOrientationEvent): Orientation {
   const compass = (event as DeviceOrientationEvent & { webkitCompassHeading?: number }).webkitCompassHeading;
-  return { yaw: compass ?? event.alpha ?? 0, pitch: Math.max(-90, Math.min(90, (event.beta ?? 90) - 90)), roll: event.gamma ?? 0 };
+  return { yaw: compass ?? (360 - (event.alpha ?? 0)) % 360, pitch: Math.max(-90, Math.min(90, (event.beta ?? 90) - 90)), roll: event.gamma ?? 0 };
 }
 
 function planFor(startYaw: number, scope: Scope): SpherePlan {
@@ -69,6 +72,9 @@ export function Scanner() {
   const [flash, setFlash] = useState(false);
   const [thumbs, setThumbs] = useState<string[]>([]);
   const [progress, setProgress] = useState(0);
+  const [stitching, setStitching] = useState<string | null>(null);
+  const [previewOpen, setPreviewOpen] = useState(false);
+  const [demo, setDemo] = useState(false);
 
   const activeRoom = session?.rooms.find((room) => room.id === session.activeRoomId);
   const target = plan?.targets[activeRoom?.captured ?? 0];
@@ -78,8 +84,21 @@ export function Scanner() {
   const updateRoom = useCallback((id: string, change: (room: Room) => Room) => setSession((old) => (old ? { ...old, rooms: old.rooms.map((r) => (r.id === id ? change(r) : r)) } : old)), []);
 
   useEffect(() => {
-    if (new URLSearchParams(window.location.search).get("scope") === "sphere") setScope("sphere");
-    void latestSession().then((saved) => setSession(saved && saved.rooms.some((r) => r.status !== "complete") ? saved : newSession(roomName(1))));
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("scope") === "sphere") setScope("sphere");
+    if (params.get("demo") === "1") setDemo(true);
+    void latestSession().then(async (saved) => {
+      const next = saved && saved.rooms.some((r) => r.status !== "complete") ? saved : newSession(roomName(1));
+      // re-attach on-device panoramas as object URLs
+      try {
+        const stored = await sessionPanoramas(next.id);
+        for (const sp of stored) {
+          const room = next.rooms.find((r) => r.id === sp.roomId);
+          if (room && !room.panoramaUrl) room.panoramaUrl = URL.createObjectURL(sp.panorama);
+        }
+      } catch {}
+      setSession(next);
+    });
   }, [roomName]);
   useEffect(() => () => cameraStream.current?.getTracks().forEach((track) => track.stop()), []);
   useEffect(() => {
@@ -235,9 +254,45 @@ export function Scanner() {
     void capture(pose);
   };
 
+  /** Stitch the room on the device (WebGL) so it can be previewed immediately; optionally let GPT Image 2 fill the poles. */
+  const stitchRoom = useCallback(
+    async (room: Room, sessionId: string) => {
+      const frames = await roomFrames(room.id);
+      if (frames.length < 2) return;
+      setStitching(t("stitching"));
+      const out = await stitchFrames(
+        frames.map((f) => ({ blob: f.jpeg, yaw: f.metadata.yaw, elevation: -f.metadata.pitch, roll: f.metadata.roll })),
+        { fov: DEFAULT_FOV, width: 2048, onProgress: (d, n) => setStitching(`${t("stitching")} ${d}/${n}`) },
+      );
+      let panorama = out.panorama;
+      let filled = false;
+      if (aiFillEnabled()) {
+        try {
+          setStitching(t("filling"));
+          panorama = (await aiFillPanorama(out.panorama, out.mask, 2048)).panorama;
+          filled = true;
+        } catch (err) {
+          setMessage(err instanceof Error ? err.message : "ai fill failed");
+        }
+      }
+      await savePanorama({ roomId: room.id, sessionId, panorama, mask: out.mask, coverage: out.coverage, width: out.width, height: out.height, filled, createdAt: new Date().toISOString() });
+      const url = URL.createObjectURL(panorama);
+      updateRoom(room.id, (r) => ({ ...r, panoramaUrl: url }));
+      setStitching(null);
+      return out;
+    },
+    [t, updateRoom],
+  );
+
   /** Upload the finished room's frames and queue stitching; without a signed-in session they stay local. */
   const finishRoom = async () => {
     if (!session || !activeRoom || !activeRoom.captured) return;
+    try {
+      await stitchRoom(activeRoom, session.id);
+    } catch (err) {
+      setStitching(null);
+      setMessage(err instanceof Error ? err.message : "stitch failed");
+    }
     setMessage(t("uploading"));
     let uploaded = false;
     try {
@@ -287,6 +342,35 @@ export function Scanner() {
       setPhase("capturing");
     }
   };
+
+  // Demo: stitch the bundled 12-frame room without a camera (?demo=1).
+  useEffect(() => {
+    if (!demo || !session || phase !== "idle") return;
+    let cancelled = false;
+    (async () => {
+      setStitching(t("stitching"));
+      const manifest = (await fetch("/media/demo-frames/frames.json").then((r) => r.json())) as { fov: { horizontal: number; vertical: number }; frames: Array<{ file: string; yaw: number; elevation: number; roll: number }> };
+      const room = session.rooms.find((r) => r.id === session.activeRoomId)!;
+      let index = 0;
+      for (const f of manifest.frames) {
+        const jpeg = await fetch(`/media/demo-frames/${f.file}`).then((r) => r.blob());
+        const id = crypto.randomUUID();
+        const metadata: FrameMetadata = { id, roomId: room.id, sessionId: session.id, yaw: f.yaw, pitch: -f.elevation, roll: f.roll, fov: manifest.fov, timestamp: new Date().toISOString(), checkpoint: { index, ring: 0, yaw: f.yaw, pitch: -f.elevation, elevation: f.elevation }, width: 480, height: 640, mimeType: "image/jpeg" };
+        await saveFrame({ id, metadata, jpeg });
+        index++;
+      }
+      if (cancelled) return;
+      updateRoom(room.id, (r) => ({ ...r, captured: manifest.frames.length, targetCount: manifest.frames.length, status: "complete" }));
+      await stitchRoom({ ...room, captured: manifest.frames.length }, session.id);
+      if (cancelled) return;
+      setPhase("done");
+      setPreviewOpen(true);
+    })().catch((err) => setMessage(err instanceof Error ? err.message : "demo failed"));
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [demo, session?.id, phase]);
 
   const marker = useMemo(() => {
     if (!orientation || !target || typeof window === "undefined") return undefined;
@@ -355,7 +439,11 @@ export function Scanner() {
           </p>
           <h1 className="display mt-4 text-[clamp(2.4rem,9vw,3.6rem)]">{t("title")}</h1>
           <p className="mt-4 text-text-muted">{t("intro")}</p>
-          {!isMobile ? <p className="mt-3 font-mono text-[11px] text-text-faint">{t("desktopHint")}</p> : null}
+          {!isMobile ? (
+            <p className="mt-3 font-mono text-[11px] text-text-faint">
+              {t("desktopHint")} <a href="?demo=1" className="underline">{t("demoLink")}</a>
+            </p>
+          ) : null}
           {error ? <p className="mt-4 rounded-xl border border-border-strong bg-bg-raised p-3 text-sm text-text">{error}</p> : null}
           <button type="button" onClick={start} disabled={requesting || !session} className="button-primary mt-8 w-full justify-center">
             {requesting ? t("requesting") : t("start")} <span aria-hidden>↗</span>
@@ -394,7 +482,9 @@ export function Scanner() {
 
           <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/15 bg-black/55 p-4 backdrop-blur">
             <p className="font-mono text-[10px] uppercase tracking-[.16em] text-text-muted">{t("assistant")}</p>
-            {phase === "roomDone" ? (
+            {stitching ? (
+              <p className="mt-1 text-sm text-text">{stitching}</p>
+            ) : phase === "roomDone" ? (
               <>
                 <p className="mt-1 text-sm text-text">{t("roomDone")}</p>
                 <button type="button" onClick={finishRoom} className="button-primary mt-3 w-full justify-center">
@@ -434,10 +524,16 @@ export function Scanner() {
             {session?.rooms.reduce((n, r) => n + r.captured, 0) ?? 0} {t("frames")} · {session?.rooms.length ?? 0} {t("roomsLabel")}
           </p>
           {message ? <p className="mt-3 font-mono text-[11px] text-text-faint">{message}</p> : null}
+          {stitching ? <p className="mt-3 font-mono text-[11px] text-text-muted">{stitching}</p> : null}
           {phase === "done" ? (
             <>
               <p className="mt-6 text-text-muted">{t("doneBody")}</p>
-              <Link href="/terminal" className="button-primary mt-8 w-full justify-center">
+              {session?.rooms.some((r) => r.panoramaUrl) ? (
+                <button type="button" onClick={() => setPreviewOpen(true)} className="button-primary mt-8 w-full justify-center">
+                  {t("openPreview")} <span aria-hidden>↗</span>
+                </button>
+              ) : null}
+              <Link href="/terminal" className="button-secondary mt-3 w-full justify-center">
                 {t("workspace")} <span aria-hidden>↗</span>
               </Link>
               <button type="button" onClick={exportFrames} className="button-secondary mt-3 w-full justify-center">
@@ -451,7 +547,7 @@ export function Scanner() {
         </div>
       ) : null}
 
-      {session ? <RoomPreview rooms={session.rooms} /> : null}
+      {session ? <RoomPreview rooms={session.rooms} open={previewOpen} onClose={() => setPreviewOpen(false)} label={t("previewLabel")} /> : null}
     </main>
   );
 }

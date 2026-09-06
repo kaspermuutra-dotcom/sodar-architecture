@@ -51,6 +51,40 @@ Sphere target plan) is the capture layer.
 | A-Frame | MIT | WebXR-first; heavier than needed. |
 | krpano | commercial | The industry incumbent; not open source. |
 
+## Panorama → 3D (scouted on GitHub, 2026-09-05)
+
+What turns one equirectangular panorama into something with depth or a walkable
+scene. None of these are in the Phase-1 path (TD-001 is flat panoramas), but
+they are the candidates for the premium tier (TD-007) and for parallax-correct
+room-to-room transitions.
+
+| Project | License | What it does | Fit for SODAR |
+|---|---|---|---|
+| **[juniorxsound/THREE.SixDOF](https://github.com/juniorxsound/THREE.SixDOF)** | MIT | three.js plugin: equirect colour + depth map → 6-DoF sphere mesh you can lean into. TypeScript. | **Cheapest depth upgrade**: pair each panorama with a depth map and render in three.js next to Photo Sphere Viewer. |
+| [mellinger/three-depthmaps](https://github.com/mellinger/three-depthmaps) | MIT | Same idea, simpler. | Fallback reference. |
+| **[Insta360-Research-Team/DA360](https://github.com/Insta360-Research-Team/DA360)** | code Apache-2.0 (check weights) | Depth Anything adapted to 360° with circular padding — zero-shot panoramic depth, no seam at the wrap. | **Depth source** for SixDOF and for splats; replaces perspective Depth-Anything-V2 (`third_party/`) on equirect input. |
+| [Insta360-Research-Team/DAP](https://github.com/Insta360-Research-Team/DAP) | code Apache-2.0 (check weights) | "Depth Any Panoramas" foundation model (DINOv3 backbone). | Higher quality than DA360; heavier. |
+| **[cedarconnor/SPAG4d](https://github.com/cedarconnor/SPAG4d)** | MIT | One equirect → 3D Gaussian splat file via DA360 / DAP / PaGeR depth or Apple SHARP. | Direct route to the `.spz` splat tier the PlayCanvas viewer in `viewer/` was kept for. |
+| [LeoDarcy/360GS](https://github.com/LeoDarcy/360GS) | research | Layout-guided panoramic Gaussian splatting for indoor roaming. | Indoor-specific; good reference for floor/ceiling priors. |
+| [chengzhag/PanSplat](https://github.com/chengzhag/PanSplat) · [thucz/splatter360](https://github.com/thucz/splatter360) | research | Feed-forward splats from *two* wide-baseline panoramas. | Exactly the two-capture-point case in E4/TD-008; heavy models. |
+| [zcq15/gsplat360](https://github.com/zcq15/gsplat360) | Apache-2.0 | Panoramic-camera rasteriser for 3DGS/2DGS. | Renderer piece if we train splats ourselves. |
+| [inuex35/360-gaussian-splatting](https://github.com/inuex35/360-gaussian-splatting) | MIT | OpenSfM + Gaussian splatting from 360-camera imagery. | Multi-panorama capture → full-room splat; needs many captures. |
+| **[sunset1995/HorizonNet](https://github.com/sunset1995/HorizonNet)** · [HoHoNet](https://github.com/sunset1995/HoHoNet) · [LED2-Net](https://github.com/fuenwang/LED2-Net) | MIT | Room layout (walls/floor/ceiling) from one panorama → a clean box/polygon room mesh. | The "floor plan + measurements" feature and a geometry prior for transitions. |
+| [pchen66/panolens.js](https://github.com/pchen66/panolens.js) | MIT | three.js panorama viewer (unmaintained). | No — Photo Sphere Viewer already chosen. |
+| [three.js equirectangular example](https://github.com/mrdoob/three.js/blob/master/examples/webgl_panorama_equirectangular.html) | MIT | Baseline sphere-texture viewer. | Reference only. |
+
+Recommended order: DA360 depth → THREE.SixDOF in the viewer (weeks, no training),
+then SPAG-4D for the splat tier, then HorizonNet for floor plans.
+
+## In the website (2026-09-05)
+
+`/scan` now stitches **on the device** with WebGL2 (`site/lib/scanner/stitch.ts`,
+same projection as `posed-stitch`), stores the panorama in IndexedDB, and opens
+it in Photo Sphere Viewer straight away; `/scan?demo=1` runs the bundled
+12-frame room without a camera. `/api/ai-fill` forwards the padded panorama +
+mask to GPT Image 2 (OpenAI Images edit) when `OPENAI_API_KEY` is set; the
+client enables it with `NEXT_PUBLIC_AI_FILL=1`.
+
 ## The pipeline this gives us
 
 ```

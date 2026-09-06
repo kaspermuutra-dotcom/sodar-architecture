@@ -1052,7 +1052,12 @@
     "savedLocally": "已保存在此设备上。登录后即可上传并拼接。",
     "uploading": "正在上传画面…",
     "queued": "房间已排队等待拼接。",
-    "export": "导出画面（zip）"
+    "export": "导出画面（zip）",
+    "stitching": "正在拼接房间…",
+    "filling": "正在用 GPT Image 2 补全天花板和地板…",
+    "openPreview": "打开漫游预览",
+    "previewLabel": "设备端预览",
+    "demoLink": "试试演示房间"
   },
   "Contact": {
     "metaTitle": "联系我们 — Sodar",

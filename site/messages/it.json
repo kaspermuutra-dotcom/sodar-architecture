@@ -1052,7 +1052,12 @@
     "savedLocally": "Salvato su questo dispositivo. Accedi per caricare e unire.",
     "uploading": "Caricamento fotogrammi…",
     "queued": "Stanza in coda per lo stitching.",
-    "export": "Esporta fotogrammi (zip)"
+    "export": "Esporta fotogrammi (zip)",
+    "stitching": "Unione della stanza…",
+    "filling": "Riempimento di soffitto e pavimento con GPT Image 2…",
+    "openPreview": "Apri l’anteprima del tour",
+    "previewLabel": "Anteprima sul dispositivo",
+    "demoLink": "Prova la stanza demo"
   },
   "Contact": {
     "metaTitle": "Contatti — Sodar",

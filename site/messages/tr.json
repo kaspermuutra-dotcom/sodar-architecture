@@ -1052,7 +1052,12 @@
     "savedLocally": "Bu cihaza kaydedildi. Yüklemek ve birleştirmek için giriş yapın.",
     "uploading": "Kareler yükleniyor…",
     "queued": "Oda birleştirme için sıraya alındı.",
-    "export": "Kareleri dışa aktar (zip)"
+    "export": "Kareleri dışa aktar (zip)",
+    "stitching": "Oda birleştiriliyor…",
+    "filling": "Tavan ve zemin GPT Image 2 ile dolduruluyor…",
+    "openPreview": "Tur önizlemesini aç",
+    "previewLabel": "Cihaz üzerinde önizleme",
+    "demoLink": "Demo odayı dene"
   },
   "Contact": {
     "metaTitle": "İletişim — Sodar",

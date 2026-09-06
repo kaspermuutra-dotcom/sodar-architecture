@@ -1052,7 +1052,12 @@
     "savedLocally": "Guardado en este dispositivo. Inicia sesión para subir y unir.",
     "uploading": "Subiendo fotogramas…",
     "queued": "Estancia en cola para unir.",
-    "export": "Exportar fotogramas (zip)"
+    "export": "Exportar fotogramas (zip)",
+    "stitching": "Uniendo la estancia…",
+    "filling": "Rellenando techo y suelo con GPT Image 2…",
+    "openPreview": "Abrir la vista previa del recorrido",
+    "previewLabel": "Vista previa en el dispositivo",
+    "demoLink": "Probar la estancia de demostración"
   },
   "Contact": {
     "metaTitle": "Contacto — Sodar",

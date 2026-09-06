@@ -1052,7 +1052,12 @@
     "savedLocally": "Auf diesem Gerät gespeichert. Melden Sie sich an, um hochzuladen und zusammenzufügen.",
     "uploading": "Bilder werden hochgeladen…",
     "queued": "Raum zum Zusammenfügen eingereiht.",
-    "export": "Bilder exportieren (ZIP)"
+    "export": "Bilder exportieren (ZIP)",
+    "stitching": "Raum wird zusammengefügt…",
+    "filling": "Decke und Boden werden mit GPT Image 2 gefüllt…",
+    "openPreview": "Rundgang-Vorschau öffnen",
+    "previewLabel": "Vorschau auf dem Gerät",
+    "demoLink": "Demo-Raum ausprobieren"
   },
   "Contact": {
     "metaTitle": "Kontakt — Sodar",
