@@ -4,14 +4,37 @@
     {
       "name": "site",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "site", "run", "dev"],
+      "runtimeArgs": [
+        "--prefix",
+        "site",
+        "run",
+        "dev"
+      ],
       "port": 3000
     },
     {
       "name": "psv-tour",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8080", "-d", "artifacts/tours/psv-viewer-check"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8080",
+        "-d",
+        "artifacts/tours/psv-viewer-check"
+      ],
       "port": 8080
+    },
+    {
+      "name": "deck",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4173",
+        "-d",
+        "deck"
+      ],
+      "port": 4173
     }
   ]
 }

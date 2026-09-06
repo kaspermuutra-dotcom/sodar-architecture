@@ -1,5 +1,8 @@
 # Sodar site — media plan (Higgsfield)
 
+**Status 2026-09-06:** `intro.mp4` (72 s, 1280×720) is now rendered from the pitch-deck
+film with `deck/export/render.mjs`; re-run it after any change to the deck's film.
+
 **Status 2026-09-05:** Higgsfield is now connected as an MCP connector (no CLI
 login needed). Generated so far, all from `public/sodar-apartment-hero.png` as
 the start frame with Kling 3.0 (5 s, std), then made palindromic 10 s loops at

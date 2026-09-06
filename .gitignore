@@ -22,3 +22,6 @@ third_party/weights/
 
 # generated viewer spike bundles (regenerate: scripts/psv_tour_spike.py)
 artifacts/tours/
+
+# pitch deck export tooling deps
+deck/export/node_modules/
