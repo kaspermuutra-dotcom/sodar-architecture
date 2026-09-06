@@ -59,16 +59,20 @@
   const ramp = (t, at, dur = 0.4) => clamp01((t - at) / dur); // 0 before at, 1 after at+dur
   const hold = (t, from, to, fade = 0.4) => Math.min(ramp(t, from, fade), 1 - ramp(t, to, fade)); // in then out
 
-  /* ---------- film ---------- */
+  /* ---------- film (v3: every frame is a function of t) ---------- */
+  const WEBCUT = params.get("cut") === "web";
+  if (WEBCUT) document.body.classList.add("webcut");
   const film = (() => {
     const root = document.getElementById("film");
-    const scenes = [...root.querySelectorAll(".scene")].map((el) => ({ el, dur: parseFloat(el.dataset.dur), video: el.querySelector(":scope > video, :scope > .zoomer > video") }));
+    const all = [...root.querySelectorAll(".scene")];
+    const scenes = all.filter((el) => !(WEBCUT && el.classList.contains("deckonly"))).map((el) => ({ el, dur: parseFloat(el.dataset.dur), video: el.querySelector(":scope > video, :scope > .zoomer > video"), kb: el.classList.contains("kb") }));
+    scenes.forEach((s) => { s.off = s.video ? parseFloat(s.video.dataset.offset || "0") : 0; });
+    all.forEach((el) => { if (WEBCUT && el.classList.contains("deckonly")) { el.style.display = "none"; } });
     let acc = 0;
     scenes.forEach((s) => { s.start = acc; acc += s.dur; s.end = acc; });
     const total = acc;
-    const X = 0.7; // crossfade length at each cut
+    const X = 0.55; // crossfade length at each cut
     const fill = document.getElementById("fill"), track = document.getElementById("track"), timeEl = document.getElementById("time"), nameEl = document.getElementById("sceneName"), pp = document.getElementById("pp");
-    const names = ["Introduction", "Capture", "Capture", "AI assistant", "Room by room", "Stitch", "Preview", "Free preview", "Publish", "Back at the desk", "kv.ee", "Pay once", "Sodar for CRMs", "sodar.io"];
     const dots = scenes.map((s) => { const d = document.createElement("span"); d.className = "ch"; d.style.left = `${(s.start / total) * 100}%`; track.appendChild(d); return d; });
     track.addEventListener("click", (e) => { const r = track.getBoundingClientRect(); seek(((e.clientX - r.left) / r.width) * total); });
     pp.addEventListener("click", (e) => { e.stopPropagation(); toggle(); });
@@ -76,10 +80,34 @@
     const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
     const $ = (id) => document.getElementById(id);
 
+    /* ---- kinetic typography: split .words into word spans ---- */
+    root.querySelectorAll(".words").forEach((el) => { el.innerHTML = el.textContent.trim().split(/\s+/).map((w) => `<i>${w}</i>`).join(" "); });
+    function wordsState(el, lt, dur, at = 0.2, stagger = 0.07, outAt = null) {
+      const ws = el.querySelectorAll("i");
+      ws.forEach((w, k) => {
+        const p = easeOut(ramp(lt, at + k * stagger, 0.42));
+        const q = outAt == null ? 0 : ramp(lt, outAt, 0.35);
+        w.style.opacity = p * (1 - q);
+        w.style.transform = `translateY(${(1 - p) * 22 - q * 10}px)`;
+        w.style.filter = `blur(${(1 - p) * 8}px)`;
+      });
+    }
+    function capState(s, lt) {
+      const cap = s.el.querySelector(":scope > .cap .words"); if (!cap) return;
+      wordsState(cap, lt, s.dur, 0.35, 0.06, s.dur - 0.45);
+    }
+    function hudState(s, lt) {
+      s.el.querySelectorAll(":scope > .hud").forEach((h) => { const p = easeOut(ramp(lt, 0.15, 0.5)); h.style.opacity = p; h.style.transform = `translateX(${(1 - p) * -28}px)`; });
+      s.el.querySelectorAll("[data-count]").forEach((c) => { const [from, per, max] = c.dataset.count.split(":").map(Number); c.textContent = String(Math.min(max, from + Math.floor(Math.max(0, lt - 0.3) * per))); });
+    }
+
     /* ---- element handles ---- */
     const E = {};
-    ["hud1", "hud1b", "hud2", "assist", "hud4l", "hud4", "ret4", "stitch4", "cap4", "zoomer", "portalWrap", "pgResults", "pgListing", "pgEdit", "kvRowTitle", "kvEditBtn", "kvField", "typed", "caret", "kvVerify", "kvSave", "kvToast", "kbd", "cursor", "ring", "kvGallery", "kvVideo", "kvBadge", "kvHot", "kvCount", "kvAll", "kvAi", "tabPics", "tabTour", "kvStat", "kvOpens", "cap7", "wsNew", "wsOpens"].forEach((id) => (E[id] = $(id)));
+    ["assist", "hud4l", "hud4", "cap4", "tiles", "zoomer", "portalWrap", "pgResults", "pgListing", "pgEdit", "kvRowTitle", "kvEditBtn", "kvField", "typed", "caret", "kvVerify", "kvSave", "kvToast", "kbd", "cursor", "ring", "kvVideo", "kvBadge", "kvHot", "kvCount", "kvAll", "kvAi", "tabPics", "tabTour", "kvStat", "kvOpens", "cap7", "wsNew", "wsOpens"].forEach((id) => (E[id] = $(id)));
     const chips = [...E.assist.querySelectorAll(".chip")];
+    // stitch tiles
+    const tiles = []; for (let k = 1; k <= 12; k++) { const im = document.createElement("img"); im.src = `media/frames/f-${String(k).padStart(3, "0")}.jpg`; E.tiles.appendChild(im); tiles.push(im); }
+    const tileLabel = document.createElement("div"); tileLabel.className = "label"; tileLabel.textContent = "STITCH · 12 FRAMES → 1 PANORAMA"; E.tiles.appendChild(tileLabel);
 
     /* ---- on-screen keyboard ---- */
     const rows = ["1234567890-", "qwertyuiop", "asdfghjkl:", "zxcvbnm./"];
@@ -92,20 +120,19 @@
 
     /* ---- kv.ee choreography (scene-local seconds) ---- */
     const TEXT = "https://sodar.io/w/kesklinn-84";
-    const T_TYPE = 8.0;
-    const delays = [...TEXT].map((ch, k) => (ch === "." || ch === "/" || ch === "-" || ch === ":" ? 0.3 : 0.11 + ((k * 7) % 5) * 0.03));
+    const T_TYPE = 4.45;
+    const delays = [...TEXT].map((ch, k) => (ch === "." || ch === "/" || ch === "-" || ch === ":" ? 0.13 : 0.055 + ((k * 7) % 5) * 0.012));
     const typeTimes = []; { let a = T_TYPE; delays.forEach((d) => { a += d; typeTimes.push(a); }); }
     const T_TYPED = typeTimes[typeTimes.length - 1];
-    const K = { clickRow: 2.6, pgListing: 3.0, clickEdit: 5.4, pgEdit: 5.85, clickField: 7.4, clickSave: T_TYPED + 2.2, pgLive: T_TYPED + 2.75 };
-    // cursor path: [t0, t1, target]; target = [elementId, dx, dy] (element centre + offset) or [x, y] in frame px
+    const K = { clickRow: 1.25, pgListing: 1.55, clickEdit: 3.0, pgEdit: 3.3, clickField: 4.15, clickSave: T_TYPED + 1.05, pgLive: T_TYPED + 1.4 };
     const path = [
       [0, 0, [1500, 900]],
-      [1.1, 2.3, ["kvRowTitle", 0, 0]],
-      [3.8, 5.0, ["kvEditBtn", 0, 0]],
-      [6.3, 7.2, ["kvField", -300, 2]],
-      [T_TYPED + 0.9, T_TYPED + 2.0, ["kvSave", 0, 0]],
-      [K.pgLive + 0.9, K.pgLive + 2.6, [760, 585]],
-      [K.pgLive + 3.0, K.pgLive + 4.8, [930, 565]],
+      [0.5, 1.15, ["kvRowTitle", 0, 0]],
+      [2.1, 2.9, ["kvEditBtn", 0, 0]],
+      [3.5, 4.05, ["kvField", -300, 2]],
+      [T_TYPED + 0.35, T_TYPED + 0.95, ["kvSave", 0, 0]],
+      [K.pgLive + 0.7, K.pgLive + 1.6, [760, 585]],
+      [K.pgLive + 1.9, K.pgLive + 3.2, [960, 560]],
     ];
     const clicks = [K.clickRow, K.clickEdit, K.clickField, K.clickSave];
     const frameRect = () => root.querySelector(".frame").getBoundingClientRect();
@@ -144,15 +171,18 @@
         const o = sceneOpacity(k, t);
         s.el.style.opacity = o;
         s.el.style.visibility = o > 0 ? "visible" : "hidden";
+        s.el.style.transform = o < 1 && k > 0 ? `scale(${1.035 - 0.035 * o})` : "";
         if (s.video && o > 0) {
-          const want = t - s.start;
+          const want = t - s.start + s.off;
           if (exportSeek) seeks.push(seekVideo(s.video, want));
           else if (!s.video.loop && Math.abs(s.video.currentTime - want) > 0.3 && want >= 0 && want < (s.video.duration || 5)) { try { s.video.currentTime = Math.max(0, want); } catch (_) {} }
+          if (s.kb) s.video.style.transform = `scale(${1 + 0.06 * clamp01((t - s.start) / s.dur)})`;
         }
       });
-      if (exportSeek && sceneOpacity(10, t) > 0) seeks.push(seekVideo(E.kvVideo, t - scenes[10].start - K.pgLive));
-      if (active !== cur) { cur = active; nameEl.textContent = `${String(active + 1).padStart(2, "0")} · ${names[active] || ""}`; dots.forEach((d, k) => d.classList.toggle("done", k <= active)); }
-      scenes.forEach((s, k) => { if (sceneOpacity(k, t) > 0) sceneState(k, t - s.start); });
+      const portalIdx = scenes.findIndex((s) => s.el.id === "portalScene");
+      if (exportSeek && sceneOpacity(portalIdx, t) > 0) seeks.push(seekVideo(E.kvVideo, t - scenes[portalIdx].start - K.pgLive));
+      if (active !== cur) { cur = active; nameEl.textContent = `${String(active + 1).padStart(2, "0")} / ${scenes.length}`; dots.forEach((d, k) => d.classList.toggle("done", k <= active)); }
+      scenes.forEach((s, k) => { if (sceneOpacity(k, t) > 0) sceneState(s, t - s.start); });
       fill.style.width = `${(t / total) * 100}%`;
       timeEl.textContent = `${fmt(t)} / ${fmt(total)}`;
       return exportSeek ? Promise.all(seeks) : null;
@@ -165,50 +195,70 @@
       return new Promise((res) => { const done = () => { v.removeEventListener("seeked", done); res(); }; v.addEventListener("seeked", done); setTimeout(done, 800); v.currentTime = goal; });
     }
     const ST = (el, o) => { el.style.opacity = o; };
-    function sceneState(k, lt) {
-      switch (k) {
-        case 2: { const f = Math.min(12, 1 + Math.floor(lt * 1.4)); E.hud1.textContent = `${f}/12`; E.hud1b.textContent = `${Math.min(98, 8 + Math.round(lt * 12))}%`; break; }
-        case 3: { [0.4, 1.5, 2.6, 4.0].forEach((at, j) => { const o = ramp(lt, at, 0.4); chips[j].style.opacity = o; chips[j].style.transform = `translateY(${(1 - o) * -8}px)`; }); E.hud2.textContent = `${Math.min(12, 8 + Math.floor(lt))}/12`; break; }
-        case 5: {
-          const st = lt >= 3.2;
-          E.hud4l.textContent = st ? "STITCH" : "CAPTURE"; E.hud4.textContent = st ? "equirectangular · 8192×4096" : `${Math.min(12, 3 + Math.floor(lt * 3))}/12`;
-          ST(E.ret4, 0.8 * (1 - ramp(lt, 3.2, 0.4))); ST(E.stitch4, ramp(lt, 3.2, 0.3)); E.stitch4.firstElementChild.style.width = `${clamp01((lt - 3.2) / 1.8) * 100}%`;
-          E.cap4.textContent = st ? "Stitched into a panorama." : "Twelve frames per room, straight from the browser."; break;
-        }
-        case 9: { const p = easeInOut(clamp01((lt - 2.0) / 1.2)); E.zoomer.style.transform = `scale(${1 + 0.35 * p})`; E.zoomer.style.filter = `blur(${10 * p}px)`; E.zoomer.style.opacity = 1 - clamp01((lt - 2.5) / 0.7); break; }
-        case 10: kvState(lt); break;
-        case 12: { const o = ramp(lt, 1.2, 0.5); E.wsNew.style.opacity = o; E.wsNew.style.transform = `translateY(${(1 - o) * 6}px)`; E.wsOpens.textContent = String(Math.min(128, 1 + Math.floor(Math.max(0, lt - 1.6) * 40))); break; }
+    function sceneState(s, lt) {
+      const el = s.el;
+      capState(s, lt); hudState(s, lt);
+      if (el.classList.contains("card")) {
+        const h = el.querySelector("h2.words"), sub = el.querySelector(".sub.words"), mark = el.querySelector(".cardmark");
+        if (mark) { const p = easeOut(ramp(lt, 0.05, 0.6)); mark.style.opacity = p; mark.style.transform = `scale(${0.6 + 0.4 * p})`; }
+        if (h) wordsState(h, lt, s.dur, 0.25, 0.09, s.dur - 0.4);
+        if (sub) wordsState(sub, lt, s.dur, 0.8, 0.05, s.dur - 0.4);
       }
+      if (el.classList.contains("price")) { const h = el.querySelector("h2.words"), sub = el.querySelector(".sub.words"); if (h) wordsState(h, lt, s.dur, 0.2, 0.1); if (sub) wordsState(sub, lt, s.dur, 0.7, 0.05); }
+      if (el.classList.contains("crm")) { const h = el.querySelector("h2.words"); if (h) wordsState(h, lt, s.dur, 0.2, 0.1); const o = ramp(lt, 1.2, 0.5); E.wsNew.style.opacity = o; E.wsNew.style.transform = `translateY(${(1 - o) * 6}px)`; E.wsOpens.textContent = String(Math.min(128, 1 + Math.floor(Math.max(0, lt - 1.6) * 40))); }
+      if (el.contains(E.assist)) { [0.5, 1.5, 2.5].forEach((at, j) => { const o = easeOut(ramp(lt, at, 0.4)); chips[j].style.opacity = o; chips[j].style.transform = `translateX(${(1 - o) * 24}px)`; }); }
+      if (el.id === "stitchScene") stitchState(lt, s.dur);
+      if (el.id === "desk") { const p = easeInOut(clamp01((lt - 1.3) / 1.0)); E.zoomer.style.transform = `scale(${1 + 0.35 * p})`; E.zoomer.style.filter = `blur(${10 * p}px)`; E.zoomer.style.opacity = 1 - clamp01((lt - 1.7) / 0.6); }
+      if (el.id === "portalScene") kvState(lt);
+      const badge = el.querySelector(":scope > .badge360"); if (badge) { const p = easeOut(ramp(lt, 0.15, 0.5)); badge.style.opacity = p; badge.style.transform = `translateX(${(1 - p) * -28}px)`; }
+    }
+    function stitchState(lt, dur) {
+      const T_ST = 2.7, n = Math.min(12, Math.floor(Math.max(0, lt - 0.1) / 0.2) + (lt > 0.1 ? 1 : 0));
+      E.hud4l.textContent = lt >= T_ST ? "STITCH" : "CAPTURE"; E.hud4.textContent = lt >= T_ST ? "8192×4096" : `${n}/12`;
+      const merge = easeInOut(ramp(lt, T_ST, 0.7)); const fly = easeInOut(ramp(lt, T_ST + 0.9, 0.7));
+      tiles.forEach((im, k) => {
+        const at = 0.1 + k * 0.2; const p = easeOut(ramp(lt, at, 0.35));
+        const x0 = 64 + k * 150, y0 = 900; // spread along the bottom
+        const x1 = 300 + k * 110, y1 = 470; // merged strip
+        const x = x0 + (x1 - x0) * merge, y = y0 + (y1 - y0) * merge;
+        const w = 140 + (110 - 140) * merge;
+        im.style.left = `${x}px`; im.style.top = `${y + (1 - p) * 24}px`; im.style.width = `${w}px`;
+        im.style.opacity = p * (1 - fly);
+        im.style.borderRadius = `${3 * (1 - merge)}px`; im.style.borderWidth = `${2 * (1 - merge) + 0.5}px`;
+        im.style.transform = `scale(${(0.86 + 0.14 * p) * (1 + 0.5 * fly)}) translateY(${-fly * 60}px)`;
+      });
+      tileLabel.style.opacity = hold(lt, T_ST + 0.2, T_ST + 1.4, 0.3);
+      tileLabel.style.transform = `translateX(-50%) translateY(${(1 - ramp(lt, T_ST + 0.2, 0.3)) * 10}px)`;
     }
     function kvState(lt) {
-      const pin = easeOut(clamp01(lt / 1.2));
+      const pin = easeOut(clamp01(lt / 0.9));
       E.portalWrap.style.opacity = pin; E.portalWrap.style.transform = `scale(${1.04 - 0.04 * pin})`;
       const pages = [[E.pgResults, 0, K.pgListing], [E.pgListing, K.pgListing, K.pgEdit], [E.pgEdit, K.pgEdit, K.pgLive], [E.pgListing, K.pgLive, 99]];
-      let listingO = 0;
-      pages.forEach(([el, a, b]) => { const o = hold(lt, a - 0.35, b, 0.35); if (el === E.pgListing) listingO = Math.max(listingO, o); else { ST(el, o); el.style.visibility = o > 0 ? "visible" : "hidden"; } });
-      ST(E.pgListing, listingO); E.pgListing.style.visibility = listingO > 0 ? "visible" : "hidden";
-      const live = ramp(lt, K.pgLive + 0.5, 1.2);
+      let listingO = 0, listingIn = 0;
+      pages.forEach(([el, a, b]) => { const o = hold(lt, a - 0.3, b, 0.3); const inp = ramp(lt, a - 0.3, 0.3); if (el === E.pgListing) { if (o > listingO) { listingO = o; listingIn = inp; } } else { ST(el, o); el.style.visibility = o > 0 ? "visible" : "hidden"; el.style.transform = `translateY(${(1 - inp) * 14}px)`; } });
+      ST(E.pgListing, listingO); E.pgListing.style.visibility = listingO > 0 ? "visible" : "hidden"; E.pgListing.style.transform = `translateY(${(1 - listingIn) * 14}px)`;
+      const live = ramp(lt, K.pgLive + 0.4, 0.9);
       ST(E.kvVideo, live); ST(E.kvBadge, live); ST(E.kvHot, live); ST(E.kvAi, live); ST(E.kvAll, 1 - live);
       E.kvCount.textContent = live > 0.5 ? "Virtuaaltuur · 3 tuba · lohista ringi vaatamiseks" : "1 / 24";
       E.tabTour.classList.toggle("cur", live > 0.5); E.tabPics.classList.toggle("cur", live <= 0.5);
-      ST(E.kvStat, ramp(lt, K.pgLive + 1.0, 0.5)); E.kvOpens.textContent = String(Math.min(128, Math.floor(Math.max(0, lt - K.pgLive - 1.2) * 28)));
-      if (lt >= K.pgLive + 0.5 && E.kvVideo.paused && !EXPORT && playing) E.kvVideo.play().catch(() => {});
+      ST(E.kvStat, ramp(lt, K.pgLive + 0.8, 0.4)); E.kvOpens.textContent = String(Math.min(128, Math.floor(Math.max(0, lt - K.pgLive - 0.9) * 40)));
+      if (lt >= K.pgLive + 0.4 && E.kvVideo.paused && !EXPORT && playing) E.kvVideo.play().catch(() => {});
       E.kvField.classList.toggle("focus", lt >= K.clickField);
       let n = 0; while (n < TEXT.length && lt >= typeTimes[n]) n++;
       E.typed.textContent = TEXT.slice(0, n);
       E.caret.style.opacity = lt >= K.clickField && lt < K.clickSave ? (Math.floor((lt - K.clickField) * 2) % 2 === 0 || (n > 0 && lt - typeTimes[n - 1] < 0.35) ? 1 : 0) : 0;
       Object.values(keyEls).forEach((k) => k.classList.remove("on"));
-      if (n > 0 && lt - typeTimes[n - 1] < 0.14 && keyEls[TEXT[n - 1]]) keyEls[TEXT[n - 1]].classList.add("on");
-      if (lt >= K.clickSave && lt < K.clickSave + 0.25) keyEls["\n"].classList.add("on");
-      ST(E.kbd, hold(lt, K.clickField + 0.2, K.clickSave + 0.3, 0.4));
-      const vo = ramp(lt, T_TYPED + 0.4, 0.4); ST(E.kvVerify, vo); E.kvVerify.style.transform = `translateY(${(1 - vo) * -4}px)`;
+      if (n > 0 && lt - typeTimes[n - 1] < 0.09 && keyEls[TEXT[n - 1]]) keyEls[TEXT[n - 1]].classList.add("on");
+      if (lt >= K.clickSave && lt < K.clickSave + 0.2) keyEls["\n"].classList.add("on");
+      ST(E.kbd, hold(lt, K.clickField + 0.15, K.clickSave + 0.25, 0.3));
+      const vo = ramp(lt, T_TYPED + 0.15, 0.3); ST(E.kvVerify, vo); E.kvVerify.style.transform = `translateY(${(1 - vo) * -4}px)`;
       E.kvSave.style.opacity = lt >= K.clickSave && lt < K.pgLive ? 0.8 : 1;
       E.kvEditBtn.style.opacity = lt >= K.clickEdit && lt < K.pgEdit ? 0.8 : 1;
-      const to = hold(lt, K.pgLive + 0.2, K.pgLive + 3.6, 0.5); ST(E.kvToast, to); E.kvToast.style.transform = `translateY(${(1 - to) * -8}px)`;
-      ST(E.cap7, ramp(lt, K.pgLive + 2.6, 0.8));
+      const to = hold(lt, K.pgLive + 0.15, K.pgLive + 2.6, 0.4); ST(E.kvToast, to); E.kvToast.style.transform = `translateY(${(1 - to) * -8}px)`;
+      wordsState(E.cap7.querySelector(".words"), lt, 12, K.pgLive + 1.6, 0.06, 11.55);
       const [cx, cy] = cursorAt(lt); E.cursor.style.left = `${cx}px`; E.cursor.style.top = `${cy}px`;
       let ringO = 0, ringS = 0.4;
-      for (const tc of clicks) { const p = (lt - tc) / 0.5; if (p >= 0 && p < 1) { ringO = 0.9 * (1 - p); ringS = 0.4 + p; } }
+      for (const tc of clicks) { const p = (lt - tc) / 0.45; if (p >= 0 && p < 1) { ringO = 0.9 * (1 - p); ringS = 0.4 + p; } }
       E.ring.style.opacity = ringO; E.ring.style.transform = `scale(${ringS})`;
     }
 
@@ -216,7 +266,8 @@
     let t = 0, playing = false, lastNow = 0, raf = 0, ticker = 0;
     function syncVideos() {
       scenes.forEach((s, k) => { if (!s.video) return; const o = sceneOpacity(k, t); if (o > 0 && playing) { if (s.video.paused) s.video.play().catch(() => {}); } else if (!s.video.paused) s.video.pause(); });
-      if (!(sceneOpacity(10, t) > 0)) E.kvVideo.pause();
+      const pi = scenes.findIndex((s) => s.el.id === "portalScene");
+      if (!(sceneOpacity(pi, t) > 0)) E.kvVideo.pause();
     }
     function frame(now) {
       if (!playing) return;
@@ -234,8 +285,8 @@
     }
     function pause() { playing = false; pp.textContent = "Play"; root.classList.add("paused"); cancelAnimationFrame(raf); clearInterval(ticker); root.querySelectorAll("video").forEach((v) => v.pause()); }
     function toggle() { playing ? pause() : play(); }
-    function seek(nt) { t = Math.max(0, Math.min(total - 0.01, nt)); scenes.forEach((s) => { if (s.video && !s.video.loop) { try { s.video.currentTime = Math.max(0, Math.min(t - s.start, (s.video.duration || 5) - 0.05)); } catch (_) {} } }); renderAt(t); if (!playing) play(); }
-    function start() { t = 0; cur = -1; scenes.forEach((s) => { if (s.video) { try { s.video.currentTime = 0; } catch (_) {} } }); play(); }
+    function seek(nt) { t = Math.max(0, Math.min(total - 0.01, nt)); scenes.forEach((s) => { if (s.video && !s.video.loop) { try { s.video.currentTime = Math.max(0, Math.min(t - s.start + s.off, (s.video.duration || 5) - 0.05)); } catch (_) {} } }); renderAt(t); if (!playing) play(); }
+    function start() { t = 0; cur = -1; scenes.forEach((s) => { if (s.video) { try { s.video.currentTime = s.off; } catch (_) {} } }); play(); }
     function stop() { pause(); }
     function restart() { start(); }
     async function prepareExport() {

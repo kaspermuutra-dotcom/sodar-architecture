@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 
 /**
@@ -12,7 +12,12 @@ export function IntroVideo() {
   const t = useTranslations("Intro");
   const ref = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(true);
-  const [length, setLength] = useState("1:12");
+  const [length, setLength] = useState("0:41");
+  const fmt = (d: number) => `${Math.floor(d / 60)}:${String(Math.round(d) % 60).padStart(2, "0")}`;
+  useEffect(() => {
+    const v = ref.current;
+    if (v && Number.isFinite(v.duration) && v.duration > 0) setLength(fmt(v.duration));
+  }, []);
 
   function toggle() {
     const v = ref.current;
@@ -49,8 +54,8 @@ export function IntroVideo() {
           playsInline
           preload="metadata"
           onLoadedMetadata={(e) => {
-            const d = Math.round(e.currentTarget.duration);
-            if (Number.isFinite(d) && d > 0) setLength(`${Math.floor(d / 60)}:${String(d % 60).padStart(2, "0")}`);
+            const d = e.currentTarget.duration;
+            if (Number.isFinite(d) && d > 0) setLength(fmt(d));
           }}
           className="aspect-video w-full object-cover"
         />

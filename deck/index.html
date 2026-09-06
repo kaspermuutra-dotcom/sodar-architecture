@@ -68,69 +68,61 @@
 <section class="slide film" data-name="Solution film" id="film">
   <div class="frame" id="frame">
 
-    <div class="scene card" data-dur="2.6">
-      <div><div class="kicker">The solution</div><h2 class="display">Sodar in one minute.</h2><div class="sub">Walk once. Preview free. Pay once. Publish.</div></div>
+    <div class="scene card" data-dur="2.2">
+      <div><svg class="cardmark" fill="currentColor"><use href="#sodar-mark"/></svg><h2 class="display words">AI walkthroughs that close more deals.</h2><div class="sub words">Open sodar.io. Walk once. Publish.</div></div>
     </div>
 
-    <div class="scene card part" data-dur="1.8">
-      <div><div class="kicker">01 · Capture</div><h2 class="display">Walk the property once.</h2></div>
-    </div>
-
-    <div class="scene" data-dur="5">
-      <video src="media/scan-start.mp4" muted playsinline preload="auto"></video>
-      <div class="hud"><span class="dot"></span><span>CAPTURE</span><span class="dim">· living room ·</span><span id="hud1">1/12</span><span class="dim">·</span><span id="hud1b">8%</span></div>
+    <div class="scene kb" data-dur="3.0">
+      <video data-offset="0.6" src="media/scan-start-fast.mp4" muted playsinline preload="auto"></video>
+      <div class="hud"><span class="dot"></span><span>CAPTURE</span><span class="dim">· living room ·</span><span data-count="1:1.6:12"></span><span class="dim">/12</span></div>
       <div class="reticle"><span class="tick"></span></div>
-      <div class="cap"><span>Open sodar.io on your phone.</span></div>
+      <div class="cap"><span class="words">Open sodar.io on your phone.</span></div>
     </div>
 
-    <div class="scene" data-dur="5">
-      <video src="media/scan-turn.mp4" muted playsinline preload="auto"></video>
-      <div class="hud"><span class="dot"></span><span>ASSIST</span><span class="dim">· living room ·</span><span id="hud2">8/12</span></div>
+    <div class="scene kb" data-dur="3.4">
+      <video data-offset="1.0" src="media/walk-a.mp4" muted playsinline preload="auto"></video>
+      <div class="hud"><span class="dot"></span><span>CAPTURE</span><span class="dim">· coverage ·</span><span data-count="12:22:98"></span><span class="dim">%</span></div>
+      <div class="cap"><span class="words">Walk the property once.</span></div>
+    </div>
+
+    <div class="scene kb" data-dur="3.4">
+      <video data-offset="0.4" src="media/scan-turn-fast.mp4" muted playsinline preload="auto"></video>
+      <div class="hud"><span class="dot"></span><span>ASSIST</span><span class="dim">· living room ·</span><span data-count="8:1.5:12"></span><span class="dim">/12</span></div>
       <div class="assist" id="assist">
         <div class="chip">Tilt down 4°</div>
-        <div class="chip">Hold still</div>
         <div class="chip">Good light. Keep turning</div>
         <div class="chip ok">Room complete</div>
       </div>
-      <div class="cap"><span>An AI assistant coaches every panorama, live.</span></div>
+      <div class="cap"><span class="words">An AI assistant coaches every shot, live.</span></div>
     </div>
 
-    <div class="scene" data-dur="5">
-      <video src="media/scan-nextroom.mp4" muted playsinline preload="auto"></video>
+    <div class="scene kb" data-dur="3.8">
+      <video data-offset="0.8" src="media/walk-b.mp4" muted playsinline preload="auto"></video>
       <div class="hud"><span class="dot"></span><span>CAPTURE</span><span class="dim">· room 2 of 3 ·</span><span>kitchen</span></div>
-      <div class="cap"><span>Room by room. No rig, no photographer.</span></div>
+      <div class="cap"><span class="words">Room by room. No rig, no photographer.</span></div>
     </div>
 
-    <div class="scene" data-dur="5.2">
-      <video src="media/scan-kitchen-pov.mp4" muted playsinline preload="auto"></video>
-      <div class="hud"><span class="dot"></span><span id="hud4l">CAPTURE</span><span class="dim">· kitchen ·</span><span id="hud4">3/12</span></div>
-      <div class="reticle" id="ret4"><span class="tick"></span></div>
-      <div class="stitch-progress" id="stitch4"><i></i></div>
-      <div class="cap"><span id="cap4">Twelve frames per room, straight from the browser.</span></div>
+    <div class="scene" data-dur="4.8" id="stitchScene">
+      <video data-offset="0.3" src="media/scan-kitchen-fast.mp4" muted playsinline preload="auto"></video>
+      <div class="hud"><span class="dot"></span><span id="hud4l">CAPTURE</span><span class="dim">· kitchen ·</span><span id="hud4">1/12</span></div>
+      <div class="tiles" id="tiles"></div>
+      <div class="cap"><span class="words" id="cap4">Twelve frames become one panorama.</span></div>
     </div>
 
-    <div class="scene card part" data-dur="1.8">
-      <div><div class="kicker">02 · Preview</div><h2 class="display">Two rooms, finished, free.</h2></div>
-    </div>
-
-    <div class="scene" data-dur="4.2">
+    <div class="scene" data-dur="3.4">
       <video src="media/walkthrough-orbit.mp4" muted playsinline preload="auto" loop></video>
-      <div class="badge360">Sodar viewer · 360°</div>
+      <div class="badge360 hud">Sodar viewer · 360°</div>
       <div class="hotspot" style="left:58%;top:62%"></div>
-      <div class="cap"><span>Judge the finished quality before paying anything.</span></div>
+      <div class="cap"><span class="words">Two rooms free, before you pay anything.</span></div>
     </div>
 
-    <div class="scene card part" data-dur="1.8">
-      <div><div class="kicker">03 · Publish</div><h2 class="display">Into the listing you already have.</h2></div>
-    </div>
-
-    <div class="scene desk" data-dur="3.2" id="desk">
-      <div class="zoomer" id="zoomer"><video src="media/desk-laptop.mp4" muted playsinline preload="auto"></video></div>
-      <div class="cap"><span>Back at the desk, open kv.ee.</span></div>
+    <div class="scene desk" data-dur="2.4" id="desk">
+      <div class="zoomer" id="zoomer"><video src="media/desk-fast.mp4" muted playsinline preload="auto"></video></div>
+      <div class="cap"><span class="words">Back at the desk, open kv.ee.</span></div>
     </div>
 
     <!-- kv.ee — Estonian replica of the real portal flow -->
-    <div class="scene" data-dur="22" id="portalScene">
+    <div class="scene" data-dur="12" id="portalScene">
       <div class="portal-wrap" id="portalWrap">
         <div class="kv">
           <header class="kv-top">
@@ -147,7 +139,6 @@
             <div class="kv-right"><span class="kv-btn">Minu KV</span><span class="kv-btn fill">Lisa kuulutus</span><span class="kv-lang">EST</span></div>
           </header>
 
-          <!-- page 1: results -->
           <div class="kv-page" id="pgResults">
             <div class="kv-filter">
               <div class="c1"><div class="sel">Müük</div><label><i></i>Otse omanikult</label><label><i></i>Uusarendused</label></div>
@@ -174,7 +165,6 @@
             </div>
           </div>
 
-          <!-- page 2: the agent's own listing -->
           <div class="kv-page" id="pgListing">
             <div class="kv-bc">Kuulutused › Korterite müük › Tallinn › Kesklinn</div>
             <h1 class="kv-h1">Müüa korter, 3 tuba <small>– Kesklinn 84-12, Kesklinn, Tallinn, Harjumaa</small></h1>
@@ -208,7 +198,6 @@
             </div>
           </div>
 
-          <!-- page 3: edit form -->
           <div class="kv-page" id="pgEdit">
             <div class="kv-bc">Minu KV › Minu kuulutused › Kesklinn 84-12 › Muuda</div>
             <h1 class="kv-h1">Kuulutuse muutmine</h1>
@@ -233,11 +222,11 @@
           <svg width="30" height="30" viewBox="0 0 24 24"><path d="M4 2 L4 20 L9 15 L12.5 22 L15.5 20.5 L12 13.5 L19 13.5 Z" fill="#fff" stroke="#111" stroke-width="1.6" stroke-linejoin="round"/></svg>
         </div>
       </div>
-      <div class="cap" id="cap7"><span>Published into the listing you already have.</span></div>
+      <div class="cap" id="cap7"><span class="words">Published into the listing you already have.</span></div>
     </div>
 
-    <div class="scene price" data-dur="5.4">
-      <div><div class="kicker">04 · Pay once</div><h2 class="display">Scan once.<br />Pay once.</h2><div class="sub">One price per property. No subscription.</div></div>
+    <div class="scene price deckonly" data-dur="5.0">
+      <div><div class="kicker">Pricing</div><h2 class="display words">Scan once. Pay once.</h2><div class="sub words">One price per property. No subscription.</div></div>
       <div class="quote">
         <div class="k">Quote · one-time</div>
         <div class="addr">Kesklinn 84-12, Tallinn</div>
@@ -249,8 +238,8 @@
       </div>
     </div>
 
-    <div class="scene crm" data-dur="6.4">
-      <div class="top"><div><div class="kicker">Also for CRMs</div><h2 class="display">Every listing,<br />measured.</h2></div><div class="sub">Publish from the CRM. Partners keep 15%.</div></div>
+    <div class="scene crm deckonly" data-dur="5.4">
+      <div class="top"><div><div class="kicker">Also for CRMs</div><h2 class="display words">Every listing, measured.</h2></div><div class="sub">Publish from the CRM. Partners keep 15%.</div></div>
       <div class="ws">
         <div class="bar"><span>Workspace · Anna Tamm</span><span>Live</span></div>
         <table>
@@ -263,8 +252,8 @@
       </div>
     </div>
 
-    <div class="scene card" data-dur="3.4">
-      <div><svg style="width:72px;height:72px" fill="currentColor"><use href="#sodar-mark"/></svg><h2 class="display" style="margin-top:28px">sodar.io</h2><div class="sub">Scan your first property free.</div></div>
+    <div class="scene card" data-dur="2.8">
+      <div><svg class="cardmark" fill="currentColor"><use href="#sodar-mark"/></svg><h2 class="display words">sodar.io</h2><div class="sub words">Scan your first property free.</div></div>
     </div>
   </div>
 

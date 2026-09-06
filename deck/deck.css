@@ -513,3 +513,15 @@ body.noanim *, body.noanim *::before, body.noanim *::after { transition: none !i
 .compete .who .row span { display: block; color: var(--muted); font-size: 21px; margin-top: 4px; line-height: 1.4; }
 .compete .who .row.us b { color: var(--text); }
 .film-ui .pp { width: auto; padding: 0 18px; border-radius: 999px; font-family: var(--mono); font-size: 14px; letter-spacing: .12em; text-transform: uppercase; }
+
+/* ---------- film v3: kinetic typography, tiles, cuts ---------- */
+.words i { display: inline-block; font-style: inherit; will-change: transform, opacity, filter; }
+.scene.card .cardmark { width: 64px; height: 64px; margin-bottom: 30px; }
+.scene.card h2 { max-width: 1400px; margin: 0 auto; }
+.scene .hud { will-change: transform, opacity; }
+.scene.kb video { will-change: transform; }
+.tiles { position: absolute; inset: 0; pointer-events: none; }
+.tiles img { position: absolute; width: 140px; height: 88px; object-fit: cover; border: 2px solid rgba(244,242,238,.9); border-radius: 3px; box-shadow: 0 14px 40px rgba(0,0,0,.45); opacity: 0; transform-origin: center; }
+.tiles .label { position: absolute; left: 50%; top: 300px; transform: translateX(-50%); font-family: var(--mono); font-size: 16px; letter-spacing: .2em; color: var(--text); background: rgba(5,5,5,.6); padding: 12px 18px; border-radius: 999px; opacity: 0; }
+body.webcut .scene.deckonly { display: none; }
+.kv-page { will-change: transform, opacity; }

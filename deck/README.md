@@ -20,10 +20,11 @@ as `#<n>`.
 
 1. Cover — logo, headline, walkthrough loop behind
 2. Problem
-3. **Solution film** (≈72 s, `#film`): part cards → website scanning clip → three Higgsfield
-   shots (Kling 3.0) → stitch → free preview → desk → an Estonian replica of the kv.ee flow
-   (results list → the agent's listing → edit form, virtual-tour link typed → saved → tour
-   live in the gallery) → "Scan once. Pay once." → CRM workspace → end card
+3. **Solution film** (`#film`, ≈52 s in the deck, ≈42 s web cut): kinetic title → sped-up
+   scanning clips and two Higgsfield walking shots (Kling 3.0) → twelve kitchen tiles assemble
+   into a panorama → free preview → desk → an Estonian replica of the kv.ee flow (results list
+   → the agent's listing → edit form, virtual-tour link typed → saved → tour live) → [deck
+   only: "Scan once. Pay once." and the CRM workspace] → end card
 4. How it works
 5. Traction — Re/Max, Pindi, Ober-Haus, 1Partner pilot talks
 6. Roadmap — pilots → Slush (18–19 Nov 2026) → partners → scale
@@ -42,10 +43,11 @@ frame by frame with headless Chrome:
 
 ```bash
 python3 -m http.server 4173 -d deck          # in one terminal
-node deck/export/render.mjs                  # writes site/public/media/intro.mp4 (1280×720, 30 fps)
+node deck/export/render.mjs --url "http://localhost:4173/?export=1&motion=off&cut=web#3"
+                                             # writes site/public/media/intro.mp4 (1280×720, 30 fps)
 ```
 
-`--fps`, `--width`, `--out`, `--chrome` override the defaults; `deck/export` has its own
+`?cut=web` drops the `deckonly` scenes (pricing, CRM). `--fps`, `--width`, `--out`, `--chrome` override the defaults; `deck/export` has its own
 `package.json` with `puppeteer-core`. The poster is a frame from the same file:
 `ffmpeg -ss 8 -i site/public/media/intro.mp4 -frames:v 1 site/public/media/intro-poster.jpg`.
 
