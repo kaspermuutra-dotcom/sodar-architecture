@@ -12,6 +12,7 @@ import { buildZip, type ZipEntry } from "@/lib/scanner/zip";
 import { stitchFrames } from "@/lib/scanner/stitch";
 import { savePanorama, sessionPanoramas } from "@/lib/scanner/panoramas";
 import { aiFillEnabled, aiFillPanorama } from "@/lib/scanner/ai-fill";
+import { reviewCapture, type AstraCaptureReview } from "@/lib/scanner/astra";
 
 /**
  * Guided panorama capture. Geometry is the Photo Sphere Android port in
@@ -75,11 +76,32 @@ export function Scanner() {
   const [stitching, setStitching] = useState<string | null>(null);
   const [previewOpen, setPreviewOpen] = useState(false);
   const [demo, setDemo] = useState(false);
+  const [astraReview, setAstraReview] = useState<AstraCaptureReview>();
+  const [astraBusy, setAstraBusy] = useState(false);
+  const [astraError, setAstraError] = useState<string>();
 
   const activeRoom = session?.rooms.find((room) => room.id === session.activeRoomId);
   const target = plan?.targets[activeRoom?.captured ?? 0];
   const finishedRooms = session?.rooms.filter((r) => r.status !== "capturing").length ?? 0;
   const isMobile = useMemo(() => (typeof navigator !== "undefined" ? /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) : false), []);
+
+  const runAstraReview = useCallback(async () => {
+    if (!activeRoom || !thumbs.length) return;
+    setAstraBusy(true);
+    setAstraError(undefined);
+    try {
+      setAstraReview(await reviewCapture({
+        roomName: activeRoom.name,
+        captured: activeRoom.captured,
+        targetCount: activeRoom.targetCount || plan?.targets.length || 0,
+        images: thumbs.slice(-4),
+      }));
+    } catch (reviewError) {
+      setAstraError(reviewError instanceof Error ? reviewError.message : "Astra review failed.");
+    } finally {
+      setAstraBusy(false);
+    }
+  }, [activeRoom, plan?.targets.length, thumbs]);
 
   const updateRoom = useCallback((id: string, change: (room: Room) => Room) => setSession((old) => (old ? { ...old, rooms: old.rooms.map((r) => (r.id === id ? change(r) : r)) } : old)), []);
 
@@ -487,6 +509,11 @@ export function Scanner() {
             ) : phase === "roomDone" ? (
               <>
                 <p className="mt-1 text-sm text-text">{t("roomDone")}</p>
+                {astraReview ? <div className="mt-3 rounded-xl border border-white/20 bg-black/30 p-3"><p className="font-mono text-[10px] uppercase tracking-[.14em] text-text-muted">Astra · {astraReview.verdict}</p><p className="mt-1 text-sm text-text">{astraReview.summary}</p><p className="mt-2 text-xs text-text-muted">{astraReview.guidance}</p></div> : null}
+                {astraError ? <p className="mt-2 text-xs text-red-200">{astraError}</p> : null}
+                <button type="button" onClick={runAstraReview} disabled={astraBusy || !thumbs.length} className="button-secondary mt-3 w-full justify-center">
+                  {astraBusy ? "Astra is reviewing…" : astraReview ? "Review again with Astra" : "Review capture with Astra"}
+                </button>
                 <button type="button" onClick={finishRoom} className="button-primary mt-3 w-full justify-center">
                   {finishedRooms + 1 >= ROOMS_IN_PREVIEW ? t("finish") : t("nextRoom")} <span aria-hidden>↗</span>
                 </button>

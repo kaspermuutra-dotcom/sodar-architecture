@@ -35,6 +35,7 @@ Sphere target plan) is the capture layer.
 | Project | License | Role | Verdict |
 |---|---|---|---|
 | **GPT Image 2** (OpenAI, also via Higgsfield `gpt_image_2`) | API | Image edit with prompt: fill the missing top/bottom bands of a ring capture, remove seam ghosting, keep geometry. | **Integrated** as `ai-fill`. Two backends: OpenAI Images edit (`OPENAI_API_KEY`) or the Higgsfield CLI (`higgsfield generate create gpt_image_2 --image …`). Verified once through the Higgsfield connector on the fixture panorama. |
+| **GPT-6 Astra** (OpenAI) | API | Review a bounded sample of captured room frames for blur, exposure, motion, reflections, texture scarcity, inconsistency, and stitching risk. | **Integrated** in the scanner room-complete workflow via `POST /api/astra`. Uses the server-only `OPENAI_API_KEY`, low reasoning, low-detail image input, and strict structured output. It advises retakes; it does not reconstruct or alter geometry. |
 | FLUX.2 Pro Outpaint (Higgsfield `flux_2_pro_outpaint`) | API | Per-side expansion. | Alternative for the top/bottom bands only. |
 | **LaMa** — `third_party/lama` | Apache-2.0 (code) | Local, offline large-mask inpainting. | Offline fallback for hole filling when no API key is present (E4 track). |
 | OpenCV `inpaint` (Telea / Navier-Stokes) | Apache-2.0 | Small-hole inpainting. | Used for seam-line cleanup only; useless for large bands. |
