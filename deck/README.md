@@ -6,10 +6,11 @@ site's "Mono Scan" design system. No build step.
 ## Run it
 
 ```bash
-python3 -m http.server 4173 -d deck
+node deck/export/serve.mjs 4173
 ```
 
-then open <http://localhost:4173/>. In the Claude desktop app the same server is the
+then open <http://localhost:4173/>. (Any static server works for viewing, but this one
+supports HTTP Range requests, which Chrome needs to seek the film's videos.) In the Claude desktop app the same server is the
 `deck` entry in `.claude/launch.json`.
 
 Keys: `←` `→` / space to move, `F` fullscreen, `R` replays the film, `P` (or click) pauses it.
@@ -42,10 +43,11 @@ The film is a pure function of time (`renderAt(t)` in `deck.js`), so it can be r
 frame by frame with headless Chrome:
 
 ```bash
-python3 -m http.server 4173 -d deck          # in one terminal
-node deck/export/render.mjs --url "http://localhost:4173/?export=1&motion=off&cut=web#3"
-                                             # writes site/public/media/intro.mp4 (1280×720, 30 fps)
+node deck/export/render.mjs                  # writes site/public/media/intro.mp4 (1280×720, 30 fps)
 ```
+
+The renderer starts its own Range-capable server (`serve.mjs`, port 4174) and renders the
+web cut by default; `--url` selects another cut, `--from`/`--to` render a slice for checks.
 
 `?cut=web` drops the `deckonly` scenes (pricing, CRM). `--fps`, `--width`, `--out`, `--chrome` override the defaults; `deck/export` has its own
 `package.json` with `puppeteer-core`. The poster is a frame from the same file:

@@ -192,7 +192,17 @@
       let goal = Math.max(0, want);
       goal = v.loop ? goal % d : Math.min(goal, d - 0.04);
       if (Math.abs(v.currentTime - goal) < 0.005) return Promise.resolve();
-      return new Promise((res) => { const done = () => { v.removeEventListener("seeked", done); res(); }; v.addEventListener("seeked", done); setTimeout(done, 800); v.currentTime = goal; });
+      // wait for the seek AND for the decoded frame to actually be presented, otherwise a
+      // screenshot right after `seeked` still shows the previous frame in headless Chrome
+      return new Promise((res) => {
+        let settled = false; const finish = () => { if (!settled) { settled = true; res(); } };
+        const onSeeked = () => {
+          v.removeEventListener("seeked", onSeeked);
+          if (typeof v.requestVideoFrameCallback === "function") { v.requestVideoFrameCallback(() => requestAnimationFrame(() => finish())); setTimeout(finish, 400); }
+          else requestAnimationFrame(() => requestAnimationFrame(finish));
+        };
+        v.addEventListener("seeked", onSeeked); setTimeout(finish, 1200); v.currentTime = goal;
+      });
     }
     const ST = (el, o) => { el.style.opacity = o; };
     function sceneState(s, lt) {
