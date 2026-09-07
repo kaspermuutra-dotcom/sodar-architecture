@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "test:live": "SODAR_LIVE_SMOKE=1 vitest run --config vitest.live.config.ts"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -16,6 +17,7 @@
     "@supabase/ssr": "0.7.0",
     "@supabase/supabase-js": "2.45.0",
     "gsap": "^3.15.0",
+    "gsplat": "^1.2.9",
     "next": "^15.5.0",
     "next-intl": "^3.26.0",
     "react": "^19.0.0",

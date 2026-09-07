@@ -18,6 +18,16 @@ export async function authenticated(request: NextRequest): Promise<{ userId: str
   return { userId: data.user.id, db, admin, traceId: request.headers.get("x-trace-id") ?? crypto.randomUUID() };
 }
 
+/** Optional authentication: returns null when no bearer token is present, throws only for invalid tokens or missing configuration. */
+export async function maybeAuthenticated(request: NextRequest) {
+  if (!request.headers.get("authorization")?.startsWith("Bearer ")) return null;
+  return authenticated(request);
+}
+
+export function backendConfigured(): boolean {
+  return getSupabaseEnv().configured && Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY);
+}
+
 export function apiFailure(error: unknown, traceId?: string) {
   const known = error instanceof ApiError ? error : new ApiError(500, "internal_error", "The request could not be completed.");
   if (!(error instanceof ApiError)) console.error(JSON.stringify({ level: "error", event: "scanner_api_error", traceId, error: error instanceof Error ? error.message : String(error) }));

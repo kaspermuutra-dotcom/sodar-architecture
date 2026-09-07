@@ -1,580 +1,1082 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { SodarMark } from "@/components/logo";
-import { AlignmentGate, createTargetPlan, focalLength, projectTarget, type FieldOfView, type Orientation, type SpherePlan } from "@/lib/scanner/sphere";
-import { deleteFrame, latestSession, roomFrames, saveFrame, saveSession, updateFrameUpload, type Room, type ScanSession } from "@/lib/scanner/db";
-import { httpScannerBackend, type FrameMetadata } from "@/lib/scanner/contracts";
-import { RoomPreview } from "./room-preview";
+import { AlignmentGate, focalLength, projectTarget, type FieldOfView, type Orientation } from "@/lib/scanner/sphere";
+import { coverageGaps, minimumFrames, nextTargetIndex, planFor, planProgress, PLAN_LIMITS, type CaptureMode, type CapturePlan, type PlanTarget, type RoomSize } from "@/lib/scanner/plan";
+import { checkFrame, checkRoom, computeMetrics, qualityScore, toGray, worst, type Gray, type FrameMetrics, type RoomGate } from "@/lib/scanner/quality";
+import { deleteFrame, deleteRoomFrames, deleteSession, getFrame, roomFrames, roomFrameSummaries, saveFrame, saveSession, sessionFrameCount, unfinishedSession, type FrameSummary, type Room, type ScanSession } from "@/lib/scanner/db";
+import { BackendError, httpScannerBackend, sessionToken, type FrameMetadata, type ProviderId, type PublicArtifact, type ReconstructionEstimate, type RoomView, type TourLinkRecord } from "@/lib/scanner/contracts";
+import { describeTrack, deviceSummary, grabStill, lockExposure, openRearCamera, prepareTrack, previewAndGray } from "@/lib/scanner/camera";
 import { buildZip, type ZipEntry } from "@/lib/scanner/zip";
-import { stitchFrames } from "@/lib/scanner/stitch";
-import { savePanorama, sessionPanoramas } from "@/lib/scanner/panoramas";
+import { maxStitchWidth, stitchFrames } from "@/lib/scanner/stitch";
+import { loadPanorama, savePanorama, sessionPanoramas, deletePanorama } from "@/lib/scanner/panoramas";
 import { aiFillEnabled, aiFillPanorama } from "@/lib/scanner/ai-fill";
 import { reviewCapture, type AstraCaptureReview } from "@/lib/scanner/astra";
+import { uploadRoom } from "@/lib/scanner/upload";
+import { configureTelemetry, stopwatch, track } from "@/lib/scanner/telemetry";
+import { buildTour, mergeLinks, provisionalLinks, type TourManifest } from "@/lib/scanner/tour";
+import { getSupabaseEnv } from "@/lib/supabase/env";
+import { useOrientation } from "./use-orientation";
+import { CaptureOverlay } from "./capture-overlay";
+import { ReviewPanel } from "./review-panel";
+import { ResultsView } from "./results-view";
+import { ConsentSheet } from "./consent-sheet";
+import { ResumeDialog } from "./resume-dialog";
+import { SignInSheet } from "./sign-in-sheet";
+import { Tutorial } from "./tutorial";
+import { RoomPreview, type PreviewRoom } from "./room-preview";
+import { TourEditor } from "./tour-editor";
+import { SplatViewer } from "./splat-viewer";
 
 /**
- * Guided panorama capture. Geometry is the Photo Sphere Android port in
- * lib/scanner/sphere.ts; frames persist in IndexedDB (lib/scanner/db.ts) and,
- * once a room is finished, upload through the scanner API to be stitched.
- * Without a signed-in Supabase session the frames simply stay on the phone.
+ * Guided property scanner.
  *
- * Scope: the free preview captures one ring (equator) per room — about a
- * dozen frames — so a broker finishes two rooms in a couple of minutes. Open
- * /scan?scope=sphere for the full multi-ring sphere.
+ * welcome → mode → permissions (camera + motion) → tutorial → people →
+ * capturing (pause / move / retake) → checking (local gates + on-device
+ * panorama) → review (Astra, retakes) → saving (sign-in, resumable upload,
+ * panorama artifacts) → consent (paid reconstruction) → results (status,
+ * panorama versions, 3D viewers, tour, downloads, deletion).
+ *
+ * Every frame is in IndexedDB before it counts; the session is saved on every
+ * change so a reload, lock screen or call resumes where it stopped.
  */
 const DEFAULT_FOV: FieldOfView = { horizontal: 55, vertical: 72 };
-const ROOMS_IN_PREVIEW = 2;
+const PREVIEW_WIDTH = 2048;
+const ROOM_POLL_MS = 8_000;
 
-type Scope = "ring" | "sphere";
-type Phase = "idle" | "capturing" | "roomDone" | "processing" | "done";
+type Phase = "loading" | "welcome" | "mode" | "permissions" | "tutorial" | "people" | "capturing" | "checking" | "review" | "saving" | "results";
 
-const newRoom = (n: number, name: string): Room => ({ id: crypto.randomUUID(), name, status: "capturing", captured: 0, targetCount: 0 });
-const newSession = (name: string): ScanSession => {
-  const room = newRoom(1, name);
+const newRoom = (name: string, mode: CaptureMode, size: RoomSize): Room => ({ id: crypto.randomUUID(), name, status: "capturing", captured: 0, targetCount: 0, mode, size });
+const newSession = (name: string, mode: CaptureMode, size: RoomSize): ScanSession => {
+  const room = newRoom(name, mode, size);
   const now = new Date().toISOString();
-  return { id: crypto.randomUUID(), createdAt: now, updatedAt: now, activeRoomId: room.id, rooms: [room] };
+  return { id: crypto.randomUUID(), createdAt: now, updatedAt: now, activeRoomId: room.id, mode, rooms: [room], phase: "mode" };
 };
-
-function readOrientation(event: DeviceOrientationEvent): Orientation {
-  const compass = (event as DeviceOrientationEvent & { webkitCompassHeading?: number }).webkitCompassHeading;
-  return { yaw: compass ?? (360 - (event.alpha ?? 0)) % 360, pitch: Math.max(-90, Math.min(90, (event.beta ?? 90) - 90)), roll: event.gamma ?? 0 };
-}
-
-function planFor(startYaw: number, scope: Scope): SpherePlan {
-  const full = createTargetPlan(startYaw, DEFAULT_FOV);
-  if (scope === "sphere") return full;
-  const targets = full.targets.filter((t) => t.ring === 0).map((t, index) => ({ ...t, index }));
-  return { targets, rings: [{ start: 0, end: targets.length - 1 }] };
-}
 
 export function Scanner() {
   const t = useTranslations("Scanner");
+  const locale = useLocale();
   const roomNames = t.raw("rooms") as string[];
   const roomName = useCallback((n: number) => roomNames[n - 1] ?? `${t("room")} ${n}`, [roomNames, t]);
+  const supabaseConfigured = getSupabaseEnv().configured;
 
+  // --- refs (things that must not trigger renders) ---
   const video = useRef<HTMLVideoElement>(null);
-  const cameraStream = useRef<MediaStream | null>(null);
+  const stream = useRef<MediaStream | null>(null);
+  const trackRef = useRef<MediaStreamTrack | null>(null);
   const gate = useRef(new AlignmentGate(4, 350));
   const capturing = useRef(false);
-  const lastOrientation = useRef<Orientation & { t: number }>(undefined);
+  const previousFrame = useRef<{ metrics: FrameMetrics; gray: Gray; orientation: Orientation; timestamp: number } | undefined>(undefined);
+  const thumbUrls = useRef(new Map<string, string>());
+  const panoramaUrls = useRef<string[]>([]);
+  const rejectTimer = useRef<number | undefined>(undefined);
+  const captureTimer = useRef<(() => number) | undefined>(undefined);
 
-  const [scope, setScope] = useState<Scope>("ring");
-  const [phase, setPhase] = useState<Phase>("idle");
+  // --- state ---
+  const [phase, setPhase] = useState<Phase>("loading");
   const [session, setSession] = useState<ScanSession>();
-  const [orientation, setOrientation] = useState<Orientation>();
-  const [plan, setPlan] = useState<SpherePlan>();
-  const [hasGyro, setHasGyro] = useState<boolean | null>(null);
-  const [requesting, setRequesting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [message, setMessage] = useState("");
+  const [resumable, setResumable] = useState<{ session: ScanSession; frames: number } | null>(null);
+  const [mode, setMode] = useState<CaptureMode>("full3d");
+  const [size, setSize] = useState<RoomSize>("normal");
+  const [plan, setPlan] = useState<CapturePlan>();
+  const [capturedIndexes, setCapturedIndexes] = useState<Set<number>>(new Set());
+  const [frames, setFrames] = useState<FrameSummary[]>([]);
+  const [thumbVersion, setThumbVersion] = useState(0);
   const [dwell, setDwell] = useState(0);
-  const [flash, setFlash] = useState(false);
-  const [thumbs, setThumbs] = useState<string[]>([]);
-  const [progress, setProgress] = useState(0);
-  const [stitching, setStitching] = useState<string | null>(null);
-  const [previewOpen, setPreviewOpen] = useState(false);
-  const [demo, setDemo] = useState(false);
+  const [message, setMessage] = useState("");
+  const [lastRejected, setLastRejected] = useState<string | null>(null);
+  const [flash, setFlash] = useState<"ok" | "bad" | null>(null);
+  const [paused, setPaused] = useState(false);
+  const [needsMove, setNeedsMove] = useState(false);
+  const [retake, setRetake] = useState<{ frameId: string; checkpoint: number } | null>(null);
+  const [cameraInfo, setCameraInfo] = useState<{ label: string; width: number; height: number; exposureLocked: boolean } | null>(null);
+  const [permissionError, setPermissionError] = useState<string | null>(null);
+  const [requesting, setRequesting] = useState(false);
+  const [busy, setBusy] = useState<string | null>(null);
+  const [progressText, setProgressText] = useState<string | null>(null);
+  const [roomGate, setRoomGate] = useState<RoomGate>({ ok: true, blocking: [], recommended: [], info: [] });
   const [astraReview, setAstraReview] = useState<AstraCaptureReview>();
   const [astraBusy, setAstraBusy] = useState(false);
-  const [astraError, setAstraError] = useState<string>();
+  const [astraError, setAstraError] = useState<string | null>(null);
+  const [signedIn, setSignedIn] = useState(false);
+  const [signInOpen, setSignInOpen] = useState(false);
+  const [consent, setConsent] = useState<{ room: Room; estimate: ReconstructionEstimate | null; loading: boolean; error: string | null } | null>(null);
+  const [views, setViews] = useState<Record<string, RoomView | undefined>>({});
+  const [preview, setPreview] = useState<{ open: boolean; roomId?: string }>({ open: false });
+  const [splat, setSplat] = useState<{ artifact: PublicArtifact; room: Room } | null>(null);
+  const [tourEditor, setTourEditor] = useState(false);
+  const [tour, setTour] = useState<TourManifest | null>(null);
+  const [links, setLinks] = useState<TourLinkRecord[]>([]);
+  const [resultsMessage, setResultsMessage] = useState<string | null>(null);
+  const [confirmDelete, setConfirmDelete] = useState(false);
+  const [demo, setDemo] = useState(false);
+
+  const orientationHook = useOrientation(phase === "capturing" || phase === "permissions");
+  const { orientation, motion, requestPermission, reset: resetOrientation, latest, latestSpeed } = orientationHook;
+  const hasGyro = motion === "granted" ? true : motion === "unavailable" || motion === "denied" ? false : null;
 
   const activeRoom = session?.rooms.find((room) => room.id === session.activeRoomId);
-  const target = plan?.targets[activeRoom?.captured ?? 0];
-  const finishedRooms = session?.rooms.filter((r) => r.status !== "capturing").length ?? 0;
+  const activeMode: CaptureMode = activeRoom?.mode ?? session?.mode ?? mode;
+  const nextIndex = plan ? (retake ? retake.checkpoint : nextTargetIndex(plan, capturedIndexes)) : undefined;
+  const target: PlanTarget | undefined = plan && nextIndex !== undefined ? plan.targets[nextIndex] : undefined;
+  const station = plan && target ? plan.stations[target.station] : undefined;
   const isMobile = useMemo(() => (typeof navigator !== "undefined" ? /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) : false), []);
+  const savedRemotely = Boolean(session?.serverKnown);
 
-  const runAstraReview = useCallback(async () => {
-    if (!activeRoom || !thumbs.length) return;
-    setAstraBusy(true);
-    setAstraError(undefined);
-    try {
-      setAstraReview(await reviewCapture({
-        roomName: activeRoom.name,
-        captured: activeRoom.captured,
-        targetCount: activeRoom.targetCount || plan?.targets.length || 0,
-        images: thumbs.slice(-4),
-      }));
-    } catch (reviewError) {
-      setAstraError(reviewError instanceof Error ? reviewError.message : "Astra review failed.");
-    } finally {
-      setAstraBusy(false);
-    }
-  }, [activeRoom, plan?.targets.length, thumbs]);
+  const updateRoom = useCallback((id: string, change: (room: Room) => Room) => setSession((old) => (old ? { ...old, rooms: old.rooms.map((room) => (room.id === id ? change(room) : room)) } : old)), []);
+  const thumbsMap = useMemo(() => new Map(thumbUrls.current), [thumbVersion]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const updateRoom = useCallback((id: string, change: (room: Room) => Room) => setSession((old) => (old ? { ...old, rooms: old.rooms.map((r) => (r.id === id ? change(r) : r)) } : old)), []);
-
+  // ------------------------------------------------------------------ boot
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    if (params.get("scope") === "sphere") setScope("sphere");
     if (params.get("demo") === "1") setDemo(true);
-    void latestSession().then(async (saved) => {
-      const next = saved && saved.rooms.some((r) => r.status !== "complete") ? saved : newSession(roomName(1));
-      // re-attach on-device panoramas as object URLs
-      try {
-        const stored = await sessionPanoramas(next.id);
-        for (const sp of stored) {
-          const room = next.rooms.find((r) => r.id === sp.roomId);
-          if (room && !room.panoramaUrl) room.panoramaUrl = URL.createObjectURL(sp.panorama);
-        }
-      } catch {}
-      setSession(next);
-    });
-  }, [roomName]);
-  useEffect(() => () => cameraStream.current?.getTracks().forEach((track) => track.stop()), []);
-  useEffect(() => {
-    if (session) void saveSession(session);
-  }, [session]);
-
-  // Poll stitching jobs for rooms that were uploaded.
-  useEffect(() => {
-    const pending = session?.rooms.filter((room) => room.job && room.status === "processing") ?? [];
-    if (!pending.length) return;
-    const timer = window.setInterval(() => {
-      pending.forEach((room) =>
-        void httpScannerBackend
-          .getJob(room.job!.id)
-          .then((job) => updateRoom(room.id, (current) => ({ ...current, job, status: job.status === "succeeded" ? "complete" : current.status, panoramaUrl: job.privatePreviewUrl ?? current.panoramaUrl })))
-          .catch(() => undefined),
-      );
-      if (session)
-        void httpScannerBackend
-          .getPreview(session.id)
-          .then((preview) => preview.manifest?.nodes.forEach((node) => updateRoom(node.id, (room) => ({ ...room, status: "complete", panoramaUrl: node.panorama }))))
-          .catch(() => undefined);
-    }, 4_000);
-    return () => window.clearInterval(timer);
-  }, [session?.rooms, session, updateRoom]);
-
-  const capture = useCallback(
-    async (pose: Orientation) => {
-      if (!video.current || !session || !activeRoom || !target || capturing.current || video.current.videoWidth === 0) return;
-      capturing.current = true;
-      try {
-        const canvas = document.createElement("canvas");
-        canvas.width = video.current.videoWidth;
-        canvas.height = video.current.videoHeight;
-        canvas.getContext("2d", { alpha: false })?.drawImage(video.current, 0, 0);
-        const jpeg = await new Promise<Blob>((resolve, reject) => canvas.toBlob((blob) => (blob ? resolve(blob) : reject(new Error("JPEG encoding failed"))), "image/jpeg", 0.95));
-        const id = crypto.randomUUID();
-        const metadata: FrameMetadata = { id, roomId: activeRoom.id, sessionId: session.id, ...pose, fov: DEFAULT_FOV, timestamp: new Date().toISOString(), checkpoint: { index: target.index, ring: target.ring, yaw: target.yaw, pitch: target.pitch, elevation: target.elevation }, width: canvas.width, height: canvas.height, mimeType: "image/jpeg" };
-        await saveFrame({ id, metadata, jpeg });
-        setThumbs((list) => [...list, URL.createObjectURL(jpeg)]);
-        updateRoom(activeRoom.id, (room) => ({ ...room, captured: room.captured + 1 }));
-        gate.current.reset();
-        setFlash(true);
-        window.setTimeout(() => setFlash(false), 120);
-        try {
-          navigator.vibrate?.(25);
-        } catch {}
-      } catch (err) {
-        setMessage(err instanceof Error ? err.message : t("noCamera"));
-      } finally {
-        capturing.current = false;
-      }
-    },
-    [activeRoom, session, target, updateRoom, t],
-  );
-
-  // Orientation → target distance → gate → auto shutter, plus the assistant hint.
-  useEffect(() => {
-    if (phase !== "capturing") return;
-    let seen = false;
-    const onOrientation = (event: DeviceOrientationEvent) => {
-      if (event.alpha == null && event.beta == null) return;
-      seen = true;
-      if (hasGyro !== true) setHasGyro(true);
-      const next = readOrientation(event);
-      setOrientation(next);
-      if (!plan) {
-        const created = planFor(next.yaw, scope);
-        setPlan(created);
-        if (activeRoom) updateRoom(activeRoom.id, (room) => ({ ...room, targetCount: created.targets.length }));
-        return;
-      }
-      const activeTarget = plan.targets[activeRoom?.captured ?? 0];
-      if (!activeTarget) return;
-      const view = projectTarget(next, activeTarget);
-      const now = performance.now();
-      const last = lastOrientation.current;
-      const speed = last ? (Math.abs(next.yaw - last.yaw) / Math.max(1, now - last.t)) * 1000 : 0;
-      lastOrientation.current = { ...next, t: now };
-      const reading = gate.current.update(view.angularDistance, now);
-      setDwell(reading.progress);
-      if (reading.triggered) void capture(next);
-      if (reading.aligned) setMessage(t("hold"));
-      else if (speed > 60 && speed < 300) setMessage(t("slower"));
-      else if (!view.inFront || Math.abs(view.x) > Math.abs(view.y)) setMessage(view.x > 0 ? t("turnRight") : t("turnLeft"));
-      else setMessage(view.y > 0 ? t("tiltUp") : t("tiltDown"));
+    if (params.get("mode") === "quick") setMode("quick");
+    configureTelemetry(sessionToken);
+    if (supabaseConfigured) {
+      void sessionToken().then((token) => setSignedIn(Boolean(token)));
+      void import("@/lib/supabase/client").then(({ browserSupabase }) => browserSupabase().auth.onAuthStateChange((_event: string, s: unknown) => setSignedIn(Boolean(s))));
+    }
+    void unfinishedSession()
+      .then(async (saved) => {
+        if (saved && params.get("demo") !== "1") setResumable({ session: saved, frames: await sessionFrameCount(saved.id).catch(() => 0) });
+      })
+      .finally(() => setPhase("welcome"));
+    return () => {
+      stopCamera();
+      for (const url of thumbUrls.current.values()) URL.revokeObjectURL(url);
+      for (const url of panoramaUrls.current) URL.revokeObjectURL(url);
     };
-    window.addEventListener("deviceorientation", onOrientation, true);
-    const probe = window.setTimeout(() => {
-      if (!seen && hasGyro === null) {
-        setHasGyro(false);
-        setMessage(t("noGyro"));
-        if (!plan) {
-          const created = planFor(0, scope);
-          setPlan(created);
-          if (activeRoom) updateRoom(activeRoom.id, (room) => ({ ...room, targetCount: created.targets.length }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (session) void saveSession({ ...session, phase });
+  }, [session, phase]);
+
+  // Frames for the active room (metadata only) + thumbnails as object URLs.
+  const refreshFrames = useCallback(async (roomId: string) => {
+    const list = await roomFrames(roomId);
+    for (const frame of list) {
+      if (!thumbUrls.current.has(frame.id) && frame.thumb) thumbUrls.current.set(frame.id, URL.createObjectURL(frame.thumb));
+    }
+    setThumbVersion((v) => v + 1);
+    setFrames(list.map((frame) => ({ id: frame.id, checkpoint: frame.metadata.checkpoint.index, timestamp: frame.metadata.timestamp, score: frame.quality?.score, findings: frame.quality?.findings, uploaded: Boolean(frame.upload && "completedAt" in frame.upload), retakeOf: frame.retakeOf, yaw: frame.metadata.yaw, pitch: frame.metadata.pitch })));
+    setCapturedIndexes(new Set(list.map((frame) => frame.metadata.checkpoint.index)));
+    return list;
+  }, []);
+
+  const attachPanoramas = useCallback(async (s: ScanSession) => {
+    try {
+      const stored = await sessionPanoramas(s.id);
+      for (const sp of stored) {
+        const room = s.rooms.find((r) => r.id === sp.roomId);
+        if (!room) continue;
+        room.panoramaUrl = URL.createObjectURL(sp.panorama);
+        panoramaUrls.current.push(room.panoramaUrl);
+        if (sp.filledPanorama) {
+          room.panoramaAiUrl = URL.createObjectURL(sp.filledPanorama);
+          panoramaUrls.current.push(room.panoramaAiUrl);
         }
       }
-    }, 1500);
-    return () => {
-      window.removeEventListener("deviceorientation", onOrientation, true);
-      window.clearTimeout(probe);
-    };
-  }, [phase, plan, activeRoom, capture, updateRoom, hasGyro, scope, t]);
+    } catch {}
+    return s;
+  }, []);
 
-  // Ring complete → room done.
-  useEffect(() => {
-    if (phase === "capturing" && plan && activeRoom && activeRoom.captured >= plan.targets.length) setPhase("roomDone");
-  }, [phase, plan, activeRoom]);
+  // ------------------------------------------------------------------ camera
+  const stopCamera = () => {
+    stream.current?.getTracks().forEach((track) => track.stop());
+    stream.current = null;
+    trackRef.current = null;
+  };
 
-  // Preview progress bar (mock while no real stitch job is running).
-  useEffect(() => {
-    if (phase !== "processing") return;
-    setProgress(0);
-    const id = window.setInterval(() => setProgress((p) => (p >= 100 ? 100 : p + 2)), 80);
-    const done = window.setTimeout(() => setPhase("done"), 4600);
-    return () => {
-      window.clearInterval(id);
-      window.clearTimeout(done);
-    };
-  }, [phase]);
-
-  const start = async () => {
-    setError(null);
+  const openCamera = async (): Promise<boolean> => {
+    setPermissionError(null);
     setRequesting(true);
     try {
-      const requestMotion = (DeviceOrientationEvent as typeof DeviceOrientationEvent & { requestPermission?: () => Promise<PermissionState> }).requestPermission;
-      if (requestMotion) {
-        const granted = await requestMotion().catch(() => "denied");
-        if (granted !== "granted") setHasGyro(false);
-      }
-      const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: "environment" }, width: { ideal: 4096 }, height: { ideal: 3072 } }, audio: false });
-      cameraStream.current = stream;
+      const motionState = await requestPermission();
+      if (motionState === "denied") track("permission_denied", { kind: "motion" });
+      const s = await openRearCamera();
+      stream.current = s;
+      const videoTrack = s.getVideoTracks()[0];
+      trackRef.current = videoTrack;
+      await prepareTrack(videoTrack);
       if (video.current) {
-        video.current.srcObject = stream;
-        await video.current.play();
+        video.current.srcObject = s;
+        await video.current.play().catch(() => undefined);
       }
-      setThumbs([]);
-      setPlan(undefined);
-      gate.current.reset();
-      setMessage(t("hold"));
-      setPhase("capturing");
+      setCameraInfo({ ...describeTrack(videoTrack, false), label: videoTrack.label.slice(0, 60) });
+      return true;
     } catch (err) {
       const name = (err as DOMException)?.name;
-      setError(name === "NotAllowedError" ? t("denied") : t("noCamera"));
+      track("permission_denied", { kind: "camera", reason: name ?? "unknown" });
+      setPermissionError(name === "NotAllowedError" || name === "SecurityError" ? t("denied") : name === "NotFoundError" || name === "OverconstrainedError" ? t("noCamera") : t("cameraBusy"));
+      return false;
     } finally {
       setRequesting(false);
     }
   };
 
-  const manualCapture = () => {
-    const pose = orientation ?? { yaw: (activeRoom?.captured ?? 0) * 30, pitch: 0, roll: 0 };
-    void capture(pose);
+  // ------------------------------------------------------------------ flow: start
+  const beginNewSession = (chosenMode: CaptureMode, chosenSize: RoomSize) => {
+    const s = newSession(roomName(1), chosenMode, chosenSize);
+    setSession(s);
+    setMode(chosenMode);
+    setSize(chosenSize);
+    setPlan(undefined);
+    setCapturedIndexes(new Set());
+    setFrames([]);
+    setViews({});
+    setTour(null);
+    setResumable(null);
+    setPhase("permissions");
   };
 
-  /** Stitch the room on the device (WebGL) so it can be previewed immediately; optionally let GPT Image 2 fill the poles. */
-  const stitchRoom = useCallback(
-    async (room: Room, sessionId: string) => {
-      const frames = await roomFrames(room.id);
-      if (frames.length < 2) return;
-      setStitching(t("stitching"));
-      const out = await stitchFrames(
-        frames.map((f) => ({ blob: f.jpeg, yaw: f.metadata.yaw, elevation: -f.metadata.pitch, roll: f.metadata.roll })),
-        { fov: DEFAULT_FOV, width: 2048, onProgress: (d, n) => setStitching(`${t("stitching")} ${d}/${n}`) },
-      );
-      let panorama = out.panorama;
-      let filled = false;
-      if (aiFillEnabled()) {
-        try {
-          setStitching(t("filling"));
-          panorama = (await aiFillPanorama(out.panorama, out.mask, 2048)).panorama;
-          filled = true;
-        } catch (err) {
-          setMessage(err instanceof Error ? err.message : "ai fill failed");
+  const continueSession = async () => {
+    if (!resumable) return;
+    const s = await attachPanoramas(resumable.session);
+    setSession(s);
+    setMode(s.mode ?? "full3d");
+    const room = s.rooms.find((r) => r.id === s.activeRoomId);
+    const list = room ? await refreshFrames(room.id) : [];
+    setResumable(null);
+    track("session_resumed", { rooms: s.rooms.length, frames: resumable.frames }, { sessionId: s.id });
+    if (room && room.planStartYaw !== undefined) setPlan(planFor(room.mode ?? s.mode ?? "full3d", room.planStartYaw, DEFAULT_FOV, { size: room.size }));
+    if (!room || room.status === "complete" || room.status === "processing" || room.status === "uploaded") setPhase("results");
+    else if (room.status === "review") {
+      computeGate(room, list.length, list.filter((f) => f.quality?.findings?.some((x) => x.severity === "retake")).length);
+      setPhase("review");
+    } else if (room.status === "confirmed" || room.status === "uploading") setPhase("saving");
+    else setPhase("permissions");
+  };
+
+  const startOver = async () => {
+    if (!resumable) return;
+    // Recoverable: the old session's frames stay until the next "start over"; only the session record is superseded.
+    await saveSession({ ...resumable.session, phase: "abandoned", rooms: resumable.session.rooms.map((room) => ({ ...room, status: room.captured ? "complete" : "failed" })) });
+    track("session_reset", {}, { sessionId: resumable.session.id });
+    setResumable(null);
+    setPhase("welcome");
+  };
+
+  const enterPermissions = async () => {
+    const ok = await openCamera();
+    if (!ok) return;
+  };
+
+  const afterPermissions = () => {
+    if (session && session.rooms.some((room) => room.captured > 0)) startCapturing();
+    else setPhase("tutorial");
+  };
+
+  const startCapturing = () => {
+    if (!activeRoom) return;
+    gate.current = new AlignmentGate(activeMode === "full3d" ? 5 : 4, activeMode === "full3d" ? 300 : 350);
+    resetOrientation();
+    previousFrame.current = undefined;
+    setPaused(false);
+    setNeedsMove(false);
+    setLastRejected(null);
+    setMessage(t("hold"));
+    if (!captureTimer.current) captureTimer.current = stopwatch();
+    if (!activeRoom.captured) track("capture_started", { mode: activeMode, size: activeRoom.size ?? "normal", ...deviceSummary() }, { sessionId: session?.id, roomId: activeRoom.id });
+    setPhase("capturing");
+  };
+
+  // Plan once the first heading is known (or immediately without sensors).
+  useEffect(() => {
+    if (phase !== "capturing" || plan || !activeRoom) return;
+    const yaw = orientation?.yaw ?? (hasGyro === false ? 0 : undefined);
+    if (yaw === undefined) return;
+    const created = planFor(activeMode, activeRoom.planStartYaw ?? yaw, DEFAULT_FOV, { size: activeRoom.size ?? size });
+    setPlan(created);
+    updateRoom(activeRoom.id, (room) => ({ ...room, targetCount: created.targets.length, planStartYaw: room.planStartYaw ?? yaw, mode: activeMode }));
+    if (created.mode === "full3d" && !activeRoom.captured) setNeedsMove(true);
+  }, [phase, plan, orientation?.yaw, hasGyro, activeRoom, activeMode, size, updateRoom]);
+
+  // Lock exposure once the first frame of a room is taken so the rest match.
+  const lockedFor = useRef<string | null>(null);
+  useEffect(() => {
+    if (phase !== "capturing" || !activeRoom || activeRoom.captured < 1 || lockedFor.current === activeRoom.id || !trackRef.current) return;
+    lockedFor.current = activeRoom.id;
+    void lockExposure(trackRef.current).then((locked) => setCameraInfo((info) => (info ? { ...info, exposureLocked: locked } : info)));
+  }, [phase, activeRoom]);
+
+  // ------------------------------------------------------------------ capture
+  const capture = useCallback(
+    async (pose: Orientation, manual = false) => {
+      if (!video.current || !session || !activeRoom || !target || capturing.current || video.current.videoWidth === 0 || !trackRef.current) return;
+      capturing.current = true;
+      const timestamp = Date.now();
+      try {
+        const { thumbnail, rgba, graySize } = previewAndGray(video.current);
+        const gray = toGray(rgba, graySize, graySize);
+        const metrics = computeMetrics(gray);
+        const still = await grabStill(trackRef.current, video.current);
+        const findings = checkFrame({ metrics, width: still.width, height: still.height, mimeType: still.blob.type || "image/jpeg", previous: previousFrame.current, gray, orientation: pose, timestamp, angularSpeed: latestSpeed.current, mode: activeMode });
+        const severity = worst(findings);
+        if (severity === "blocking" && !manual) {
+          const first = findings.find((f) => f.severity === "blocking")!;
+          setLastRejected(t.has(`rejected.${first.code}`) ? t(`rejected.${first.code}`) : t("rejected.generic"));
+          window.clearTimeout(rejectTimer.current);
+          rejectTimer.current = window.setTimeout(() => setLastRejected(null), 2_500);
+          setFlash("bad");
+          window.setTimeout(() => setFlash(null), 160);
+          track("frame_rejected", { code: first.code, value: first.value ?? null }, { sessionId: session.id, roomId: activeRoom.id });
+          gate.current.reset();
+          return;
         }
+        const id = crypto.randomUUID();
+        const score = qualityScore(metrics, findings);
+        const metadata: FrameMetadata = { id, roomId: activeRoom.id, sessionId: session.id, ...pose, fov: DEFAULT_FOV, timestamp: new Date(timestamp).toISOString(), checkpoint: { index: target.index, ring: target.ring, yaw: target.yaw, pitch: target.pitch, elevation: target.elevation }, width: still.width, height: still.height, mimeType: "image/jpeg", captureMode: activeMode, stationIndex: target.station, qualityScore: score, source: still.source };
+        const thumb = await thumbnail;
+        await saveFrame({ id, metadata, jpeg: still.blob, thumb, quality: { metrics, findings, score }, retakeOf: retake?.frameId });
+        if (retake) {
+          await deleteFrame(retake.frameId).catch(() => undefined);
+          const old = thumbUrls.current.get(retake.frameId);
+          if (old) URL.revokeObjectURL(old);
+          thumbUrls.current.delete(retake.frameId);
+          track("retake_requested", { checkpoint: retake.checkpoint, completed: true }, { sessionId: session.id, roomId: activeRoom.id });
+        }
+        thumbUrls.current.set(id, URL.createObjectURL(thumb));
+        setThumbVersion((v) => v + 1);
+        previousFrame.current = { metrics, gray, orientation: pose, timestamp };
+        setCapturedIndexes((set) => new Set([...set, target.index]));
+        setFrames((list) => [...list.filter((f) => f.id !== retake?.frameId), { id, checkpoint: target.index, timestamp: metadata.timestamp, score, findings, uploaded: false, retakeOf: retake?.frameId, yaw: pose.yaw, pitch: pose.pitch }]);
+        updateRoom(activeRoom.id, (room) => ({ ...room, captured: retake ? room.captured : room.captured + 1, camera: cameraInfo ? { deviceLabel: cameraInfo.label, width: still.width, height: still.height, exposureLocked: cameraInfo.exposureLocked, focusMode: null, torch: false, zoom: null, facing: null } : room.camera }));
+        track("frame_accepted", { checkpoint: target.index, score, severity, width: still.width, height: still.height, source: still.source }, { sessionId: session.id, roomId: activeRoom.id });
+        gate.current.reset();
+        setFlash("ok");
+        window.setTimeout(() => setFlash(null), 120);
+        try {
+          navigator.vibrate?.(severity === "retake" ? [20, 40, 20] : 25);
+        } catch {}
+        if (severity === "retake") {
+          const soft = findings.find((f) => f.severity === "retake")!;
+          setLastRejected(t.has(`soft.${soft.code}`) ? t(`soft.${soft.code}`) : t("soft.generic"));
+          window.clearTimeout(rejectTimer.current);
+          rejectTimer.current = window.setTimeout(() => setLastRejected(null), 2_000);
+        }
+        if (retake) {
+          setRetake(null);
+          setPhase("review");
+          return;
+        }
+        const following = plan?.targets[nextTargetIndex(plan, new Set([...capturedIndexes, target.index])) ?? -1];
+        if (following?.move) setNeedsMove(true);
+      } catch (err) {
+        setMessage(err instanceof Error && err.name === "QuotaExceededError" ? t("storageFull") : t("captureFailed"));
+      } finally {
+        capturing.current = false;
       }
-      await savePanorama({ roomId: room.id, sessionId, panorama, mask: out.mask, coverage: out.coverage, width: out.width, height: out.height, filled, createdAt: new Date().toISOString() });
-      const url = URL.createObjectURL(panorama);
-      updateRoom(room.id, (r) => ({ ...r, panoramaUrl: url }));
-      setStitching(null);
-      return out;
     },
-    [t, updateRoom],
+    [activeRoom, activeMode, cameraInfo, capturedIndexes, latestSpeed, plan, retake, session, t, target, updateRoom],
   );
 
-  /** Upload the finished room's frames and queue stitching; without a signed-in session they stay local. */
-  const finishRoom = async () => {
-    if (!session || !activeRoom || !activeRoom.captured) return;
-    try {
-      await stitchRoom(activeRoom, session.id);
-    } catch (err) {
-      setStitching(null);
-      setMessage(err instanceof Error ? err.message : "stitch failed");
-    }
-    setMessage(t("uploading"));
-    let uploaded = false;
-    try {
-      await httpScannerBackend.createScan(session.id);
-      await Promise.all(session.rooms.map((room, index) => httpScannerBackend.createRoom(session.id, room.id, room.name, index + 1, room.targetCount)));
-      const frames = await roomFrames(activeRoom.id);
-      const keys: string[] = [];
-      for (const frame of frames) {
-        if (frame.upload && "completedAt" in frame.upload) {
-          keys.push(frame.upload.privateObjectKey);
-          continue;
-        }
-        let ticket = frame.upload ?? (await httpScannerBackend.beginUpload(frame.metadata, frame.jpeg.size));
-        await updateFrameUpload(frame, ticket);
-        while (ticket.offset < frame.jpeg.size) {
-          const result = await httpScannerBackend.uploadPart(ticket, frame.jpeg, { frameId: frame.id, offset: ticket.offset, size: Math.min(5 * 1024 * 1024, frame.jpeg.size - ticket.offset) });
-          await updateFrameUpload(frame, result);
-          if ("completedAt" in result) {
-            keys.push(result.privateObjectKey);
-            await deleteFrame(frame.id);
-            break;
-          }
-          ticket = result;
-        }
-      }
-      const job = await httpScannerBackend.startJob({ sessionId: session.id, roomId: activeRoom.id, stage: "stitch", inputObjectKeys: keys, preserveInputs: true });
-      updateRoom(activeRoom.id, (room) => ({ ...room, job, status: "processing" }));
-      uploaded = true;
-      setMessage(t("queued"));
-    } catch {
-      updateRoom(activeRoom.id, (room) => ({ ...room, status: "complete" }));
-      setMessage(t("savedLocally"));
-    }
-    const finished = finishedRooms + 1;
-    if (finished >= ROOMS_IN_PREVIEW) {
-      cameraStream.current?.getTracks().forEach((track) => track.stop());
-      setPhase(uploaded ? "done" : "processing");
-    } else {
-      setSession((old) => {
-        if (!old) return old;
-        const room = newRoom(old.rooms.length + 1, roomName(old.rooms.length + 1));
-        return { ...old, activeRoomId: room.id, rooms: [...old.rooms, room] };
-      });
-      setPlan(undefined);
-      setThumbs([]);
-      gate.current.reset();
-      setPhase("capturing");
-    }
-  };
-
-  // Demo: stitch the bundled 12-frame room without a camera (?demo=1).
+  // Alignment loop: 60 ms tick reading the latest orientation (no per-event React renders).
   useEffect(() => {
-    if (!demo || !session || phase !== "idle") return;
-    let cancelled = false;
-    (async () => {
-      setStitching(t("stitching"));
-      const manifest = (await fetch("/media/demo-frames/frames.json").then((r) => r.json())) as { fov: { horizontal: number; vertical: number }; frames: Array<{ file: string; yaw: number; elevation: number; roll: number }> };
-      const room = session.rooms.find((r) => r.id === session.activeRoomId)!;
-      let index = 0;
-      for (const f of manifest.frames) {
-        const jpeg = await fetch(`/media/demo-frames/${f.file}`).then((r) => r.blob());
-        const id = crypto.randomUUID();
-        const metadata: FrameMetadata = { id, roomId: room.id, sessionId: session.id, yaw: f.yaw, pitch: -f.elevation, roll: f.roll, fov: manifest.fov, timestamp: new Date().toISOString(), checkpoint: { index, ring: 0, yaw: f.yaw, pitch: -f.elevation, elevation: f.elevation }, width: 480, height: 640, mimeType: "image/jpeg" };
-        await saveFrame({ id, metadata, jpeg });
-        index++;
-      }
-      if (cancelled) return;
-      updateRoom(room.id, (r) => ({ ...r, captured: manifest.frames.length, targetCount: manifest.frames.length, status: "complete" }));
-      await stitchRoom({ ...room, captured: manifest.frames.length }, session.id);
-      if (cancelled) return;
-      setPhase("done");
-      setPreviewOpen(true);
-    })().catch((err) => setMessage(err instanceof Error ? err.message : "demo failed"));
-    return () => {
-      cancelled = true;
+    if (phase !== "capturing" || paused || needsMove || !plan || !target) return;
+    const tick = () => {
+      const next = latest.current;
+      if (!next) return;
+      const view = projectTarget(next, target);
+      const now = performance.now();
+      const speed = latestSpeed.current;
+      const reading = gate.current.update(speed > 70 ? Number.POSITIVE_INFINITY : view.angularDistance, now);
+      setDwell(reading.progress);
+      if (reading.triggered) void capture(next);
+      if (reading.aligned) setMessage(t("hold"));
+      else if (speed > 70) setMessage(t("slower"));
+      else if (!view.inFront || Math.abs(view.x) > Math.abs(view.y)) setMessage(view.x > 0 ? t("turnRight") : t("turnLeft"));
+      else setMessage(view.y > 0 ? t("tiltUp") : t("tiltDown"));
     };
+    const id = window.setInterval(tick, 60);
+    return () => window.clearInterval(id);
+  }, [phase, paused, needsMove, plan, target, capture, latest, latestSpeed, t]);
+
+  // Pause automatically when the page is hidden (call, lock screen) and keep the camera alive.
+  useEffect(() => {
+    const onVisibility = () => {
+      if (document.visibilityState === "hidden" && phase === "capturing") setPaused(true);
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => document.removeEventListener("visibilitychange", onVisibility);
+  }, [phase]);
+
+  // Room complete when every planned target is captured (retake mode excluded).
+  useEffect(() => {
+    if (phase === "capturing" && plan && !retake && nextIndex === undefined && capturedIndexes.size > 0) void finishRoom();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [demo, session?.id, phase]);
+  }, [phase, plan, nextIndex, retake]);
+
+  const manualCapture = () => {
+    const pose = latest.current ?? { yaw: target?.yaw ?? 0, pitch: target?.pitch ?? 0, roll: 0 };
+    void capture(pose, true);
+  };
 
   const marker = useMemo(() => {
     if (!orientation || !target || typeof window === "undefined") return undefined;
     const view = projectTarget(orientation, target);
     const f = focalLength(window.innerWidth, window.innerHeight, DEFAULT_FOV);
     const z = Math.max(view.z, 0.15);
-    return { left: window.innerWidth / 2 + (view.x / z) * f, top: window.innerHeight / 2 - (view.y / z) * f, visible: view.inFront, near: view.angularDistance < 4 };
+    return { left: Math.max(24, Math.min(window.innerWidth - 24, window.innerWidth / 2 + (view.x / z) * f)), top: Math.max(120, Math.min(window.innerHeight - 200, window.innerHeight / 2 - (view.y / z) * f)), visible: view.inFront, near: view.angularDistance < 5 };
   }, [orientation, target]);
 
-  /** Download every captured frame plus frames.json (poses, fov) as one zip — the input for `sodar stitch`. */
+  // ------------------------------------------------------------------ checking / review
+  const computeGate = useCallback(
+    (room: Room, frameCount: number, retakeCount: number) => {
+      const p = plan;
+      const captured = frames.map((f) => ({ yaw: f.yaw, elevation: -f.pitch }));
+      const gaps = p ? coverageGaps(p, captured) : { missingHorizonSectors: [], ceiling: false, floor: false };
+      const progress = p ? planProgress(p, capturedIndexes) : { missing: [], total: 0 };
+      const gateResult = checkRoom({ mode: room.mode ?? activeMode, frameCount, minFrames: minimumFrames(room.mode ?? activeMode), maxFrames: PLAN_LIMITS.full3dMax, retakeCount, missingTargets: progress.missing.length, totalTargets: progress.total, missingHorizonSectors: gaps.missingHorizonSectors.length, supportedFormats: true });
+      setRoomGate(gateResult);
+      updateRoom(room.id, (r) => ({ ...r, gate: { blocking: gateResult.blocking, recommended: gateResult.recommended, info: gateResult.info } }));
+      return gateResult;
+    },
+    [plan, frames, capturedIndexes, activeMode, updateRoom],
+  );
+
+  /** Stitches the on-device preview panorama for a room (quick: all frames; full 3D: the first interior station). */
+  const stitchRoom = useCallback(
+    async (room: Room, sessionId: string, width = PREVIEW_WIDTH) => {
+      const all = await roomFrames(room.id);
+      const interior = all.filter((f) => f.metadata.stationIndex !== undefined && plan?.stations[f.metadata.stationIndex]?.kind === "interior");
+      const firstInterior = interior.length ? interior.filter((f) => f.metadata.stationIndex === interior[0].metadata.stationIndex) : [];
+      const chosen = room.mode === "full3d" && firstInterior.length >= 6 ? firstInterior : all;
+      if (chosen.length < 2) return undefined;
+      setProgressText(t("stitching"));
+      const stop = stopwatch();
+      const out = await stitchFrames(
+        chosen.map((f) => ({ blob: f.jpeg, yaw: f.metadata.yaw, elevation: -f.metadata.pitch, roll: f.metadata.roll })),
+        { fov: DEFAULT_FOV, width: Math.min(width, maxStitchWidth()), onProgress: (d, n) => setProgressText(`${t("stitching")} ${d}/${n}`) },
+      );
+      await savePanorama({ roomId: room.id, sessionId, panorama: out.panorama, mask: out.mask, coverage: out.coverage, width: out.width, height: out.height, filled: false, createdAt: new Date().toISOString() });
+      const url = URL.createObjectURL(out.panorama);
+      panoramaUrls.current.push(url);
+      updateRoom(room.id, (r) => ({ ...r, panoramaUrl: url }));
+      track("panorama_stitched", { frames: out.frames, coverage: out.coverage, width: out.width, durationMs: stop(), measured: out.durationMs }, { sessionId, roomId: room.id });
+      setProgressText(null);
+      return out;
+    },
+    [plan, t, updateRoom],
+  );
+
+  const finishRoom = async () => {
+    if (!session || !activeRoom) return;
+    setPhase("checking");
+    setPaused(true);
+    const list = await refreshFrames(activeRoom.id);
+    const retakeCount = list.filter((f) => f.quality?.findings?.some((x) => x.severity === "retake")).length;
+    computeGate(activeRoom, list.length, retakeCount);
+    track("room_completed", { frames: list.length, retakeCandidates: retakeCount, durationMs: captureTimer.current?.() ?? null, mode: activeMode }, { sessionId: session.id, roomId: activeRoom.id });
+    captureTimer.current = undefined;
+    try {
+      if (list.length >= 2) await stitchRoom(activeRoom, session.id);
+    } catch (err) {
+      setProgressText(null);
+      setResultsMessage(err instanceof Error && /WebGL/i.test(err.message) ? t("noWebgl") : t("stitchFailed"));
+    }
+    updateRoom(activeRoom.id, (room) => ({ ...room, status: "review" }));
+    setPhase("review");
+  };
+
+  const runAstra = async () => {
+    if (!activeRoom || !session) return;
+    setAstraBusy(true);
+    setAstraError(null);
+    track("quality_review_requested", { frames: frames.length }, { sessionId: session.id, roomId: activeRoom.id });
+    try {
+      const list = await roomFrames(activeRoom.id);
+      // Sample: the four weakest frames plus four evenly spaced ones, thumbnails only.
+      const byScore = [...list].sort((a, b) => (a.quality?.score ?? 1) - (b.quality?.score ?? 1)).slice(0, 4);
+      const spaced = list.filter((_, i) => i % Math.max(1, Math.floor(list.length / 4)) === 0).slice(0, 4);
+      const sample = [...new Map([...byScore, ...spaced].map((f) => [f.id, f])).values()].slice(0, 8);
+      const images = await Promise.all(sample.map((f) => blobToDataUrl(f.thumb ?? f.jpeg)));
+      const localFindings = [...new Set(list.flatMap((f) => f.quality?.findings?.filter((x) => x.severity !== "info").map((x) => x.code) ?? []))].slice(0, 12);
+      const review = await reviewCapture({ roomName: activeRoom.name, captured: list.length, targetCount: plan?.targets.length ?? activeRoom.targetCount, images, captureMode: activeMode, localFindings, locale });
+      setAstraReview(review);
+      updateRoom(activeRoom.id, (room) => ({ ...room, review }));
+    } catch (err) {
+      setAstraError(err instanceof Error && /sign in|authentication/i.test(err.message) ? t("review.signInForAstra") : t("review.astraFailed"));
+    } finally {
+      setAstraBusy(false);
+    }
+  };
+
+  const retakeFrame = (frameId: string, checkpoint: number) => {
+    if (!session || !activeRoom) return;
+    track("retake_requested", { checkpoint, completed: false }, { sessionId: session.id, roomId: activeRoom.id });
+    setRetake({ frameId, checkpoint });
+    setAstraReview(undefined);
+    startCapturing();
+  };
+
+  const addMoreFrames = () => {
+    setRetake(null);
+    setAstraReview(undefined);
+    startCapturing();
+  };
+
+  const discardRoom = async () => {
+    if (!session || !activeRoom) return;
+    if (!window.confirm(t("review.discardConfirm"))) return;
+    await deleteRoomFrames(activeRoom.id);
+    await deletePanorama(activeRoom.id).catch(() => undefined);
+    setSession((old) => {
+      if (!old) return old;
+      const rooms = old.rooms.filter((r) => r.id !== activeRoom.id);
+      const room = newRoom(roomName(rooms.length + 1), activeMode, size);
+      return { ...old, rooms: [...rooms, room], activeRoomId: room.id };
+    });
+    setPlan(undefined);
+    setCapturedIndexes(new Set());
+    setFrames([]);
+    setAstraReview(undefined);
+    startCapturing();
+  };
+
+  const confirmRoom = () => {
+    if (!session || !activeRoom) return;
+    updateRoom(activeRoom.id, (room) => ({ ...room, status: "confirmed", confirmedAt: new Date().toISOString(), reviewOverridden: roomGate.recommended.length > 0 || astraReview?.verdict === "retake" }));
+    stopCamera();
+    setPhase("saving");
+  };
+
+  // ------------------------------------------------------------------ saving
+  const [saveState, setSaveState] = useState<{ done: number; total: number; failed: number } | null>(null);
+
+  const saveRoom = useCallback(
+    async (room: Room, s: ScanSession): Promise<boolean> => {
+      setBusy("saving");
+      setResultsMessage(null);
+      const stop = stopwatch();
+      try {
+        await httpScannerBackend.createScan(s.id, s.propertyName);
+        for (const [index, r] of s.rooms.entries()) await httpScannerBackend.createRoom(s.id, r.id, r.name, index + 1, r.targetCount, r.mode ?? s.mode);
+        updateRoom(room.id, (r) => ({ ...r, status: "uploading" }));
+        track(room.uploaded ? "upload_resumed" : "upload_started", { frames: room.captured }, { sessionId: s.id, roomId: room.id });
+        const result = await uploadRoom(room.id, { concurrency: 3, onProgress: (p) => setSaveState({ done: p.done, total: p.total, failed: p.failed }) });
+        updateRoom(room.id, (r) => ({ ...r, uploaded: result.keys.length }));
+        const stored = await loadPanorama(room.id);
+        if (stored && !stored.uploaded?.original) {
+          await httpScannerBackend.uploadPanorama(s.id, room.id, "stitched_original", stored.panorama, { width: stored.width, height: stored.height, coverage: stored.coverage });
+          await httpScannerBackend.uploadPanorama(s.id, room.id, "coverage_mask", stored.mask, { width: stored.width, height: stored.height, coverage: stored.coverage });
+          if (stored.filledPanorama) await httpScannerBackend.uploadPanorama(s.id, room.id, "ai_completed", stored.filledPanorama, { width: stored.width, height: stored.height, coverage: 1 });
+          await savePanorama({ ...stored, uploaded: { original: new Date().toISOString(), mask: new Date().toISOString(), filled: stored.filledPanorama ? new Date().toISOString() : undefined } });
+        }
+        if (result.failed.length) {
+          setResultsMessage(t("saving.partial", { failed: result.failed.length }));
+          updateRoom(room.id, (r) => ({ ...r, status: "confirmed" }));
+          return false;
+        }
+        updateRoom(room.id, (r) => ({ ...r, status: "uploaded" }));
+        setSession((old) => (old ? { ...old, serverKnown: true } : old));
+        track("room_completed", { uploaded: result.keys.length, uploadMs: stop() }, { sessionId: s.id, roomId: room.id });
+        return true;
+      } catch (err) {
+        if (err instanceof BackendError && err.code === "authentication_required") {
+          setSignInOpen(true);
+        } else if (err instanceof BackendError && err.code === "backend_unconfigured") {
+          setResultsMessage(t("saving.unavailable"));
+        } else setResultsMessage(t("saving.failed"));
+        updateRoom(room.id, (r) => ({ ...r, status: "confirmed" }));
+        return false;
+      } finally {
+        setBusy(null);
+        setSaveState(null);
+      }
+    },
+    [t, updateRoom],
+  );
+
+  // Entering "saving": ask for sign-in if needed, otherwise upload straight away.
+  useEffect(() => {
+    if (phase !== "saving" || !session || !activeRoom || busy) return;
+    if (!supabaseConfigured) {
+      updateRoom(activeRoom.id, (r) => ({ ...r, status: "complete" }));
+      setPhase("results");
+      return;
+    }
+    if (!signedIn) {
+      setSignInOpen(true);
+      return;
+    }
+    if (activeRoom.status === "uploaded") return;
+    void saveRoom(activeRoom, session).then((ok) => {
+      if (ok) openConsent(activeRoom);
+      else setPhase("results");
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, signedIn, activeRoom?.status, busy]);
+
+  const skipSaving = () => {
+    setSignInOpen(false);
+    if (activeRoom) updateRoom(activeRoom.id, (r) => ({ ...r, status: r.status === "confirmed" ? "complete" : r.status }));
+    setPhase("results");
+  };
+
+  // ------------------------------------------------------------------ reconstruction
+  const openConsent = async (room: Room) => {
+    setConsent({ room, estimate: null, loading: true, error: null });
+    try {
+      const estimate = await httpScannerBackend.estimate(room.id);
+      setConsent({ room, estimate, loading: false, error: null });
+    } catch (err) {
+      setConsent({ room, estimate: null, loading: false, error: err instanceof BackendError && err.code === "backend_unconfigured" ? t("consent.notAvailable") : t("consent.estimateFailed") });
+    }
+    setPhase("results");
+  };
+
+  const startReconstruction = async (providers: ProviderId[], options: { wantMesh: boolean }) => {
+    if (!consent || !session) return;
+    const room = consent.room;
+    setConsent(null);
+    setBusy(room.id);
+    try {
+      const result = await httpScannerBackend.startReconstruction(session.id, room.id, providers, options);
+      track("reconstruction_submitted", { providers: providers.join(","), jobs: result.jobs.length }, { sessionId: session.id, roomId: room.id });
+      updateRoom(room.id, (r) => ({ ...r, status: "processing", jobs: Object.fromEntries(result.jobs.map((job) => [job.provider, { id: job.id, status: job.status, updatedAt: job.updatedAt }])) }));
+      setSession((old) => (old ? { ...old, consent: { aiProcessing: new Date().toISOString(), paid: new Date().toISOString() } } : old));
+      if (result.skipped.length) setResultsMessage(t("consent.skipped", { reasons: result.skipped.map((s) => (t.has(`consent.unavailable.${s.reason}`) ? t(`consent.unavailable.${s.reason}`) : s.reason)).join(", ") }));
+      await refreshView(room.id);
+    } catch (err) {
+      setResultsMessage(err instanceof BackendError && t.has(`consent.errors.${err.code}`) ? t(`consent.errors.${err.code}`) : t("consent.startFailed"));
+    } finally {
+      setBusy(null);
+    }
+  };
+
+  const refreshView = useCallback(async (roomId: string) => {
+    try {
+      const view = await httpScannerBackend.roomView(roomId);
+      setViews((old) => {
+        const previous = old[roomId];
+        for (const job of view.jobs) {
+          const before = previous?.jobs.find((j) => j.id === job.id)?.status;
+          if (before && before !== job.status) track("provider_status_changed", { provider: job.provider, from: before, to: job.status }, { roomId });
+          if (before && before !== job.status && job.status === "ready") track("processing_completed", { provider: job.provider }, { roomId });
+          if (before && before !== job.status && (job.status === "failed" || job.status === "expired")) track("processing_failed", { provider: job.provider, code: job.failureCode }, { roomId });
+        }
+        return { ...old, [roomId]: view };
+      });
+      updateRoom(roomId, (room) => ({ ...room, status: view.status === "ready" || view.status === "partially_ready" ? "complete" : view.status === "failed" || view.status === "expired" ? "failed" : view.jobs.length ? "processing" : room.status }));
+    } catch {}
+  }, [updateRoom]);
+
+  // Poll room views while any job is active and the page is visible.
+  useEffect(() => {
+    if (phase !== "results" || !session || !signedIn || !savedRemotely) return;
+    const roomsToPoll = session.rooms.filter((room) => room.status === "processing" || room.status === "uploaded" || (room.jobs && Object.keys(room.jobs).length));
+    if (!roomsToPoll.length) return;
+    let cancelled = false;
+    const run = () => {
+      if (cancelled || document.visibilityState === "hidden") return;
+      roomsToPoll.forEach((room) => void refreshView(room.id));
+    };
+    run();
+    const id = window.setInterval(run, ROOM_POLL_MS);
+    document.addEventListener("visibilitychange", run);
+    return () => {
+      cancelled = true;
+      window.clearInterval(id);
+      document.removeEventListener("visibilitychange", run);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, signedIn, savedRemotely, session?.rooms.map((r) => `${r.id}:${r.status}`).join("|")]);
+
+  // ------------------------------------------------------------------ results actions
+  const completePanorama = async (room: Room) => {
+    if (!session) return;
+    setBusy(room.id);
+    setProgressText(t("filling"));
+    try {
+      const stored = await loadPanorama(room.id);
+      if (!stored) return;
+      const filled = await aiFillPanorama(stored.panorama, stored.mask, Math.max(2048, stored.width));
+      await savePanorama({ ...stored, filled: true, filledPanorama: filled.panorama, filledAt: new Date().toISOString() });
+      const url = URL.createObjectURL(filled.panorama);
+      panoramaUrls.current.push(url);
+      updateRoom(room.id, (r) => ({ ...r, panoramaAiUrl: url }));
+      if (savedRemotely) await httpScannerBackend.uploadPanorama(session.id, room.id, "ai_completed", filled.panorama, { width: filled.width, height: filled.height, coverage: 1 }).catch(() => undefined);
+    } catch (err) {
+      setResultsMessage(err instanceof Error && /sign in|authentication/i.test(err.message) ? t("results.signInForFill") : t("results.fillFailed"));
+    } finally {
+      setBusy(null);
+      setProgressText(null);
+    }
+  };
+
+  const addRoom = () => {
+    if (!session) return;
+    const room = newRoom(roomName(session.rooms.length + 1), activeMode, size);
+    setSession({ ...session, rooms: [...session.rooms, room], activeRoomId: room.id });
+    setPlan(undefined);
+    setCapturedIndexes(new Set());
+    setFrames([]);
+    setAstraReview(undefined);
+    setRetake(null);
+    setPhase("mode");
+  };
+
   const exportFrames = async () => {
     if (!session) return;
-    const entries: ZipEntry[] = [];
-    const rooms: Array<Record<string, unknown>> = [];
-    for (const [ri, room] of session.rooms.entries()) {
-      const frames = await roomFrames(room.id);
-      const dir = `room-${String(ri + 1).padStart(2, "0")}`;
-      const list: Array<Record<string, unknown>> = [];
-      for (const [fi, frame] of frames.entries()) {
-        const file = `${dir}/frame-${String(fi + 1).padStart(3, "0")}.jpg`;
-        entries.push({ name: file, data: new Uint8Array(await frame.jpeg.arrayBuffer()) });
-        const m = frame.metadata;
-        list.push({ file, yaw: m.yaw, pitch: m.pitch, roll: m.roll, elevation: m.checkpoint.elevation, checkpoint: m.checkpoint, timestamp: m.timestamp, width: m.width, height: m.height });
+    setBusy("export");
+    try {
+      const entries: ZipEntry[] = [];
+      const rooms: Array<Record<string, unknown>> = [];
+      for (const [ri, room] of session.rooms.entries()) {
+        const list = await roomFrames(room.id);
+        const dir = `room-${String(ri + 1).padStart(2, "0")}`;
+        const files: Array<Record<string, unknown>> = [];
+        for (const [fi, frame] of list.entries()) {
+          const file = `${dir}/frame-${String(fi + 1).padStart(3, "0")}.jpg`;
+          entries.push({ name: file, data: new Uint8Array(await frame.jpeg.arrayBuffer()) });
+          const m = frame.metadata;
+          files.push({ file, yaw: m.yaw, pitch: m.pitch, roll: m.roll, elevation: m.checkpoint.elevation, checkpoint: m.checkpoint, station: m.stationIndex, timestamp: m.timestamp, width: m.width, height: m.height, quality: frame.quality?.score });
+        }
+        rooms.push({ id: room.id, name: room.name, mode: room.mode, fov: DEFAULT_FOV, targetCount: room.targetCount, frames: files });
+        const pano = await loadPanorama(room.id);
+        if (pano) {
+          entries.push({ name: `${dir}/panorama-original.jpg`, data: new Uint8Array(await pano.panorama.arrayBuffer()) }, { name: `${dir}/coverage-mask.png`, data: new Uint8Array(await pano.mask.arrayBuffer()) });
+          if (pano.filledPanorama) entries.push({ name: `${dir}/panorama-ai-completed.jpg`, data: new Uint8Array(await pano.filledPanorama.arrayBuffer()) });
+        }
       }
-      rooms.push({ id: room.id, name: room.name, fov: DEFAULT_FOV, targetCount: room.targetCount, frames: list });
+      const manifest = { schema: "sodar-frames.v2", sessionId: session.id, exportedAt: new Date().toISOString(), device: deviceSummary(), rooms, provenance: { "panorama-original.jpg": "captured", "panorama-ai-completed.jpg": "ai_generated_completion", "coverage-mask.png": "white = not captured" } };
+      entries.push({ name: "frames.json", data: new TextEncoder().encode(JSON.stringify(manifest, null, 2)) });
+      const url = URL.createObjectURL(buildZip(entries));
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `sodar-scan-${session.id.slice(0, 8)}.zip`;
+      a.click();
+      window.setTimeout(() => URL.revokeObjectURL(url), 5_000);
+    } finally {
+      setBusy(null);
     }
-    const manifest = { schema: "sodar-frames.v1", sessionId: session.id, exportedAt: new Date().toISOString(), rooms };
-    entries.push({ name: "frames.json", data: new TextEncoder().encode(JSON.stringify(manifest, null, 2)) });
-    const blob = buildZip(entries);
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `sodar-scan-${session.id.slice(0, 8)}.zip`;
-    a.click();
-    window.setTimeout(() => URL.revokeObjectURL(url), 5_000);
   };
 
   const restart = () => {
-    setSession(newSession(roomName(1)));
+    if (session && session.rooms.some((room) => room.captured > 0) && !window.confirm(t("results.restartConfirm"))) return;
+    for (const url of panoramaUrls.current) URL.revokeObjectURL(url);
+    panoramaUrls.current = [];
+    for (const url of thumbUrls.current.values()) URL.revokeObjectURL(url);
+    thumbUrls.current.clear();
+    setSession(undefined);
     setPlan(undefined);
-    setThumbs([]);
-    setPhase("idle");
+    setFrames([]);
+    setCapturedIndexes(new Set());
+    setViews({});
+    setTour(null);
+    setResultsMessage(null);
+    setPhase("welcome");
   };
 
-  const total = plan?.targets.length ?? activeRoom?.targetCount ?? 0;
+  const deleteEverything = async () => {
+    if (!session) return;
+    setBusy("delete");
+    try {
+      if (savedRemotely) await httpScannerBackend.deleteScan(session.id);
+      for (const room of session.rooms) {
+        await deleteRoomFrames(room.id);
+        await deletePanorama(room.id).catch(() => undefined);
+      }
+      await deleteSession(session.id);
+      setConfirmDelete(false);
+      setResultsMessage(t("results.deleted"));
+      restart();
+    } catch {
+      setResultsMessage(t("results.deleteFailed"));
+    } finally {
+      setBusy(null);
+    }
+  };
+
+  const loadTour = useCallback(async () => {
+    if (!session) return;
+    if (savedRemotely && signedIn) {
+      try {
+        const remote = await httpScannerBackend.getLinks(session.id);
+        setLinks(remote);
+      } catch {}
+    }
+    const rooms = session.rooms.filter((room) => room.panoramaUrl);
+    const confirmed = (links.length ? links : session.links ?? []).filter((l) => l.confirmed);
+    setTour(buildTour({ scanId: session.id, propertyName: session.propertyName, rooms: rooms.map((room, i) => ({ id: room.id, name: room.name, ordinal: i + 1, floor: room.floor, panorama: room.panoramaUrl!, panoramaProvenance: "captured" })), links: mergeLinks(provisionalLinks(rooms.map((r) => r.id)), confirmed) }));
+  }, [session, savedRemotely, signedIn, links]);
+
+  useEffect(() => {
+    if (phase === "results") void loadTour();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [phase, session?.rooms.map((r) => r.panoramaUrl).join("|"), links.length]);
+
+  const saveLinks = async (next: TourLinkRecord[]) => {
+    if (!session) return;
+    setSession({ ...session, links: next.map((l) => ({ fromRoomId: l.fromRoomId, toRoomId: l.toRoomId, yaw: l.yaw, pitch: l.pitch, confirmed: true })) });
+    const saved = savedRemotely ? await httpScannerBackend.saveLinks(session.id, next) : next;
+    setLinks(saved);
+  };
+
+  // ------------------------------------------------------------------ demo (?demo=1): stitch the bundled room without a camera
+  useEffect(() => {
+    if (!demo || phase !== "welcome" || session) return;
+    let cancelled = false;
+    (async () => {
+      const s = newSession(roomName(1), "quick", "normal");
+      setSession(s);
+      setProgressText(t("stitching"));
+      const manifest = (await fetch("/media/demo-frames/frames.json").then((r) => r.json())) as { fov: { horizontal: number; vertical: number }; frames: Array<{ file: string; yaw: number; elevation: number; roll: number }> };
+      const room = s.rooms[0];
+      let index = 0;
+      for (const f of manifest.frames) {
+        const jpeg = await fetch(`/media/demo-frames/${f.file}`).then((r) => r.blob());
+        const id = crypto.randomUUID();
+        const metadata: FrameMetadata = { id, roomId: room.id, sessionId: s.id, yaw: f.yaw, pitch: -f.elevation, roll: f.roll, fov: manifest.fov, timestamp: new Date().toISOString(), checkpoint: { index, ring: 0, yaw: f.yaw, pitch: -f.elevation, elevation: f.elevation }, width: 480, height: 640, mimeType: "image/jpeg", captureMode: "quick" };
+        await saveFrame({ id, metadata, jpeg });
+        index++;
+      }
+      if (cancelled) return;
+      const done = { ...room, captured: manifest.frames.length, targetCount: manifest.frames.length, status: "complete" as const };
+      setSession({ ...s, rooms: [done] });
+      await stitchRoom(done, s.id);
+      if (cancelled) return;
+      setPhase("results");
+      setPreview({ open: true, roomId: done.id });
+    })().catch(() => setResultsMessage(t("stitchFailed")));
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [demo, phase]);
+
+  // ------------------------------------------------------------------ render
+  const previewRooms: PreviewRoom[] = (session?.rooms ?? []).filter((room) => room.panoramaUrl).map((room) => ({ id: room.id, name: room.name, panorama: room.panoramaUrl!, panoramaAi: room.panoramaAiUrl ?? null }));
+  const showVideo = phase === "permissions" || phase === "capturing" || phase === "checking";
+  const canFinish = capturedIndexes.size >= (retake ? 0 : Math.min(minimumFrames(activeMode), 6));
 
   return (
     <main className="relative min-h-dvh overflow-hidden bg-bg text-text">
-      <video ref={video} playsInline muted autoPlay className={`absolute inset-0 h-full w-full object-cover transition-opacity ${phase === "capturing" || phase === "roomDone" ? "opacity-100" : "opacity-0"}`} />
-      {flash ? <div className="pointer-events-none absolute inset-0 z-20 bg-white/80" /> : null}
+      <video ref={video} playsInline muted autoPlay className={`absolute inset-0 h-full w-full object-cover transition-opacity ${showVideo ? "opacity-100" : "opacity-0"}`} aria-hidden />
+      {flash ? <div className={`pointer-events-none absolute inset-0 z-20 ${flash === "ok" ? "bg-white/80" : "bg-red-500/40"}`} /> : null}
 
       <div className="absolute inset-x-0 top-0 z-30 flex items-center justify-between px-4 py-3">
         <span className="flex items-center gap-2">
           <SodarMark size={18} className="text-text" />
           <span className="wordmark text-[.7rem]">Sodar</span>
         </span>
-        <Link href="/" className="rounded-full border border-white/25 bg-black/40 px-3 py-1 font-mono text-[11px] text-text backdrop-blur">
-          {t("exit")}
-        </Link>
+        <Link href="/" className="rounded-full border border-white/25 bg-black/40 px-3 py-1.5 font-mono text-[11px] text-text backdrop-blur" onClick={() => stopCamera()}>{t("exit")}</Link>
       </div>
 
-      {phase === "idle" ? (
+      {phase === "loading" ? <p className="relative z-10 flex min-h-dvh items-center justify-center font-mono text-[11px] text-text-muted">{t("loading")}</p> : null}
+
+      {phase === "welcome" ? (
         <div className="relative z-10 mx-auto flex min-h-dvh max-w-md flex-col justify-end px-6 pb-10 pt-24">
-          <p className="eyebrow">
-            <span /> {t("eyebrow")}
-          </p>
+          <p className="eyebrow"><span /> {t("eyebrow")}</p>
           <h1 className="display mt-4 text-[clamp(2.4rem,9vw,3.6rem)]">{t("title")}</h1>
           <p className="mt-4 text-text-muted">{t("intro")}</p>
-          {!isMobile ? (
-            <p className="mt-3 font-mono text-[11px] text-text-faint">
-              {t("desktopHint")} <a href="?demo=1" className="underline">{t("demoLink")}</a>
-            </p>
-          ) : null}
-          {error ? <p className="mt-4 rounded-xl border border-border-strong bg-bg-raised p-3 text-sm text-text">{error}</p> : null}
-          <button type="button" onClick={start} disabled={requesting || !session} className="button-primary mt-8 w-full justify-center">
-            {requesting ? t("requesting") : t("start")} <span aria-hidden>↗</span>
-          </button>
+          <ol className="mt-4 space-y-1 text-sm text-text-muted">
+            {(t.raw("steps") as string[]).map((step, i) => <li key={i} className="flex gap-3"><span className="font-mono text-[11px] text-text-faint">{String(i + 1).padStart(2, "0")}</span>{step}</li>)}
+          </ol>
+          {!isMobile ? <p className="mt-3 font-mono text-[11px] text-text-faint">{t("desktopHint")} <a href="?demo=1" className="underline">{t("demoLink")}</a></p> : null}
+          {progressText ? <p className="mt-3 font-mono text-[11px] text-text-muted">{progressText}</p> : null}
+          <button type="button" onClick={() => setPhase("mode")} disabled={demo} className="button-primary mt-8 w-full justify-center">{t("start")}</button>
           <p className="mt-3 text-center font-mono text-[10px] text-text-faint">{t("privacyNote")}</p>
         </div>
       ) : null}
 
-      {phase === "capturing" || phase === "roomDone" ? (
-        <div className="absolute inset-0 z-10">
-          <div className="absolute inset-0 bg-[radial-gradient(circle,transparent_35%,rgba(0,0,0,.5))]" />
-          <div className="absolute inset-x-8 top-1/2 h-px bg-white/30" />
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <svg width="96" height="96" viewBox="0 0 100 100" className="-rotate-90">
-              <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,.45)" strokeWidth="2" fill="none" />
-              <circle cx="50" cy="50" r="44" stroke="#f4f2ee" strokeWidth="3" fill="none" strokeDasharray="276" strokeDashoffset={276 * (1 - dwell)} strokeLinecap="round" />
-            </svg>
-          </div>
-          {phase === "capturing" && marker?.visible && hasGyro ? (
-            <div className={`pointer-events-none absolute h-12 w-12 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 ${marker.near ? "border-text bg-text/30" : "border-dashed border-white/70"}`} style={{ left: marker.left, top: marker.top }} />
-          ) : null}
-
-          <div className="absolute left-4 top-14 font-mono text-[11px] text-text" dir="ltr">
-            <span className="num">{String(activeRoom?.captured ?? 0).padStart(2, "0")}</span>
-            <span className="text-text-muted">/{total || "—"} {t("frames")}</span>
-          </div>
-          <div className="absolute right-4 top-14 rounded-full border border-white/25 bg-black/40 px-2.5 py-1 font-mono text-[10px] text-text backdrop-blur">
-            {activeRoom?.name}
-          </div>
-
-          <div className="absolute inset-x-0 bottom-36 flex gap-1 overflow-x-auto px-4" dir="ltr">
-            {thumbs.map((src, i) => (
-              <img key={i} src={src} alt="" className="h-10 w-14 shrink-0 rounded object-cover" />
+      {phase === "mode" ? (
+        <div className="relative z-10 mx-auto flex min-h-dvh max-w-md flex-col justify-end px-6 pb-10 pt-24">
+          <p className="eyebrow"><span /> {session ? t("mode.eyebrowNextRoom", { name: activeRoom?.name ?? "" }) : t("mode.eyebrow")}</p>
+          <h2 className="display mt-4 text-[clamp(2rem,8vw,3rem)]">{t("mode.title")}</h2>
+          <div className="mt-6 space-y-3" role="radiogroup" aria-label={t("mode.title")}>
+            {(["full3d", "quick"] as CaptureMode[]).map((m) => (
+              <button key={m} type="button" role="radio" aria-checked={mode === m} onClick={() => setMode(m)} className={`w-full rounded-2xl border p-4 text-left ${mode === m ? "border-text bg-white/5" : "border-white/20"}`}>
+                <span className="block text-base font-medium">{t(`mode.${m}.name`)}{m === "full3d" ? <span className="ml-2 rounded-full border border-white/25 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-text-muted">{t("mode.recommended")}</span> : null}</span>
+                <span className="mt-1 block text-sm text-text-muted">{t(`mode.${m}.body`)}</span>
+                <span className="mt-2 block font-mono text-[11px] text-text-faint">{t(`mode.${m}.meta`)}</span>
+              </button>
             ))}
           </div>
+          {mode === "full3d" ? (
+            <div className="mt-4 flex gap-2" role="radiogroup" aria-label={t("mode.sizeLabel")}>
+              {(["normal", "large"] as RoomSize[]).map((s) => (
+                <button key={s} type="button" role="radio" aria-checked={size === s} onClick={() => setSize(s)} className={`flex-1 rounded-xl border px-3 py-3 text-sm ${size === s ? "border-text bg-white/5" : "border-white/20"}`}>{t(`mode.size.${s}`)}</button>
+              ))}
+            </div>
+          ) : null}
+          <button type="button" onClick={() => (session ? (updateRoom(session.activeRoomId, (r) => ({ ...r, mode, size })), setPhase("permissions")) : beginNewSession(mode, size))} className="button-primary mt-6 w-full justify-center">{t("mode.continue")}</button>
+        </div>
+      ) : null}
 
-          <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/15 bg-black/55 p-4 backdrop-blur">
-            <p className="font-mono text-[10px] uppercase tracking-[.16em] text-text-muted">{t("assistant")}</p>
-            {stitching ? (
-              <p className="mt-1 text-sm text-text">{stitching}</p>
-            ) : phase === "roomDone" ? (
-              <>
-                <p className="mt-1 text-sm text-text">{t("roomDone")}</p>
-                {astraReview ? <div className="mt-3 rounded-xl border border-white/20 bg-black/30 p-3"><p className="font-mono text-[10px] uppercase tracking-[.14em] text-text-muted">Astra · {astraReview.verdict}</p><p className="mt-1 text-sm text-text">{astraReview.summary}</p><p className="mt-2 text-xs text-text-muted">{astraReview.guidance}</p></div> : null}
-                {astraError ? <p className="mt-2 text-xs text-red-200">{astraError}</p> : null}
-                <button type="button" onClick={runAstraReview} disabled={astraBusy || !thumbs.length} className="button-secondary mt-3 w-full justify-center">
-                  {astraBusy ? "Astra is reviewing…" : astraReview ? "Review again with Astra" : "Review capture with Astra"}
-                </button>
-                <button type="button" onClick={finishRoom} className="button-primary mt-3 w-full justify-center">
-                  {finishedRooms + 1 >= ROOMS_IN_PREVIEW ? t("finish") : t("nextRoom")} <span aria-hidden>↗</span>
-                </button>
-              </>
-            ) : hasGyro === false ? (
-              <>
-                <p className="mt-1 text-sm text-text">{t("noGyro")}</p>
-                <div className="mt-3 flex gap-2">
-                  <button type="button" onClick={manualCapture} className="button-primary flex-1 justify-center">{t("manual")}</button>
-                  {(activeRoom?.captured ?? 0) >= 6 ? <button type="button" onClick={() => setPhase("roomDone")} className="button-secondary">{t("finishRoom")}</button> : null}
-                </div>
-              </>
+      {phase === "permissions" ? (
+        <div className="relative z-10 mx-auto flex min-h-dvh max-w-md flex-col justify-end px-6 pb-10 pt-24">
+          <div className="rounded-2xl border border-white/15 bg-black/60 p-5 backdrop-blur">
+            <p className="eyebrow"><span /> {t("permissions.eyebrow")}</p>
+            <h2 className="display mt-3 text-[clamp(1.8rem,7vw,2.6rem)]">{stream.current ? t("permissions.confirmTitle") : t("permissions.title")}</h2>
+            <p className="mt-3 text-sm text-text-muted">{stream.current ? t("permissions.confirmBody") : t("permissions.body")}</p>
+            {cameraInfo ? <p className="mt-2 font-mono text-[11px] text-text-faint" dir="ltr">{cameraInfo.label || t("permissions.rearCamera")} · {cameraInfo.width}×{cameraInfo.height}{/ultra|0\.5/i.test(cameraInfo.label) ? ` · ${t("permissions.ultraWideWarning")}` : ""}</p> : null}
+            {motion === "denied" || motion === "unavailable" ? <p className="mt-2 text-xs text-text-muted">{t("permissions.noMotion")}</p> : null}
+            {permissionError ? <p role="alert" className="mt-3 rounded-xl border border-border-strong bg-bg-raised p-3 text-sm">{permissionError}</p> : null}
+            {!stream.current ? (
+              <button type="button" onClick={enterPermissions} disabled={requesting} className="button-primary mt-5 w-full justify-center">{requesting ? t("requesting") : t("permissions.allow")}</button>
             ) : (
-              <>
-                <p className="mt-1 text-sm text-text">{message || t("hold")}</p>
-                {(activeRoom?.captured ?? 0) >= 6 ? <button type="button" onClick={() => setPhase("roomDone")} className="button-mini mt-3">{t("finishRoom")}</button> : null}
-              </>
+              <div className="mt-5 flex gap-2">
+                <button type="button" onClick={() => { stopCamera(); setCameraInfo(null); void enterPermissions(); }} className="button-secondary flex-1 justify-center">{t("permissions.retryCamera")}</button>
+                <button type="button" onClick={afterPermissions} className="button-primary flex-1 justify-center">{t("permissions.looksRight")}</button>
+              </div>
             )}
           </div>
         </div>
       ) : null}
 
-      {phase === "processing" || phase === "done" ? (
-        <div className="relative z-10 mx-auto flex min-h-dvh max-w-md flex-col justify-center px-6 py-24">
-          <p className="eyebrow">
-            <span /> {phase === "done" ? t("done") : t("processingLabel")}
-          </p>
-          <h2 className="display mt-4 text-[clamp(2.2rem,8vw,3.2rem)]">{phase === "done" ? t("doneTitle") : t("processing")}</h2>
-          {phase === "processing" ? (
-            <div className="mt-6 h-1 w-full overflow-hidden rounded-full bg-white/10">
-              <div className="h-full bg-text transition-[width] duration-100" style={{ width: `${progress}%` }} />
-            </div>
-          ) : null}
-          <p className="mt-2 font-mono text-[11px] text-text-muted" dir="ltr">
-            {session?.rooms.reduce((n, r) => n + r.captured, 0) ?? 0} {t("frames")} · {session?.rooms.length ?? 0} {t("roomsLabel")}
-          </p>
-          {message ? <p className="mt-3 font-mono text-[11px] text-text-faint">{message}</p> : null}
-          {stitching ? <p className="mt-3 font-mono text-[11px] text-text-muted">{stitching}</p> : null}
-          {phase === "done" ? (
-            <>
-              <p className="mt-6 text-text-muted">{t("doneBody")}</p>
-              {session?.rooms.some((r) => r.panoramaUrl) ? (
-                <button type="button" onClick={() => setPreviewOpen(true)} className="button-primary mt-8 w-full justify-center">
-                  {t("openPreview")} <span aria-hidden>↗</span>
-                </button>
-              ) : null}
-              <Link href="/terminal" className="button-secondary mt-3 w-full justify-center">
-                {t("workspace")} <span aria-hidden>↗</span>
-              </Link>
-              <button type="button" onClick={exportFrames} className="button-secondary mt-3 w-full justify-center">
-                {t("export")} <span aria-hidden>↓</span>
-              </button>
-              <button type="button" onClick={restart} className="button-secondary mt-3 w-full justify-center">
-                {t("again")}
-              </button>
-            </>
-          ) : null}
+      {phase === "tutorial" ? <Tutorial mode={activeMode} onDone={() => setPhase("people")} /> : null}
+
+      {phase === "people" ? (
+        <div className="relative z-10 mx-auto flex min-h-dvh max-w-md flex-col justify-end px-6 pb-10 pt-24">
+          <p className="eyebrow"><span /> {t("people.eyebrow")}</p>
+          <h2 className="display mt-4 text-[clamp(2rem,8vw,3rem)]">{t("people.title")}</h2>
+          <p className="mt-4 text-text-muted">{t("people.body")}</p>
+          <ul className="mt-4 space-y-1 text-sm text-text-muted">{(t.raw("people.checklist") as string[]).map((item, i) => <li key={i}>• {item}</li>)}</ul>
+          <button type="button" onClick={startCapturing} className="button-primary mt-8 w-full justify-center">{t("people.ready")}</button>
         </div>
       ) : null}
 
-      {session ? <RoomPreview rooms={session.rooms} open={previewOpen} onClose={() => setPreviewOpen(false)} label={t("previewLabel")} /> : null}
+      {phase === "capturing" ? (
+        <CaptureOverlay
+          plan={plan}
+          target={target}
+          captured={capturedIndexes.size}
+          capturedIndexes={capturedIndexes}
+          marker={marker}
+          dwell={dwell}
+          hasGyro={hasGyro}
+          message={message}
+          roomName={activeRoom?.name ?? ""}
+          paused={paused}
+          needsMove={needsMove}
+          station={station && plan ? { label: station.label, height: station.height, kind: station.kind, index: station.index, total: plan.stations.length } : undefined}
+          retakeMode={Boolean(retake)}
+          onPause={() => setPaused(true)}
+          onResume={() => { setPaused(false); gate.current.reset(); }}
+          onInPosition={() => { setNeedsMove(false); gate.current.reset(); }}
+          onManualCapture={manualCapture}
+          onFinish={() => (retake ? (setRetake(null), setPhase("review")) : void finishRoom())}
+          canFinish={canFinish}
+          thumbs={frames.map((f) => thumbsMap.get(f.id)).filter((u): u is string => Boolean(u))}
+          lastRejected={lastRejected}
+          compassYaw={orientation?.yaw}
+        />
+      ) : null}
+
+      {phase === "checking" ? (
+        <div className="relative z-10 mx-auto flex min-h-dvh max-w-md flex-col justify-center px-6 py-24">
+          <p className="eyebrow"><span /> {t("checking.eyebrow")}</p>
+          <h2 className="display mt-4 text-[clamp(2rem,8vw,3rem)]">{t("checking.title")}</h2>
+          <p className="mt-3 font-mono text-[11px] text-text-muted">{progressText ?? t("checking.body")}</p>
+        </div>
+      ) : null}
+
+      {phase === "review" && activeRoom ? (
+        <ReviewPanel
+          roomName={activeRoom.name}
+          gate={roomGate}
+          frames={frames}
+          thumbs={thumbsMap}
+          review={astraReview ?? activeRoom.review}
+          reviewBusy={astraBusy}
+          reviewError={astraError}
+          reviewAvailable={Boolean(process.env.NEXT_PUBLIC_ASTRA_AVAILABLE !== "0")}
+          onReview={runAstra}
+          onRetake={retakeFrame}
+          onAddMore={addMoreFrames}
+          onConfirm={confirmRoom}
+          onDiscardRoom={discardRoom}
+          minFrames={minimumFrames(activeMode)}
+        />
+      ) : null}
+
+      {phase === "saving" ? (
+        <div className="relative z-10 mx-auto flex min-h-dvh max-w-md flex-col justify-center px-6 py-24">
+          <p className="eyebrow"><span /> {t("saving.eyebrow")}</p>
+          <h2 className="display mt-4 text-[clamp(2rem,8vw,3rem)]">{t("saving.title")}</h2>
+          <p className="mt-3 text-text-muted">{t("saving.body")}</p>
+          {saveState ? (
+            <>
+              <div className="mt-6 h-1 w-full overflow-hidden rounded-full bg-white/10" role="progressbar" aria-valuemin={0} aria-valuemax={saveState.total} aria-valuenow={saveState.done}>
+                <div className="h-full bg-text transition-[width] duration-200" style={{ width: `${saveState.total ? (saveState.done / saveState.total) * 100 : 0}%` }} />
+              </div>
+              <p className="mt-2 font-mono text-[11px] text-text-muted" dir="ltr">{saveState.done}/{saveState.total} {t("frames")}{saveState.failed ? ` · ${saveState.failed} ${t("saving.retrying")}` : ""}</p>
+            </>
+          ) : null}
+          {resultsMessage ? <p role="status" className="mt-3 rounded-xl border border-white/15 p-3 text-sm">{resultsMessage}</p> : null}
+          {!signedIn && supabaseConfigured ? (
+            <div className="mt-6 flex gap-2">
+              <button type="button" onClick={skipSaving} className="button-secondary flex-1 justify-center">{t("saving.keepLocal")}</button>
+              <button type="button" onClick={() => setSignInOpen(true)} className="button-primary flex-1 justify-center">{t("saving.signIn")}</button>
+            </div>
+          ) : null}
+          {!busy && signedIn && activeRoom?.status === "confirmed" && resultsMessage ? (
+            <div className="mt-6 flex gap-2">
+              <button type="button" onClick={skipSaving} className="button-secondary flex-1 justify-center">{t("saving.keepLocal")}</button>
+              <button type="button" onClick={() => session && void saveRoom(activeRoom, session).then((ok) => (ok ? openConsent(activeRoom) : undefined))} className="button-primary flex-1 justify-center">{t("saving.retry")}</button>
+            </div>
+          ) : null}
+          <p className="mt-6 text-center text-[11px] text-text-faint">{t("saving.leaveNote")}</p>
+        </div>
+      ) : null}
+
+      {phase === "results" && session ? (
+        <ResultsView
+          session={session}
+          views={views}
+          savedRemotely={savedRemotely}
+          signedIn={signedIn}
+          onOpenPreview={(roomId) => setPreview({ open: true, roomId })}
+          onOpenSplat={(artifact, room) => setSplat({ artifact, room })}
+          onStartProcessing={(room) => void openConsent(room)}
+          onAddRoom={addRoom}
+          onExport={() => void exportFrames()}
+          onEditTour={() => setTourEditor(true)}
+          onDelete={() => setConfirmDelete(true)}
+          onRestart={restart}
+          onSignIn={() => setSignInOpen(true)}
+          onSaveNow={() => { const room = session.rooms.find((r) => r.status !== "uploaded" && r.status !== "processing" && r.captured > 0); if (room) void saveRoom(room, session).then((ok) => (ok ? openConsent(room) : undefined)); }}
+          onCompletePanorama={(room) => void completePanorama(room)}
+          aiFillAvailable={aiFillEnabled() || signedIn}
+          busy={busy}
+          message={progressText ?? resultsMessage}
+        />
+      ) : null}
+
+      {confirmDelete && session ? (
+        <div role="dialog" aria-modal="true" className="fixed inset-0 z-50 flex items-end justify-center bg-black/70 p-4 backdrop-blur-sm sm:items-center">
+          <div className="w-full max-w-md rounded-2xl border border-white/15 bg-bg-raised p-5">
+            <h2 className="display text-2xl">{t("results.deleteTitle")}</h2>
+            <p className="mt-2 text-sm text-text-muted">{t("results.deleteBody")}</p>
+            <div className="mt-5 flex gap-2">
+              <button type="button" onClick={() => setConfirmDelete(false)} className="button-secondary flex-1 justify-center">{t("results.keep")}</button>
+              <button type="button" onClick={() => void deleteEverything()} disabled={busy === "delete"} className="button-primary flex-1 justify-center">{t("results.deleteConfirm")}</button>
+            </div>
+          </div>
+        </div>
+      ) : null}
+
+      {resumable && phase === "welcome" && !demo ? <ResumeDialog session={resumable.session} frames={resumable.frames} onContinue={() => void continueSession()} onStartOver={() => void startOver()} /> : null}
+      <SignInSheet open={signInOpen} onClose={() => (phase === "saving" ? skipSaving() : setSignInOpen(false))} onSignedIn={() => { setSignedIn(true); setSignInOpen(false); }} />
+      {consent ? <ConsentSheet estimate={consent.estimate} loading={consent.loading} error={consent.error} onStart={(providers, options) => void startReconstruction(providers, options)} onClose={() => setConsent(null)} /> : null}
+      {session ? <RoomPreview tour={tour} rooms={preview.roomId ? previewRooms.filter((r) => r.id === preview.roomId).concat(previewRooms.filter((r) => r.id !== preview.roomId)) : previewRooms} open={preview.open} onClose={() => setPreview({ open: false })} label={t("previewLabel")} initialNodeId={preview.roomId} /> : null}
+      {tourEditor && session ? <TourEditor rooms={previewRooms} links={links.length ? links : (session.links ?? []).map((l) => ({ ...l }))} onSave={saveLinks} onClose={() => setTourEditor(false)} /> : null}
+      {splat && splat.artifact.url ? <SplatViewer url={splat.artifact.url} format={/\.splat$/i.test(splat.artifact.name) ? "splat" : "ply"} label={`${splat.room.name} · ${splat.artifact.provider === "marble" ? t("results.marbleLabel") : t("results.kiriLabel")}`} disclosure={splat.artifact.provider === "marble" ? t("results.marbleNote") : t("results.kiriNote")} onClose={() => setSplat(null)} /> : null}
     </main>
   );
+}
+
+async function blobToDataUrl(blob: Blob): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(blob);
+  });
 }

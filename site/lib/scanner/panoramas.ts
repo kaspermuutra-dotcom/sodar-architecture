@@ -2,7 +2,13 @@
  * Stitched panoramas persisted on the device, keyed by room id. Kept in its own
  * IndexedDB database so the frames/sessions schema in db.ts stays untouched.
  */
-export type StoredPanorama = { roomId: string; sessionId: string; panorama: Blob; mask: Blob; coverage: number; width: number; height: number; filled?: boolean; createdAt: string };
+/**
+ * `panorama` is always the stitched original (captured pixels only, uncovered
+ * areas black); `filledPanorama` is the optional GPT Image 2 completion kept as
+ * a separate derivative; `mask` is the coverage mask (white = uncovered) that
+ * tells the two apart pixel by pixel.
+ */
+export type StoredPanorama = { roomId: string; sessionId: string; panorama: Blob; mask: Blob; coverage: number; width: number; height: number; filled?: boolean; filledPanorama?: Blob; filledAt?: string; createdAt: string; uploaded?: { original?: string; mask?: string; filled?: string } };
 
 const DB = "sodar-panoramas-v1";
 

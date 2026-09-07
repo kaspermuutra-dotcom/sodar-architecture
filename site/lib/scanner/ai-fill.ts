@@ -7,12 +7,15 @@
  * sphere's ±90°, i.e. exactly the band a ring capture at ~72° vertical FOV can
  * reach; the 128 px bands above and below are the missing zenith and nadir.
  */
-export type FillResult = { panorama: Blob; width: number; height: number };
+import { sessionToken } from "./contracts";
+
+export type FillResult = { panorama: Blob; width: number; height: number; provenance: "mixed" };
 
 async function bitmap(blob: Blob): Promise<ImageBitmap> {
   return createImageBitmap(blob);
 }
 
+/** Whether the automatic fill after stitching is switched on for this deployment (the person still confirms). */
 export function aiFillEnabled(): boolean {
   return process.env.NEXT_PUBLIC_AI_FILL === "1";
 }
@@ -59,7 +62,8 @@ export async function aiFillPanorama(panorama: Blob, mask: Blob, outWidth = 2048
   const form = new FormData();
   form.set("image", await toBlob(img), "panorama.png");
   form.set("mask", await toBlob(mk), "mask.png");
-  const res = await fetch("/api/ai-fill", { method: "POST", body: form });
+  const token = await sessionToken();
+  const res = await fetch("/api/ai-fill", { method: "POST", body: form, headers: token ? { authorization: `Bearer ${token}` } : {} });
   if (!res.ok) {
     const body = await res.json().catch(() => ({}));
     throw new Error((body as { message?: string; error?: string }).message || (body as { error?: string }).error || `ai-fill failed (${res.status})`);
@@ -75,5 +79,6 @@ export async function aiFillPanorama(panorama: Blob, mask: Blob, outWidth = 2048
   pano.close();
   m.close();
   filled.close();
-  return { panorama: blob, width: outWidth, height: outWidth / 2 };
+  img.width = img.height = mk.width = mk.height = tmp.width = tmp.height = out.width = out.height = 0;
+  return { panorama: blob, width: outWidth, height: outWidth / 2, provenance: "mixed" };
 }

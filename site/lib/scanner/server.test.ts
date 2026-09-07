@@ -9,7 +9,7 @@ describe("capture validation", () => {
     expect(() => validateFrame({ ...frame, mimeType: "image/png" as "image/jpeg" }, 4_000_000)).toThrow(/JPEG/);
     expect(() => validateFrame(frame, 30_000_000)).toThrow(/25 MB/);
     expect(() => validateFrame({ ...frame, width: 1 }, 4_000_000)).toThrow(/dimensions/);
-    expect(() => validateFrame({ ...frame, checkpoint: { ...frame.checkpoint, index: 240 } }, 4_000_000)).toThrow(/checkpoint/);
+    expect(() => validateFrame({ ...frame, checkpoint: { ...frame.checkpoint, index: 300 } }, 4_000_000)).toThrow(/checkpoint/);
   });
 });
 describe("preview gate", () => {

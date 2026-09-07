@@ -12,6 +12,7 @@ npm install
 cp .env.example .env.local   # optional until the workspace reads data
 npm run dev                   # http://localhost:3000
 npm run typecheck
+npm test                      # vitest, mocked providers — never consumes credits
 ```
 
 ## Design system — "Mono Scan"
@@ -60,14 +61,22 @@ id the form falls back to a pre-filled mailto.
 ## Scanner (`/scan`)
 
 Every white "Scan a property" button opens `/scan`: a full-screen guided
-capture built on the Photo Sphere Android app's logic
-(`third_party/360-photo-app`, MIT), ported to the browser in `lib/scanner/sphere.ts` (target plan, projection,
-alignment gate). Frames persist in IndexedDB (`lib/scanner/db.ts`); finishing a
-room uploads them through `app/api/scanner/*` (Supabase auth + storage,
-`lib/scanner/contracts.ts`) and queues a stitch job, then
-`components/scanner/room-preview.tsx` shows the two stitched rooms in Photo
-Sphere Viewer. Without a signed-in session frames stay on the phone. Default
-scope is one ring per room; `/scan?scope=sphere` captures the full sphere.
+capture for phones. Two modes — *Quick panorama* (turn on the spot) and *Full
+3D scan* (walk a loop of stations; default). Geometry is the Photo Sphere
+Android port in `lib/scanner/sphere.ts` plus the station plan in
+`lib/scanner/plan.ts`; local quality gates in `lib/scanner/quality.ts`; frames
+persist in IndexedDB (`lib/scanner/db.ts`) before they count. Finishing a room
+builds an on-device WebGL panorama preview (`lib/scanner/stitch.ts`), offers a
+GPT-6 Astra capture review (`/api/astra`), then — after e-mail sign-in —
+uploads the immutable originals resumably (`lib/scanner/upload.ts`,
+`app/api/scanner/*`) and, after an explicit consent sheet, starts KIRI (faithful
+3DGS) and optional Marble (World Labs) reconstruction through
+`app/api/reconstruction/*` and `lib/reconstruction/*`. Results, downloads, the
+Photo Sphere Viewer walkthrough, doorway confirmation and the gsplat viewer live
+under `components/scanner/`. Full design, provider matrix, privacy boundaries,
+env names, deployment, tests and runbook:
+[`../docs/SCANNER_ARCHITECTURE.md`](../docs/SCANNER_ARCHITECTURE.md).
+`/scan?demo=1` stitches the bundled synthetic room without a camera.
 
 ## Contact
 
@@ -86,6 +95,8 @@ stand-ins.
 ## Supabase
 
 - `lib/supabase/env.ts` — reads and validates the two public env vars
+- `lib/supabase/server.ts` — bearer authentication + service-role client for API routes
 - `lib/supabase/health.ts` — connectivity check (`components/dev-status.tsx`)
+- Migrations: `../supabase/migrations/202609040001_capture_backend.sql`, `202609070001_reconstruction.sql`
 
 Never put the `service_role` key in a `NEXT_PUBLIC_` variable.
