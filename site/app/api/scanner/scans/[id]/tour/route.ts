@@ -32,11 +32,11 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       const originalUrl = await sign(original.bucket, original.objectPath);
       if (!originalUrl) continue;
       const ai = mine.find((artifact) => artifact.type === "panorama_ai_completed");
-      const splatArtifact = mine.find((artifact) => artifact.type === "kiri_gaussian_splat" && /\.(ply|splat)$/i.test(artifact.objectPath)) ?? mine.find((artifact) => artifact.type === "marble_gaussian_splat" && /\.ply$/i.test(artifact.objectPath));
+      const splatArtifact = mine.find((artifact) => artifact.type === "kiri_gaussian_splat" && /\.(ply|splat)$/i.test(artifact.objectPath)) ?? mine.find((artifact) => artifact.type === "marble_gaussian_splat" && /\.spz$/i.test(artifact.objectPath) && artifact.metadata.variant !== "500k") ?? mine.find((artifact) => artifact.type === "marble_gaussian_splat" && /\.spz$/i.test(artifact.objectPath));
       const splatUrl = splatArtifact ? await sign(splatArtifact.bucket, splatArtifact.objectPath) : null;
       nodes.push({
         id: room.id, name: room.name, ordinal: room.ordinal, floor: room.floor_label ?? undefined, panorama: originalUrl, panoramaAi: ai ? await sign(ai.bucket, ai.objectPath) : null, panoramaProvenance: "captured",
-        splat: splatArtifact && splatUrl ? { url: splatUrl, format: /\.splat$/i.test(splatArtifact.objectPath) ? "splat" : "ply", provider: splatArtifact.provider === "marble" ? "marble" : "kiri", provenance: splatArtifact.provider === "marble" ? "ai_generated" : "captured" } : null,
+        splat: splatArtifact && splatUrl ? { url: splatUrl, format: /\.splat$/i.test(splatArtifact.objectPath) ? "splat" : /\.spz$/i.test(splatArtifact.objectPath) ? "spz" : "ply", provider: splatArtifact.provider === "marble" ? "marble" : "kiri", provenance: splatArtifact.provider === "marble" ? "ai_generated" : "captured" } : null,
         generativeWorld: mine.some((artifact) => artifact.provider === "marble"),
       });
     }

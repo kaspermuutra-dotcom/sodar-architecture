@@ -30,6 +30,7 @@ import { Tutorial } from "./tutorial";
 import { RoomPreview, type PreviewRoom } from "./room-preview";
 import { TourEditor } from "./tour-editor";
 import { SplatViewer } from "./splat-viewer";
+import { SpzViewer } from "./spz-viewer";
 
 /**
  * Guided property scanner.
@@ -1067,7 +1068,8 @@ export function Scanner() {
       {consent ? <ConsentSheet estimate={consent.estimate} loading={consent.loading} error={consent.error} onStart={(providers, options) => void startReconstruction(providers, options)} onClose={() => setConsent(null)} /> : null}
       {session ? <RoomPreview tour={tour} rooms={preview.roomId ? previewRooms.filter((r) => r.id === preview.roomId).concat(previewRooms.filter((r) => r.id !== preview.roomId)) : previewRooms} open={preview.open} onClose={() => setPreview({ open: false })} label={t("previewLabel")} initialNodeId={preview.roomId} /> : null}
       {tourEditor && session ? <TourEditor rooms={previewRooms} links={links.length ? links : (session.links ?? []).map((l) => ({ ...l }))} onSave={saveLinks} onClose={() => setTourEditor(false)} /> : null}
-      {splat && splat.artifact.url ? <SplatViewer url={splat.artifact.url} format={/\.splat$/i.test(splat.artifact.name) ? "splat" : "ply"} label={`${splat.room.name} · ${splat.artifact.provider === "marble" ? t("results.marbleLabel") : t("results.kiriLabel")}`} disclosure={splat.artifact.provider === "marble" ? t("results.marbleNote") : t("results.kiriNote")} onClose={() => setSplat(null)} /> : null}
+      {splat && splat.artifact.url && /\.spz$/i.test(splat.artifact.name) ? <SpzViewer url={splat.artifact.url} byteSize={splat.artifact.byteSize} label={`${splat.room.name} · ${t("results.marbleLabel")}`} disclosure={t("results.marbleNote")} onClose={() => setSplat(null)} /> : null}
+      {splat && splat.artifact.url && !/\.spz$/i.test(splat.artifact.name) ? <SplatViewer url={splat.artifact.url} format={/\.splat$/i.test(splat.artifact.name) ? "splat" : "ply"} label={`${splat.room.name} · ${splat.artifact.provider === "marble" ? t("results.marbleLabel") : t("results.kiriLabel")}`} disclosure={splat.artifact.provider === "marble" ? t("results.marbleNote") : t("results.kiriNote")} onClose={() => setSplat(null)} /> : null}
     </main>
   );
 }

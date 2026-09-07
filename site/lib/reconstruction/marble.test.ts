@@ -92,12 +92,11 @@ describe("Marble adapter", () => {
     await expect(marbleProvider.status(ref)).rejects.toMatchObject({ code: "invalid_operation", retry: "retryable" });
   });
 
-  it("fetches world assets into provenance-labelled outputs and copies them rather than keeping URLs", async () => {
-    const world = { world_id: "world_12345678", model: "marble-1.1", world_marble_url: "https://marble.worldlabs.ai/world/x", assets: { imagery: { pano_url: "https://assets.example/pano.jpg" }, splats: { spz_urls: { "100k": "https://assets.example/100k.spz", full_res: "https://assets.example/full.spz" } }, mesh: { collider_mesh_url: "https://assets.example/collider.glb" }, thumbnail_url: "https://assets.example/thumb.jpg" } };
+  it("fetches world assets (SPZ, never a PLY export) into provenance-labelled outputs and copies them rather than keeping URLs", async () => {
+    const world = { world_id: "world_12345678", model: "marble-1.1", world_marble_url: "https://marble.worldlabs.ai/world/x", assets: { imagery: { pano_url: "https://assets.example/pano.jpg" }, splats: { spz_urls: { "100k": "https://assets.example/100k.spz", "500k": "https://assets.example/500k.spz", full_res: "https://assets.example/full.spz" } }, mesh: { collider_mesh_url: "https://assets.example/collider.glb" }, thumbnail_url: "https://assets.example/thumb.jpg" } };
     vi.stubGlobal("fetch", vi.fn(async (url: string | URL) => {
       const u = String(url);
       if (u.includes("/operations/op_abcdef123456")) return json({ operation_id: "op_abcdef123456", done: true, metadata: { world_id: "world_12345678" }, response: world, cost: { total_credits: 1500 } });
-      if (u.includes("/worlds/world_12345678:export")) return json({ operation_id: "op_export12345", done: true, response: { asset_url: "https://assets.example/full.ply" } });
       if (u.includes("/worlds/world_12345678")) return json(world);
       if (u.startsWith("https://assets.example/")) return new Response(new Uint8Array([7, 7, 7]), { status: 200, headers: { "content-type": u.endsWith(".jpg") ? "image/jpeg" : "application/octet-stream" } });
       throw new Error(`unexpected ${u}`);
@@ -107,7 +106,8 @@ describe("Marble adapter", () => {
     expect(types).toContain("marble_panorama:world_12345678-panorama.jpg");
     expect(types).toContain("marble_gaussian_splat:world_12345678-full_res.spz");
     expect(types).toContain("marble_collider_mesh:world_12345678-collider.glb");
-    expect(types).toContain("marble_gaussian_splat:world_12345678.ply");
+    expect(types).toContain("marble_gaussian_splat:world_12345678-500k.spz");
+    expect(types.some((t) => t.endsWith(".ply"))).toBe(false);
     expect(outputs.every((o) => o.provenance === "ai_generated")).toBe(true);
     expect(outputs.every((o) => o.bytes.byteLength === 3)).toBe(true);
   });

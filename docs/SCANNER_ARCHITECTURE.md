@@ -81,7 +81,7 @@ in-memory in tests).
 | `panorama_ai_completed`           | GPT Image 2     | mixed (AI)     | `…/sodar/panorama-ai-completed.jpg`, sources = original + mask | same |
 | `kiri_gaussian_splat` (zip + ply) | KIRI            | captured       | `…/kiri/<job>/…`                                              | KIRI keeps ~3 days; SODAR copy is permanent |
 | `kiri_mesh`                       | KIRI            | derived        | `…/kiri/<job>/…`                                              | same |
-| `marble_*` (pano, spz, ply, collider, thumbnail) | Marble | ai_generated | `…/marble/<job>/…`                                        | Marble keeps worlds in the account; URLs treated as temporary |
+| `marble_*` (pano, spz full_res + 500k, collider, thumbnail) | Marble | ai_generated | `…/marble/<job>/…`                                        | Marble keeps worlds in the account; URLs treated as temporary |
 | `tour_manifest`                   | server          | derived        | built on request (`GET /api/scanner/scans/:id/tour`)          | — |
 
 Every row in `public.artifacts` records id, scan, room, owner, provider, type,
@@ -180,14 +180,21 @@ python3 -m unittest discover -s tests   # repo root: harness + worker (posed-sti
 Live smoke test (disabled by default, consumes credits):
 
 ```sh
-SODAR_LIVE_SMOKE=1 SODAR_LIVE_PROVIDER=kiri SODAR_LIVE_CONFIRM=yes KIRI_API_KEY=… npm run test:live
-SODAR_LIVE_SMOKE=1 SODAR_LIVE_PROVIDER=marble SODAR_LIVE_CONFIRM=yes WORLDLABS_API_KEY=… npm run test:live
+SODAR_LIVE_SMOKE=1 SODAR_LIVE_PROVIDER=kiri SODAR_LIVE_CONFIRM=yes SODAR_LIVE_FIXTURE_DIR=/path/to/unzipped-export KIRI_API_KEY=… npm run test:live
+SODAR_LIVE_SMOKE=1 SODAR_LIVE_PROVIDER=marble SODAR_LIVE_CONFIRM=yes SODAR_LIVE_FIXTURE_DIR=/path/to/unzipped-export WORLDLABS_API_KEY=… npm run test:live
 ```
 
-It prints the expected credit use, refuses to submit without
-`SODAR_LIVE_CONFIRM=yes`, records the external job id in
-`$TMPDIR/sodar-live-smoke.json`, polls with the production adapter and writes
-the outputs next to the record. Credentials are never printed.
+`SODAR_LIVE_FIXTURE_DIR` must point at an unzipped SODAR export ("Export
+originals" on the results screen). The loader parses its `frames.json`
+(sodar-frames.v2), selects one Full 3D room (`SODAR_LIVE_ROOM` = id, name or
+1-based index; default: the first Full 3D room), and reads only the images that
+room references: 20–40 distinct real JPEGs from at least three stations. Loose
+folders of JPEGs, missing or ambiguous manifests, quick-panorama rooms,
+duplicated bytes, thumbnails and paths outside the export are refused, so
+credits are never spent on input a provider cannot reconstruct. It prints the
+expected credit use, refuses to submit without `SODAR_LIVE_CONFIRM=yes`,
+records the external job id in `$TMPDIR/sodar-live-smoke.json`, polls with the
+production adapter and writes the outputs next to the record. Credentials are never printed.
 
 ## 11. Failure recovery and runbook
 
@@ -237,10 +244,11 @@ consumed (`actual_credits`).
 - KIRI does not publish a per-job credit price through the API; the consent
   sheet shows "provider-defined" and the actual deduction is recorded from the
   balance difference.
-- Marble outputs are `.spz`; the viewer needs `.ply`, requested through the
-  free export operation with a 45 s wait. If the export is slower, only the
-  SPZ is stored and the world opens in Marble's own viewer link (recorded in
-  artifact metadata) — the panorama and KIRI splat are unaffected.
+- Marble delivers splats as `.spz`. SODAR stores the full-resolution SPZ (and
+  the 500k preview when present) and renders it natively with Spark
+  (`@sparkjsdev/spark`, World Labs' three.js renderer) in
+  `components/scanner/spz-viewer.tsx`; no PLY export is requested from the API.
+  KIRI's `.ply`/`.splat` still open in the lighter gsplat viewer.
 - The on-device panorama is a pose-projected preview (wrist-pivot parallax is
   not corrected); the server path refines yaw with ORB where texture allows.
 - Exposure lock depends on the browser: Chrome on Android honours
@@ -250,3 +258,8 @@ consumed (`actual_credits`).
   rooms on slow hosts should move that step to a worker.
 - No physical-phone pass was possible in this environment; the flow was
   verified with mocked camera APIs, unit tests and the desktop demo room.
+
+## 15. Reconciliation with the main checkout
+
+See [`RECONCILIATION.md`](RECONCILIATION.md) and `scripts/reconcile_main_checkout.sh`
+for the overlapping untracked files and the backup-first procedure.

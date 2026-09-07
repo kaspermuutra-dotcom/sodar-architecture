@@ -44,7 +44,7 @@ export function ResultsView(p: ResultsProps) {
         {rooms.map((room) => {
           const view = p.views[room.id];
           const status = (view?.status ?? "none") as JobStatus | "none";
-          const splats = (view?.artifacts ?? []).filter((a) => (a.type === "kiri_gaussian_splat" || a.type === "marble_gaussian_splat") && /\.(ply|splat)$/i.test(a.name) && a.url);
+          const splats = (view?.artifacts ?? []).filter((a) => (a.type === "kiri_gaussian_splat" || a.type === "marble_gaussian_splat") && /\.(ply|splat|spz)$/i.test(a.name) && a.url && a.metadata.variant !== "500k");
           const downloads = (view?.artifacts ?? []).filter((a) => a.url);
           const failed = view?.jobs.filter((job) => job.status === "failed" || job.status === "expired") ?? [];
           return (

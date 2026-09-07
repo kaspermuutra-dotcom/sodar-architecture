@@ -6,7 +6,7 @@
  * provenance "ai_generated" and shown with the generative disclosure. It never
  * gates delivery of the KIRI reconstruction.
  */
-import { exportWorld, generateWorld, getCredits, getOperation, getWorld, MARBLE_CREDITS, MARBLE_MODELS, prepareUpload, uploadMedia, worldLabsConfigured, type ExportResult, type MarbleModel, type Operation, type World, type WorldPrompt } from "@/lib/worldlabs/server";
+import { generateWorld, getCredits, getOperation, getWorld, MARBLE_CREDITS, MARBLE_MODELS, prepareUpload, uploadMedia, worldLabsConfigured, type MarbleModel, type Operation, type World, type WorldPrompt } from "@/lib/worldlabs/server";
 import { fetchBytes } from "@/lib/server/safe-fetch";
 import { providerEnabled } from "./config";
 import { ProviderError, type Capability, type CostEstimate, type ProviderInput, type ProviderJobRef, type ProviderOutput, type ProviderStatus, type ReconstructionProvider } from "./contract";
@@ -78,30 +78,6 @@ function operationStatus(operation: Operation): ProviderStatus {
   return { status: "ready", raw: "SUCCEEDED", costCredits: operation.cost?.total_credits ?? null, expiresAt: operation.expires_at ?? undefined, details };
 }
 
-function firstHttpsUrl(value: unknown, depth = 0): string | undefined {
-  if (depth > 4 || value == null) return undefined;
-  if (typeof value === "string") return value.startsWith("https://") ? value : undefined;
-  if (Array.isArray(value)) return value.map((item) => firstHttpsUrl(item, depth + 1)).find(Boolean);
-  if (typeof value === "object") return Object.values(value as Record<string, unknown>).map((item) => firstHttpsUrl(item, depth + 1)).find(Boolean);
-  return undefined;
-}
-
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
-/** Asks Marble for a PLY copy of the splat (free per pricing page) and waits briefly; returns undefined when not ready yet. */
-async function tryPlyExport(worldId: string, waitMs: number): Promise<{ url: string; operationId: string } | undefined> {
-  const started = await exportWorld(worldId, { asset_type: "splats", format: "ply" });
-  const deadline = Date.now() + waitMs;
-  let operation = started;
-  while (!operation.done && Date.now() < deadline) {
-    await sleep(3_000);
-    operation = await getOperation(operation.operation_id);
-  }
-  if (!operation.done || operation.error) return undefined;
-  const url = firstHttpsUrl(operation.response as ExportResult | null);
-  return url ? { url, operationId: operation.operation_id } : undefined;
-}
-
 export const marbleProvider: ReconstructionProvider = {
   id: "marble",
   capability(): Capability {
@@ -170,13 +146,8 @@ export const marbleProvider: ReconstructionProvider = {
     if (spzKey) await pull(spz[spzKey], "marble_gaussian_splat", `${worldId}-${spzKey}.spz`, "application/x-spz", { variant: spzKey, semantics: assets.splats?.semantics_metadata ?? null });
     await pull(assets.mesh?.collider_mesh_url, "marble_collider_mesh", `${worldId}-collider.glb`, "model/gltf-binary");
     await pull(assets.thumbnail_url, "marble_thumbnail", `${worldId}-thumbnail.jpg`, "image/jpeg");
-    try {
-      const ply = await tryPlyExport(worldId, 45_000);
-      if (ply) await pull(ply.url, "marble_gaussian_splat", `${worldId}.ply`, "application/x-ply", { variant: "ply_export", exportOperationId: ply.operationId });
-    } catch (error) {
-      // A missing PLY copy is not a failed reconstruction; the SPZ is kept and the viewer falls back to the panorama.
-      if (!(error instanceof ProviderError)) throw error;
-    }
+    // Marble's splat format is SPZ; SODAR stores the full-resolution SPZ (plus the 500k preview when present) and renders it natively.
+    if (spzKey !== "500k" && spz["500k"]) await pull(spz["500k"], "marble_gaussian_splat", `${worldId}-500k.spz`, "application/x-spz", { variant: "500k", semantics: assets.splats?.semantics_metadata ?? null });
     return outputs;
   },
 };

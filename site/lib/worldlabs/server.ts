@@ -5,7 +5,8 @@
  * header `WLT-Api-Key`, `POST /marble/v1/worlds:generate` (returns an
  * operation), `GET /marble/v1/operations/{id}`, `GET /marble/v1/worlds/{id}`,
  * `POST /marble/v1/media-assets:prepare_upload` + `PUT` to the signed URL,
- * `POST /marble/v1/worlds/{id}:export`, `GET /marble/v1/credits`. Errors carry
+ * `GET /marble/v1/credits`. No export endpoint is used: Marble delivers splats
+ * as SPZ, which SODAR stores and renders natively. Errors carry
  * `{detail}`; 402 = insufficient credits, 429 = rate limited (honour
  * Retry-After), 422 = schema mismatch. Default tier allows about 3 generation
  * starts per minute; each generation takes about five minutes.
@@ -44,7 +45,7 @@ export type Operation = {
   expires_at?: string | null;
   error?: { code?: number | null; message?: string | null } | null;
   metadata?: { progress?: { status?: string; description?: string }; world_id?: string; [key: string]: unknown } | null;
-  response?: World | ExportResult | null;
+  response?: World | null;
   cost?: { total_credits: number; line_items?: Array<{ name: string; credits: number }> } | null;
 };
 
@@ -61,8 +62,6 @@ export type World = {
     thumbnail_url?: string;
   };
 };
-
-export type ExportResult = { asset_url?: string; url?: string; download_url?: string; [key: string]: unknown };
 
 export type PreparedUpload = { media_asset: { media_asset_id: string }; upload_info: { upload_url: string; upload_method?: string; required_headers?: Record<string, string> | null } };
 
@@ -166,11 +165,4 @@ export async function getWorld(worldId: string): Promise<World> {
   const world = await request<World>(`/marble/v1/worlds/${encodeURIComponent(worldId)}`);
   if (!world || !world.world_id) throw new WorldLabsError(502, "invalid_world", "World Labs returned an invalid world.", "retryable");
   return world;
-}
-
-export async function exportWorld(worldId: string, body: { asset_type: "splats"; format: "ply" } | { asset_type: "mesh"; format: "glb" }): Promise<Operation> {
-  if (!isWorldLabsId(worldId)) throw new WorldLabsError(400, "invalid_world_id", "Invalid World Labs world identifier.", "fatal");
-  const operation = await request<Operation>(`/marble/v1/worlds/${encodeURIComponent(worldId)}:export`, { method: "POST", json: body });
-  if (!operation || !isWorldLabsId(operation.operation_id)) throw new WorldLabsError(502, "invalid_operation", "World Labs returned an invalid export operation.", "retryable");
-  return operation;
 }
