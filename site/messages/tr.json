@@ -29,7 +29,7 @@
       "Biz de telefonu tarayıcıya,",
       "taramayı da bir mekâna dönüştürdük."
     ],
-    "body": "Bir danışman telefonunda sodar.io’yu açar, yapay zekâ çekim asistanı kareyi yönlendirirken her odayı bir kez dolaşır ve alıcıların içinde gezebileceği bir tur alır. İlk iki oda ücretsiz önizlenir. Tek bir ödeme mülkü tamamlar. CRM ilanına yayınlamak tek tıktır."
+    "body": "Bir danışman telefonunda sodar.io'yu açar, yapay zekâ çekim asistanı kareyi yönlendirirken her odayı bir kez dolaşır ve alıcıların içinde gezinebildiği bir sanal tur alır. İlk iki oda ücretsiz önizlenir. Bir kredi ilanı yayınlar. CRM ilanına yayınlamak tek tıktır."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Herhangi bir ödemeden önce çalışan önizleme"
       },
       {
-        "label": "tek seferlik fiyat",
-        "note": "Mülke göre belirlenir. Abonelik yok"
+        "label": "aylık",
+        "note": "Starter planı · mülk kredileri dahil"
       },
       {
         "label": "iş ortağı payı",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Kilidi aç",
-        "title": "Tek fiyat. Tek ödeme.",
-        "body": "Sodar tüm mülk için tek seferlik bir fiyat verir — büyüklük, panorama sayısı, işleme, barındırma ve bakım hesaba katılır. Stripe üzerinden bir kez ödeyin, kalan odalar işlensin."
+        "title": "Tek plan. Mülk başına bir kredi.",
+        "body": "Sodar, 99 €'dan başlayan aylık planla çalışır. Yayınlanan her mülk bir kredi kullanır — panoramalar, işleme, barındırma ve bakım dahildir. Kademeler ilan hacminizle büyür ve ilk pilotlar indirimli fiyat alır."
       },
       "publish": {
         "label": "Yayınla",
@@ -96,31 +96,31 @@
         "body": "CRM’inizi bağlayın, mülk ilanını seçin, yayınlayın. Tur, Sodar’ın gömülü görüntüleyicisi sayesinde ilanın içinde yaşar — onaylı görünüm ayarlarını istediğiniz zaman değiştirebilirsiniz."
       }
     },
-    "quoteLabel": "Teklif · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · Kesklinn Ave 84",
     "quoteRows": [
       {
-        "k": "6 oda · 14 panorama",
-        "v": "dahil"
+        "k": "Plan",
+        "v": "Starter · 99 € / ay"
       },
       {
-        "k": "İşleme ve yapay zekâ hesaplama",
-        "v": "dahil"
+        "k": "Bu ayki krediler",
+        "v": "10 kredinin 7'si kaldı"
       },
       {
-        "k": "Depolama ve görüntüleyici barındırma",
-        "v": "12 ay"
+        "k": "Bu mülk",
+        "v": "1 kredi"
       },
       {
-        "k": "Bakım",
+        "k": "Barındırma ve bakım",
         "v": "dahil"
       }
     ],
-    "oneTime": "tek seferlik · abonelik yok",
-    "paidLabel": "Ödendi",
-    "paidBody": "Kalan 4 oda işleniyor. Tur tamamlandığında bilgilendirileceksiniz.",
-    "pay": "Stripe ile öde",
-    "paying": "Stripe’a bağlanıyor…",
-    "mockNote": "Demo ödeme — hiçbir karttan çekim yapılmaz.",
+    "oneTime": "aylık · istediğiniz zaman iptal edin",
+    "paidLabel": "Yayınlandı",
+    "paidBody": "Kalan 4 oda işleniyor. Tur hazır olduğunda size haber vereceğiz.",
+    "pay": "1 krediyle yayınla",
+    "paying": "Yayınlanıyor…",
+    "mockNote": "Demo — kredi kullanılmaz.",
     "crmHeader": "CRM’iniz · İlan #48213",
     "publishBtn": "Turu yayınla",
     "publishedBtn": "Yayınlandı",
@@ -132,7 +132,8 @@
     "viewer": "görüntüleyici",
     "viewerEmbedded": "gömülü",
     "opened": "açılma",
-    "openedValue": "128 ziyaretçi"
+    "openedValue": "128 ziyaretçi",
+    "planLabel": "Kat planı"
   },
   "Capabilities": {
     "kicker": "Neler sunuluyor",
@@ -152,8 +153,8 @@
         "desc": "Herhangi bir ödemeden önce ilk iki odanın çalışan turu; böylece önce bitmiş kaliteyi değerlendirirsiniz."
       },
       {
-        "title": "Mülk başına tek seferlik fiyat",
-        "desc": "Mülke göre belirlenen tek bir teklif — panoramalar, hesaplama, barındırma ve bakım dahil."
+        "title": "Aylık plan, mülk kredileri",
+        "desc": "Aylık 99 €'dan başlar. Yayınlanan mülk başına bir kredi — panoramalar, hesaplama, barındırma ve bakım dahil."
       },
       {
         "title": "CRM’e yayınlama",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Tasarımı gereği basit",
     "title1": "Tek mülk.",
-    "title2": "Tek fiyat. Bir kez.",
-    "body": "İlk iki odayı ücretsiz önizleyin. Ardından Sodar mülkü tamamlamak için tek seferlik tek bir fiyat verir — abonelik yok, yıllık sözleşme yok.",
+    "title2": "Aylık 99 €. Konut başına bir kredi.",
+    "body": "İlk iki odayı ücretsiz önizleyin. Ardından 99 €'dan başlayan aylık plan ilanlarınızı kapsar — yayınlanan mülk başına bir kredi, daha yüksek hacim için kademeler ve ilk pilotlara indirimli fiyat.",
     "cta": "Fiyat nasıl hesaplanır",
     "card": {
-      "label": "Tipik 3 odalı daire",
-      "price": "99–149 €",
-      "note": "tek seferlik · ücretsiz önizlemeden sonra teklif",
+      "label": "Starter planı",
+      "price": "99 €",
+      "note": "aylık · 10 mülk kredisi",
       "factors": [
-        "Mülkün büyüklüğü",
-        "Çekilen panoramalar",
-        "İşleme ve yapay zekâ hesaplama",
-        "Depolama ve görüntüleyici barındırma",
-        "Sürekli bakım"
+        "Yönlendirmeli çekim ve yapay zekâ asistanı",
+        "Ayda 10 yayınlanan mülk",
+        "CRM yayını ve gömülü görüntüleyici",
+        "Barındırma ve bakım dahil",
+        "Pilot ortaklara indirimli fiyat"
       ],
       "cta": "Mülk tara"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Gerçek bir mülkte deneyin",
-      "title": "İki odayı ücretsiz önizleyin. Gerisi için bir kez ödeyin.",
+      "title": "İki odayı ücretsiz önizleyin. Tek planla yayınlayın.",
       "sub": "Telefonunuzda sodar.io’yu açın ve bir tarama başlatın — tam turun kilidini açana kadar kart gerekmez.",
       "label": "İlk mülkünüzü tarayın"
     }
   },
   "PricingPage": {
     "metaTitle": "Fiyatlar — Sodar",
-    "metaDesc": "Ücretsiz iki oda önizlemesinden sonra teklif edilen, mülk başına tek seferlik fiyat. Ofisler için hacim fiyatlandırması, CRM iş ortakları için %15 pay.",
+    "metaDesc": "Mülk kredili 99 €'dan başlayan aylık planlar, daha yüksek hacim için kademeler, ilk pilotlara indirimli fiyat ve CRM ortaklarına %15 marj.",
     "eyebrow": "Tasarımı gereği basit",
-    "title": "Tek mülk. Tek fiyat. Bir kez.",
-    "sub": "İki odayı ücretsiz önizleyin, ardından mülke göre belirlenen tek seferlik tek bir fiyat ödeyin. Ofisler için hacim fiyatlandırması, CRM iş ortakları için sabit %15 pay.",
+    "title": "Tek plan. Mülk başına kredi.",
+    "sub": "İki odayı ücretsiz önizleyin, sonra ilanlarınıza uyan kredi hacmini seçin. Planlar aylık 99 €'dan başlar; ilk pilot ortaklar indirimli fiyat alır.",
     "badge": "Çoğu ofis",
     "tiers": [
       {
-        "name": "Mülk başına",
-        "price": "99 €’dan itibaren",
-        "unit": "tek seferlik, ücretsiz önizlemeden sonra teklif",
-        "desc": "İlanları tek tek tarayan danışmanlar için.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "aylık · 10 mülk kredisi",
+        "desc": "Ayda birkaç ilan yayınlayan danışmanlar için.",
         "features": [
           "Yönlendirmeli telefon çekimi + yapay zekâ asistanı",
           "İlk iki oda ücretsiz önizleme",
-          "Tek Stripe ödemesinden sonra tam tur",
-          "CRM’e yayınlama ve gömülü görüntüleyici",
-          "Durum ve görüntüleyici açılışlarıyla çalışma alanı"
+          "Yayınlanan mülk başına bir kredi",
+          "CRM yayını ve gömülü görüntüleyici",
+          "Durum ve görüntülenme takipli çalışma alanı"
         ],
-        "cta": "İlk mülkünüzü tarayın"
+        "cta": "Starter ile başla"
       },
       {
-        "name": "Ofis",
-        "price": "Hacim",
-        "unit": "mülk başına, hacimle düşen",
-        "desc": "Ayda onlarca ilan yayınlayan ofisler için.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "aylık · 30 mülk kredisi",
+        "desc": "Her hafta yayın yapan ekipler için.",
         "features": [
-          "Mülk başına planındaki her şey",
-          "Ofis geneli çalışma alanı özeti",
-          "Öncelikli işleme sırası",
-          "Özel CRM kurulumu",
-          "Ortak markalı görüntüleyici"
+          "Starter'daki her şey",
+          "Öncelikli işleme kuyruğu",
+          "Ofis genelinde çalışma alanı",
+          "Markanızla görüntüleyici",
+          "Özel CRM kurulumu"
         ],
         "cta": "Satışla görüşün"
       },
       {
-        "name": "CRM iş ortağı",
-        "price": "%15",
-        "unit": "uygun satın alımlardan pay",
-        "desc": "Sodar’ı danışmanlarına dağıtan CRM sağlayıcıları için.",
+        "name": "Brokerage",
+        "price": "Özel",
+        "unit": "hacim kredileri, aylık fatura",
+        "desc": "Büyük ölçekte yayın yapan ofisler ve portallar için.",
         "features": [
-          "Sodar platformunuzun içinde kullanılabilir",
-          "İş ortağı paneli",
-          "Aylık otomatik ödeme",
-          "Minimum hacim yok"
+          "Özel kredi hacmi",
+          "Her ilan için kat planı",
+          "API erişimi",
+          "Her şube için kurulum",
+          "İlk ortaklara pilot fiyatı"
         ],
-        "cta": "İş ortağı olarak başvurun"
+        "cta": "Pilot fiyatı isteyin"
       }
     ],
-    "factorsKicker": "Teklif nasıl oluşur",
-    "factorsTitle": "Plana göre değil, mülke göre fiyatlandırılır.",
+    "factorsKicker": "Krediler nasıl çalışır",
+    "factorsTitle": "Bir kredi, bir yayınlanan mülk.",
     "factors": [
       {
-        "title": "Mülkün büyüklüğü",
-        "desc": "Alan ve çekilen oda sayısı."
+        "title": "Mülk başına bir kredi",
+        "desc": "Bir mülkün tüm odaları, panorama sayısı ne olursa olsun, yayınlanırken tek kredi kullanır."
       },
       {
-        "title": "Panorama hacmi",
-        "desc": "Taramanın ürettiği panorama sayısı ve çözünürlükleri."
+        "title": "Önce ücretsiz önizleme",
+        "desc": "İlk iki oda hiçbir kredi harcanmadan işlenir; kaliteyi önce siz değerlendirirsiniz."
       },
       {
-        "title": "İşleme",
-        "desc": "Birleştirme, iyileştirme ve turun arkasındaki yapay zekâ hesaplaması."
+        "title": "Aylık hacim",
+        "desc": "Krediler planınızla her ay yenilenir; üst kademeler yalnızca daha fazlasını içerir."
       },
       {
-        "title": "Depolama ve barındırma",
-        "desc": "Turu ve görüntüleyicisini ilanınızın içinde çevrimiçi tutmak."
+        "title": "Barındırma dahil",
+        "desc": "Turu ve görüntüleyiciyi ilanınızda çevrimiçi tutmak planın parçasıdır."
       },
       {
-        "title": "Bakım",
-        "desc": "Sürekli görüntüleyici güncellemeleri ve CRM entegrasyonunun kendisi."
+        "title": "Pilot fiyatı",
+        "desc": "Estonya'daki ilk pilot ortaklar indirimli aylık fiyat alır — iletişim formundan sorun."
       },
       {
-        "title": "İş ortağı payı",
-        "desc": "Sodar’ı bir CRM iş ortağı dağıtıyorsa, payı teklife dahildir."
+        "title": "Ortak marjı",
+        "desc": "Sodar'ı bir CRM ortağı dağıtıyorsa, %15 marjı plan fiyatına dahildir."
       }
     ],
     "faqKicker": "Sorular",
     "faqTitle": "Fiyat SSS.",
     "faq": [
       {
-        "q": "Fiyatı ne zaman görürüm?",
-        "a": "Ücretsiz önizlemeden sonra. İlk iki oda işlendiğinde Sodar mülkü tamamlamak için tek seferlik bir fiyat hesaplar."
+        "q": "Bir kredi neyi kapsar?",
+        "a": "Yayınlanan bir mülkü, tüm odalarını ve panoramalarını, ayrıca ilan süresince barındırma ve bakımı."
       },
       {
         "q": "Önizleme gerçekten ücretsiz mi?",
-        "a": "Evet — ilk iki oda ödeme olmadan çalışan bir tura dönüştürülür. Yalnızca mülkü tamamlamak ve yayınlamak için ödersiniz."
+        "a": "Evet — ilk iki oda, kredi kullanılmadan önce çalışan bir tura dönüştürülür. Krediyi yalnızca yayınlarken harcarsınız."
       },
       {
-        "q": "Abonelik var mı?",
-        "a": "Hayır. Her mülk Stripe üzerinden tek seferlik tek bir ödemedir. Hiçbir şey yenilenmez."
+        "q": "Kademe değiştirebilir miyim?",
+        "a": "İstediğiniz zaman. Hacminiz büyüdükçe yükselin; kullanılmayan krediler ay boyunca sizde kalır."
       },
       {
-        "q": "CRM iş ortağı payı nasıl ödenir?",
-        "a": "Otomatik olarak, aylık, iş ortağının platformundaki danışmanların uygun tur satın alımları üzerinden."
+        "q": "Pilot fiyatı nedir?",
+        "a": "İlk pilot ortaklar, birlikte yayına alırken indirimli aylık fiyat alır. İletişim formundan ofisinizi anlatın."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "İki odalık önizlemeniz oluşturuluyor…",
     "done": "Önizleme hazır",
     "doneTitle": "İki oda çekildi.",
-    "doneBody": "Gerçek üründe tur burada, kalan odalar için tek seferlik bir fiyatla birlikte görünür.",
+    "doneBody": "Gerçek üründe tur burada belirir ve planınızdan bir krediyle yayınlanmaya hazırdır.",
     "workspace": "Çalışma alanı önizlemesini aç",
     "again": "Yeniden tara",
     "exit": "Çık",
@@ -1056,12 +1058,21 @@
     "linkedin": "LinkedIn’de Sodar",
     "privacyEyebrow": "Gizlilik",
     "privacyTitle": "Verileriniz hakkında bize sorun.",
-    "privacySub": "Verilerinize erişim, düzeltme, dışa aktarma veya silme talepleri ve diğer tüm gizlilik soruları doğrudan gizlilik ekibimize ulaşır."
+    "privacySub": "Verilerinize erişim, düzeltme, dışa aktarma veya silme talepleri ve diğer tüm gizlilik soruları doğrudan gizlilik ekibimize ulaşır.",
+    "topic": "Konu",
+    "topicPlaceholder": "Bir konu seçin",
+    "topics": {
+      "pilot": "Pilot programı (indirimli fiyat)",
+      "pricing": "Fiyatlar ve kredi kademeleri",
+      "partnership": "CRM ortaklığı",
+      "careers": "Kariyer",
+      "other": "Diğer"
+    }
   },
   "Intro": {
     "kicker": "Tanıtım",
     "title": "Bir dakikada Sodar.",
-    "body": "Bir kez dolaşın, iki odayı ücretsiz önizleyin, bir kez ödeyin, zaten sahip olduğunuz ilanda yayınlayın.",
+    "body": "Bir kez dolaşın, iki odayı ücretsiz önizleyin, bir krediyle yayınlayın — doğrudan zaten sahip olduğunuz ilana.",
     "play": "Oynat",
     "pause": "Duraklat",
     "mute": "Sesi kapat",

@@ -29,7 +29,7 @@
       "Alors nous avons fait d’un téléphone un scanner,",
       "et d’un scan un lieu."
     ],
-    "body": "Un agent ouvre sodar.io sur son téléphone, parcourt chaque pièce une fois pendant qu’un assistant de capture IA guide la prise de vue, et reçoit une visite dans laquelle les acheteurs peuvent se déplacer. Les deux premières pièces sont gratuites en aperçu. Un seul paiement termine le bien. La publication dans l’annonce CRM se fait en un clic."
+    "body": "Un agent ouvre sodar.io sur son téléphone, parcourt chaque pièce une fois pendant qu’un assistant de capture IA guide la prise de vue, et reçoit une visite dans laquelle les acheteurs peuvent se déplacer. Les deux premières pièces sont en aperçu gratuit. Un crédit publie le bien. La publication dans l’annonce du CRM se fait en un clic."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Un aperçu fonctionnel avant tout paiement"
       },
       {
-        "label": "prix unique",
-        "note": "Adapté au bien. Sans abonnement"
+        "label": "par mois",
+        "note": "Offre Starter · crédits par bien inclus"
       },
       {
         "label": "marge partenaire",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Déverrouiller",
-        "title": "Un prix. Un paiement.",
-        "body": "Sodar calcule un prix unique pour l’ensemble du bien — taille, nombre de panoramas, traitement, hébergement et maintenance compris. Payez une fois via Stripe et les pièces restantes sont traitées."
+        "title": "Une offre. Un crédit par bien.",
+        "body": "Sodar fonctionne avec un abonnement mensuel à partir de 99 €. Chaque bien publié consomme un crédit — panoramas, traitement, hébergement et maintenance inclus. Les paliers suivent votre volume d’annonces, et les premiers pilotes bénéficient d’un tarif réduit."
       },
       "publish": {
         "label": "Publier",
@@ -96,31 +96,31 @@
         "body": "Connectez votre CRM, choisissez l’annonce, publiez. La visite vit dans l’annonce grâce à la visionneuse intégrée de Sodar — et vous pouvez ajuster les réglages d’apparence approuvés à tout moment."
       }
     },
-    "quoteLabel": "Devis · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · 84 Kesklinn Ave",
     "quoteRows": [
       {
-        "k": "6 pièces · 14 panoramas",
-        "v": "inclus"
+        "k": "Offre",
+        "v": "Starter · 99 € / mois"
       },
       {
-        "k": "Traitement & calcul IA",
-        "v": "inclus"
+        "k": "Crédits ce mois-ci",
+        "v": "7 sur 10 restants"
       },
       {
-        "k": "Stockage & hébergement",
-        "v": "12 mois"
+        "k": "Ce bien",
+        "v": "1 crédit"
       },
       {
-        "k": "Maintenance",
+        "k": "Hébergement & maintenance",
         "v": "inclus"
       }
     ],
-    "oneTime": "paiement unique · sans abonnement",
-    "paidLabel": "Payé",
-    "paidBody": "Traitement des 4 pièces restantes en cours. Vous serez averti dès que la visite sera complète.",
-    "pay": "Payer avec Stripe",
-    "paying": "Connexion à Stripe…",
-    "mockNote": "Paiement de démonstration — aucune carte n’est débitée.",
+    "oneTime": "par mois · résiliable à tout moment",
+    "paidLabel": "Publié",
+    "paidBody": "Les 4 pièces restantes sont en traitement. Vous serez prévenu quand la visite sera prête.",
+    "pay": "Publier avec 1 crédit",
+    "paying": "Publication…",
+    "mockNote": "Démo — aucun crédit n’est utilisé.",
     "crmHeader": "Votre CRM · Annonce #48213",
     "publishBtn": "Publier la visite",
     "publishedBtn": "Publiée",
@@ -132,7 +132,8 @@
     "viewer": "visionneuse",
     "viewerEmbedded": "intégrée",
     "opened": "ouvertures",
-    "openedValue": "128 visiteurs"
+    "openedValue": "128 visiteurs",
+    "planLabel": "Plan 2D"
   },
   "Capabilities": {
     "kicker": "Ce que vous obtenez",
@@ -152,8 +153,8 @@
         "desc": "Une visite fonctionnelle des deux premières pièces avant tout paiement, pour juger la qualité finale d’abord."
       },
       {
-        "title": "Prix unique par bien",
-        "desc": "Un seul devis adapté au bien — panoramas, calcul, hébergement et maintenance inclus."
+        "title": "Abonnement mensuel, crédits par bien",
+        "desc": "À partir de 99 € par mois. Un crédit par bien publié — panoramas, calcul, hébergement et maintenance inclus."
       },
       {
         "title": "Publication CRM",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Simple par conception",
     "title1": "Un bien.",
-    "title2": "Un prix. Une fois.",
-    "body": "Prévisualisez les deux premières pièces gratuitement. Puis Sodar propose un seul prix unique pour terminer le bien — sans abonnement, sans contrat annuel.",
+    "title2": "99 € par mois. Un crédit par logement.",
+    "body": "Prévisualisez les deux premières pièces gratuitement. Ensuite, un abonnement mensuel à partir de 99 € couvre vos annonces — un crédit par bien publié, des paliers pour plus de volume et un tarif réduit pour les premiers pilotes.",
     "cta": "Comment le prix est calculé",
     "card": {
-      "label": "Appartement 3 pièces typique",
-      "price": "99–149 €",
-      "note": "paiement unique · devis après l’aperçu gratuit",
+      "label": "Offre Starter",
+      "price": "99 €",
+      "note": "par mois · 10 crédits par bien",
       "factors": [
-        "Taille du bien",
-        "Panoramas capturés",
-        "Traitement & calcul IA",
-        "Stockage & hébergement",
-        "Maintenance continue"
+        "Capture guidée et assistant IA",
+        "10 biens publiés par mois",
+        "Publication CRM et visionneuse intégrée",
+        "Hébergement et maintenance inclus",
+        "Tarif réduit pour les partenaires pilotes"
       ],
       "cta": "Scanner un bien"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Essayez sur un vrai bien",
-      "title": "Deux pièces gratuites en aperçu. Payez une fois pour le reste.",
+      "title": "Deux pièces en aperçu gratuit. Publiez avec une seule offre.",
       "sub": "Ouvrez sodar.io sur votre téléphone et lancez un scan — aucune carte requise avant de déverrouiller la visite complète.",
       "label": "Scanner votre premier bien"
     }
   },
   "PricingPage": {
     "metaTitle": "Tarifs — Sodar",
-    "metaDesc": "Prix unique par bien, proposé après un aperçu gratuit de deux pièces. Tarifs dégressifs pour les agences, marge de 15 % pour les partenaires CRM.",
+    "metaDesc": "Abonnements mensuels à partir de 99 € avec crédits par bien, paliers pour plus de volume, tarif réduit pour les premiers pilotes et 15 % de marge pour les partenaires CRM.",
     "eyebrow": "Simple par conception",
-    "title": "Un bien. Un prix. Une fois.",
-    "sub": "Prévisualisez deux pièces gratuitement, puis payez un seul prix unique adapté au bien. Tarifs dégressifs pour les agences, marge fixe de 15 % pour les partenaires CRM.",
+    "title": "Une offre. Des crédits par bien.",
+    "sub": "Prévisualisez deux pièces gratuitement, puis choisissez le volume de crédits adapté à vos annonces. Les offres démarrent à 99 € par mois ; les premiers partenaires pilotes bénéficient d’un tarif réduit.",
     "badge": "La plupart des agences",
     "tiers": [
       {
-        "name": "Par bien",
-        "price": "Dès 99 €",
-        "unit": "paiement unique, devis après l’aperçu gratuit",
-        "desc": "Pour les agents qui scannent leurs annonces une par une.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "par mois · 10 crédits par bien",
+        "desc": "Pour les agents qui publient quelques annonces par mois.",
         "features": [
           "Capture guidée au téléphone + assistant IA",
-          "Deux premières pièces gratuites en aperçu",
-          "Visite complète après un paiement Stripe",
-          "Publication CRM & visionneuse intégrée",
-          "Espace de travail avec statuts & ouvertures"
+          "Deux premières pièces en aperçu gratuit",
+          "Un crédit par bien publié",
+          "Publication CRM et visionneuse intégrée",
+          "Espace de travail avec statuts et ouvertures"
         ],
-        "cta": "Scanner votre premier bien"
+        "cta": "Commencer avec Starter"
       },
       {
-        "name": "Agence",
-        "price": "Volume",
-        "unit": "par bien, dégressif avec le volume",
-        "desc": "Pour les agences publiant des dizaines d’annonces par mois.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "par mois · 30 crédits par bien",
+        "desc": "Pour les équipes qui publient chaque semaine.",
         "features": [
-          "Tout le forfait par bien",
-          "Vue consolidée de l’agence",
+          "Tout Starter",
           "File de traitement prioritaire",
-          "Configuration CRM dédiée",
-          "Visionneuse co-brandée"
+          "Espace de travail à l’échelle de l’agence",
+          "Visionneuse à vos couleurs",
+          "Configuration CRM dédiée"
         ],
         "cta": "Parler aux ventes"
       },
       {
-        "name": "Partenaire CRM",
-        "price": "15 %",
-        "unit": "de marge sur les achats éligibles",
-        "desc": "Pour les éditeurs de CRM qui distribuent Sodar à leurs agents.",
+        "name": "Brokerage",
+        "price": "Sur mesure",
+        "unit": "crédits en volume, facturés chaque mois",
+        "desc": "Pour les réseaux et portails qui publient à grande échelle.",
         "features": [
-          "Sodar disponible dans votre plateforme",
-          "Tableau de bord partenaire",
-          "Versement mensuel automatique",
-          "Aucun volume minimum"
+          "Volume de crédits sur mesure",
+          "Plans 2D pour chaque annonce",
+          "Accès API",
+          "Onboarding de chaque agence",
+          "Tarif pilote pour les premiers partenaires"
         ],
-        "cta": "Devenir partenaire"
+        "cta": "Demander le tarif pilote"
       }
     ],
-    "factorsKicker": "Comment le devis est construit",
-    "factorsTitle": "Tarifé selon le bien, pas selon le forfait.",
+    "factorsKicker": "Comment fonctionnent les crédits",
+    "factorsTitle": "Un crédit, un bien publié.",
     "factors": [
       {
-        "title": "Taille du bien",
-        "desc": "Surface et nombre de pièces capturées."
+        "title": "Un crédit par bien",
+        "desc": "Toutes les pièces d’un bien, quel que soit le nombre de panoramas, consomment un seul crédit à la publication."
       },
       {
-        "title": "Volume de panoramas",
-        "desc": "Le nombre de panoramas produits par le scan et leur résolution."
+        "title": "L’aperçu gratuit d’abord",
+        "desc": "Les deux premières pièces sont traitées avant qu’un crédit ne soit dépensé, pour que vous jugiez la qualité d’abord."
       },
       {
-        "title": "Traitement",
-        "desc": "Assemblage, amélioration et calcul IA derrière la visite."
+        "title": "Volume mensuel",
+        "desc": "Les crédits se renouvellent chaque mois avec votre offre ; les paliers supérieurs en incluent simplement davantage."
       },
       {
-        "title": "Stockage & hébergement",
-        "desc": "Garder la visite et sa visionneuse en ligne dans votre annonce."
+        "title": "Hébergement inclus",
+        "desc": "Garder la visite et sa visionneuse en ligne dans votre annonce fait partie de l’offre."
       },
       {
-        "title": "Maintenance",
-        "desc": "Les mises à jour de la visionneuse et l’intégration CRM elle-même."
+        "title": "Tarif pilote",
+        "desc": "Les premiers partenaires pilotes en Estonie bénéficient d’un tarif mensuel réduit — demandez-le via le formulaire de contact."
       },
       {
         "title": "Marge partenaire",
-        "desc": "Lorsqu’un partenaire CRM distribue Sodar, sa marge est incluse dans le devis."
+        "desc": "Lorsqu’un partenaire CRM distribue Sodar, sa marge de 15 % est comprise dans le prix de l’offre."
       }
     ],
     "faqKicker": "Questions",
     "faqTitle": "FAQ tarifs.",
     "faq": [
       {
-        "q": "Quand vois-je le prix ?",
-        "a": "Après l’aperçu gratuit. Sodar calcule un prix unique pour terminer le bien une fois les deux premières pièces traitées."
+        "q": "Que couvre un crédit ?",
+        "a": "Un bien publié, toutes ses pièces et ses panoramas, plus l’hébergement et la maintenance pendant toute la vie de l’annonce."
       },
       {
         "q": "L’aperçu est-il vraiment gratuit ?",
-        "a": "Oui — les deux premières pièces sont traitées en une visite fonctionnelle sans paiement. Vous ne payez que pour terminer et publier le bien."
+        "a": "Oui — les deux premières pièces sont transformées en visite fonctionnelle avant qu’un crédit ne soit utilisé. Vous ne dépensez un crédit qu’à la publication."
       },
       {
-        "q": "Y a-t-il un abonnement ?",
-        "a": "Non. Chaque bien correspond à un seul paiement unique via Stripe. Rien ne se renouvelle."
+        "q": "Puis-je changer de palier ?",
+        "a": "À tout moment. Passez au palier supérieur quand votre volume augmente ; les crédits non utilisés restent à vous pour le mois."
       },
       {
-        "q": "Comment la marge partenaire CRM est-elle versée ?",
-        "a": "Automatiquement, chaque mois, sur les achats de visites éligibles des agents présents sur la plateforme du partenaire."
+        "q": "Qu’est-ce que le tarif pilote ?",
+        "a": "Les premiers partenaires pilotes bénéficient d’un tarif mensuel réduit le temps du déploiement commun. Parlez-nous de votre agence via le formulaire de contact."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Création de votre aperçu de deux pièces…",
     "done": "Aperçu prêt",
     "doneTitle": "Deux pièces capturées.",
-    "doneBody": "Dans le produit réel, la visite apparaît ici avec un prix unique pour les pièces restantes.",
+    "doneBody": "Dans le produit réel, la visite apparaît ici, prête à être publiée avec un crédit de votre offre.",
     "workspace": "Ouvrir l’aperçu de l’espace de travail",
     "again": "Scanner à nouveau",
     "exit": "Quitter",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar sur LinkedIn",
     "privacyEyebrow": "Confidentialité",
     "privacyTitle": "Interrogez-nous sur vos données.",
-    "privacySub": "Les demandes d’accès, de rectification, d’export ou de suppression de vos données, et toute autre question de confidentialité, parviennent directement à notre équipe dédiée."
+    "privacySub": "Les demandes d’accès, de rectification, d’export ou de suppression de vos données, et toute autre question de confidentialité, parviennent directement à notre équipe dédiée.",
+    "topic": "Sujet",
+    "topicPlaceholder": "Choisir un sujet",
+    "topics": {
+      "pilot": "Programme pilote (tarif réduit)",
+      "pricing": "Tarifs et paliers de crédits",
+      "partnership": "Partenariat CRM",
+      "careers": "Carrières",
+      "other": "Autre"
+    }
   },
   "Intro": {
     "kicker": "Introduction",
     "title": "Sodar en une minute.",
-    "body": "Parcourez une fois, prévisualisez deux pièces gratuitement, payez une fois, publiez dans l’annonce que vous avez déjà.",
+    "body": "Parcourez une fois, prévisualisez deux pièces gratuitement, publiez avec un crédit — directement dans l’annonce que vous avez déjà.",
     "play": "Lecture",
     "pause": "Pause",
     "mute": "Couper le son",

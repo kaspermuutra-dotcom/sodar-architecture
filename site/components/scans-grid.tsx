@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { LoopVideo } from "@/components/loop-video";
 
-const STILLS = ["/media/scans-window.jpg", "/media/scans-orbit.jpg", "/media/scans-kitchen.jpg", "/media/scans-street.jpg"];
+const STILLS = ["/media/scans-window.jpg", "/media/scans-orbit.jpg", "/media/scans-villa.jpg", "/media/scans-street.jpg"];
 const CLIPS: Record<number, string> = { 0: "/media/scans-window.mp4", 1: "/media/scans-orbit.mp4" };
 
 /** Four recent walkthroughs — one per listing type. */

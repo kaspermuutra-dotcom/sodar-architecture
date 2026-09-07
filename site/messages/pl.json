@@ -29,7 +29,7 @@
       "Więc zamieniliśmy telefon w skaner,",
       "a skan w miejsce."
     ],
-    "body": "Pośrednik otwiera sodar.io na telefonie, przechodzi każde pomieszczenie raz, a asystent ujęć AI prowadzi kadr, i dostaje spacer, po którym kupujący mogą się poruszać. Dwa pierwsze pomieszczenia można obejrzeć za darmo. Jedna płatność kończy nieruchomość. Publikacja w ogłoszeniu CRM to jedno kliknięcie."
+    "body": "Pośrednik otwiera sodar.io w telefonie, przechodzi każde pomieszczenie raz, a asystent AI prowadzi ujęcie, i otrzymuje wirtualny spacer, po którym kupujący mogą się poruszać. Dwa pierwsze pomieszczenia są w bezpłatnym podglądzie. Jeden kredyt publikuje nieruchomość. Publikacja w ogłoszeniu CRM to jedno kliknięcie."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Działający podgląd przed jakąkolwiek płatnością"
       },
       {
-        "label": "cena jednorazowa",
-        "note": "Dopasowana do nieruchomości. Bez subskrypcji"
+        "label": "miesięcznie",
+        "note": "Plan Starter · kredyty na nieruchomości w cenie"
       },
       {
         "label": "marża partnera",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Odblokuj",
-        "title": "Jedna cena. Jedna płatność.",
-        "body": "Sodar wycenia całą nieruchomość jednorazowo — z uwzględnieniem wielkości, liczby panoram, przetwarzania, hostingu i utrzymania. Zapłać raz przez Stripe, a pozostałe pomieszczenia zostaną przetworzone."
+        "title": "Jeden plan. Jeden kredyt na nieruchomość.",
+        "body": "Sodar działa w planie miesięcznym od 99 €. Każda opublikowana nieruchomość zużywa jeden kredyt — panoramy, przetwarzanie, hosting i utrzymanie w cenie. Poziomy rosną wraz z liczbą ogłoszeń, a pierwsze pilotaże mają obniżoną stawkę."
       },
       "publish": {
         "label": "Opublikuj",
@@ -96,31 +96,31 @@
         "body": "Połącz CRM, wybierz ogłoszenie, opublikuj. Spacer żyje w ogłoszeniu dzięki osadzonej przeglądarce Sodar — a zatwierdzone ustawienia wyglądu możesz zmieniać w każdej chwili."
       }
     },
-    "quoteLabel": "Wycena · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · Kesklinn Ave 84",
     "quoteRows": [
       {
-        "k": "6 pomieszczeń · 14 panoram",
-        "v": "w cenie"
+        "k": "Plan",
+        "v": "Starter · 99 € / mies."
       },
       {
-        "k": "Przetwarzanie i obliczenia AI",
-        "v": "w cenie"
+        "k": "Kredyty w tym miesiącu",
+        "v": "zostało 7 z 10"
       },
       {
-        "k": "Przechowywanie i hosting",
-        "v": "12 miesięcy"
+        "k": "Ta nieruchomość",
+        "v": "1 kredyt"
       },
       {
-        "k": "Utrzymanie",
+        "k": "Hosting i utrzymanie",
         "v": "w cenie"
       }
     ],
-    "oneTime": "jednorazowo · bez subskrypcji",
-    "paidLabel": "Opłacono",
-    "paidBody": "Przetwarzamy pozostałe 4 pomieszczenia. Powiadomimy Cię, gdy spacer będzie kompletny.",
-    "pay": "Zapłać przez Stripe",
-    "paying": "Łączenie ze Stripe…",
-    "mockNote": "Demonstracyjna płatność — żadna karta nie zostanie obciążona.",
+    "oneTime": "miesięcznie · anuluj w dowolnym momencie",
+    "paidLabel": "Opublikowano",
+    "paidBody": "Pozostałe 4 pomieszczenia są przetwarzane. Powiadomimy Cię, gdy spacer będzie gotowy.",
+    "pay": "Opublikuj za 1 kredyt",
+    "paying": "Publikowanie…",
+    "mockNote": "Demo — żaden kredyt nie jest zużywany.",
     "crmHeader": "Twój CRM · Ogłoszenie #48213",
     "publishBtn": "Opublikuj spacer",
     "publishedBtn": "Opublikowano",
@@ -132,7 +132,8 @@
     "viewer": "przeglądarka",
     "viewerEmbedded": "osadzona",
     "opened": "otwarcia",
-    "openedValue": "128 odwiedzających"
+    "openedValue": "128 odwiedzających",
+    "planLabel": "Rzut"
   },
   "Capabilities": {
     "kicker": "Co dostajesz",
@@ -152,8 +153,8 @@
         "desc": "Działający spacer po dwóch pierwszych pomieszczeniach przed jakąkolwiek płatnością, byś najpierw ocenił finalną jakość."
       },
       {
-        "title": "Jednorazowa cena za nieruchomość",
-        "desc": "Jedna wycena dopasowana do nieruchomości — panoramy, obliczenia, hosting i utrzymanie w cenie."
+        "title": "Plan miesięczny, kredyty na nieruchomości",
+        "desc": "Od 99 € miesięcznie. Jeden kredyt na opublikowaną nieruchomość — panoramy, obliczenia, hosting i utrzymanie w cenie."
       },
       {
         "title": "Publikacja w CRM",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Prosty z założenia",
     "title1": "Jedna nieruchomość.",
-    "title2": "Jedna cena. Raz.",
-    "body": "Obejrzyj dwa pierwsze pomieszczenia za darmo. Potem Sodar wycenia dokończenie nieruchomości jedną jednorazową ceną — bez subskrypcji, bez rocznej umowy.",
+    "title2": "99 € miesięcznie. Jeden kredyt na mieszkanie.",
+    "body": "Obejrzyj dwa pierwsze pomieszczenia za darmo. Potem plan miesięczny od 99 € pokrywa Twoje ogłoszenia — jeden kredyt na opublikowaną nieruchomość, poziomy dla większego wolumenu i obniżona stawka dla pierwszych pilotaży.",
     "cta": "Jak liczona jest cena",
     "card": {
-      "label": "Typowe mieszkanie 3-pokojowe",
-      "price": "99–149 €",
-      "note": "jednorazowo · wycena po darmowym podglądzie",
+      "label": "Plan Starter",
+      "price": "99 €",
+      "note": "miesięcznie · 10 kredytów na nieruchomości",
       "factors": [
-        "Wielkość nieruchomości",
-        "Uchwycone panoramy",
-        "Przetwarzanie i obliczenia AI",
-        "Przechowywanie i hosting",
-        "Bieżące utrzymanie"
+        "Prowadzone zdjęcia i asystent AI",
+        "10 opublikowanych nieruchomości miesięcznie",
+        "Publikacja w CRM i osadzony podgląd",
+        "Hosting i utrzymanie w cenie",
+        "Obniżona stawka dla partnerów pilotażowych"
       ],
       "cta": "Zeskanuj nieruchomość"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Wypróbuj na prawdziwej nieruchomości",
-      "title": "Obejrzyj dwa pomieszczenia za darmo. Zapłać raz za resztę.",
+      "title": "Dwa pomieszczenia w bezpłatnym podglądzie. Publikuj w jednym planie.",
       "sub": "Otwórz sodar.io na telefonie i rozpocznij skan — bez karty, dopóki nie odblokujesz pełnego spaceru.",
       "label": "Zeskanuj pierwszą nieruchomość"
     }
   },
   "PricingPage": {
     "metaTitle": "Cennik — Sodar",
-    "metaDesc": "Jednorazowa cena za nieruchomość, wyceniana po darmowym podglądzie dwóch pomieszczeń. Ceny wolumenowe dla biur, 15% marży dla partnerów CRM.",
+    "metaDesc": "Plany miesięczne od 99 € z kredytami na nieruchomości, poziomy dla większego wolumenu, obniżona stawka dla pierwszych pilotaży i 15% marży dla partnerów CRM.",
     "eyebrow": "Prosty z założenia",
-    "title": "Jedna nieruchomość. Jedna cena. Raz.",
-    "sub": "Obejrzyj dwa pomieszczenia za darmo, a potem zapłać jedną jednorazową cenę dopasowaną do nieruchomości. Ceny wolumenowe dla biur, stała marża 15% dla partnerów CRM.",
+    "title": "Jeden plan. Kredyty na nieruchomości.",
+    "sub": "Obejrzyj dwa pomieszczenia za darmo, a potem wybierz liczbę kredytów pasującą do Twoich ogłoszeń. Plany zaczynają się od 99 € miesięcznie; pierwsi partnerzy pilotażowi mają obniżoną stawkę.",
     "badge": "Większość biur",
     "tiers": [
       {
-        "name": "Za nieruchomość",
-        "price": "Od 99 €",
-        "unit": "jednorazowo, wycena po darmowym podglądzie",
-        "desc": "Dla pośredników skanujących ogłoszenia pojedynczo.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "miesięcznie · 10 kredytów na nieruchomości",
+        "desc": "Dla pośredników publikujących kilka ogłoszeń miesięcznie.",
         "features": [
-          "Prowadzone ujęcia telefonem + asystent AI",
-          "Dwa pierwsze pomieszczenia za darmo w podglądzie",
-          "Pełny spacer po jednej płatności Stripe",
-          "Publikacja w CRM i osadzona przeglądarka",
-          "Przestrzeń robocza ze statusami i otwarciami"
+          "Prowadzone zdjęcia telefonem + asystent AI",
+          "Dwa pierwsze pomieszczenia w bezpłatnym podglądzie",
+          "Jeden kredyt na opublikowaną nieruchomość",
+          "Publikacja w CRM i osadzony podgląd",
+          "Przestrzeń robocza ze statusami i wyświetleniami"
         ],
-        "cta": "Zeskanuj pierwszą nieruchomość"
+        "cta": "Zacznij od Starter"
       },
       {
-        "name": "Biuro",
-        "price": "Wolumen",
-        "unit": "za nieruchomość, malejąca z wolumenem",
-        "desc": "Dla biur publikujących dziesiątki ogłoszeń miesięcznie.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "miesięcznie · 30 kredytów na nieruchomości",
+        "desc": "Dla zespołów publikujących co tydzień.",
         "features": [
-          "Wszystko z planu Za nieruchomość",
-          "Zbiorczy widok całego biura",
+          "Wszystko ze Starter",
           "Priorytetowa kolejka przetwarzania",
-          "Dedykowana konfiguracja CRM",
-          "Przeglądarka z co-brandingiem"
+          "Przestrzeń robocza całego biura",
+          "Podgląd z Twoją marką",
+          "Dedykowana konfiguracja CRM"
         ],
         "cta": "Porozmawiaj ze sprzedażą"
       },
       {
-        "name": "Partner CRM",
-        "price": "15%",
-        "unit": "marży od kwalifikujących się zakupów",
-        "desc": "Dla dostawców CRM dystrybuujących Sodar wśród swoich pośredników.",
+        "name": "Brokerage",
+        "price": "Indywidualnie",
+        "unit": "kredyty wolumenowe, faktura miesięczna",
+        "desc": "Dla sieci i portali publikujących na dużą skalę.",
         "features": [
-          "Sodar dostępny w Twojej platformie",
-          "Panel partnera",
-          "Comiesięczna automatyczna wypłata",
-          "Bez minimalnego wolumenu"
+          "Indywidualna liczba kredytów",
+          "Rzuty do każdego ogłoszenia",
+          "Dostęp do API",
+          "Wdrożenie dla każdego oddziału",
+          "Stawka pilotażowa dla pierwszych partnerów"
         ],
-        "cta": "Zostań partnerem"
+        "cta": "Zapytaj o stawkę pilotażową"
       }
     ],
-    "factorsKicker": "Jak powstaje wycena",
-    "factorsTitle": "Cena według nieruchomości, nie według planu.",
+    "factorsKicker": "Jak działają kredyty",
+    "factorsTitle": "Jeden kredyt, jedna opublikowana nieruchomość.",
     "factors": [
       {
-        "title": "Wielkość nieruchomości",
-        "desc": "Powierzchnia i liczba uchwyconych pomieszczeń."
+        "title": "Jeden kredyt na nieruchomość",
+        "desc": "Wszystkie pomieszczenia nieruchomości, bez względu na liczbę panoram, zużywają przy publikacji jeden kredyt."
       },
       {
-        "title": "Liczba panoram",
-        "desc": "Ile panoram wytworzył skan i w jakiej rozdzielczości."
+        "title": "Najpierw bezpłatny podgląd",
+        "desc": "Dwa pierwsze pomieszczenia są przetwarzane, zanim zużyjesz jakikolwiek kredyt, więc najpierw oceniasz jakość."
       },
       {
-        "title": "Przetwarzanie",
-        "desc": "Łączenie, poprawa i obliczenia AI stojące za spacerem."
+        "title": "Wolumen miesięczny",
+        "desc": "Kredyty odnawiają się co miesiąc razem z planem; wyższe poziomy po prostu zawierają ich więcej."
       },
       {
-        "title": "Przechowywanie i hosting",
-        "desc": "Utrzymanie spaceru i jego przeglądarki online w Twoim ogłoszeniu."
+        "title": "Hosting w cenie",
+        "desc": "Utrzymanie spaceru i podglądu online w Twoim ogłoszeniu jest częścią planu."
       },
       {
-        "title": "Utrzymanie",
-        "desc": "Bieżące aktualizacje przeglądarki i sama integracja z CRM."
+        "title": "Stawka pilotażowa",
+        "desc": "Pierwsi partnerzy pilotażowi w Estonii otrzymują obniżoną stawkę miesięczną — zapytaj przez formularz kontaktowy."
       },
       {
         "title": "Marża partnera",
-        "desc": "Tam, gdzie Sodar dystrybuuje partner CRM, jego marża jest wliczona w wycenę."
+        "desc": "Gdy Sodar dystrybuuje partner CRM, jego 15% marży jest wliczone w cenę planu."
       }
     ],
     "faqKicker": "Pytania",
     "faqTitle": "FAQ cennika.",
     "faq": [
       {
-        "q": "Kiedy zobaczę cenę?",
-        "a": "Po darmowym podglądzie. Sodar liczy jednorazową cenę dokończenia nieruchomości, gdy dwa pierwsze pomieszczenia są przetworzone."
+        "q": "Co obejmuje kredyt?",
+        "a": "Jedną opublikowaną nieruchomość ze wszystkimi pomieszczeniami i panoramami oraz hosting i utrzymanie przez cały czas trwania ogłoszenia."
       },
       {
-        "q": "Czy podgląd jest naprawdę darmowy?",
-        "a": "Tak — dwa pierwsze pomieszczenia są przetwarzane w działający spacer bez płatności. Płacisz tylko za dokończenie i publikację nieruchomości."
+        "q": "Czy podgląd naprawdę jest bezpłatny?",
+        "a": "Tak — dwa pierwsze pomieszczenia stają się działającym spacerem, zanim zużyjesz kredyt. Kredyt wydajesz dopiero przy publikacji."
       },
       {
-        "q": "Czy jest subskrypcja?",
-        "a": "Nie. Każda nieruchomość to jedna jednorazowa płatność przez Stripe. Nic się nie odnawia."
+        "q": "Czy mogę zmienić poziom?",
+        "a": "W dowolnym momencie. Przejdź wyżej, gdy rośnie liczba ogłoszeń; niewykorzystane kredyty zostają z Tobą do końca miesiąca."
       },
       {
-        "q": "Jak wypłacana jest marża partnera CRM?",
-        "a": "Automatycznie, co miesiąc, od kwalifikujących się zakupów spacerów przez pośredników na platformie partnera."
+        "q": "Czym jest stawka pilotażowa?",
+        "a": "Pierwsi partnerzy pilotażowi otrzymują obniżoną stawkę miesięczną na czas wspólnego wdrożenia. Opowiedz nam o swoim biurze przez formularz kontaktowy."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Budujemy Twój podgląd dwóch pomieszczeń…",
     "done": "Podgląd gotowy",
     "doneTitle": "Dwa pomieszczenia uchwycone.",
-    "doneBody": "W prawdziwym produkcie tutaj pojawia się spacer wraz z jednorazową ceną za pozostałe pomieszczenia.",
+    "doneBody": "W prawdziwym produkcie spacer pojawia się tutaj, gotowy do publikacji za jeden kredyt z Twojego planu.",
     "workspace": "Otwórz podgląd przestrzeni roboczej",
     "again": "Skanuj ponownie",
     "exit": "Wyjdź",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar na LinkedIn",
     "privacyEyebrow": "Prywatność",
     "privacyTitle": "Zapytaj o swoje dane.",
-    "privacySub": "Wnioski o dostęp, sprostowanie, eksport lub usunięcie danych oraz wszelkie inne pytania o prywatność trafiają bezpośrednio do naszego zespołu ds. prywatności."
+    "privacySub": "Wnioski o dostęp, sprostowanie, eksport lub usunięcie danych oraz wszelkie inne pytania o prywatność trafiają bezpośrednio do naszego zespołu ds. prywatności.",
+    "topic": "Temat",
+    "topicPlaceholder": "Wybierz temat",
+    "topics": {
+      "pilot": "Program pilotażowy (obniżona stawka)",
+      "pricing": "Ceny i poziomy kredytów",
+      "partnership": "Partnerstwo CRM",
+      "careers": "Kariera",
+      "other": "Inne"
+    }
   },
   "Intro": {
     "kicker": "Wprowadzenie",
     "title": "Sodar w jedną minutę.",
-    "body": "Przejdź raz, obejrzyj dwa pomieszczenia za darmo, zapłać raz, opublikuj w ogłoszeniu, które już masz.",
+    "body": "Przejdź raz, obejrzyj dwa pomieszczenia za darmo, opublikuj za jeden kredyt — prosto do ogłoszenia, które już masz.",
     "play": "Odtwórz",
     "pause": "Pauza",
     "mute": "Wycisz",

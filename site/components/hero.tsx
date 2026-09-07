@@ -6,14 +6,18 @@ import { AnimatedHeading } from "@/components/animated-heading";
 import { MosaicGrid } from "@/components/mosaic-grid";
 import { SodarMark } from "@/components/logo";
 
-/** Homepage hero — wordmark, serif headline, and the wall of room captures. */
+/**
+ * Homepage hero — wordmark, serif headline, and the drifting wall of listing
+ * photographs. On large screens the wall sits to the right of the copy; on
+ * small screens it becomes a full-bleed band under it.
+ */
 export function Hero() {
   const t = useTranslations("Hero");
 
   return (
-    <section className="relative">
-      <div className="mx-auto grid min-h-[calc(100dvh-72px)] max-w-[1440px] items-center gap-14 px-5 pb-20 pt-14 sm:px-8 lg:grid-cols-[1fr_1fr] lg:gap-20 lg:px-12">
-        <div>
+    <section className="relative overflow-hidden">
+      <div className="mx-auto grid min-h-[calc(100dvh-72px)] max-w-[1440px] items-center gap-12 px-5 pb-16 pt-14 sm:px-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-10 lg:px-12">
+        <div className="relative z-10 min-w-0">
           <p className="hero-enter hero-enter-1 flex items-center gap-4">
             <SodarMark size={20} className="text-text" />
             <span className="wordmark">Sodar</span>
@@ -30,8 +34,8 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="hero-enter hero-enter-2">
-          <MosaicGrid className="w-full" />
+        <div className="hero-enter hero-enter-2 -mx-5 min-w-0 sm:-mx-8 lg:mx-0">
+          <MosaicGrid className="w-full min-w-0" />
         </div>
       </div>
     </section>

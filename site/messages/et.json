@@ -29,7 +29,7 @@
       "Nii et tegime telefonist skanneri",
       "ja skannist koha."
     ],
-    "body": "Maakler avab telefonis sodar.io, käib iga ruumi ühe korra läbi, samal ajal kui AI-jäädvustusabiline juhendab võtet, ja saab vastu ringkäigu, milles ostjad saavad liikuda. Kaks esimest ruumi on eelvaates tasuta. Üks makse viimistleb objekti. Avaldamine CRM-i kuulutusse on üks klõps."
+    "body": "Maakler avab telefonis sodar.io, kõnnib iga toa ühe korra läbi, kuni AI-abiline juhendab võtteid, ja saab tagasi virtuaaltuuri, milles ostjad saavad liikuda. Kaks esimest tuba on tasuta eelvaates. Üks krediit avaldab kinnisvaraobjekti. CRM-i kuulutusse avaldamine on üks klõps."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Toimiv eelvaade enne mistahes makset"
       },
       {
-        "label": "ühekordne hind",
-        "note": "Objekti järgi mõõdetud. Ilma tellimuseta"
+        "label": "kuus",
+        "note": "Starter-pakett · objektikrediidid hinnas"
       },
       {
         "label": "partneri marginaal",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Ava",
-        "title": "Üks hind. Üks makse.",
-        "body": "Sodar arvutab kogu objektile ühekordse hinna — suurus, panoraamide arv, töötlus, majutus ja hooldus on kõik arvesse võetud. Maksa üks kord Stripe’i kaudu ja ülejäänud ruumid töödeldakse."
+        "title": "Üks pakett. Üks krediit objekti kohta.",
+        "body": "Sodar töötab kuupaketiga alates 99 €. Iga avaldatud objekt kasutab ühe krediidi — panoraamid, töötlus, majutus ja hooldus hinnas. Tasemed kasvavad koos kuulutuste mahuga ja esimesed pilootpartnerid saavad soodushinna."
       },
       "publish": {
         "label": "Avalda",
@@ -96,31 +96,31 @@
         "body": "Ühenda oma CRM, vali objekti kuulutus, avalda. Ringkäik elab kuulutuse sees Sodari manustatud vaaturi kaudu — ja heakskiidetud välimuse seadeid saad igal ajal kohandada."
       }
     },
-    "quoteLabel": "Pakkumine · Kesklinna 84",
+    "quoteLabel": "Starter · Kesklinna 84",
     "quoteRows": [
       {
-        "k": "6 ruumi · 14 panoraami",
-        "v": "sisaldub"
+        "k": "Pakett",
+        "v": "Starter · 99 € / kuu"
       },
       {
-        "k": "Töötlus ja AI-arvutus",
-        "v": "sisaldub"
+        "k": "Krediite sel kuul",
+        "v": "7 / 10 alles"
       },
       {
-        "k": "Salvestus ja vaaturi majutus",
-        "v": "12 kuud"
+        "k": "See objekt",
+        "v": "1 krediit"
       },
       {
-        "k": "Hooldus",
-        "v": "sisaldub"
+        "k": "Majutus ja hooldus",
+        "v": "hinnas"
       }
     ],
-    "oneTime": "ühekordne · ilma tellimuseta",
-    "paidLabel": "Makstud",
-    "paidBody": "Töötleme ülejäänud 4 ruumi. Anname teada, kui ringkäik on valmis.",
-    "pay": "Maksa Stripe’iga",
-    "paying": "Ühendame Stripe’iga…",
-    "mockNote": "Näidiskassa — ühtegi kaarti ei debiteerita.",
+    "oneTime": "kuus · lõpeta igal ajal",
+    "paidLabel": "Avaldatud",
+    "paidBody": "Ülejäänud 4 tuba on töötlemisel. Anname teada, kui tuur on valmis.",
+    "pay": "Avalda 1 krediidiga",
+    "paying": "Avaldame…",
+    "mockNote": "Demo — krediiti ei kasutata.",
     "crmHeader": "Sinu CRM · Kuulutus #48213",
     "publishBtn": "Avalda ringkäik",
     "publishedBtn": "Avaldatud",
@@ -132,7 +132,8 @@
     "viewer": "vaatur",
     "viewerEmbedded": "manustatud",
     "opened": "avatud",
-    "openedValue": "128 külastajat"
+    "openedValue": "128 külastajat",
+    "planLabel": "Korruseplaan"
   },
   "Capabilities": {
     "kicker": "Mida sa saad",
@@ -152,8 +153,8 @@
         "desc": "Kahe esimese ruumi toimiv ringkäik enne mistahes makset, et hindaksid lõplikku kvaliteeti kõigepealt."
       },
       {
-        "title": "Ühekordne hind objekti kohta",
-        "desc": "Üks objekti järgi mõõdetud pakkumine — panoraamid, arvutus, majutus ja hooldus kaasa arvatud."
+        "title": "Kuupakett, objektikrediidid",
+        "desc": "Alates 99 € kuus. Üks krediit iga avaldatud objekti kohta — panoraamid, arvutus, majutus ja hooldus hinnas."
       },
       {
         "title": "Avaldamine CRM-i",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Lihtne juba disainilt",
     "title1": "Üks objekt.",
-    "title2": "Üks hind. Üks kord.",
-    "body": "Vaata kaht esimest ruumi tasuta eelvaates. Seejärel pakub Sodar objekti viimistlemiseks ühe ühekordse hinna — ilma tellimuseta, ilma aastalepinguta.",
+    "title2": "99 € kuus. Üks krediit kodu kohta.",
+    "body": "Vaata kaht esimest tuba tasuta. Seejärel katab kuupakett alates 99 € sinu kuulutused — üks krediit avaldatud objekti kohta, tasemed suuremale mahule ja soodushind esimestele pilootidele.",
     "cta": "Kuidas hind arvutatakse",
     "card": {
-      "label": "Tüüpiline 3-toaline korter",
-      "price": "99–149 €",
-      "note": "ühekordne · pakkumine pärast tasuta eelvaadet",
+      "label": "Starter-pakett",
+      "price": "99 €",
+      "note": "kuus · 10 objektikrediiti",
       "factors": [
-        "Objekti suurus",
-        "Jäädvustatud panoraamid",
-        "Töötlus ja AI-arvutus",
-        "Salvestus ja vaaturi majutus",
-        "Pidev hooldus"
+        "Juhendatud pildistamine ja AI-abiline",
+        "10 avaldatud objekti kuus",
+        "CRM-i avaldamine ja manustatud vaatur",
+        "Majutus ja hooldus hinnas",
+        "Soodushind pilootpartneritele"
       ],
       "cta": "Skanni kinnisvara"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Proovi päris objektil",
-      "title": "Vaata kaht ruumi tasuta. Maksa ülejäänu eest üks kord.",
+      "title": "Kaks tuba tasuta eelvaates. Avalda ühe paketiga.",
       "sub": "Ava sodar.io telefonis ja alusta skanni — kaarti pole vaja enne, kui avad täieliku ringkäigu.",
       "label": "Skanni oma esimene objekt"
     }
   },
   "PricingPage": {
     "metaTitle": "Hinnad — Sodar",
-    "metaDesc": "Ühekordne hind objekti kohta, pakutakse pärast kahe ruumi tasuta eelvaadet. Mahuhinnad büroodele, 15% marginaal CRM-partneritele.",
+    "metaDesc": "Kuupaketid alates 99 € objektikrediitidega, tasemed suuremale mahule, soodushind esimestele pilootidele ja 15% marginaal CRM-partneritele.",
     "eyebrow": "Lihtne juba disainilt",
-    "title": "Üks objekt. Üks hind. Üks kord.",
-    "sub": "Vaata kaht ruumi tasuta, seejärel maksa üks objekti järgi mõõdetud ühekordne hind. Mahuhinnad büroodele, püsiv 15% marginaal CRM-partneritele.",
+    "title": "Üks pakett. Krediidid objekti kohta.",
+    "sub": "Vaata kaht tuba tasuta ja vali krediidimaht, mis sobib sinu kuulutustega. Paketid algavad 99 € kuus; esimesed pilootpartnerid saavad soodushinna.",
     "badge": "Enamik büroosid",
     "tiers": [
       {
-        "name": "Objekti kohta",
-        "price": "Alates 99 €",
-        "unit": "ühekordne, pakkumine pärast tasuta eelvaadet",
-        "desc": "Maakleritele, kes skannivad kuulutusi ühekaupa.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "kuus · 10 objektikrediiti",
+        "desc": "Maakleritele, kes avaldavad mõne kuulutuse kuus.",
         "features": [
-          "Juhendatud jäädvustus telefoniga + AI-abiline",
-          "Kaks esimest ruumi tasuta eelvaates",
-          "Täielik ringkäik pärast üht Stripe’i makset",
-          "Avaldamine CRM-i ja manustatud vaatur",
-          "Tööruum olekute ja vaaturi avamistega"
+          "Juhendatud pildistamine + AI-abiline",
+          "Kaks esimest tuba tasuta eelvaates",
+          "Üks krediit avaldatud objekti kohta",
+          "CRM-i avaldamine ja manustatud vaatur",
+          "Tööruum staatuse ja vaatamistega"
         ],
-        "cta": "Skanni oma esimene objekt"
+        "cta": "Alusta Starteriga"
       },
       {
-        "name": "Büroo",
-        "price": "Maht",
-        "unit": "objekti kohta, mahu kasvades langeb",
-        "desc": "Büroodele, kes avaldavad kümneid kuulutusi kuus.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "kuus · 30 objektikrediiti",
+        "desc": "Tiimidele, kes avaldavad iga nädal.",
         "features": [
-          "Kõik, mis Objekti kohta paketis",
-          "Bürooülene tööruumi koond",
-          "Eelisjärjekord töötluses",
-          "Personaalne CRM-i seadistus",
-          "Ühisbrändiga vaatur"
+          "Kõik Starteri omadused",
+          "Eelisjärjekorras töötlus",
+          "Büroo-ülene tööruum",
+          "Kaubamärgistatud vaatur",
+          "Personaalne CRM-i seadistus"
         ],
         "cta": "Räägi müügiga"
       },
       {
-        "name": "CRM-partner",
-        "price": "15%",
-        "unit": "marginaal kvalifitseeruvatelt ostudelt",
-        "desc": "CRM-i pakkujatele, kes levitavad Sodarit oma maakleritele.",
+        "name": "Brokerage",
+        "price": "Kokkuleppel",
+        "unit": "mahukrediidid, arve kord kuus",
+        "desc": "Büroodele ja portaalidele, kes avaldavad suures mahus.",
         "features": [
-          "Sodar saadaval sinu platvormi sees",
-          "Partneri töölaud",
-          "Igakuine automaatne väljamakse",
-          "Ilma miinimummahuta"
+          "Kohandatud krediidimaht",
+          "Korruseplaan iga kuulutuse juurde",
+          "API-ligipääs",
+          "Sisseelamine igale kontorile",
+          "Piloothind esimestele partneritele"
         ],
-        "cta": "Kandideeri partneriks"
+        "cta": "Küsi piloothinda"
       }
     ],
-    "factorsKicker": "Kuidas pakkumine kujuneb",
-    "factorsTitle": "Hind objekti, mitte paketi järgi.",
+    "factorsKicker": "Kuidas krediidid töötavad",
+    "factorsTitle": "Üks krediit, üks avaldatud objekt.",
     "factors": [
       {
-        "title": "Objekti suurus",
-        "desc": "Pindala ja jäädvustatud ruumide arv."
+        "title": "Üks krediit objekti kohta",
+        "desc": "Objekti kõik toad, olenemata panoraamide arvust, kasutavad avaldamisel ühe krediidi."
       },
       {
-        "title": "Panoraamide maht",
-        "desc": "Kui palju panoraame skann tootis ja millise eraldusvõimega."
+        "title": "Kõigepealt tasuta eelvaade",
+        "desc": "Kaks esimest tuba töödeldakse enne ühegi krediidi kasutamist, et hindaksid kvaliteeti kõigepealt."
       },
       {
-        "title": "Töötlus",
-        "desc": "Ühendamine, parandamine ja ringkäigu taga olev AI-arvutus."
+        "title": "Kuine maht",
+        "desc": "Krediidid uuenevad iga kuu koos paketiga; kõrgemad tasemed sisaldavad lihtsalt rohkem."
       },
       {
-        "title": "Salvestus ja majutus",
-        "desc": "Ringkäigu ja selle vaaturi hoidmine sinu kuulutuse sees võrgus."
+        "title": "Majutus hinnas",
+        "desc": "Tuuri ja vaaturi hoidmine kuulutuses on paketi osa."
       },
       {
-        "title": "Hooldus",
-        "desc": "Vaaturi pidevad uuendused ja CRM-i integratsioon ise."
+        "title": "Piloothind",
+        "desc": "Esimesed pilootpartnerid Eestis saavad soodsama kuuhinna — küsi kontaktivormi kaudu."
       },
       {
         "title": "Partneri marginaal",
-        "desc": "Kui Sodarit levitab CRM-partner, sisaldub tema marginaal pakkumises."
+        "desc": "Kui Sodarit levitab CRM-partner, sisaldub tema 15% marginaal paketi hinnas."
       }
     ],
     "faqKicker": "Küsimused",
     "faqTitle": "Hindade KKK.",
     "faq": [
       {
-        "q": "Millal ma hinda näen?",
-        "a": "Pärast tasuta eelvaadet. Sodar arvutab objekti viimistlemise ühekordse hinna, kui kaks esimest ruumi on töödeldud."
+        "q": "Mida üks krediit katab?",
+        "a": "Ühe avaldatud objekti, kõik selle toad ja panoraamid, ning majutuse ja hoolduse kuulutuse eluea jooksul."
       },
       {
         "q": "Kas eelvaade on tõesti tasuta?",
-        "a": "Jah — kaks esimest ruumi töödeldakse toimivaks ringkäiguks ilma makseta. Maksad ainult objekti viimistlemise ja avaldamise eest."
+        "a": "Jah — kaks esimest tuba töödeldakse toimivaks tuuriks enne krediidi kasutamist. Krediit kulub alles avaldamisel."
       },
       {
-        "q": "Kas on tellimus?",
-        "a": "Ei. Iga objekt on üks ühekordne makse Stripe’i kaudu. Miski ei uuene."
+        "q": "Kas taset saab muuta?",
+        "a": "Igal ajal. Liigu kõrgemale, kui kuulutuste maht kasvab; kasutamata krediidid jäävad kuu lõpuni alles."
       },
       {
-        "q": "Kuidas makstakse CRM-partneri marginaal?",
-        "a": "Automaatselt, igakuiselt, partneri platvormi maaklerite kvalifitseeruvatelt ringkäiguostudelt."
+        "q": "Mis on piloothind?",
+        "a": "Esimesed pilootpartnerid saavad ühise käivituse ajaks soodsama kuuhinna. Räägi meile oma büroost kontaktivormi kaudu."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Koostame sinu kahe ruumi eelvaadet…",
     "done": "Eelvaade valmis",
     "doneTitle": "Kaks ruumi jäädvustatud.",
-    "doneBody": "Päris tootes ilmub siia ringkäik koos ülejäänud ruumide ühekordse hinnaga.",
+    "doneBody": "Päris tootes ilmub tuur siia, valmis avaldamiseks ühe paketi krediidiga.",
     "workspace": "Ava tööruumi eelvaade",
     "again": "Skanni uuesti",
     "exit": "Välju",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar LinkedInis",
     "privacyEyebrow": "Privaatsus",
     "privacyTitle": "Küsi oma andmete kohta.",
-    "privacySub": "Päringud andmetele juurdepääsu, parandamise, ekspordi või kustutamise kohta ja kõik muud privaatsusküsimused jõuavad otse meie privaatsusmeeskonnani."
+    "privacySub": "Päringud andmetele juurdepääsu, parandamise, ekspordi või kustutamise kohta ja kõik muud privaatsusküsimused jõuavad otse meie privaatsusmeeskonnani.",
+    "topic": "Teema",
+    "topicPlaceholder": "Vali teema",
+    "topics": {
+      "pilot": "Pilootprogramm (soodushind)",
+      "pricing": "Hinnad ja krediiditasemed",
+      "partnership": "CRM-partnerlus",
+      "careers": "Karjäär",
+      "other": "Muu"
+    }
   },
   "Intro": {
     "kicker": "Tutvustus",
     "title": "Sodar ühe minutiga.",
-    "body": "Käi üks kord läbi, vaata kaht ruumi tasuta, maksa üks kord, avalda kuulutusse, mis sul juba on.",
+    "body": "Kõnni üks kord, vaata kaht tuba tasuta, avalda ühe krediidiga — otse kuulutusse, mis sul juba on.",
     "play": "Esita",
     "pause": "Paus",
     "mute": "Vaigista",

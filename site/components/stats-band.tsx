@@ -6,9 +6,9 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { prefersReducedMotion } from "@/lib/motion";
 
-const VALUES: { value: number; suffix: string }[] = [
+const VALUES: { value: number; prefix?: string; suffix: string }[] = [
   { value: 2, suffix: "" },
-  { value: 1, suffix: "" },
+  { value: 99, prefix: "€", suffix: "" },
   { value: 15, suffix: "%" },
   { value: 360, suffix: "°" },
 ];
@@ -50,6 +50,7 @@ export function StatsBand() {
         {VALUES.map((s, i) => (
           <div key={i} className="px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
             <p className="display num text-[clamp(2.6rem,4.6vw,4.4rem)] leading-none text-text" dir="ltr">
+              {s.prefix}
               <span data-count={s.value}>0</span>
               {s.suffix}
             </p>

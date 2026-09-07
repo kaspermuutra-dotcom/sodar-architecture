@@ -6,6 +6,7 @@ import { DIAL_CODES, flagOf, normalisePhone } from "@/lib/dial-codes";
 import { LINKEDIN_URL, PHONE, PRIVACY_EMAIL, TEAM_EMAIL } from "@/lib/company";
 
 type Audience = "team" | "privacy";
+const TOPICS = ["pilot", "pricing", "partnership", "careers", "other"] as const;
 
 const FORMSPREE: Record<Audience, string | undefined> = {
   team: process.env.NEXT_PUBLIC_FORMSPREE_ID,
@@ -33,10 +34,11 @@ export function ContactForm({ audience = "team" }: { audience?: Audience }) {
     const raw = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
     const phone = normalisePhone(raw.dial, raw.phone);
     const data = { ...raw, phone, audience };
-    const subject = `[${audience === "privacy" ? "privacy" : "contact"}] ${raw.subject}`;
+    const subject = `[${audience === "privacy" ? "privacy" : raw.topic || "contact"}] ${raw.subject}`;
     if (!formId) {
       const body = [
         `${raw.name} · ${raw.jobTitle}${raw.company ? ` · ${raw.company}` : ""}`,
+        ...(raw.topic ? [`Topic: ${raw.topic}`] : []),
         raw.email,
         phone,
         "",
@@ -149,6 +151,21 @@ export function ContactForm({ audience = "team" }: { audience?: Audience }) {
             </div>
           </div>
 
+          {audience === "team" ? (
+            <label className="field mt-5">
+              {t("topic")} *
+              <select name="topic" required defaultValue="">
+                <option value="" disabled>
+                  {t("topicPlaceholder")}
+                </option>
+                {TOPICS.map((k) => (
+                  <option key={k} value={k}>
+                    {t(`topics.${k}`)}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : null}
           <label className="field mt-5">
             {t("subject")} *
             <input name="subject" required maxLength={120} />

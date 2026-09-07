@@ -29,7 +29,7 @@
       "Così abbiamo trasformato un telefono in uno scanner,",
       "e una scansione in un luogo."
     ],
-    "body": "Un agente apre sodar.io sul telefono, percorre ogni stanza una volta mentre un assistente di ripresa con IA guida lo scatto, e riceve un tour in cui gli acquirenti possono muoversi. Le prime due stanze sono gratuite in anteprima. Un solo pagamento completa l’immobile. Pubblicare nell’annuncio CRM è un clic."
+    "body": "Un agente apre sodar.io sul telefono, percorre ogni stanza una volta mentre un assistente di acquisizione IA guida lo scatto, e ottiene un walkthrough in cui gli acquirenti possono muoversi. Le prime due stanze sono in anteprima gratuita. Un credito pubblica l’immobile. Pubblicare nell’annuncio del CRM è un clic."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Anteprima funzionante prima di qualsiasi pagamento"
       },
       {
-        "label": "prezzo unico",
-        "note": "Su misura per l’immobile. Nessun abbonamento"
+        "label": "al mese",
+        "note": "Piano Starter · crediti immobile inclusi"
       },
       {
         "label": "margine partner",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Sblocca",
-        "title": "Un prezzo. Un pagamento.",
-        "body": "Sodar calcola un prezzo unico per l’intero immobile — dimensioni, numero di panorami, elaborazione, hosting e manutenzione inclusi. Paghi una volta con Stripe e le stanze restanti vengono elaborate."
+        "title": "Un piano. Un credito per immobile.",
+        "body": "Sodar funziona con un piano mensile da 99 €. Ogni immobile pubblicato usa un credito — panorami, elaborazione, hosting e manutenzione inclusi. I livelli crescono con il tuo volume di annunci e i primi piloti hanno una tariffa ridotta."
       },
       "publish": {
         "label": "Pubblica",
@@ -96,31 +96,31 @@
         "body": "Collega il CRM, scegli l’annuncio, pubblica. Il tour vive dentro l’annuncio tramite il viewer integrato di Sodar — e puoi regolare le impostazioni di aspetto approvate in qualsiasi momento."
       }
     },
-    "quoteLabel": "Preventivo · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · Kesklinn Ave 84",
     "quoteRows": [
       {
-        "k": "6 stanze · 14 panorami",
-        "v": "incluso"
+        "k": "Piano",
+        "v": "Starter · 99 € / mese"
       },
       {
-        "k": "Elaborazione e calcolo IA",
-        "v": "incluso"
+        "k": "Crediti questo mese",
+        "v": "7 su 10 rimasti"
       },
       {
-        "k": "Archiviazione e hosting",
-        "v": "12 mesi"
+        "k": "Questo immobile",
+        "v": "1 credito"
       },
       {
-        "k": "Manutenzione",
-        "v": "incluso"
+        "k": "Hosting e manutenzione",
+        "v": "inclusi"
       }
     ],
-    "oneTime": "una tantum · nessun abbonamento",
-    "paidLabel": "Pagato",
-    "paidBody": "Elaborazione delle 4 stanze restanti in corso. Ti avviseremo quando il tour sarà completo.",
-    "pay": "Paga con Stripe",
-    "paying": "Connessione a Stripe…",
-    "mockNote": "Checkout dimostrativo — nessuna carta viene addebitata.",
+    "oneTime": "al mese · disdici quando vuoi",
+    "paidLabel": "Pubblicato",
+    "paidBody": "Le altre 4 stanze sono in elaborazione. Ti avviseremo quando il walkthrough sarà pronto.",
+    "pay": "Pubblica con 1 credito",
+    "paying": "Pubblicazione…",
+    "mockNote": "Demo — nessun credito viene usato.",
     "crmHeader": "Il tuo CRM · Annuncio #48213",
     "publishBtn": "Pubblica il tour",
     "publishedBtn": "Pubblicato",
@@ -132,7 +132,8 @@
     "viewer": "viewer",
     "viewerEmbedded": "integrato",
     "opened": "aperture",
-    "openedValue": "128 visitatori"
+    "openedValue": "128 visitatori",
+    "planLabel": "Planimetria"
   },
   "Capabilities": {
     "kicker": "Cosa ottieni",
@@ -152,8 +153,8 @@
         "desc": "Un tour funzionante delle prime due stanze prima di qualsiasi pagamento, così giudichi prima la qualità finale."
       },
       {
-        "title": "Prezzo unico per immobile",
-        "desc": "Un solo preventivo su misura per l’immobile — panorami, calcolo, hosting e manutenzione inclusi."
+        "title": "Piano mensile, crediti per immobile",
+        "desc": "Da 99 € al mese. Un credito per immobile pubblicato — panorami, calcolo, hosting e manutenzione inclusi."
       },
       {
         "title": "Pubblicazione nel CRM",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Semplice per scelta",
     "title1": "Un immobile.",
-    "title2": "Un prezzo. Una volta.",
-    "body": "Guarda in anteprima le prime due stanze gratis. Poi Sodar propone un unico prezzo per completare l’immobile — nessun abbonamento, nessun contratto annuale.",
+    "title2": "99 € al mese. Un credito per casa.",
+    "body": "Guarda le prime due stanze gratis. Poi un piano mensile da 99 € copre i tuoi annunci — un credito per immobile pubblicato, livelli per volumi maggiori e tariffa ridotta per i primi piloti.",
     "cta": "Come si calcola il prezzo",
     "card": {
-      "label": "Trilocale tipico",
-      "price": "99–149 €",
-      "note": "una tantum · preventivo dopo l’anteprima gratuita",
+      "label": "Piano Starter",
+      "price": "99 €",
+      "note": "al mese · 10 crediti immobile",
       "factors": [
-        "Dimensioni dell’immobile",
-        "Panorami ripresi",
-        "Elaborazione e calcolo IA",
-        "Archiviazione e hosting",
-        "Manutenzione continua"
+        "Acquisizione guidata e assistente IA",
+        "10 immobili pubblicati al mese",
+        "Pubblicazione CRM e viewer integrato",
+        "Hosting e manutenzione inclusi",
+        "Tariffa ridotta per i partner pilota"
       ],
       "cta": "Scansiona un immobile"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Provalo su un immobile reale",
-      "title": "Due stanze in anteprima gratis. Paga una volta per il resto.",
+      "title": "Due stanze in anteprima gratis. Pubblica con un solo piano.",
       "sub": "Apri sodar.io sul telefono e avvia una scansione — nessuna carta finché non sblocchi il tour completo.",
       "label": "Scansiona il tuo primo immobile"
     }
   },
   "PricingPage": {
     "metaTitle": "Prezzi — Sodar",
-    "metaDesc": "Prezzo unico per immobile, preventivato dopo un’anteprima gratuita di due stanze. Prezzi a volume per le agenzie, margine del 15% per i partner CRM.",
+    "metaDesc": "Piani mensili da 99 € con crediti per immobile, livelli per volumi maggiori, tariffa ridotta per i primi piloti e margine del 15 % per i partner CRM.",
     "eyebrow": "Semplice per scelta",
-    "title": "Un immobile. Un prezzo. Una volta.",
-    "sub": "Guarda due stanze gratis, poi paga un unico prezzo su misura per l’immobile. Prezzi a volume per le agenzie, un margine fisso del 15% per i partner CRM.",
+    "title": "Un piano. Crediti per immobile.",
+    "sub": "Guarda due stanze gratis, poi scegli il volume di crediti adatto ai tuoi annunci. I piani partono da 99 € al mese; i primi partner pilota hanno una tariffa ridotta.",
     "badge": "La maggior parte delle agenzie",
     "tiers": [
       {
-        "name": "Per immobile",
-        "price": "Da 99 €",
-        "unit": "una tantum, preventivo dopo l’anteprima gratuita",
-        "desc": "Per agenti che scansionano gli annunci uno alla volta.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "al mese · 10 crediti immobile",
+        "desc": "Per agenti che pubblicano pochi annunci al mese.",
         "features": [
-          "Ripresa guidata da telefono + assistente IA",
-          "Prime due stanze gratis in anteprima",
-          "Tour completo dopo un pagamento Stripe",
+          "Acquisizione guidata da telefono + assistente IA",
+          "Prime due stanze in anteprima gratuita",
+          "Un credito per immobile pubblicato",
           "Pubblicazione CRM e viewer integrato",
-          "Spazio di lavoro con stati e aperture"
+          "Workspace con stati e aperture"
         ],
-        "cta": "Scansiona il tuo primo immobile"
+        "cta": "Inizia con Starter"
       },
       {
-        "name": "Agenzia",
-        "price": "Volume",
-        "unit": "per immobile, decrescente con il volume",
-        "desc": "Per agenzie che pubblicano decine di annunci al mese.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "al mese · 30 crediti immobile",
+        "desc": "Per team che pubblicano ogni settimana.",
         "features": [
-          "Tutto di Per immobile",
-          "Vista aggregata dell’agenzia",
+          "Tutto Starter",
           "Coda di elaborazione prioritaria",
-          "Configurazione CRM dedicata",
-          "Viewer co-branded"
+          "Workspace per tutta l’agenzia",
+          "Viewer con il tuo marchio",
+          "Configurazione CRM dedicata"
         ],
         "cta": "Parla con le vendite"
       },
       {
-        "name": "Partner CRM",
-        "price": "15%",
-        "unit": "di margine sugli acquisti idonei",
-        "desc": "Per i fornitori di CRM che distribuiscono Sodar ai loro agenti.",
+        "name": "Brokerage",
+        "price": "Su misura",
+        "unit": "crediti a volume, fatturati ogni mese",
+        "desc": "Per gruppi e portali che pubblicano su larga scala.",
         "features": [
-          "Sodar disponibile nella tua piattaforma",
-          "Dashboard partner",
-          "Pagamento mensile automatico",
-          "Nessun volume minimo"
+          "Volume di crediti su misura",
+          "Planimetrie per ogni annuncio",
+          "Accesso API",
+          "Onboarding per ogni ufficio",
+          "Tariffa pilota per i primi partner"
         ],
-        "cta": "Candidati come partner"
+        "cta": "Richiedi la tariffa pilota"
       }
     ],
-    "factorsKicker": "Come si costruisce il preventivo",
-    "factorsTitle": "Prezzo sull’immobile, non sul piano.",
+    "factorsKicker": "Come funzionano i crediti",
+    "factorsTitle": "Un credito, un immobile pubblicato.",
     "factors": [
       {
-        "title": "Dimensioni dell’immobile",
-        "desc": "Superficie e numero di stanze riprese."
+        "title": "Un credito per immobile",
+        "desc": "Tutte le stanze di un immobile, qualunque sia il numero di panorami, usano un solo credito alla pubblicazione."
       },
       {
-        "title": "Volume dei panorami",
-        "desc": "Quanti panorami ha prodotto la scansione e a quale risoluzione."
+        "title": "Prima l’anteprima gratuita",
+        "desc": "Le prime due stanze vengono elaborate prima di spendere un credito, così giudichi prima la qualità."
       },
       {
-        "title": "Elaborazione",
-        "desc": "Stitching, miglioramento e il calcolo IA dietro il tour."
+        "title": "Volume mensile",
+        "desc": "I crediti si rinnovano ogni mese con il piano; i livelli superiori ne includono semplicemente di più."
       },
       {
-        "title": "Archiviazione e hosting",
-        "desc": "Tenere online il tour e il suo viewer dentro il tuo annuncio."
+        "title": "Hosting incluso",
+        "desc": "Tenere online il walkthrough e il suo viewer nell’annuncio fa parte del piano."
       },
       {
-        "title": "Manutenzione",
-        "desc": "Aggiornamenti continui del viewer e l’integrazione CRM stessa."
+        "title": "Tariffa pilota",
+        "desc": "I primi partner pilota in Estonia hanno una quota mensile ridotta — chiedila dal modulo di contatto."
       },
       {
         "title": "Margine partner",
-        "desc": "Dove un partner CRM distribuisce Sodar, il suo margine è incluso nel preventivo."
+        "desc": "Quando un partner CRM distribuisce Sodar, il suo margine del 15 % è compreso nel prezzo del piano."
       }
     ],
     "faqKicker": "Domande",
     "faqTitle": "FAQ sui prezzi.",
     "faq": [
       {
-        "q": "Quando vedo il prezzo?",
-        "a": "Dopo l’anteprima gratuita. Sodar calcola un prezzo unico per completare l’immobile una volta elaborate le prime due stanze."
+        "q": "Cosa copre un credito?",
+        "a": "Un immobile pubblicato, tutte le sue stanze e i panorami, più hosting e manutenzione per tutta la vita dell’annuncio."
       },
       {
         "q": "L’anteprima è davvero gratuita?",
-        "a": "Sì — le prime due stanze vengono elaborate in un tour funzionante senza pagamento. Paghi solo per completare e pubblicare l’immobile."
+        "a": "Sì — le prime due stanze diventano un walkthrough funzionante prima che venga usato un credito. Spendi un credito solo quando pubblichi."
       },
       {
-        "q": "C’è un abbonamento?",
-        "a": "No. Ogni immobile è un unico pagamento una tantum tramite Stripe. Niente si rinnova."
+        "q": "Posso cambiare livello?",
+        "a": "Quando vuoi. Sali quando il volume cresce; i crediti non usati restano tuoi per il mese."
       },
       {
-        "q": "Come viene pagato il margine del partner CRM?",
-        "a": "Automaticamente, ogni mese, sugli acquisti di tour idonei degli agenti sulla piattaforma del partner."
+        "q": "Cos’è la tariffa pilota?",
+        "a": "I primi partner pilota hanno una quota mensile ridotta durante il lancio insieme. Raccontaci della tua agenzia dal modulo di contatto."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Creazione dell’anteprima di due stanze…",
     "done": "Anteprima pronta",
     "doneTitle": "Due stanze riprese.",
-    "doneBody": "Nel prodotto reale qui compare il tour, insieme a un prezzo unico per le stanze restanti.",
+    "doneBody": "Nel prodotto reale il walkthrough compare qui, pronto da pubblicare con un credito del tuo piano.",
     "workspace": "Apri l’anteprima dello spazio di lavoro",
     "again": "Scansiona di nuovo",
     "exit": "Esci",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar su LinkedIn",
     "privacyEyebrow": "Privacy",
     "privacyTitle": "Chiedici dei tuoi dati.",
-    "privacySub": "Le richieste di accesso, rettifica, esportazione o cancellazione dei tuoi dati, e ogni altra domanda sulla privacy, arrivano direttamente al nostro team privacy."
+    "privacySub": "Le richieste di accesso, rettifica, esportazione o cancellazione dei tuoi dati, e ogni altra domanda sulla privacy, arrivano direttamente al nostro team privacy.",
+    "topic": "Argomento",
+    "topicPlaceholder": "Scegli un argomento",
+    "topics": {
+      "pilot": "Programma pilota (tariffa ridotta)",
+      "pricing": "Prezzi e livelli di crediti",
+      "partnership": "Partnership CRM",
+      "careers": "Lavora con noi",
+      "other": "Altro"
+    }
   },
   "Intro": {
     "kicker": "Introduzione",
     "title": "Sodar in un minuto.",
-    "body": "Percorri una volta, guarda due stanze gratis, paga una volta, pubblica nell’annuncio che hai già.",
+    "body": "Percorri una volta, guarda due stanze gratis, pubblica con un credito — dritto nell’annuncio che hai già.",
     "play": "Riproduci",
     "pause": "Pausa",
     "mute": "Disattiva audio",

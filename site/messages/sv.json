@@ -29,7 +29,7 @@
       "Så vi gjorde en telefon till en skanner,",
       "och en skanning till en plats."
     ],
-    "body": "En mäklare öppnar sodar.io i telefonen, går genom varje rum en gång medan en AI-inspelningsassistent guidar tagningen, och får tillbaka en visning som köpare kan röra sig i. De två första rummen är gratis att förhandsvisa. En betalning gör bostaden klar. Publicering i CRM-annonsen är ett klick."
+    "body": "En mäklare öppnar sodar.io i telefonen, går igenom varje rum en gång medan en AI-assistent guidar bilden, och får tillbaka en visning som köpare kan röra sig i. De två första rummen förhandsvisas gratis. En kredit publicerar bostaden. Att publicera i CRM-annonsen är ett klick."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Fungerande förhandsvisning före betalning"
       },
       {
-        "label": "engångspris",
-        "note": "Anpassat till bostaden. Ingen prenumeration"
+        "label": "per månad",
+        "note": "Starter-plan · bostadskrediter ingår"
       },
       {
         "label": "partnermarginal",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Lås upp",
-        "title": "Ett pris. En betalning.",
-        "body": "Sodar beräknar ett engångspris för hela bostaden — storlek, antal panoramor, bearbetning, hosting och underhåll inräknat. Betala en gång via Stripe så bearbetas resterande rum."
+        "title": "En plan. En kredit per bostad.",
+        "body": "Sodar körs på en månadsplan från 99 €. Varje publicerad bostad använder en kredit — panoramor, bearbetning, hosting och underhåll ingår. Nivåerna växer med din annonsvolym, och de första piloterna får ett rabatterat pris."
       },
       "publish": {
         "label": "Publicera",
@@ -96,31 +96,31 @@
         "body": "Koppla ditt CRM, välj annonsen, publicera. Visningen lever inne i annonsen via Sodars inbäddade visare — och du kan justera de godkända utseendeinställningarna när som helst."
       }
     },
-    "quoteLabel": "Offert · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · Kesklinn Ave 84",
     "quoteRows": [
       {
-        "k": "6 rum · 14 panoramor",
-        "v": "ingår"
+        "k": "Plan",
+        "v": "Starter · 99 € / månad"
       },
       {
-        "k": "Bearbetning & AI-beräkning",
-        "v": "ingår"
+        "k": "Krediter denna månad",
+        "v": "7 av 10 kvar"
       },
       {
-        "k": "Lagring & hosting av visare",
-        "v": "12 månader"
+        "k": "Denna bostad",
+        "v": "1 kredit"
       },
       {
-        "k": "Underhåll",
+        "k": "Hosting & underhåll",
         "v": "ingår"
       }
     ],
-    "oneTime": "engångsbelopp · ingen prenumeration",
-    "paidLabel": "Betalt",
-    "paidBody": "Bearbetar de återstående 4 rummen. Du får besked när visningen är komplett.",
-    "pay": "Betala med Stripe",
-    "paying": "Kontaktar Stripe…",
-    "mockNote": "Demokassa — inget kort debiteras.",
+    "oneTime": "per månad · avsluta när du vill",
+    "paidLabel": "Publicerad",
+    "paidBody": "De återstående 4 rummen bearbetas. Du får besked när visningen är klar.",
+    "pay": "Publicera med 1 kredit",
+    "paying": "Publicerar…",
+    "mockNote": "Demo — ingen kredit används.",
     "crmHeader": "Ditt CRM · Annons #48213",
     "publishBtn": "Publicera visning",
     "publishedBtn": "Publicerad",
@@ -132,7 +132,8 @@
     "viewer": "visare",
     "viewerEmbedded": "inbäddad",
     "opened": "öppnad",
-    "openedValue": "128 besökare"
+    "openedValue": "128 besökare",
+    "planLabel": "Planritning"
   },
   "Capabilities": {
     "kicker": "Vad som levereras",
@@ -152,8 +153,8 @@
         "desc": "En fungerande visning av de två första rummen före betalning, så att du bedömer den färdiga kvaliteten först."
       },
       {
-        "title": "Engångspris per bostad",
-        "desc": "En enda offert anpassad till bostaden — panoramor, beräkning, hosting och underhåll ingår."
+        "title": "Månadsplan, bostadskrediter",
+        "desc": "Från 99 € i månaden. En kredit per publicerad bostad — panoramor, beräkning, hosting och underhåll ingår."
       },
       {
         "title": "CRM-publicering",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Enkelt av design",
     "title1": "En bostad.",
-    "title2": "Ett pris. En gång.",
-    "body": "Förhandsvisa de två första rummen gratis. Sedan ger Sodar ett enda engångspris för att göra bostaden klar — ingen prenumeration, inget årsavtal.",
+    "title2": "99 € i månaden. En kredit per bostad.",
+    "body": "Förhandsvisa de två första rummen gratis. Sedan täcker en månadsplan från 99 € dina annonser — en kredit per publicerad bostad, nivåer för större volym och ett rabatterat pris för de första piloterna.",
     "cta": "Så beräknas priset",
     "card": {
-      "label": "Typisk 3-rumslägenhet",
-      "price": "99–149 €",
-      "note": "engångsbelopp · offert efter den gratis förhandsvisningen",
+      "label": "Starter-plan",
+      "price": "99 €",
+      "note": "per månad · 10 bostadskrediter",
       "factors": [
-        "Bostadens storlek",
-        "Inspelade panoramor",
-        "Bearbetning & AI-beräkning",
-        "Lagring & hosting av visare",
-        "Löpande underhåll"
+        "Guidad fotografering & AI-assistent",
+        "10 publicerade bostäder per månad",
+        "CRM-publicering & inbäddad visare",
+        "Hosting & underhåll ingår",
+        "Rabatterat pris för pilotpartner"
       ],
       "cta": "Skanna en bostad"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Prova på en riktig bostad",
-      "title": "Förhandsvisa två rum gratis. Betala en gång för resten.",
+      "title": "Förhandsvisa två rum gratis. Publicera med en plan.",
       "sub": "Öppna sodar.io i telefonen och starta en skanning — inget kort förrän du låser upp hela visningen.",
       "label": "Skanna din första bostad"
     }
   },
   "PricingPage": {
     "metaTitle": "Priser — Sodar",
-    "metaDesc": "Engångspris per bostad, offererat efter en gratis förhandsvisning av två rum. Volympriser för byråer, 15 % marginal för CRM-partner.",
+    "metaDesc": "Månadsplaner från 99 € med bostadskrediter, nivåer för större volym, rabatterat pris för de första piloterna och 15 % marginal för CRM-partner.",
     "eyebrow": "Enkelt av design",
-    "title": "En bostad. Ett pris. En gång.",
-    "sub": "Förhandsvisa två rum gratis, betala sedan ett enda engångspris anpassat till bostaden. Volympriser för byråer, en fast marginal på 15 % för CRM-partner.",
+    "title": "En plan. Krediter per bostad.",
+    "sub": "Förhandsvisa två rum gratis och välj sedan den kreditvolym som passar dina annonser. Planerna börjar på 99 € i månaden; de första pilotpartnerna får ett rabatterat pris.",
     "badge": "De flesta byråer",
     "tiers": [
       {
-        "name": "Per bostad",
-        "price": "Från 99 €",
-        "unit": "engångsbelopp, offert efter den gratis förhandsvisningen",
-        "desc": "För mäklare som skannar annonser en i taget.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "per månad · 10 bostadskrediter",
+        "desc": "För mäklare som publicerar några annonser i månaden.",
         "features": [
-          "Guidad telefoninspelning + AI-assistent",
-          "Två första rummen gratis att förhandsvisa",
-          "Full visning efter en Stripe-betalning",
+          "Guidad mobilfotografering + AI-assistent",
+          "De två första rummen förhandsvisas gratis",
+          "En kredit per publicerad bostad",
           "CRM-publicering & inbäddad visare",
-          "Arbetsyta med status & öppnade visare"
+          "Arbetsyta med status & visningar"
         ],
-        "cta": "Skanna din första bostad"
+        "cta": "Börja med Starter"
       },
       {
-        "name": "Byrå",
-        "price": "Volym",
-        "unit": "per bostad, sjunkande med volymen",
-        "desc": "För byråer som publicerar dussintals annonser i månaden.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "per månad · 30 bostadskrediter",
+        "desc": "För team som publicerar varje vecka.",
         "features": [
-          "Allt i Per bostad",
+          "Allt i Starter",
+          "Prioriterad bearbetning",
           "Byråövergripande arbetsyta",
-          "Prioriterad bearbetningskö",
-          "Dedikerad CRM-uppsättning",
-          "Visare med gemensam profil"
+          "Visare med er profil",
+          "Dedikerad CRM-uppsättning"
         ],
         "cta": "Prata med sälj"
       },
       {
-        "name": "CRM-partner",
-        "price": "15 %",
-        "unit": "marginal på kvalificerade köp",
-        "desc": "För CRM-leverantörer som distribuerar Sodar till sina mäklare.",
+        "name": "Brokerage",
+        "price": "Offert",
+        "unit": "volymkrediter, fakturerade månadsvis",
+        "desc": "För kedjor och portaler som publicerar i stor skala.",
         "features": [
-          "Sodar tillgängligt i din plattform",
-          "Partnerpanel",
-          "Månatlig automatisk utbetalning",
-          "Ingen minimivolym"
+          "Anpassad kreditvolym",
+          "Planritningar till varje annons",
+          "API-åtkomst",
+          "Onboarding för varje kontor",
+          "Pilotpris för de första partnerna"
         ],
-        "cta": "Ansök som partner"
+        "cta": "Be om pilotpris"
       }
     ],
-    "factorsKicker": "Så byggs offerten",
-    "factorsTitle": "Prissatt efter bostaden, inte efter planen.",
+    "factorsKicker": "Så fungerar krediter",
+    "factorsTitle": "En kredit, en publicerad bostad.",
     "factors": [
       {
-        "title": "Bostadens storlek",
-        "desc": "Boyta och antal inspelade rum."
+        "title": "En kredit per bostad",
+        "desc": "Alla rum i en bostad, oavsett antal panoramor, använder en enda kredit när du publicerar."
       },
       {
-        "title": "Panoramavolym",
-        "desc": "Hur många panoramor skanningen gav och deras upplösning."
+        "title": "Gratis förhandsvisning först",
+        "desc": "De två första rummen bearbetas innan någon kredit används, så att du bedömer kvaliteten först."
       },
       {
-        "title": "Bearbetning",
-        "desc": "Sammanfogning, förbättring och AI-beräkningen bakom visningen."
+        "title": "Månadsvolym",
+        "desc": "Krediterna förnyas varje månad med din plan; högre nivåer innehåller helt enkelt fler."
       },
       {
-        "title": "Lagring & hosting",
-        "desc": "Att hålla visningen och dess visare online i din annons."
+        "title": "Hosting ingår",
+        "desc": "Att hålla visningen och visaren online i din annons är en del av planen."
       },
       {
-        "title": "Underhåll",
-        "desc": "Löpande uppdateringar av visaren och själva CRM-integrationen."
+        "title": "Pilotpris",
+        "desc": "De första pilotpartnerna i Estland får ett rabatterat månadspris — fråga via kontaktformuläret."
       },
       {
         "title": "Partnermarginal",
-        "desc": "När en CRM-partner distribuerar Sodar ingår deras marginal i offerten."
+        "desc": "När en CRM-partner distribuerar Sodar ingår deras marginal på 15 % i planpriset."
       }
     ],
     "faqKicker": "Frågor",
     "faqTitle": "Vanliga frågor om priser.",
     "faq": [
       {
-        "q": "När ser jag priset?",
-        "a": "Efter den gratis förhandsvisningen. Sodar beräknar ett engångspris för att göra bostaden klar när de två första rummen är bearbetade."
+        "q": "Vad täcker en kredit?",
+        "a": "En publicerad bostad med alla rum och panoramor, plus hosting och underhåll så länge annonsen lever."
       },
       {
         "q": "Är förhandsvisningen verkligen gratis?",
-        "a": "Ja — de två första rummen bearbetas till en fungerande visning utan betalning. Du betalar bara för att göra klart och publicera bostaden."
+        "a": "Ja — de två första rummen blir en fungerande visning innan en kredit används. Du spenderar en kredit först när du publicerar."
       },
       {
-        "q": "Finns det en prenumeration?",
-        "a": "Nej. Varje bostad är en enda engångsbetalning via Stripe. Inget förnyas."
+        "q": "Kan jag byta nivå?",
+        "a": "När som helst. Gå upp när volymen växer; oanvända krediter är dina månaden ut."
       },
       {
-        "q": "Hur betalas CRM-partnerns marginal ut?",
-        "a": "Automatiskt, varje månad, på kvalificerade visningsköp från mäklare på partnerns plattform."
+        "q": "Vad är pilotpris?",
+        "a": "De första pilotpartnerna får ett rabatterat månadspris under den gemensamma utrullningen. Berätta om er byrå via kontaktformuläret."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Bygger din förhandsvisning av två rum…",
     "done": "Förhandsvisning klar",
     "doneTitle": "Två rum inspelade.",
-    "doneBody": "I den riktiga produkten visas visningen här, tillsammans med ett engångspris för resterande rum.",
+    "doneBody": "I den riktiga produkten visas visningen här, redo att publiceras med en kredit från din plan.",
     "workspace": "Öppna förhandsvisningen av arbetsytan",
     "again": "Skanna igen",
     "exit": "Avsluta",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar på LinkedIn",
     "privacyEyebrow": "Integritet",
     "privacyTitle": "Fråga oss om dina uppgifter.",
-    "privacySub": "Förfrågningar om åtkomst, rättelse, export eller radering av dina uppgifter, och alla andra integritetsfrågor, når vårt integritetsteam direkt."
+    "privacySub": "Förfrågningar om åtkomst, rättelse, export eller radering av dina uppgifter, och alla andra integritetsfrågor, når vårt integritetsteam direkt.",
+    "topic": "Ämne",
+    "topicPlaceholder": "Välj ett ämne",
+    "topics": {
+      "pilot": "Pilotprogram (rabatterat pris)",
+      "pricing": "Priser & kreditnivåer",
+      "partnership": "CRM-partnerskap",
+      "careers": "Jobb",
+      "other": "Annat"
+    }
   },
   "Intro": {
     "kicker": "Introduktion",
     "title": "Sodar på en minut.",
-    "body": "Gå en gång, förhandsvisa två rum gratis, betala en gång, publicera i annonsen du redan har.",
+    "body": "Gå igenom en gång, förhandsvisa två rum gratis, publicera med en kredit — rakt in i annonsen du redan har.",
     "play": "Spela",
     "pause": "Pausa",
     "mute": "Ljud av",

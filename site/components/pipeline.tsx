@@ -6,8 +6,9 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 import { prefersReducedMotion } from "@/lib/motion";
 import { LoopVideo } from "@/components/loop-video";
+import { FloorPlan } from "@/components/floor-plan";
 
-const TILE = (n: number) => `/media/rooms/tile-${String(n).padStart(2, "0")}.jpg`;
+const ROOM_STILLS = ["/media/rooms/living.jpg", "/media/rooms/kitchen.jpg", "/media/rooms/bedroom.jpg", "/media/rooms/bathroom.jpg", "/media/rooms/study.jpg", "/media/rooms/balcony.jpg"];
 
 /**
  * The product end to end — Capture, Preview, Unlock, Publish — as four calm
@@ -93,7 +94,6 @@ export function Pipeline() {
             <div className="relative mx-auto aspect-[9/17] w-full max-w-[280px] overflow-hidden rounded-[2rem] border border-border-strong bg-bg-elevated">
               <LoopVideo src="/media/pipeline-capture.mp4" poster="/media/pipeline-capture.jpg" />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.5),transparent_25%,transparent_70%,rgba(0,0,0,.65))]" />
-              <div className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/60" />
               <svg className="absolute right-4 top-4 h-12 w-12 -rotate-90" viewBox="0 0 100 100" aria-hidden>
                 <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,.15)" strokeWidth="4" fill="none" />
                 <circle ref={ringRef} cx="50" cy="50" r="44" stroke="#f4f2ee" strokeWidth="4" fill="none" strokeDasharray="276" strokeDashoffset="276" strokeLinecap="round" />
@@ -112,26 +112,23 @@ export function Pipeline() {
           </Stage>
 
           <Stage label={t("panels.preview.label")} title={t("panels.preview.title")} body={t("panels.preview.body")}>
-            <div ref={previewRef} className="grid w-full max-w-2xl grid-cols-3 gap-2" style={{ ["--reveal-p" as string]: 0 }}>
-              {rooms.map((room, i) => {
-                const ready = i < 2;
-                return (
-                  <div key={room} className="tile aspect-[4/3] rounded-lg border border-border">
-                    <img src={TILE(10 + i * 4)} alt="" style={ready ? { filter: "none" } : undefined} />
-                    {ready ? (
-                      <div className="absolute inset-0" style={{ clipPath: "inset(0 calc((1 - var(--reveal-p, 0)) * 100%) 0 0)" }}>
-                        <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,.5))]" />
-                        <span className="absolute left-2.5 top-2.5 rounded-full border border-white/30 bg-black/50 px-2 py-0.5 font-mono text-[10px] uppercase text-[#f4f2ee]">{t("ready")}</span>
-                      </div>
-                    ) : (
-                      <div className="locked-overlay">
-                        <span className="font-mono text-[10px] uppercase tracking-[.14em] text-white/60">{t("locked")}</span>
-                      </div>
-                    )}
-                    <span className="absolute bottom-2 left-2.5 text-[11px] text-white/80">{room}</span>
+            <div ref={previewRef} className="grid w-full max-w-2xl gap-3 sm:grid-cols-[1.1fr_1fr]" style={{ ["--reveal-p" as string]: 0 }}>
+              <div className="rounded-xl border border-border bg-bg-raised p-4">
+                <p className="mono-label">{t("planLabel")}</p>
+                <FloorPlan labels={rooms} ready={[0, 1]} className="mt-3 w-full" />
+              </div>
+              <div className="grid grid-rows-2 gap-3">
+                {rooms.slice(0, 2).map((room, i) => (
+                  <div key={room} className="tile rounded-xl border border-border">
+                    <img src={ROOM_STILLS[i]} alt="" className="absolute inset-0" style={{ filter: "none" }} />
+                    <div className="absolute inset-0" style={{ clipPath: "inset(0 calc((1 - var(--reveal-p, 0)) * 100%) 0 0)" }}>
+                      <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,.45))]" />
+                      <span className="absolute left-2.5 top-2.5 rounded-full border border-white/30 bg-black/50 px-2 py-0.5 font-mono text-[10px] uppercase text-[#f4f2ee]">{t("ready")}</span>
+                    </div>
+                    <span className="absolute bottom-2 left-2.5 text-[11px] text-white/85">{room}</span>
                   </div>
-                );
-              })}
+                ))}
+              </div>
             </div>
           </Stage>
 
@@ -147,7 +144,7 @@ export function Pipeline() {
                 ))}
               </ul>
               <div className="mt-6 flex items-end justify-between gap-4">
-                <p className="display text-5xl text-text" dir="ltr">€149</p>
+                <p className="display text-5xl text-text" dir="ltr">€99</p>
                 <p className="text-xs text-text-muted">{t("oneTime")}</p>
               </div>
               {paid ? (
@@ -176,7 +173,7 @@ export function Pipeline() {
               </div>
               <div className="grid gap-4 p-5 sm:grid-cols-[1.4fr_1fr]">
                 <div className="tile aspect-[16/10] rounded-lg">
-                  <img src={TILE(22)} alt="" style={published ? { filter: "none" } : undefined} />
+                  <img src="/media/rooms/publish.jpg" alt="" style={published ? { filter: "none" } : undefined} />
                   {published ? (
                     <div className="absolute bottom-2.5 right-2.5 rounded-full border border-white/25 bg-black/55 px-2.5 py-1 font-mono text-[10px] text-[#f4f2ee] backdrop-blur">{t("viewerBadge")}</div>
                   ) : (

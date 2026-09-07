@@ -29,7 +29,7 @@
       "So we turned a phone into a scanner,",
       "and a scan into a place."
     ],
-    "body": "A broker opens sodar.io on their phone, walks each room once while an AI capture assistant coaches the shot, and gets back a walkthrough buyers can move through. The first two rooms are free to preview. One payment finishes the property. Publishing into the CRM listing is one click."
+    "body": "A broker opens sodar.io on their phone, walks each room once while an AI capture assistant coaches the shot, and gets back a walkthrough buyers can move through. The first two rooms are free to preview. One credit publishes the property. Publishing into the CRM listing is one click."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Working preview before any payment"
       },
       {
-        "label": "one-time price",
-        "note": "Sized to the property. No subscription"
+        "label": "per month",
+        "note": "Starter plan · property credits included"
       },
       {
         "label": "partner margin",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Unlock",
-        "title": "One price. One payment.",
-        "body": "Sodar quotes a one-time price for the whole property — size, number of panoramas, processing, hosting and maintenance all accounted for. Pay once through Stripe and the remaining rooms are processed."
+        "title": "One plan. One credit per property.",
+        "body": "Sodar runs on a monthly plan from €99. Every published property uses one credit — panoramas, processing, hosting and maintenance included. Tiers scale with your listing volume, and the first pilots get a reduced rate."
       },
       "publish": {
         "label": "Publish",
@@ -96,31 +96,31 @@
         "body": "Connect your CRM, pick the property listing, publish. The walkthrough lives inside the listing through Sodar’s embedded viewer — and you can adjust the approved appearance settings any time."
       }
     },
-    "quoteLabel": "Quote · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · 84 Kesklinn Ave",
     "quoteRows": [
       {
-        "k": "6 rooms · 14 panoramas",
-        "v": "included"
+        "k": "Plan",
+        "v": "Starter · €99 / month"
       },
       {
-        "k": "Processing & AI compute",
-        "v": "included"
+        "k": "Credits this month",
+        "v": "7 of 10 left"
       },
       {
-        "k": "Storage & viewer hosting",
-        "v": "12 months"
+        "k": "This property",
+        "v": "1 credit"
       },
       {
-        "k": "Maintenance",
+        "k": "Hosting & maintenance",
         "v": "included"
       }
     ],
-    "oneTime": "one-time · no subscription",
-    "paidLabel": "Paid",
-    "paidBody": "Processing the remaining 4 rooms. You’ll be notified when the walkthrough is complete.",
-    "pay": "Pay with Stripe",
-    "paying": "Contacting Stripe…",
-    "mockNote": "Mock checkout — no card is charged.",
+    "oneTime": "per month · cancel any time",
+    "paidLabel": "Published",
+    "paidBody": "The remaining 4 rooms are processing. You’ll be notified when the walkthrough is complete.",
+    "pay": "Publish with 1 credit",
+    "paying": "Publishing…",
+    "mockNote": "Demo — no credit is used.",
     "crmHeader": "Your CRM · Listing #48213",
     "publishBtn": "Publish walkthrough",
     "publishedBtn": "Published",
@@ -132,7 +132,8 @@
     "viewer": "viewer",
     "viewerEmbedded": "embedded",
     "opened": "opened",
-    "openedValue": "128 visitors"
+    "openedValue": "128 visitors",
+    "planLabel": "Floor plan"
   },
   "Capabilities": {
     "kicker": "What ships",
@@ -152,8 +153,8 @@
         "desc": "A working walkthrough of the first two rooms before any payment, so you judge the finished quality first."
       },
       {
-        "title": "One-time property price",
-        "desc": "A single quote sized to the property — panoramas, compute, hosting and maintenance included."
+        "title": "Monthly plan, property credits",
+        "desc": "From €99 a month. One credit per published property — panoramas, compute, hosting and maintenance included."
       },
       {
         "title": "CRM publishing",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Simple by design",
     "title1": "One property.",
-    "title2": "One price. Once.",
-    "body": "Preview the first two rooms free. Then Sodar quotes a single one-time price for finishing the property — no subscription, no annual contract.",
+    "title2": "€99 a month. One credit per home.",
+    "body": "Preview the first two rooms free. Then a monthly plan from €99 covers your listings — one credit per published property, tiers for higher volume, and a reduced rate for the first pilots.",
     "cta": "How the price is computed",
     "card": {
-      "label": "Typical 3-room apartment",
-      "price": "€99–149",
-      "note": "one-time · quoted after the free preview",
+      "label": "Starter plan",
+      "price": "€99",
+      "note": "per month · 10 property credits",
       "factors": [
-        "Property size",
-        "Panoramas captured",
-        "Processing & AI compute",
-        "Storage & viewer hosting",
-        "Ongoing maintenance"
+        "Guided capture & AI assistant",
+        "10 published properties a month",
+        "CRM publishing & embedded viewer",
+        "Hosting & maintenance included",
+        "Reduced rate for pilot partners"
       ],
       "cta": "Scan a property"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Try it on a real property",
-      "title": "Preview two rooms free. Pay once for the rest.",
+      "title": "Preview two rooms free. Publish on one plan.",
       "sub": "Open sodar.io on your phone and start a scan — no card until you unlock the full walkthrough.",
       "label": "Scan your first property"
     }
   },
   "PricingPage": {
     "metaTitle": "Pricing — Sodar",
-    "metaDesc": "One-time price per property, quoted after a free two-room preview. Volume pricing for brokerages, a 15% margin for CRM partners.",
+    "metaDesc": "Monthly plans from €99 with property credits, tiers for higher volume, a reduced rate for the first pilots, and a 15% margin for CRM partners.",
     "eyebrow": "Simple by design",
-    "title": "One property. One price. Once.",
-    "sub": "Preview two rooms free, then pay a single one-time price sized to the property. Volume pricing for brokerages, a standing 15% margin for CRM partners.",
+    "title": "One plan. Credits per property.",
+    "sub": "Preview two rooms free, then pick the credit volume that fits your listings. Plans start at €99 a month; the first pilot partners get a reduced rate.",
     "badge": "Most brokerages",
     "tiers": [
       {
-        "name": "Per property",
-        "price": "From €99",
-        "unit": "one-time, quoted after the free preview",
-        "desc": "For brokers scanning listings one at a time.",
+        "name": "Starter",
+        "price": "€99",
+        "unit": "per month · 10 property credits",
+        "desc": "For brokers publishing a few listings a month.",
         "features": [
           "Guided phone capture + AI assistant",
           "First two rooms free to preview",
-          "Full walkthrough after one Stripe payment",
+          "One credit per published property",
           "CRM publishing & embedded viewer",
           "Workspace with status & viewer opens"
         ],
-        "cta": "Scan your first property"
+        "cta": "Start on Starter"
       },
       {
-        "name": "Brokerage",
-        "price": "Volume",
-        "unit": "per property, stepping down with volume",
-        "desc": "For firms publishing dozens of listings a month.",
+        "name": "Growth",
+        "price": "€249",
+        "unit": "per month · 30 property credits",
+        "desc": "For teams publishing every week.",
         "features": [
-          "Everything per property",
-          "Firm-wide workspace rollup",
+          "Everything in Starter",
           "Priority processing queue",
-          "Dedicated CRM setup",
-          "Co-branded viewer"
+          "Firm-wide workspace rollup",
+          "Co-branded viewer",
+          "Dedicated CRM setup"
         ],
         "cta": "Talk to sales"
       },
       {
-        "name": "CRM partner",
-        "price": "15%",
-        "unit": "margin on qualifying purchases",
-        "desc": "For CRM providers distributing Sodar to their brokers.",
+        "name": "Brokerage",
+        "price": "Custom",
+        "unit": "volume credits, invoiced monthly",
+        "desc": "For firms and portals publishing at scale.",
         "features": [
-          "Sodar available inside your platform",
-          "Partner dashboard",
-          "Monthly automatic payout",
-          "No minimum volume"
+          "Custom credit volume",
+          "Floor plans for every listing",
+          "API access",
+          "Onboarding for every office",
+          "Pilot pricing for first partners"
         ],
-        "cta": "Apply as a partner"
+        "cta": "Request pilot pricing"
       }
     ],
-    "factorsKicker": "How the quote is built",
-    "factorsTitle": "Priced to the property, not the plan.",
+    "factorsKicker": "How credits work",
+    "factorsTitle": "One credit, one published property.",
     "factors": [
       {
-        "title": "Property size",
-        "desc": "Floor area and number of rooms captured."
+        "title": "One credit per property",
+        "desc": "Every room of a property, however many panoramas, uses a single credit when you publish."
       },
       {
-        "title": "Panorama volume",
-        "desc": "How many panoramas the scan produced and their resolution."
+        "title": "Free preview first",
+        "desc": "The first two rooms are processed before any credit is spent, so you judge the quality first."
       },
       {
-        "title": "Processing",
-        "desc": "Stitching, enhancement and the AI compute behind the walkthrough."
+        "title": "Monthly volume",
+        "desc": "Credits renew each month with your plan; higher tiers simply include more."
       },
       {
-        "title": "Storage & hosting",
-        "desc": "Keeping the walkthrough and its viewer online inside your listing."
+        "title": "Hosting included",
+        "desc": "Keeping the walkthrough and its viewer online inside your listing is part of the plan."
       },
       {
-        "title": "Maintenance",
-        "desc": "Ongoing viewer updates and the CRM integration itself."
+        "title": "Pilot rate",
+        "desc": "The first pilot partners in Estonia get a reduced monthly rate — ask through the contact form."
       },
       {
         "title": "Partner margin",
-        "desc": "Where a CRM partner distributes Sodar, their margin is included in the quote."
+        "desc": "Where a CRM partner distributes Sodar, their 15% margin is included in the plan price."
       }
     ],
     "faqKicker": "Questions",
     "faqTitle": "Pricing FAQ.",
     "faq": [
       {
-        "q": "When do I see the price?",
-        "a": "After the free preview. Sodar computes a one-time price for completing the property once the first two rooms are processed."
+        "q": "What does a credit cover?",
+        "a": "One published property, all of its rooms and panoramas, plus hosting and maintenance for the life of the listing."
       },
       {
         "q": "Is the preview really free?",
-        "a": "Yes — the first two rooms are processed into a working walkthrough with no payment. You pay only to finish and publish the property."
+        "a": "Yes — the first two rooms are processed into a working walkthrough before a credit is used. You spend a credit only when you publish."
       },
       {
-        "q": "Is there a subscription?",
-        "a": "No. Each property is a single one-time payment through Stripe. Nothing renews."
+        "q": "Can I change tiers?",
+        "a": "Any time. Move up when your listing volume grows; unused credits stay with you for the month."
       },
       {
-        "q": "How does the CRM partner margin get paid?",
-        "a": "Automatically, monthly, on qualifying walkthrough purchases from brokers on the partner’s platform."
+        "q": "What is pilot pricing?",
+        "a": "The first pilot partners get a reduced monthly rate while we roll out together. Tell us about your firm through the contact form."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Building your two-room preview…",
     "done": "Preview ready",
     "doneTitle": "Two rooms, captured.",
-    "doneBody": "In the live product the walkthrough appears here, together with a one-time price for the remaining rooms.",
+    "doneBody": "In the live product the walkthrough appears here, ready to publish with one credit from your plan.",
     "workspace": "Open the workspace preview",
     "again": "Scan again",
     "exit": "Exit",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar on LinkedIn",
     "privacyEyebrow": "Privacy",
     "privacyTitle": "Ask us about your data.",
-    "privacySub": "Requests about access, correction, export or deletion of your data, and any other privacy question, reach our privacy team directly."
+    "privacySub": "Requests about access, correction, export or deletion of your data, and any other privacy question, reach our privacy team directly.",
+    "topic": "Topic",
+    "topicPlaceholder": "Choose a topic",
+    "topics": {
+      "pilot": "Pilot programme (reduced rate)",
+      "pricing": "Pricing & credit tiers",
+      "partnership": "CRM partnership",
+      "careers": "Careers",
+      "other": "Other"
+    }
   },
   "Intro": {
     "kicker": "Introduction",
     "title": "Sodar in one minute.",
-    "body": "Walk once, preview two rooms free, pay once, publish into the listing you already have.",
+    "body": "Walk once, preview two rooms free, publish with one credit, straight into the listing you already have.",
     "play": "Play",
     "pause": "Pause",
     "mute": "Mute",

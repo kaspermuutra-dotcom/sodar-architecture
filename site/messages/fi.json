@@ -29,7 +29,7 @@
       "Joten teimme puhelimesta skannerin,",
       "ja skannauksesta paikan."
     ],
-    "body": "Välittäjä avaa sodar.io:n puhelimessa, kävelee jokaisen huoneen läpi kerran tekoälyavustajan ohjatessa kuvausta, ja saa kierroksen, jossa ostajat voivat liikkua. Kaksi ensimmäistä huonetta ovat ilmaisia esikatseluun. Yksi maksu viimeistelee kohteen. Julkaisu CRM-ilmoitukseen on yksi klikkaus."
+    "body": "Välittäjä avaa sodar.io:n puhelimessa, kävelee jokaisen huoneen kerran läpi tekoälyavustajan ohjatessa kuvausta ja saa kierroksen, jossa ostajat voivat liikkua. Kaksi ensimmäistä huonetta ovat esikatselussa ilmaiseksi. Yksi krediitti julkaisee kohteen. CRM-ilmoitukseen julkaisu on yksi klikkaus."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Toimiva esikatselu ennen maksua"
       },
       {
-        "label": "kertahinta",
-        "note": "Mitoitettu kohteen mukaan. Ei tilausta"
+        "label": "kuukaudessa",
+        "note": "Starter-paketti · kohdekrediitit sisältyvät"
       },
       {
         "label": "kumppanikate",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Avaa",
-        "title": "Yksi hinta. Yksi maksu.",
-        "body": "Sodar laskee kertahinnan koko kohteelle — koko, panoraamojen määrä, käsittely, hosting ja ylläpito huomioituna. Maksa kerran Stripen kautta, ja loput huoneet käsitellään."
+        "title": "Yksi paketti. Yksi krediitti kohdetta kohden.",
+        "body": "Sodar toimii kuukausipaketilla alkaen 99 €. Jokainen julkaistu kohde käyttää yhden krediitin — panoraamat, käsittely, hosting ja ylläpito sisältyvät. Tasot kasvavat ilmoitusmääräsi mukana, ja ensimmäiset pilotit saavat alennetun hinnan."
       },
       "publish": {
         "label": "Julkaise",
@@ -96,31 +96,31 @@
         "body": "Yhdistä CRM, valitse kohteen ilmoitus, julkaise. Kierros elää ilmoituksen sisällä Sodarin upotetun katselimen kautta — ja voit säätää hyväksyttyjä ulkoasuasetuksia milloin tahansa."
       }
     },
-    "quoteLabel": "Tarjous · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · Kesklinn Ave 84",
     "quoteRows": [
       {
-        "k": "6 huonetta · 14 panoraamaa",
-        "v": "sisältyy"
+        "k": "Paketti",
+        "v": "Starter · 99 € / kk"
       },
       {
-        "k": "Käsittely & tekoälylaskenta",
-        "v": "sisältyy"
+        "k": "Krediittejä tässä kuussa",
+        "v": "7 / 10 jäljellä"
       },
       {
-        "k": "Tallennus & katselimen hosting",
-        "v": "12 kuukautta"
+        "k": "Tämä kohde",
+        "v": "1 krediitti"
       },
       {
-        "k": "Ylläpito",
+        "k": "Hosting ja ylläpito",
         "v": "sisältyy"
       }
     ],
-    "oneTime": "kertamaksu · ei tilausta",
-    "paidLabel": "Maksettu",
-    "paidBody": "Käsitellään loput 4 huonetta. Saat ilmoituksen, kun kierros on valmis.",
-    "pay": "Maksa Stripellä",
-    "paying": "Yhdistetään Stripeen…",
-    "mockNote": "Demokassa — korttia ei veloiteta.",
+    "oneTime": "kuukaudessa · peru milloin vain",
+    "paidLabel": "Julkaistu",
+    "paidBody": "Loput 4 huonetta käsitellään. Ilmoitamme, kun kierros on valmis.",
+    "pay": "Julkaise 1 krediitillä",
+    "paying": "Julkaistaan…",
+    "mockNote": "Demo — krediittiä ei käytetä.",
     "crmHeader": "Sinun CRM · Ilmoitus #48213",
     "publishBtn": "Julkaise kierros",
     "publishedBtn": "Julkaistu",
@@ -132,7 +132,8 @@
     "viewer": "katselin",
     "viewerEmbedded": "upotettu",
     "opened": "avattu",
-    "openedValue": "128 kävijää"
+    "openedValue": "128 kävijää",
+    "planLabel": "Pohjapiirros"
   },
   "Capabilities": {
     "kicker": "Mitä toimitetaan",
@@ -152,8 +153,8 @@
         "desc": "Toimiva kierros kahdesta ensimmäisestä huoneesta ennen maksua, jotta arvioit lopullisen laadun ensin."
       },
       {
-        "title": "Kertahinta per kohde",
-        "desc": "Yksi kohteen mukaan mitoitettu tarjous — panoraamat, laskenta, hosting ja ylläpito sisältyvät."
+        "title": "Kuukausipaketti, kohdekrediitit",
+        "desc": "Alkaen 99 € kuukaudessa. Yksi krediitti julkaistua kohdetta kohden — panoraamat, laskenta, hosting ja ylläpito sisältyvät."
       },
       {
         "title": "CRM-julkaisu",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Yksinkertainen tarkoituksella",
     "title1": "Yksi kohde.",
-    "title2": "Yksi hinta. Kerran.",
-    "body": "Esikatsele kaksi ensimmäistä huonetta ilmaiseksi. Sitten Sodar antaa yhden kertahinnan kohteen viimeistelystä — ei tilausta, ei vuosisopimusta.",
+    "title2": "99 € kuukaudessa. Yksi krediitti kotia kohden.",
+    "body": "Esikatsele kaksi ensimmäistä huonetta ilmaiseksi. Sen jälkeen kuukausipaketti alkaen 99 € kattaa ilmoituksesi — yksi krediitti julkaistua kohdetta kohden, tasot suuremmalle määrälle ja alennettu hinta ensimmäisille piloteille.",
     "cta": "Näin hinta lasketaan",
     "card": {
-      "label": "Tyypillinen kolmio",
-      "price": "99–149 €",
-      "note": "kertamaksu · tarjous ilmaisen esikatselun jälkeen",
+      "label": "Starter-paketti",
+      "price": "99 €",
+      "note": "kuukaudessa · 10 kohdekrediittiä",
       "factors": [
-        "Kohteen koko",
-        "Kuvatut panoraamat",
-        "Käsittely & tekoälylaskenta",
-        "Tallennus & katselimen hosting",
-        "Jatkuva ylläpito"
+        "Ohjattu kuvaus ja tekoälyavustaja",
+        "10 julkaistua kohdetta kuukaudessa",
+        "CRM-julkaisu ja upotettu katselin",
+        "Hosting ja ylläpito sisältyvät",
+        "Alennettu hinta pilottikumppaneille"
       ],
       "cta": "Skannaa kohde"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Kokeile oikealla kohteella",
-      "title": "Esikatsele kaksi huonetta ilmaiseksi. Maksa kerran lopuista.",
+      "title": "Esikatsele kaksi huonetta ilmaiseksi. Julkaise yhdellä paketilla.",
       "sub": "Avaa sodar.io puhelimessa ja aloita skannaus — ei korttia ennen kuin avaat koko kierroksen.",
       "label": "Skannaa ensimmäinen kohteesi"
     }
   },
   "PricingPage": {
     "metaTitle": "Hinnat — Sodar",
-    "metaDesc": "Kertahinta per kohde, tarjotaan kahden huoneen ilmaisen esikatselun jälkeen. Volyymihinnat välitysliikkeille, 15 %:n kate CRM-kumppaneille.",
+    "metaDesc": "Kuukausipaketit alkaen 99 € kohdekrediiteillä, tasot suuremmalle määrälle, alennettu hinta ensimmäisille piloteille ja 15 %:n marginaali CRM-kumppaneille.",
     "eyebrow": "Yksinkertainen tarkoituksella",
-    "title": "Yksi kohde. Yksi hinta. Kerran.",
-    "sub": "Esikatsele kaksi huonetta ilmaiseksi ja maksa sitten yksi kohteen mukaan mitoitettu kertahinta. Volyymihinnat välitysliikkeille, kiinteä 15 %:n kate CRM-kumppaneille.",
-    "badge": "Useimmat välitysliikkeet",
+    "title": "Yksi paketti. Krediitit kohdetta kohden.",
+    "sub": "Esikatsele kaksi huonetta ilmaiseksi ja valitse ilmoituksiisi sopiva krediittimäärä. Paketit alkavat 99 €:sta kuukaudessa; ensimmäiset pilottikumppanit saavat alennetun hinnan.",
+    "badge": "Useimmat toimistot",
     "tiers": [
       {
-        "name": "Per kohde",
-        "price": "Alkaen 99 €",
-        "unit": "kertamaksu, tarjous ilmaisen esikatselun jälkeen",
-        "desc": "Välittäjille, jotka skannaavat ilmoituksia yksi kerrallaan.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "kuukaudessa · 10 kohdekrediittiä",
+        "desc": "Välittäjille, jotka julkaisevat muutaman ilmoituksen kuussa.",
         "features": [
           "Ohjattu puhelinkuvaus + tekoälyavustaja",
-          "Kaksi ensimmäistä huonetta ilmaiseksi esikatseluun",
-          "Koko kierros yhden Stripe-maksun jälkeen",
-          "CRM-julkaisu & upotettu katselin",
-          "Työtila tiloineen & katselimen avauksineen"
+          "Kaksi ensimmäistä huonetta ilmaiseksi",
+          "Yksi krediitti julkaistua kohdetta kohden",
+          "CRM-julkaisu ja upotettu katselin",
+          "Työtila tiloineen ja avauksineen"
         ],
-        "cta": "Skannaa ensimmäinen kohteesi"
+        "cta": "Aloita Starterilla"
       },
       {
-        "name": "Välitysliike",
-        "price": "Volyymi",
-        "unit": "per kohde, laskee volyymin myötä",
-        "desc": "Liikkeille, jotka julkaisevat kymmeniä ilmoituksia kuukaudessa.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "kuukaudessa · 30 kohdekrediittiä",
+        "desc": "Tiimeille, jotka julkaisevat joka viikko.",
         "features": [
-          "Kaikki Per kohde -tasosta",
-          "Liikkeen laajuinen työtilakooste",
-          "Etusijalla käsittelyjonossa",
-          "Oma CRM-käyttöönotto",
-          "Yhteisbrändätty katselin"
+          "Kaikki Starterin ominaisuudet",
+          "Etusijalla käsittelyssä",
+          "Toimiston laajuinen työtila",
+          "Katselin omalla brändillä",
+          "Räätälöity CRM-käyttöönotto"
         ],
-        "cta": "Ota yhteyttä myyntiin"
+        "cta": "Ota yhteys myyntiin"
       },
       {
-        "name": "CRM-kumppani",
-        "price": "15 %",
-        "unit": "kate hyväksytyistä ostoista",
-        "desc": "CRM-toimittajille, jotka jakelevat Sodaria välittäjilleen.",
+        "name": "Brokerage",
+        "price": "Sopimuksen mukaan",
+        "unit": "volyymikrediitit, kuukausilasku",
+        "desc": "Toimistoille ja portaaleille, jotka julkaisevat suuria määriä.",
         "features": [
-          "Sodar saatavilla alustasi sisällä",
-          "Kumppanin hallintapaneeli",
-          "Kuukausittainen automaattinen tilitys",
-          "Ei minimivolyymia"
+          "Räätälöity krediittimäärä",
+          "Pohjapiirros jokaiseen ilmoitukseen",
+          "API-pääsy",
+          "Käyttöönotto jokaiselle toimipisteelle",
+          "Pilottihinta ensimmäisille kumppaneille"
         ],
-        "cta": "Hae kumppaniksi"
+        "cta": "Pyydä pilottihinta"
       }
     ],
-    "factorsKicker": "Näin tarjous muodostuu",
-    "factorsTitle": "Hinnoiteltu kohteen, ei paketin mukaan.",
+    "factorsKicker": "Näin krediitit toimivat",
+    "factorsTitle": "Yksi krediitti, yksi julkaistu kohde.",
     "factors": [
       {
-        "title": "Kohteen koko",
-        "desc": "Pinta-ala ja kuvattujen huoneiden määrä."
+        "title": "Yksi krediitti kohdetta kohden",
+        "desc": "Kohteen kaikki huoneet, panoraamien määrästä riippumatta, käyttävät julkaistaessa yhden krediitin."
       },
       {
-        "title": "Panoraamojen määrä",
-        "desc": "Kuinka monta panoraamaa skannaus tuotti ja millä resoluutiolla."
+        "title": "Ensin ilmainen esikatselu",
+        "desc": "Kaksi ensimmäistä huonetta käsitellään ennen kuin yhtään krediittiä kuluu, jotta arvioit laadun ensin."
       },
       {
-        "title": "Käsittely",
-        "desc": "Yhdistys, parannus ja kierroksen taustalla oleva tekoälylaskenta."
+        "title": "Kuukausimäärä",
+        "desc": "Krediitit uusiutuvat joka kuukausi paketin mukana; korkeammat tasot sisältävät yksinkertaisesti enemmän."
       },
       {
-        "title": "Tallennus & hosting",
-        "desc": "Kierroksen ja sen katselimen pitäminen verkossa ilmoituksesi sisällä."
+        "title": "Hosting sisältyy",
+        "desc": "Kierroksen ja katselimen pitäminen verkossa ilmoituksessasi on osa pakettia."
       },
       {
-        "title": "Ylläpito",
-        "desc": "Katselimen jatkuvat päivitykset ja itse CRM-integraatio."
+        "title": "Pilottihinta",
+        "desc": "Ensimmäiset pilottikumppanit Virossa saavat alennetun kuukausihinnan — kysy yhteydenottolomakkeella."
       },
       {
-        "title": "Kumppanikate",
-        "desc": "Kun CRM-kumppani jakelee Sodaria, sen kate sisältyy tarjoukseen."
+        "title": "Kumppanin marginaali",
+        "desc": "Kun CRM-kumppani jakelee Sodaria, sen 15 %:n marginaali sisältyy paketin hintaan."
       }
     ],
     "faqKicker": "Kysymyksiä",
     "faqTitle": "Hinnoittelun UKK.",
     "faq": [
       {
-        "q": "Milloin näen hinnan?",
-        "a": "Ilmaisen esikatselun jälkeen. Sodar laskee kertahinnan kohteen viimeistelylle, kun kaksi ensimmäistä huonetta on käsitelty."
+        "q": "Mitä yksi krediitti kattaa?",
+        "a": "Yhden julkaistun kohteen kaikkine huoneineen ja panoraamineen sekä hostingin ja ylläpidon ilmoituksen elinkaaren ajan."
       },
       {
-        "q": "Onko esikatselu oikeasti ilmainen?",
-        "a": "Kyllä — kaksi ensimmäistä huonetta käsitellään toimivaksi kierrokseksi ilman maksua. Maksat vain kohteen viimeistelystä ja julkaisusta."
+        "q": "Onko esikatselu todella ilmainen?",
+        "a": "Kyllä — kaksi ensimmäistä huonetta käsitellään toimivaksi kierrokseksi ennen krediitin käyttöä. Krediitti kuluu vasta julkaistessa."
       },
       {
-        "q": "Onko tilausta?",
-        "a": "Ei. Jokainen kohde on yksi kertamaksu Stripen kautta. Mikään ei uusiudu."
+        "q": "Voinko vaihtaa tasoa?",
+        "a": "Milloin vain. Siirry ylöspäin, kun ilmoitusmääräsi kasvaa; käyttämättömät krediitit säilyvät kuukauden loppuun."
       },
       {
-        "q": "Miten CRM-kumppanin kate maksetaan?",
-        "a": "Automaattisesti, kuukausittain, kumppanin alustan välittäjien hyväksytyistä kierrosostoista."
+        "q": "Mikä on pilottihinta?",
+        "a": "Ensimmäiset pilottikumppanit saavat alennetun kuukausihinnan yhteisen käynnistyksen ajaksi. Kerro toimistostasi yhteydenottolomakkeella."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Rakennetaan kahden huoneen esikatselua…",
     "done": "Esikatselu valmis",
     "doneTitle": "Kaksi huonetta kuvattu.",
-    "doneBody": "Oikeassa tuotteessa kierros näkyy tässä yhdessä loppujen huoneiden kertahinnan kanssa.",
+    "doneBody": "Oikeassa tuotteessa kierros ilmestyy tähän, valmiina julkaistavaksi yhdellä paketin krediitillä.",
     "workspace": "Avaa työtilan esikatselu",
     "again": "Skannaa uudelleen",
     "exit": "Poistu",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar LinkedInissä",
     "privacyEyebrow": "Tietosuoja",
     "privacyTitle": "Kysy tiedoistasi.",
-    "privacySub": "Pyynnöt tietojesi tarkastamisesta, korjaamisesta, viennistä tai poistamisesta sekä muut tietosuojakysymykset menevät suoraan tietosuojatiimillemme."
+    "privacySub": "Pyynnöt tietojesi tarkastamisesta, korjaamisesta, viennistä tai poistamisesta sekä muut tietosuojakysymykset menevät suoraan tietosuojatiimillemme.",
+    "topic": "Aihe",
+    "topicPlaceholder": "Valitse aihe",
+    "topics": {
+      "pilot": "Pilottiohjelma (alennettu hinta)",
+      "pricing": "Hinnat ja krediittitasot",
+      "partnership": "CRM-kumppanuus",
+      "careers": "Työpaikat",
+      "other": "Muu"
+    }
   },
   "Intro": {
     "kicker": "Esittely",
     "title": "Sodar minuutissa.",
-    "body": "Kävele kerran, esikatsele kaksi huonetta ilmaiseksi, maksa kerran, julkaise ilmoitukseen, joka sinulla jo on.",
+    "body": "Kävele kerran, esikatsele kaksi huonetta ilmaiseksi, julkaise yhdellä krediitillä — suoraan ilmoitukseen, joka sinulla jo on.",
     "play": "Toista",
     "pause": "Tauko",
     "mute": "Mykistä",

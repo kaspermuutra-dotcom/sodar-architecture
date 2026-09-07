@@ -29,7 +29,7 @@
       "Todėl telefoną pavertėme skeneriu,",
       "o skenavimą — vieta."
     ],
-    "body": "Brokeris atidaro sodar.io telefone, vieną kartą pereina kiekvieną kambarį, kol DI įrašymo asistentas vadovauja kadrui, ir gauna apžvalgą, kurioje pirkėjai gali judėti. Pirmus du kambarius galima peržiūrėti nemokamai. Vienas mokėjimas užbaigia būstą. Publikavimas CRM skelbime — vienas paspaudimas."
+    "body": "Brokeris telefone atsidaro sodar.io, vieną kartą pereina kiekvieną kambarį, kol DI asistentas vadovauja kadrui, ir gauna virtualų turą, kuriuo pirkėjai gali judėti. Pirmi du kambariai peržiūrimi nemokamai. Vienas kreditas paskelbia objektą. Paskelbti CRM skelbime — vienas paspaudimas."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Veikianti peržiūra prieš bet kokį mokėjimą"
       },
       {
-        "label": "vienkartinė kaina",
-        "note": "Pritaikyta būstui. Be prenumeratos"
+        "label": "per mėnesį",
+        "note": "Starter planas · objektų kreditai įskaičiuoti"
       },
       {
         "label": "partnerio marža",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Atrakinti",
-        "title": "Viena kaina. Vienas mokėjimas.",
-        "body": "Sodar apskaičiuoja vienkartinę kainą visam būstui — įvertinami dydis, panoramų skaičius, apdorojimas, talpinimas ir priežiūra. Sumokėkite vieną kartą per Stripe, ir likę kambariai bus apdoroti."
+        "title": "Vienas planas. Vienas kreditas objektui.",
+        "body": "Sodar veikia su mėnesiniu planu nuo 99 €. Kiekvienas paskelbtas objektas naudoja vieną kreditą — panoramos, apdorojimas, talpinimas ir priežiūra įskaičiuoti. Lygiai auga kartu su skelbimų kiekiu, o pirmieji pilotai gauna sumažintą kainą."
       },
       "publish": {
         "label": "Publikuoti",
@@ -96,31 +96,31 @@
         "body": "Prijunkite CRM, pasirinkite būsto skelbimą, publikuokite. Apžvalga gyvena skelbime per įterptą Sodar peržiūros priemonę — o patvirtintus išvaizdos nustatymus galite keisti bet kada."
       }
     },
-    "quoteLabel": "Pasiūlymas · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · Kesklinn Ave 84",
     "quoteRows": [
       {
-        "k": "6 kambariai · 14 panoramų",
-        "v": "įskaičiuota"
+        "k": "Planas",
+        "v": "Starter · 99 € / mėn."
       },
       {
-        "k": "Apdorojimas ir DI skaičiavimai",
-        "v": "įskaičiuota"
+        "k": "Kreditai šį mėnesį",
+        "v": "liko 7 iš 10"
       },
       {
-        "k": "Saugojimas ir talpinimas",
-        "v": "12 mėnesių"
+        "k": "Šis objektas",
+        "v": "1 kreditas"
       },
       {
-        "k": "Priežiūra",
+        "k": "Talpinimas ir priežiūra",
         "v": "įskaičiuota"
       }
     ],
-    "oneTime": "vienkartinis · be prenumeratos",
-    "paidLabel": "Apmokėta",
-    "paidBody": "Apdorojami likę 4 kambariai. Pranešime, kai apžvalga bus baigta.",
-    "pay": "Mokėti per Stripe",
-    "paying": "Jungiamasi prie Stripe…",
-    "mockNote": "Demonstracinis atsiskaitymas — jokia kortelė neapmokestinama.",
+    "oneTime": "per mėnesį · nutraukite bet kada",
+    "paidLabel": "Paskelbta",
+    "paidBody": "Likę 4 kambariai apdorojami. Pranešime, kai turas bus baigtas.",
+    "pay": "Paskelbti su 1 kreditu",
+    "paying": "Skelbiama…",
+    "mockNote": "Demonstracija — kreditas nenaudojamas.",
     "crmHeader": "Jūsų CRM · Skelbimas #48213",
     "publishBtn": "Publikuoti apžvalgą",
     "publishedBtn": "Publikuota",
@@ -132,7 +132,8 @@
     "viewer": "peržiūra",
     "viewerEmbedded": "įterpta",
     "opened": "atidaryta",
-    "openedValue": "128 lankytojai"
+    "openedValue": "128 lankytojai",
+    "planLabel": "Planas"
   },
   "Capabilities": {
     "kicker": "Ką gaunate",
@@ -152,8 +153,8 @@
         "desc": "Veikianti pirmų dviejų kambarių apžvalga prieš bet kokį mokėjimą, kad pirmiausia įvertintumėte galutinę kokybę."
       },
       {
-        "title": "Vienkartinė kaina už būstą",
-        "desc": "Vienas būstui pritaikytas pasiūlymas — panoramos, skaičiavimai, talpinimas ir priežiūra įskaičiuoti."
+        "title": "Mėnesinis planas, objektų kreditai",
+        "desc": "Nuo 99 € per mėnesį. Vienas kreditas paskelbtam objektui — panoramos, skaičiavimai, talpinimas ir priežiūra įskaičiuoti."
       },
       {
         "title": "Publikavimas CRM",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Paprasta iš esmės",
     "title1": "Vienas būstas.",
-    "title2": "Viena kaina. Vieną kartą.",
-    "body": "Peržiūrėkite pirmus du kambarius nemokamai. Tada Sodar pasiūlo vieną vienkartinę kainą būstui užbaigti — be prenumeratos, be metinės sutarties.",
+    "title2": "99 € per mėnesį. Vienas kreditas būstui.",
+    "body": "Peržiūrėkite pirmus du kambarius nemokamai. Tada mėnesinis planas nuo 99 € padengia jūsų skelbimus — vienas kreditas paskelbtam objektui, lygiai didesniam kiekiui ir sumažinta kaina pirmiesiems pilotams.",
     "cta": "Kaip apskaičiuojama kaina",
     "card": {
-      "label": "Tipinis 3 kambarių butas",
-      "price": "99–149 €",
-      "note": "vienkartinis · pasiūlymas po nemokamos peržiūros",
+      "label": "Starter planas",
+      "price": "99 €",
+      "note": "per mėnesį · 10 objektų kreditų",
       "factors": [
-        "Būsto dydis",
-        "Įrašytos panoramos",
-        "Apdorojimas ir DI skaičiavimai",
-        "Saugojimas ir talpinimas",
-        "Nuolatinė priežiūra"
+        "Vadovaujamas fotografavimas ir DI asistentas",
+        "10 paskelbtų objektų per mėnesį",
+        "Skelbimas CRM ir įterpta peržiūra",
+        "Talpinimas ir priežiūra įskaičiuoti",
+        "Sumažinta kaina pilotiniams partneriams"
       ],
       "cta": "Skenuoti būstą"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Išbandykite su tikru būstu",
-      "title": "Peržiūrėkite du kambarius nemokamai. Sumokėkite vieną kartą už likusius.",
+      "title": "Du kambariai nemokamai. Skelbkite su vienu planu.",
       "sub": "Atidarykite sodar.io telefone ir pradėkite skenavimą — kortelės nereikia, kol neatrakinsite visos apžvalgos.",
       "label": "Nuskenuokite pirmą būstą"
     }
   },
   "PricingPage": {
     "metaTitle": "Kainos — Sodar",
-    "metaDesc": "Vienkartinė kaina už būstą, siūloma po nemokamos dviejų kambarių peržiūros. Apimties kainos agentūroms, 15 % marža CRM partneriams.",
+    "metaDesc": "Mėnesiniai planai nuo 99 € su objektų kreditais, lygiai didesniam kiekiui, sumažinta kaina pirmiesiems pilotams ir 15 % marža CRM partneriams.",
     "eyebrow": "Paprasta iš esmės",
-    "title": "Vienas būstas. Viena kaina. Vieną kartą.",
-    "sub": "Peržiūrėkite du kambarius nemokamai, tada sumokėkite vieną vienkartinę, būstui pritaikytą kainą. Apimties kainos agentūroms, nuolatinė 15 % marža CRM partneriams.",
+    "title": "Vienas planas. Kreditai objektui.",
+    "sub": "Peržiūrėkite du kambarius nemokamai, tada pasirinkite jūsų skelbimams tinkamą kreditų kiekį. Planai prasideda nuo 99 € per mėnesį; pirmieji pilotiniai partneriai gauna sumažintą kainą.",
     "badge": "Dauguma agentūrų",
     "tiers": [
       {
-        "name": "Už būstą",
-        "price": "Nuo 99 €",
-        "unit": "vienkartinis, pasiūlymas po nemokamos peržiūros",
-        "desc": "Brokeriams, skenuojantiems skelbimus po vieną.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "per mėnesį · 10 objektų kreditų",
+        "desc": "Brokeriams, skelbiantiems kelis objektus per mėnesį.",
         "features": [
-          "Vadovaujamas įrašymas telefonu + DI asistentas",
-          "Pirmi du kambariai nemokamai peržiūrai",
-          "Visa apžvalga po vieno Stripe mokėjimo",
-          "Publikavimas CRM ir įterpta peržiūra",
-          "Darbo erdvė su būsenomis ir peržiūros atidarymais"
+          "Vadovaujamas fotografavimas telefonu + DI asistentas",
+          "Pirmi du kambariai nemokamai",
+          "Vienas kreditas paskelbtam objektui",
+          "Skelbimas CRM ir įterpta peržiūra",
+          "Darbo erdvė su būsenomis ir peržiūromis"
         ],
-        "cta": "Nuskenuokite pirmą būstą"
+        "cta": "Pradėti su Starter"
       },
       {
-        "name": "Agentūra",
-        "price": "Apimtis",
-        "unit": "už būstą, mažėja augant apimčiai",
-        "desc": "Agentūroms, per mėnesį publikuojančioms dešimtis skelbimų.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "per mėnesį · 30 objektų kreditų",
+        "desc": "Komandoms, skelbiančioms kas savaitę.",
         "features": [
-          "Viskas iš plano Už būstą",
-          "Visos agentūros darbo erdvės suvestinė",
-          "Prioritetinė apdorojimo eilė",
-          "Individualus CRM nustatymas",
-          "Bendro prekės ženklo peržiūra"
+          "Viskas iš Starter",
+          "Pirmenybinis apdorojimas",
+          "Visos agentūros darbo erdvė",
+          "Peržiūra su jūsų prekės ženklu",
+          "Individualus CRM nustatymas"
         ],
         "cta": "Susisiekti su pardavimais"
       },
       {
-        "name": "CRM partneris",
-        "price": "15 %",
-        "unit": "marža nuo tinkamų pirkimų",
-        "desc": "CRM tiekėjams, platinantiems Sodar savo brokeriams.",
+        "name": "Brokerage",
+        "price": "Pagal susitarimą",
+        "unit": "kreditai pagal kiekį, sąskaita kas mėnesį",
+        "desc": "Agentūroms ir portalams, skelbiantiems dideliu mastu.",
         "features": [
-          "Sodar prieinamas jūsų platformoje",
-          "Partnerio skydelis",
-          "Kasmėnesinė automatinė išmoka",
-          "Be minimalios apimties"
+          "Individualus kreditų kiekis",
+          "Planai kiekvienam skelbimui",
+          "API prieiga",
+          "Įdiegimas kiekvienam biurui",
+          "Pilotinė kaina pirmiesiems partneriams"
         ],
-        "cta": "Teikti paraišką partneriauti"
+        "cta": "Prašyti pilotinės kainos"
       }
     ],
-    "factorsKicker": "Kaip sudaromas pasiūlymas",
-    "factorsTitle": "Kaina pagal būstą, o ne pagal planą.",
+    "factorsKicker": "Kaip veikia kreditai",
+    "factorsTitle": "Vienas kreditas, vienas paskelbtas objektas.",
     "factors": [
       {
-        "title": "Būsto dydis",
-        "desc": "Plotas ir įrašytų kambarių skaičius."
+        "title": "Vienas kreditas objektui",
+        "desc": "Visi objekto kambariai, kad ir kiek panoramų, skelbiant naudoja vieną kreditą."
       },
       {
-        "title": "Panoramų kiekis",
-        "desc": "Kiek panoramų sukūrė skenavimas ir kokia jų raiška."
+        "title": "Pirma nemokama peržiūra",
+        "desc": "Pirmi du kambariai apdorojami prieš panaudojant kreditą, kad pirmiausia įvertintumėte kokybę."
       },
       {
-        "title": "Apdorojimas",
-        "desc": "Sujungimas, tobulinimas ir DI skaičiavimai už apžvalgos."
+        "title": "Mėnesinis kiekis",
+        "desc": "Kreditai atsinaujina kas mėnesį su planu; aukštesni lygiai tiesiog jų turi daugiau."
       },
       {
-        "title": "Saugojimas ir talpinimas",
-        "desc": "Apžvalgos ir jos peržiūros priemonės palaikymas internete jūsų skelbime."
+        "title": "Talpinimas įskaičiuotas",
+        "desc": "Turo ir peržiūros palaikymas skelbime yra plano dalis."
       },
       {
-        "title": "Priežiūra",
-        "desc": "Nuolatiniai peržiūros priemonės atnaujinimai ir pati CRM integracija."
+        "title": "Pilotinė kaina",
+        "desc": "Pirmieji pilotiniai partneriai Estijoje gauna sumažintą mėnesinę kainą — klauskite per kontaktų formą."
       },
       {
         "title": "Partnerio marža",
-        "desc": "Kai Sodar platina CRM partneris, jo marža įskaičiuojama į pasiūlymą."
+        "desc": "Kai Sodar platina CRM partneris, jo 15 % marža įtraukta į plano kainą."
       }
     ],
     "faqKicker": "Klausimai",
     "faqTitle": "Kainų DUK.",
     "faq": [
       {
-        "q": "Kada matau kainą?",
-        "a": "Po nemokamos peržiūros. Sodar apskaičiuoja vienkartinę kainą būstui užbaigti, kai apdoroti pirmi du kambariai."
+        "q": "Ką padengia kreditas?",
+        "a": "Vieną paskelbtą objektą su visais kambariais ir panoramomis bei talpinimą ir priežiūrą visą skelbimo laiką."
       },
       {
         "q": "Ar peržiūra tikrai nemokama?",
-        "a": "Taip — pirmi du kambariai apdorojami į veikiančią apžvalgą be mokėjimo. Mokate tik už būsto užbaigimą ir publikavimą."
+        "a": "Taip — pirmi du kambariai paverčiami veikiančiu turu prieš panaudojant kreditą. Kreditą išleidžiate tik skelbdami."
       },
       {
-        "q": "Ar yra prenumerata?",
-        "a": "Ne. Kiekvienas būstas — vienas vienkartinis mokėjimas per Stripe. Niekas neatsinaujina."
+        "q": "Ar galiu keisti lygį?",
+        "a": "Bet kada. Pereikite aukščiau, kai auga skelbimų kiekis; nepanaudoti kreditai lieka jums iki mėnesio pabaigos."
       },
       {
-        "q": "Kaip išmokama CRM partnerio marža?",
-        "a": "Automatiškai, kas mėnesį, nuo partnerio platformos brokerių tinkamų apžvalgų pirkimų."
+        "q": "Kas yra pilotinė kaina?",
+        "a": "Pirmieji pilotiniai partneriai bendro diegimo metu gauna sumažintą mėnesinę kainą. Papasakokite apie savo agentūrą per kontaktų formą."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Kuriama jūsų dviejų kambarių peržiūra…",
     "done": "Peržiūra paruošta",
     "doneTitle": "Du kambariai įrašyti.",
-    "doneBody": "Tikrame produkte čia rodoma apžvalga kartu su vienkartine kaina už likusius kambarius.",
+    "doneBody": "Tikrame produkte turas atsiranda čia, paruoštas paskelbti su vienu plano kreditu.",
     "workspace": "Atidaryti darbo erdvės peržiūrą",
     "again": "Skenuoti dar kartą",
     "exit": "Išeiti",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar „LinkedIn“",
     "privacyEyebrow": "Privatumas",
     "privacyTitle": "Klauskite apie savo duomenis.",
-    "privacySub": "Prašymai dėl prieigos prie duomenų, jų taisymo, eksporto ar ištrynimo ir kiti privatumo klausimai pasiekia tiesiogiai mūsų privatumo komandą."
+    "privacySub": "Prašymai dėl prieigos prie duomenų, jų taisymo, eksporto ar ištrynimo ir kiti privatumo klausimai pasiekia tiesiogiai mūsų privatumo komandą.",
+    "topic": "Tema",
+    "topicPlaceholder": "Pasirinkite temą",
+    "topics": {
+      "pilot": "Pilotinė programa (sumažinta kaina)",
+      "pricing": "Kainos ir kreditų lygiai",
+      "partnership": "CRM partnerystė",
+      "careers": "Karjera",
+      "other": "Kita"
+    }
   },
   "Intro": {
     "kicker": "Įžanga",
     "title": "Sodar per vieną minutę.",
-    "body": "Pereikite vieną kartą, peržiūrėkite du kambarius nemokamai, sumokėkite vieną kartą, publikuokite skelbime, kurį jau turite.",
+    "body": "Pereikite kartą, peržiūrėkite du kambarius nemokamai, paskelbkite su vienu kreditu — tiesiai į jau turimą skelbimą.",
     "play": "Leisti",
     "pause": "Pristabdyti",
     "mute": "Išjungti garsą",

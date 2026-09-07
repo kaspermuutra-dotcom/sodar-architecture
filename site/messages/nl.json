@@ -29,7 +29,7 @@
       "Dus maakten we van een telefoon een scanner,",
       "en van een scan een plek."
     ],
-    "body": "Een makelaar opent sodar.io op de telefoon, loopt één keer door elke kamer terwijl een AI-opname-assistent de opname begeleidt, en krijgt een rondleiding terug waar kopers doorheen kunnen bewegen. De eerste twee kamers zijn gratis te bekijken. Eén betaling maakt de woning af. Publiceren in de CRM-advertentie is één klik."
+    "body": "Een makelaar opent sodar.io op de telefoon, loopt elke kamer één keer door terwijl een AI-assistent de opname begeleidt, en krijgt een rondleiding waar kopers doorheen kunnen bewegen. De eerste twee kamers zijn gratis als preview. Eén credit publiceert de woning. Publiceren in de CRM-advertentie is één klik."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Werkende preview vóór enige betaling"
       },
       {
-        "label": "eenmalige prijs",
-        "note": "Afgestemd op de woning. Geen abonnement"
+        "label": "per maand",
+        "note": "Starter-plan · woningcredits inbegrepen"
       },
       {
         "label": "partnermarge",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Ontgrendelen",
-        "title": "Eén prijs. Eén betaling.",
-        "body": "Sodar berekent een eenmalige prijs voor de hele woning — grootte, aantal panorama’s, verwerking, hosting en onderhoud inbegrepen. Betaal één keer via Stripe en de overige kamers worden verwerkt."
+        "title": "Eén plan. Eén credit per woning.",
+        "body": "Sodar werkt met een maandplan vanaf € 99. Elke gepubliceerde woning gebruikt één credit — panorama’s, verwerking, hosting en onderhoud inbegrepen. De niveaus groeien mee met je aantal advertenties en de eerste pilots krijgen een gereduceerd tarief."
       },
       "publish": {
         "label": "Publiceren",
@@ -96,31 +96,31 @@
         "body": "Koppel je CRM, kies de advertentie, publiceer. De rondleiding leeft in de advertentie via de ingebedde viewer van Sodar — en je kunt de goedgekeurde weergave-instellingen altijd aanpassen."
       }
     },
-    "quoteLabel": "Offerte · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · Kesklinn Ave 84",
     "quoteRows": [
       {
-        "k": "6 kamers · 14 panorama’s",
-        "v": "inbegrepen"
+        "k": "Plan",
+        "v": "Starter · € 99 / maand"
       },
       {
-        "k": "Verwerking & AI-rekenkracht",
-        "v": "inbegrepen"
+        "k": "Credits deze maand",
+        "v": "7 van 10 over"
       },
       {
-        "k": "Opslag & viewer-hosting",
-        "v": "12 maanden"
+        "k": "Deze woning",
+        "v": "1 credit"
       },
       {
-        "k": "Onderhoud",
+        "k": "Hosting & onderhoud",
         "v": "inbegrepen"
       }
     ],
-    "oneTime": "eenmalig · geen abonnement",
-    "paidLabel": "Betaald",
-    "paidBody": "De overige 4 kamers worden verwerkt. Je krijgt bericht zodra de rondleiding compleet is.",
-    "pay": "Betalen met Stripe",
-    "paying": "Verbinden met Stripe…",
-    "mockNote": "Demo-checkout — er wordt geen kaart belast.",
+    "oneTime": "per maand · altijd opzegbaar",
+    "paidLabel": "Gepubliceerd",
+    "paidBody": "De overige 4 kamers worden verwerkt. Je krijgt bericht zodra de rondleiding klaar is.",
+    "pay": "Publiceren met 1 credit",
+    "paying": "Publiceren…",
+    "mockNote": "Demo — er wordt geen credit gebruikt.",
     "crmHeader": "Jouw CRM · Advertentie #48213",
     "publishBtn": "Rondleiding publiceren",
     "publishedBtn": "Gepubliceerd",
@@ -132,7 +132,8 @@
     "viewer": "viewer",
     "viewerEmbedded": "ingebed",
     "opened": "geopend",
-    "openedValue": "128 bezoekers"
+    "openedValue": "128 bezoekers",
+    "planLabel": "Plattegrond"
   },
   "Capabilities": {
     "kicker": "Wat je krijgt",
@@ -152,8 +153,8 @@
         "desc": "Een werkende rondleiding van de eerste twee kamers vóór enige betaling, zodat je eerst de kwaliteit beoordeelt."
       },
       {
-        "title": "Eenmalige prijs per woning",
-        "desc": "Eén offerte afgestemd op de woning — panorama’s, rekenkracht, hosting en onderhoud inbegrepen."
+        "title": "Maandplan, woningcredits",
+        "desc": "Vanaf € 99 per maand. Eén credit per gepubliceerde woning — panorama’s, rekenkracht, hosting en onderhoud inbegrepen."
       },
       {
         "title": "CRM-publicatie",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Eenvoudig door ontwerp",
     "title1": "Eén woning.",
-    "title2": "Eén prijs. Eén keer.",
-    "body": "Bekijk de eerste twee kamers gratis. Daarna noemt Sodar één eenmalige prijs om de woning af te maken — geen abonnement, geen jaarcontract.",
+    "title2": "€ 99 per maand. Eén credit per woning.",
+    "body": "Bekijk de eerste twee kamers gratis. Daarna dekt een maandplan vanaf € 99 je advertenties — één credit per gepubliceerde woning, niveaus voor meer volume en een gereduceerd tarief voor de eerste pilots.",
     "cta": "Hoe de prijs wordt berekend",
     "card": {
-      "label": "Typisch 3-kamerappartement",
-      "price": "€ 99–149",
-      "note": "eenmalig · offerte na de gratis preview",
+      "label": "Starter-plan",
+      "price": "€ 99",
+      "note": "per maand · 10 woningcredits",
       "factors": [
-        "Grootte van de woning",
-        "Opgenomen panorama’s",
-        "Verwerking & AI-rekenkracht",
-        "Opslag & viewer-hosting",
-        "Doorlopend onderhoud"
+        "Begeleide opname & AI-assistent",
+        "10 gepubliceerde woningen per maand",
+        "CRM-publicatie & ingebedde viewer",
+        "Hosting & onderhoud inbegrepen",
+        "Gereduceerd tarief voor pilotpartners"
       ],
       "cta": "Woning scannen"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Probeer het op een echte woning",
-      "title": "Bekijk twee kamers gratis. Betaal één keer voor de rest.",
+      "title": "Twee kamers gratis bekijken. Publiceren met één plan.",
       "sub": "Open sodar.io op je telefoon en start een scan — geen kaart nodig tot je de volledige rondleiding ontgrendelt.",
       "label": "Scan je eerste woning"
     }
   },
   "PricingPage": {
     "metaTitle": "Prijzen — Sodar",
-    "metaDesc": "Eenmalige prijs per woning, geoffreerd na een gratis preview van twee kamers. Volumeprijzen voor kantoren, 15% marge voor CRM-partners.",
+    "metaDesc": "Maandplannen vanaf € 99 met woningcredits, niveaus voor meer volume, een gereduceerd tarief voor de eerste pilots en 15% marge voor CRM-partners.",
     "eyebrow": "Eenvoudig door ontwerp",
-    "title": "Eén woning. Eén prijs. Eén keer.",
-    "sub": "Bekijk twee kamers gratis en betaal daarna één eenmalige prijs afgestemd op de woning. Volumeprijzen voor kantoren, een vaste marge van 15% voor CRM-partners.",
+    "title": "Eén plan. Credits per woning.",
+    "sub": "Bekijk twee kamers gratis en kies daarna het creditvolume dat bij je advertenties past. Plannen beginnen bij € 99 per maand; de eerste pilotpartners krijgen een gereduceerd tarief.",
     "badge": "De meeste kantoren",
     "tiers": [
       {
-        "name": "Per woning",
-        "price": "Vanaf € 99",
-        "unit": "eenmalig, offerte na de gratis preview",
-        "desc": "Voor makelaars die advertenties één voor één scannen.",
+        "name": "Starter",
+        "price": "€ 99",
+        "unit": "per maand · 10 woningcredits",
+        "desc": "Voor makelaars die een paar advertenties per maand publiceren.",
         "features": [
           "Begeleide telefoonopname + AI-assistent",
           "Eerste twee kamers gratis als preview",
-          "Volledige rondleiding na één Stripe-betaling",
+          "Eén credit per gepubliceerde woning",
           "CRM-publicatie & ingebedde viewer",
-          "Werkruimte met status & geopende viewers"
+          "Werkruimte met status & weergaven"
         ],
-        "cta": "Scan je eerste woning"
+        "cta": "Beginnen met Starter"
       },
       {
-        "name": "Kantoor",
-        "price": "Volume",
-        "unit": "per woning, dalend met het volume",
-        "desc": "Voor kantoren die tientallen advertenties per maand publiceren.",
+        "name": "Growth",
+        "price": "€ 249",
+        "unit": "per maand · 30 woningcredits",
+        "desc": "Voor teams die elke week publiceren.",
         "features": [
-          "Alles van Per woning",
-          "Kantoorbrede werkruimte-overzicht",
-          "Prioriteit in de verwerkingswachtrij",
-          "Toegewijde CRM-inrichting",
-          "Viewer met co-branding"
+          "Alles van Starter",
+          "Prioriteit in de verwerking",
+          "Kantoorbrede werkruimte",
+          "Viewer in je eigen huisstijl",
+          "Eigen CRM-inrichting"
         ],
         "cta": "Praat met sales"
       },
       {
-        "name": "CRM-partner",
-        "price": "15%",
-        "unit": "marge op in aanmerking komende aankopen",
-        "desc": "Voor CRM-aanbieders die Sodar naar hun makelaars verspreiden.",
+        "name": "Brokerage",
+        "price": "Op maat",
+        "unit": "volumecredits, maandelijks gefactureerd",
+        "desc": "Voor ketens en portalen die op schaal publiceren.",
         "features": [
-          "Sodar beschikbaar in je platform",
-          "Partnerdashboard",
-          "Maandelijkse automatische uitbetaling",
-          "Geen minimumvolume"
+          "Creditvolume op maat",
+          "Plattegronden bij elke advertentie",
+          "API-toegang",
+          "Onboarding voor elk kantoor",
+          "Pilottarief voor de eerste partners"
         ],
-        "cta": "Aanmelden als partner"
+        "cta": "Pilottarief aanvragen"
       }
     ],
-    "factorsKicker": "Hoe de offerte wordt opgebouwd",
-    "factorsTitle": "Geprijsd naar de woning, niet naar het plan.",
+    "factorsKicker": "Zo werken credits",
+    "factorsTitle": "Eén credit, één gepubliceerde woning.",
     "factors": [
       {
-        "title": "Grootte van de woning",
-        "desc": "Vloeroppervlak en aantal opgenomen kamers."
+        "title": "Eén credit per woning",
+        "desc": "Alle kamers van een woning, hoeveel panorama’s ook, gebruiken bij publicatie één credit."
       },
       {
-        "title": "Panoramavolume",
-        "desc": "Hoeveel panorama’s de scan opleverde en in welke resolutie."
+        "title": "Eerst de gratis preview",
+        "desc": "De eerste twee kamers worden verwerkt voordat er een credit wordt gebruikt, zodat je eerst de kwaliteit beoordeelt."
       },
       {
-        "title": "Verwerking",
-        "desc": "Stitchen, verbeteren en de AI-rekenkracht achter de rondleiding."
+        "title": "Maandelijks volume",
+        "desc": "Credits vernieuwen elke maand met je plan; hogere niveaus bevatten er gewoon meer."
       },
       {
-        "title": "Opslag & hosting",
-        "desc": "De rondleiding en de viewer online houden in je advertentie."
+        "title": "Hosting inbegrepen",
+        "desc": "De rondleiding en de viewer online houden in je advertentie hoort bij het plan."
       },
       {
-        "title": "Onderhoud",
-        "desc": "Doorlopende viewer-updates en de CRM-integratie zelf."
+        "title": "Pilottarief",
+        "desc": "De eerste pilotpartners in Estland krijgen een gereduceerd maandtarief — vraag ernaar via het contactformulier."
       },
       {
         "title": "Partnermarge",
-        "desc": "Waar een CRM-partner Sodar verspreidt, is zijn marge in de offerte inbegrepen."
+        "desc": "Als een CRM-partner Sodar distribueert, zit zijn marge van 15% in de planprijs."
       }
     ],
     "faqKicker": "Vragen",
     "faqTitle": "Prijzen-FAQ.",
     "faq": [
       {
-        "q": "Wanneer zie ik de prijs?",
-        "a": "Na de gratis preview. Sodar berekent een eenmalige prijs om de woning af te maken zodra de eerste twee kamers verwerkt zijn."
+        "q": "Wat dekt een credit?",
+        "a": "Eén gepubliceerde woning met al haar kamers en panorama’s, plus hosting en onderhoud zolang de advertentie loopt."
       },
       {
         "q": "Is de preview echt gratis?",
-        "a": "Ja — de eerste twee kamers worden zonder betaling verwerkt tot een werkende rondleiding. Je betaalt alleen om de woning af te maken en te publiceren."
+        "a": "Ja — de eerste twee kamers worden een werkende rondleiding voordat er een credit wordt gebruikt. Je besteedt pas een credit als je publiceert."
       },
       {
-        "q": "Is er een abonnement?",
-        "a": "Nee. Elke woning is één eenmalige betaling via Stripe. Niets verlengt."
+        "q": "Kan ik van niveau wisselen?",
+        "a": "Altijd. Ga omhoog als je volume groeit; ongebruikte credits blijven de rest van de maand van jou."
       },
       {
-        "q": "Hoe wordt de marge van de CRM-partner uitbetaald?",
-        "a": "Automatisch, maandelijks, over in aanmerking komende aankopen van rondleidingen door makelaars op het platform van de partner."
+        "q": "Wat is het pilottarief?",
+        "a": "De eerste pilotpartners krijgen tijdens de gezamenlijke uitrol een gereduceerd maandtarief. Vertel ons over je kantoor via het contactformulier."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Je preview van twee kamers wordt gemaakt…",
     "done": "Preview klaar",
     "doneTitle": "Twee kamers vastgelegd.",
-    "doneBody": "In het echte product verschijnt hier de rondleiding, samen met een eenmalige prijs voor de overige kamers.",
+    "doneBody": "In het echte product verschijnt de rondleiding hier, klaar om te publiceren met één credit uit je plan.",
     "workspace": "Werkruimte-preview openen",
     "again": "Opnieuw scannen",
     "exit": "Afsluiten",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar op LinkedIn",
     "privacyEyebrow": "Privacy",
     "privacyTitle": "Vraag ons naar je gegevens.",
-    "privacySub": "Verzoeken om inzage, correctie, export of verwijdering van je gegevens en alle andere privacyvragen komen rechtstreeks bij ons privacyteam terecht."
+    "privacySub": "Verzoeken om inzage, correctie, export of verwijdering van je gegevens en alle andere privacyvragen komen rechtstreeks bij ons privacyteam terecht.",
+    "topic": "Onderwerp",
+    "topicPlaceholder": "Kies een onderwerp",
+    "topics": {
+      "pilot": "Pilotprogramma (gereduceerd tarief)",
+      "pricing": "Prijzen & creditniveaus",
+      "partnership": "CRM-partnerschap",
+      "careers": "Werken bij",
+      "other": "Anders"
+    }
   },
   "Intro": {
     "kicker": "Introductie",
     "title": "Sodar in één minuut.",
-    "body": "Eén keer lopen, twee kamers gratis bekijken, één keer betalen, publiceren in de advertentie die je al hebt.",
+    "body": "Loop één keer door, bekijk twee kamers gratis, publiceer met één credit — rechtstreeks in de advertentie die je al hebt.",
     "play": "Afspelen",
     "pause": "Pauzeren",
     "mute": "Dempen",

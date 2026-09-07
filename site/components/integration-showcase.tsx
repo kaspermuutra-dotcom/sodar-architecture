@@ -33,7 +33,7 @@ export function IntegrationShowcase() {
 function CrmMock({ withSodarCard }: { withSodarCard: boolean }) {
   const t = useTranslations("Integration");
   const listings = t.raw("listings") as { name: string; meta: string }[];
-  const stills = ["/media/hero-scan-loop.jpg", "/media/kitchen-harbour.jpg", "/media/rooms/tile-19.jpg"];
+  const stills = ["/media/rooms/crm-1.jpg", "/media/rooms/crm-2.jpg", "/media/rooms/crm-3.jpg"];
   return (
     <div className="flex h-full w-full flex-col bg-bg-raised">
       <div className="flex items-center justify-between border-b border-border px-6 py-3.5">
@@ -59,7 +59,7 @@ function CrmMock({ withSodarCard }: { withSodarCard: boolean }) {
             {i === 0 && withSodarCard ? (
               <div className="mt-3 flex items-center gap-2 rounded-lg border border-white/25 bg-white/[.06] px-2.5 py-2">
                 <SodarMark size={14} className="text-text" />
-                <span className="font-mono text-[10px] text-text">{t("published")}</span>
+                <span className="text-[11px] text-text">{t("published")}</span>
               </div>
             ) : (
               <div className="mt-3 flex h-[34px] items-center justify-center rounded-lg border border-dashed border-white/15 font-mono text-[10px] text-text-faint">

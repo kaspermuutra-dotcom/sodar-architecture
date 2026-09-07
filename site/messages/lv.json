@@ -29,7 +29,7 @@
       "Tāpēc mēs pārvērtām tālruni par skeneri",
       "un skenējumu par vietu."
     ],
-    "body": "Mākleris atver sodar.io tālrunī, vienu reizi izstaigā katru telpu, kamēr MI uzņemšanas asistents vada kadru, un saņem apskati, kurā pircēji var pārvietoties. Pirmās divas telpas priekšskatā ir bez maksas. Viens maksājums pabeidz īpašumu. Publicēšana CRM sludinājumā ir viens klikšķis."
+    "body": "Mākleris telefonā atver sodar.io, vienreiz izstaigā katru istabu, kamēr MI asistents vada uzņemšanu, un saņem virtuālo tūri, kurā pircēji var pārvietoties. Pirmās divas istabas priekšskatāmas bez maksas. Viens kredīts publicē objektu. Publicēt CRM sludinājumā — viens klikšķis."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Darbojošs priekšskats pirms jebkāda maksājuma"
       },
       {
-        "label": "vienreizēja cena",
-        "note": "Pielāgota īpašumam. Bez abonementa"
+        "label": "mēnesī",
+        "note": "Starter plāns · objektu kredīti iekļauti"
       },
       {
         "label": "partnera peļņa",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Atbloķēt",
-        "title": "Viena cena. Viens maksājums.",
-        "body": "Sodar aprēķina vienreizēju cenu visam īpašumam — ņemot vērā izmēru, panorāmu skaitu, apstrādi, mitināšanu un uzturēšanu. Samaksājiet vienreiz caur Stripe, un pārējās telpas tiek apstrādātas."
+        "title": "Viens plāns. Viens kredīts par objektu.",
+        "body": "Sodar darbojas ar mēneša plānu no 99 €. Katrs publicētais objekts izmanto vienu kredītu — panorāmas, apstrāde, mitināšana un uzturēšana iekļautas. Līmeņi aug līdz ar sludinājumu apjomu, un pirmie piloti saņem samazinātu cenu."
       },
       "publish": {
         "label": "Publicēt",
@@ -96,31 +96,31 @@
         "body": "Pievienojiet savu CRM, izvēlieties īpašuma sludinājumu, publicējiet. Apskate dzīvo sludinājumā caur Sodar iegulto skatītāju — un apstiprinātos izskata iestatījumus varat pielāgot jebkurā laikā."
       }
     },
-    "quoteLabel": "Piedāvājums · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · Kesklinn Ave 84",
     "quoteRows": [
       {
-        "k": "6 telpas · 14 panorāmas",
-        "v": "iekļauts"
+        "k": "Plāns",
+        "v": "Starter · 99 € / mēn."
       },
       {
-        "k": "Apstrāde un MI skaitļošana",
-        "v": "iekļauts"
+        "k": "Kredīti šomēnes",
+        "v": "atlikuši 7 no 10"
       },
       {
-        "k": "Glabāšana un skatītāja mitināšana",
-        "v": "12 mēneši"
+        "k": "Šis objekts",
+        "v": "1 kredīts"
       },
       {
-        "k": "Uzturēšana",
-        "v": "iekļauts"
+        "k": "Mitināšana un uzturēšana",
+        "v": "iekļauta"
       }
     ],
-    "oneTime": "vienreizējs · bez abonementa",
-    "paidLabel": "Samaksāts",
-    "paidBody": "Apstrādā atlikušās 4 telpas. Jūs saņemsiet paziņojumu, kad apskate būs pabeigta.",
-    "pay": "Maksāt ar Stripe",
-    "paying": "Savienojas ar Stripe…",
-    "mockNote": "Demonstrācijas kase — neviena karte netiek debetēta.",
+    "oneTime": "mēnesī · atcel jebkurā laikā",
+    "paidLabel": "Publicēts",
+    "paidBody": "Atlikušās 4 istabas tiek apstrādātas. Paziņosim, kad tūre būs gatava.",
+    "pay": "Publicēt ar 1 kredītu",
+    "paying": "Publicē…",
+    "mockNote": "Demo — kredīts netiek izmantots.",
     "crmHeader": "Jūsu CRM · Sludinājums #48213",
     "publishBtn": "Publicēt apskati",
     "publishedBtn": "Publicēts",
@@ -132,7 +132,8 @@
     "viewer": "skatītājs",
     "viewerEmbedded": "iegults",
     "opened": "atvērts",
-    "openedValue": "128 apmeklētāji"
+    "openedValue": "128 apmeklētāji",
+    "planLabel": "Plāns"
   },
   "Capabilities": {
     "kicker": "Kas tiek piegādāts",
@@ -152,8 +153,8 @@
         "desc": "Darbojoša pirmo divu telpu apskate pirms jebkāda maksājuma, lai vispirms novērtētu gatavo kvalitāti."
       },
       {
-        "title": "Vienreizēja cena par īpašumu",
-        "desc": "Viens īpašumam pielāgots piedāvājums — panorāmas, skaitļošana, mitināšana un uzturēšana iekļautas."
+        "title": "Mēneša plāns, objektu kredīti",
+        "desc": "No 99 € mēnesī. Viens kredīts par publicētu objektu — panorāmas, aprēķini, mitināšana un uzturēšana iekļautas."
       },
       {
         "title": "Publicēšana CRM",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Vienkāršs pēc būtības",
     "title1": "Viens īpašums.",
-    "title2": "Viena cena. Vienreiz.",
-    "body": "Priekšskatiet pirmās divas telpas bez maksas. Tad Sodar piedāvā vienu vienreizēju cenu īpašuma pabeigšanai — bez abonementa, bez gada līguma.",
+    "title2": "99 € mēnesī. Viens kredīts par mājokli.",
+    "body": "Priekšskatiet pirmās divas istabas bez maksas. Pēc tam mēneša plāns no 99 € sedz jūsu sludinājumus — viens kredīts par publicētu objektu, līmeņi lielākam apjomam un samazināta cena pirmajiem pilotiem.",
     "cta": "Kā tiek aprēķināta cena",
     "card": {
-      "label": "Tipisks 3 istabu dzīvoklis",
-      "price": "99–149 €",
-      "note": "vienreizējs · piedāvājums pēc bezmaksas priekšskata",
+      "label": "Starter plāns",
+      "price": "99 €",
+      "note": "mēnesī · 10 objektu kredīti",
       "factors": [
-        "Īpašuma izmērs",
-        "Uzņemtās panorāmas",
-        "Apstrāde un MI skaitļošana",
-        "Glabāšana un skatītāja mitināšana",
-        "Pastāvīga uzturēšana"
+        "Vadīta uzņemšana un MI asistents",
+        "10 publicēti objekti mēnesī",
+        "Publicēšana CRM un iegultais skatītājs",
+        "Mitināšana un uzturēšana iekļautas",
+        "Samazināta cena pilotpartneriem"
       ],
       "cta": "Skenēt īpašumu"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Izmēģiniet uz īsta īpašuma",
-      "title": "Priekšskatiet divas telpas bez maksas. Samaksājiet vienreiz par pārējo.",
+      "title": "Divas istabas bez maksas. Publicējiet ar vienu plānu.",
       "sub": "Atveriet sodar.io tālrunī un sāciet skenēšanu — karte nav vajadzīga, līdz atbloķējat pilno apskati.",
       "label": "Skenējiet savu pirmo īpašumu"
     }
   },
   "PricingPage": {
     "metaTitle": "Cenas — Sodar",
-    "metaDesc": "Vienreizēja cena par īpašumu, piedāvāta pēc bezmaksas divu telpu priekšskata. Apjoma cenas aģentūrām, 15% peļņa CRM partneriem.",
+    "metaDesc": "Mēneša plāni no 99 € ar objektu kredītiem, līmeņi lielākam apjomam, samazināta cena pirmajiem pilotiem un 15 % marža CRM partneriem.",
     "eyebrow": "Vienkāršs pēc būtības",
-    "title": "Viens īpašums. Viena cena. Vienreiz.",
-    "sub": "Priekšskatiet divas telpas bez maksas, tad samaksājiet vienu vienreizēju, īpašumam pielāgotu cenu. Apjoma cenas aģentūrām, pastāvīga 15% peļņa CRM partneriem.",
+    "title": "Viens plāns. Kredīti par objektu.",
+    "sub": "Priekšskatiet divas istabas bez maksas, tad izvēlieties sludinājumiem piemērotu kredītu apjomu. Plāni sākas no 99 € mēnesī; pirmie pilotpartneri saņem samazinātu cenu.",
     "badge": "Vairums aģentūru",
     "tiers": [
       {
-        "name": "Par īpašumu",
-        "price": "No 99 €",
-        "unit": "vienreizējs, piedāvājums pēc bezmaksas priekšskata",
-        "desc": "Mākleriem, kas skenē sludinājumus pa vienam.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "mēnesī · 10 objektu kredīti",
+        "desc": "Mākleriem, kas publicē dažus sludinājumus mēnesī.",
         "features": [
-          "Vadīta uzņemšana ar tālruni + MI asistents",
-          "Pirmās divas telpas bez maksas priekšskatā",
-          "Pilna apskate pēc viena Stripe maksājuma",
+          "Vadīta uzņemšana ar telefonu + MI asistents",
+          "Pirmās divas istabas bez maksas",
+          "Viens kredīts par publicētu objektu",
           "Publicēšana CRM un iegultais skatītājs",
-          "Darbvieta ar statusiem un skatītāja atvēršanām"
+          "Darba vide ar statusiem un skatījumiem"
         ],
-        "cta": "Skenējiet savu pirmo īpašumu"
+        "cta": "Sākt ar Starter"
       },
       {
-        "name": "Aģentūra",
-        "price": "Apjoms",
-        "unit": "par īpašumu, samazinās līdz ar apjomu",
-        "desc": "Aģentūrām, kas publicē desmitiem sludinājumu mēnesī.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "mēnesī · 30 objektu kredīti",
+        "desc": "Komandām, kas publicē katru nedēļu.",
         "features": [
-          "Viss no plāna Par īpašumu",
-          "Aģentūras mēroga darbvietas kopsavilkums",
-          "Prioritāra apstrādes rinda",
-          "Individuāla CRM iestatīšana",
-          "Kopzīmola skatītājs"
+          "Viss no Starter",
+          "Prioritāra apstrāde",
+          "Visas aģentūras darba vide",
+          "Skatītājs ar jūsu zīmolu",
+          "Individuāla CRM iestatīšana"
         ],
         "cta": "Sazināties ar pārdošanu"
       },
       {
-        "name": "CRM partneris",
-        "price": "15%",
-        "unit": "peļņa no kvalificētiem pirkumiem",
-        "desc": "CRM nodrošinātājiem, kas izplata Sodar saviem mākleriem.",
+        "name": "Brokerage",
+        "price": "Pēc vienošanās",
+        "unit": "apjoma kredīti, rēķins katru mēnesi",
+        "desc": "Aģentūrām un portāliem, kas publicē lielā apjomā.",
         "features": [
-          "Sodar pieejams jūsu platformā",
-          "Partnera panelis",
-          "Ikmēneša automātiska izmaksa",
-          "Bez minimālā apjoma"
+          "Individuāls kredītu apjoms",
+          "Plāni katram sludinājumam",
+          "API piekļuve",
+          "Ieviešana katrā birojā",
+          "Pilota cena pirmajiem partneriem"
         ],
-        "cta": "Pieteikties kā partnerim"
+        "cta": "Pieprasīt pilota cenu"
       }
     ],
-    "factorsKicker": "Kā veidojas piedāvājums",
-    "factorsTitle": "Cena pēc īpašuma, nevis pēc plāna.",
+    "factorsKicker": "Kā darbojas kredīti",
+    "factorsTitle": "Viens kredīts, viens publicēts objekts.",
     "factors": [
       {
-        "title": "Īpašuma izmērs",
-        "desc": "Platība un uzņemto telpu skaits."
+        "title": "Viens kredīts par objektu",
+        "desc": "Visas objekta istabas, lai cik panorāmu, publicējot izmanto vienu kredītu."
       },
       {
-        "title": "Panorāmu apjoms",
-        "desc": "Cik panorāmu skenējums saražoja un kādā izšķirtspējā."
+        "title": "Vispirms bezmaksas priekšskatījums",
+        "desc": "Pirmās divas istabas tiek apstrādātas pirms kredīta izmantošanas, lai vispirms novērtētu kvalitāti."
       },
       {
-        "title": "Apstrāde",
-        "desc": "Savienošana, uzlabošana un MI skaitļošana aiz apskates."
+        "title": "Mēneša apjoms",
+        "desc": "Kredīti atjaunojas katru mēnesi līdz ar plānu; augstāki līmeņi vienkārši ietver vairāk."
       },
       {
-        "title": "Glabāšana un mitināšana",
-        "desc": "Apskates un tās skatītāja uzturēšana tiešsaistē jūsu sludinājumā."
+        "title": "Mitināšana iekļauta",
+        "desc": "Tūres un skatītāja uzturēšana sludinājumā ir plāna daļa."
       },
       {
-        "title": "Uzturēšana",
-        "desc": "Pastāvīgi skatītāja atjauninājumi un pati CRM integrācija."
+        "title": "Pilota cena",
+        "desc": "Pirmie pilotpartneri Igaunijā saņem samazinātu mēneša cenu — jautājiet kontaktformā."
       },
       {
-        "title": "Partnera peļņa",
-        "desc": "Ja Sodar izplata CRM partneris, tā peļņa ir iekļauta piedāvājumā."
+        "title": "Partnera marža",
+        "desc": "Ja Sodar izplata CRM partneris, tā 15 % marža ir iekļauta plāna cenā."
       }
     ],
     "faqKicker": "Jautājumi",
     "faqTitle": "Cenu BUJ.",
     "faq": [
       {
-        "q": "Kad es redzu cenu?",
-        "a": "Pēc bezmaksas priekšskata. Sodar aprēķina vienreizēju cenu īpašuma pabeigšanai, tiklīdz pirmās divas telpas ir apstrādātas."
+        "q": "Ko sedz kredīts?",
+        "a": "Vienu publicētu objektu ar visām istabām un panorāmām, kā arī mitināšanu un uzturēšanu visu sludinājuma laiku."
       },
       {
-        "q": "Vai priekšskats tiešām ir bez maksas?",
-        "a": "Jā — pirmās divas telpas tiek apstrādātas darbojošā apskatē bez maksājuma. Jūs maksājat tikai par īpašuma pabeigšanu un publicēšanu."
+        "q": "Vai priekšskatījums tiešām ir bez maksas?",
+        "a": "Jā — pirmās divas istabas kļūst par strādājošu tūri pirms kredīta izmantošanas. Kredītu tērējat tikai publicējot."
       },
       {
-        "q": "Vai ir abonements?",
-        "a": "Nē. Katrs īpašums ir viens vienreizējs maksājums caur Stripe. Nekas neatjaunojas."
+        "q": "Vai varu mainīt līmeni?",
+        "a": "Jebkurā laikā. Pārejiet augstāk, kad aug apjoms; neizmantotie kredīti paliek jums līdz mēneša beigām."
       },
       {
-        "q": "Kā tiek izmaksāta CRM partnera peļņa?",
-        "a": "Automātiski, katru mēnesi, no partnera platformas mākleru kvalificētiem apskašu pirkumiem."
+        "q": "Kas ir pilota cena?",
+        "a": "Pirmie pilotpartneri kopīgās ieviešanas laikā saņem samazinātu mēneša cenu. Pastāstiet par savu aģentūru kontaktformā."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Veido jūsu divu telpu priekšskatu…",
     "done": "Priekšskats gatavs",
     "doneTitle": "Divas telpas uzņemtas.",
-    "doneBody": "Īstajā produktā šeit parādās apskate kopā ar vienreizēju cenu par atlikušajām telpām.",
+    "doneBody": "Īstajā produktā tūre parādās šeit, gatava publicēšanai ar vienu plāna kredītu.",
     "workspace": "Atvērt darbvietas priekšskatu",
     "again": "Skenēt vēlreiz",
     "exit": "Iziet",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar LinkedIn",
     "privacyEyebrow": "Privātums",
     "privacyTitle": "Jautājiet par saviem datiem.",
-    "privacySub": "Pieprasījumi par piekļuvi datiem, to labošanu, eksportu vai dzēšanu un citi privātuma jautājumi nonāk tieši pie mūsu privātuma komandas."
+    "privacySub": "Pieprasījumi par piekļuvi datiem, to labošanu, eksportu vai dzēšanu un citi privātuma jautājumi nonāk tieši pie mūsu privātuma komandas.",
+    "topic": "Temats",
+    "topicPlaceholder": "Izvēlieties tematu",
+    "topics": {
+      "pilot": "Pilotprogramma (samazināta cena)",
+      "pricing": "Cenas un kredītu līmeņi",
+      "partnership": "CRM partnerība",
+      "careers": "Karjera",
+      "other": "Cits"
+    }
   },
   "Intro": {
     "kicker": "Ievads",
     "title": "Sodar vienā minūtē.",
-    "body": "Izstaigājiet vienreiz, priekšskatiet divas telpas bez maksas, samaksājiet vienreiz, publicējiet sludinājumā, kas jums jau ir.",
+    "body": "Izstaigājiet vienreiz, priekšskatiet divas istabas bez maksas, publicējiet ar vienu kredītu — tieši jau esošajā sludinājumā.",
     "play": "Atskaņot",
     "pause": "Pauze",
     "mute": "Izslēgt skaņu",

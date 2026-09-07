@@ -7,7 +7,7 @@ import { ScanReveal } from "@/components/scan-reveal";
 import { FlatListingPhoto, SodarWalkthroughFrame } from "@/components/scan-placeholders";
 
 type Params = { params: Promise<{ locale: string }> };
-const STILLS = ["/media/hero-scan-loop.jpg", "/media/loft-wide.jpg", "/media/kitchen-harbour.jpg", "/media/tallinn-street.jpg"];
+const STILLS = ["/media/blog-1.jpg", "/media/blog-2.jpg", "/media/blog-3.jpg", "/media/blog-4.jpg"];
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { locale } = await params;

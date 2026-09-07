@@ -26,6 +26,59 @@ Prompt anchor used for every still (keep it for future shots):
 > muted grey-blue and rust palette, 24–35 mm, no people, no text, realistic and
 > unretouched.
 
+
+## Photographs (Unsplash, September 2026)
+
+Every still on the site that is not one of the Tallinn shots above is a licensed
+photograph from Unsplash (Unsplash License: free for commercial use, no attribution
+required; credits kept here anyway). Selected for Northern-European apartments and
+houses — Copenhagen, Stockholm, Helsinki, Oslo and comparable — and for looking like
+real listing photography rather than renders. `public/media/rooms/tile-01…32.jpg` are the
+hero wall; `rooms/{living,kitchen,bedroom,bathroom,study,balcony,publish,crm-1..3}.jpg`
+are the demo stills; `blog-1..4.jpg` the field-notes covers. `scans-villa.jpg` is the one
+remaining Higgsfield still (a Pirita villa exterior).
+
+| # | Photographer | Source |
+|---|---|---|
+| 9 | Med Badr  Chemmaoui | https://unsplash.com/photos/xtDpXi_a-YQ |
+| 22 | Yevhenii Deshko | https://unsplash.com/photos/fobX0HI9vVo |
+| 30 | Yevhenii Deshko | https://unsplash.com/photos/shT_LaGUmYI |
+| 45 | Yevhenii Deshko | https://unsplash.com/photos/1M9iX5E97rw |
+| 53 | Caroline Badran | https://unsplash.com/photos/8FIqK2J7jSc |
+| 60 | Stephan Louis | https://unsplash.com/photos/H7TiI5zmkrk |
+| 61 | Hans | https://unsplash.com/photos/i6DvrmPmvnM |
+| 64 | amira aldia amal | https://unsplash.com/photos/pyo3gzTa-qM |
+| 66 | Clay Banks | https://unsplash.com/photos/1C0P1XmRUXE |
+| 74 | Antoine Gravier | https://unsplash.com/photos/ndzN00BH9mg |
+| 77 | Yevhenii Deshko | https://unsplash.com/photos/CRfiYSv-CBw |
+| 78 | Alex Tyson | https://unsplash.com/photos/c3PWqKnl59U |
+| 79 | Yevhenii Deshko | https://unsplash.com/photos/3dofskLW-Yc |
+| 81 | Alex Tyson | https://unsplash.com/photos/1L2J8TnVod8 |
+| 88 | Roberta Sant'Anna | https://unsplash.com/photos/9u5vBs24WLs |
+| 94 | Yevhenii Deshko | https://unsplash.com/photos/0F2iyKjY244 |
+| 101 | Danilo Rios | https://unsplash.com/photos/AgK_XAqSbfk |
+| 117 | Yevhenii Deshko | https://unsplash.com/photos/wYbFqn7kUao |
+| 121 | Yevhenii Deshko | https://unsplash.com/photos/Hf2OZrNNS08 |
+| 139 | Natalia Blauth | https://unsplash.com/photos/Ms3HdpgkY8I |
+| 140 | Lisa Anna | https://unsplash.com/photos/FY-ZmRHPeLw |
+| 142 | Alex Tyson | https://unsplash.com/photos/ZcGjMfYOprY |
+| 154 | Clay Banks | https://unsplash.com/photos/2ed7zL_CMbU |
+| 162 | Alex Tyson | https://unsplash.com/photos/l_gGfgH0B0U |
+| 173 | Lisa Anna | https://unsplash.com/photos/mk3AYC_hleo |
+| 174 | Alex Tyson | https://unsplash.com/photos/z1orsBp9yfY |
+| 176 | Lisa Anna | https://unsplash.com/photos/jw95UZrsFGw |
+| 180 | Lisa Anna | https://unsplash.com/photos/guAhg5NB3RA |
+| 185 | Alex Tyson | https://unsplash.com/photos/1JSXt9ERqWA |
+| 186 | Clay Banks | https://unsplash.com/photos/b6Bs19onFtY |
+| 187 | Jack Prew | https://unsplash.com/photos/wqTCg8wn04w |
+| 194 | Alex Tyson | https://unsplash.com/photos/iWqzvb6_Ca8 |
+| 199 | Alex Tyson | https://unsplash.com/photos/jGUi9z-V3d0 |
+| 203 | Alex Tyson | https://unsplash.com/photos/AeO1mcqcslY |
+| 206 | Ariel Domenden | https://unsplash.com/photos/IoBfcJdijgM |
+| 207 | Ruben Hanssen | https://unsplash.com/photos/8zA5MGxbMFQ |
+| 212 | Alex Tyson | https://unsplash.com/photos/QA99uavaINE |
+| 218 | Alex Tyson | https://unsplash.com/photos/w111mMO_IjU |
+
 **Status 2026-09-06:** `intro.mp4` (72 s, 1280×720) is now rendered from the pitch-deck
 film with `deck/export/render.mjs`; re-run it after any change to the deck's film.
 

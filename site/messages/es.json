@@ -29,7 +29,7 @@
       "Así que convertimos un móvil en un escáner,",
       "y un escaneo en un lugar."
     ],
-    "body": "Un agente abre sodar.io en su móvil, recorre cada estancia una vez mientras un asistente de captura con IA guía la toma, y recibe un recorrido por el que los compradores pueden moverse. Las dos primeras estancias se previsualizan gratis. Un solo pago completa la propiedad. Publicar en el anuncio del CRM es un clic."
+    "body": "Un agente abre sodar.io en el móvil, recorre cada habitación una vez mientras un asistente de captura con IA guía la toma y recibe un recorrido por el que los compradores pueden moverse. Las dos primeras habitaciones se previsualizan gratis. Un crédito publica la propiedad. Publicar en el anuncio del CRM es un clic."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Vista previa funcional antes de cualquier pago"
       },
       {
-        "label": "precio único",
-        "note": "Ajustado a la propiedad. Sin suscripción"
+        "label": "al mes",
+        "note": "Plan Starter · créditos de propiedad incluidos"
       },
       {
         "label": "margen de partner",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Desbloquear",
-        "title": "Un precio. Un pago.",
-        "body": "Sodar calcula un precio único para toda la propiedad — tamaño, número de panorámicas, procesamiento, alojamiento y mantenimiento incluidos. Paga una vez con Stripe y se procesan las estancias restantes."
+        "title": "Un plan. Un crédito por propiedad.",
+        "body": "Sodar funciona con un plan mensual desde 99 €. Cada propiedad publicada usa un crédito: panorámicas, procesado, alojamiento y mantenimiento incluidos. Los niveles crecen con tu volumen de anuncios y los primeros pilotos tienen una tarifa reducida."
       },
       "publish": {
         "label": "Publicar",
@@ -96,31 +96,31 @@
         "body": "Conecta tu CRM, elige el anuncio, publica. El recorrido vive dentro del anuncio mediante el visor integrado de Sodar — y puedes ajustar los parámetros de apariencia aprobados cuando quieras."
       }
     },
-    "quoteLabel": "Presupuesto · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · Kesklinn Ave 84",
     "quoteRows": [
       {
-        "k": "6 estancias · 14 panorámicas",
-        "v": "incluido"
+        "k": "Plan",
+        "v": "Starter · 99 € / mes"
       },
       {
-        "k": "Procesamiento y cómputo IA",
-        "v": "incluido"
+        "k": "Créditos este mes",
+        "v": "quedan 7 de 10"
       },
       {
-        "k": "Almacenamiento y alojamiento",
-        "v": "12 meses"
+        "k": "Esta propiedad",
+        "v": "1 crédito"
       },
       {
-        "k": "Mantenimiento",
-        "v": "incluido"
+        "k": "Alojamiento y mantenimiento",
+        "v": "incluidos"
       }
     ],
-    "oneTime": "pago único · sin suscripción",
-    "paidLabel": "Pagado",
-    "paidBody": "Procesando las 4 estancias restantes. Te avisaremos cuando el recorrido esté completo.",
-    "pay": "Pagar con Stripe",
-    "paying": "Conectando con Stripe…",
-    "mockNote": "Pago de demostración — no se cobra ninguna tarjeta.",
+    "oneTime": "al mes · cancela cuando quieras",
+    "paidLabel": "Publicado",
+    "paidBody": "Las 4 habitaciones restantes se están procesando. Te avisaremos cuando el recorrido esté listo.",
+    "pay": "Publicar con 1 crédito",
+    "paying": "Publicando…",
+    "mockNote": "Demo: no se usa ningún crédito.",
     "crmHeader": "Tu CRM · Anuncio #48213",
     "publishBtn": "Publicar recorrido",
     "publishedBtn": "Publicado",
@@ -132,7 +132,8 @@
     "viewer": "visor",
     "viewerEmbedded": "integrado",
     "opened": "aperturas",
-    "openedValue": "128 visitantes"
+    "openedValue": "128 visitantes",
+    "planLabel": "Plano"
   },
   "Capabilities": {
     "kicker": "Qué incluye",
@@ -152,8 +153,8 @@
         "desc": "Un recorrido funcional de las dos primeras estancias antes de cualquier pago, para que juzgues primero la calidad final."
       },
       {
-        "title": "Precio único por propiedad",
-        "desc": "Un solo presupuesto ajustado a la propiedad — panorámicas, cómputo, alojamiento y mantenimiento incluidos."
+        "title": "Plan mensual, créditos por propiedad",
+        "desc": "Desde 99 € al mes. Un crédito por propiedad publicada: panorámicas, cómputo, alojamiento y mantenimiento incluidos."
       },
       {
         "title": "Publicación en el CRM",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Simple por diseño",
     "title1": "Una propiedad.",
-    "title2": "Un precio. Una vez.",
-    "body": "Previsualiza las dos primeras estancias gratis. Después Sodar ofrece un único precio para terminar la propiedad — sin suscripción, sin contrato anual.",
+    "title2": "99 € al mes. Un crédito por vivienda.",
+    "body": "Previsualiza las dos primeras habitaciones gratis. Después, un plan mensual desde 99 € cubre tus anuncios: un crédito por propiedad publicada, niveles para más volumen y tarifa reducida para los primeros pilotos.",
     "cta": "Cómo se calcula el precio",
     "card": {
-      "label": "Piso típico de 3 estancias",
-      "price": "99–149 €",
-      "note": "pago único · presupuesto tras la vista previa gratuita",
+      "label": "Plan Starter",
+      "price": "99 €",
+      "note": "al mes · 10 créditos de propiedad",
       "factors": [
-        "Tamaño de la propiedad",
-        "Panorámicas capturadas",
-        "Procesamiento y cómputo IA",
-        "Almacenamiento y alojamiento",
-        "Mantenimiento continuo"
+        "Captura guiada y asistente de IA",
+        "10 propiedades publicadas al mes",
+        "Publicación en CRM y visor integrado",
+        "Alojamiento y mantenimiento incluidos",
+        "Tarifa reducida para socios piloto"
       ],
       "cta": "Escanear una propiedad"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Pruébalo con una propiedad real",
-      "title": "Previsualiza dos estancias gratis. Paga una vez por el resto.",
+      "title": "Previsualiza dos habitaciones gratis. Publica con un plan.",
       "sub": "Abre sodar.io en tu móvil y empieza un escaneo — sin tarjeta hasta que desbloquees el recorrido completo.",
       "label": "Escanea tu primera propiedad"
     }
   },
   "PricingPage": {
     "metaTitle": "Precios — Sodar",
-    "metaDesc": "Precio único por propiedad, presupuestado tras una vista previa gratuita de dos estancias. Precios por volumen para agencias, 15 % de margen para partners de CRM.",
+    "metaDesc": "Planes mensuales desde 99 € con créditos de propiedad, niveles para más volumen, tarifa reducida para los primeros pilotos y un 15 % de margen para socios CRM.",
     "eyebrow": "Simple por diseño",
-    "title": "Una propiedad. Un precio. Una vez.",
-    "sub": "Previsualiza dos estancias gratis y después paga un único precio ajustado a la propiedad. Precios por volumen para agencias, un margen fijo del 15 % para partners de CRM.",
+    "title": "Un plan. Créditos por propiedad.",
+    "sub": "Previsualiza dos habitaciones gratis y elige el volumen de créditos que encaja con tus anuncios. Los planes empiezan en 99 € al mes; los primeros socios piloto tienen tarifa reducida.",
     "badge": "La mayoría de agencias",
     "tiers": [
       {
-        "name": "Por propiedad",
-        "price": "Desde 99 €",
-        "unit": "pago único, presupuesto tras la vista previa gratuita",
-        "desc": "Para agentes que escanean anuncios de uno en uno.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "al mes · 10 créditos de propiedad",
+        "desc": "Para agentes que publican pocos anuncios al mes.",
         "features": [
-          "Captura guiada con móvil + asistente IA",
-          "Dos primeras estancias gratis en vista previa",
-          "Recorrido completo tras un pago con Stripe",
+          "Captura guiada con el móvil + asistente de IA",
+          "Dos primeras habitaciones gratis",
+          "Un crédito por propiedad publicada",
           "Publicación en CRM y visor integrado",
           "Espacio de trabajo con estado y aperturas"
         ],
-        "cta": "Escanea tu primera propiedad"
+        "cta": "Empezar con Starter"
       },
       {
-        "name": "Agencia",
-        "price": "Volumen",
-        "unit": "por propiedad, decreciente con el volumen",
-        "desc": "Para agencias que publican decenas de anuncios al mes.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "al mes · 30 créditos de propiedad",
+        "desc": "Para equipos que publican cada semana.",
         "features": [
-          "Todo lo de Por propiedad",
-          "Vista consolidada de la agencia",
-          "Cola de procesamiento prioritaria",
-          "Configuración de CRM dedicada",
-          "Visor con marca compartida"
+          "Todo lo de Starter",
+          "Cola de procesado prioritaria",
+          "Espacio de trabajo de toda la agencia",
+          "Visor con tu marca",
+          "Configuración de CRM dedicada"
         ],
         "cta": "Hablar con ventas"
       },
       {
-        "name": "Partner de CRM",
-        "price": "15 %",
-        "unit": "de margen sobre compras elegibles",
-        "desc": "Para proveedores de CRM que distribuyen Sodar a sus agentes.",
+        "name": "Brokerage",
+        "price": "A medida",
+        "unit": "créditos por volumen, factura mensual",
+        "desc": "Para agencias y portales que publican a gran escala.",
         "features": [
-          "Sodar disponible dentro de tu plataforma",
-          "Panel de partner",
-          "Pago mensual automático",
-          "Sin volumen mínimo"
+          "Volumen de créditos a medida",
+          "Planos para cada anuncio",
+          "Acceso a la API",
+          "Incorporación para cada oficina",
+          "Tarifa piloto para los primeros socios"
         ],
-        "cta": "Solicitar ser partner"
+        "cta": "Pedir tarifa piloto"
       }
     ],
-    "factorsKicker": "Cómo se construye el presupuesto",
-    "factorsTitle": "Precio según la propiedad, no según el plan.",
+    "factorsKicker": "Cómo funcionan los créditos",
+    "factorsTitle": "Un crédito, una propiedad publicada.",
     "factors": [
       {
-        "title": "Tamaño de la propiedad",
-        "desc": "Superficie y número de estancias capturadas."
+        "title": "Un crédito por propiedad",
+        "desc": "Todas las habitaciones de una propiedad, con las panorámicas que sean, usan un solo crédito al publicar."
       },
       {
-        "title": "Volumen de panorámicas",
-        "desc": "Cuántas panorámicas produjo el escaneo y su resolución."
+        "title": "Primero la vista previa gratis",
+        "desc": "Las dos primeras habitaciones se procesan antes de gastar ningún crédito, para que juzgues la calidad primero."
       },
       {
-        "title": "Procesamiento",
-        "desc": "Unión, mejora y el cómputo de IA detrás del recorrido."
+        "title": "Volumen mensual",
+        "desc": "Los créditos se renuevan cada mes con tu plan; los niveles superiores simplemente incluyen más."
       },
       {
-        "title": "Almacenamiento y alojamiento",
-        "desc": "Mantener el recorrido y su visor en línea dentro de tu anuncio."
+        "title": "Alojamiento incluido",
+        "desc": "Mantener el recorrido y su visor online dentro de tu anuncio forma parte del plan."
       },
       {
-        "title": "Mantenimiento",
-        "desc": "Actualizaciones continuas del visor y la propia integración con el CRM."
+        "title": "Tarifa piloto",
+        "desc": "Los primeros socios piloto en Estonia tienen una cuota mensual reducida: pídela en el formulario de contacto."
       },
       {
-        "title": "Margen de partner",
-        "desc": "Cuando un partner de CRM distribuye Sodar, su margen se incluye en el presupuesto."
+        "title": "Margen del socio",
+        "desc": "Cuando un socio CRM distribuye Sodar, su margen del 15 % está incluido en el precio del plan."
       }
     ],
     "faqKicker": "Preguntas",
     "faqTitle": "Preguntas sobre precios.",
     "faq": [
       {
-        "q": "¿Cuándo veo el precio?",
-        "a": "Tras la vista previa gratuita. Sodar calcula un precio único para completar la propiedad una vez procesadas las dos primeras estancias."
+        "q": "¿Qué cubre un crédito?",
+        "a": "Una propiedad publicada con todas sus habitaciones y panorámicas, más alojamiento y mantenimiento mientras dure el anuncio."
       },
       {
-        "q": "¿La vista previa es realmente gratis?",
-        "a": "Sí — las dos primeras estancias se procesan en un recorrido funcional sin pago. Solo pagas para terminar y publicar la propiedad."
+        "q": "¿La vista previa es gratis de verdad?",
+        "a": "Sí: las dos primeras habitaciones se convierten en un recorrido funcional antes de usar ningún crédito. Solo gastas un crédito al publicar."
       },
       {
-        "q": "¿Hay suscripción?",
-        "a": "No. Cada propiedad es un único pago con Stripe. Nada se renueva."
+        "q": "¿Puedo cambiar de nivel?",
+        "a": "Cuando quieras. Sube cuando crezca tu volumen; los créditos no usados siguen siendo tuyos durante el mes."
       },
       {
-        "q": "¿Cómo se paga el margen del partner de CRM?",
-        "a": "Automáticamente, cada mes, sobre las compras de recorridos elegibles de los agentes de la plataforma del partner."
+        "q": "¿Qué es la tarifa piloto?",
+        "a": "Los primeros socios piloto tienen una cuota mensual reducida mientras lanzamos juntos. Cuéntanos sobre tu agencia en el formulario de contacto."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Creando tu vista previa de dos estancias…",
     "done": "Vista previa lista",
     "doneTitle": "Dos estancias capturadas.",
-    "doneBody": "En el producto real, el recorrido aparece aquí junto con un precio único para las estancias restantes.",
+    "doneBody": "En el producto real el recorrido aparece aquí, listo para publicarse con un crédito de tu plan.",
     "workspace": "Abrir la vista previa del espacio de trabajo",
     "again": "Escanear de nuevo",
     "exit": "Salir",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar en LinkedIn",
     "privacyEyebrow": "Privacidad",
     "privacyTitle": "Pregúntanos sobre tus datos.",
-    "privacySub": "Las solicitudes de acceso, rectificación, exportación o eliminación de tus datos, y cualquier otra consulta de privacidad, llegan directamente a nuestro equipo de privacidad."
+    "privacySub": "Las solicitudes de acceso, rectificación, exportación o eliminación de tus datos, y cualquier otra consulta de privacidad, llegan directamente a nuestro equipo de privacidad.",
+    "topic": "Tema",
+    "topicPlaceholder": "Elige un tema",
+    "topics": {
+      "pilot": "Programa piloto (tarifa reducida)",
+      "pricing": "Precios y niveles de créditos",
+      "partnership": "Alianza CRM",
+      "careers": "Empleo",
+      "other": "Otro"
+    }
   },
   "Intro": {
     "kicker": "Introducción",
     "title": "Sodar en un minuto.",
-    "body": "Recorre una vez, previsualiza dos estancias gratis, paga una vez, publica en el anuncio que ya tienes.",
+    "body": "Recorre una vez, previsualiza dos habitaciones gratis, publica con un crédito: directo al anuncio que ya tienes.",
     "play": "Reproducir",
     "pause": "Pausar",
     "mute": "Silenciar",

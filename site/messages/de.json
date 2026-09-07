@@ -29,7 +29,7 @@
       "Also haben wir aus einem Smartphone einen Scanner gemacht,",
       "und aus einem Scan einen Ort."
     ],
-    "body": "Ein Makler öffnet sodar.io auf dem Smartphone, geht einmal durch jeden Raum, während ein KI-Aufnahmeassistent die Aufnahme anleitet, und erhält einen Rundgang, durch den sich Käufer bewegen können. Die ersten zwei Räume gibt es kostenlos als Vorschau. Eine Zahlung vervollständigt die Immobilie. Die Veröffentlichung im CRM-Inserat ist ein Klick."
+    "body": "Ein Makler öffnet sodar.io auf dem Handy, geht jeden Raum einmal ab, während ein KI-Assistent die Aufnahme anleitet, und erhält einen Rundgang, durch den sich Käufer bewegen können. Die ersten zwei Räume sind als Vorschau kostenlos. Ein Credit veröffentlicht die Immobilie. Ins CRM-Inserat geht es mit einem Klick."
   },
   "Stats": {
     "items": [
@@ -38,8 +38,8 @@
         "note": "Funktionierende Vorschau vor jeder Zahlung"
       },
       {
-        "label": "Einmalpreis",
-        "note": "Auf die Immobilie zugeschnitten. Kein Abo"
+        "label": "pro Monat",
+        "note": "Starter-Plan · Immobilien-Credits inklusive"
       },
       {
         "label": "Partnermarge",
@@ -87,8 +87,8 @@
       },
       "unlock": {
         "label": "Freischalten",
-        "title": "Ein Preis. Eine Zahlung.",
-        "body": "Sodar berechnet einen Einmalpreis für die gesamte Immobilie — Größe, Anzahl der Panoramen, Verarbeitung, Hosting und Wartung sind enthalten. Einmal über Stripe bezahlen, und die restlichen Räume werden verarbeitet."
+        "title": "Ein Plan. Ein Credit pro Immobilie.",
+        "body": "Sodar läuft mit einem Monatsplan ab 99 €. Jede veröffentlichte Immobilie verbraucht einen Credit — Panoramen, Verarbeitung, Hosting und Wartung inklusive. Die Stufen wachsen mit Ihrem Inseratsvolumen, und die ersten Piloten erhalten einen reduzierten Tarif."
       },
       "publish": {
         "label": "Veröffentlichen",
@@ -96,31 +96,31 @@
         "body": "CRM verbinden, Inserat auswählen, veröffentlichen. Der Rundgang lebt im Inserat über den eingebetteten Sodar-Viewer — und Sie können die freigegebenen Darstellungseinstellungen jederzeit anpassen."
       }
     },
-    "quoteLabel": "Angebot · 84 Kesklinn Ave",
+    "quoteLabel": "Starter · Kesklinn Ave 84",
     "quoteRows": [
       {
-        "k": "6 Räume · 14 Panoramen",
-        "v": "enthalten"
+        "k": "Plan",
+        "v": "Starter · 99 € / Monat"
       },
       {
-        "k": "Verarbeitung & KI-Rechenleistung",
-        "v": "enthalten"
+        "k": "Credits diesen Monat",
+        "v": "7 von 10 übrig"
       },
       {
-        "k": "Speicher & Viewer-Hosting",
-        "v": "12 Monate"
+        "k": "Diese Immobilie",
+        "v": "1 Credit"
       },
       {
-        "k": "Wartung",
-        "v": "enthalten"
+        "k": "Hosting & Wartung",
+        "v": "inklusive"
       }
     ],
-    "oneTime": "einmalig · kein Abo",
-    "paidLabel": "Bezahlt",
-    "paidBody": "Die restlichen 4 Räume werden verarbeitet. Sie werden benachrichtigt, sobald der Rundgang fertig ist.",
-    "pay": "Mit Stripe bezahlen",
-    "paying": "Verbindung zu Stripe…",
-    "mockNote": "Demo-Checkout — es wird keine Karte belastet.",
+    "oneTime": "pro Monat · jederzeit kündbar",
+    "paidLabel": "Veröffentlicht",
+    "paidBody": "Die übrigen 4 Räume werden verarbeitet. Sie werden benachrichtigt, sobald der Rundgang fertig ist.",
+    "pay": "Mit 1 Credit veröffentlichen",
+    "paying": "Wird veröffentlicht…",
+    "mockNote": "Demo — es wird kein Credit verbraucht.",
     "crmHeader": "Ihr CRM · Inserat #48213",
     "publishBtn": "Rundgang veröffentlichen",
     "publishedBtn": "Veröffentlicht",
@@ -132,7 +132,8 @@
     "viewer": "Viewer",
     "viewerEmbedded": "eingebettet",
     "opened": "geöffnet",
-    "openedValue": "128 Besucher"
+    "openedValue": "128 Besucher",
+    "planLabel": "Grundriss"
   },
   "Capabilities": {
     "kicker": "Was geliefert wird",
@@ -152,8 +153,8 @@
         "desc": "Ein funktionierender Rundgang der ersten zwei Räume vor jeder Zahlung, damit Sie die fertige Qualität zuerst beurteilen."
       },
       {
-        "title": "Einmalpreis pro Immobilie",
-        "desc": "Ein einziges Angebot, zugeschnitten auf die Immobilie — Panoramen, Rechenleistung, Hosting und Wartung inklusive."
+        "title": "Monatsplan, Immobilien-Credits",
+        "desc": "Ab 99 € im Monat. Ein Credit pro veröffentlichter Immobilie — Panoramen, Rechenleistung, Hosting und Wartung inklusive."
       },
       {
         "title": "CRM-Veröffentlichung",
@@ -353,19 +354,19 @@
   "PricingTeaser": {
     "kicker": "Einfach nach Design",
     "title1": "Eine Immobilie.",
-    "title2": "Ein Preis. Einmal.",
-    "body": "Sehen Sie die ersten zwei Räume kostenlos. Dann nennt Sodar einen einzigen Einmalpreis für die Fertigstellung der Immobilie — kein Abo, kein Jahresvertrag.",
+    "title2": "99 € im Monat. Ein Credit pro Objekt.",
+    "body": "Die ersten zwei Räume kostenlos ansehen. Danach deckt ein Monatsplan ab 99 € Ihre Inserate — ein Credit pro veröffentlichter Immobilie, Stufen für mehr Volumen und ein reduzierter Tarif für die ersten Piloten.",
     "cta": "So wird der Preis berechnet",
     "card": {
-      "label": "Typische 3-Zimmer-Wohnung",
-      "price": "99–149 €",
-      "note": "einmalig · Angebot nach der kostenlosen Vorschau",
+      "label": "Starter-Plan",
+      "price": "99 €",
+      "note": "pro Monat · 10 Immobilien-Credits",
       "factors": [
-        "Größe der Immobilie",
-        "Aufgenommene Panoramen",
-        "Verarbeitung & KI-Rechenleistung",
-        "Speicher & Viewer-Hosting",
-        "Laufende Wartung"
+        "Geführte Aufnahme & KI-Assistent",
+        "10 veröffentlichte Immobilien im Monat",
+        "CRM-Veröffentlichung & eingebetteter Viewer",
+        "Hosting & Wartung inklusive",
+        "Reduzierter Tarif für Pilotpartner"
       ],
       "cta": "Immobilie scannen"
     }
@@ -528,107 +529,108 @@
     ],
     "cta": {
       "eyebrow": "Testen Sie es an einer echten Immobilie",
-      "title": "Zwei Räume kostenlos als Vorschau. Einmal für den Rest zahlen.",
+      "title": "Zwei Räume kostenlos ansehen. Mit einem Plan veröffentlichen.",
       "sub": "Öffnen Sie sodar.io auf dem Smartphone und starten Sie einen Scan — keine Karte nötig, bis Sie den vollständigen Rundgang freischalten.",
       "label": "Erste Immobilie scannen"
     }
   },
   "PricingPage": {
     "metaTitle": "Preise — Sodar",
-    "metaDesc": "Einmalpreis pro Immobilie, angeboten nach einer kostenlosen Vorschau von zwei Räumen. Mengenpreise für Maklerbüros, 15 % Marge für CRM-Partner.",
+    "metaDesc": "Monatspläne ab 99 € mit Immobilien-Credits, Stufen für mehr Volumen, ein reduzierter Tarif für die ersten Piloten und 15 % Marge für CRM-Partner.",
     "eyebrow": "Einfach nach Design",
-    "title": "Eine Immobilie. Ein Preis. Einmal.",
-    "sub": "Zwei Räume kostenlos ansehen, dann einen einzigen Einmalpreis zahlen, der auf die Immobilie zugeschnitten ist. Mengenpreise für Maklerbüros, eine feste Marge von 15 % für CRM-Partner.",
-    "badge": "Die meisten Maklerbüros",
+    "title": "Ein Plan. Credits pro Immobilie.",
+    "sub": "Zwei Räume kostenlos ansehen, dann das Credit-Volumen wählen, das zu Ihren Inseraten passt. Pläne ab 99 € im Monat; die ersten Pilotpartner erhalten einen reduzierten Tarif.",
+    "badge": "Die meisten Büros",
     "tiers": [
       {
-        "name": "Pro Immobilie",
-        "price": "Ab 99 €",
-        "unit": "einmalig, Angebot nach der kostenlosen Vorschau",
-        "desc": "Für Makler, die Inserate einzeln scannen.",
+        "name": "Starter",
+        "price": "99 €",
+        "unit": "pro Monat · 10 Immobilien-Credits",
+        "desc": "Für Makler mit wenigen Inseraten im Monat.",
         "features": [
-          "Geführte Smartphone-Aufnahme + KI-Assistent",
-          "Die ersten zwei Räume kostenlos als Vorschau",
-          "Vollständiger Rundgang nach einer Stripe-Zahlung",
+          "Geführte Handy-Aufnahme + KI-Assistent",
+          "Erste zwei Räume kostenlos als Vorschau",
+          "Ein Credit pro veröffentlichter Immobilie",
           "CRM-Veröffentlichung & eingebetteter Viewer",
-          "Workspace mit Status & Viewer-Öffnungen"
+          "Workspace mit Status & Viewer-Aufrufen"
         ],
-        "cta": "Erste Immobilie scannen"
+        "cta": "Mit Starter beginnen"
       },
       {
-        "name": "Maklerbüro",
-        "price": "Mengenpreis",
-        "unit": "pro Immobilie, sinkend mit dem Volumen",
-        "desc": "Für Büros, die Dutzende Inserate pro Monat veröffentlichen.",
+        "name": "Growth",
+        "price": "249 €",
+        "unit": "pro Monat · 30 Immobilien-Credits",
+        "desc": "Für Teams, die jede Woche veröffentlichen.",
         "features": [
-          "Alles aus „Pro Immobilie“",
-          "Büroweite Workspace-Übersicht",
+          "Alles aus Starter",
           "Bevorzugte Verarbeitung",
-          "Dedizierte CRM-Einrichtung",
-          "Viewer mit Co-Branding"
+          "Büroweiter Workspace",
+          "Viewer mit eigenem Branding",
+          "Individuelle CRM-Einrichtung"
         ],
         "cta": "Mit dem Vertrieb sprechen"
       },
       {
-        "name": "CRM-Partner",
-        "price": "15 %",
-        "unit": "Marge auf qualifizierte Käufe",
-        "desc": "Für CRM-Anbieter, die Sodar an ihre Makler vertreiben.",
+        "name": "Brokerage",
+        "price": "Individuell",
+        "unit": "Volumen-Credits, monatliche Rechnung",
+        "desc": "Für Firmen und Portale mit großem Volumen.",
         "features": [
-          "Sodar direkt in Ihrer Plattform",
-          "Partner-Dashboard",
-          "Monatliche automatische Auszahlung",
-          "Kein Mindestvolumen"
+          "Individuelles Credit-Volumen",
+          "Grundrisse für jedes Inserat",
+          "API-Zugang",
+          "Onboarding für jedes Büro",
+          "Pilottarif für erste Partner"
         ],
-        "cta": "Als Partner bewerben"
+        "cta": "Pilottarif anfragen"
       }
     ],
-    "factorsKicker": "So entsteht das Angebot",
-    "factorsTitle": "Nach Immobilie bepreist, nicht nach Tarif.",
+    "factorsKicker": "So funktionieren Credits",
+    "factorsTitle": "Ein Credit, eine veröffentlichte Immobilie.",
     "factors": [
       {
-        "title": "Größe der Immobilie",
-        "desc": "Wohnfläche und Anzahl der aufgenommenen Räume."
+        "title": "Ein Credit pro Immobilie",
+        "desc": "Alle Räume einer Immobilie, egal wie viele Panoramen, verbrauchen beim Veröffentlichen einen einzigen Credit."
       },
       {
-        "title": "Panorama-Volumen",
-        "desc": "Wie viele Panoramen der Scan erzeugt hat und in welcher Auflösung."
+        "title": "Erst die kostenlose Vorschau",
+        "desc": "Die ersten zwei Räume werden verarbeitet, bevor ein Credit verbraucht wird — Sie beurteilen zuerst die Qualität."
       },
       {
-        "title": "Verarbeitung",
-        "desc": "Stitching, Verbesserung und die KI-Rechenleistung hinter dem Rundgang."
+        "title": "Monatliches Volumen",
+        "desc": "Credits erneuern sich jeden Monat mit Ihrem Plan; höhere Stufen enthalten einfach mehr."
       },
       {
-        "title": "Speicher & Hosting",
-        "desc": "Den Rundgang und seinen Viewer in Ihrem Inserat online halten."
+        "title": "Hosting inklusive",
+        "desc": "Rundgang und Viewer im Inserat online zu halten ist Teil des Plans."
       },
       {
-        "title": "Wartung",
-        "desc": "Laufende Viewer-Updates und die CRM-Integration selbst."
+        "title": "Pilottarif",
+        "desc": "Die ersten Pilotpartner in Estland erhalten einen reduzierten Monatstarif — fragen Sie über das Kontaktformular."
       },
       {
         "title": "Partnermarge",
-        "desc": "Wo ein CRM-Partner Sodar vertreibt, ist seine Marge im Angebot enthalten."
+        "desc": "Vertreibt ein CRM-Partner Sodar, ist seine Marge von 15 % im Planpreis enthalten."
       }
     ],
     "faqKicker": "Fragen",
     "faqTitle": "Preis-FAQ.",
     "faq": [
       {
-        "q": "Wann sehe ich den Preis?",
-        "a": "Nach der kostenlosen Vorschau. Sodar berechnet einen Einmalpreis für die Fertigstellung der Immobilie, sobald die ersten zwei Räume verarbeitet sind."
+        "q": "Was deckt ein Credit ab?",
+        "a": "Eine veröffentlichte Immobilie mit allen Räumen und Panoramen, plus Hosting und Wartung für die Laufzeit des Inserats."
       },
       {
         "q": "Ist die Vorschau wirklich kostenlos?",
-        "a": "Ja — die ersten zwei Räume werden ohne Zahlung zu einem funktionierenden Rundgang verarbeitet. Sie zahlen nur, um die Immobilie fertigzustellen und zu veröffentlichen."
+        "a": "Ja — die ersten zwei Räume werden zu einem funktionierenden Rundgang verarbeitet, bevor ein Credit verbraucht wird. Ein Credit wird erst beim Veröffentlichen fällig."
       },
       {
-        "q": "Gibt es ein Abo?",
-        "a": "Nein. Jede Immobilie ist eine einzige Einmalzahlung über Stripe. Nichts verlängert sich."
+        "q": "Kann ich die Stufe wechseln?",
+        "a": "Jederzeit. Steigen Sie auf, wenn Ihr Volumen wächst; ungenutzte Credits bleiben Ihnen für den Monat erhalten."
       },
       {
-        "q": "Wie wird die CRM-Partnermarge ausgezahlt?",
-        "a": "Automatisch, monatlich, auf qualifizierte Rundgang-Käufe von Maklern auf der Plattform des Partners."
+        "q": "Was ist der Pilottarif?",
+        "a": "Die ersten Pilotpartner erhalten während der gemeinsamen Einführung einen reduzierten Monatstarif. Erzählen Sie uns über das Kontaktformular von Ihrem Büro."
       }
     ],
     "cta": {
@@ -1016,7 +1018,7 @@
     "processing": "Ihre Vorschau mit zwei Räumen wird erstellt…",
     "done": "Vorschau fertig",
     "doneTitle": "Zwei Räume, aufgenommen.",
-    "doneBody": "Im echten Produkt erscheint hier der Rundgang, zusammen mit einem Einmalpreis für die restlichen Räume.",
+    "doneBody": "Im echten Produkt erscheint der Rundgang hier, bereit zur Veröffentlichung mit einem Credit aus Ihrem Plan.",
     "workspace": "Workspace-Vorschau öffnen",
     "again": "Erneut scannen",
     "exit": "Beenden",
@@ -1056,12 +1058,21 @@
     "linkedin": "Sodar auf LinkedIn",
     "privacyEyebrow": "Datenschutz",
     "privacyTitle": "Fragen Sie uns zu Ihren Daten.",
-    "privacySub": "Anfragen zu Auskunft, Berichtigung, Export oder Löschung Ihrer Daten sowie alle weiteren Datenschutzfragen erreichen direkt unser Datenschutzteam."
+    "privacySub": "Anfragen zu Auskunft, Berichtigung, Export oder Löschung Ihrer Daten sowie alle weiteren Datenschutzfragen erreichen direkt unser Datenschutzteam.",
+    "topic": "Thema",
+    "topicPlaceholder": "Thema wählen",
+    "topics": {
+      "pilot": "Pilotprogramm (reduzierter Tarif)",
+      "pricing": "Preise & Credit-Stufen",
+      "partnership": "CRM-Partnerschaft",
+      "careers": "Karriere",
+      "other": "Sonstiges"
+    }
   },
   "Intro": {
     "kicker": "Einführung",
     "title": "Sodar in einer Minute.",
-    "body": "Einmal durchgehen, zwei Räume kostenlos ansehen, einmal zahlen, ins vorhandene Inserat veröffentlichen.",
+    "body": "Einmal abgehen, zwei Räume kostenlos ansehen, mit einem Credit veröffentlichen — direkt ins Inserat, das Sie schon haben.",
     "play": "Abspielen",
     "pause": "Pause",
     "mute": "Stumm",
