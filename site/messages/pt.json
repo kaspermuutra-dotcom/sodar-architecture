@@ -8,7 +8,7 @@
     "integrations": "Integrações",
     "partners": "Parceiros",
     "pricing": "Preços",
-    "signIn": "Entrar",
+    "signIn": "Área de trabalho",
     "getStarted": "Digitalizar um imóvel",
     "menu": "Abrir menu",
     "home": "Início Sodar",
@@ -73,7 +73,6 @@
     ],
     "ready": "Pronto",
     "locked": "Bloqueado",
-    "photosOnly": "Só fotos",
     "panels": {
       "capture": {
         "label": "Captura",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "por mês · cancele quando quiser",
-    "paidLabel": "Publicado",
-    "paidBody": "As 4 divisões restantes estão em processamento. Avisamos quando a visita estiver pronta.",
-    "pay": "Publicar com 1 crédito",
-    "paying": "A publicar…",
-    "mockNote": "Demonstração — nenhum crédito é usado.",
     "crmHeader": "O seu CRM · Anúncio #48213",
-    "publishBtn": "Publicar visita",
     "publishedBtn": "Publicado",
     "viewerBadge": "Visualizador Sodar · 360°",
     "listingMeta": "3 divisões · 78 m² · 395.000 €",
     "status": "estado",
     "statusPublished": "publicado",
-    "statusReady": "pronto",
     "viewer": "visualizador",
     "viewerEmbedded": "incorporado",
-    "opened": "aberturas",
-    "openedValue": "128 visitantes",
-    "planLabel": "Planta"
+    "planLabel": "Planta",
+    "plan": "Plano",
+    "planValue": "Starter · 1 crédito"
   },
   "Capabilities": {
     "kicker": "O que inclui",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "Ilustrativo · ainda não medido",
+    "kicker": "Antes e depois",
     "title": "A diferença que uma digitalização faz.",
     "beforeLabel": "Antes",
     "afterLabel": "Depois · com a Sodar",
@@ -224,7 +216,6 @@
     "cta": "Ver o espaço de trabalho do agente",
     "mock": {
       "title": "Espaço de trabalho",
-      "live": "Pré-visualização em direto",
       "properties": "Imóveis",
       "cols": [
         "Imóvel",
@@ -295,10 +286,7 @@
           "step": "Em captura no telemóvel",
           "n": "—"
         }
-      ],
-      "week": "Esta semana",
-      "weekTitle": "701 aberturas",
-      "weekSub": "em 2 visitas publicadas"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "Para fornecedores de CRM",
     "title": "Distribua a Sodar à sua rede de agentes. Fique com 15%.",
-    "body": "Os parceiros de CRM disponibilizam a Sodar aos seus agentes e recebem uma margem de 15% nas compras de visitas elegíveis — sem mínimo, paga automaticamente.",
+    "body": "Os parceiros CRM disponibilizam o Sodar aos seus agentes e recebem 15 % de margem sobre a receita de plano dos agentes que aderiram através deles — sem mínimo, pago automaticamente.",
     "cta": "Ver o programa de parceiros"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "Tornar-se parceiro",
             "/partners#apply"
-          ],
-          [
-            "Painel de parceiro",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "Carreiras",
             "/careers"
-          ],
-          [
-            "Notas de campo",
-            "/blog"
           ],
           [
             "Empresas",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "Pré-visualização do espaço de trabalho — Sodar",
     "metaDesc": "Uma pré-visualização pública e sem autenticação do espaço de trabalho do agente. Sem dados reais.",
-    "eyebrow": "Pré-visualização pública · sem login, sem dados reais",
+    "eyebrow": "Pré-visualização da área de trabalho",
     "title": "Cada imóvel, o seu estado e quem o abriu.",
-    "sub": "Esta é uma pré-visualização estática do espaço de trabalho que cada agente recebe — imóveis, estado de processamento e publicação, e quantos visitantes abriram cada visualizador.",
+    "sub": "Uma pré-visualização da área de trabalho de cada agente — imóveis, estado de processamento e publicação, e quantos visitantes abriram cada visita.",
     "cta": {
       "eyebrow": "Seu assim que publicar",
       "title": "O seu espaço de trabalho começa vazio — até à sua primeira digitalização.",
@@ -658,7 +638,7 @@
     "metaDesc": "As plataformas de CRM ganham uma margem fixa de 15% ao distribuir a Sodar à sua rede de agentes.",
     "eyebrow": "Para plataformas de CRM",
     "title": "Distribua a Sodar aos seus agentes. Fique com 15%.",
-    "sub": "Uma margem fixa sobre cada visita elegível comprada pelos agentes da sua plataforma — sem mínimo, paga automaticamente, sem mais desenvolvimento do que um link de referência.",
+    "sub": "Uma margem permanente sobre a receita de plano de cada agente que adere ao Sodar através da sua plataforma — sem mínimo, paga automaticamente, sem desenvolvimento além de um link de referência.",
     "apply": "Candidatar-se a parceiro",
     "stepsKicker": "Como funciona",
     "stepsTitle": "Três passos para uma margem fixa.",
@@ -673,23 +653,7 @@
       },
       {
         "title": "Ganhar",
-        "desc": "15% de cada compra de visita elegível de um agente que aderiu através da sua plataforma, pago mensalmente."
-      }
-    ],
-    "dashKicker": "Painel de parceiro",
-    "dashTitle": "Acompanhe agentes referenciados e margem num só lugar.",
-    "dash": [
-      {
-        "label": "Agentes referenciados",
-        "value": "142"
-      },
-      {
-        "label": "Visitas compradas",
-        "value": "3.018"
-      },
-      {
-        "label": "Margem este mês",
-        "value": "6.240 €"
+        "desc": "15 % da receita de plano de cada agente que aderiu através da sua plataforma, pagos mensalmente."
       }
     ],
     "applyKicker": "Começar",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "Há um compromisso mínimo?",
-        "a": "Não. A margem de 15% aplica-se desde a primeira visita comprada — sem volume mínimo."
+        "a": "Não. A margem de 15 % aplica-se desde o primeiro agente que subscreve — sem volume mínimo."
       },
       {
         "q": "De quem é a relação com o agente?",
@@ -753,11 +717,9 @@
         "action": "Brevemente"
       }
     ],
-    "notConnected": "estado: não ligado",
-    "mockTitle": "Ligação de demonstração — ativada na fase 2",
     "embedKicker": "Sem CRM? Sem problema",
     "embedTitle": "Um iframe, colocado em qualquer lado.",
-    "embedBody": "Cada visita comprada recebe um URL de incorporação estável. Cole-o em qualquer portal imobiliário que aceite um iframe personalizado.",
+    "embedBody": "Cada visita publicada recebe um URL de incorporação estável. Cole-o em qualquer portal que aceite um iframe personalizado.",
     "cta": {
       "eyebrow": "Traga o seu CRM",
       "title": "A Sodar encaixa nas ferramentas que já usa.",
@@ -785,7 +747,7 @@
       },
       {
         "title": "Preços por volume",
-        "desc": "O preço por imóvel desce à medida que o volume mensal da sua agência cresce."
+        "desc": "Os níveis de créditos baixam o preço por imóvel à medida que o volume mensal da sua agência cresce."
       },
       {
         "title": "Configuração de CRM dedicada",
@@ -803,19 +765,19 @@
     "priceKicker": "Preços que descem com o volume",
     "priceTitle1": "Preços por volume,",
     "priceTitle2": "um só contrato.",
-    "priceBody": "Uma tarifa por imóvel à medida com base no volume mensal, mais uma taxa fixa por lugar de agente. Fale com vendas para um orçamento à dimensão da sua agência.",
-    "priceNote": "Ilustrativo, por imóvel",
+    "priceBody": "Um plano mensal à medida do volume da sua agência, mais integração para cada balcão. Fale com vendas para um orçamento — e pergunte pela tarifa piloto.",
+    "priceNote": "Planos mensais, créditos por imóvel",
     "tiers": [
       {
-        "tier": "1–20 imóveis / mês",
-        "price": "desde 99 €"
+        "tier": "Até 10 imóveis / mês",
+        "price": "Starter · 99 €"
       },
       {
-        "tier": "21–100 imóveis / mês",
-        "price": "desde 79 €"
+        "tier": "Até 30 imóveis / mês",
+        "price": "Growth · 249 €"
       },
       {
-        "tier": "100+ imóveis / mês",
+        "tier": "Mais de 30 / mês",
         "price": "À medida"
       }
     ],
@@ -910,27 +872,10 @@
     "metaDesc": "Vagas abertas na Sodar.",
     "eyebrow": "Carreiras",
     "title": "Ajude cada anúncio a ser renderizado como deve ser.",
-    "sub": "Equipa pequena, fase inicial, agentes reais já a digitalizar imóveis. Estamos a contratar em reconstrução, produto e go-to-market.",
+    "sub": "Uma equipa pequena em Tallinn, em fase inicial, a trabalhar com empresas em toda a Estónia. Contratamos em reconstrução, produto e comercial à medida que os pilotos crescem.",
     "rolesKicker": "Vagas abertas",
-    "rolesTitle": "A contratar.",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "Reconstrução",
-        "location": "Remoto / Tallinn"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "Produto",
-        "location": "Remoto / Tallinn"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "Go-to-market",
-        "location": "Tallinn"
-      }
-    ],
-    "noFit": "Não encontra a vaga certa? Escreva na mesma para careers@sodar.io.",
+    "rolesTitle": "Contratamos à medida que os pilotos crescem.",
+    "noFit": "Escreva para careers@sodar.io a dizer em que gostaria de trabalhar.",
     "cta": {
       "eyebrow": "Ainda sem vaga para si?",
       "title": "Somos pequenos o suficiente para um email chegar a um fundador.",
@@ -938,38 +883,9 @@
       "label": "Escrever para careers@sodar.io"
     }
   },
-  "BlogPage": {
-    "metaTitle": "Notas de campo — Sodar",
-    "metaDesc": "Casos de estudo de agentes e agências que digitalizam imóveis com a Sodar.",
-    "eyebrow": "Notas de campo",
-    "title": "Casos de estudo, não comunicados de imprensa.",
-    "sub": "O que realmente acontece quando um imóvel é digitalizado — escrito pela equipa que constrói o processo.",
-    "posts": [
-      {
-        "title": "Como uma agência de Tallinn com 4 agentes reduziu a preparação do anúncio a 15 minutos",
-        "tag": "Caso de estudo",
-        "read": "6 min de leitura"
-      },
-      {
-        "title": "O que mudámos após as primeiras 500 visitas",
-        "tag": "Notas de produto",
-        "read": "4 min de leitura"
-      },
-      {
-        "title": "Ler o interesse por divisão: o que as aberturas do visualizador realmente dizem",
-        "tag": "Guia",
-        "read": "5 min de leitura"
-      },
-      {
-        "title": "Porque é que a pré-visualização gratuita são duas divisões, não uma nem cinco",
-        "tag": "Notas de produto",
-        "read": "3 min de leitura"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "Rascunho — fase 1",
-    "notice": "Isto é um marcador estrutural da fase 1, não texto legal definitivo.",
+    "updated": "Em preparação",
+    "notice": "Este documento está a ser finalizado com os nossos consultores jurídicos e será publicado aqui na íntegra antes do lançamento.",
     "englishOnly": "Os documentos legais estão, por agora, publicados apenas em inglês; prevalece a versão inglesa.",
     "titles": {
       "privacy": "Política de privacidade",
@@ -1050,7 +966,6 @@
     "sentBody": "Respondemos no prazo de um dia útil.",
     "another": "Enviar outra",
     "error": "O envio falhou. Escreva diretamente para {email}.",
-    "fallbackNote": "Abre a sua aplicação de email até o serviço de formulários estar ligado.",
     "jobTitle": "Cargo",
     "phone": "Telefone",
     "countryCode": "Código do país",
@@ -1067,7 +982,9 @@
       "partnership": "Parceria CRM",
       "careers": "Carreiras",
       "other": "Outro"
-    }
+    },
+    "mailtoTitle": "A sua aplicação de e-mail abriu.",
+    "mailtoBody": "A mensagem está pronta para enviar a partir do seu endereço. Respondemos num dia útil."
   },
   "Intro": {
     "kicker": "Introdução",

@@ -8,7 +8,7 @@
     "integrations": "Integratsioonid",
     "partners": "Partnerid",
     "pricing": "Hinnad",
-    "signIn": "Logi sisse",
+    "signIn": "Tööruum",
     "getStarted": "Skanni kinnisvara",
     "menu": "Ava menüü",
     "home": "Sodari avaleht",
@@ -73,7 +73,6 @@
     ],
     "ready": "Valmis",
     "locked": "Lukus",
-    "photosOnly": "Ainult fotod",
     "panels": {
       "capture": {
         "label": "Jäädvustus",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "kuus · lõpeta igal ajal",
-    "paidLabel": "Avaldatud",
-    "paidBody": "Ülejäänud 4 tuba on töötlemisel. Anname teada, kui tuur on valmis.",
-    "pay": "Avalda 1 krediidiga",
-    "paying": "Avaldame…",
-    "mockNote": "Demo — krediiti ei kasutata.",
     "crmHeader": "Sinu CRM · Kuulutus #48213",
-    "publishBtn": "Avalda ringkäik",
     "publishedBtn": "Avaldatud",
     "viewerBadge": "Sodari vaatur · 360°",
     "listingMeta": "3 tuba · 78 m² · 395 000 €",
     "status": "olek",
     "statusPublished": "avaldatud",
-    "statusReady": "valmis",
     "viewer": "vaatur",
     "viewerEmbedded": "manustatud",
-    "opened": "avatud",
-    "openedValue": "128 külastajat",
-    "planLabel": "Korruseplaan"
+    "planLabel": "Korruseplaan",
+    "plan": "Pakett",
+    "planValue": "Starter · 1 krediit"
   },
   "Capabilities": {
     "kicker": "Mida sa saad",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "Illustratiivne · pole veel mõõdetud",
+    "kicker": "Enne ja pärast",
     "title": "Vahe, mille skann teeb.",
     "beforeLabel": "Enne",
     "afterLabel": "Pärast · Sodariga",
@@ -224,7 +216,6 @@
     "cta": "Vaata maakleri tööruumi",
     "mock": {
       "title": "Tööruum",
-      "live": "Reaalajas eelvaade",
       "properties": "Objektid",
       "cols": [
         "Objekt",
@@ -295,10 +286,7 @@
           "step": "Jäädvustus telefonis",
           "n": "—"
         }
-      ],
-      "week": "Sel nädalal",
-      "weekTitle": "701 vaaturi avamist",
-      "weekSub": "2 avaldatud ringkäigu peale"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "CRM-i pakkujatele",
     "title": "Levita Sodarit oma maaklerivõrgustikule. Jäta endale 15%.",
-    "body": "CRM-partnerid teevad Sodari oma maakleritele kättesaadavaks ja saavad 15% marginaali kvalifitseeruvatelt ringkäiguostudelt — ilma miinimumita, automaatselt välja makstud.",
+    "body": "CRM-partnerid teevad Sodari oma maakleritele kättesaadavaks ja saavad 15% marginaali nende maaklerite paketitulust, kes liitusid nende kaudu — miinimumita, makstakse automaatselt.",
     "cta": "Vaata partnerprogrammi"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "Hakka partneriks",
             "/partners#apply"
-          ],
-          [
-            "Partneri töölaud",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "Karjäär",
             "/careers"
-          ],
-          [
-            "Välimärkmed",
-            "/blog"
           ],
           [
             "Ettevõtetele",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "Tööruumi eelvaade — Sodar",
     "metaDesc": "Avalik, sisselogimiseta eelvaade maakleri tööruumist. Päris andmeid pole.",
-    "eyebrow": "Avalik eelvaade · ilma sisselogimiseta, ilma päris andmeteta",
+    "eyebrow": "Tööruumi eelvaade",
     "title": "Iga objekt, selle olek ja kes selle avas.",
-    "sub": "See on staatiline eelvaade tööruumist, mille iga maakler saab — objektid, töötluse ja avaldamise olek ning see, kui palju külastajaid iga ringkäigu vaaturi avas.",
+    "sub": "Eelvaade tööruumist, mille iga maakler saab — objektid, töötluse ja avaldamise olek ning kui palju külastajaid iga tuuri avas.",
     "cta": {
       "eyebrow": "Sinu oma kohe, kui avaldad",
       "title": "Sinu tööruum algab tühjana — kuni esimese skannini.",
@@ -658,7 +638,7 @@
     "metaDesc": "CRM-platvormid teenivad püsiva 15% marginaali, levitades Sodarit oma maaklerivõrgustikule.",
     "eyebrow": "CRM-platvormidele",
     "title": "Levita Sodarit oma maakleritele. Jäta endale 15%.",
-    "sub": "Püsiv marginaal igalt kvalifitseeruvalt ringkäigult, mille sinu platvormi maaklerid ostavad — ilma miinimumita, automaatselt välja makstud, arendustööd vaid soovituslingi jagu.",
+    "sub": "Püsiv marginaal iga sinu platvormi kaudu Sodariga liitunud maakleri paketitulult — miinimumita, automaatne väljamakse, arendustööd vaid viitelingi jagu.",
     "apply": "Kandideeri partneriks",
     "stepsKicker": "Kuidas see töötab",
     "stepsTitle": "Kolm sammu püsiva marginaalini.",
@@ -673,23 +653,7 @@
       },
       {
         "title": "Teeni",
-        "desc": "15% igalt kvalifitseeruvalt ringkäiguostult maaklerilt, kes liitus sinu platvormi kaudu, makstakse välja igakuiselt."
-      }
-    ],
-    "dashKicker": "Partneri töölaud",
-    "dashTitle": "Jälgi soovitatud maaklereid ja marginaali ühes kohas.",
-    "dash": [
-      {
-        "label": "Soovitatud maaklerid",
-        "value": "142"
-      },
-      {
-        "label": "Ostetud ringkäigud",
-        "value": "3 018"
-      },
-      {
-        "label": "Marginaal sel kuul",
-        "value": "6 240 €"
+        "desc": "15% iga sinu platvormi kaudu liitunud maakleri paketitulust, makstakse kord kuus."
       }
     ],
     "applyKicker": "Alusta",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "Kas on miinimumkohustus?",
-        "a": "Ei. 15% marginaal kehtib alates esimesest ostetud ringkäigust — mahu alampiiri pole."
+        "a": "Ei. 15% marginaal kehtib alates esimesest tellinud maaklerist — mahupiiri pole."
       },
       {
         "q": "Kellele kuulub suhe maakleriga?",
@@ -753,11 +717,9 @@
         "action": "Peagi"
       }
     ],
-    "notConnected": "olek: ühendamata",
-    "mockTitle": "Näidisühendus — ühendatakse 2. etapis",
     "embedKicker": "CRM-i pole? Pole probleemi",
     "embedTitle": "Üks iframe, mis sobib kõikjale.",
-    "embedBody": "Iga ostetud ringkäik saab püsiva manustamis-URL-i. Kleebi see mistahes kinnisvaraportaali, mis lubab kohandatud iframe’i.",
+    "embedBody": "Iga avaldatud tuur saab püsiva manustamis-URL-i. Kleebi see mis tahes kuulutusportaali, mis lubab kohandatud iframe’i.",
     "cta": {
       "eyebrow": "Võta oma CRM kaasa",
       "title": "Sodar sobib tööriistadega, mida sa juba kasutad.",
@@ -785,7 +747,7 @@
       },
       {
         "title": "Mahuhinnad",
-        "desc": "Objekti hind langeb, kui sinu büroo kuumaht kasvab."
+        "desc": "Krediiditasemed muutuvad objekti kohta soodsamaks, kui büroo kuine maht kasvab."
       },
       {
         "title": "Personaalne CRM-i seadistus",
@@ -803,19 +765,19 @@
     "priceKicker": "Hinnad, mis mahuga langevad",
     "priceTitle1": "Mahuhinnad,",
     "priceTitle2": "üks leping.",
-    "priceBody": "Kohandatud objektihind kuumahu põhjal pluss fikseeritud kohatasu maakleri kohta. Räägi müügiga, et saada sinu büroo suurusele vastav pakkumine.",
-    "priceNote": "Illustratiivne, objekti kohta",
+    "priceBody": "Kuupakett, mis on mõõdetud sinu büroo mahu järgi, pluss sisseelamine igale kontorile. Küsi müügilt pakkumist — ja küsi ka piloothinda.",
+    "priceNote": "Kuupaketid, krediidid objekti kohta",
     "tiers": [
       {
-        "tier": "1–20 objekti / kuus",
-        "price": "alates 99 €"
+        "tier": "Kuni 10 objekti / kuus",
+        "price": "Starter · 99 €"
       },
       {
-        "tier": "21–100 objekti / kuus",
-        "price": "alates 79 €"
+        "tier": "Kuni 30 objekti / kuus",
+        "price": "Growth · 249 €"
       },
       {
-        "tier": "100+ objekti / kuus",
+        "tier": "Üle 30 / kuus",
         "price": "Kokkuleppel"
       }
     ],
@@ -910,27 +872,10 @@
     "metaDesc": "Vabad kohad Sodaris.",
     "eyebrow": "Karjäär",
     "title": "Aita igal kuulutusel korralikult renderdada.",
-    "sub": "Väike meeskond, varajane faas, päris maaklerid juba skannivad objekte. Värbame rekonstruktsiooni, toote ja go-to-marketi valdkonda.",
+    "sub": "Väike tiim Tallinnas, varajases faasis, koostöös ettevõtetega üle Eesti. Värbame rekonstruktsiooni, toote ja müügi valdkonda, kui piloodid kasvavad.",
     "rolesKicker": "Vabad kohad",
-    "rolesTitle": "Otsime praegu.",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "Rekonstruktsioon",
-        "location": "Kaugtöö / Tallinn"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "Toode",
-        "location": "Kaugtöö / Tallinn"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "Go-to-market",
-        "location": "Tallinn"
-      }
-    ],
-    "noFit": "Ei leia sobivat? Kirjuta ikkagi aadressile careers@sodar.io.",
+    "rolesTitle": "Värbame pilootide kasvades.",
+    "noFit": "Kirjuta aadressile careers@sodar.io, millega tahaksid tegeleda.",
     "cta": {
       "eyebrow": "Sobivat rolli veel pole?",
       "title": "Oleme piisavalt väikesed, et üks meil jõuab asutajani.",
@@ -938,38 +883,9 @@
       "label": "Kirjuta careers@sodar.io"
     }
   },
-  "BlogPage": {
-    "metaTitle": "Välimärkmed — Sodar",
-    "metaDesc": "Juhtumiuuringud maakleritelt ja büroodelt, kes skannivad objekte Sodariga.",
-    "eyebrow": "Välimärkmed",
-    "title": "Juhtumiuuringud, mitte pressiteated.",
-    "sub": "Mis päriselt juhtub, kui objekt skannitakse — kirjutanud meeskond, kes protsessi ehitab.",
-    "posts": [
-      {
-        "title": "Kuidas nelja maakleriga Tallinna büroo lühendas kuulutuse ettevalmistuse 15 minutile",
-        "tag": "Juhtumiuuring",
-        "read": "6 min lugemist"
-      },
-      {
-        "title": "Mida me muutsime pärast esimest 500 ringkäiku",
-        "tag": "Tootemärkmed",
-        "read": "4 min lugemist"
-      },
-      {
-        "title": "Ruumide huvi lugemine: mida vaaturi avamised tegelikult ütlevad",
-        "tag": "Juhend",
-        "read": "5 min lugemist"
-      },
-      {
-        "title": "Miks tasuta eelvaade on kaks ruumi, mitte üks või viis",
-        "tag": "Tootemärkmed",
-        "read": "3 min lugemist"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "Mustand — 1. etapp",
-    "notice": "See on 1. etapi struktuurne kohatäide, mitte lõplik juriidiline tekst.",
+    "updated": "Ettevalmistamisel",
+    "notice": "Seda dokumenti viimistletakse koos meie juristidega ja see avaldatakse siin täismahus enne käivitust.",
     "englishOnly": "Juriidilised dokumendid on praegu avaldatud ainult inglise keeles; ingliskeelne versioon on ülimuslik.",
     "titles": {
       "privacy": "Privaatsuspoliitika",
@@ -1050,7 +966,6 @@
     "sentBody": "Vastame ühe tööpäeva jooksul.",
     "another": "Saada veel üks",
     "error": "Saatmine ebaõnnestus. Kirjuta otse aadressile {email}.",
-    "fallbackNote": "Avab sinu e-posti rakenduse, kuni vormiteenus on ühendatud.",
     "jobTitle": "Ametinimetus",
     "phone": "Telefon",
     "countryCode": "Riigikood",
@@ -1067,7 +982,9 @@
       "partnership": "CRM-partnerlus",
       "careers": "Karjäär",
       "other": "Muu"
-    }
+    },
+    "mailtoTitle": "Sinu e-posti rakendus avanes.",
+    "mailtoBody": "Sõnum on valmis saatmiseks sinu enda aadressilt. Vastame ühe tööpäeva jooksul."
   },
   "Intro": {
     "kicker": "Tutvustus",

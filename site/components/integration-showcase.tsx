@@ -37,13 +37,8 @@ function CrmMock({ withSodarCard }: { withSodarCard: boolean }) {
   return (
     <div className="flex h-full w-full flex-col bg-bg-raised">
       <div className="flex items-center justify-between border-b border-border px-6 py-3.5">
-        <div className="flex items-center gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-          <span className="h-2.5 w-2.5 rounded-full bg-white/15" />
-        </div>
         <p className="text-xs text-text-muted">{t("crmHeader")}</p>
-        <span className="h-7 w-7 rounded-full bg-white/10" />
+        <SodarMark size={14} className="text-text-muted" />
       </div>
       <div className="grid flex-1 grid-cols-1 gap-4 overflow-hidden p-6 sm:grid-cols-3">
         {listings.map((l, i) => (

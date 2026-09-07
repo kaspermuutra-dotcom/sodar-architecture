@@ -8,7 +8,7 @@
     "integrations": "Integraties",
     "partners": "Partners",
     "pricing": "Prijzen",
-    "signIn": "Inloggen",
+    "signIn": "Werkruimte",
     "getStarted": "Woning scannen",
     "menu": "Menu openen",
     "home": "Sodar startpagina",
@@ -73,7 +73,6 @@
     ],
     "ready": "Klaar",
     "locked": "Vergrendeld",
-    "photosOnly": "Alleen foto’s",
     "panels": {
       "capture": {
         "label": "Opname",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "per maand · altijd opzegbaar",
-    "paidLabel": "Gepubliceerd",
-    "paidBody": "De overige 4 kamers worden verwerkt. Je krijgt bericht zodra de rondleiding klaar is.",
-    "pay": "Publiceren met 1 credit",
-    "paying": "Publiceren…",
-    "mockNote": "Demo — er wordt geen credit gebruikt.",
     "crmHeader": "Jouw CRM · Advertentie #48213",
-    "publishBtn": "Rondleiding publiceren",
     "publishedBtn": "Gepubliceerd",
     "viewerBadge": "Sodar-viewer · 360°",
     "listingMeta": "3 kamers · 78 m² · € 395.000",
     "status": "status",
     "statusPublished": "gepubliceerd",
-    "statusReady": "gereed",
     "viewer": "viewer",
     "viewerEmbedded": "ingebed",
-    "opened": "geopend",
-    "openedValue": "128 bezoekers",
-    "planLabel": "Plattegrond"
+    "planLabel": "Plattegrond",
+    "plan": "Plan",
+    "planValue": "Starter · 1 credit"
   },
   "Capabilities": {
     "kicker": "Wat je krijgt",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "Illustratief · nog niet gemeten",
+    "kicker": "Voor en na",
     "title": "Het verschil dat een scan maakt.",
     "beforeLabel": "Voor",
     "afterLabel": "Na · met Sodar",
@@ -224,7 +216,6 @@
     "cta": "Bekijk de makelaarswerkruimte",
     "mock": {
       "title": "Werkruimte",
-      "live": "Live preview",
       "properties": "Woningen",
       "cols": [
         "Woning",
@@ -295,10 +286,7 @@
           "step": "Opname op telefoon",
           "n": "—"
         }
-      ],
-      "week": "Deze week",
-      "weekTitle": "701 keer geopend",
-      "weekSub": "over 2 gepubliceerde rondleidingen"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "Voor CRM-aanbieders",
     "title": "Verspreid Sodar naar je makelaarsnetwerk. Houd 15%.",
-    "body": "CRM-partners maken Sodar beschikbaar voor hun makelaars en ontvangen 15% marge op in aanmerking komende aankopen van rondleidingen — geen minimum, automatisch uitbetaald.",
+    "body": "CRM-partners maken Sodar beschikbaar voor hun makelaars en ontvangen 15% marge op de planomzet van makelaars die via hen zijn ingestapt — zonder minimum, automatisch uitbetaald.",
     "cta": "Bekijk het partnerprogramma"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "Partner worden",
             "/partners#apply"
-          ],
-          [
-            "Partnerdashboard",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "Vacatures",
             "/careers"
-          ],
-          [
-            "Veldnotities",
-            "/blog"
           ],
           [
             "Enterprise",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "Werkruimte-preview — Sodar",
     "metaDesc": "Een openbare preview van de makelaarswerkruimte zonder inloggen. Geen echte data.",
-    "eyebrow": "Openbare preview · geen login, geen echte data",
+    "eyebrow": "Werkruimte-preview",
     "title": "Elke woning, de status en wie hem opende.",
-    "sub": "Dit is een statische preview van de werkruimte die elke makelaar krijgt — woningen, verwerkings- en publicatiestatus, en hoeveel bezoekers elke viewer openden.",
+    "sub": "Een preview van de werkruimte die elke makelaar krijgt — woningen, verwerkings- en publicatiestatus, en hoeveel bezoekers elke rondleiding openden.",
     "cta": {
       "eyebrow": "Van jou zodra je publiceert",
       "title": "Je werkruimte begint leeg — tot je eerste scan.",
@@ -658,7 +638,7 @@
     "metaDesc": "CRM-platforms verdienen een vaste marge van 15% door Sodar naar hun makelaarsnetwerk te verspreiden.",
     "eyebrow": "Voor CRM-platforms",
     "title": "Verspreid Sodar naar je makelaars. Houd 15%.",
-    "sub": "Een vaste marge op elke in aanmerking komende rondleiding die makelaars op je platform kopen — geen minimum, automatisch uitbetaald, geen ontwikkelwerk buiten een verwijzingslink.",
+    "sub": "Een blijvende marge op de planomzet van elke makelaar die via jouw platform bij Sodar komt — zonder minimum, automatisch uitbetaald, zonder ontwikkelwerk behalve een verwijzingslink.",
     "apply": "Aanmelden als partner",
     "stepsKicker": "Hoe het werkt",
     "stepsTitle": "Drie stappen naar een vaste marge.",
@@ -673,23 +653,7 @@
       },
       {
         "title": "Verdienen",
-        "desc": "15% van elke in aanmerking komende aankoop van een makelaar die via je platform kwam, maandelijks uitbetaald."
-      }
-    ],
-    "dashKicker": "Partnerdashboard",
-    "dashTitle": "Volg verwezen makelaars en marge op één plek.",
-    "dash": [
-      {
-        "label": "Verwezen makelaars",
-        "value": "142"
-      },
-      {
-        "label": "Gekochte rondleidingen",
-        "value": "3.018"
-      },
-      {
-        "label": "Marge deze maand",
-        "value": "€ 6.240"
+        "desc": "15% van de planomzet van elke makelaar die via jouw platform is ingestapt, maandelijks uitbetaald."
       }
     ],
     "applyKicker": "Aan de slag",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "Is er een minimale verplichting?",
-        "a": "Nee. De marge van 15% geldt vanaf de eerste gekochte rondleiding — geen volumedrempel."
+        "a": "Nee. De marge van 15% geldt vanaf de eerste makelaar die een abonnement neemt — geen volumedrempel."
       },
       {
         "q": "Van wie is de relatie met de makelaar?",
@@ -753,11 +717,9 @@
         "action": "Binnenkort"
       }
     ],
-    "notConnected": "status: niet gekoppeld",
-    "mockTitle": "Demo-koppeling — aangesloten in fase 2",
     "embedKicker": "Geen CRM? Geen probleem",
     "embedTitle": "Eén iframe, overal te plaatsen.",
-    "embedBody": "Elke gekochte rondleiding krijgt een stabiele embed-URL. Plak hem in elk woningportaal dat een eigen iframe accepteert.",
+    "embedBody": "Elke gepubliceerde rondleiding krijgt een stabiele embed-URL. Plak die in elk portaal dat een eigen iframe toestaat.",
     "cta": {
       "eyebrow": "Neem je CRM mee",
       "title": "Sodar past bij de tools die je al gebruikt.",
@@ -785,7 +747,7 @@
       },
       {
         "title": "Volumeprijzen",
-        "desc": "De prijs per woning daalt naarmate het maandvolume van je kantoor groeit."
+        "desc": "Creditniveaus maken de prijs per woning lager naarmate het maandvolume van je kantoor groeit."
       },
       {
         "title": "Toegewijde CRM-inrichting",
@@ -803,20 +765,20 @@
     "priceKicker": "Prijzen die dalen met volume",
     "priceTitle1": "Volumeprijzen,",
     "priceTitle2": "één contract.",
-    "priceBody": "Een maatwerktarief per woning op basis van maandvolume, plus een vast licentiebedrag per makelaar. Praat met sales voor een offerte op maat van je kantoor.",
-    "priceNote": "Illustratief, per woning",
+    "priceBody": "Een maandplan op maat van het volume van je kantoor, plus onboarding voor elke vestiging. Praat met sales voor een offerte — en vraag naar het pilottarief.",
+    "priceNote": "Maandplannen, credits per woning",
     "tiers": [
       {
-        "tier": "1–20 woningen / maand",
-        "price": "vanaf € 99"
+        "tier": "Tot 10 woningen / maand",
+        "price": "Starter · € 99"
       },
       {
-        "tier": "21–100 woningen / maand",
-        "price": "vanaf € 79"
+        "tier": "Tot 30 woningen / maand",
+        "price": "Growth · € 249"
       },
       {
-        "tier": "100+ woningen / maand",
-        "price": "Maatwerk"
+        "tier": "Meer dan 30 / maand",
+        "price": "Op maat"
       }
     ],
     "cta": {
@@ -910,27 +872,10 @@
     "metaDesc": "Openstaande vacatures bij Sodar.",
     "eyebrow": "Vacatures",
     "title": "Help elke advertentie goed te renderen.",
-    "sub": "Klein team, vroege fase, echte makelaars scannen al woningen. We werven in reconstructie, product en go-to-market.",
+    "sub": "Een klein team in Tallinn, in een vroege fase, dat samenwerkt met bedrijven in heel Estland. We werven in reconstructie, product en sales naarmate de pilots groeien.",
     "rolesKicker": "Openstaande vacatures",
-    "rolesTitle": "We werven.",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "Reconstructie",
-        "location": "Remote / Tallinn"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "Product",
-        "location": "Remote / Tallinn"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "Go-to-market",
-        "location": "Tallinn"
-      }
-    ],
-    "noFit": "Niets passends? Schrijf toch naar careers@sodar.io.",
+    "rolesTitle": "We werven naarmate de pilots groeien.",
+    "noFit": "Mail careers@sodar.io waaraan je zou willen werken.",
     "cta": {
       "eyebrow": "Nog geen passende vacature?",
       "title": "We zijn klein genoeg dat één e-mail een oprichter bereikt.",
@@ -938,38 +883,9 @@
       "label": "Mail naar careers@sodar.io"
     }
   },
-  "BlogPage": {
-    "metaTitle": "Veldnotities — Sodar",
-    "metaDesc": "Casestudies van makelaars en kantoren die woningen scannen met Sodar.",
-    "eyebrow": "Veldnotities",
-    "title": "Casestudies, geen persberichten.",
-    "sub": "Wat er echt gebeurt als een woning wordt gescand — geschreven door het team dat de pipeline bouwt.",
-    "posts": [
-      {
-        "title": "Hoe een Tallinns kantoor met 4 makelaars de advertentievoorbereiding terugbracht tot 15 minuten",
-        "tag": "Casestudy",
-        "read": "6 min lezen"
-      },
-      {
-        "title": "Wat we veranderden na de eerste 500 rondleidingen",
-        "tag": "Productnotities",
-        "read": "4 min lezen"
-      },
-      {
-        "title": "Betrokkenheid per kamer lezen: wat geopende viewers je echt vertellen",
-        "tag": "Gids",
-        "read": "5 min lezen"
-      },
-      {
-        "title": "Waarom de gratis preview twee kamers is, geen één of vijf",
-        "tag": "Productnotities",
-        "read": "3 min lezen"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "Concept — fase 1",
-    "notice": "Dit is een structurele placeholder uit fase 1, geen definitieve juridische tekst.",
+    "updated": "In voorbereiding",
+    "notice": "Dit document wordt momenteel afgerond met onze juridisch adviseurs en wordt hier vóór de lancering volledig gepubliceerd.",
     "englishOnly": "Juridische documenten worden momenteel alleen in het Engels gepubliceerd; de Engelse versie is leidend.",
     "titles": {
       "privacy": "Privacybeleid",
@@ -1050,7 +966,6 @@
     "sentBody": "We antwoorden binnen één werkdag.",
     "another": "Nog een versturen",
     "error": "Verzenden mislukt. Mail rechtstreeks naar {email}.",
-    "fallbackNote": "Opent je e-mailapp totdat de formulierdienst is gekoppeld.",
     "jobTitle": "Functietitel",
     "phone": "Telefoon",
     "countryCode": "Landcode",
@@ -1067,7 +982,9 @@
       "partnership": "CRM-partnerschap",
       "careers": "Werken bij",
       "other": "Anders"
-    }
+    },
+    "mailtoTitle": "Je e-mailprogramma is geopend.",
+    "mailtoBody": "Het bericht staat klaar om vanaf je eigen adres te verzenden. We antwoorden binnen één werkdag."
   },
   "Intro": {
     "kicker": "Introductie",

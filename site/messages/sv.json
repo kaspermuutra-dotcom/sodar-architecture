@@ -8,7 +8,7 @@
     "integrations": "Integrationer",
     "partners": "Partner",
     "pricing": "Priser",
-    "signIn": "Logga in",
+    "signIn": "Arbetsyta",
     "getStarted": "Skanna en bostad",
     "menu": "Växla meny",
     "home": "Sodar startsida",
@@ -73,7 +73,6 @@
     ],
     "ready": "Klart",
     "locked": "Låst",
-    "photosOnly": "Bara foton",
     "panels": {
       "capture": {
         "label": "Inspelning",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "per månad · avsluta när du vill",
-    "paidLabel": "Publicerad",
-    "paidBody": "De återstående 4 rummen bearbetas. Du får besked när visningen är klar.",
-    "pay": "Publicera med 1 kredit",
-    "paying": "Publicerar…",
-    "mockNote": "Demo — ingen kredit används.",
     "crmHeader": "Ditt CRM · Annons #48213",
-    "publishBtn": "Publicera visning",
     "publishedBtn": "Publicerad",
     "viewerBadge": "Sodar-visare · 360°",
     "listingMeta": "3 rum · 78 m² · 395 000 €",
     "status": "status",
     "statusPublished": "publicerad",
-    "statusReady": "klar",
     "viewer": "visare",
     "viewerEmbedded": "inbäddad",
-    "opened": "öppnad",
-    "openedValue": "128 besökare",
-    "planLabel": "Planritning"
+    "planLabel": "Planritning",
+    "plan": "Plan",
+    "planValue": "Starter · 1 kredit"
   },
   "Capabilities": {
     "kicker": "Vad som levereras",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "Illustrativt · inte uppmätt ännu",
+    "kicker": "Före och efter",
     "title": "Skillnaden en skanning gör.",
     "beforeLabel": "Före",
     "afterLabel": "Efter · med Sodar",
@@ -224,7 +216,6 @@
     "cta": "Se mäklarens arbetsyta",
     "mock": {
       "title": "Arbetsyta",
-      "live": "Liveförhandsvisning",
       "properties": "Bostäder",
       "cols": [
         "Bostad",
@@ -295,10 +286,7 @@
           "step": "Spelas in i telefonen",
           "n": "—"
         }
-      ],
-      "week": "Denna vecka",
-      "weekTitle": "701 öppnade visare",
-      "weekSub": "över 2 publicerade visningar"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "För CRM-leverantörer",
     "title": "Distribuera Sodar till ditt mäklarnätverk. Behåll 15 %.",
-    "body": "CRM-partner gör Sodar tillgängligt för sina mäklare och får 15 % marginal på kvalificerade visningsköp — inget minimum, utbetalas automatiskt.",
+    "body": "CRM-partner gör Sodar tillgängligt för sina mäklare och får 15 % marginal på planintäkterna från mäklare som anslutit via dem — utan minimum, utbetalt automatiskt.",
     "cta": "Se partnerprogrammet"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "Bli partner",
             "/partners#apply"
-          ],
-          [
-            "Partnerpanel",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "Karriär",
             "/careers"
-          ],
-          [
-            "Fältanteckningar",
-            "/blog"
           ],
           [
             "Enterprise",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "Förhandsvisning av arbetsytan — Sodar",
     "metaDesc": "En publik förhandsvisning av mäklarens arbetsyta utan inloggning. Ingen riktig data.",
-    "eyebrow": "Publik förhandsvisning · ingen inloggning, ingen riktig data",
+    "eyebrow": "Förhandsvisning av arbetsytan",
     "title": "Varje bostad, dess status och vem som öppnade den.",
-    "sub": "Detta är en statisk förhandsvisning av arbetsytan varje mäklare får — bostäder, bearbetnings- och publiceringsstatus, och hur många besökare som öppnat varje visare.",
+    "sub": "En förhandsvisning av arbetsytan varje mäklare får — bostäder, bearbetnings- och publiceringsstatus och hur många besökare som öppnat varje visning.",
     "cta": {
       "eyebrow": "Din så snart du publicerar",
       "title": "Din arbetsyta börjar tom — tills din första skanning.",
@@ -658,7 +638,7 @@
     "metaDesc": "CRM-plattformar tjänar en fast marginal på 15 % genom att distribuera Sodar till sitt mäklarnätverk.",
     "eyebrow": "För CRM-plattformar",
     "title": "Distribuera Sodar till dina mäklare. Behåll 15 %.",
-    "sub": "En fast marginal på varje kvalificerad visning som mäklare på din plattform köper — inget minimum, automatisk utbetalning, ingen utveckling utöver en referenslänk.",
+    "sub": "En stående marginal på planintäkterna från varje mäklare som ansluter till Sodar via din plattform — utan minimum, utbetald automatiskt, utan annat utvecklingsarbete än en hänvisningslänk.",
     "apply": "Ansök som partner",
     "stepsKicker": "Så fungerar det",
     "stepsTitle": "Tre steg till en fast marginal.",
@@ -673,23 +653,7 @@
       },
       {
         "title": "Tjäna",
-        "desc": "15 % av varje kvalificerat visningsköp från en mäklare som anslöt via din plattform, utbetalt månadsvis."
-      }
-    ],
-    "dashKicker": "Partnerpanel",
-    "dashTitle": "Följ hänvisade mäklare och marginal på ett ställe.",
-    "dash": [
-      {
-        "label": "Hänvisade mäklare",
-        "value": "142"
-      },
-      {
-        "label": "Köpta visningar",
-        "value": "3 018"
-      },
-      {
-        "label": "Marginal denna månad",
-        "value": "6 240 €"
+        "desc": "15 % av planintäkterna från varje mäklare som anslutit via din plattform, utbetalt månadsvis."
       }
     ],
     "applyKicker": "Kom igång",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "Finns det ett minimiåtagande?",
-        "a": "Nej. Marginalen på 15 % gäller från den första köpta visningen — inget volymgolv."
+        "a": "Nej. Marginalen på 15 % gäller från den första mäklaren som tecknar plan — ingen volymgräns."
       },
       {
         "q": "Vem äger mäklarrelationen?",
@@ -753,11 +717,9 @@
         "action": "Kommer snart"
       }
     ],
-    "notConnected": "status: inte kopplad",
-    "mockTitle": "Demokoppling — kopplas in i fas 2",
     "embedKicker": "Inget CRM? Inga problem",
     "embedTitle": "En iframe, placerad var som helst.",
-    "embedBody": "Varje köpt visning får en stabil inbäddnings-URL. Klistra in den i vilken bostadsportal som helst som accepterar en egen iframe.",
+    "embedBody": "Varje publicerad visning får en stabil inbäddnings-URL. Klistra in den i vilken portal som helst som tillåter en egen iframe.",
     "cta": {
       "eyebrow": "Ta med ditt CRM",
       "title": "Sodar passar verktygen du redan använder.",
@@ -785,7 +747,7 @@
       },
       {
         "title": "Volympriser",
-        "desc": "Priset per bostad sjunker när din byrås månadsvolym växer."
+        "desc": "Kreditnivåerna sänker priset per bostad när byråns månadsvolym växer."
       },
       {
         "title": "Dedikerad CRM-uppsättning",
@@ -803,20 +765,20 @@
     "priceKicker": "Priser som sjunker med volymen",
     "priceTitle1": "Volympriser,",
     "priceTitle2": "ett avtal.",
-    "priceBody": "Ett anpassat pris per bostad baserat på månadsvolym, plus en fast avgift per mäklarplats. Prata med sälj för en offert anpassad till din byrå.",
-    "priceNote": "Illustrativt, per bostad",
+    "priceBody": "En månadsplan anpassad till byråns volym, plus onboarding för varje kontor. Prata med sälj för en offert — och fråga om pilotpris.",
+    "priceNote": "Månadsplaner, krediter per bostad",
     "tiers": [
       {
-        "tier": "1–20 bostäder / mån",
-        "price": "från 99 €"
+        "tier": "Upp till 10 bostäder / mån",
+        "price": "Starter · 99 €"
       },
       {
-        "tier": "21–100 bostäder / mån",
-        "price": "från 79 €"
+        "tier": "Upp till 30 bostäder / mån",
+        "price": "Growth · 249 €"
       },
       {
-        "tier": "100+ bostäder / mån",
-        "price": "Anpassat"
+        "tier": "Fler än 30 / mån",
+        "price": "Offert"
       }
     ],
     "cta": {
@@ -910,27 +872,10 @@
     "metaDesc": "Lediga roller på Sodar.",
     "eyebrow": "Karriär",
     "title": "Hjälp varje annons att renderas rätt.",
-    "sub": "Litet team, tidigt skede, riktiga mäklare skannar redan bostäder. Vi rekryterar inom rekonstruktion, produkt och go-to-market.",
+    "sub": "Ett litet team i Tallinn, i ett tidigt skede, som arbetar med företag i hela Estland. Vi rekryterar inom rekonstruktion, produkt och sälj i takt med att piloterna växer.",
     "rolesKicker": "Lediga roller",
-    "rolesTitle": "Vi rekryterar.",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "Rekonstruktion",
-        "location": "Distans / Tallinn"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "Produkt",
-        "location": "Distans / Tallinn"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "Go-to-market",
-        "location": "Tallinn"
-      }
-    ],
-    "noFit": "Hittar du inget som passar? Skriv ändå till careers@sodar.io.",
+    "rolesTitle": "Vi rekryterar i takt med att piloterna växer.",
+    "noFit": "Skriv till careers@sodar.io om vad du skulle vilja arbeta med.",
     "cta": {
       "eyebrow": "Ingen roll ännu?",
       "title": "Vi är små nog att ett mejl når en grundare.",
@@ -938,38 +883,9 @@
       "label": "Mejla careers@sodar.io"
     }
   },
-  "BlogPage": {
-    "metaTitle": "Fältanteckningar — Sodar",
-    "metaDesc": "Fallstudier från mäklare och byråer som skannar bostäder med Sodar.",
-    "eyebrow": "Fältanteckningar",
-    "title": "Fallstudier, inte pressmeddelanden.",
-    "sub": "Vad som faktiskt händer när en bostad skannas — skrivet av teamet som bygger pipelinen.",
-    "posts": [
-      {
-        "title": "Hur en Tallinnbyrå med 4 mäklare kortade annonsförberedelsen till 15 minuter",
-        "tag": "Fallstudie",
-        "read": "6 min läsning"
-      },
-      {
-        "title": "Vad vi ändrade efter de första 500 visningarna",
-        "tag": "Produktanteckningar",
-        "read": "4 min läsning"
-      },
-      {
-        "title": "Att läsa rumsengagemang: vad öppnade visare faktiskt säger",
-        "tag": "Guide",
-        "read": "5 min läsning"
-      },
-      {
-        "title": "Varför den gratis förhandsvisningen är två rum, inte ett eller fem",
-        "tag": "Produktanteckningar",
-        "read": "3 min läsning"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "Utkast — fas 1",
-    "notice": "Detta är en strukturell platshållare från fas 1, inte slutlig juridisk text.",
+    "updated": "Under utarbetande",
+    "notice": "Det här dokumentet färdigställs tillsammans med våra jurister och publiceras här i sin helhet före lanseringen.",
     "englishOnly": "Juridiska dokument publiceras för närvarande endast på engelska; den engelska versionen gäller.",
     "titles": {
       "privacy": "Integritetspolicy",
@@ -1050,7 +966,6 @@
     "sentBody": "Vi svarar inom en arbetsdag.",
     "another": "Skicka ett till",
     "error": "Det gick inte att skicka. Mejla direkt till {email}.",
-    "fallbackNote": "Öppnar din e-postapp tills formulärtjänsten är ansluten.",
     "jobTitle": "Befattning",
     "phone": "Telefon",
     "countryCode": "Landskod",
@@ -1067,7 +982,9 @@
       "partnership": "CRM-partnerskap",
       "careers": "Jobb",
       "other": "Annat"
-    }
+    },
+    "mailtoTitle": "Din e-postapp har öppnats.",
+    "mailtoBody": "Meddelandet är redo att skickas från din egen adress. Vi svarar inom en arbetsdag."
   },
   "Intro": {
     "kicker": "Introduktion",

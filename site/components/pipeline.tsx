@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useTranslations } from "next-intl";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
@@ -26,9 +26,6 @@ export function Pipeline() {
   const ringRef = useRef<SVGCircleElement>(null);
   const assistRef = useRef<HTMLSpanElement>(null);
   const previewRef = useRef<HTMLDivElement>(null);
-  const [paid, setPaid] = useState(false);
-  const [processing, setProcessing] = useState(false);
-  const [published, setPublished] = useState(false);
 
   useGSAP(
     () => {
@@ -72,16 +69,6 @@ export function Pipeline() {
     },
     { scope: sectionRef, dependencies: [assist] },
   );
-
-  function handlePay(e: React.FormEvent) {
-    e.preventDefault();
-    // TODO(phase-2): Stripe Checkout + webhook-driven unlock.
-    setProcessing(true);
-    window.setTimeout(() => {
-      setProcessing(false);
-      setPaid(true);
-    }, 1100);
-  }
 
   return (
     <section id="pipeline" ref={sectionRef} className="on-ink border-t border-border bg-bg">
@@ -147,19 +134,6 @@ export function Pipeline() {
                 <p className="display text-5xl text-text" dir="ltr">€99</p>
                 <p className="text-xs text-text-muted">{t("oneTime")}</p>
               </div>
-              {paid ? (
-                <div className="mt-6 rounded-xl border border-border-strong p-4 text-sm text-text">
-                  <p className="mono-label">{t("paidLabel")}</p>
-                  <p className="mt-1">{t("paidBody")}</p>
-                </div>
-              ) : (
-                <form onSubmit={handlePay} className="mt-6">
-                  <button type="submit" className="button-primary w-full" disabled={processing}>
-                    {processing ? t("paying") : t("pay")}
-                  </button>
-                  <p className="mt-3 text-center text-xs text-text-faint">{t("mockNote")}</p>
-                </form>
-              )}
             </div>
           </Stage>
 
@@ -167,28 +141,20 @@ export function Pipeline() {
             <div className="w-full max-w-xl overflow-hidden rounded-2xl border border-border bg-bg-raised">
               <div className="flex items-center justify-between gap-4 border-b border-border px-5 py-3">
                 <span className="text-xs text-text-muted">{t("crmHeader")}</span>
-                <button type="button" onClick={() => setPublished((v) => !v)} className="button-mini">
-                  {published ? t("publishedBtn") : t("publishBtn")}
-                </button>
+                <span className="rounded-full border border-border-strong px-3 py-1 text-xs text-text">{t("publishedBtn")}</span>
               </div>
               <div className="grid gap-4 p-5 sm:grid-cols-[1.4fr_1fr]">
                 <div className="tile aspect-[16/10] rounded-lg">
-                  <img src="/media/rooms/publish.jpg" alt="" style={published ? { filter: "none" } : undefined} />
-                  {published ? (
-                    <div className="absolute bottom-2.5 right-2.5 rounded-full border border-white/25 bg-black/55 px-2.5 py-1 font-mono text-[10px] text-[#f4f2ee] backdrop-blur">{t("viewerBadge")}</div>
-                  ) : (
-                    <div className="locked-overlay">
-                      <span className="font-mono text-[10px] uppercase tracking-[.14em] text-white/60">{t("photosOnly")}</span>
-                    </div>
-                  )}
+                  <img src="/media/rooms/publish.jpg" alt="" style={{ filter: "none" }} />
+                  <div className="absolute bottom-2.5 right-2.5 rounded-full border border-white/25 bg-black/55 px-2.5 py-1 font-mono text-[10px] text-[#f4f2ee] backdrop-blur">{t("viewerBadge")}</div>
                 </div>
                 <div className="text-sm">
                   <p className="text-text">84 Kesklinn Ave</p>
                   <p className="mt-1 text-text-muted">{t("listingMeta")}</p>
                   <div className="mt-4 space-y-1.5 text-xs text-text-muted">
-                    <p>{t("status")}: {published ? <span className="text-text">{t("statusPublished")}</span> : t("statusReady")}</p>
-                    <p>{t("viewer")}: {published ? <span className="text-text">{t("viewerEmbedded")}</span> : "—"}</p>
-                    <p>{t("opened")}: {published ? <span className="num text-text">{t("openedValue")}</span> : "—"}</p>
+                    <p>{t("status")}: <span className="text-text">{t("statusPublished")}</span></p>
+                    <p>{t("viewer")}: <span className="text-text">{t("viewerEmbedded")}</span></p>
+                    <p>{t("plan")}: <span className="text-text">{t("planValue")}</span></p>
                   </div>
                 </div>
               </div>

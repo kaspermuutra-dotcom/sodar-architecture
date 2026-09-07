@@ -8,7 +8,7 @@
     "integrations": "Integracje",
     "partners": "Partnerzy",
     "pricing": "Cennik",
-    "signIn": "Zaloguj się",
+    "signIn": "Przestrzeń robocza",
     "getStarted": "Zeskanuj nieruchomość",
     "menu": "Przełącz menu",
     "home": "Strona główna Sodar",
@@ -73,7 +73,6 @@
     ],
     "ready": "Gotowe",
     "locked": "Zablokowane",
-    "photosOnly": "Tylko zdjęcia",
     "panels": {
       "capture": {
         "label": "Ujęcie",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "miesięcznie · anuluj w dowolnym momencie",
-    "paidLabel": "Opublikowano",
-    "paidBody": "Pozostałe 4 pomieszczenia są przetwarzane. Powiadomimy Cię, gdy spacer będzie gotowy.",
-    "pay": "Opublikuj za 1 kredyt",
-    "paying": "Publikowanie…",
-    "mockNote": "Demo — żaden kredyt nie jest zużywany.",
     "crmHeader": "Twój CRM · Ogłoszenie #48213",
-    "publishBtn": "Opublikuj spacer",
     "publishedBtn": "Opublikowano",
     "viewerBadge": "Przeglądarka Sodar · 360°",
     "listingMeta": "3 pokoje · 78 m² · 395 000 €",
     "status": "status",
     "statusPublished": "opublikowano",
-    "statusReady": "gotowe",
     "viewer": "przeglądarka",
     "viewerEmbedded": "osadzona",
-    "opened": "otwarcia",
-    "openedValue": "128 odwiedzających",
-    "planLabel": "Rzut"
+    "planLabel": "Rzut",
+    "plan": "Plan",
+    "planValue": "Starter · 1 kredyt"
   },
   "Capabilities": {
     "kicker": "Co dostajesz",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "Poglądowo · jeszcze niezmierzone",
+    "kicker": "Przed i po",
     "title": "Różnica, jaką robi skan.",
     "beforeLabel": "Przed",
     "afterLabel": "Po · z Sodar",
@@ -224,7 +216,6 @@
     "cta": "Zobacz przestrzeń roboczą pośrednika",
     "mock": {
       "title": "Przestrzeń robocza",
-      "live": "Podgląd na żywo",
       "properties": "Nieruchomości",
       "cols": [
         "Nieruchomość",
@@ -295,10 +286,7 @@
           "step": "Ujęcia na telefonie",
           "n": "—"
         }
-      ],
-      "week": "W tym tygodniu",
-      "weekTitle": "701 otwarć przeglądarki",
-      "weekSub": "w 2 opublikowanych spacerach"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "Dla dostawców CRM",
     "title": "Dystrybuuj Sodar w swojej sieci pośredników. Zachowaj 15%.",
-    "body": "Partnerzy CRM udostępniają Sodar swoim pośrednikom i otrzymują 15% marży od kwalifikujących się zakupów spacerów — bez minimum, wypłacane automatycznie.",
+    "body": "Partnerzy CRM udostępniają Sodar swoim pośrednikom i otrzymują 15% marży od przychodów z planów pośredników, którzy dołączyli za ich pośrednictwem — bez minimum, wypłacane automatycznie.",
     "cta": "Zobacz program partnerski"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "Zostań partnerem",
             "/partners#apply"
-          ],
-          [
-            "Panel partnera",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "Kariera",
             "/careers"
-          ],
-          [
-            "Notatki z terenu",
-            "/blog"
           ],
           [
             "Dla firm",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "Podgląd przestrzeni roboczej — Sodar",
     "metaDesc": "Publiczny podgląd przestrzeni roboczej pośrednika bez logowania. Bez prawdziwych danych.",
-    "eyebrow": "Publiczny podgląd · bez logowania, bez prawdziwych danych",
+    "eyebrow": "Podgląd przestrzeni roboczej",
     "title": "Każda nieruchomość, jej status i kto ją otworzył.",
-    "sub": "To statyczny podgląd przestrzeni roboczej, którą dostaje każdy pośrednik — nieruchomości, status przetwarzania i publikacji oraz liczba odwiedzających, którzy otworzyli każdą przeglądarkę spaceru.",
+    "sub": "Podgląd przestrzeni roboczej, którą otrzymuje każdy pośrednik — nieruchomości, status przetwarzania i publikacji oraz liczba odwiedzających, którzy otworzyli każdy spacer.",
     "cta": {
       "eyebrow": "Twoja, gdy tylko opublikujesz",
       "title": "Twoja przestrzeń robocza zaczyna pusta — do pierwszego skanu.",
@@ -658,7 +638,7 @@
     "metaDesc": "Platformy CRM zarabiają stałą marżę 15%, dystrybuując Sodar w swojej sieci pośredników.",
     "eyebrow": "Dla platform CRM",
     "title": "Dystrybuuj Sodar wśród swoich pośredników. Zachowaj 15%.",
-    "sub": "Stała marża od każdego kwalifikującego się spaceru kupionego przez pośredników z Twojej platformy — bez minimum, wypłacana automatycznie, bez prac wdrożeniowych poza linkiem polecającym.",
+    "sub": "Stała marża od przychodów z planów każdego pośrednika, który dołącza do Sodar przez Twoją platformę — bez minimum, wypłacana automatycznie, bez prac programistycznych poza linkiem polecającym.",
     "apply": "Zostań partnerem",
     "stepsKicker": "Jak to działa",
     "stepsTitle": "Trzy kroki do stałej marży.",
@@ -673,23 +653,7 @@
       },
       {
         "title": "Zarabiaj",
-        "desc": "15% od każdego kwalifikującego się zakupu spaceru przez pośrednika, który dołączył przez Twoją platformę, wypłacane co miesiąc."
-      }
-    ],
-    "dashKicker": "Panel partnera",
-    "dashTitle": "Śledź poleconych pośredników i marżę w jednym miejscu.",
-    "dash": [
-      {
-        "label": "Poleceni pośrednicy",
-        "value": "142"
-      },
-      {
-        "label": "Kupione spacery",
-        "value": "3 018"
-      },
-      {
-        "label": "Marża w tym miesiącu",
-        "value": "6 240 €"
+        "desc": "15% przychodów z planów każdego pośrednika, który dołączył przez Twoją platformę, wypłacane co miesiąc."
       }
     ],
     "applyKicker": "Zacznij",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "Czy jest minimalne zobowiązanie?",
-        "a": "Nie. Marża 15% obowiązuje od pierwszego kupionego spaceru — bez progu wolumenu."
+        "a": "Nie. Marża 15% obowiązuje od pierwszego pośrednika, który wykupi plan — bez progu wolumenu."
       },
       {
         "q": "Do kogo należy relacja z pośrednikiem?",
@@ -753,11 +717,9 @@
         "action": "Wkrótce"
       }
     ],
-    "notConnected": "status: niepołączono",
-    "mockTitle": "Połączenie demonstracyjne — podłączane w fazie 2",
     "embedKicker": "Brak CRM? Żaden problem",
     "embedTitle": "Jeden iframe, do wstawienia gdziekolwiek.",
-    "embedBody": "Każdy kupiony spacer dostaje stały adres osadzenia. Wklej go do dowolnego portalu ogłoszeniowego, który akceptuje własny iframe.",
+    "embedBody": "Każdy opublikowany spacer otrzymuje stały adres URL do osadzenia. Wklej go w dowolnym portalu, który akceptuje własny iframe.",
     "cta": {
       "eyebrow": "Przynieś swój CRM",
       "title": "Sodar pasuje do narzędzi, których już używasz.",
@@ -785,7 +747,7 @@
       },
       {
         "title": "Ceny wolumenowe",
-        "desc": "Cena za nieruchomość maleje wraz ze wzrostem miesięcznego wolumenu Twojego biura."
+        "desc": "Poziomy kredytów obniżają cenę za nieruchomość wraz ze wzrostem miesięcznego wolumenu Twojego biura."
       },
       {
         "title": "Dedykowana konfiguracja CRM",
@@ -803,19 +765,19 @@
     "priceKicker": "Ceny, które maleją z wolumenem",
     "priceTitle1": "Ceny wolumenowe,",
     "priceTitle2": "jedna umowa.",
-    "priceBody": "Indywidualna stawka za nieruchomość zależna od miesięcznego wolumenu, plus stała opłata za stanowisko pośrednika. Porozmawiaj ze sprzedażą o wycenie dopasowanej do Twojego biura.",
-    "priceNote": "Poglądowo, za nieruchomość",
+    "priceBody": "Plan miesięczny dopasowany do wolumenu Twojego biura oraz wdrożenie dla każdego oddziału. Porozmawiaj ze sprzedażą o wycenie — i zapytaj o stawkę pilotażową.",
+    "priceNote": "Plany miesięczne, kredyty na nieruchomość",
     "tiers": [
       {
-        "tier": "1–20 nieruchomości / mies.",
-        "price": "od 99 €"
+        "tier": "Do 10 nieruchomości / mies.",
+        "price": "Starter · 99 €"
       },
       {
-        "tier": "21–100 nieruchomości / mies.",
-        "price": "od 79 €"
+        "tier": "Do 30 nieruchomości / mies.",
+        "price": "Growth · 249 €"
       },
       {
-        "tier": "100+ nieruchomości / mies.",
+        "tier": "Ponad 30 / mies.",
         "price": "Indywidualnie"
       }
     ],
@@ -910,27 +872,10 @@
     "metaDesc": "Otwarte stanowiska w Sodar.",
     "eyebrow": "Kariera",
     "title": "Pomóż każdemu ogłoszeniu renderować się jak należy.",
-    "sub": "Mały zespół, wczesny etap, prawdziwi pośrednicy już skanują nieruchomości. Rekrutujemy w obszarach rekonstrukcji, produktu i go-to-market.",
+    "sub": "Mały zespół w Tallinie, na wczesnym etapie, współpracujący z firmami w całej Estonii. Zatrudniamy w obszarach rekonstrukcji, produktu i sprzedaży w miarę rozwoju pilotaży.",
     "rolesKicker": "Otwarte stanowiska",
-    "rolesTitle": "Obecnie rekrutujemy.",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "Rekonstrukcja",
-        "location": "Zdalnie / Tallinn"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "Produkt",
-        "location": "Zdalnie / Tallinn"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "Go-to-market",
-        "location": "Tallinn"
-      }
-    ],
-    "noFit": "Nie widzisz dopasowania? I tak napisz na careers@sodar.io.",
+    "rolesTitle": "Zatrudniamy w miarę rozwoju pilotaży.",
+    "noFit": "Napisz na careers@sodar.io, nad czym chciałbyś pracować.",
     "cta": {
       "eyebrow": "Jeszcze nie ma stanowiska dla Ciebie?",
       "title": "Jesteśmy na tyle mali, że jeden e-mail trafia do założyciela.",
@@ -938,38 +883,9 @@
       "label": "Napisz na careers@sodar.io"
     }
   },
-  "BlogPage": {
-    "metaTitle": "Notatki z terenu — Sodar",
-    "metaDesc": "Studia przypadków pośredników i biur skanujących nieruchomości z Sodar.",
-    "eyebrow": "Notatki z terenu",
-    "title": "Studia przypadków, nie komunikaty prasowe.",
-    "sub": "Co naprawdę dzieje się, gdy nieruchomość jest skanowana — napisane przez zespół budujący proces.",
-    "posts": [
-      {
-        "title": "Jak tallińskie biuro z 4 pośrednikami skróciło przygotowanie ogłoszenia do 15 minut",
-        "tag": "Studium przypadku",
-        "read": "6 min czytania"
-      },
-      {
-        "title": "Co zmieniliśmy po pierwszych 500 spacerach",
-        "tag": "Notatki produktowe",
-        "read": "4 min czytania"
-      },
-      {
-        "title": "Czytanie zainteresowania pomieszczeniami: co naprawdę mówią otwarcia przeglądarki",
-        "tag": "Poradnik",
-        "read": "5 min czytania"
-      },
-      {
-        "title": "Dlaczego darmowy podgląd to dwa pomieszczenia, a nie jedno czy pięć",
-        "tag": "Notatki produktowe",
-        "read": "3 min czytania"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "Szkic — faza 1",
-    "notice": "To strukturalny szkic z fazy 1, a nie ostateczna treść prawna.",
+    "updated": "W przygotowaniu",
+    "notice": "Ten dokument jest finalizowany z naszymi prawnikami i zostanie opublikowany tutaj w całości przed startem.",
     "englishOnly": "Dokumenty prawne są obecnie publikowane wyłącznie po angielsku; wersja angielska jest wiążąca.",
     "titles": {
       "privacy": "Polityka prywatności",
@@ -1050,7 +966,6 @@
     "sentBody": "Odpowiadamy w ciągu jednego dnia roboczego.",
     "another": "Wyślij kolejną",
     "error": "Wysyłanie nie powiodło się. Napisz bezpośrednio na {email}.",
-    "fallbackNote": "Otwiera Twoją aplikację pocztową, dopóki usługa formularzy nie zostanie podłączona.",
     "jobTitle": "Stanowisko",
     "phone": "Telefon",
     "countryCode": "Kod kraju",
@@ -1067,7 +982,9 @@
       "partnership": "Partnerstwo CRM",
       "careers": "Kariera",
       "other": "Inne"
-    }
+    },
+    "mailtoTitle": "Otworzył się Twój program pocztowy.",
+    "mailtoBody": "Wiadomość jest gotowa do wysłania z Twojego adresu. Odpowiadamy w ciągu jednego dnia roboczego."
   },
   "Intro": {
     "kicker": "Wprowadzenie",

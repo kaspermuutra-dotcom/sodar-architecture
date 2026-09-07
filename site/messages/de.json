@@ -8,7 +8,7 @@
     "integrations": "Integrationen",
     "partners": "Partner",
     "pricing": "Preise",
-    "signIn": "Anmelden",
+    "signIn": "Workspace",
     "getStarted": "Immobilie scannen",
     "menu": "Menü umschalten",
     "home": "Sodar Startseite",
@@ -73,7 +73,6 @@
     ],
     "ready": "Fertig",
     "locked": "Gesperrt",
-    "photosOnly": "Nur Fotos",
     "panels": {
       "capture": {
         "label": "Aufnahme",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "pro Monat · jederzeit kündbar",
-    "paidLabel": "Veröffentlicht",
-    "paidBody": "Die übrigen 4 Räume werden verarbeitet. Sie werden benachrichtigt, sobald der Rundgang fertig ist.",
-    "pay": "Mit 1 Credit veröffentlichen",
-    "paying": "Wird veröffentlicht…",
-    "mockNote": "Demo — es wird kein Credit verbraucht.",
     "crmHeader": "Ihr CRM · Inserat #48213",
-    "publishBtn": "Rundgang veröffentlichen",
     "publishedBtn": "Veröffentlicht",
     "viewerBadge": "Sodar-Viewer · 360°",
     "listingMeta": "3 Zimmer · 78 m² · 395.000 €",
     "status": "Status",
     "statusPublished": "veröffentlicht",
-    "statusReady": "bereit",
     "viewer": "Viewer",
     "viewerEmbedded": "eingebettet",
-    "opened": "geöffnet",
-    "openedValue": "128 Besucher",
-    "planLabel": "Grundriss"
+    "planLabel": "Grundriss",
+    "plan": "Plan",
+    "planValue": "Starter · 1 Credit"
   },
   "Capabilities": {
     "kicker": "Was geliefert wird",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "Illustrativ · noch nicht gemessen",
+    "kicker": "Vorher und nachher",
     "title": "Der Unterschied, den ein Scan macht.",
     "beforeLabel": "Vorher",
     "afterLabel": "Nachher · mit Sodar",
@@ -224,7 +216,6 @@
     "cta": "Makler-Workspace ansehen",
     "mock": {
       "title": "Workspace",
-      "live": "Live-Vorschau",
       "properties": "Immobilien",
       "cols": [
         "Immobilie",
@@ -295,10 +286,7 @@
           "step": "Aufnahme am Smartphone",
           "n": "—"
         }
-      ],
-      "week": "Diese Woche",
-      "weekTitle": "701 Viewer-Öffnungen",
-      "weekSub": "über 2 veröffentlichte Rundgänge"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "Für CRM-Anbieter",
     "title": "Vertreiben Sie Sodar an Ihr Maklernetzwerk. Behalten Sie 15 %.",
-    "body": "CRM-Partner stellen Sodar ihren Maklern zur Verfügung und erhalten 15 % Marge auf qualifizierte Rundgang-Käufe — kein Minimum, automatisch ausgezahlt.",
+    "body": "CRM-Partner stellen Sodar ihren Maklern zur Verfügung und erhalten 15 % Marge auf die Planumsätze der Makler, die über sie beigetreten sind — ohne Minimum, automatisch ausgezahlt.",
     "cta": "Partnerprogramm ansehen"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "Partner werden",
             "/partners#apply"
-          ],
-          [
-            "Partner-Dashboard",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "Karriere",
             "/careers"
-          ],
-          [
-            "Feldnotizen",
-            "/blog"
           ],
           [
             "Enterprise",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "Workspace-Vorschau — Sodar",
     "metaDesc": "Eine öffentliche Vorschau des Makler-Workspace ohne Anmeldung. Keine echten Daten.",
-    "eyebrow": "Öffentliche Vorschau · kein Login, keine echten Daten",
+    "eyebrow": "Workspace-Vorschau",
     "title": "Jede Immobilie, ihr Status und wer sie geöffnet hat.",
-    "sub": "Dies ist eine statische Vorschau des Workspace, den jeder Makler erhält — Immobilien, Verarbeitungs- und Veröffentlichungsstatus und wie viele Besucher jeden Rundgang-Viewer geöffnet haben.",
+    "sub": "Eine Vorschau des Workspace, den jeder Makler erhält — Immobilien, Verarbeitungs- und Veröffentlichungsstatus und wie viele Besucher jeden Rundgang geöffnet haben.",
     "cta": {
       "eyebrow": "Ihrer, sobald Sie veröffentlichen",
       "title": "Ihr Workspace beginnt leer — bis zu Ihrem ersten Scan.",
@@ -658,7 +638,7 @@
     "metaDesc": "CRM-Plattformen verdienen eine feste Marge von 15 %, wenn sie Sodar an ihr Maklernetzwerk vertreiben.",
     "eyebrow": "Für CRM-Plattformen",
     "title": "Vertreiben Sie Sodar an Ihre Makler. Behalten Sie 15 %.",
-    "sub": "Eine feste Marge auf jeden qualifizierten Rundgang, den die Makler Ihrer Plattform kaufen — kein Minimum, automatische Auszahlung, kein Entwicklungsaufwand über einen Empfehlungslink hinaus.",
+    "sub": "Eine dauerhafte Marge auf die Planumsätze jedes Maklers, der über Ihre Plattform zu Sodar kommt — ohne Minimum, automatisch ausgezahlt, ohne Entwicklungsaufwand über einen Empfehlungslink hinaus.",
     "apply": "Als Partner bewerben",
     "stepsKicker": "So funktioniert es",
     "stepsTitle": "Drei Schritte zu einer festen Marge.",
@@ -673,23 +653,7 @@
       },
       {
         "title": "Verdienen",
-        "desc": "15 % jedes qualifizierten Rundgang-Kaufs eines Maklers, der über Ihre Plattform beigetreten ist, monatlich ausgezahlt."
-      }
-    ],
-    "dashKicker": "Partner-Dashboard",
-    "dashTitle": "Empfohlene Makler und Marge an einem Ort verfolgen.",
-    "dash": [
-      {
-        "label": "Empfohlene Makler",
-        "value": "142"
-      },
-      {
-        "label": "Gekaufte Rundgänge",
-        "value": "3.018"
-      },
-      {
-        "label": "Marge diesen Monat",
-        "value": "6.240 €"
+        "desc": "15 % der Planumsätze jedes Maklers, der über Ihre Plattform beigetreten ist, monatlich ausgezahlt."
       }
     ],
     "applyKicker": "Loslegen",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "Gibt es eine Mindestverpflichtung?",
-        "a": "Nein. Die Marge von 15 % gilt ab dem ersten gekauften Rundgang — ohne Volumenuntergrenze."
+        "a": "Nein. Die Marge von 15 % gilt ab dem ersten Makler, der abonniert — ohne Mindestvolumen."
       },
       {
         "q": "Wem gehört die Maklerbeziehung?",
@@ -753,11 +717,9 @@
         "action": "Bald verfügbar"
       }
     ],
-    "notConnected": "Status: nicht verbunden",
-    "mockTitle": "Demo-Verbindung — wird in Phase 2 angebunden",
     "embedKicker": "Kein CRM? Kein Problem",
     "embedTitle": "Ein iframe, überall einsetzbar.",
-    "embedBody": "Jeder gekaufte Rundgang erhält eine stabile Einbettungs-URL. Fügen Sie sie in jedes Immobilienportal ein, das einen eigenen iframe akzeptiert.",
+    "embedBody": "Jeder veröffentlichte Rundgang erhält eine stabile Embed-URL. Fügen Sie sie in jedes Portal ein, das ein eigenes iframe zulässt.",
     "cta": {
       "eyebrow": "Bringen Sie Ihr CRM mit",
       "title": "Sodar passt zu den Tools, die Sie bereits nutzen.",
@@ -785,7 +747,7 @@
       },
       {
         "title": "Mengenpreise",
-        "desc": "Der Preis pro Immobilie sinkt mit dem monatlichen Volumen Ihres Büros."
+        "desc": "Die Credit-Stufen werden pro Immobilie günstiger, je größer das monatliche Volumen Ihres Büros ist."
       },
       {
         "title": "Dedizierte CRM-Einrichtung",
@@ -803,19 +765,19 @@
     "priceKicker": "Preise, die mit der Menge sinken",
     "priceTitle1": "Mengenpreise,",
     "priceTitle2": "ein Vertrag.",
-    "priceBody": "Ein individueller Preis pro Immobilie basierend auf dem Monatsvolumen, plus eine feste Lizenzgebühr pro Makler. Sprechen Sie mit dem Vertrieb für ein Angebot in der Größe Ihres Büros.",
-    "priceNote": "Illustrativ, pro Immobilie",
+    "priceBody": "Ein Monatsplan, der auf das Volumen Ihres Büros zugeschnitten ist, plus Onboarding für jedes Büro. Sprechen Sie mit dem Vertrieb für ein Angebot — und fragen Sie nach dem Pilottarif.",
+    "priceNote": "Monatspläne, Credits pro Immobilie",
     "tiers": [
       {
-        "tier": "1–20 Immobilien / Monat",
-        "price": "ab 99 €"
+        "tier": "Bis 10 Immobilien / Monat",
+        "price": "Starter · 99 €"
       },
       {
-        "tier": "21–100 Immobilien / Monat",
-        "price": "ab 79 €"
+        "tier": "Bis 30 Immobilien / Monat",
+        "price": "Growth · 249 €"
       },
       {
-        "tier": "100+ Immobilien / Monat",
+        "tier": "Mehr als 30 / Monat",
         "price": "Individuell"
       }
     ],
@@ -910,27 +872,10 @@
     "metaDesc": "Offene Stellen bei Sodar.",
     "eyebrow": "Karriere",
     "title": "Helfen Sie, dass jedes Inserat richtig gerendert wird.",
-    "sub": "Kleines Team, frühe Phase, echte Makler scannen bereits Immobilien. Wir stellen in Rekonstruktion, Produkt und Go-to-Market ein.",
+    "sub": "Ein kleines Team in Tallinn, früh in der Entwicklung, in Zusammenarbeit mit Unternehmen in ganz Estland. Wir stellen in Rekonstruktion, Produkt und Vertrieb ein, während die Piloten wachsen.",
     "rolesKicker": "Offene Stellen",
-    "rolesTitle": "Aktuell gesucht.",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "Rekonstruktion",
-        "location": "Remote / Tallinn"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "Produkt",
-        "location": "Remote / Tallinn"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "Go-to-Market",
-        "location": "Tallinn"
-      }
-    ],
-    "noFit": "Nichts Passendes dabei? Schreiben Sie trotzdem an careers@sodar.io.",
+    "rolesTitle": "Wir stellen ein, während die Piloten wachsen.",
+    "noFit": "Schreiben Sie an careers@sodar.io, woran Sie arbeiten möchten.",
     "cta": {
       "eyebrow": "Noch keine passende Stelle?",
       "title": "Wir sind klein genug, dass eine E-Mail einen Gründer erreicht.",
@@ -938,38 +883,9 @@
       "label": "E-Mail an careers@sodar.io"
     }
   },
-  "BlogPage": {
-    "metaTitle": "Feldnotizen — Sodar",
-    "metaDesc": "Fallstudien von Maklern und Maklerbüros, die Immobilien mit Sodar scannen.",
-    "eyebrow": "Feldnotizen",
-    "title": "Fallstudien, keine Pressemitteilungen.",
-    "sub": "Was wirklich passiert, wenn eine Immobilie gescannt wird — geschrieben vom Team, das die Pipeline baut.",
-    "posts": [
-      {
-        "title": "Wie ein Tallinner Büro mit 4 Maklern die Inseratsvorbereitung auf 15 Minuten verkürzte",
-        "tag": "Fallstudie",
-        "read": "6 Min. Lesezeit"
-      },
-      {
-        "title": "Was wir nach den ersten 500 Rundgängen geändert haben",
-        "tag": "Produktnotizen",
-        "read": "4 Min. Lesezeit"
-      },
-      {
-        "title": "Raum-Engagement lesen: Was Viewer-Öffnungen wirklich verraten",
-        "tag": "Leitfaden",
-        "read": "5 Min. Lesezeit"
-      },
-      {
-        "title": "Warum die kostenlose Vorschau zwei Räume umfasst, nicht einen oder fünf",
-        "tag": "Produktnotizen",
-        "read": "3 Min. Lesezeit"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "Entwurf — Phase 1",
-    "notice": "Dies ist ein struktureller Platzhalter aus Phase 1, kein endgültiger Rechtstext.",
+    "updated": "In Vorbereitung",
+    "notice": "Dieses Dokument wird derzeit mit unserer Rechtsberatung finalisiert und vor dem Start hier vollständig veröffentlicht.",
     "englishOnly": "Rechtliche Dokumente werden derzeit nur auf Englisch veröffentlicht; die englische Fassung ist maßgeblich.",
     "titles": {
       "privacy": "Datenschutzerklärung",
@@ -1050,7 +966,6 @@
     "sentBody": "Wir antworten innerhalb eines Werktags.",
     "another": "Weitere senden",
     "error": "Senden fehlgeschlagen. Bitte schreiben Sie direkt an {email}.",
-    "fallbackNote": "Öffnet Ihr E-Mail-Programm, bis der Formulardienst verbunden ist.",
     "jobTitle": "Berufsbezeichnung",
     "phone": "Telefon",
     "countryCode": "Ländervorwahl",
@@ -1067,7 +982,9 @@
       "partnership": "CRM-Partnerschaft",
       "careers": "Karriere",
       "other": "Sonstiges"
-    }
+    },
+    "mailtoTitle": "Ihr E-Mail-Programm wurde geöffnet.",
+    "mailtoBody": "Die Nachricht ist bereit zum Senden von Ihrer eigenen Adresse. Wir antworten innerhalb eines Werktags."
   },
   "Intro": {
     "kicker": "Einführung",

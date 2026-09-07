@@ -17,7 +17,6 @@ export default async function CareersPage({ params }: Params) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("CareersPage");
-  const roles = t.raw("roles") as { title: string; team: string; location: string }[];
 
   return (
     <PageShell>
@@ -26,24 +25,7 @@ export default async function CareersPage({ params }: Params) {
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("rolesKicker")}</p>
         <h2 className="section-title mt-6">{t("rolesTitle")}</h2>
-        <div className="mt-14 divide-y divide-border border-y border-border">
-          {roles.map((r) => (
-            <a
-              key={r.title}
-              href={`mailto:careers@sodar.io?subject=${encodeURIComponent(r.title)}`}
-              className="group flex flex-col justify-between gap-2 py-6 sm:flex-row sm:items-center"
-            >
-              <div>
-                <p className="text-lg text-text">{r.title}</p>
-                <p className="mt-1 font-mono text-xs text-text-muted">{r.team}</p>
-              </div>
-              <div className="flex items-center gap-6">
-                <span className="text-sm text-text-muted">{r.location}</span>
-              </div>
-            </a>
-          ))}
-        </div>
-        <p className="mt-8 text-sm text-text-muted">{t("noFit")}</p>
+        <p className="mt-8 max-w-xl text-lg leading-relaxed text-text-muted">{t("noFit")}</p>
       </section>
 
       <CtaBanner eyebrow={t("cta.eyebrow")} title={t("cta.title")} subtitle={t("cta.sub")} ctaLabel={t("cta.label")} ctaHref="/careers" />

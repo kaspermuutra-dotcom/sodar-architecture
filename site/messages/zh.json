@@ -8,7 +8,7 @@
     "integrations": "集成",
     "partners": "合作伙伴",
     "pricing": "价格",
-    "signIn": "登录",
+    "signIn": "工作台",
     "getStarted": "扫描房源",
     "menu": "切换菜单",
     "home": "Sodar 首页",
@@ -73,7 +73,6 @@
     ],
     "ready": "就绪",
     "locked": "已锁定",
-    "photosOnly": "仅照片",
     "panels": {
       "capture": {
         "label": "拍摄",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "每月 · 随时取消",
-    "paidLabel": "已发布",
-    "paidBody": "其余 4 个房间正在处理。漫游完成后将通知您。",
-    "pay": "用 1 个点数发布",
-    "paying": "发布中…",
-    "mockNote": "演示——不消耗点数。",
     "crmHeader": "你的 CRM · 房源 #48213",
-    "publishBtn": "发布漫游",
     "publishedBtn": "已发布",
     "viewerBadge": "Sodar 查看器 · 360°",
     "listingMeta": "3 室 · 78 m² · €395,000",
     "status": "状态",
     "statusPublished": "已发布",
-    "statusReady": "就绪",
     "viewer": "查看器",
     "viewerEmbedded": "已嵌入",
-    "opened": "打开次数",
-    "openedValue": "128 位访客",
-    "planLabel": "平面图"
+    "planLabel": "平面图",
+    "plan": "方案",
+    "planValue": "Starter · 1 个点数"
   },
   "Capabilities": {
     "kicker": "交付内容",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "示意 · 尚未实测",
+    "kicker": "前后对比",
     "title": "一次扫描带来的差别。",
     "beforeLabel": "之前",
     "afterLabel": "之后 · 使用 Sodar",
@@ -224,7 +216,6 @@
     "cta": "查看经纪人工作台",
     "mock": {
       "title": "工作台",
-      "live": "实时预览",
       "properties": "房源",
       "cols": [
         "房源",
@@ -295,10 +286,7 @@
           "step": "手机拍摄中",
           "n": "—"
         }
-      ],
-      "week": "本周",
-      "weekTitle": "查看器打开 701 次",
-      "weekSub": "来自 2 段已发布的漫游"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "面向 CRM 服务商",
     "title": "把 Sodar 分销给你的经纪人网络。留下 15%。",
-    "body": "CRM 合作伙伴向其经纪人提供 Sodar，并从符合条件的漫游购买中获得 15% 分成——无最低门槛，自动结算。",
+    "body": "CRM 合作伙伴向其经纪人提供 Sodar，并从经由他们加入的经纪人的方案收入中获得 15% 分成——无门槛，自动结算。",
     "cta": "查看合作伙伴计划"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "成为合作伙伴",
             "/partners#apply"
-          ],
-          [
-            "合作伙伴面板",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "招聘",
             "/careers"
-          ],
-          [
-            "实地笔记",
-            "/blog"
           ],
           [
             "企业版",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "工作台预览 — Sodar",
     "metaDesc": "经纪人工作台的公开预览，无需登录。无真实数据。",
-    "eyebrow": "公开预览 · 无需登录，无真实数据",
+    "eyebrow": "工作台预览",
     "title": "每套房源、它的状态，以及谁打开了它。",
-    "sub": "这是每位经纪人都会获得的工作台的静态预览——房源、处理与发布状态，以及每段漫游的查看器被多少访客打开。",
+    "sub": "每位经纪人都会获得的工作台预览——房源、处理与发布状态，以及每条漫游被多少访客打开。",
     "cta": {
       "eyebrow": "发布后即属于你",
       "title": "你的工作台从空白开始——直到第一次扫描。",
@@ -658,7 +638,7 @@
     "metaDesc": "CRM 平台通过向其经纪人网络分销 Sodar，获得固定 15% 的分成。",
     "eyebrow": "面向 CRM 平台",
     "title": "把 Sodar 分销给你的经纪人。留下 15%。",
-    "sub": "你平台上的经纪人每购买一段符合条件的漫游，你都获得固定分成——无最低门槛，自动结算，除一个推荐链接外无需任何工程投入。",
+    "sub": "经由您的平台加入 Sodar 的每位经纪人，其方案收入的固定分成——无门槛，自动结算，除一条推荐链接外无需任何开发。",
     "apply": "申请成为合作伙伴",
     "stepsKicker": "运作方式",
     "stepsTitle": "三步获得固定分成。",
@@ -673,23 +653,7 @@
       },
       {
         "title": "获益",
-        "desc": "通过你的平台加入的经纪人每次符合条件的漫游购买，你获得 15%，按月结算。"
-      }
-    ],
-    "dashKicker": "合作伙伴面板",
-    "dashTitle": "在一处追踪推荐的经纪人和分成。",
-    "dash": [
-      {
-        "label": "推荐的经纪人",
-        "value": "142"
-      },
-      {
-        "label": "已购买的漫游",
-        "value": "3,018"
-      },
-      {
-        "label": "本月分成",
-        "value": "€6,240"
+        "desc": "经由您的平台加入的每位经纪人方案收入的 15%，按月结算。"
       }
     ],
     "applyKicker": "开始",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "有最低承诺吗？",
-        "a": "没有。15% 分成从第一段购买的漫游起即适用——没有数量门槛。"
+        "a": "没有。15% 分成从第一位订阅的经纪人起即生效——无用量门槛。"
       },
       {
         "q": "经纪人关系归谁？",
@@ -753,11 +717,9 @@
         "action": "即将推出"
       }
     ],
-    "notConnected": "状态：未连接",
-    "mockTitle": "演示连接——将在第二阶段接入",
     "embedKicker": "没有 CRM？没问题",
     "embedTitle": "一个 iframe，随处可放。",
-    "embedBody": "每段已购买的漫游都会获得稳定的嵌入 URL。把它粘贴到任何接受自定义 iframe 的房源门户中。",
+    "embedBody": "每条已发布的漫游都有稳定的嵌入链接。将它粘贴到任何支持自定义 iframe 的房源门户。",
     "cta": {
       "eyebrow": "带上你的 CRM",
       "title": "Sodar 适配你已在使用的工具。",
@@ -785,7 +747,7 @@
       },
       {
         "title": "批量价格",
-        "desc": "随着公司月度数量增长，每套房源的价格递减。"
+        "desc": "随着公司月度房源量增长，点数档位让每套房源的单价逐级降低。"
       },
       {
         "title": "专属 CRM 配置",
@@ -803,19 +765,19 @@
     "priceKicker": "随数量递减的价格",
     "priceTitle1": "批量价格，",
     "priceTitle2": "一份合同。",
-    "priceBody": "基于月度数量的定制单套价格，加上每位经纪人固定的席位费。联系销售获取适合你公司规模的报价。",
-    "priceNote": "示意，按房源",
+    "priceBody": "按公司房源量定制的月付方案，并为每家门店提供上线支持。联系销售获取报价——并询问试点价。",
+    "priceNote": "月付方案，按房源计点",
     "tiers": [
       {
-        "tier": "每月 1–20 套",
-        "price": "€99 起"
+        "tier": "每月 10 套以内",
+        "price": "Starter · 99 €"
       },
       {
-        "tier": "每月 21–100 套",
-        "price": "€79 起"
+        "tier": "每月 30 套以内",
+        "price": "Growth · 249 €"
       },
       {
-        "tier": "每月 100 套以上",
+        "tier": "每月 30 套以上",
         "price": "定制"
       }
     ],
@@ -910,27 +872,10 @@
     "metaDesc": "Sodar 的开放职位。",
     "eyebrow": "招聘",
     "title": "帮助每套房源都被正确呈现。",
-    "sub": "小团队，早期阶段，真实的经纪人已经在扫描房源。我们在重建、产品和市场拓展方向招聘。",
+    "sub": "位于塔林的小团队，处于早期阶段，正与爱沙尼亚各地企业合作。随着试点扩大，我们在重建、产品和市场方向招聘。",
     "rolesKicker": "开放职位",
-    "rolesTitle": "正在招聘。",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "重建",
-        "location": "远程 / 塔林"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "产品",
-        "location": "远程 / 塔林"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "市场拓展",
-        "location": "塔林"
-      }
-    ],
-    "noFit": "没有合适的职位？也欢迎写信至 careers@sodar.io。",
+    "rolesTitle": "随试点扩大而招聘。",
+    "noFit": "请写信至 careers@sodar.io，告诉我们您想做什么。",
     "cta": {
       "eyebrow": "还没有合适的职位？",
       "title": "我们足够小，一封邮件就能直达创始人。",
@@ -938,38 +883,9 @@
       "label": "写信至 careers@sodar.io"
     }
   },
-  "BlogPage": {
-    "metaTitle": "实地笔记 — Sodar",
-    "metaDesc": "来自使用 Sodar 扫描房源的经纪人和中介公司的案例研究。",
-    "eyebrow": "实地笔记",
-    "title": "案例研究，而非新闻稿。",
-    "sub": "房源被扫描时到底发生了什么——由构建这条流水线的团队撰写。",
-    "posts": [
-      {
-        "title": "一家四人塔林中介公司如何把房源准备时间缩短到 15 分钟",
-        "tag": "案例研究",
-        "read": "阅读 6 分钟"
-      },
-      {
-        "title": "前 500 段漫游之后我们改变了什么",
-        "tag": "产品笔记",
-        "read": "阅读 4 分钟"
-      },
-      {
-        "title": "解读房间互动：查看器打开次数究竟说明什么",
-        "tag": "指南",
-        "read": "阅读 5 分钟"
-      },
-      {
-        "title": "为什么免费预览是两个房间，而不是一个或五个",
-        "tag": "产品笔记",
-        "read": "阅读 3 分钟"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "草稿 — 第一阶段",
-    "notice": "这是第一阶段的结构占位内容，并非最终法律文本。",
+    "updated": "准备中",
+    "notice": "本文件正在与我们的法律顾问共同完善，将在上线前在此完整发布。",
     "englishOnly": "法律文件目前仅以英文发布；以英文版本为准。",
     "titles": {
       "privacy": "隐私政策",
@@ -1050,7 +966,6 @@
     "sentBody": "我们会在一个工作日内回复。",
     "another": "再发一条",
     "error": "发送失败。请直接发送邮件至 {email}。",
-    "fallbackNote": "在表单服务接入前，将打开你的邮件应用。",
     "jobTitle": "职位",
     "phone": "电话",
     "countryCode": "国家代码",
@@ -1067,7 +982,9 @@
       "partnership": "CRM 合作",
       "careers": "招聘",
       "other": "其他"
-    }
+    },
+    "mailtoTitle": "您的邮件应用已打开。",
+    "mailtoBody": "邮件已准备好从您自己的邮箱发送。我们会在一个工作日内回复。"
   },
   "Intro": {
     "kicker": "简介",

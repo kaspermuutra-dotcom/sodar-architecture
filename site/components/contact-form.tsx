@@ -23,7 +23,7 @@ const TO: Record<Audience, string> = { team: TEAM_EMAIL, privacy: PRIVACY_EMAIL 
  */
 export function ContactForm({ audience = "team" }: { audience?: Audience }) {
   const t = useTranslations("Contact");
-  const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [state, setState] = useState<"idle" | "sending" | "sent" | "mailto" | "error">("idle");
   const [dial, setDial] = useState("+372");
   const formId = FORMSPREE[audience];
   const to = TO[audience];
@@ -45,7 +45,7 @@ export function ContactForm({ audience = "team" }: { audience?: Audience }) {
         raw.message,
       ].join("\n");
       window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      setState("sent");
+      setState("mailto");
       return;
     }
     setState("sending");
@@ -98,10 +98,10 @@ export function ContactForm({ audience = "team" }: { audience?: Audience }) {
         </dl>
       </div>
 
-      {state === "sent" ? (
+      {state === "sent" || state === "mailto" ? (
         <div className="rounded-2xl border border-border bg-bg-raised p-8">
-          <p className="display text-3xl text-text">{t("sent")}</p>
-          <p className="mt-3 text-text-muted">{t("sentBody")}</p>
+          <p className="display text-3xl text-text">{t(state === "mailto" ? "mailtoTitle" : "sent")}</p>
+          <p className="mt-3 text-text-muted">{t(state === "mailto" ? "mailtoBody" : "sentBody")}</p>
           <button type="button" onClick={() => setState("idle")} className="button-secondary mt-8">{t("another")}</button>
         </div>
       ) : (
@@ -182,7 +182,6 @@ export function ContactForm({ audience = "team" }: { audience?: Audience }) {
           <button type="submit" disabled={state === "sending"} className="button-primary mt-7 w-full">
             {state === "sending" ? t("sending") : t("submit")}
           </button>
-          {!formId ? <p className="mt-3 text-center text-xs text-text-faint">{t("fallbackNote")}</p> : null}
         </form>
       )}
     </div>

@@ -32,16 +32,8 @@ export default async function IntegrationsPage({ params }: Params) {
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
           {conns.map((c) => (
             <div key={c.name} className="flex items-center justify-between gap-4 bg-bg p-6">
-              <div>
-                <p className="text-text">{c.name}</p>
-                <p className="mt-1 font-mono text-[11px] text-text-muted">
-                  {/* TODO(phase-2): real CRM OAuth / API-key issuance flow. */}
-                  {t("notConnected")}
-                </p>
-              </div>
-              <button type="button" disabled title={t("mockTitle")} className="button-mini shrink-0 opacity-60">
-                {c.action}
-              </button>
+              <p className="text-text">{c.name}</p>
+              <span className="shrink-0 text-xs text-text-muted">{c.action}</span>
             </div>
           ))}
         </div>

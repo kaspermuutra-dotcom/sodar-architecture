@@ -8,7 +8,7 @@
     "integrations": "Integracijos",
     "partners": "Partneriai",
     "pricing": "Kainos",
-    "signIn": "Prisijungti",
+    "signIn": "Darbo erdvė",
     "getStarted": "Skenuoti būstą",
     "menu": "Atidaryti meniu",
     "home": "Sodar pradžia",
@@ -73,7 +73,6 @@
     ],
     "ready": "Paruošta",
     "locked": "Užrakinta",
-    "photosOnly": "Tik nuotraukos",
     "panels": {
       "capture": {
         "label": "Įrašymas",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "per mėnesį · nutraukite bet kada",
-    "paidLabel": "Paskelbta",
-    "paidBody": "Likę 4 kambariai apdorojami. Pranešime, kai turas bus baigtas.",
-    "pay": "Paskelbti su 1 kreditu",
-    "paying": "Skelbiama…",
-    "mockNote": "Demonstracija — kreditas nenaudojamas.",
     "crmHeader": "Jūsų CRM · Skelbimas #48213",
-    "publishBtn": "Publikuoti apžvalgą",
     "publishedBtn": "Publikuota",
     "viewerBadge": "Sodar peržiūra · 360°",
     "listingMeta": "3 kambariai · 78 m² · 395 000 €",
     "status": "būsena",
     "statusPublished": "publikuota",
-    "statusReady": "paruošta",
     "viewer": "peržiūra",
     "viewerEmbedded": "įterpta",
-    "opened": "atidaryta",
-    "openedValue": "128 lankytojai",
-    "planLabel": "Planas"
+    "planLabel": "Planas",
+    "plan": "Planas",
+    "planValue": "Starter · 1 kreditas"
   },
   "Capabilities": {
     "kicker": "Ką gaunate",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "Iliustracija · dar neišmatuota",
+    "kicker": "Prieš ir po",
     "title": "Skirtumas, kurį daro skenavimas.",
     "beforeLabel": "Prieš",
     "afterLabel": "Po · su Sodar",
@@ -224,7 +216,6 @@
     "cta": "Peržiūrėti brokerio darbo erdvę",
     "mock": {
       "title": "Darbo erdvė",
-      "live": "Tiesioginė peržiūra",
       "properties": "Būstai",
       "cols": [
         "Būstas",
@@ -295,10 +286,7 @@
           "step": "Įrašoma telefone",
           "n": "—"
         }
-      ],
-      "week": "Šią savaitę",
-      "weekTitle": "701 peržiūros atidarymas",
-      "weekSub": "2 publikuotose apžvalgose"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "CRM tiekėjams",
     "title": "Platinkite Sodar savo brokerių tinkle. Pasilikite 15 %.",
-    "body": "CRM partneriai suteikia Sodar savo brokeriams ir gauna 15 % maržą nuo tinkamų apžvalgų pirkimų — be minimumo, išmokama automatiškai.",
+    "body": "CRM partneriai suteikia Sodar savo brokeriams ir gauna 15 % maržą nuo per juos prisijungusių brokerių planų pajamų — be minimumo, išmokama automatiškai.",
     "cta": "Peržiūrėti partnerių programą"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "Tapti partneriu",
             "/partners#apply"
-          ],
-          [
-            "Partnerio skydelis",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "Karjera",
             "/careers"
-          ],
-          [
-            "Lauko užrašai",
-            "/blog"
           ],
           [
             "Verslui",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "Darbo erdvės peržiūra — Sodar",
     "metaDesc": "Vieša, be prisijungimo pasiekiama brokerio darbo erdvės peržiūra. Be tikrų duomenų.",
-    "eyebrow": "Vieša peržiūra · be prisijungimo, be tikrų duomenų",
+    "eyebrow": "Darbo erdvės peržiūra",
     "title": "Kiekvienas būstas, jo būsena ir kas jį atidarė.",
-    "sub": "Tai statinė darbo erdvės, kurią gauna kiekvienas brokeris, peržiūra — būstai, apdorojimo ir publikavimo būsena ir kiek lankytojų atidarė kiekvienos apžvalgos peržiūros priemonę.",
+    "sub": "Darbo erdvės, kurią gauna kiekvienas brokeris, peržiūra — objektai, apdorojimo ir skelbimo būsena ir kiek lankytojų atidarė kiekvieną turą.",
     "cta": {
       "eyebrow": "Jūsų, vos publikuosite",
       "title": "Jūsų darbo erdvė prasideda tuščia — iki pirmo skenavimo.",
@@ -658,7 +638,7 @@
     "metaDesc": "CRM platformos uždirba nuolatinę 15 % maržą platindamos Sodar savo brokerių tinkle.",
     "eyebrow": "CRM platformoms",
     "title": "Platinkite Sodar savo brokeriams. Pasilikite 15 %.",
-    "sub": "Nuolatinė marža nuo kiekvienos tinkamos apžvalgos, kurią perka jūsų platformos brokeriai — be minimumo, išmokama automatiškai, be programavimo darbų, išskyrus rekomendacijos nuorodą.",
+    "sub": "Nuolatinė marža nuo kiekvieno per jūsų platformą prie Sodar prisijungusio brokerio planų pajamų — be minimumo, išmokama automatiškai, be jokio kūrimo darbo, tik nuorodos.",
     "apply": "Teikti paraišką partneriauti",
     "stepsKicker": "Kaip tai veikia",
     "stepsTitle": "Trys žingsniai iki nuolatinės maržos.",
@@ -673,23 +653,7 @@
       },
       {
         "title": "Uždirbkite",
-        "desc": "15 % nuo kiekvieno tinkamo apžvalgos pirkimo, kurį atlieka per jūsų platformą prisijungęs brokeris, išmokama kas mėnesį."
-      }
-    ],
-    "dashKicker": "Partnerio skydelis",
-    "dashTitle": "Stebėkite rekomenduotus brokerius ir maržą vienoje vietoje.",
-    "dash": [
-      {
-        "label": "Rekomenduoti brokeriai",
-        "value": "142"
-      },
-      {
-        "label": "Nupirktos apžvalgos",
-        "value": "3 018"
-      },
-      {
-        "label": "Marža šį mėnesį",
-        "value": "6 240 €"
+        "desc": "15 % kiekvieno per jūsų platformą prisijungusio brokerio planų pajamų, išmokama kas mėnesį."
       }
     ],
     "applyKicker": "Pradėkite",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "Ar yra minimalus įsipareigojimas?",
-        "a": "Ne. 15 % marža taikoma nuo pirmos nupirktos apžvalgos — be apimties slenksčio."
+        "a": "Ne. 15 % marža galioja nuo pirmo užsisakiusio brokerio — be kiekio ribos."
       },
       {
         "q": "Kam priklauso santykiai su brokeriu?",
@@ -753,11 +717,9 @@
         "action": "Netrukus"
       }
     ],
-    "notConnected": "būsena: neprijungta",
-    "mockTitle": "Demonstracinis ryšys — bus prijungtas 2 etape",
     "embedKicker": "Nėra CRM? Ne bėda",
     "embedTitle": "Vienas iframe, įdedamas bet kur.",
-    "embedBody": "Kiekviena nupirkta apžvalga gauna stabilų įterpimo URL. Įklijuokite jį į bet kurį skelbimų portalą, priimantį individualų iframe.",
+    "embedBody": "Kiekvienas paskelbtas turas gauna pastovų įterpimo URL. Įklijuokite jį į bet kurį portalą, priimantį pasirinktinį iframe.",
     "cta": {
       "eyebrow": "Atsineškite savo CRM",
       "title": "Sodar dera su įrankiais, kuriuos jau naudojate.",
@@ -785,7 +747,7 @@
       },
       {
         "title": "Apimties kainos",
-        "desc": "Kaina už būstą mažėja augant jūsų agentūros mėnesio apimčiai."
+        "desc": "Kreditų lygiai mažina kainą už objektą, kai auga jūsų agentūros mėnesinis kiekis."
       },
       {
         "title": "Individualus CRM nustatymas",
@@ -803,20 +765,20 @@
     "priceKicker": "Kainos, mažėjančios su apimtimi",
     "priceTitle1": "Apimties kainos,",
     "priceTitle2": "viena sutartis.",
-    "priceBody": "Individualus tarifas už būstą pagal mėnesio apimtį, plius fiksuotas mokestis už kiekvieną brokerio vietą. Susisiekite su pardavimais dėl jūsų agentūrai pritaikyto pasiūlymo.",
-    "priceNote": "Iliustracija, už būstą",
+    "priceBody": "Mėnesinis planas pagal jūsų agentūros kiekį ir įdiegimas kiekvienam biurui. Kreipkitės į pardavimus dėl pasiūlymo — ir paklauskite pilotinės kainos.",
+    "priceNote": "Mėnesiniai planai, kreditai objektui",
     "tiers": [
       {
-        "tier": "1–20 būstų / mėn.",
-        "price": "nuo 99 €"
+        "tier": "Iki 10 objektų / mėn.",
+        "price": "Starter · 99 €"
       },
       {
-        "tier": "21–100 būstų / mėn.",
-        "price": "nuo 79 €"
+        "tier": "Iki 30 objektų / mėn.",
+        "price": "Growth · 249 €"
       },
       {
-        "tier": "100+ būstų / mėn.",
-        "price": "Individualiai"
+        "tier": "Daugiau nei 30 / mėn.",
+        "price": "Pagal susitarimą"
       }
     ],
     "cta": {
@@ -910,27 +872,10 @@
     "metaDesc": "Laisvos vietos Sodar.",
     "eyebrow": "Karjera",
     "title": "Padėkite kiekvienam skelbimui tinkamai atsivaizduoti.",
-    "sub": "Maža komanda, ankstyvas etapas, tikri brokeriai jau skenuoja būstus. Samdome rekonstrukcijos, produkto ir go-to-market srityse.",
+    "sub": "Maža komanda Taline, ankstyvoje stadijoje, dirbanti su įmonėmis visoje Estijoje. Samdome rekonstrukcijos, produkto ir pardavimų sritims, kai pilotai auga.",
     "rolesKicker": "Laisvos vietos",
-    "rolesTitle": "Šiuo metu ieškome.",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "Rekonstrukcija",
-        "location": "Nuotoliniu būdu / Talinas"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "Produktas",
-        "location": "Nuotoliniu būdu / Talinas"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "Go-to-market",
-        "location": "Talinas"
-      }
-    ],
-    "noFit": "Nerandate tinkamos? Vis tiek rašykite careers@sodar.io.",
+    "rolesTitle": "Samdome augant pilotams.",
+    "noFit": "Parašykite careers@sodar.io, ką norėtumėte veikti.",
     "cta": {
       "eyebrow": "Dar nėra tinkamos pozicijos?",
       "title": "Esame pakankamai maži, kad vienas laiškas pasiektų įkūrėją.",
@@ -938,38 +883,9 @@
       "label": "Rašyti careers@sodar.io"
     }
   },
-  "BlogPage": {
-    "metaTitle": "Lauko užrašai — Sodar",
-    "metaDesc": "Brokerių ir agentūrų, skenuojančių būstus su Sodar, atvejų analizės.",
-    "eyebrow": "Lauko užrašai",
-    "title": "Atvejų analizės, o ne pranešimai spaudai.",
-    "sub": "Kas iš tikrųjų vyksta, kai būstas skenuojamas — parašyta procesą kuriančios komandos.",
-    "posts": [
-      {
-        "title": "Kaip 4 brokerių Talino agentūra sutrumpino skelbimo parengimą iki 15 minučių",
-        "tag": "Atvejo analizė",
-        "read": "6 min skaitymo"
-      },
-      {
-        "title": "Ką pakeitėme po pirmų 500 apžvalgų",
-        "tag": "Produkto užrašai",
-        "read": "4 min skaitymo"
-      },
-      {
-        "title": "Kaip skaityti kambarių susidomėjimą: ką iš tikrųjų sako peržiūros atidarymai",
-        "tag": "Vadovas",
-        "read": "5 min skaitymo"
-      },
-      {
-        "title": "Kodėl nemokama peržiūra — du kambariai, o ne vienas ar penki",
-        "tag": "Produkto užrašai",
-        "read": "3 min skaitymo"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "Juodraštis — 1 etapas",
-    "notice": "Tai 1 etapo struktūrinis pakaitalas, o ne galutinis teisinis tekstas.",
+    "updated": "Rengiama",
+    "notice": "Šis dokumentas baigiamas rengti su mūsų teisininkais ir visas bus paskelbtas čia prieš paleidimą.",
     "englishOnly": "Teisiniai dokumentai šiuo metu skelbiami tik anglų kalba; galioja angliška versija.",
     "titles": {
       "privacy": "Privatumo politika",
@@ -1050,7 +966,6 @@
     "sentBody": "Atsakome per vieną darbo dieną.",
     "another": "Siųsti kitą",
     "error": "Išsiųsti nepavyko. Rašykite tiesiogiai adresu {email}.",
-    "fallbackNote": "Atidaro jūsų el. pašto programą, kol formų paslauga dar neprijungta.",
     "jobTitle": "Pareigos",
     "phone": "Telefonas",
     "countryCode": "Šalies kodas",
@@ -1067,7 +982,9 @@
       "partnership": "CRM partnerystė",
       "careers": "Karjera",
       "other": "Kita"
-    }
+    },
+    "mailtoTitle": "Atsidarė jūsų pašto programa.",
+    "mailtoBody": "Žinutė paruošta siųsti iš jūsų adreso. Atsakome per vieną darbo dieną."
   },
   "Intro": {
     "kicker": "Įžanga",

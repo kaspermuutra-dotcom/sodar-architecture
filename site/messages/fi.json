@@ -8,7 +8,7 @@
     "integrations": "Integraatiot",
     "partners": "Kumppanit",
     "pricing": "Hinnat",
-    "signIn": "Kirjaudu",
+    "signIn": "Työtila",
     "getStarted": "Skannaa kohde",
     "menu": "Avaa valikko",
     "home": "Sodarin etusivu",
@@ -73,7 +73,6 @@
     ],
     "ready": "Valmis",
     "locked": "Lukittu",
-    "photosOnly": "Vain kuvat",
     "panels": {
       "capture": {
         "label": "Kuvaus",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "kuukaudessa · peru milloin vain",
-    "paidLabel": "Julkaistu",
-    "paidBody": "Loput 4 huonetta käsitellään. Ilmoitamme, kun kierros on valmis.",
-    "pay": "Julkaise 1 krediitillä",
-    "paying": "Julkaistaan…",
-    "mockNote": "Demo — krediittiä ei käytetä.",
     "crmHeader": "Sinun CRM · Ilmoitus #48213",
-    "publishBtn": "Julkaise kierros",
     "publishedBtn": "Julkaistu",
     "viewerBadge": "Sodar-katselin · 360°",
     "listingMeta": "3 huonetta · 78 m² · 395 000 €",
     "status": "tila",
     "statusPublished": "julkaistu",
-    "statusReady": "valmis",
     "viewer": "katselin",
     "viewerEmbedded": "upotettu",
-    "opened": "avattu",
-    "openedValue": "128 kävijää",
-    "planLabel": "Pohjapiirros"
+    "planLabel": "Pohjapiirros",
+    "plan": "Paketti",
+    "planValue": "Starter · 1 krediitti"
   },
   "Capabilities": {
     "kicker": "Mitä toimitetaan",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "Havainnollistava · ei vielä mitattu",
+    "kicker": "Ennen ja jälkeen",
     "title": "Ero, jonka skannaus tekee.",
     "beforeLabel": "Ennen",
     "afterLabel": "Jälkeen · Sodarin kanssa",
@@ -224,7 +216,6 @@
     "cta": "Katso välittäjän työtila",
     "mock": {
       "title": "Työtila",
-      "live": "Live-esikatselu",
       "properties": "Kohteet",
       "cols": [
         "Kohde",
@@ -295,10 +286,7 @@
           "step": "Kuvataan puhelimella",
           "n": "—"
         }
-      ],
-      "week": "Tällä viikolla",
-      "weekTitle": "701 katselimen avausta",
-      "weekSub": "2 julkaistussa kierroksessa"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "CRM-toimittajille",
     "title": "Jakele Sodaria välittäjäverkostollesi. Pidä 15 %.",
-    "body": "CRM-kumppanit tarjoavat Sodarin välittäjilleen ja saavat 15 %:n katteen hyväksytyistä kierrosostoista — ei minimiä, maksetaan automaattisesti.",
+    "body": "CRM-kumppanit tarjoavat Sodarin välittäjilleen ja saavat 15 %:n marginaalin heidän kauttaan liittyneiden välittäjien pakettituloista — ilman minimiä, automaattisesti maksettuna.",
     "cta": "Katso kumppaniohjelma"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "Ryhdy kumppaniksi",
             "/partners#apply"
-          ],
-          [
-            "Kumppanin hallintapaneeli",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "Ura",
             "/careers"
-          ],
-          [
-            "Kenttämuistiinpanot",
-            "/blog"
           ],
           [
             "Yrityksille",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "Työtilan esikatselu — Sodar",
     "metaDesc": "Julkinen, kirjautumaton esikatselu välittäjän työtilasta. Ei oikeaa dataa.",
-    "eyebrow": "Julkinen esikatselu · ei kirjautumista, ei oikeaa dataa",
+    "eyebrow": "Työtilan esikatselu",
     "title": "Jokainen kohde, sen tila ja kuka sen avasi.",
-    "sub": "Tämä on staattinen esikatselu työtilasta, jonka jokainen välittäjä saa — kohteet, käsittelyn ja julkaisun tila sekä kuinka moni kävijä avasi kunkin kierroksen katselimen.",
+    "sub": "Esikatselu työtilasta, jonka jokainen välittäjä saa — kohteet, käsittelyn ja julkaisun tila sekä kuinka moni kävijä avasi kunkin kierroksen.",
     "cta": {
       "eyebrow": "Sinun heti kun julkaiset",
       "title": "Työtilasi alkaa tyhjänä — ensimmäiseen skannaukseesi asti.",
@@ -658,7 +638,7 @@
     "metaDesc": "CRM-alustat ansaitsevat kiinteän 15 %:n katteen jakelemalla Sodaria välittäjäverkostolleen.",
     "eyebrow": "CRM-alustoille",
     "title": "Jakele Sodaria välittäjillesi. Pidä 15 %.",
-    "sub": "Kiinteä kate jokaisesta hyväksytystä kierroksesta, jonka alustasi välittäjät ostavat — ei minimiä, maksetaan automaattisesti, ei kehitystyötä suosittelulinkin lisäksi.",
+    "sub": "Pysyvä marginaali jokaisen alustasi kautta Sodariin liittyvän välittäjän pakettituloista — ilman minimiä, automaattisesti maksettuna, ilman muuta kehitystyötä kuin suosittelulinkki.",
     "apply": "Hae kumppaniksi",
     "stepsKicker": "Miten se toimii",
     "stepsTitle": "Kolme askelta kiinteään katteeseen.",
@@ -673,23 +653,7 @@
       },
       {
         "title": "Ansaitse",
-        "desc": "15 % jokaisesta hyväksytystä kierrosostosta välittäjältä, joka liittyi alustasi kautta, maksettuna kuukausittain."
-      }
-    ],
-    "dashKicker": "Kumppanin hallintapaneeli",
-    "dashTitle": "Seuraa suositeltuja välittäjiä ja katetta yhdessä paikassa.",
-    "dash": [
-      {
-        "label": "Suositellut välittäjät",
-        "value": "142"
-      },
-      {
-        "label": "Ostetut kierrokset",
-        "value": "3 018"
-      },
-      {
-        "label": "Kate tässä kuussa",
-        "value": "6 240 €"
+        "desc": "15 % jokaisen alustasi kautta liittyneen välittäjän pakettituloista, maksetaan kuukausittain."
       }
     ],
     "applyKicker": "Aloita",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "Onko minimisitoumusta?",
-        "a": "Ei. 15 %:n kate koskee ensimmäisestä ostetusta kierroksesta alkaen — ei volyymialarajaa."
+        "a": "Ei. 15 %:n marginaali on voimassa ensimmäisestä tilaavasta välittäjästä alkaen — ilman määrärajaa."
       },
       {
         "q": "Kuka omistaa välittäjäsuhteen?",
@@ -753,11 +717,9 @@
         "action": "Tulossa"
       }
     ],
-    "notConnected": "tila: ei yhdistetty",
-    "mockTitle": "Demoyhteys — kytketään vaiheessa 2",
     "embedKicker": "Ei CRM:ää? Ei hätää",
     "embedTitle": "Yksi iframe, minne tahansa.",
-    "embedBody": "Jokainen ostettu kierros saa pysyvän upotus-URL:n. Liitä se mihin tahansa kiinteistöportaaliin, joka hyväksyy oman iframen.",
+    "embedBody": "Jokainen julkaistu kierros saa pysyvän upotus-URL:n. Liitä se mihin tahansa ilmoitusportaaliin, joka hyväksyy mukautetun iframen.",
     "cta": {
       "eyebrow": "Tuo oma CRM:si",
       "title": "Sodar sopii työkaluihin, joita jo käytät.",
@@ -785,7 +747,7 @@
       },
       {
         "title": "Volyymihinnat",
-        "desc": "Kohdekohtainen hinta laskee liikkeesi kuukausivolyymin kasvaessa."
+        "desc": "Krediittitasot laskevat hintaa kohdetta kohden, kun toimistosi kuukausimäärä kasvaa."
       },
       {
         "title": "Oma CRM-käyttöönotto",
@@ -803,20 +765,20 @@
     "priceKicker": "Hinnat, jotka laskevat volyymin myötä",
     "priceTitle1": "Volyymihinnat,",
     "priceTitle2": "yksi sopimus.",
-    "priceBody": "Räätälöity kohdekohtainen hinta kuukausivolyymin perusteella sekä kiinteä paikkamaksu per välittäjä. Ota yhteyttä myyntiin saadaksesi liikkeesi kokoisen tarjouksen.",
-    "priceNote": "Havainnollistava, per kohde",
+    "priceBody": "Toimistosi määrän mukaan mitoitettu kuukausipaketti sekä käyttöönotto jokaiselle toimipisteelle. Pyydä tarjous myynnistä — ja kysy pilottihintaa.",
+    "priceNote": "Kuukausipaketit, krediitit kohdetta kohden",
     "tiers": [
       {
-        "tier": "1–20 kohdetta / kk",
-        "price": "alkaen 99 €"
+        "tier": "Enintään 10 kohdetta / kk",
+        "price": "Starter · 99 €"
       },
       {
-        "tier": "21–100 kohdetta / kk",
-        "price": "alkaen 79 €"
+        "tier": "Enintään 30 kohdetta / kk",
+        "price": "Growth · 249 €"
       },
       {
-        "tier": "100+ kohdetta / kk",
-        "price": "Räätälöity"
+        "tier": "Yli 30 / kk",
+        "price": "Sopimuksen mukaan"
       }
     ],
     "cta": {
@@ -910,27 +872,10 @@
     "metaDesc": "Avoimet paikat Sodarilla.",
     "eyebrow": "Ura",
     "title": "Auta jokaista ilmoitusta renderöitymään kunnolla.",
-    "sub": "Pieni tiimi, varhainen vaihe, oikeat välittäjät skannaavat jo kohteita. Rekrytoimme rekonstruktioon, tuotteeseen ja go-to-marketiin.",
+    "sub": "Pieni tiimi Tallinnassa, varhaisessa vaiheessa, yhteistyössä yritysten kanssa eri puolilla Viroa. Rekrytoimme rekonstruktioon, tuotteeseen ja myyntiin pilottien kasvaessa.",
     "rolesKicker": "Avoimet paikat",
-    "rolesTitle": "Rekrytoimme nyt.",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "Rekonstruktio",
-        "location": "Etä / Tallinna"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "Tuote",
-        "location": "Etä / Tallinna"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "Go-to-market",
-        "location": "Tallinna"
-      }
-    ],
-    "noFit": "Eikö sopivaa löydy? Kirjoita silti osoitteeseen careers@sodar.io.",
+    "rolesTitle": "Rekrytoimme pilottien kasvaessa.",
+    "noFit": "Kirjoita osoitteeseen careers@sodar.io, mitä haluaisit tehdä.",
     "cta": {
       "eyebrow": "Ei vielä sopivaa roolia?",
       "title": "Olemme niin pieniä, että yksi sähköposti tavoittaa perustajan.",
@@ -938,38 +883,9 @@
       "label": "Lähetä sähköpostia careers@sodar.io"
     }
   },
-  "BlogPage": {
-    "metaTitle": "Kenttämuistiinpanot — Sodar",
-    "metaDesc": "Tapaustutkimuksia välittäjiltä ja välitysliikkeiltä, jotka skannaavat kohteita Sodarilla.",
-    "eyebrow": "Kenttämuistiinpanot",
-    "title": "Tapaustutkimuksia, ei lehdistötiedotteita.",
-    "sub": "Mitä oikeasti tapahtuu, kun kohde skannataan — putkea rakentavan tiimin kirjoittamana.",
-    "posts": [
-      {
-        "title": "Miten neljän välittäjän tallinnalainen liike lyhensi ilmoituksen valmistelun 15 minuuttiin",
-        "tag": "Tapaustutkimus",
-        "read": "6 min lukuaika"
-      },
-      {
-        "title": "Mitä muutimme ensimmäisten 500 kierroksen jälkeen",
-        "tag": "Tuotemuistiinpanot",
-        "read": "4 min lukuaika"
-      },
-      {
-        "title": "Huonekohtaisen kiinnostuksen lukeminen: mitä katselimen avaukset oikeasti kertovat",
-        "tag": "Opas",
-        "read": "5 min lukuaika"
-      },
-      {
-        "title": "Miksi ilmainen esikatselu on kaksi huonetta, ei yksi tai viisi",
-        "tag": "Tuotemuistiinpanot",
-        "read": "3 min lukuaika"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "Luonnos — vaihe 1",
-    "notice": "Tämä on vaiheen 1 rakenteellinen paikkamerkki, ei lopullinen oikeudellinen teksti.",
+    "updated": "Valmisteilla",
+    "notice": "Tätä asiakirjaa viimeistellään lakimiestemme kanssa, ja se julkaistaan täällä kokonaisuudessaan ennen lanseerausta.",
     "englishOnly": "Oikeudelliset asiakirjat julkaistaan toistaiseksi vain englanniksi; englanninkielinen versio on määräävä.",
     "titles": {
       "privacy": "Tietosuojakäytäntö",
@@ -1050,7 +966,6 @@
     "sentBody": "Vastaamme yhden työpäivän kuluessa.",
     "another": "Lähetä toinen",
     "error": "Lähetys epäonnistui. Kirjoita suoraan osoitteeseen {email}.",
-    "fallbackNote": "Avaa sähköpostisovelluksesi, kunnes lomakepalvelu on kytketty.",
     "jobTitle": "Tehtävänimike",
     "phone": "Puhelin",
     "countryCode": "Maakoodi",
@@ -1067,7 +982,9 @@
       "partnership": "CRM-kumppanuus",
       "careers": "Työpaikat",
       "other": "Muu"
-    }
+    },
+    "mailtoTitle": "Sähköpostisovelluksesi avautui.",
+    "mailtoBody": "Viesti on valmis lähetettäväksi omasta osoitteestasi. Vastaamme yhden työpäivän kuluessa."
   },
   "Intro": {
     "kicker": "Esittely",

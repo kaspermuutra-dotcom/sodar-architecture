@@ -8,7 +8,7 @@
     "integrations": "Integrations",
     "partners": "Partners",
     "pricing": "Pricing",
-    "signIn": "Log in",
+    "signIn": "Workspace",
     "getStarted": "Scan a property",
     "menu": "Toggle menu",
     "home": "Sodar home",
@@ -73,7 +73,6 @@
     ],
     "ready": "Ready",
     "locked": "Locked",
-    "photosOnly": "Photos only",
     "panels": {
       "capture": {
         "label": "Capture",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "per month · cancel any time",
-    "paidLabel": "Published",
-    "paidBody": "The remaining 4 rooms are processing. You’ll be notified when the walkthrough is complete.",
-    "pay": "Publish with 1 credit",
-    "paying": "Publishing…",
-    "mockNote": "Demo — no credit is used.",
     "crmHeader": "Your CRM · Listing #48213",
-    "publishBtn": "Publish walkthrough",
     "publishedBtn": "Published",
     "viewerBadge": "Sodar viewer · 360°",
     "listingMeta": "3 rooms · 78 m² · €395,000",
     "status": "status",
     "statusPublished": "published",
-    "statusReady": "ready",
     "viewer": "viewer",
     "viewerEmbedded": "embedded",
-    "opened": "opened",
-    "openedValue": "128 visitors",
-    "planLabel": "Floor plan"
+    "planLabel": "Floor plan",
+    "plan": "Plan",
+    "planValue": "Starter · 1 credit"
   },
   "Capabilities": {
     "kicker": "What ships",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "Illustrative · not measured yet",
+    "kicker": "Before and after",
     "title": "The difference a scan makes.",
     "beforeLabel": "Before",
     "afterLabel": "After · with Sodar",
@@ -224,7 +216,6 @@
     "cta": "See the broker workspace",
     "mock": {
       "title": "Workspace",
-      "live": "Live preview",
       "properties": "Properties",
       "cols": [
         "Property",
@@ -295,10 +286,7 @@
           "step": "Capturing on phone",
           "n": "—"
         }
-      ],
-      "week": "This week",
-      "weekTitle": "701 viewer opens",
-      "weekSub": "across 2 published walkthroughs"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "For CRM providers",
     "title": "Distribute Sodar to your broker network. Keep 15%.",
-    "body": "CRM partners make Sodar available to their brokers and receive a 15% margin on qualifying walkthrough purchases — no minimum, paid out automatically.",
+    "body": "CRM partners make Sodar available to their brokers and receive a 15% margin on the plan revenue of brokers who joined through them — no minimum, paid out automatically.",
     "cta": "See the partner program"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "Become a partner",
             "/partners#apply"
-          ],
-          [
-            "Partner dashboard",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "Careers",
             "/careers"
-          ],
-          [
-            "Field notes",
-            "/blog"
           ],
           [
             "Enterprise",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "Workspace preview — Sodar",
     "metaDesc": "A public, unauthenticated preview of the broker workspace. No real data.",
-    "eyebrow": "Public preview · no login, no real data",
+    "eyebrow": "Workspace preview",
     "title": "Every property, its status, and who opened it.",
-    "sub": "This is a static preview of the workspace every broker gets — properties, processing and publication status, and how many visitors opened each walkthrough viewer.",
+    "sub": "A preview of the workspace every broker gets — properties, processing and publication status, and how many visitors opened each walkthrough viewer.",
     "cta": {
       "eyebrow": "Yours once you publish",
       "title": "Your workspace starts empty — until your first scan.",
@@ -658,7 +638,7 @@
     "metaDesc": "CRM platforms earn a standing 15% margin distributing Sodar to their broker network.",
     "eyebrow": "For CRM platforms",
     "title": "Distribute Sodar to your brokers. Keep 15%.",
-    "sub": "A standing margin on every qualifying walkthrough your platform’s brokers purchase — no minimum, paid out automatically, no engineering lift beyond a referral link.",
+    "sub": "A standing margin on the plan revenue of every broker who joins Sodar through your platform — no minimum, paid out automatically, no engineering lift beyond a referral link.",
     "apply": "Apply as a partner",
     "stepsKicker": "How it works",
     "stepsTitle": "Three steps to a standing margin.",
@@ -673,23 +653,7 @@
       },
       {
         "title": "Earn",
-        "desc": "15% of every qualifying walkthrough purchase from a broker who joined through your platform, paid out monthly."
-      }
-    ],
-    "dashKicker": "Partner dashboard",
-    "dashTitle": "Track referred brokers and margin in one place.",
-    "dash": [
-      {
-        "label": "Referred brokers",
-        "value": "142"
-      },
-      {
-        "label": "Walkthroughs purchased",
-        "value": "3,018"
-      },
-      {
-        "label": "Margin this month",
-        "value": "€6,240"
+        "desc": "15% of the plan revenue of every broker who joined through your platform, paid out monthly."
       }
     ],
     "applyKicker": "Get started",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "Is there a minimum commitment?",
-        "a": "No. The 15% margin applies from the first purchased walkthrough — no volume floor."
+        "a": "No. The 15% margin applies from the first broker who subscribes — no volume floor."
       },
       {
         "q": "Who owns the broker relationship?",
@@ -753,11 +717,9 @@
         "action": "Coming soon"
       }
     ],
-    "notConnected": "status: not connected",
-    "mockTitle": "Mock connection — wired in phase 2",
     "embedKicker": "No CRM? No problem",
     "embedTitle": "One iframe, dropped anywhere.",
-    "embedBody": "Every purchased walkthrough gets a stable embed URL. Paste it into any listing portal that accepts a custom iframe.",
+    "embedBody": "Every published walkthrough gets a stable embed URL. Paste it into any listing portal that accepts a custom iframe.",
     "cta": {
       "eyebrow": "Bring your CRM",
       "title": "Sodar fits the tools you already use.",
@@ -785,7 +747,7 @@
       },
       {
         "title": "Volume pricing",
-        "desc": "The per-property price steps down as your firm’s monthly volume grows."
+        "desc": "Credit tiers step down per property as your firm’s monthly volume grows."
       },
       {
         "title": "Dedicated CRM setup",
@@ -803,19 +765,19 @@
     "priceKicker": "Pricing that scales down",
     "priceTitle1": "Volume pricing,",
     "priceTitle2": "one contract.",
-    "priceBody": "A custom per-property rate based on monthly volume, plus a flat seat fee per agent. Talk to sales for a quote sized to your firm.",
-    "priceNote": "Illustrative, per property",
+    "priceBody": "A monthly plan sized to your firm’s volume, plus onboarding for every office. Talk to sales for a quote — and ask about pilot pricing.",
+    "priceNote": "Monthly plans, credits per property",
     "tiers": [
       {
-        "tier": "1–20 properties / mo",
-        "price": "from €99"
+        "tier": "Up to 10 properties / mo",
+        "price": "Starter · €99"
       },
       {
-        "tier": "21–100 properties / mo",
-        "price": "from €79"
+        "tier": "Up to 30 properties / mo",
+        "price": "Growth · €249"
       },
       {
-        "tier": "100+ properties / mo",
+        "tier": "More than 30 / mo",
         "price": "Custom"
       }
     ],
@@ -910,27 +872,10 @@
     "metaDesc": "Open roles at Sodar.",
     "eyebrow": "Careers",
     "title": "Help every listing render properly.",
-    "sub": "Small team, early stage, real brokers already scanning properties. We’re hiring across reconstruction, product, and go-to-market.",
+    "sub": "A small team in Tallinn, early stage, working with firms across Estonia. We hire across reconstruction, product and go-to-market as the pilots grow.",
     "rolesKicker": "Open roles",
-    "rolesTitle": "Currently hiring.",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "Reconstruction",
-        "location": "Remote / Tallinn"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "Product",
-        "location": "Remote / Tallinn"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "Go-to-market",
-        "location": "Tallinn"
-      }
-    ],
-    "noFit": "Don’t see a fit? Write to careers@sodar.io anyway.",
+    "rolesTitle": "We hire as the pilots grow.",
+    "noFit": "Write to careers@sodar.io with what you’d want to work on.",
     "cta": {
       "eyebrow": "No open role yet?",
       "title": "We’re small enough that one email reaches a founder.",
@@ -938,38 +883,9 @@
       "label": "Email careers@sodar.io"
     }
   },
-  "BlogPage": {
-    "metaTitle": "Field notes — Sodar",
-    "metaDesc": "Case studies from brokers and brokerages scanning properties with Sodar.",
-    "eyebrow": "Field notes",
-    "title": "Case studies, not press releases.",
-    "sub": "What actually happens when a property gets scanned — written by the team building the pipeline.",
-    "posts": [
-      {
-        "title": "How a 4-agent Tallinn brokerage cut listing prep to 15 minutes",
-        "tag": "Case study",
-        "read": "6 min read"
-      },
-      {
-        "title": "What we changed after the first 500 walkthroughs",
-        "tag": "Product notes",
-        "read": "4 min read"
-      },
-      {
-        "title": "Reading room engagement: what viewer opens actually tell you",
-        "tag": "Guide",
-        "read": "5 min read"
-      },
-      {
-        "title": "Why the free preview is two rooms, not one or five",
-        "tag": "Product notes",
-        "read": "3 min read"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "Draft — phase 1",
-    "notice": "This is a phase-1 structural placeholder, not final legal copy.",
+    "updated": "In preparation",
+    "notice": "This document is being finalised with our counsel and will be published here in full before launch.",
     "englishOnly": "Legal documents are currently published in English only; the English version governs.",
     "titles": {
       "privacy": "Privacy Policy",
@@ -1050,7 +966,6 @@
     "sentBody": "We reply within one working day.",
     "another": "Send another",
     "error": "Sending failed. Please email {email} directly.",
-    "fallbackNote": "Opens your email app until the form service is connected.",
     "jobTitle": "Job title",
     "phone": "Phone",
     "countryCode": "Country code",
@@ -1067,7 +982,9 @@
       "partnership": "CRM partnership",
       "careers": "Careers",
       "other": "Other"
-    }
+    },
+    "mailtoTitle": "Your email app has opened.",
+    "mailtoBody": "The message is ready to send from your own address. We reply within one working day."
   },
   "Intro": {
     "kicker": "Introduction",

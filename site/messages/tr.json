@@ -8,7 +8,7 @@
     "integrations": "Entegrasyonlar",
     "partners": "İş ortakları",
     "pricing": "Fiyatlar",
-    "signIn": "Giriş yap",
+    "signIn": "Çalışma alanı",
     "getStarted": "Mülk tara",
     "menu": "Menüyü aç/kapat",
     "home": "Sodar ana sayfa",
@@ -73,7 +73,6 @@
     ],
     "ready": "Hazır",
     "locked": "Kilitli",
-    "photosOnly": "Yalnızca fotoğraf",
     "panels": {
       "capture": {
         "label": "Çekim",
@@ -116,24 +115,17 @@
       }
     ],
     "oneTime": "aylık · istediğiniz zaman iptal edin",
-    "paidLabel": "Yayınlandı",
-    "paidBody": "Kalan 4 oda işleniyor. Tur hazır olduğunda size haber vereceğiz.",
-    "pay": "1 krediyle yayınla",
-    "paying": "Yayınlanıyor…",
-    "mockNote": "Demo — kredi kullanılmaz.",
     "crmHeader": "CRM’iniz · İlan #48213",
-    "publishBtn": "Turu yayınla",
     "publishedBtn": "Yayınlandı",
     "viewerBadge": "Sodar görüntüleyici · 360°",
     "listingMeta": "3 oda · 78 m² · 395.000 €",
     "status": "durum",
     "statusPublished": "yayında",
-    "statusReady": "hazır",
     "viewer": "görüntüleyici",
     "viewerEmbedded": "gömülü",
-    "opened": "açılma",
-    "openedValue": "128 ziyaretçi",
-    "planLabel": "Kat planı"
+    "planLabel": "Kat planı",
+    "plan": "Plan",
+    "planValue": "Starter · 1 kredi"
   },
   "Capabilities": {
     "kicker": "Neler sunuluyor",
@@ -198,7 +190,7 @@
     ]
   },
   "Impact": {
-    "kicker": "Örnek amaçlı · henüz ölçülmedi",
+    "kicker": "Öncesi ve sonrası",
     "title": "Bir taramanın yarattığı fark.",
     "beforeLabel": "Önce",
     "afterLabel": "Sonra · Sodar ile",
@@ -224,7 +216,6 @@
     "cta": "Danışman çalışma alanını görün",
     "mock": {
       "title": "Çalışma alanı",
-      "live": "Canlı önizleme",
       "properties": "Mülkler",
       "cols": [
         "Mülk",
@@ -295,10 +286,7 @@
           "step": "Telefonda çekiliyor",
           "n": "—"
         }
-      ],
-      "week": "Bu hafta",
-      "weekTitle": "701 görüntüleyici açılışı",
-      "weekSub": "2 yayınlanmış turda"
+      ]
     }
   },
   "Scans": {
@@ -348,7 +336,7 @@
   "Partner": {
     "eyebrow": "CRM sağlayıcıları için",
     "title": "Sodar’ı danışman ağınıza dağıtın. %15’i sizde kalsın.",
-    "body": "CRM iş ortakları Sodar’ı danışmanlarına sunar ve uygun tur satın alımlarından %15 pay alır — minimum yok, otomatik ödeme.",
+    "body": "CRM ortakları Sodar'ı danışmanlarına sunar ve onlar aracılığıyla katılan danışmanların plan gelirinden %15 marj alır — minimum yok, otomatik ödenir.",
     "cta": "İş ortağı programını görün"
   },
   "PricingTeaser": {
@@ -440,10 +428,6 @@
           [
             "İş ortağı olun",
             "/partners#apply"
-          ],
-          [
-            "İş ortağı paneli",
-            "/partners#dashboard"
           ]
         ]
       },
@@ -457,10 +441,6 @@
           [
             "Kariyer",
             "/careers"
-          ],
-          [
-            "Saha notları",
-            "/blog"
           ],
           [
             "Kurumsal",
@@ -643,9 +623,9 @@
   "WorkspacePage": {
     "metaTitle": "Çalışma alanı önizlemesi — Sodar",
     "metaDesc": "Danışman çalışma alanının herkese açık, giriş gerektirmeyen önizlemesi. Gerçek veri yok.",
-    "eyebrow": "Herkese açık önizleme · giriş yok, gerçek veri yok",
+    "eyebrow": "Çalışma alanı önizlemesi",
     "title": "Her mülk, durumu ve kimin açtığı.",
-    "sub": "Bu, her danışmanın aldığı çalışma alanının statik bir önizlemesidir — mülkler, işleme ve yayın durumu ve her tur görüntüleyicisini kaç ziyaretçinin açtığı.",
+    "sub": "Her danışmanın aldığı çalışma alanının önizlemesi — mülkler, işleme ve yayın durumu ve her turu kaç ziyaretçinin açtığı.",
     "cta": {
       "eyebrow": "Yayınladığınız anda sizin",
       "title": "Çalışma alanınız boş başlar — ilk taramanıza kadar.",
@@ -658,7 +638,7 @@
     "metaDesc": "CRM platformları Sodar’ı danışman ağlarına dağıtarak sabit %15 pay kazanır.",
     "eyebrow": "CRM platformları için",
     "title": "Sodar’ı danışmanlarınıza dağıtın. %15’i sizde kalsın.",
-    "sub": "Platformunuzdaki danışmanların satın aldığı her uygun turdan sabit bir pay — minimum yok, otomatik ödeme, bir yönlendirme bağlantısı dışında mühendislik yükü yok.",
+    "sub": "Platformunuz üzerinden Sodar'a katılan her danışmanın plan gelirinden kalıcı bir marj — minimum yok, otomatik ödeme, yönlendirme bağlantısı dışında geliştirme gerekmez.",
     "apply": "İş ortağı olarak başvurun",
     "stepsKicker": "Nasıl çalışır",
     "stepsTitle": "Sabit paya giden üç adım.",
@@ -673,23 +653,7 @@
       },
       {
         "title": "Kazanın",
-        "desc": "Platformunuz üzerinden katılan bir danışmanın her uygun tur satın alımının %15’i, aylık ödenir."
-      }
-    ],
-    "dashKicker": "İş ortağı paneli",
-    "dashTitle": "Yönlendirilen danışmanları ve payı tek yerden izleyin.",
-    "dash": [
-      {
-        "label": "Yönlendirilen danışmanlar",
-        "value": "142"
-      },
-      {
-        "label": "Satın alınan turlar",
-        "value": "3.018"
-      },
-      {
-        "label": "Bu ayki pay",
-        "value": "6.240 €"
+        "desc": "Platformunuz üzerinden katılan her danışmanın plan gelirinin %15'i, aylık ödenir."
       }
     ],
     "applyKicker": "Başlayın",
@@ -709,7 +673,7 @@
     "faq": [
       {
         "q": "Minimum taahhüt var mı?",
-        "a": "Hayır. %15 pay ilk satın alınan turdan itibaren geçerlidir — hacim tabanı yok."
+        "a": "Hayır. %15 marj abone olan ilk danışmandan itibaren geçerlidir — hacim eşiği yoktur."
       },
       {
         "q": "Danışman ilişkisi kime ait?",
@@ -753,11 +717,9 @@
         "action": "Yakında"
       }
     ],
-    "notConnected": "durum: bağlı değil",
-    "mockTitle": "Demo bağlantı — 2. aşamada bağlanacak",
     "embedKicker": "CRM yok mu? Sorun değil",
     "embedTitle": "Tek iframe, her yere bırakılır.",
-    "embedBody": "Satın alınan her tur sabit bir gömme URL’si alır. Özel iframe kabul eden herhangi bir ilan portalına yapıştırın.",
+    "embedBody": "Yayınlanan her tur sabit bir gömme URL'si alır. Özel iframe kabul eden herhangi bir portala yapıştırın.",
     "cta": {
       "eyebrow": "CRM’inizi getirin",
       "title": "Sodar zaten kullandığınız araçlara uyar.",
@@ -785,7 +747,7 @@
       },
       {
         "title": "Hacim fiyatlandırması",
-        "desc": "Ofisinizin aylık hacmi büyüdükçe mülk başına fiyat düşer."
+        "desc": "Ofisinizin aylık hacmi büyüdükçe kredi kademeleri mülk başına fiyatı düşürür."
       },
       {
         "title": "Özel CRM kurulumu",
@@ -803,19 +765,19 @@
     "priceKicker": "Hacimle düşen fiyatlar",
     "priceTitle1": "Hacim fiyatlandırması,",
     "priceTitle2": "tek sözleşme.",
-    "priceBody": "Aylık hacme göre özel mülk başına ücret, artı danışman başına sabit koltuk ücreti. Ofisinize göre bir teklif için satışla görüşün.",
-    "priceNote": "Örnek amaçlı, mülk başına",
+    "priceBody": "Ofisinizin hacmine göre ölçeklenen aylık plan ve her şube için kurulum. Teklif için satışla görüşün — ve pilot fiyatını sorun.",
+    "priceNote": "Aylık planlar, mülk başına kredi",
     "tiers": [
       {
-        "tier": "Ayda 1–20 mülk",
-        "price": "99 €’dan itibaren"
+        "tier": "Ayda 10 mülke kadar",
+        "price": "Starter · 99 €"
       },
       {
-        "tier": "Ayda 21–100 mülk",
-        "price": "79 €’dan itibaren"
+        "tier": "Ayda 30 mülke kadar",
+        "price": "Growth · 249 €"
       },
       {
-        "tier": "Ayda 100+ mülk",
+        "tier": "Ayda 30'dan fazla",
         "price": "Özel"
       }
     ],
@@ -910,27 +872,10 @@
     "metaDesc": "Sodar’daki açık pozisyonlar.",
     "eyebrow": "Kariyer",
     "title": "Her ilanın düzgün oluşturulmasına yardım edin.",
-    "sub": "Küçük ekip, erken aşama, gerçek danışmanlar zaten mülk tarıyor. Rekonstrüksiyon, ürün ve pazara giriş alanlarında işe alıyoruz.",
+    "sub": "Tallinn'de küçük, erken aşamada ve Estonya genelinde şirketlerle çalışan bir ekip. Pilotlar büyüdükçe rekonstrüksiyon, ürün ve satış alanlarında işe alım yapıyoruz.",
     "rolesKicker": "Açık pozisyonlar",
-    "rolesTitle": "Şu anda işe alıyoruz.",
-    "roles": [
-      {
-        "title": "Spatial ML Engineer",
-        "team": "Rekonstrüksiyon",
-        "location": "Uzaktan / Tallinn"
-      },
-      {
-        "title": "Founding Frontend Engineer",
-        "team": "Ürün",
-        "location": "Uzaktan / Tallinn"
-      },
-      {
-        "title": "Broker Success Lead",
-        "team": "Pazara giriş",
-        "location": "Tallinn"
-      }
-    ],
-    "noFit": "Uygun bir pozisyon göremiyor musunuz? Yine de careers@sodar.io adresine yazın.",
+    "rolesTitle": "Pilotlar büyüdükçe işe alıyoruz.",
+    "noFit": "Ne üzerinde çalışmak istediğinizi careers@sodar.io adresine yazın.",
     "cta": {
       "eyebrow": "Henüz size uygun bir rol yok mu?",
       "title": "Tek bir e-postanın kurucuya ulaşacağı kadar küçüğüz.",
@@ -938,38 +883,9 @@
       "label": "careers@sodar.io adresine yazın"
     }
   },
-  "BlogPage": {
-    "metaTitle": "Saha notları — Sodar",
-    "metaDesc": "Sodar ile mülk tarayan danışman ve ofislerden vaka çalışmaları.",
-    "eyebrow": "Saha notları",
-    "title": "Basın bültenleri değil, vaka çalışmaları.",
-    "sub": "Bir mülk tarandığında gerçekte ne olur — hattı kuran ekip tarafından yazıldı.",
-    "posts": [
-      {
-        "title": "4 danışmanlı bir Tallinn ofisi ilan hazırlığını nasıl 15 dakikaya indirdi",
-        "tag": "Vaka çalışması",
-        "read": "6 dk okuma"
-      },
-      {
-        "title": "İlk 500 turdan sonra neleri değiştirdik",
-        "tag": "Ürün notları",
-        "read": "4 dk okuma"
-      },
-      {
-        "title": "Oda etkileşimini okumak: görüntüleyici açılışları gerçekte ne söyler",
-        "tag": "Rehber",
-        "read": "5 dk okuma"
-      },
-      {
-        "title": "Ücretsiz önizleme neden bir ya da beş değil de iki oda",
-        "tag": "Ürün notları",
-        "read": "3 dk okuma"
-      }
-    ]
-  },
   "LegalPage": {
-    "updated": "Taslak — 1. aşama",
-    "notice": "Bu, 1. aşamanın yapısal bir yer tutucusudur, nihai yasal metin değildir.",
+    "updated": "Hazırlanıyor",
+    "notice": "Bu belge hukuk danışmanlarımızla birlikte tamamlanmaktadır ve lansmandan önce burada tam olarak yayınlanacaktır.",
     "englishOnly": "Yasal belgeler şu anda yalnızca İngilizce yayınlanmaktadır; İngilizce sürüm esastır.",
     "titles": {
       "privacy": "Gizlilik Politikası",
@@ -1050,7 +966,6 @@
     "sentBody": "Bir iş günü içinde yanıtlıyoruz.",
     "another": "Bir tane daha gönder",
     "error": "Gönderilemedi. Lütfen doğrudan {email} adresine yazın.",
-    "fallbackNote": "Form hizmeti bağlanana kadar e-posta uygulamanızı açar.",
     "jobTitle": "Unvan",
     "phone": "Telefon",
     "countryCode": "Ülke kodu",
@@ -1067,7 +982,9 @@
       "partnership": "CRM ortaklığı",
       "careers": "Kariyer",
       "other": "Diğer"
-    }
+    },
+    "mailtoTitle": "E-posta uygulamanız açıldı.",
+    "mailtoBody": "Mesaj kendi adresinizden gönderilmeye hazır. Bir iş günü içinde yanıtlıyoruz."
   },
   "Intro": {
     "kicker": "Tanıtım",

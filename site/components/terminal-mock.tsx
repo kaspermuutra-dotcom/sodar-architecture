@@ -42,7 +42,6 @@ export function TerminalMock({ variant = "crop" }: { variant?: "crop" | "full" }
           <SodarMark size={18} className="text-text" />
           <span className="mono-label">{t("title")}</span>
         </div>
-        <span className="eyebrow">{t("live")}</span>
       </div>
 
       <div className={`grid gap-px bg-border ${variant === "full" ? "lg:grid-cols-[1.4fr_1fr]" : "lg:grid-cols-[1.3fr_1fr]"}`}>
@@ -105,13 +104,6 @@ export function TerminalMock({ variant = "crop" }: { variant?: "crop" | "full" }
               </li>
             ))}
           </ul>
-          {variant === "full" ? (
-            <div className="mt-6 rounded-xl border border-border-strong bg-bg p-4">
-              <p className="mono-label">{t("week")}</p>
-              <p className="display mt-1 text-3xl text-text">{t("weekTitle")}</p>
-              <p className="mt-1 text-xs text-text-muted">{t("weekSub")}</p>
-            </div>
-          ) : null}
         </div>
       </div>
     </div>

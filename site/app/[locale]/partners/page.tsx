@@ -19,7 +19,6 @@ export default async function PartnersPage({ params }: Params) {
   setRequestLocale(locale);
   const t = await getTranslations("PartnersPage");
   const steps = t.raw("steps") as { title: string; desc: string }[];
-  const dash = t.raw("dash") as { label: string; value: string }[];
   const faq = t.raw("faq") as { q: string; a: string }[];
 
   return (
@@ -45,22 +44,6 @@ export default async function PartnersPage({ params }: Params) {
               <p className="mt-3 leading-relaxed text-text-muted">{s.desc}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section id="dashboard" className="section-shell border-t border-border">
-        <p className="section-kicker">{t("dashKicker")}</p>
-        <h2 className="section-title mt-6">{t("dashTitle")}</h2>
-        <div className="mt-14 overflow-hidden rounded-2xl border border-border bg-bg-raised">
-          <div className="grid divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-            {dash.map((d) => (
-              <div key={d.label} className="p-8">
-                <p className="mono-label">{d.label}</p>
-                <p className="display mt-3 text-4xl text-text" dir="ltr">{d.value}</p>
-              </div>
-            ))}
-          </div>
-          {/* TODO(phase-2): real partner dashboard — gated app, not a public mock. */}
         </div>
       </section>
 
