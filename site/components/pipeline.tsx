@@ -3,23 +3,16 @@
 import { useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useGSAP } from "@gsap/react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 import { prefersReducedMotion } from "@/lib/motion";
 import { LoopVideo } from "@/components/loop-video";
 
 const TILE = (n: number) => `/media/rooms/tile-${String(n).padStart(2, "0")}.jpg`;
 
 /**
- * The signature section: the whole product, end to end, as a pinned,
- * scroll-scrubbed horizontal sequence.
- *
- *   01 Capture  — phone camera, AI capture assistant coaching the panorama
- *   02 Preview  — first two rooms processed into a working walkthrough, free
- *   03 Unlock   — one-time price computed for the property, paid via Stripe
- *   04 Publish  — connect the CRM, pick the listing, viewer embeds itself
- *
- * One ScrollTrigger owns the horizontal track; the same progress value drives
- * the capture frame counter, assistant messages and the preview reveal.
+ * The product end to end — Capture, Preview, Unlock, Publish — as four calm
+ * stacked stages. Each stage fades in once as it enters the viewport; the
+ * capture stage's frame counter and the preview reveal run once as well.
  */
 export function Pipeline() {
   const t = useTranslations("Pipeline");
@@ -28,7 +21,6 @@ export function Pipeline() {
   const quoteRows = t.raw("quoteRows") as { k: string; v: string }[];
 
   const sectionRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
   const framesRef = useRef<HTMLSpanElement>(null);
   const ringRef = useRef<SVGCircleElement>(null);
   const assistRef = useRef<HTMLSpanElement>(null);
@@ -40,41 +32,42 @@ export function Pipeline() {
   useGSAP(
     () => {
       const section = sectionRef.current!;
-      const track = trackRef.current!;
-      const rtl = document.documentElement.dir === "rtl";
+      const stages = section.querySelectorAll<HTMLElement>("[data-stage]");
+      const reduced = prefersReducedMotion();
 
-      if (prefersReducedMotion()) {
-        gsap.set(track, { xPercent: 0 });
+      if (reduced) {
+        gsap.set(stages, { opacity: 1, y: 0 });
         if (framesRef.current) framesRef.current.textContent = "12";
+        if (ringRef.current) ringRef.current.style.strokeDashoffset = "0";
+        if (assistRef.current) assistRef.current.textContent = assist[assist.length - 1];
         gsap.set(previewRef.current, { "--reveal-p": 1 });
         return;
       }
 
-      const distance = () => Math.max(window.innerHeight * 3.2, 2000);
-      const st = ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        end: () => `+=${distance()}`,
-        pin: true,
-        scrub: 0.7,
-        onUpdate(self) {
-          const p = self.progress;
-          gsap.set(track, { xPercent: (rtl ? 75 : -75) * p });
+      stages.forEach((stage) => {
+        gsap.fromTo(stage, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", scrollTrigger: { trigger: stage, start: "top 80%", once: true } });
+      });
 
-          const cap = gsap.utils.clamp(0, 1, gsap.utils.mapRange(0.0, 0.26, 0, 1, p));
-          const frames = Math.round(cap * 12);
+      const capture = { p: 0 };
+      gsap.to(capture, {
+        p: 1,
+        duration: 3.2,
+        ease: "power1.inOut",
+        scrollTrigger: { trigger: stages[0], start: "top 70%", once: true },
+        onUpdate() {
+          const frames = Math.round(capture.p * 12);
           if (framesRef.current) framesRef.current.textContent = String(frames).padStart(2, "0");
-          if (ringRef.current) ringRef.current.style.strokeDashoffset = String(276 * (1 - cap));
-          if (assistRef.current) {
-            const idx = Math.min(assist.length - 1, Math.floor(cap * assist.length));
-            assistRef.current.textContent = assist[idx];
-          }
-
-          const prev = gsap.utils.clamp(0, 1, gsap.utils.mapRange(0.28, 0.52, 0, 1, p));
-          gsap.set(previewRef.current, { "--reveal-p": prev });
+          if (ringRef.current) ringRef.current.style.strokeDashoffset = String(276 * (1 - capture.p));
+          if (assistRef.current) assistRef.current.textContent = assist[Math.min(assist.length - 1, Math.floor(capture.p * assist.length))];
         },
       });
-      return () => st.kill();
+
+      gsap.to(previewRef.current, {
+        "--reveal-p": 1,
+        duration: 1.4,
+        ease: "power2.inOut",
+        scrollTrigger: { trigger: stages[1], start: "top 70%", once: true },
+      });
     },
     { scope: sectionRef, dependencies: [assist] },
   );
@@ -90,64 +83,62 @@ export function Pipeline() {
   }
 
   return (
-    <section id="pipeline" ref={sectionRef} className="on-ink relative border-t border-border bg-bg">
-      <div className="h-screen overflow-hidden">
-        <div ref={trackRef} className="flex h-full w-[400vw] will-change-transform">
-          {/* 01 — Capture */}
-          <Panel index="01" label={t("panels.capture.label")} title={t("panels.capture.title")} body={t("panels.capture.body")}>
-            <div className="relative mx-auto aspect-[9/17] w-full max-w-[300px] overflow-hidden rounded-[2.2rem] border border-border-strong bg-bg-elevated shadow-[0_40px_120px_rgba(0,0,0,.7)]">
-              <LoopVideo src="/media/pipeline-capture.mp4" poster={TILE(3)} className="grayscale-[.2] brightness-[.85]" />
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.55),transparent_25%,transparent_70%,rgba(0,0,0,.7))]" />
-              <div className="absolute inset-x-6 top-1/2 h-px bg-white/30" />
+    <section id="pipeline" ref={sectionRef} className="on-ink border-t border-border bg-bg">
+      <div className="section-shell">
+        <p className="section-kicker">{t("kicker")}</p>
+        <h2 className="section-title mt-6">{t("title")}</h2>
+
+        <div className="mt-16 divide-y divide-border border-t border-border">
+          <Stage label={t("panels.capture.label")} title={t("panels.capture.title")} body={t("panels.capture.body")}>
+            <div className="relative mx-auto aspect-[9/17] w-full max-w-[280px] overflow-hidden rounded-[2rem] border border-border-strong bg-bg-elevated">
+              <LoopVideo src="/media/pipeline-capture.mp4" poster="/media/pipeline-capture.jpg" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,.5),transparent_25%,transparent_70%,rgba(0,0,0,.65))]" />
               <div className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/60" />
-              <div className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-text" />
-              <svg className="absolute right-4 top-4 h-14 w-14 -rotate-90" viewBox="0 0 100 100" aria-hidden>
+              <svg className="absolute right-4 top-4 h-12 w-12 -rotate-90" viewBox="0 0 100 100" aria-hidden>
                 <circle cx="50" cy="50" r="44" stroke="rgba(255,255,255,.15)" strokeWidth="4" fill="none" />
                 <circle ref={ringRef} cx="50" cy="50" r="44" stroke="#f4f2ee" strokeWidth="4" fill="none" strokeDasharray="276" strokeDashoffset="276" strokeLinecap="round" />
               </svg>
-              <div className="absolute left-4 top-5 font-mono text-[11px] text-text" dir="ltr">
+              <div className="absolute left-4 top-5 font-mono text-[11px] text-[#f4f2ee]" dir="ltr">
                 <span ref={framesRef} className="num">00</span>
-                <span className="text-text-muted">{t("frames")}</span>
+                <span className="text-white/60">{t("frames")}</span>
               </div>
-              <div className="absolute inset-x-4 bottom-5 rounded-2xl border border-white/15 bg-black/55 p-3 backdrop-blur">
-                <p className="font-mono text-[10px] uppercase tracking-[.16em] text-text-muted">{t("assistantLabel")}</p>
-                <p className="mt-1 text-sm text-text">
+              <div className="absolute inset-x-4 bottom-5 rounded-xl border border-white/15 bg-black/55 p-3 backdrop-blur">
+                <p className="font-mono text-[10px] uppercase tracking-[.14em] text-white/60">{t("assistantLabel")}</p>
+                <p className="mt-1 text-sm text-[#f4f2ee]">
                   <span ref={assistRef}>{assist[0]}</span>
                 </p>
               </div>
             </div>
-          </Panel>
+          </Stage>
 
-          {/* 02 — Preview */}
-          <Panel index="02" label={t("panels.preview.label")} title={t("panels.preview.title")} body={t("panels.preview.body")}>
+          <Stage label={t("panels.preview.label")} title={t("panels.preview.title")} body={t("panels.preview.body")}>
             <div ref={previewRef} className="grid w-full max-w-2xl grid-cols-3 gap-2" style={{ ["--reveal-p" as string]: 0 }}>
               {rooms.map((room, i) => {
                 const ready = i < 2;
                 return (
-                  <div key={room} className="tile aspect-[4/3] rounded-xl border border-border">
+                  <div key={room} className="tile aspect-[4/3] rounded-lg border border-border">
                     <img src={TILE(10 + i * 4)} alt="" style={ready ? { filter: "none" } : undefined} />
                     {ready ? (
                       <div className="absolute inset-0" style={{ clipPath: "inset(0 calc((1 - var(--reveal-p, 0)) * 100%) 0 0)" }}>
                         <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(0,0,0,.5))]" />
-                        <span className="absolute left-2.5 top-2.5 rounded-full border border-white/30 bg-black/50 px-2 py-0.5 font-mono text-[10px] uppercase text-text">{t("ready")}</span>
+                        <span className="absolute left-2.5 top-2.5 rounded-full border border-white/30 bg-black/50 px-2 py-0.5 font-mono text-[10px] uppercase text-[#f4f2ee]">{t("ready")}</span>
                       </div>
                     ) : (
                       <div className="locked-overlay">
-                        <span className="font-mono text-[10px] uppercase tracking-[.16em] text-text-muted">{t("locked")}</span>
+                        <span className="font-mono text-[10px] uppercase tracking-[.14em] text-white/60">{t("locked")}</span>
                       </div>
                     )}
-                    <span className="absolute bottom-2 left-2.5 text-[11px] text-text/80">{room}</span>
+                    <span className="absolute bottom-2 left-2.5 text-[11px] text-white/80">{room}</span>
                   </div>
                 );
               })}
             </div>
-          </Panel>
+          </Stage>
 
-          {/* 03 — Unlock */}
-          <Panel index="03" label={t("panels.unlock.label")} title={t("panels.unlock.title")} body={t("panels.unlock.body")}>
-            <div className="w-full max-w-md rounded-3xl border border-border-strong bg-bg-raised p-7">
+          <Stage label={t("panels.unlock.label")} title={t("panels.unlock.title")} body={t("panels.unlock.body")}>
+            <div className="w-full max-w-md rounded-2xl border border-border bg-bg-raised p-7">
               <p className="mono-label">{t("quoteLabel")}</p>
-              <ul className="mt-5 space-y-2.5 font-mono text-[12px] text-text-muted">
+              <ul className="mt-5 space-y-2.5 text-sm text-text-muted">
                 {quoteRows.map((row) => (
                   <li key={row.k} className="flex justify-between gap-4 border-b border-border pb-2">
                     <span>{row.k}</span>
@@ -157,48 +148,47 @@ export function Pipeline() {
               </ul>
               <div className="mt-6 flex items-end justify-between gap-4">
                 <p className="display text-5xl text-text" dir="ltr">€149</p>
-                <p className="font-mono text-[11px] text-text-muted">{t("oneTime")}</p>
+                <p className="text-xs text-text-muted">{t("oneTime")}</p>
               </div>
               {paid ? (
-                <div className="mt-6 rounded-2xl border border-white/25 bg-white/[.05] p-4 text-sm text-text">
-                  <p className="font-mono text-[10px] uppercase tracking-[.16em] text-text-muted">{t("paidLabel")}</p>
+                <div className="mt-6 rounded-xl border border-border-strong p-4 text-sm text-text">
+                  <p className="mono-label">{t("paidLabel")}</p>
                   <p className="mt-1">{t("paidBody")}</p>
                 </div>
               ) : (
                 <form onSubmit={handlePay} className="mt-6">
-                  <button type="submit" className="button-primary w-full justify-center" disabled={processing}>
-                    {processing ? t("paying") : t("pay")} <span aria-hidden>↗</span>
+                  <button type="submit" className="button-primary w-full" disabled={processing}>
+                    {processing ? t("paying") : t("pay")}
                   </button>
-                  <p className="mt-2 text-center font-mono text-[10px] text-text-faint">{t("mockNote")}</p>
+                  <p className="mt-3 text-center text-xs text-text-faint">{t("mockNote")}</p>
                 </form>
               )}
             </div>
-          </Panel>
+          </Stage>
 
-          {/* 04 — Publish */}
-          <Panel index="04" label={t("panels.publish.label")} title={t("panels.publish.title")} body={t("panels.publish.body")}>
-            <div className="w-full max-w-xl overflow-hidden rounded-3xl border border-border-strong bg-bg-raised">
+          <Stage label={t("panels.publish.label")} title={t("panels.publish.title")} body={t("panels.publish.body")}>
+            <div className="w-full max-w-xl overflow-hidden rounded-2xl border border-border bg-bg-raised">
               <div className="flex items-center justify-between gap-4 border-b border-border px-5 py-3">
-                <span className="font-mono text-[11px] text-text-muted">{t("crmHeader")}</span>
+                <span className="text-xs text-text-muted">{t("crmHeader")}</span>
                 <button type="button" onClick={() => setPublished((v) => !v)} className="button-mini">
-                  {published ? t("publishedBtn") : t("publishBtn")} <span aria-hidden>{published ? "✓" : "↗"}</span>
+                  {published ? t("publishedBtn") : t("publishBtn")}
                 </button>
               </div>
               <div className="grid gap-4 p-5 sm:grid-cols-[1.4fr_1fr]">
-                <div className="tile aspect-[16/10] rounded-xl">
+                <div className="tile aspect-[16/10] rounded-lg">
                   <img src={TILE(22)} alt="" style={published ? { filter: "none" } : undefined} />
                   {published ? (
-                    <div className="absolute bottom-2.5 right-2.5 rounded-full border border-white/25 bg-black/55 px-2.5 py-1 font-mono text-[10px] text-text backdrop-blur">{t("viewerBadge")}</div>
+                    <div className="absolute bottom-2.5 right-2.5 rounded-full border border-white/25 bg-black/55 px-2.5 py-1 font-mono text-[10px] text-[#f4f2ee] backdrop-blur">{t("viewerBadge")}</div>
                   ) : (
                     <div className="locked-overlay">
-                      <span className="font-mono text-[10px] uppercase tracking-[.16em] text-text-muted">{t("photosOnly")}</span>
+                      <span className="font-mono text-[10px] uppercase tracking-[.14em] text-white/60">{t("photosOnly")}</span>
                     </div>
                   )}
                 </div>
                 <div className="text-sm">
                   <p className="text-text">84 Kesklinn Ave</p>
                   <p className="mt-1 text-text-muted">{t("listingMeta")}</p>
-                  <div className="mt-4 space-y-1.5 font-mono text-[11px] text-text-muted">
+                  <div className="mt-4 space-y-1.5 text-xs text-text-muted">
                     <p>{t("status")}: {published ? <span className="text-text">{t("statusPublished")}</span> : t("statusReady")}</p>
                     <p>{t("viewer")}: {published ? <span className="text-text">{t("viewerEmbedded")}</span> : "—"}</p>
                     <p>{t("opened")}: {published ? <span className="num text-text">{t("openedValue")}</span> : "—"}</p>
@@ -206,26 +196,19 @@ export function Pipeline() {
                 </div>
               </div>
             </div>
-          </Panel>
+          </Stage>
         </div>
-      </div>
-
-      <div className="pointer-events-none absolute inset-x-0 bottom-6 hidden justify-center gap-2 font-mono text-[10px] uppercase tracking-[.2em] text-text-faint md:flex">
-        <span>{t("scroll")}</span>
-        <span className="rtl:rotate-180">→</span>
       </div>
     </section>
   );
 }
 
-function Panel({ index, label, title, body, children }: { index: string; label: string; title: string; body: string; children: React.ReactNode }) {
+function Stage({ label, title, body, children }: { label: string; title: string; body: string; children: React.ReactNode }) {
   return (
-    <div className="grid h-full w-screen grid-rows-[auto_1fr] gap-8 px-5 py-16 sm:px-8 lg:grid-cols-[.8fr_1.2fr] lg:grid-rows-1 lg:items-center lg:px-12">
+    <div data-stage className="grid gap-10 py-16 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:gap-16 lg:py-24">
       <div className="max-w-md">
-        <p className="eyebrow">
-          <span /> {index} · {label}
-        </p>
-        <h3 className="display mt-6 text-[clamp(2.2rem,4.6vw,4.4rem)] text-text">{title}</h3>
+        <p className="eyebrow">{label}</p>
+        <h3 className="display mt-5 text-[clamp(1.9rem,3.6vw,3.2rem)] text-text">{title}</h3>
         <p className="mt-5 text-base leading-relaxed text-text-muted">{body}</p>
       </div>
       <div className="grid place-items-center">{children}</div>

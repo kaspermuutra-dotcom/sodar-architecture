@@ -19,31 +19,7 @@
     "headline2": "that close more deals.",
     "sub": "Open sodar.io on your phone, walk the property once, and get an immersive walkthrough buyers can step inside — published into the listing you already have.",
     "ctaPrimary": "Scan your first property",
-    "ctaSecondary": "See how it works",
-    "status": [
-      "CAPTURE  ▸ living room · 12/12 frames · coverage 98%",
-      "ASSIST   ▸ tilt down 4° · hold · good light",
-      "STITCH   ▸ kitchen · equirectangular · 8192×4096",
-      "PREVIEW  ▸ 2 of 6 rooms ready · free",
-      "QUOTE    ▸ one-time price computed · 6 rooms · 14 panoramas",
-      "PUBLISH  ▸ CRM listing #48213 · viewer embedded"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Living room",
-      "Kitchen",
-      "Primary bedroom",
-      "Bathroom",
-      "Hallway",
-      "Balcony",
-      "Study",
-      "Dining",
-      "Guest room",
-      "Entrance",
-      "Terrace",
-      "Garage"
-    ]
+    "ctaSecondary": "See how it works"
   },
   "Manifesto": {
     "kicker": "Thesis",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Scroll",
+    "kicker": "How it works",
+    "title": "From a walk to a walkthrough.",
     "frames": "/12 frames",
     "assistantLabel": "Capture assistant",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Language",
-    "social": "Elsewhere",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallinn, Estonia · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Privacy questions:"
   },
-  "Scaffold": {
-    "phase": "Phase 1 — design & structure",
-    "note": "Payments, CRM OAuth, and the AI pipeline are mocked placeholder states. No backend calls."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "brokerages already scanning with Sodar",
-    "note": "Early access · Tallinn and beyond"
+    "line": "Currently supporting compliance efforts for firms across Estonia.",
+    "note": "Tallinn, Estonia"
   },
   "Scanner": {
     "metaTitle": "Scan a property — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Brokers, brokerages, CRM providers and portals each get a different answer — pick yours and we reply from the right desk.",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
-    "roleLabel": "I am a",
-    "roles": {
-      "broker": "Broker / agent",
-      "brokerage": "Brokerage",
-      "crm": "CRM provider",
-      "portal": "Property portal",
-      "other": "Other"
-    },
     "name": "Name",
     "company": "Company",
     "email": "Work email",
@@ -1084,12 +1047,25 @@
     "sent": "Message sent.",
     "sentBody": "We reply within one working day.",
     "another": "Send another",
-    "error": "Sending failed. Please email team@sodar.io directly.",
-    "fallbackNote": "Opens your email app until the form service is connected."
+    "error": "Sending failed. Please email {email} directly.",
+    "fallbackNote": "Opens your email app until the form service is connected.",
+    "jobTitle": "Job title",
+    "phone": "Phone",
+    "countryCode": "Country code",
+    "subject": "Subject",
+    "linkedin": "Sodar on LinkedIn",
+    "privacyEyebrow": "Privacy",
+    "privacyTitle": "Ask us about your data.",
+    "privacySub": "Requests about access, correction, export or deletion of your data, and any other privacy question, reach our privacy team directly."
   },
   "Intro": {
     "kicker": "Introduction",
     "title": "Sodar in one minute.",
-    "body": "Walk once, preview two rooms free, pay once, publish into the listing you already have."
+    "body": "Walk once, preview two rooms free, pay once, publish into the listing you already have.",
+    "play": "Play",
+    "pause": "Pause",
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "fullscreen": "Full screen"
   }
 }

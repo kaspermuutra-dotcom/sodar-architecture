@@ -21,7 +21,8 @@ as `#<n>`.
 
 1. Cover — logo, headline, walkthrough loop behind
 2. Problem
-3. **Solution film** (`#film`, ≈52 s in the deck, ≈42 s web cut): kinetic title → sped-up
+3. **Solution film** (`#film`, ≈55 s in the deck, ≈44 s web cut): kinetic title → Noblessner
+   harbour establishing shot (`media/tallinn-harbour.jpg`) → sped-up
    scanning clips and two Higgsfield walking shots (Kling 3.0) → twelve kitchen tiles assemble
    into a panorama → free preview → desk → an Estonian replica of the kv.ee flow (results list
    → the agent's listing → edit form, virtual-tour link typed → saved → tour live) → [deck
@@ -43,11 +44,13 @@ The film is a pure function of time (`renderAt(t)` in `deck.js`), so it can be r
 frame by frame with headless Chrome:
 
 ```bash
-node deck/export/render.mjs                  # writes site/public/media/intro.mp4 (1280×720, 30 fps)
+node deck/export/render.mjs --file           # writes site/public/media/intro.mp4 (1280×720, 30 fps)
 ```
 
-The renderer starts its own Range-capable server (`serve.mjs`, port 4174) and renders the
-web cut by default; `--url` selects another cut, `--from`/`--to` render a slice for checks.
+`--file` loads the deck over `file://` (no server, no listening port — this is the mode
+that works inside the Claude sandbox). Without it the renderer starts its own
+Range-capable server (`serve.mjs`, port 4174). It renders the web cut by default;
+`--url` selects another cut, `--from`/`--to` render a slice for checks.
 
 `?cut=web` drops the `deckonly` scenes (pricing, CRM). `--fps`, `--width`, `--out`, `--chrome` override the defaults; `deck/export` has its own
 `package.json` with `puppeteer-core`. The poster is a frame from the same file:

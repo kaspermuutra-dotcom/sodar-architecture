@@ -1,6 +1,6 @@
 /* Render the solution film to an MP4 by driving deck.js's renderAt(t) frame by frame in
    headless Chrome and piping JPEG frames into ffmpeg.
-   usage: node export/render.mjs [--fps 30] [--out ../site/public/media/intro.mp4] [--width 1280]
+   usage: node export/render.mjs [--fps 30] [--out ../site/public/media/intro.mp4] [--width 1280] [--file]
    starts its own Range-capable static server (serve.mjs) on --port (default 4174); pass --url to use another cut */
 import puppeteer from "puppeteer-core";
 import { spawn } from "node:child_process";
@@ -14,11 +14,12 @@ const WIDTH = Number(args.width || 1280);
 const here = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.resolve(here, args.out || "../../site/public/media/intro.mp4");
 const PORT = Number(args.port || 4174);
-const URL = args.url || `http://localhost:${PORT}/?export=1&motion=off&cut=web#3`;
+const FILE = process.argv.includes("--file"); // --file: load the deck over file:// (no server, no listening port — works inside sandboxes)
+const URL = args.url || (FILE ? `file://${path.resolve(here, "../index.html")}?export=1&motion=off&cut=web#3` : `http://localhost:${PORT}/?export=1&motion=off&cut=web#3`);
 const CHROME = args.chrome || "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
-const server = await serve(PORT); // Range-capable static server: Chrome cannot seek <video> without it
-const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: ["--autoplay-policy=no-user-gesture-required", "--hide-scrollbars", "--force-device-scale-factor=1"] });
+const server = FILE ? null : await serve(PORT); // Range-capable static server: Chrome cannot seek <video> over http without it
+const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, pipe: true, userDataDir: path.join(process.env.TMPDIR || "/tmp", `sodar-render-${process.pid}`), args: ["--allow-file-access-from-files", "--autoplay-policy=no-user-gesture-required", "--hide-scrollbars", "--force-device-scale-factor=1"] });
 const page = await browser.newPage();
 page.on("pageerror", (e) => console.error("page error:", e.message));
 page.on("console", (m) => { if (m.type() === "error") console.error("console:", m.text()); });
@@ -48,5 +49,5 @@ for (let f = f0; f < f1; f++) {
 ff.stdin.end();
 await new Promise((res) => ff.on("close", res));
 await browser.close();
-server.close();
+if (server) server.close();
 console.log("done");

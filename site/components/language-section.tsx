@@ -9,7 +9,7 @@ export function LanguageSection() {
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
         <div>
           <p className="section-kicker">{t("kicker")}</p>
-          <h2 className="section-title mt-7">
+          <h2 className="section-title mt-6">
             {t("title1")}
             <br />
             {t("title2")}

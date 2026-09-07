@@ -33,7 +33,7 @@ export default async function PricingPage({ params }: Params) {
           {tiers.map((tier, i) => {
             const highlight = i === 1;
             return (
-              <div key={tier.name} className={`flex flex-col rounded-3xl border p-8 sm:p-10 ${highlight ? "border-border-strong bg-bg-raised" : "border-border bg-bg"}`}>
+              <div key={tier.name} className={`flex flex-col rounded-2xl border p-8 sm:p-10 ${highlight ? "border-border-strong bg-bg-raised" : "border-border bg-bg"}`}>
                 {highlight ? (
                   <span className="mb-4 inline-flex w-fit items-center rounded-full border border-border-strong px-3 py-1 font-mono text-[10px] uppercase tracking-[.14em] text-text">{t("badge")}</span>
                 ) : null}
@@ -50,7 +50,7 @@ export default async function PricingPage({ params }: Params) {
                   ))}
                 </ul>
                 <Link href={TIER_HREFS[i] ?? "/product"} className={highlight ? "button-primary w-full justify-center" : "button-secondary w-full justify-center"}>
-                  {tier.cta} <span aria-hidden>↗</span>
+                  {tier.cta}
                 </Link>
               </div>
             );
@@ -60,12 +60,11 @@ export default async function PricingPage({ params }: Params) {
 
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("factorsKicker")}</p>
-        <h2 className="section-title mt-7">{t("factorsTitle")}</h2>
-        <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+        <h2 className="section-title mt-6">{t("factorsTitle")}</h2>
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {factors.map((f, i) => (
             <div key={f.title} className="bg-bg p-8">
-              <span className="font-mono text-[11px] text-text-faint">0{i + 1}</span>
-              <h3 className="display mt-6 text-2xl text-text">{f.title}</h3>
+              <h3 className="display text-2xl text-text">{f.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-text-muted">{f.desc}</p>
             </div>
           ))}
@@ -74,7 +73,7 @@ export default async function PricingPage({ params }: Params) {
 
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("faqKicker")}</p>
-        <h2 className="section-title mt-7">{t("faqTitle")}</h2>
+        <h2 className="section-title mt-6">{t("faqTitle")}</h2>
         <div className="mt-14 divide-y divide-border border-y border-border">
           {faq.map((item) => (
             <div key={item.q} className="grid gap-2 py-6 sm:grid-cols-[1fr_1.4fr] sm:gap-8">

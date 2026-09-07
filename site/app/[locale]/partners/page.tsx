@@ -30,19 +30,18 @@ export default async function PartnersPage({ params }: Params) {
         subtitle={t("sub")}
         actions={
           <a href="#apply" className="button-primary">
-            {t("apply")} <span aria-hidden>↗</span>
+            {t("apply")}
           </a>
         }
       />
 
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("stepsKicker")}</p>
-        <h2 className="section-title mt-7">{t("stepsTitle")}</h2>
-        <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-3">
+        <h2 className="section-title mt-6">{t("stepsTitle")}</h2>
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-3">
           {steps.map((s, i) => (
             <article key={s.title} className="bg-bg p-8 sm:p-10">
-              <span className="font-mono text-xs text-text-faint">0{i + 1}</span>
-              <h3 className="display mt-8 text-3xl text-text">{s.title}</h3>
+              <h3 className="display text-3xl text-text">{s.title}</h3>
               <p className="mt-3 leading-relaxed text-text-muted">{s.desc}</p>
             </article>
           ))}
@@ -51,8 +50,8 @@ export default async function PartnersPage({ params }: Params) {
 
       <section id="dashboard" className="section-shell border-t border-border">
         <p className="section-kicker">{t("dashKicker")}</p>
-        <h2 className="section-title mt-7">{t("dashTitle")}</h2>
-        <div className="mt-14 overflow-hidden rounded-3xl border border-border bg-bg-raised">
+        <h2 className="section-title mt-6">{t("dashTitle")}</h2>
+        <div className="mt-14 overflow-hidden rounded-2xl border border-border bg-bg-raised">
           <div className="grid divide-y divide-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             {dash.map((d) => (
               <div key={d.label} className="p-8">
@@ -69,7 +68,7 @@ export default async function PartnersPage({ params }: Params) {
         <div className="grid gap-12 lg:grid-cols-[1fr_.9fr] lg:items-start">
           <div>
             <p className="section-kicker">{t("applyKicker")}</p>
-            <h2 className="section-title mt-7">{t("applyTitle")}</h2>
+            <h2 className="section-title mt-6">{t("applyTitle")}</h2>
             <p className="mt-7 max-w-md text-lg text-text-muted">{t("applyBody")}</p>
           </div>
           <PartnerApplyForm />
@@ -78,7 +77,7 @@ export default async function PartnersPage({ params }: Params) {
 
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("faqKicker")}</p>
-        <h2 className="section-title mt-7">{t("faqTitle")}</h2>
+        <h2 className="section-title mt-6">{t("faqTitle")}</h2>
         <div className="mt-14 divide-y divide-border border-y border-border">
           {faq.map((item) => (
             <div key={item.q} className="grid gap-2 py-6 sm:grid-cols-[1fr_1.4fr] sm:gap-8">

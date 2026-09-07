@@ -2,113 +2,170 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { DIAL_CODES, flagOf, normalisePhone } from "@/lib/dial-codes";
+import { LINKEDIN_URL, PHONE, PRIVACY_EMAIL, TEAM_EMAIL } from "@/lib/company";
 
-const ROLES = ["broker", "brokerage", "crm", "portal", "other"] as const;
-const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-const TEAM_EMAIL = "team@sodar.io";
-const PHONE = "+372 56666760";
+type Audience = "team" | "privacy";
+
+const FORMSPREE: Record<Audience, string | undefined> = {
+  team: process.env.NEXT_PUBLIC_FORMSPREE_ID,
+  privacy: process.env.NEXT_PUBLIC_FORMSPREE_PRIVACY_ID,
+};
+const TO: Record<Audience, string> = { team: TEAM_EMAIL, privacy: PRIVACY_EMAIL };
 
 /**
- * Contact form. Posts JSON to Formspree when NEXT_PUBLIC_FORMSPREE_ID is set;
- * until then it falls back to a pre-filled mailto so nothing is lost. The
- * "who are you" role is mandatory — it routes the message internally.
+ * Contact form. `audience="team"` (default) reaches team@sodar.io — hiring,
+ * partnerships, sales; `audience="privacy"` reaches privacy@sodar.io and is
+ * used on the privacy policy page only. Both post JSON to their Formspree
+ * form when the id is set; until then they fall back to a pre-filled mailto
+ * so nothing is lost. Job title, phone, subject and message are mandatory.
  */
-export function ContactForm() {
+export function ContactForm({ audience = "team" }: { audience?: Audience }) {
   const t = useTranslations("Contact");
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [dial, setDial] = useState("+372");
+  const formId = FORMSPREE[audience];
+  const to = TO[audience];
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
-    if (!FORMSPREE_ID) {
-      const subject = encodeURIComponent(`[${data.role}] ${data.company || data.name}`);
-      const body = encodeURIComponent(`${data.name} (${data.role}, ${data.company || "-"})\n${data.email}\n\n${data.message}`);
-      window.location.href = `mailto:${TEAM_EMAIL}?subject=${subject}&body=${body}`;
+    const raw = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
+    const phone = normalisePhone(raw.dial, raw.phone);
+    const data = { ...raw, phone, audience };
+    const subject = `[${audience === "privacy" ? "privacy" : "contact"}] ${raw.subject}`;
+    if (!formId) {
+      const body = [
+        `${raw.name} · ${raw.jobTitle}${raw.company ? ` · ${raw.company}` : ""}`,
+        raw.email,
+        phone,
+        "",
+        raw.message,
+      ].join("\n");
+      window.location.href = `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       setState("sent");
       return;
     }
     setState("sending");
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      const res = await fetch(`https://formspree.io/f/${formId}`, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ ...data, _subject: `[${data.role}] ${data.company || data.name}` }),
+        body: JSON.stringify({ ...data, _subject: subject }),
       });
       if (!res.ok) throw new Error(String(res.status));
       setState("sent");
       form.reset();
+      setDial("+372");
     } catch {
       setState("error");
     }
   }
 
-  const input = "mt-1.5 w-full rounded-xl border border-border bg-bg px-3.5 py-3 text-sm text-text placeholder:text-text-faint focus:border-border-strong focus:outline-none";
-
   return (
-    <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+    <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
       <div>
-        <p className="section-kicker">{t("eyebrow")}</p>
-        <h2 className="section-title mt-7">{t("title")}</h2>
-        <p className="mt-6 max-w-md text-text-muted">{t("sub")}</p>
-        <dl className="mt-8 space-y-4 text-sm">
-          <div>
-            <dt className="mono-label">{t("phoneLabel")}</dt>
-            <dd className="mt-1 text-lg text-text" dir="ltr"><a href={`tel:${PHONE.replace(/\s/g, "")}`} className="hover:underline">{PHONE}</a></dd>
-          </div>
+        <p className="section-kicker">{t(audience === "privacy" ? "privacyEyebrow" : "eyebrow")}</p>
+        <h2 className="section-title mt-6">{t(audience === "privacy" ? "privacyTitle" : "title")}</h2>
+        <p className="mt-6 max-w-md text-text-muted">{t(audience === "privacy" ? "privacySub" : "sub")}</p>
+        <dl className="mt-10 space-y-5 text-sm">
           <div>
             <dt className="mono-label">{t("emailLabel")}</dt>
-            <dd className="mt-1 text-lg text-text" dir="ltr"><a href={`mailto:${TEAM_EMAIL}`} className="hover:underline">{TEAM_EMAIL}</a></dd>
+            <dd className="mt-1.5 text-lg text-text" dir="ltr">
+              <a href={`mailto:${to}`} className="hover:underline">{to}</a>
+            </dd>
           </div>
+          {audience === "team" ? (
+            <>
+              <div>
+                <dt className="mono-label">{t("phoneLabel")}</dt>
+                <dd className="mt-1.5 text-lg text-text" dir="ltr">
+                  <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="hover:underline">{PHONE}</a>
+                </dd>
+              </div>
+              <div>
+                <dt className="mono-label">LinkedIn</dt>
+                <dd className="mt-1.5 text-lg text-text">
+                  <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    {t("linkedin")}
+                  </a>
+                </dd>
+              </div>
+            </>
+          ) : null}
         </dl>
       </div>
 
       {state === "sent" ? (
-        <div className="rounded-3xl border border-border-strong bg-bg-raised p-8">
+        <div className="rounded-2xl border border-border bg-bg-raised p-8">
           <p className="display text-3xl text-text">{t("sent")}</p>
           <p className="mt-3 text-text-muted">{t("sentBody")}</p>
-          <button type="button" onClick={() => setState("idle")} className="button-secondary mt-6">{t("another")}</button>
+          <button type="button" onClick={() => setState("idle")} className="button-secondary mt-8">{t("another")}</button>
         </div>
       ) : (
-        <form onSubmit={onSubmit} className="rounded-3xl border border-border bg-bg-raised p-8">
-          <fieldset>
-            <legend className="text-xs text-text-muted">{t("roleLabel")} *</legend>
-            <div className="mt-2 grid grid-cols-2 gap-2 sm:grid-cols-3">
-              {ROLES.map((r) => (
-                <label key={r} className="flex cursor-pointer items-center gap-2 rounded-xl border border-border bg-bg px-3 py-2.5 text-sm text-text has-[:checked]:border-text">
-                  <input type="radio" name="role" value={r} required className="accent-current" />
-                  {t(`roles.${r}`)}
-                </label>
-              ))}
-            </div>
-          </fieldset>
-          <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            <label className="block text-xs text-text-muted">
+        <form onSubmit={onSubmit} className="rounded-2xl border border-border bg-bg-raised p-8" noValidate={false}>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <label className="field">
               {t("name")} *
-              <input name="name" required autoComplete="name" className={input} />
+              <input name="name" required autoComplete="name" />
             </label>
-            <label className="block text-xs text-text-muted">
+            <label className="field">
+              {t("jobTitle")} *
+              <input name="jobTitle" required autoComplete="organization-title" />
+            </label>
+            <label className="field">
               {t("company")}
-              <input name="company" autoComplete="organization" className={input} />
+              <input name="company" autoComplete="organization" />
+            </label>
+            <label className="field">
+              {t("email")} *
+              <input name="email" type="email" required autoComplete="email" />
             </label>
           </div>
-          <label className="mt-4 block text-xs text-text-muted">
-            {t("email")} *
-            <input name="email" type="email" required autoComplete="email" className={input} />
+
+          <div className="mt-5">
+            <span className="field">{t("phone")} *</span>
+            <div className="grid grid-cols-[minmax(0,10.5rem)_1fr] gap-2" dir="ltr">
+              <label className="field sr-only" htmlFor="dial">{t("countryCode")}</label>
+              <select id="dial" name="dial" value={dial} onChange={(e) => setDial(e.target.value)} className="field-input mt-[.45rem]" aria-label={t("countryCode")}>
+                {DIAL_CODES.map(([iso, name, code]) => (
+                  <option key={iso} value={code}>
+                    {flagOf(iso)} {name} ({code})
+                  </option>
+                ))}
+              </select>
+              <label className="field sr-only" htmlFor="phone">{t("phone")}</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                inputMode="tel"
+                required
+                autoComplete="tel-national"
+                pattern="[0-9 ()+\-]{4,20}"
+                placeholder={dial === "+372" ? "5666 6760" : ""}
+                className="field-input mt-[.45rem]"
+              />
+            </div>
+          </div>
+
+          <label className="field mt-5">
+            {t("subject")} *
+            <input name="subject" required maxLength={120} />
           </label>
-          <label className="mt-4 block text-xs text-text-muted">
+          <label className="field mt-5">
             {t("message")} *
-            <textarea name="message" required rows={5} className={input} />
+            <textarea name="message" required rows={5} />
           </label>
-          <label className="mt-4 flex items-start gap-2 text-xs text-text-muted">
+          <label className="mt-5 flex items-start gap-2.5 text-xs text-text-muted">
             <input type="checkbox" name="consent" required className="mt-0.5 accent-current" />
             <span>{t("consent")}</span>
           </label>
-          {state === "error" ? <p className="mt-4 text-sm text-text">{t("error")}</p> : null}
-          <button type="submit" disabled={state === "sending"} className="button-primary mt-6 w-full justify-center">
-            {state === "sending" ? t("sending") : t("submit")} <span aria-hidden>↗</span>
+          {state === "error" ? <p className="mt-4 text-sm text-text">{t("error", { email: to })}</p> : null}
+          <button type="submit" disabled={state === "sending"} className="button-primary mt-7 w-full">
+            {state === "sending" ? t("sending") : t("submit")}
           </button>
-          {!FORMSPREE_ID ? <p className="mt-2 text-center font-mono text-[10px] text-text-faint">{t("fallbackNote")}</p> : null}
+          {!formId ? <p className="mt-3 text-center text-xs text-text-faint">{t("fallbackNote")}</p> : null}
         </form>
       )}
     </div>

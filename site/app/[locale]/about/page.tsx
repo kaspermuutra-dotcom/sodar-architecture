@@ -26,7 +26,7 @@ export default async function AboutPage({ params }: Params) {
 
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("thesisKicker")}</p>
-        <h2 className="section-title mt-7">{t("thesisTitle")}</h2>
+        <h2 className="section-title mt-6">{t("thesisTitle")}</h2>
         <div className="mt-10 max-w-2xl space-y-5 text-lg leading-relaxed text-text-muted">
           {thesis.map((p) => (
             <p key={p}>{p}</p>
@@ -36,7 +36,7 @@ export default async function AboutPage({ params }: Params) {
 
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("valuesKicker")}</p>
-        <h2 className="section-title mt-7">{t("valuesTitle")}</h2>
+        <h2 className="section-title mt-6">{t("valuesTitle")}</h2>
         <div className="mt-14 grid gap-8 sm:grid-cols-3">
           {values.map((v) => (
             <div key={v.title}>

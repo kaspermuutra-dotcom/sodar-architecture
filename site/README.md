@@ -16,16 +16,17 @@ npm run typecheck
 
 ## Design system — "Mono Scan"
 
-Pure black page, warm off-white type, **no colour accent**: white is the only
-accent (the scan-line, active states). All tokens live in `app/globals.css`
-under `@theme`.
+Black page, warm off-white type, **no colour accent**. All tokens live in
+`app/globals.css` under `@theme`. The second pass (September 2026) removed every
+texture and ornament — grain, vignette, hairline grid, glows, section numbers,
+arrow glyphs, the room marquee — and keeps motion to a few fades.
 
 - Display: Instrument Serif (`.display`, `.section-title`)
-- Body: Inter · Data / status strings: JetBrains Mono (`.mono-label`, `.ticker`)
-- Artifacts: film grain (`.grain`), vignette, hairline grid (`.hairgrid`), the
-  scan-line motif (`components/scan-reveal.tsx`), room marquee.
-- Logo: `components/logo.tsx` — SVG approximation of the S mark. Replace the
-  `<path>` with the real mark's path when exported.
+- Body: Inter · Small labels only: JetBrains Mono (`.section-kicker`, `.mono-label`)
+- Forms: `.field` / `.field-input` (contact and privacy forms, partner application)
+- The one motif: the scan-line reveal (`components/scan-reveal.tsx`), toned down.
+- Logo: `components/logo.tsx` — the official S mark.
+- Company details (emails, phone, LinkedIn): `lib/company.ts`.
 
 ### Light bands
 
@@ -41,10 +42,20 @@ Every GSAP effect checks `prefersReducedMotion()` from `lib/motion.ts`, which is
 true for the OS setting **or** `?motion=off` in the URL. Use `?motion=off` for
 screenshots / visual QA so you see final states instead of frozen tweens.
 
-Signature pieces: `components/mosaic-grid.tsx` (hero wall: random stagger,
-scan sweep, cursor drift), `components/pipeline.tsx` (pinned, scroll-scrubbed
-Capture → Preview → Unlock → Publish), `components/manifesto.tsx`
-(scroll-lit thesis lines), `components/stats-band.tsx` (counters).
+Pieces: `components/mosaic-grid.tsx` (hero wall, one staggered fade-in),
+`components/intro-video.tsx` (the film, with a minimal control bar),
+`components/pipeline.tsx` (Capture → Preview → Unlock → Publish as stacked
+stages that fade in once), `components/manifesto.tsx` (scroll-lit thesis
+lines), `components/stats-band.tsx` (counters).
+
+## Contact forms
+
+`components/contact-form.tsx` renders two audiences: the default posts to
+`NEXT_PUBLIC_FORMSPREE_ID` (team@sodar.io) and `audience="privacy"` — used on
+`/legal/privacy` only — posts to `NEXT_PUBLIC_FORMSPREE_PRIVACY_ID`
+(privacy@sodar.io). Job title, phone (country-code selector in
+`lib/dial-codes.ts`), subject and message are mandatory. Without a Formspree
+id the form falls back to a pre-filled mailto.
 
 ## Scanner (`/scan`)
 

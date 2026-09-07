@@ -49,12 +49,12 @@ export function StatsBand() {
       <div className="mx-auto grid max-w-[1440px] divide-y divide-border sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
         {VALUES.map((s, i) => (
           <div key={i} className="px-5 py-10 sm:px-8 lg:px-12 lg:py-14">
-            <p className="display num text-[clamp(3rem,6vw,5.5rem)] leading-none text-text" dir="ltr">
+            <p className="display num text-[clamp(2.6rem,4.6vw,4.4rem)] leading-none text-text" dir="ltr">
               <span data-count={s.value}>0</span>
               {s.suffix}
             </p>
             <p className="mt-3 text-sm text-text">{items[i]?.label}</p>
-            <p className="mt-1 font-mono text-[11px] text-text-muted">{items[i]?.note}</p>
+            <p className="mt-1 text-xs text-text-muted">{items[i]?.note}</p>
           </div>
         ))}
       </div>

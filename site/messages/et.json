@@ -19,31 +19,7 @@
     "headline2": "mis sõlmivad rohkem tehinguid.",
     "sub": "Ava sodar.io telefonis, käi kinnisvara ühe korra läbi ja saad kaasahaarava ringkäigu, kuhu ostjad saavad sisse astuda — avaldatuna kuulutusse, mis sul juba on.",
     "ctaPrimary": "Skanni oma esimene objekt",
-    "ctaSecondary": "Vaata, kuidas see töötab",
-    "status": [
-      "JÄÄDVUSTUS ▸ elutuba · 12/12 kaadrit · katvus 98%",
-      "ABILINE  ▸ kalluta 4° alla · hoia paigal · hea valgus",
-      "ÜHENDAMINE ▸ köök · ekvirektangulaarne · 8192×4096",
-      "EELVAADE ▸ 2/6 ruumi valmis · tasuta",
-      "PAKKUMINE ▸ ühekordne hind arvutatud · 6 ruumi · 14 panoraami",
-      "AVALDATUD ▸ CRM-i kuulutus #48213 · vaatur manustatud"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Elutuba",
-      "Köök",
-      "Magamistuba",
-      "Vannituba",
-      "Koridor",
-      "Rõdu",
-      "Kabinet",
-      "Söögituba",
-      "Külalistetuba",
-      "Esik",
-      "Terrass",
-      "Garaaž"
-    ]
+    "ctaSecondary": "Vaata, kuidas see töötab"
   },
   "Manifesto": {
     "kicker": "Tees",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Keri",
+    "kicker": "Kuidas see töötab",
+    "title": "Ühest läbikäigust virtuaaltuurini.",
     "frames": "/12 kaadrit",
     "assistantLabel": "Jäädvustusabiline",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Keel",
-    "social": "Mujal",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallinn, Eesti · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Privaatsusküsimused:"
   },
-  "Scaffold": {
-    "phase": "1. etapp — disain ja struktuur",
-    "note": "Maksed, CRM-i OAuth ja AI-protsess on simuleeritud kohatäite-olekud. Taustsüsteemi päringuid pole."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "maaklerbürood juba skannivad Sodariga",
-    "note": "Varajane ligipääs · Tallinn ja kaugemal"
+    "line": "Toetame praegu ettevõtete vastavusalaseid pingutusi üle Eesti.",
+    "note": "Tallinn, Eesti"
   },
   "Scanner": {
     "metaTitle": "Skanni kinnisvara — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Maaklerid, bürood, CRM-i pakkujad ja portaalid saavad igaüks erineva vastuse — vali oma roll ja me vastame õigelt laualt.",
     "phoneLabel": "Telefon",
     "emailLabel": "E-post",
-    "roleLabel": "Ma olen",
-    "roles": {
-      "broker": "Maakler / agent",
-      "brokerage": "Maaklerbüroo",
-      "crm": "CRM-i pakkuja",
-      "portal": "Kinnisvaraportaal",
-      "other": "Muu"
-    },
     "name": "Nimi",
     "company": "Ettevõte",
     "email": "Töömeil",
@@ -1084,12 +1047,25 @@
     "sent": "Sõnum saadetud.",
     "sentBody": "Vastame ühe tööpäeva jooksul.",
     "another": "Saada veel üks",
-    "error": "Saatmine ebaõnnestus. Kirjuta otse aadressile team@sodar.io.",
-    "fallbackNote": "Avab sinu e-posti rakenduse, kuni vormiteenus on ühendatud."
+    "error": "Saatmine ebaõnnestus. Kirjuta otse aadressile {email}.",
+    "fallbackNote": "Avab sinu e-posti rakenduse, kuni vormiteenus on ühendatud.",
+    "jobTitle": "Ametinimetus",
+    "phone": "Telefon",
+    "countryCode": "Riigikood",
+    "subject": "Teema",
+    "linkedin": "Sodar LinkedInis",
+    "privacyEyebrow": "Privaatsus",
+    "privacyTitle": "Küsi oma andmete kohta.",
+    "privacySub": "Päringud andmetele juurdepääsu, parandamise, ekspordi või kustutamise kohta ja kõik muud privaatsusküsimused jõuavad otse meie privaatsusmeeskonnani."
   },
   "Intro": {
     "kicker": "Tutvustus",
     "title": "Sodar ühe minutiga.",
-    "body": "Käi üks kord läbi, vaata kaht ruumi tasuta, maksa üks kord, avalda kuulutusse, mis sul juba on."
+    "body": "Käi üks kord läbi, vaata kaht ruumi tasuta, maksa üks kord, avalda kuulutusse, mis sul juba on.",
+    "play": "Esita",
+    "pause": "Paus",
+    "mute": "Vaigista",
+    "unmute": "Heli sisse",
+    "fullscreen": "Täisekraan"
   }
 }

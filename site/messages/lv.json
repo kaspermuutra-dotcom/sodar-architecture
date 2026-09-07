@@ -19,31 +19,7 @@
     "headline2": "kas noslēdz vairāk darījumu.",
     "sub": "Atveriet sodar.io tālrunī, izstaigājiet īpašumu vienu reizi un saņemiet iegremdējošu apskati, kurā pircēji var ieiet — publicētu sludinājumā, kas jums jau ir.",
     "ctaPrimary": "Skenējiet savu pirmo īpašumu",
-    "ctaSecondary": "Skatīt, kā tas darbojas",
-    "status": [
-      "UZŅEMŠANA ▸ viesistaba · 12/12 kadri · pārklājums 98%",
-      "ASISTENTS ▸ nolieciet par 4° · turiet · laba gaisma",
-      "SAVIENOŠANA ▸ virtuve · ekvirektangulārs · 8192×4096",
-      "PRIEKŠSKATS ▸ 2 no 6 telpām gatavas · bez maksas",
-      "PIEDĀVĀJUMS ▸ vienreizēja cena aprēķināta · 6 telpas · 14 panorāmas",
-      "PUBLICĒTS ▸ CRM sludinājums #48213 · skatītājs iegults"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Viesistaba",
-      "Virtuve",
-      "Guļamistaba",
-      "Vannas istaba",
-      "Gaitenis",
-      "Balkons",
-      "Kabinets",
-      "Ēdamistaba",
-      "Viesu istaba",
-      "Ieeja",
-      "Terase",
-      "Garāža"
-    ]
+    "ctaSecondary": "Skatīt, kā tas darbojas"
   },
   "Manifesto": {
     "kicker": "Tēze",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Ritiniet",
+    "kicker": "Kā tas darbojas",
+    "title": "No apstaigāšanas līdz virtuālai tūrei.",
     "frames": "/12 kadri",
     "assistantLabel": "Uzņemšanas asistents",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Valoda",
-    "social": "Citur",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallina, Igaunija · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Jautājumi par privātumu:"
   },
-  "Scaffold": {
-    "phase": "1. posms — dizains un struktūra",
-    "note": "Maksājumi, CRM OAuth un MI process ir simulēti vietturu stāvokļi. Bez aizmugursistēmas izsaukumiem."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "aģentūras jau skenē ar Sodar",
-    "note": "Agrīna piekļuve · Tallina un tālāk"
+    "line": "Pašlaik atbalstām uzņēmumu atbilstības nodrošināšanu visā Igaunijā.",
+    "note": "Tallina, Igaunija"
   },
   "Scanner": {
     "metaTitle": "Skenēt īpašumu — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Mākleri, aģentūras, CRM nodrošinātāji un portāli katrs saņem citu atbildi — izvēlieties savu lomu, un mēs atbildēsim no īstā galda.",
     "phoneLabel": "Tālrunis",
     "emailLabel": "E-pasts",
-    "roleLabel": "Es esmu",
-    "roles": {
-      "broker": "Mākleris / aģents",
-      "brokerage": "Aģentūra",
-      "crm": "CRM nodrošinātājs",
-      "portal": "Nekustamo īpašumu portāls",
-      "other": "Cits"
-    },
     "name": "Vārds",
     "company": "Uzņēmums",
     "email": "Darba e-pasts",
@@ -1084,12 +1047,25 @@
     "sent": "Ziņa nosūtīta.",
     "sentBody": "Atbildam vienas darba dienas laikā.",
     "another": "Sūtīt vēl vienu",
-    "error": "Sūtīšana neizdevās. Rakstiet tieši uz team@sodar.io.",
-    "fallbackNote": "Atver jūsu e-pasta lietotni, līdz formu pakalpojums ir pievienots."
+    "error": "Nosūtīšana neizdevās. Rakstiet tieši uz {email}.",
+    "fallbackNote": "Atver jūsu e-pasta lietotni, līdz formu pakalpojums ir pievienots.",
+    "jobTitle": "Amats",
+    "phone": "Tālrunis",
+    "countryCode": "Valsts kods",
+    "subject": "Temats",
+    "linkedin": "Sodar LinkedIn",
+    "privacyEyebrow": "Privātums",
+    "privacyTitle": "Jautājiet par saviem datiem.",
+    "privacySub": "Pieprasījumi par piekļuvi datiem, to labošanu, eksportu vai dzēšanu un citi privātuma jautājumi nonāk tieši pie mūsu privātuma komandas."
   },
   "Intro": {
     "kicker": "Ievads",
     "title": "Sodar vienā minūtē.",
-    "body": "Izstaigājiet vienreiz, priekšskatiet divas telpas bez maksas, samaksājiet vienreiz, publicējiet sludinājumā, kas jums jau ir."
+    "body": "Izstaigājiet vienreiz, priekšskatiet divas telpas bez maksas, samaksājiet vienreiz, publicējiet sludinājumā, kas jums jau ir.",
+    "play": "Atskaņot",
+    "pause": "Pauze",
+    "mute": "Izslēgt skaņu",
+    "unmute": "Ieslēgt skaņu",
+    "fullscreen": "Pilnekrāns"
   }
 }

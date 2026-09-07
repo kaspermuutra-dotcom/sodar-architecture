@@ -7,6 +7,7 @@ import { ScanReveal } from "@/components/scan-reveal";
 import { FlatListingPhoto, SodarWalkthroughFrame } from "@/components/scan-placeholders";
 
 type Params = { params: Promise<{ locale: string }> };
+const STILLS = ["/media/hero-scan-loop.jpg", "/media/loft-wide.jpg", "/media/kitchen-harbour.jpg", "/media/tallinn-street.jpg"];
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { locale } = await params;
@@ -32,8 +33,8 @@ export default async function BlogPage({ params }: Params) {
                 trigger="hover"
                 durationMs={900}
                 frameClassName="aspect-[16/10]"
-                flat={<FlatListingPhoto />}
-                revealed={<SodarWalkthroughFrame />}
+                flat={<FlatListingPhoto still={STILLS[i % STILLS.length]} />}
+                revealed={<SodarWalkthroughFrame still={STILLS[i % STILLS.length]} />}
                 direction={i % 2 === 0 ? "down" : "right"}
               />
               <p className="mt-4 font-mono text-[11px] uppercase tracking-[.16em] text-text-muted">{post.tag}</p>

@@ -19,31 +19,7 @@
     "headline2": "yapay zekâ turları.",
     "sub": "Telefonunuzda sodar.io’yu açın, mülkü bir kez dolaşın ve alıcıların içine adım atabileceği sürükleyici bir tur edinin — zaten sahip olduğunuz ilanda yayınlanmış olarak.",
     "ctaPrimary": "İlk mülkünüzü tarayın",
-    "ctaSecondary": "Nasıl çalıştığını görün",
-    "status": [
-      "ÇEKİM    ▸ salon · 12/12 kare · kapsama %98",
-      "ASİSTAN  ▸ 4° aşağı eğ · sabit tut · iyi ışık",
-      "BİRLEŞTİRME ▸ mutfak · eşdörtgen · 8192×4096",
-      "ÖNİZLEME ▸ 6 odadan 2’si hazır · ücretsiz",
-      "TEKLİF   ▸ tek seferlik fiyat hesaplandı · 6 oda · 14 panorama",
-      "YAYINLANDI ▸ CRM ilanı #48213 · görüntüleyici gömüldü"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Salon",
-      "Mutfak",
-      "Ebeveyn yatak odası",
-      "Banyo",
-      "Koridor",
-      "Balkon",
-      "Çalışma odası",
-      "Yemek odası",
-      "Misafir odası",
-      "Giriş",
-      "Teras",
-      "Garaj"
-    ]
+    "ctaSecondary": "Nasıl çalıştığını görün"
   },
   "Manifesto": {
     "kicker": "Tez",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Kaydır",
+    "kicker": "Nasıl çalışır",
+    "title": "Bir yürüyüşten sanal tura.",
     "frames": "/12 kare",
     "assistantLabel": "Çekim asistanı",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Dil",
-    "social": "Başka yerlerde",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallinn, Estonya · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Gizlilik soruları:"
   },
-  "Scaffold": {
-    "phase": "1. aşama — tasarım ve yapı",
-    "note": "Ödemeler, CRM OAuth ve yapay zekâ hattı simüle edilmiş yer tutucu durumlardır. Arka uç çağrısı yok."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "ofis şimdiden Sodar ile tarıyor",
-    "note": "Erken erişim · Tallinn ve ötesi"
+    "line": "Şu anda Estonya genelinde şirketlerin uyum çalışmalarını destekliyoruz.",
+    "note": "Tallinn, Estonya"
   },
   "Scanner": {
     "metaTitle": "Mülk tara — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Danışmanlar, ofisler, CRM sağlayıcıları ve portallar farklı yanıtlar alır — rolünüzü seçin, doğru masadan yanıtlayalım.",
     "phoneLabel": "Telefon",
     "emailLabel": "E-posta",
-    "roleLabel": "Ben bir",
-    "roles": {
-      "broker": "Danışman / temsilci",
-      "brokerage": "Emlak ofisi",
-      "crm": "CRM sağlayıcısı",
-      "portal": "Emlak portalı",
-      "other": "Diğer"
-    },
     "name": "Ad",
     "company": "Şirket",
     "email": "İş e-postası",
@@ -1084,12 +1047,25 @@
     "sent": "Mesaj gönderildi.",
     "sentBody": "Bir iş günü içinde yanıtlıyoruz.",
     "another": "Bir tane daha gönder",
-    "error": "Gönderim başarısız oldu. Lütfen doğrudan team@sodar.io adresine yazın.",
-    "fallbackNote": "Form hizmeti bağlanana kadar e-posta uygulamanızı açar."
+    "error": "Gönderilemedi. Lütfen doğrudan {email} adresine yazın.",
+    "fallbackNote": "Form hizmeti bağlanana kadar e-posta uygulamanızı açar.",
+    "jobTitle": "Unvan",
+    "phone": "Telefon",
+    "countryCode": "Ülke kodu",
+    "subject": "Konu",
+    "linkedin": "LinkedIn’de Sodar",
+    "privacyEyebrow": "Gizlilik",
+    "privacyTitle": "Verileriniz hakkında bize sorun.",
+    "privacySub": "Verilerinize erişim, düzeltme, dışa aktarma veya silme talepleri ve diğer tüm gizlilik soruları doğrudan gizlilik ekibimize ulaşır."
   },
   "Intro": {
     "kicker": "Tanıtım",
     "title": "Bir dakikada Sodar.",
-    "body": "Bir kez dolaşın, iki odayı ücretsiz önizleyin, bir kez ödeyin, zaten sahip olduğunuz ilanda yayınlayın."
+    "body": "Bir kez dolaşın, iki odayı ücretsiz önizleyin, bir kez ödeyin, zaten sahip olduğunuz ilanda yayınlayın.",
+    "play": "Oynat",
+    "pause": "Duraklat",
+    "mute": "Sesi kapat",
+    "unmute": "Sesi aç",
+    "fullscreen": "Tam ekran"
   }
 }

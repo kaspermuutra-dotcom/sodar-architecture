@@ -64,7 +64,7 @@ export function SiteHeader() {
             {t("signIn")}
           </Link>
           <Link href="/scan" target="_blank" rel="noopener noreferrer" className="button-mini">
-            {t("getStarted")} <span aria-hidden>↗</span>
+            {t("getStarted")}
           </Link>
         </div>
 
@@ -95,7 +95,7 @@ export function SiteHeader() {
             </Link>
           </nav>
           <Link href="/scan" target="_blank" rel="noopener noreferrer" className="button-primary mt-6 w-full justify-center">
-            {t("getStarted")} <span aria-hidden>↗</span>
+            {t("getStarted")}
           </Link>
           <div className="mt-6">
             <LanguageSwitcher />

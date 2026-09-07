@@ -19,31 +19,7 @@
     "headline2": "które domykają więcej transakcji.",
     "sub": "Otwórz sodar.io na telefonie, przejdź nieruchomość jeden raz i otrzymaj immersyjny spacer, do którego kupujący mogą wejść — opublikowany w ogłoszeniu, które już masz.",
     "ctaPrimary": "Zeskanuj pierwszą nieruchomość",
-    "ctaSecondary": "Zobacz, jak to działa",
-    "status": [
-      "UJĘCIE   ▸ salon · 12/12 klatek · pokrycie 98%",
-      "ASYSTENT ▸ pochyl o 4° w dół · trzymaj · dobre światło",
-      "ŁĄCZENIE ▸ kuchnia · ekwirektangularny · 8192×4096",
-      "PODGLĄD  ▸ 2 z 6 pomieszczeń gotowe · za darmo",
-      "WYCENA   ▸ cena jednorazowa policzona · 6 pomieszczeń · 14 panoram",
-      "OPUBLIKOWANO ▸ ogłoszenie CRM #48213 · przeglądarka osadzona"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Salon",
-      "Kuchnia",
-      "Sypialnia",
-      "Łazienka",
-      "Korytarz",
-      "Balkon",
-      "Gabinet",
-      "Jadalnia",
-      "Pokój gościnny",
-      "Wejście",
-      "Taras",
-      "Garaż"
-    ]
+    "ctaSecondary": "Zobacz, jak to działa"
   },
   "Manifesto": {
     "kicker": "Teza",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Przewiń",
+    "kicker": "Jak to działa",
+    "title": "Od jednego obejścia do wirtualnego spaceru.",
     "frames": "/12 klatek",
     "assistantLabel": "Asystent ujęć",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Język",
-    "social": "Gdzie indziej",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallinn, Estonia · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Pytania o prywatność:"
   },
-  "Scaffold": {
-    "phase": "Faza 1 — projekt i struktura",
-    "note": "Płatności, OAuth CRM i proces AI to symulowane stany zastępcze. Brak wywołań backendu."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "biur nieruchomości już skanuje z Sodar",
-    "note": "Wczesny dostęp · Tallinn i dalej"
+    "line": "Obecnie wspieramy działania firm w całej Estonii w zakresie zgodności z przepisami.",
+    "note": "Tallin, Estonia"
   },
   "Scanner": {
     "metaTitle": "Zeskanuj nieruchomość — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Pośrednicy, biura, dostawcy CRM i portale dostają różne odpowiedzi — wybierz swoją rolę, a odpowiemy z właściwego biurka.",
     "phoneLabel": "Telefon",
     "emailLabel": "E-mail",
-    "roleLabel": "Jestem",
-    "roles": {
-      "broker": "Pośrednik / agent",
-      "brokerage": "Biuro nieruchomości",
-      "crm": "Dostawca CRM",
-      "portal": "Portal nieruchomości",
-      "other": "Inne"
-    },
     "name": "Imię i nazwisko",
     "company": "Firma",
     "email": "Służbowy e-mail",
@@ -1084,12 +1047,25 @@
     "sent": "Wiadomość wysłana.",
     "sentBody": "Odpowiadamy w ciągu jednego dnia roboczego.",
     "another": "Wyślij kolejną",
-    "error": "Wysyłanie nie powiodło się. Napisz bezpośrednio na team@sodar.io.",
-    "fallbackNote": "Otwiera Twoją aplikację pocztową, dopóki usługa formularzy nie zostanie podłączona."
+    "error": "Wysyłanie nie powiodło się. Napisz bezpośrednio na {email}.",
+    "fallbackNote": "Otwiera Twoją aplikację pocztową, dopóki usługa formularzy nie zostanie podłączona.",
+    "jobTitle": "Stanowisko",
+    "phone": "Telefon",
+    "countryCode": "Kod kraju",
+    "subject": "Temat",
+    "linkedin": "Sodar na LinkedIn",
+    "privacyEyebrow": "Prywatność",
+    "privacyTitle": "Zapytaj o swoje dane.",
+    "privacySub": "Wnioski o dostęp, sprostowanie, eksport lub usunięcie danych oraz wszelkie inne pytania o prywatność trafiają bezpośrednio do naszego zespołu ds. prywatności."
   },
   "Intro": {
     "kicker": "Wprowadzenie",
     "title": "Sodar w jedną minutę.",
-    "body": "Przejdź raz, obejrzyj dwa pomieszczenia za darmo, zapłać raz, opublikuj w ogłoszeniu, które już masz."
+    "body": "Przejdź raz, obejrzyj dwa pomieszczenia za darmo, zapłać raz, opublikuj w ogłoszeniu, które już masz.",
+    "play": "Odtwórz",
+    "pause": "Pauza",
+    "mute": "Wycisz",
+    "unmute": "Włącz dźwięk",
+    "fullscreen": "Pełny ekran"
   }
 }

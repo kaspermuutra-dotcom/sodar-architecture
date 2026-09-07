@@ -19,31 +19,7 @@
     "headline2": "促成更多成交。",
     "sub": "在手机上打开 sodar.io，把房源走一遍，就能得到一段买家可以“走进去”的沉浸式漫游——直接发布到你已有的房源信息中。",
     "ctaPrimary": "扫描你的第一套房源",
-    "ctaSecondary": "看看它如何运作",
-    "status": [
-      "拍摄 ▸ 客厅 · 12/12 帧 · 覆盖率 98%",
-      "助手 ▸ 向下倾斜 4° · 保持 · 光线良好",
-      "拼接 ▸ 厨房 · 等距柱状 · 8192×4096",
-      "预览 ▸ 6 个房间中 2 个已就绪 · 免费",
-      "报价 ▸ 一次性价格已计算 · 6 个房间 · 14 张全景",
-      "已发布 ▸ CRM 房源 #48213 · 查看器已嵌入"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "客厅",
-      "厨房",
-      "主卧",
-      "卫生间",
-      "走廊",
-      "阳台",
-      "书房",
-      "餐厅",
-      "客房",
-      "玄关",
-      "露台",
-      "车库"
-    ]
+    "ctaSecondary": "看看它如何运作"
   },
   "Manifesto": {
     "kicker": "主张",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "滚动",
+    "kicker": "工作原理",
+    "title": "走一遍，生成一次漫游。",
     "frames": "/12 帧",
     "assistantLabel": "拍摄助手",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "语言",
-    "social": "其他平台",
     "copyright": "Sodar Technologies OÜ",
     "location": "爱沙尼亚 塔林 · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "隐私相关问题："
   },
-  "Scaffold": {
-    "phase": "第一阶段 — 设计与结构",
-    "note": "支付、CRM OAuth 和 AI 流水线均为模拟占位状态。无后端调用。"
-  },
   "Proof": {
-    "count": "5+",
-    "line": "家中介公司已在使用 Sodar 扫描",
-    "note": "抢先体验 · 塔林及更多城市"
+    "line": "目前为爱沙尼亚各地企业的合规工作提供支持。",
+    "note": "爱沙尼亚 塔林"
   },
   "Scanner": {
     "metaTitle": "扫描房源 — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "经纪人、中介公司、CRM 服务商和门户各自会得到不同的答复——选择你的身份，我们会由对应的团队回复。",
     "phoneLabel": "电话",
     "emailLabel": "邮箱",
-    "roleLabel": "我是",
-    "roles": {
-      "broker": "经纪人 / 代理",
-      "brokerage": "中介公司",
-      "crm": "CRM 服务商",
-      "portal": "房产门户",
-      "other": "其他"
-    },
     "name": "姓名",
     "company": "公司",
     "email": "工作邮箱",
@@ -1084,12 +1047,25 @@
     "sent": "留言已发送。",
     "sentBody": "我们会在一个工作日内回复。",
     "another": "再发一条",
-    "error": "发送失败。请直接发邮件至 team@sodar.io。",
-    "fallbackNote": "在表单服务接入前，将打开你的邮件应用。"
+    "error": "发送失败。请直接发送邮件至 {email}。",
+    "fallbackNote": "在表单服务接入前，将打开你的邮件应用。",
+    "jobTitle": "职位",
+    "phone": "电话",
+    "countryCode": "国家代码",
+    "subject": "主题",
+    "linkedin": "Sodar 领英主页",
+    "privacyEyebrow": "隐私",
+    "privacyTitle": "咨询您的数据。",
+    "privacySub": "关于访问、更正、导出或删除您数据的请求，以及其他任何隐私问题，都会直接送达我们的隐私团队。"
   },
   "Intro": {
     "kicker": "简介",
     "title": "一分钟了解 Sodar。",
-    "body": "走一遍，免费预览两个房间，付款一次，发布到你已有的房源中。"
+    "body": "走一遍，免费预览两个房间，付款一次，发布到你已有的房源中。",
+    "play": "播放",
+    "pause": "暂停",
+    "mute": "静音",
+    "unmute": "取消静音",
+    "fullscreen": "全屏"
   }
 }

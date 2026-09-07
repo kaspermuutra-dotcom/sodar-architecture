@@ -19,31 +19,7 @@
     "headline2": "che chiudono più trattative.",
     "sub": "Apri sodar.io sul telefono, percorri l’immobile una sola volta e ottieni un tour immersivo in cui gli acquirenti possono entrare — pubblicato nell’annuncio che hai già.",
     "ctaPrimary": "Scansiona il tuo primo immobile",
-    "ctaSecondary": "Scopri come funziona",
-    "status": [
-      "RIPRESA  ▸ soggiorno · 12/12 fotogrammi · copertura 98%",
-      "ASSISTENTE ▸ inclina di 4° · fermo · buona luce",
-      "STITCHING ▸ cucina · equirettangolare · 8192×4096",
-      "ANTEPRIMA ▸ 2 stanze su 6 pronte · gratis",
-      "PREVENTIVO ▸ prezzo unico calcolato · 6 stanze · 14 panorami",
-      "PUBBLICATO ▸ annuncio CRM #48213 · viewer integrato"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Soggiorno",
-      "Cucina",
-      "Camera padronale",
-      "Bagno",
-      "Corridoio",
-      "Balcone",
-      "Studio",
-      "Sala da pranzo",
-      "Camera degli ospiti",
-      "Ingresso",
-      "Terrazza",
-      "Garage"
-    ]
+    "ctaSecondary": "Scopri come funziona"
   },
   "Manifesto": {
     "kicker": "Tesi",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Scorri",
+    "kicker": "Come funziona",
+    "title": "Da una camminata a un walkthrough.",
     "frames": "/12 fotogrammi",
     "assistantLabel": "Assistente di ripresa",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Lingua",
-    "social": "Altrove",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallinn, Estonia · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Domande sulla privacy:"
   },
-  "Scaffold": {
-    "phase": "Fase 1 — design e struttura",
-    "note": "Pagamenti, OAuth CRM e la pipeline IA sono stati segnaposto simulati. Nessuna chiamata al backend."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "agenzie scansionano già con Sodar",
-    "note": "Accesso anticipato · Tallinn e oltre"
+    "line": "Attualmente supportiamo le attività di conformità di aziende in tutta l’Estonia.",
+    "note": "Tallinn, Estonia"
   },
   "Scanner": {
     "metaTitle": "Scansiona un immobile — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Agenti, agenzie, fornitori di CRM e portali ricevono risposte diverse: scegli il tuo profilo e ti rispondiamo dal tavolo giusto.",
     "phoneLabel": "Telefono",
     "emailLabel": "Email",
-    "roleLabel": "Sono",
-    "roles": {
-      "broker": "Agente immobiliare",
-      "brokerage": "Agenzia",
-      "crm": "Fornitore di CRM",
-      "portal": "Portale immobiliare",
-      "other": "Altro"
-    },
     "name": "Nome",
     "company": "Azienda",
     "email": "Email di lavoro",
@@ -1084,12 +1047,25 @@
     "sent": "Messaggio inviato.",
     "sentBody": "Rispondiamo entro un giorno lavorativo.",
     "another": "Inviane un altro",
-    "error": "Invio non riuscito. Scrivi direttamente a team@sodar.io.",
-    "fallbackNote": "Apre la tua app di posta finché il servizio moduli non è collegato."
+    "error": "Invio non riuscito. Scrivi direttamente a {email}.",
+    "fallbackNote": "Apre la tua app di posta finché il servizio moduli non è collegato.",
+    "jobTitle": "Ruolo",
+    "phone": "Telefono",
+    "countryCode": "Prefisso",
+    "subject": "Oggetto",
+    "linkedin": "Sodar su LinkedIn",
+    "privacyEyebrow": "Privacy",
+    "privacyTitle": "Chiedici dei tuoi dati.",
+    "privacySub": "Le richieste di accesso, rettifica, esportazione o cancellazione dei tuoi dati, e ogni altra domanda sulla privacy, arrivano direttamente al nostro team privacy."
   },
   "Intro": {
     "kicker": "Introduzione",
     "title": "Sodar in un minuto.",
-    "body": "Percorri una volta, guarda due stanze gratis, paga una volta, pubblica nell’annuncio che hai già."
+    "body": "Percorri una volta, guarda due stanze gratis, paga una volta, pubblica nell’annuncio che hai già.",
+    "play": "Riproduci",
+    "pause": "Pausa",
+    "mute": "Disattiva audio",
+    "unmute": "Attiva audio",
+    "fullscreen": "Schermo intero"
   }
 }

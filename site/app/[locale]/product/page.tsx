@@ -33,7 +33,7 @@ export default async function ProductPage({ params }: Params) {
         actions={
           <>
             <Link href="/scan" className="button-primary">
-              {t("ctaPrimary")} <span aria-hidden>↗</span>
+              {t("ctaPrimary")}
             </Link>
             <Link href="/terminal" className="button-secondary">
               {t("ctaSecondary")}
@@ -46,7 +46,7 @@ export default async function ProductPage({ params }: Params) {
         <ScanReveal
           trigger="scrub"
           durationMs={1200}
-          frameClassName="aspect-[16/9] shadow-2xl shadow-black/60"
+          frameClassName="aspect-[16/9] "
           flat={<FlatListingPhoto label={t("flatLabel")} />}
           revealed={<SodarWalkthroughFrame label={t("revealedLabel")} />}
         />
@@ -54,12 +54,11 @@ export default async function ProductPage({ params }: Params) {
 
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("stagesKicker")}</p>
-        <h2 className="section-title mt-7">{t("stagesTitle")}</h2>
-        <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border md:grid-cols-3">
+        <h2 className="section-title mt-6">{t("stagesTitle")}</h2>
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-3">
           {stages.map((s, i) => (
             <article key={s.label} className="bg-bg p-8 sm:p-10">
-              <span className="font-mono text-xs text-text-faint">0{i + 1}</span>
-              <h3 className="display mt-8 text-3xl text-text">{s.label}</h3>
+              <h3 className="display text-3xl text-text">{s.label}</h3>
               <p className="mt-1 font-mono text-[11px] text-text-muted">{s.sub}</p>
               <p className="mt-4 leading-relaxed text-text-muted">{s.desc}</p>
             </article>

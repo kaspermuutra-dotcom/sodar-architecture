@@ -91,7 +91,7 @@ export function ScanReveal({
     <div
       ref={root}
       data-scan-reveal
-      className={`relative isolate overflow-hidden rounded-xl border border-ink-border bg-ink-raised ${frameClassName} ${className}`}
+      className={`relative isolate overflow-hidden rounded-2xl border border-ink-border bg-ink-raised ${frameClassName} ${className}`}
       style={{ ["--scan-p" as string]: 0 }}
     >
       <div className="absolute inset-0">{revealed}</div>
@@ -102,8 +102,8 @@ export function ScanReveal({
         className="pointer-events-none absolute inset-0 mix-blend-screen"
         style={{
           background: isDown
-            ? "linear-gradient(180deg, color-mix(in oklab, var(--color-accent) 22%, transparent) 0%, transparent 14%)"
-            : "linear-gradient(90deg, color-mix(in oklab, var(--color-accent) 22%, transparent) 0%, transparent 14%)",
+            ? "linear-gradient(180deg, color-mix(in oklab, var(--color-accent) 10%, transparent) 0%, transparent 10%)"
+            : "linear-gradient(90deg, color-mix(in oklab, var(--color-accent) 10%, transparent) 0%, transparent 10%)",
           clipPath: isDown
             ? "inset(0 0 calc((1 - var(--scan-p, 0)) * 100%) 0)"
             : "inset(0 calc((1 - var(--scan-p, 0)) * 100%) 0 0)",
@@ -125,19 +125,19 @@ export function ScanReveal({
                 left: 0,
                 right: 0,
                 top: "calc(var(--scan-p, 0) * 100%)",
-                height: "2px",
+                height: "1px",
                 opacity: lineOpacity,
                 boxShadow:
-                  "0 0 12px 1px var(--color-accent), 0 0 40px 4px color-mix(in oklab, var(--color-accent) 45%, transparent)",
+                  "0 0 8px 0 color-mix(in oklab, var(--color-accent) 50%, transparent)",
               }
             : {
                 top: 0,
                 bottom: 0,
                 left: "calc(var(--scan-p, 0) * 100%)",
-                width: "2px",
+                width: "1px",
                 opacity: lineOpacity,
                 boxShadow:
-                  "0 0 12px 1px var(--color-accent), 0 0 40px 4px color-mix(in oklab, var(--color-accent) 45%, transparent)",
+                  "0 0 8px 0 color-mix(in oklab, var(--color-accent) 50%, transparent)",
               }
         }
       />

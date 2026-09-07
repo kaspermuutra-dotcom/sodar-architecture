@@ -28,17 +28,17 @@ export default async function EnterprisePage({ params }: Params) {
         subtitle={t("sub")}
         actions={
           <a href="mailto:sales@sodar.io?subject=Sodar enterprise" className="button-primary">
-            {t("talk")} <span aria-hidden>↗</span>
+            {t("talk")}
           </a>
         }
       />
 
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("featKicker")}</p>
-        <h2 className="section-title mt-7">{t("featTitle")}</h2>
-        <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+        <h2 className="section-title mt-6">{t("featTitle")}</h2>
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
           {features.map((f) => (
-            <div key={f.title} className="card-scan bg-bg p-8 transition-colors hover:bg-bg-raised">
+            <div key={f.title} className="bg-bg p-8 transition-colors hover:bg-bg-raised">
               <h3 className="display text-2xl text-text">{f.title}</h3>
               <p className="mt-2.5 text-sm leading-relaxed text-text-muted">{f.desc}</p>
             </div>
@@ -50,14 +50,14 @@ export default async function EnterprisePage({ params }: Params) {
         <div className="grid gap-12 lg:grid-cols-[1fr_.8fr] lg:items-center">
           <div>
             <p className="section-kicker">{t("priceKicker")}</p>
-            <h2 className="section-title mt-7">
+            <h2 className="section-title mt-6">
               {t("priceTitle1")}
               <br />
               {t("priceTitle2")}
             </h2>
             <p className="mt-7 max-w-xl text-lg text-text-muted">{t("priceBody")}</p>
           </div>
-          <div className="rounded-3xl border border-border bg-bg-raised p-8 sm:p-10">
+          <div className="rounded-2xl border border-border bg-bg-raised p-8 sm:p-10">
             <p className="text-sm text-text-muted">{t("priceNote")}</p>
             <div className="mt-6 space-y-4 font-mono text-sm">
               {tiers.map((row) => (

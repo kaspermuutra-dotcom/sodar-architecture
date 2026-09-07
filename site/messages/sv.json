@@ -19,31 +19,7 @@
     "headline2": "som stänger fler affärer.",
     "sub": "Öppna sodar.io i telefonen, gå genom bostaden en gång och få en uppslukande visning som köpare kan kliva in i — publicerad i annonsen du redan har.",
     "ctaPrimary": "Skanna din första bostad",
-    "ctaSecondary": "Se hur det fungerar",
-    "status": [
-      "INSPELNING ▸ vardagsrum · 12/12 bilder · täckning 98 %",
-      "ASSISTENT ▸ luta 4° nedåt · håll stilla · bra ljus",
-      "SAMMANFOGNING ▸ kök · ekvirektangulär · 8192×4096",
-      "FÖRHANDSVISNING ▸ 2 av 6 rum klara · gratis",
-      "OFFERT   ▸ engångspris beräknat · 6 rum · 14 panoramor",
-      "PUBLICERAD ▸ CRM-annons #48213 · visare inbäddad"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Vardagsrum",
-      "Kök",
-      "Sovrum",
-      "Badrum",
-      "Hall",
-      "Balkong",
-      "Arbetsrum",
-      "Matsal",
-      "Gästrum",
-      "Entré",
-      "Terrass",
-      "Garage"
-    ]
+    "ctaSecondary": "Se hur det fungerar"
   },
   "Manifesto": {
     "kicker": "Tes",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Skrolla",
+    "kicker": "Så fungerar det",
+    "title": "Från en rundvandring till en walkthrough.",
     "frames": "/12 bilder",
     "assistantLabel": "Inspelningsassistent",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Språk",
-    "social": "På andra ställen",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallinn, Estland · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Frågor om integritet:"
   },
-  "Scaffold": {
-    "phase": "Fas 1 — design & struktur",
-    "note": "Betalningar, CRM-OAuth och AI-pipelinen är simulerade platshållartillstånd. Inga backend-anrop."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "mäklarbyråer skannar redan med Sodar",
-    "note": "Tidig åtkomst · Tallinn och vidare"
+    "line": "Vi stöttar just nu företags regelefterlevnad i hela Estland.",
+    "note": "Tallinn, Estland"
   },
   "Scanner": {
     "metaTitle": "Skanna en bostad — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Mäklare, byråer, CRM-leverantörer och portaler får olika svar — välj din roll så svarar vi från rätt bord.",
     "phoneLabel": "Telefon",
     "emailLabel": "E-post",
-    "roleLabel": "Jag är",
-    "roles": {
-      "broker": "Mäklare / agent",
-      "brokerage": "Mäklarbyrå",
-      "crm": "CRM-leverantör",
-      "portal": "Bostadsportal",
-      "other": "Annat"
-    },
     "name": "Namn",
     "company": "Företag",
     "email": "Jobbmejl",
@@ -1084,12 +1047,25 @@
     "sent": "Meddelandet skickat.",
     "sentBody": "Vi svarar inom en arbetsdag.",
     "another": "Skicka ett till",
-    "error": "Sändningen misslyckades. Mejla direkt till team@sodar.io.",
-    "fallbackNote": "Öppnar din e-postapp tills formulärtjänsten är ansluten."
+    "error": "Det gick inte att skicka. Mejla direkt till {email}.",
+    "fallbackNote": "Öppnar din e-postapp tills formulärtjänsten är ansluten.",
+    "jobTitle": "Befattning",
+    "phone": "Telefon",
+    "countryCode": "Landskod",
+    "subject": "Ämne",
+    "linkedin": "Sodar på LinkedIn",
+    "privacyEyebrow": "Integritet",
+    "privacyTitle": "Fråga oss om dina uppgifter.",
+    "privacySub": "Förfrågningar om åtkomst, rättelse, export eller radering av dina uppgifter, och alla andra integritetsfrågor, når vårt integritetsteam direkt."
   },
   "Intro": {
     "kicker": "Introduktion",
     "title": "Sodar på en minut.",
-    "body": "Gå en gång, förhandsvisa två rum gratis, betala en gång, publicera i annonsen du redan har."
+    "body": "Gå en gång, förhandsvisa två rum gratis, betala en gång, publicera i annonsen du redan har.",
+    "play": "Spela",
+    "pause": "Pausa",
+    "mute": "Ljud av",
+    "unmute": "Ljud på",
+    "fullscreen": "Helskärm"
   }
 }

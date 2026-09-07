@@ -4,7 +4,6 @@ import { localeAlternates } from "@/lib/seo";
 import { Hero } from "@/components/hero";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { RoomMarquee } from "@/components/room-marquee";
 import { ProofStrip } from "@/components/proof-strip";
 import { IntroVideo } from "@/components/intro-video";
 import { Manifesto } from "@/components/manifesto";
@@ -36,7 +35,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <Hero />
         <ProofStrip />
         <IntroVideo />
-        <RoomMarquee />
         <div className="theme-light">
           <Manifesto />
           <StatsBand />

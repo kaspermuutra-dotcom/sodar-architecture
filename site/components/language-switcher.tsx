@@ -142,7 +142,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
   }
 
   return (
-    <div className="overflow-hidden rounded-3xl border border-border bg-bg-raised">
+    <div className="overflow-hidden rounded-2xl border border-border bg-bg-raised">
       {searchField}
       {list}
     </div>

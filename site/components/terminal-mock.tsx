@@ -36,16 +36,13 @@ export function TerminalMock({ variant = "crop" }: { variant?: "crop" | "full" }
   );
 
   return (
-    <div className="overflow-hidden rounded-[1.75rem] border border-border-strong bg-bg-raised">
+    <div className="overflow-hidden rounded-2xl border border-border-strong bg-bg-raised">
       <div className="flex items-center justify-between border-b border-border px-6 py-4">
         <div className="flex items-center gap-3">
           <SodarMark size={18} className="text-text" />
           <span className="mono-label">{t("title")}</span>
         </div>
-        <span className="eyebrow">
-          <span />
-          {t("live")}
-        </span>
+        <span className="eyebrow">{t("live")}</span>
       </div>
 
       <div className={`grid gap-px bg-border ${variant === "full" ? "lg:grid-cols-[1.4fr_1fr]" : "lg:grid-cols-[1.3fr_1fr]"}`}>

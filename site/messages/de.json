@@ -19,31 +19,7 @@
     "headline2": "die mehr Abschlüsse bringen.",
     "sub": "Öffnen Sie sodar.io auf dem Smartphone, gehen Sie einmal durch die Immobilie und erhalten Sie einen immersiven Rundgang, den Käufer betreten können — veröffentlicht im Inserat, das Sie bereits haben.",
     "ctaPrimary": "Erste Immobilie scannen",
-    "ctaSecondary": "So funktioniert es",
-    "status": [
-      "AUFNAHME ▸ Wohnzimmer · 12/12 Bilder · Abdeckung 98 %",
-      "ASSISTENT ▸ 4° nach unten neigen · halten · gutes Licht",
-      "STITCHING ▸ Küche · equirektangular · 8192×4096",
-      "VORSCHAU ▸ 2 von 6 Räumen fertig · kostenlos",
-      "ANGEBOT ▸ Einmalpreis berechnet · 6 Räume · 14 Panoramen",
-      "VERÖFFENTLICHT ▸ CRM-Inserat #48213 · Viewer eingebettet"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Wohnzimmer",
-      "Küche",
-      "Schlafzimmer",
-      "Bad",
-      "Flur",
-      "Balkon",
-      "Arbeitszimmer",
-      "Esszimmer",
-      "Gästezimmer",
-      "Eingang",
-      "Terrasse",
-      "Garage"
-    ]
+    "ctaSecondary": "So funktioniert es"
   },
   "Manifesto": {
     "kicker": "These",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Scrollen",
+    "kicker": "So funktioniert es",
+    "title": "Von einem Rundgang zum Walkthrough.",
     "frames": "/12 Bilder",
     "assistantLabel": "Aufnahmeassistent",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Sprache",
-    "social": "Anderswo",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallinn, Estland · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Fragen zum Datenschutz:"
   },
-  "Scaffold": {
-    "phase": "Phase 1 — Design & Struktur",
-    "note": "Zahlungen, CRM-OAuth und die KI-Pipeline sind simulierte Platzhalterzustände. Keine Backend-Aufrufe."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "Maklerbüros scannen bereits mit Sodar",
-    "note": "Früher Zugang · Tallinn und darüber hinaus"
+    "line": "Wir unterstützen derzeit die Compliance-Arbeit von Unternehmen in ganz Estland.",
+    "note": "Tallinn, Estland"
   },
   "Scanner": {
     "metaTitle": "Immobilie scannen — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Makler, Maklerbüros, CRM-Anbieter und Portale bekommen jeweils eine andere Antwort — wählen Sie Ihre Rolle, und wir antworten vom richtigen Schreibtisch.",
     "phoneLabel": "Telefon",
     "emailLabel": "E-Mail",
-    "roleLabel": "Ich bin",
-    "roles": {
-      "broker": "Makler / Agent",
-      "brokerage": "Maklerbüro",
-      "crm": "CRM-Anbieter",
-      "portal": "Immobilienportal",
-      "other": "Sonstiges"
-    },
     "name": "Name",
     "company": "Unternehmen",
     "email": "Geschäftliche E-Mail",
@@ -1084,12 +1047,25 @@
     "sent": "Nachricht gesendet.",
     "sentBody": "Wir antworten innerhalb eines Werktags.",
     "another": "Weitere senden",
-    "error": "Senden fehlgeschlagen. Bitte schreiben Sie direkt an team@sodar.io.",
-    "fallbackNote": "Öffnet Ihr E-Mail-Programm, bis der Formulardienst verbunden ist."
+    "error": "Senden fehlgeschlagen. Bitte schreiben Sie direkt an {email}.",
+    "fallbackNote": "Öffnet Ihr E-Mail-Programm, bis der Formulardienst verbunden ist.",
+    "jobTitle": "Berufsbezeichnung",
+    "phone": "Telefon",
+    "countryCode": "Ländervorwahl",
+    "subject": "Betreff",
+    "linkedin": "Sodar auf LinkedIn",
+    "privacyEyebrow": "Datenschutz",
+    "privacyTitle": "Fragen Sie uns zu Ihren Daten.",
+    "privacySub": "Anfragen zu Auskunft, Berichtigung, Export oder Löschung Ihrer Daten sowie alle weiteren Datenschutzfragen erreichen direkt unser Datenschutzteam."
   },
   "Intro": {
     "kicker": "Einführung",
     "title": "Sodar in einer Minute.",
-    "body": "Einmal durchgehen, zwei Räume kostenlos ansehen, einmal zahlen, ins vorhandene Inserat veröffentlichen."
+    "body": "Einmal durchgehen, zwei Räume kostenlos ansehen, einmal zahlen, ins vorhandene Inserat veröffentlichen.",
+    "play": "Abspielen",
+    "pause": "Pause",
+    "mute": "Stumm",
+    "unmute": "Ton an",
+    "fullscreen": "Vollbild"
   }
 }

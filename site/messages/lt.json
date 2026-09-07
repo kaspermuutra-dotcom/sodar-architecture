@@ -19,31 +19,7 @@
     "headline2": "kurios sudaro daugiau sandorių.",
     "sub": "Atidarykite sodar.io telefone, pereikite būstą vieną kartą ir gaukite įtraukiančią apžvalgą, į kurią pirkėjai gali įžengti — publikuotą skelbime, kurį jau turite.",
     "ctaPrimary": "Nuskenuokite pirmą būstą",
-    "ctaSecondary": "Kaip tai veikia",
-    "status": [
-      "ĮRAŠYMAS ▸ svetainė · 12/12 kadrų · aprėptis 98 %",
-      "ASISTENTAS ▸ pakreipkite 4° žemyn · laikykite · gera šviesa",
-      "SUJUNGIMAS ▸ virtuvė · ekvirektangulinis · 8192×4096",
-      "PERŽIŪRA ▸ 2 iš 6 kambarių paruošti · nemokamai",
-      "PASIŪLYMAS ▸ vienkartinė kaina apskaičiuota · 6 kambariai · 14 panoramų",
-      "PUBLIKUOTA ▸ CRM skelbimas #48213 · peržiūros priemonė įterpta"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Svetainė",
-      "Virtuvė",
-      "Miegamasis",
-      "Vonios kambarys",
-      "Koridorius",
-      "Balkonas",
-      "Darbo kambarys",
-      "Valgomasis",
-      "Svečių kambarys",
-      "Prieškambaris",
-      "Terasa",
-      "Garažas"
-    ]
+    "ctaSecondary": "Kaip tai veikia"
   },
   "Manifesto": {
     "kicker": "Tezė",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Slinkite",
+    "kicker": "Kaip tai veikia",
+    "title": "Nuo apėjimo iki virtualaus turo.",
     "frames": "/12 kadrų",
     "assistantLabel": "Įrašymo asistentas",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Kalba",
-    "social": "Kitur",
     "copyright": "Sodar Technologies OÜ",
     "location": "Talinas, Estija · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Privatumo klausimai:"
   },
-  "Scaffold": {
-    "phase": "1 etapas — dizainas ir struktūra",
-    "note": "Mokėjimai, CRM OAuth ir DI procesas yra imituojamos pakaitinės būsenos. Be užklausų į serverį."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "agentūros jau skenuoja su Sodar",
-    "note": "Ankstyva prieiga · Talinas ir toliau"
+    "line": "Šiuo metu padedame įmonėms visoje Estijoje užtikrinti atitiktį.",
+    "note": "Talinas, Estija"
   },
   "Scanner": {
     "metaTitle": "Skenuoti būstą — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Brokeriai, agentūros, CRM tiekėjai ir portalai gauna skirtingus atsakymus — pasirinkite savo vaidmenį, ir atsakysime iš tinkamo stalo.",
     "phoneLabel": "Telefonas",
     "emailLabel": "El. paštas",
-    "roleLabel": "Aš esu",
-    "roles": {
-      "broker": "Brokeris / agentas",
-      "brokerage": "Agentūra",
-      "crm": "CRM tiekėjas",
-      "portal": "NT portalas",
-      "other": "Kita"
-    },
     "name": "Vardas",
     "company": "Įmonė",
     "email": "Darbo el. paštas",
@@ -1084,12 +1047,25 @@
     "sent": "Žinutė išsiųsta.",
     "sentBody": "Atsakome per vieną darbo dieną.",
     "another": "Siųsti kitą",
-    "error": "Išsiųsti nepavyko. Rašykite tiesiogiai team@sodar.io.",
-    "fallbackNote": "Atidaro jūsų el. pašto programą, kol formų paslauga dar neprijungta."
+    "error": "Išsiųsti nepavyko. Rašykite tiesiogiai adresu {email}.",
+    "fallbackNote": "Atidaro jūsų el. pašto programą, kol formų paslauga dar neprijungta.",
+    "jobTitle": "Pareigos",
+    "phone": "Telefonas",
+    "countryCode": "Šalies kodas",
+    "subject": "Tema",
+    "linkedin": "Sodar „LinkedIn“",
+    "privacyEyebrow": "Privatumas",
+    "privacyTitle": "Klauskite apie savo duomenis.",
+    "privacySub": "Prašymai dėl prieigos prie duomenų, jų taisymo, eksporto ar ištrynimo ir kiti privatumo klausimai pasiekia tiesiogiai mūsų privatumo komandą."
   },
   "Intro": {
     "kicker": "Įžanga",
     "title": "Sodar per vieną minutę.",
-    "body": "Pereikite vieną kartą, peržiūrėkite du kambarius nemokamai, sumokėkite vieną kartą, publikuokite skelbime, kurį jau turite."
+    "body": "Pereikite vieną kartą, peržiūrėkite du kambarius nemokamai, sumokėkite vieną kartą, publikuokite skelbime, kurį jau turite.",
+    "play": "Leisti",
+    "pause": "Pristabdyti",
+    "mute": "Išjungti garsą",
+    "unmute": "Įjungti garsą",
+    "fullscreen": "Visas ekranas"
   }
 }

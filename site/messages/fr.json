@@ -19,31 +19,7 @@
     "headline2": "qui concluent plus de ventes.",
     "sub": "Ouvrez sodar.io sur votre téléphone, parcourez le bien une seule fois et obtenez une visite immersive dans laquelle les acheteurs peuvent entrer — publiée dans l’annonce que vous avez déjà.",
     "ctaPrimary": "Scanner votre premier bien",
-    "ctaSecondary": "Voir comment ça marche",
-    "status": [
-      "CAPTURE  ▸ salon · 12/12 images · couverture 98 %",
-      "ASSISTANT ▸ inclinez de 4° · maintenez · bonne lumière",
-      "ASSEMBLAGE ▸ cuisine · équirectangulaire · 8192×4096",
-      "APERÇU   ▸ 2 pièces sur 6 prêtes · gratuit",
-      "DEVIS    ▸ prix unique calculé · 6 pièces · 14 panoramas",
-      "PUBLIÉ   ▸ annonce CRM #48213 · visionneuse intégrée"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Salon",
-      "Cuisine",
-      "Chambre principale",
-      "Salle de bain",
-      "Couloir",
-      "Balcon",
-      "Bureau",
-      "Salle à manger",
-      "Chambre d’amis",
-      "Entrée",
-      "Terrasse",
-      "Garage"
-    ]
+    "ctaSecondary": "Voir comment ça marche"
   },
   "Manifesto": {
     "kicker": "Thèse",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Défiler",
+    "kicker": "Comment ça marche",
+    "title": "D’une visite à pied à une visite immersive.",
     "frames": "/12 images",
     "assistantLabel": "Assistant de capture",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Langue",
-    "social": "Ailleurs",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallinn, Estonie · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Questions sur la confidentialité :"
   },
-  "Scaffold": {
-    "phase": "Phase 1 — design & structure",
-    "note": "Paiements, OAuth CRM et chaîne IA sont des états simulés. Aucun appel backend."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "agences scannent déjà avec Sodar",
-    "note": "Accès anticipé · Tallinn et au-delà"
+    "line": "Nous accompagnons actuellement les efforts de conformité d’entreprises dans toute l’Estonie.",
+    "note": "Tallinn, Estonie"
   },
   "Scanner": {
     "metaTitle": "Scanner un bien — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Agents, agences, éditeurs de CRM et portails reçoivent chacun une réponse différente — choisissez votre profil et nous répondons du bon bureau.",
     "phoneLabel": "Téléphone",
     "emailLabel": "E-mail",
-    "roleLabel": "Je suis",
-    "roles": {
-      "broker": "Agent immobilier",
-      "brokerage": "Agence",
-      "crm": "Éditeur de CRM",
-      "portal": "Portail immobilier",
-      "other": "Autre"
-    },
     "name": "Nom",
     "company": "Entreprise",
     "email": "E-mail professionnel",
@@ -1084,12 +1047,25 @@
     "sent": "Message envoyé.",
     "sentBody": "Nous répondons sous un jour ouvré.",
     "another": "En envoyer un autre",
-    "error": "L’envoi a échoué. Écrivez directement à team@sodar.io.",
-    "fallbackNote": "Ouvre votre application e-mail tant que le service de formulaire n’est pas connecté."
+    "error": "L’envoi a échoué. Écrivez directement à {email}.",
+    "fallbackNote": "Ouvre votre application e-mail tant que le service de formulaire n’est pas connecté.",
+    "jobTitle": "Fonction",
+    "phone": "Téléphone",
+    "countryCode": "Indicatif",
+    "subject": "Objet",
+    "linkedin": "Sodar sur LinkedIn",
+    "privacyEyebrow": "Confidentialité",
+    "privacyTitle": "Interrogez-nous sur vos données.",
+    "privacySub": "Les demandes d’accès, de rectification, d’export ou de suppression de vos données, et toute autre question de confidentialité, parviennent directement à notre équipe dédiée."
   },
   "Intro": {
     "kicker": "Introduction",
     "title": "Sodar en une minute.",
-    "body": "Parcourez une fois, prévisualisez deux pièces gratuitement, payez une fois, publiez dans l’annonce que vous avez déjà."
+    "body": "Parcourez une fois, prévisualisez deux pièces gratuitement, payez une fois, publiez dans l’annonce que vous avez déjà.",
+    "play": "Lecture",
+    "pause": "Pause",
+    "mute": "Couper le son",
+    "unmute": "Activer le son",
+    "fullscreen": "Plein écran"
   }
 }

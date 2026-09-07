@@ -19,7 +19,7 @@ export function Manifesto() {
         gsap.set(words, { opacity: 1 });
         return;
       }
-      gsap.set(words, { opacity: 0.16 });
+      gsap.set(words, { opacity: 0.25 });
       gsap.to(words, {
         opacity: 1,
         ease: "none",
@@ -36,7 +36,7 @@ export function Manifesto() {
         <p className="section-kicker">{t("kicker")}</p>
         <div ref={root}>
           {lines.map((line, li) => (
-            <p key={li} className="display text-[clamp(2rem,4.6vw,4.4rem)] text-text">
+            <p key={li} className="display text-[clamp(1.8rem,3.6vw,3.4rem)] text-text">
               {line.split(" ").map((w, wi) => (
                 <span key={wi} data-w className="inline-block">
                   {w}&nbsp;

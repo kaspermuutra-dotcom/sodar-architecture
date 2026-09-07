@@ -19,31 +19,7 @@
     "headline2": "que cierran más ventas.",
     "sub": "Abre sodar.io en tu móvil, recorre la propiedad una sola vez y obtén un recorrido inmersivo en el que los compradores pueden entrar — publicado en el anuncio que ya tienes.",
     "ctaPrimary": "Escanea tu primera propiedad",
-    "ctaSecondary": "Ver cómo funciona",
-    "status": [
-      "CAPTURA  ▸ salón · 12/12 fotogramas · cobertura 98 %",
-      "ASISTENTE ▸ inclina 4° hacia abajo · mantén · buena luz",
-      "UNIÓN    ▸ cocina · equirrectangular · 8192×4096",
-      "VISTA PREVIA ▸ 2 de 6 estancias listas · gratis",
-      "PRESUPUESTO ▸ precio único calculado · 6 estancias · 14 panorámicas",
-      "PUBLICADO ▸ anuncio CRM #48213 · visor integrado"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Salón",
-      "Cocina",
-      "Dormitorio principal",
-      "Baño",
-      "Pasillo",
-      "Balcón",
-      "Despacho",
-      "Comedor",
-      "Habitación de invitados",
-      "Entrada",
-      "Terraza",
-      "Garaje"
-    ]
+    "ctaSecondary": "Ver cómo funciona"
   },
   "Manifesto": {
     "kicker": "Tesis",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Desplázate",
+    "kicker": "Cómo funciona",
+    "title": "De un recorrido a un walkthrough.",
     "frames": "/12 fotogramas",
     "assistantLabel": "Asistente de captura",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Idioma",
-    "social": "En otros sitios",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallin, Estonia · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Preguntas sobre privacidad:"
   },
-  "Scaffold": {
-    "phase": "Fase 1 — diseño y estructura",
-    "note": "Pagos, OAuth de CRM y el proceso de IA son estados simulados. Sin llamadas al backend."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "agencias ya escanean con Sodar",
-    "note": "Acceso anticipado · Tallin y más allá"
+    "line": "Actualmente apoyamos el cumplimiento normativo de empresas en toda Estonia.",
+    "note": "Tallin, Estonia"
   },
   "Scanner": {
     "metaTitle": "Escanear una propiedad — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Agentes, agencias, proveedores de CRM y portales reciben respuestas distintas: elige la tuya y te contestamos desde la mesa adecuada.",
     "phoneLabel": "Teléfono",
     "emailLabel": "Correo",
-    "roleLabel": "Soy",
-    "roles": {
-      "broker": "Agente inmobiliario",
-      "brokerage": "Agencia",
-      "crm": "Proveedor de CRM",
-      "portal": "Portal inmobiliario",
-      "other": "Otro"
-    },
     "name": "Nombre",
     "company": "Empresa",
     "email": "Correo de trabajo",
@@ -1084,12 +1047,25 @@
     "sent": "Mensaje enviado.",
     "sentBody": "Respondemos en un día laborable.",
     "another": "Enviar otro",
-    "error": "El envío falló. Escribe directamente a team@sodar.io.",
-    "fallbackNote": "Abre tu aplicación de correo hasta que el servicio de formularios esté conectado."
+    "error": "No se pudo enviar. Escribe directamente a {email}.",
+    "fallbackNote": "Abre tu aplicación de correo hasta que el servicio de formularios esté conectado.",
+    "jobTitle": "Cargo",
+    "phone": "Teléfono",
+    "countryCode": "Código de país",
+    "subject": "Asunto",
+    "linkedin": "Sodar en LinkedIn",
+    "privacyEyebrow": "Privacidad",
+    "privacyTitle": "Pregúntanos sobre tus datos.",
+    "privacySub": "Las solicitudes de acceso, rectificación, exportación o eliminación de tus datos, y cualquier otra consulta de privacidad, llegan directamente a nuestro equipo de privacidad."
   },
   "Intro": {
     "kicker": "Introducción",
     "title": "Sodar en un minuto.",
-    "body": "Recorre una vez, previsualiza dos estancias gratis, paga una vez, publica en el anuncio que ya tienes."
+    "body": "Recorre una vez, previsualiza dos estancias gratis, paga una vez, publica en el anuncio que ya tienes.",
+    "play": "Reproducir",
+    "pause": "Pausar",
+    "mute": "Silenciar",
+    "unmute": "Activar sonido",
+    "fullscreen": "Pantalla completa"
   }
 }

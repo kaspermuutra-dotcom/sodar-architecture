@@ -65,7 +65,7 @@
   const film = (() => {
     const root = document.getElementById("film");
     const all = [...root.querySelectorAll(".scene")];
-    const scenes = all.filter((el) => !(WEBCUT && el.classList.contains("deckonly"))).map((el) => ({ el, dur: parseFloat(el.dataset.dur), video: el.querySelector(":scope > video, :scope > .zoomer > video"), kb: el.classList.contains("kb") }));
+    const scenes = all.filter((el) => !(WEBCUT && el.classList.contains("deckonly"))).map((el) => ({ el, dur: parseFloat(el.dataset.dur), video: el.querySelector(":scope > video, :scope > .zoomer > video"), still: el.querySelector(":scope > img.bg"), kb: el.classList.contains("kb") }));
     scenes.forEach((s) => { s.off = s.video ? parseFloat(s.video.dataset.offset || "0") : 0; });
     all.forEach((el) => { if (WEBCUT && el.classList.contains("deckonly")) { el.style.display = "none"; } });
     let acc = 0;
@@ -178,6 +178,7 @@
           else if (!s.video.loop && Math.abs(s.video.currentTime - want) > 0.3 && want >= 0 && want < (s.video.duration || 5)) { try { s.video.currentTime = Math.max(0, want); } catch (_) {} }
           if (s.kb) s.video.style.transform = `scale(${1 + 0.06 * clamp01((t - s.start) / s.dur)})`;
         }
+        if (s.still && s.kb && o > 0) s.still.style.transform = `scale(${1 + 0.05 * clamp01((t - s.start) / s.dur)})`;
       });
       const portalIdx = scenes.findIndex((s) => s.el.id === "portalScene");
       if (exportSeek && sceneOpacity(portalIdx, t) > 0) seeks.push(seekVideo(E.kvVideo, t - scenes[portalIdx].start - K.pgLive));

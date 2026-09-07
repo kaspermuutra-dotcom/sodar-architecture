@@ -29,7 +29,7 @@ export default async function SecurityPage({ params }: Params) {
 
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("detailKicker")}</p>
-        <h2 className="section-title mt-7">{t("detailTitle")}</h2>
+        <h2 className="section-title mt-6">{t("detailTitle")}</h2>
         <div className="mt-14 divide-y divide-border border-y border-border">
           {details.map((d) => (
             <div key={d.title} className="grid gap-2 py-6 sm:grid-cols-[1fr_1.6fr] sm:gap-8">

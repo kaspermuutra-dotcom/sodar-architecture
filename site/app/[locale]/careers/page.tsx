@@ -25,7 +25,7 @@ export default async function CareersPage({ params }: Params) {
 
       <section className="section-shell border-t border-border">
         <p className="section-kicker">{t("rolesKicker")}</p>
-        <h2 className="section-title mt-7">{t("rolesTitle")}</h2>
+        <h2 className="section-title mt-6">{t("rolesTitle")}</h2>
         <div className="mt-14 divide-y divide-border border-y border-border">
           {roles.map((r) => (
             <a
@@ -39,7 +39,6 @@ export default async function CareersPage({ params }: Params) {
               </div>
               <div className="flex items-center gap-6">
                 <span className="text-sm text-text-muted">{r.location}</span>
-                <span aria-hidden className="text-text-muted transition-transform group-hover:translate-x-1 group-hover:text-text">↗</span>
               </div>
             </a>
           ))}

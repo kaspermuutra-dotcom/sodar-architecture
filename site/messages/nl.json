@@ -19,31 +19,7 @@
     "headline2": "die meer deals sluiten.",
     "sub": "Open sodar.io op je telefoon, loop één keer door de woning en krijg een meeslepende rondleiding waar kopers in kunnen stappen — gepubliceerd in de advertentie die je al hebt.",
     "ctaPrimary": "Scan je eerste woning",
-    "ctaSecondary": "Zie hoe het werkt",
-    "status": [
-      "OPNAME   ▸ woonkamer · 12/12 frames · dekking 98%",
-      "ASSISTENT ▸ 4° omlaag kantelen · stilhouden · goed licht",
-      "STITCHEN ▸ keuken · equirectangulair · 8192×4096",
-      "PREVIEW  ▸ 2 van 6 kamers klaar · gratis",
-      "OFFERTE  ▸ eenmalige prijs berekend · 6 kamers · 14 panorama’s",
-      "GEPUBLICEERD ▸ CRM-advertentie #48213 · viewer ingebed"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Woonkamer",
-      "Keuken",
-      "Hoofdslaapkamer",
-      "Badkamer",
-      "Gang",
-      "Balkon",
-      "Werkkamer",
-      "Eetkamer",
-      "Logeerkamer",
-      "Entree",
-      "Terras",
-      "Garage"
-    ]
+    "ctaSecondary": "Zie hoe het werkt"
   },
   "Manifesto": {
     "kicker": "These",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Scroll",
+    "kicker": "Zo werkt het",
+    "title": "Van één rondgang naar een walkthrough.",
     "frames": "/12 frames",
     "assistantLabel": "Opname-assistent",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Taal",
-    "social": "Elders",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallinn, Estland · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Privacyvragen:"
   },
-  "Scaffold": {
-    "phase": "Fase 1 — ontwerp & structuur",
-    "note": "Betalingen, CRM-OAuth en de AI-pipeline zijn gesimuleerde placeholders. Geen backend-aanroepen."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "makelaarskantoren scannen al met Sodar",
-    "note": "Vroege toegang · Tallinn en verder"
+    "line": "Wij ondersteunen momenteel de compliance-inspanningen van bedrijven in heel Estland.",
+    "note": "Tallinn, Estland"
   },
   "Scanner": {
     "metaTitle": "Woning scannen — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Makelaars, kantoren, CRM-aanbieders en portalen krijgen elk een ander antwoord — kies je rol en we antwoorden vanaf het juiste bureau.",
     "phoneLabel": "Telefoon",
     "emailLabel": "E-mail",
-    "roleLabel": "Ik ben",
-    "roles": {
-      "broker": "Makelaar / agent",
-      "brokerage": "Makelaarskantoor",
-      "crm": "CRM-aanbieder",
-      "portal": "Woningportaal",
-      "other": "Anders"
-    },
     "name": "Naam",
     "company": "Bedrijf",
     "email": "Zakelijk e-mailadres",
@@ -1084,12 +1047,25 @@
     "sent": "Bericht verstuurd.",
     "sentBody": "We antwoorden binnen één werkdag.",
     "another": "Nog een versturen",
-    "error": "Versturen mislukt. Mail rechtstreeks naar team@sodar.io.",
-    "fallbackNote": "Opent je e-mailapp totdat de formulierdienst is gekoppeld."
+    "error": "Verzenden mislukt. Mail rechtstreeks naar {email}.",
+    "fallbackNote": "Opent je e-mailapp totdat de formulierdienst is gekoppeld.",
+    "jobTitle": "Functietitel",
+    "phone": "Telefoon",
+    "countryCode": "Landcode",
+    "subject": "Onderwerp",
+    "linkedin": "Sodar op LinkedIn",
+    "privacyEyebrow": "Privacy",
+    "privacyTitle": "Vraag ons naar je gegevens.",
+    "privacySub": "Verzoeken om inzage, correctie, export of verwijdering van je gegevens en alle andere privacyvragen komen rechtstreeks bij ons privacyteam terecht."
   },
   "Intro": {
     "kicker": "Introductie",
     "title": "Sodar in één minuut.",
-    "body": "Eén keer lopen, twee kamers gratis bekijken, één keer betalen, publiceren in de advertentie die je al hebt."
+    "body": "Eén keer lopen, twee kamers gratis bekijken, één keer betalen, publiceren in de advertentie die je al hebt.",
+    "play": "Afspelen",
+    "pause": "Pauzeren",
+    "mute": "Dempen",
+    "unmute": "Geluid aan",
+    "fullscreen": "Volledig scherm"
   }
 }

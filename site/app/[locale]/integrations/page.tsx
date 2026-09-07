@@ -28,10 +28,10 @@ export default async function IntegrationsPage({ params }: Params) {
 
       <section id="api" className="section-shell border-t border-border">
         <p className="section-kicker">{t("connKicker")}</p>
-        <h2 className="section-title mt-7">{t("connTitle")}</h2>
-        <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2">
+        <h2 className="section-title mt-6">{t("connTitle")}</h2>
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">
           {conns.map((c) => (
-            <div key={c.name} className="card-scan flex items-center justify-between gap-4 bg-bg p-6">
+            <div key={c.name} className="flex items-center justify-between gap-4 bg-bg p-6">
               <div>
                 <p className="text-text">{c.name}</p>
                 <p className="mt-1 font-mono text-[11px] text-text-muted">
@@ -49,7 +49,7 @@ export default async function IntegrationsPage({ params }: Params) {
 
       <section id="embed" className="section-shell border-t border-border">
         <p className="section-kicker">{t("embedKicker")}</p>
-        <h2 className="section-title mt-7">{t("embedTitle")}</h2>
+        <h2 className="section-title mt-6">{t("embedTitle")}</h2>
         <p className="mt-7 max-w-xl text-lg text-text-muted">{t("embedBody")}</p>
         <div className="mt-8 overflow-x-auto rounded-2xl border border-border bg-bg-raised p-5" dir="ltr">
           <code className="whitespace-pre font-mono text-sm text-text">

@@ -1,5 +1,31 @@
 # Sodar site — media plan (Higgsfield)
 
+**Status 2026-09-07:** every loop on the site is now grounded in Põhja-Tallinn. Seven
+stills were generated with Higgsfield `soul_location` (Noblessner harbour, Kalaranna
+port cranes, a Kalamaja street, and three apartment interiors whose windows look onto
+the Port of Tallinn under overcast Baltic light), and one Kling 3.0 image-to-video dolly
+was generated from the loft still. ffmpeg then produced (all silent H.264, faststart):
+
+| Asset | Source | Motion |
+|---|---|---|
+| `hero-scan-loop.mp4` (960×540, 10 s) | Kling dolly | palindromic loop |
+| `scans-window.mp4` (720×960) | Kling dolly, window crop | palindromic loop |
+| `scans-orbit.mp4` (720×960) | Kalamaja bedroom still | slow push-in and back (zoompan) |
+| `pipeline-capture.mp4` (540×960) | wide loft still | lateral pan there-and-back, like a panorama sweep |
+| `intro.mp4` (1280×720, 44 s) | deck film | `node deck/export/render.mjs --file` |
+
+Posters sit next to each clip with the same basename (`.jpg`); `scans-kitchen.jpg`,
+`scans-street.jpg`, `loft-wide.jpg`, `kitchen-harbour.jpg`, `tallinn-harbour.jpg` and
+`tallinn-street.jpg` are the remaining stills. The deck film's establishing shot is
+`deck/media/tallinn-harbour.jpg`; its viewer scenes play `deck/media/walkthrough-loft.mp4`.
+
+Prompt anchor used for every still (keep it for future shots):
+
+> Documentary / listing photograph, Põhja-Tallinn (Noblessner · Kalaranna · Kalamaja),
+> overcast Baltic light, Port of Tallinn cranes, ferry and container ship in view,
+> muted grey-blue and rust palette, 24–35 mm, no people, no text, realistic and
+> unretouched.
+
 **Status 2026-09-06:** `intro.mp4` (72 s, 1280×720) is now rendered from the pitch-deck
 film with `deck/export/render.mjs`; re-run it after any change to the deck's film.
 

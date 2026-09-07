@@ -19,31 +19,7 @@
     "headline2": "jotka päättävät useampia kauppoja.",
     "sub": "Avaa sodar.io puhelimessa, kävele kohde läpi kerran ja saat immersiivisen kierroksen, johon ostajat voivat astua sisään — julkaistuna ilmoitukseen, joka sinulla jo on.",
     "ctaPrimary": "Skannaa ensimmäinen kohteesi",
-    "ctaSecondary": "Katso miten se toimii",
-    "status": [
-      "KUVAUS   ▸ olohuone · 12/12 kuvaa · kattavuus 98 %",
-      "AVUSTAJA ▸ kallista 4° alas · pidä paikallaan · hyvä valo",
-      "YHDISTYS ▸ keittiö · ekvirektangulaarinen · 8192×4096",
-      "ESIKATSELU ▸ 2/6 huonetta valmiina · ilmaiseksi",
-      "TARJOUS  ▸ kertahinta laskettu · 6 huonetta · 14 panoraamaa",
-      "JULKAISTU ▸ CRM-ilmoitus #48213 · katselin upotettu"
-    ]
-  },
-  "Marquee": {
-    "rooms": [
-      "Olohuone",
-      "Keittiö",
-      "Makuuhuone",
-      "Kylpyhuone",
-      "Eteinen",
-      "Parveke",
-      "Työhuone",
-      "Ruokailutila",
-      "Vierashuone",
-      "Sisäänkäynti",
-      "Terassi",
-      "Autotalli"
-    ]
+    "ctaSecondary": "Katso miten se toimii"
   },
   "Manifesto": {
     "kicker": "Teesi",
@@ -76,7 +52,8 @@
     ]
   },
   "Pipeline": {
-    "scroll": "Vieritä",
+    "kicker": "Näin se toimii",
+    "title": "Kävelystä virtuaalikierrokseksi.",
     "frames": "/12 kuvaa",
     "assistantLabel": "Kuvausavustaja",
     "assist": [
@@ -517,7 +494,6 @@
       }
     },
     "language": "Kieli",
-    "social": "Muualla",
     "copyright": "Sodar Technologies OÜ",
     "location": "Tallinna, Viro · sodar.io"
   },
@@ -1001,14 +977,9 @@
     },
     "privacyContact": "Tietosuojakysymykset:"
   },
-  "Scaffold": {
-    "phase": "Vaihe 1 — suunnittelu & rakenne",
-    "note": "Maksut, CRM-OAuth ja tekoälyputki ovat simuloituja paikkamerkkitiloja. Ei backend-kutsuja."
-  },
   "Proof": {
-    "count": "5+",
-    "line": "välitysliikettä skannaa jo Sodarilla",
-    "note": "Varhainen pääsy · Tallinna ja muualla"
+    "line": "Tuemme tällä hetkellä yritysten vaatimustenmukaisuustyötä eri puolilla Viroa.",
+    "note": "Tallinna, Viro"
   },
   "Scanner": {
     "metaTitle": "Skannaa kohde — Sodar",
@@ -1066,14 +1037,6 @@
     "sub": "Välittäjät, välitysliikkeet, CRM-toimittajat ja portaalit saavat kukin eri vastauksen — valitse roolisi, niin vastaamme oikealta pöydältä.",
     "phoneLabel": "Puhelin",
     "emailLabel": "Sähköposti",
-    "roleLabel": "Olen",
-    "roles": {
-      "broker": "Välittäjä / agentti",
-      "brokerage": "Välitysliike",
-      "crm": "CRM-toimittaja",
-      "portal": "Kiinteistöportaali",
-      "other": "Muu"
-    },
     "name": "Nimi",
     "company": "Yritys",
     "email": "Työsähköposti",
@@ -1084,12 +1047,25 @@
     "sent": "Viesti lähetetty.",
     "sentBody": "Vastaamme yhden työpäivän kuluessa.",
     "another": "Lähetä toinen",
-    "error": "Lähetys epäonnistui. Lähetä sähköpostia suoraan osoitteeseen team@sodar.io.",
-    "fallbackNote": "Avaa sähköpostisovelluksesi, kunnes lomakepalvelu on kytketty."
+    "error": "Lähetys epäonnistui. Kirjoita suoraan osoitteeseen {email}.",
+    "fallbackNote": "Avaa sähköpostisovelluksesi, kunnes lomakepalvelu on kytketty.",
+    "jobTitle": "Tehtävänimike",
+    "phone": "Puhelin",
+    "countryCode": "Maakoodi",
+    "subject": "Aihe",
+    "linkedin": "Sodar LinkedInissä",
+    "privacyEyebrow": "Tietosuoja",
+    "privacyTitle": "Kysy tiedoistasi.",
+    "privacySub": "Pyynnöt tietojesi tarkastamisesta, korjaamisesta, viennistä tai poistamisesta sekä muut tietosuojakysymykset menevät suoraan tietosuojatiimillemme."
   },
   "Intro": {
     "kicker": "Esittely",
     "title": "Sodar minuutissa.",
-    "body": "Kävele kerran, esikatsele kaksi huonetta ilmaiseksi, maksa kerran, julkaise ilmoitukseen, joka sinulla jo on."
+    "body": "Kävele kerran, esikatsele kaksi huonetta ilmaiseksi, maksa kerran, julkaise ilmoitukseen, joka sinulla jo on.",
+    "play": "Toista",
+    "pause": "Tauko",
+    "mute": "Mykistä",
+    "unmute": "Ääni päälle",
+    "fullscreen": "Koko näyttö"
   }
 }

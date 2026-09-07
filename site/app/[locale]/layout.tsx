@@ -41,8 +41,6 @@ export default async function LocaleLayout({ children, params }: { children: Rea
     <html lang={locale} dir={dir} className={`${sans.variable} ${serif.variable} ${mono.variable}`}>
       <body className="min-h-dvh bg-bg text-text antialiased">
         <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
-        <div className="grain" aria-hidden />
-        <div className="vignette" aria-hidden />
       </body>
     </html>
   );
