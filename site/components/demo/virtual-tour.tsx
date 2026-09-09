@@ -98,6 +98,19 @@ function floorRing(link: WalkLink, name: string) {
   };
 }
 
+/** Thin line icons for the navbar (24-grid, 1.5 px strokes) replacing PSV's stock filled glyphs. */
+const svg = (body: string) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${body}</svg>`;
+const NAVBAR_ICONS = {
+  zoomOut: svg('<circle cx="10.5" cy="10.5" r="6.25"/><path d="M15.2 15.2 20 20M7.75 10.5h5.5"/>'),
+  zoomIn: svg('<circle cx="10.5" cy="10.5" r="6.25"/><path d="M15.2 15.2 20 20M7.75 10.5h5.5M10.5 7.75v5.5"/>'),
+  moveLeft: svg('<path d="M14.25 6.75 9 12l5.25 5.25"/>'),
+  moveRight: svg('<path d="M9.75 6.75 15 12l-5.25 5.25"/>'),
+  moveUp: svg('<path d="M6.75 14.25 12 9l5.25 5.25"/>'),
+  moveDown: svg('<path d="M6.75 9.75 12 15l5.25-5.25"/>'),
+  fullscreenIn: svg('<path d="M4 9.25V4h5.25M14.75 4H20v5.25M20 14.75V20h-5.25M9.25 20H4v-5.25"/>'),
+  fullscreenOut: svg('<path d="M9.25 4v5.25H4M14.75 4v5.25H20M20 14.75h-5.25V20M4 14.75h5.25V20"/>'),
+};
+
 export const VirtualTour = forwardRef<VirtualTourHandle, Props>(function VirtualTour({ scenes, startId, startYaw, label, loadingText, onSceneChange, onYawChange, onLoadingChange, onError }, ref) {
   const root = useRef<HTMLDivElement>(null);
   const viewer = useRef<ViewerLike | null>(null);
@@ -170,6 +183,19 @@ export const VirtualTour = forwardRef<VirtualTourHandle, Props>(function Virtual
       }) as unknown as ViewerLike;
       viewer.current = v;
       if (process.env.NODE_ENV !== "production") (window as unknown as { __psv?: unknown }).__psv = v; // inspection hook for QA scripts
+      // Swap the stock navbar glyphs for the thin line set. The fullscreen button re-renders its icon on toggle,
+      // so its config gets the new pair as well.
+      const navbar = (v as unknown as { navbar: { getButton(id: string, warn?: boolean): { container: HTMLElement; config: { icon?: string; iconActive?: string } } | undefined } }).navbar;
+      for (const id of ["zoomOut", "zoomIn", "moveLeft", "moveRight", "moveUp", "moveDown"] as const) {
+        const b = navbar.getButton(id, false);
+        if (b) b.container.innerHTML = NAVBAR_ICONS[id];
+      }
+      const fs = navbar.getButton("fullscreen", false);
+      if (fs) {
+        fs.config.icon = NAVBAR_ICONS.fullscreenIn;
+        fs.config.iconActive = NAVBAR_ICONS.fullscreenOut;
+        fs.container.innerHTML = NAVBAR_ICONS.fullscreenIn;
+      }
       const p = v.getPlugin(tour.VirtualTourPlugin) as Plugin;
       plugin.current = p;
       const mk = v.getPlugin(markers.MarkersPlugin) as { addEventListener(type: "select-marker", cb: (e: { marker: { data?: { to?: string } } }) => void): void };

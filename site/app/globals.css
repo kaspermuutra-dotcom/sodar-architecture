@@ -171,8 +171,26 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* the tour plugin's arrow cluster is replaced by floor rings (markers); keep it out of the way */
 .demo-psv .psv-virtual-tour-arrows, .demo-psv .psv-virtual-tour-arrow { display: none !important; }
 .demo-psv .psv-marker { cursor: pointer; }
-.demo-psv .psv-navbar { background: rgba(5,5,5,.55); backdrop-filter: blur(8px); }
-.demo-psv .psv-caption-content { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+/* navbar: a quiet glass bar with thin line icons (swapped in virtual-tour.tsx), hairline separators, a fine zoom slider */
+.demo-psv .psv-navbar { height: 48px; bottom: -48px; align-items: center; padding: 0 6px; background: linear-gradient(to top, rgba(0,0,0,.72), rgba(0,0,0,.4)); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); border-top: 1px solid rgba(255,255,255,.08); }
+.demo-psv .psv-navbar--open { bottom: 0; }
+.demo-psv .psv-button { width: 24px; height: 24px; padding: 12px 7px; color: rgba(244,242,238,.68); transition: color .18s ease, opacity .18s ease; }
+.demo-psv .psv-button:not(.psv-button--disabled):hover, .demo-psv .psv-button:not(.psv-button--disabled):focus-visible { color: #f4f2ee; }
+.demo-psv .psv-button--active { background: transparent; color: #f4f2ee; }
+.demo-psv .psv-button--disabled { opacity: .3; }
+.demo-psv .psv-button svg { display: block; width: 24px; height: 24px; }
+.demo-psv .psv-button-svg, .demo-psv .psv-button:hover .psv-button-svg { transform: none; }
+.demo-psv .psv-container:not(.psv--is-touch) .psv-button--hover-scale:not(.psv-button--disabled):hover .psv-button-svg { transform: none; }
+.demo-psv .psv-zoom-button + .psv-move-button { margin-left: 12px; }
+.demo-psv .psv-zoom-button + .psv-move-button::before { content: ""; position: absolute; left: -6px; top: 15px; bottom: 15px; width: 1px; background: rgba(255,255,255,.14); }
+.demo-psv .psv-zoom-range.psv-button { width: 96px; height: 1px; max-width: 600px; margin: 0 6px; padding: 23.5px 0; }
+.demo-psv .psv-zoom-range-line { width: 96px; height: 1px; border-radius: 1px; background: linear-gradient(to right, rgba(244,242,238,.6), rgba(244,242,238,.22)); }
+.demo-psv .psv-zoom-range-handle { width: 9px; height: 9px; top: -4px; background: #f4f2ee; box-shadow: 0 0 0 3px rgba(0,0,0,.4), 0 0 10px rgba(244,242,238,.35); transition: transform .2s ease, box-shadow .2s ease; }
+.demo-psv .psv-zoom-range:not(.psv-button--disabled):hover .psv-zoom-range-line { box-shadow: none; background: linear-gradient(to right, rgba(244,242,238,.85), rgba(244,242,238,.35)); }
+.demo-psv .psv-zoom-range:not(.psv-button--disabled):hover .psv-zoom-range-handle { transform: scale(1.2); box-shadow: 0 0 0 3px rgba(0,0,0,.4), 0 0 14px rgba(244,242,238,.5); }
+.demo-psv .psv-caption { height: 48px; }
+.demo-psv .psv-caption-content { font-family: var(--font-mono); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: rgba(244,242,238,.62); }
+.demo-psv .psv-fullscreen-button { margin-left: 6px; }
 .demo-spinner { width: 1.4rem; height: 1.4rem; border-radius: 999px; border: 1px solid rgba(244,242,238,.25); border-top-color: #f4f2ee; animation: demo-spin .9s linear infinite; }
 @keyframes demo-spin { to { transform: rotate(360deg); } }
 
