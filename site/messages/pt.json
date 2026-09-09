@@ -1375,7 +1375,6 @@
     "fromHere": "A partir daqui",
     "floorLabel": "Piso",
     "mapLabel": "Pontos de vista do piso atual",
-    "mapNote": "Os pontos são as posições da digitalização, não uma planta",
     "checkpointsHeading": "Pontos de passagem",
     "choose": "Escolha um ponto",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Escadas",
       "upperLanding": "Patamar superior",
       "upperRoom": "Divisão superior"
-    }
+    },
+    "planLabel": "Planta",
+    "planNote": "Vista em planta renderizada a partir dos dados de profundidade da digitalização"
   },
   "Portfolio": {
     "kicker": "Portfólio",

@@ -1375,7 +1375,6 @@
     "fromHere": "D'ici",
     "floorLabel": "Niveau",
     "mapLabel": "Points de vue du niveau actuel",
-    "mapNote": "Les points sont les positions du scan, pas un plan",
     "checkpointsHeading": "Points d'étape",
     "choose": "Choisir un point d'étape",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Escalier",
       "upperLanding": "Palier",
       "upperRoom": "Pièce à l'étage"
-    }
+    },
+    "planLabel": "Plan",
+    "planNote": "Vue en plan rendue à partir des données de profondeur du scan"
   },
   "Portfolio": {
     "kicker": "Portfolio",

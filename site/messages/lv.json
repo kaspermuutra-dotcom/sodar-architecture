@@ -1375,7 +1375,6 @@
     "fromHere": "No šejienes",
     "floorLabel": "Stāvs",
     "mapLabel": "Skatpunkti pašreizējā stāvā",
-    "mapNote": "Punkti ir skenējuma skatpunkti, nevis plāns",
     "checkpointsHeading": "Punkti",
     "choose": "Izvēlieties punktu",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Kāpnes",
       "upperLanding": "Augšstāva laukums",
       "upperRoom": "Istaba augšstāvā"
-    }
+    },
+    "planLabel": "Plāns",
+    "planNote": "Plāna skats renderēts no skenējuma dziļuma datiem"
   },
   "Portfolio": {
     "kicker": "Portfolio",

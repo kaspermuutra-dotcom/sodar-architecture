@@ -88,7 +88,7 @@ projects are added. Sample listing-type tiles follow it. `/demo/<slug>`
 redirects permanently to `/portfolio/<slug>` (`next.config.ts`).
 
 Each walkthrough project is a linked 360° tour built from a Matterport Capture
-export. Two scripts in `../scripts/` produce everything from the export:
+export. Three scripts in `../scripts/` produce everything from the export:
 
 - `matterport_capture_tour.py` decodes `SweepProcessorData/manifest.mfst`
   (poses, floors, capture order), derives candidate links from sweep
@@ -106,6 +106,19 @@ export. Two scripts in `../scripts/` produce everything from the export:
   The `<version>` segment (`t1`, `t2`, …) is what makes the immutable
   one-year `Cache-Control` header in `next.config.ts` safe: regenerate → new
   segment → new URLs.
+- `matterport_capture_floorplan.py` renders the Matterport-style **plan views**
+  under the viewer from the 3600×1801 depth panorama inside every `.swl`
+  (standard lat/lon, x mirrored against the colour frame). Every sweep's depth
+  becomes a coloured point cloud in the model frame (colour sampled from the
+  composited faces); each level is drawn top-down from its own sweeps only,
+  with the ceiling cut 1.45 m above the sweep's *own* detected floor (the
+  handheld camera sits 0.8–1.7 m above the floor, so a fixed cut would slice
+  the walls). Exposure is matched per sweep, holes between samples and the
+  blind spot under the camera are closed by a coverage-gated pyramid fill,
+  and the result goes to `public/media/portfolio/<slug>/<version>/plan/`
+  with `plan.json` (per-level world→pixel transform, copied to
+  `lib/demo/<slug>.plan.json`). Input: `lib/demo/<slug>.plan-input.json`
+  (sweep id → level, derived from the curation).
 
 The curated part — labels, floor zones, opening viewpoint, checkpoints, link
 corrections, exclusions — lives in `lib/demo/properties.ts`;
@@ -122,7 +135,10 @@ cubemap-tiles + virtual-tour + markers: base level first, tiles for the faces
 in view with a DPR-aware level choice, Matterport-style floor rings for
 tap-to-move, neighbour preloading, error events), `property-demo.tsx`
 (poster → tour orchestration, history, hash deep links), `checkpoint-rail.tsx`,
-`floor-nav.tsx` (floor selector + sweep-position map), `sodar-badge.tsx`. The
+`plan-map.tsx` (Matterport-style plan under the viewer: level tabs, the
+depth-rendered plan of the current level, every viewpoint as a tappable dot,
+a view cone on the current one that follows the panorama's yaw),
+`sodar-badge.tsx`. The
 viewing surface is square-cornered and full-bleed on phones. These are 360°
 walkthroughs from the scan, not hosted Matterport Showcase models.
 

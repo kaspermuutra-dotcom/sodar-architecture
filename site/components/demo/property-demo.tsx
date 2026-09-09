@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { CheckpointRail } from "@/components/demo/checkpoint-rail";
-import { FloorNav } from "@/components/demo/floor-nav";
+import { PlanMap } from "@/components/demo/plan-map";
 import { SodarBadge } from "@/components/demo/sodar-badge";
 import { VirtualTour, type VirtualTourHandle } from "@/components/demo/virtual-tour";
 import type { WalkFloor, WalkScene, Walkthrough } from "@/lib/demo/walkthrough";
@@ -28,6 +28,7 @@ export function PropertyDemo({ walk }: Props) {
   const [loading, setLoading] = useState(false);
   const [errorId, setErrorId] = useState<string | null>(null);
   const [startId, setStartId] = useState(walk.startNodeId);
+  const [yaw, setYaw] = useState<number | null>(null);
 
   const scene = walk.scenes.find((s) => s.id === currentId) ?? walk.scenes[0];
   const label = useCallback((s: WalkScene) => (s.variant ? `${t(`scenes.${s.labelKey}`)} ${s.variant}` : t(`scenes.${s.labelKey}`)), [t]);
@@ -97,7 +98,7 @@ export function PropertyDemo({ walk }: Props) {
         <div className="demo-stage" data-scene={started ? "tour" : "intro"} data-loading={loading || undefined}>
           {started ? (
             <>
-              <VirtualTour ref={tour} scenes={walk.scenes} startId={startId} label={label} loadingText={t("loading")} onSceneChange={onSceneChange} onLoadingChange={setLoading} onError={setErrorId} />
+              <VirtualTour ref={tour} scenes={walk.scenes} startId={startId} label={label} loadingText={t("loading")} onSceneChange={onSceneChange} onYawChange={setYaw} onLoadingChange={setLoading} onError={setErrorId} />
               <SodarBadge />
               <p className="demo-chip pointer-events-none absolute rounded-full bg-black/55 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[.16em] text-[#f4f2ee] backdrop-blur" aria-live="polite">
                 {t(`zone.${scene.floor}`)} · {label(scene)}
@@ -145,6 +146,10 @@ export function PropertyDemo({ walk }: Props) {
           ) : null}
         </div>
 
+        <div className="mt-6">
+          <PlanMap plan={walk.plan} scenes={walk.scenes} currentId={started ? scene.id : null} yaw={started ? yaw : null} floor={scene.floor} label={label} onFloor={onFloor} onScene={goTo} />
+        </div>
+
         {started ? (
           <nav aria-label={t("fromHere")} className="mt-4 flex flex-wrap items-center gap-2 text-sm">
             <span className="section-kicker">{t("fromHere")}</span>
@@ -157,8 +162,7 @@ export function PropertyDemo({ walk }: Props) {
         ) : null}
       </div>
 
-      <aside className="space-y-6 lg:pt-1">
-        <FloorNav scenes={walk.scenes} currentId={started ? scene.id : null} currentFloor={scene.floor} label={label} onFloor={onFloor} onScene={goTo} />
+      <aside className="lg:pt-1">
         <CheckpointRail items={railItems} activeNodeId={started ? scene.id : null} onSelect={goTo} />
       </aside>
     </div>

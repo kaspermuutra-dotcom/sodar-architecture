@@ -159,7 +159,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .demo-rail-item:disabled { cursor: default; }
 .demo-rail-item img { filter: grayscale(.2) brightness(.9); }
 .demo-rail-item.is-active img, .demo-rail-item:hover img { filter: none; }
-.demo-floornav svg { aspect-ratio: auto; max-height: 220px; margin-inline: auto; display: block; }
+/* plan map under the viewer: the depth-rendered level plan with the viewpoints as dots and a view cone on the current one */
+.demo-plan-canvas { position: relative; width: 100%; margin-inline: auto; border-radius: 0; background: #e4e2dc; border: 1px solid var(--color-border); overflow: hidden; }
+.demo-plan-canvas img { filter: drop-shadow(0 8px 16px rgba(0,0,0,.22)); user-select: none; -webkit-user-drag: none; }
+.demo-plan-dot { fill: #f4f2ee; stroke: #1c1c1c; stroke-width: 1.5; paint-order: stroke; transition: r .15s ease; }
+.demo-plan-dot.is-active { fill: #1c1c1c; stroke: #f4f2ee; stroke-width: 2; }
+.demo-plan-cone { fill: rgba(244,242,238,.55); stroke: rgba(28,28,28,.55); stroke-width: 1.2; mix-blend-mode: normal; }
+.demo-plan svg g[role="listitem"]:hover .demo-plan-dot { fill: #1c1c1c; stroke: #f4f2ee; }
+.demo-plan svg [role="button"]:focus-visible + * , .demo-plan svg [role="button"]:focus-visible { outline: 2px solid var(--color-text); outline-offset: 2px; }
 .demo-stage[data-loading] .psv-loader-container { opacity: 1; }
 /* the tour plugin's arrow cluster is replaced by floor rings (markers); keep it out of the way */
 .demo-psv .psv-virtual-tour-arrows, .demo-psv .psv-virtual-tour-arrow { display: none !important; }

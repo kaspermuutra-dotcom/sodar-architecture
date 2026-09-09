@@ -1375,7 +1375,6 @@
     "fromHere": "From here",
     "floorLabel": "Floor",
     "mapLabel": "Viewpoints on the current floor",
-    "mapNote": "Dots are the scan's viewpoints, not a floor plan",
     "checkpointsHeading": "Checkpoints",
     "choose": "Choose a checkpoint",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Stairs",
       "upperLanding": "Upper landing",
       "upperRoom": "Upper room"
-    }
+    },
+    "planLabel": "Floor plan",
+    "planNote": "Plan view rendered from the scan’s depth data"
   },
   "Portfolio": {
     "kicker": "Portfolio",

@@ -1375,7 +1375,6 @@
     "fromHere": "Siit edasi",
     "floorLabel": "Korrus",
     "mapLabel": "Vaatepunktid praegusel korrusel",
-    "mapNote": "Punktid on skanni vaatepunktid, mitte korruseplaan",
     "checkpointsHeading": "Kontrollpunktid",
     "choose": "Vali kontrollpunkt",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Trepp",
       "upperLanding": "Ülemine trepimade",
       "upperRoom": "Ülemine tuba"
-    }
+    },
+    "planLabel": "Korruseplaan",
+    "planNote": "Plaanivaade on renderdatud skanni sügavusandmetest"
   },
   "Portfolio": {
     "kicker": "Portfoolio",

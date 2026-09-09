@@ -1375,7 +1375,6 @@
     "fromHere": "从这里",
     "floorLabel": "楼层",
     "mapLabel": "当前楼层的视点",
-    "mapNote": "圆点是扫描视点，不是平面图",
     "checkpointsHeading": "站点",
     "choose": "选择站点",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "楼梯",
       "upperLanding": "二层平台",
       "upperRoom": "二层房间"
-    }
+    },
+    "planLabel": "平面图",
+    "planNote": "平面视图由扫描的深度数据渲染"
   },
   "Portfolio": {
     "kicker": "作品集",

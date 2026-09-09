@@ -1375,7 +1375,6 @@
     "fromHere": "Stąd",
     "floorLabel": "Piętro",
     "mapLabel": "Punkty widokowe na bieżącym piętrze",
-    "mapNote": "Kropki to punkty skanu, nie rzut",
     "checkpointsHeading": "Punkty",
     "choose": "Wybierz punkt",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Schody",
       "upperLanding": "Podest na piętrze",
       "upperRoom": "Pokój na piętrze"
-    }
+    },
+    "planLabel": "Rzut",
+    "planNote": "Widok rzutu wyrenderowany z danych głębi skanu"
   },
   "Portfolio": {
     "kicker": "Portfolio",

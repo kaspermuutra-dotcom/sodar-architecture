@@ -1375,7 +1375,6 @@
     "fromHere": "Da qui",
     "floorLabel": "Piano",
     "mapLabel": "Punti di vista del piano attuale",
-    "mapNote": "I punti sono le posizioni della scansione, non una planimetria",
     "checkpointsHeading": "Punti di percorso",
     "choose": "Scegli un punto",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Scale",
       "upperLanding": "Pianerottolo",
       "upperRoom": "Stanza al piano superiore"
-    }
+    },
+    "planLabel": "Planimetria",
+    "planNote": "Vista in pianta resa dai dati di profondità della scansione"
   },
   "Portfolio": {
     "kicker": "Portfolio",

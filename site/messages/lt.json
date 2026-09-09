@@ -1375,7 +1375,6 @@
     "fromHere": "Iš čia",
     "floorLabel": "Aukštas",
     "mapLabel": "Apžvalgos taškai dabartiniame aukšte",
-    "mapNote": "Taškai – skenavimo apžvalgos vietos, ne planas",
     "checkpointsHeading": "Taškai",
     "choose": "Pasirinkite tašką",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Laiptai",
       "upperLanding": "Viršutinė aikštelė",
       "upperRoom": "Kambarys viršuje"
-    }
+    },
+    "planLabel": "Planas",
+    "planNote": "Plano vaizdas sugeneruotas iš skenavimo gylio duomenų"
   },
   "Portfolio": {
     "kicker": "Portfolio",

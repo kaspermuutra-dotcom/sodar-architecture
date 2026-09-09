@@ -1375,7 +1375,6 @@
     "fromHere": "Vanaf hier",
     "floorLabel": "Verdieping",
     "mapLabel": "Standpunten op de huidige verdieping",
-    "mapNote": "Stippen zijn de standpunten van de scan, geen plattegrond",
     "checkpointsHeading": "Punten",
     "choose": "Kies een punt",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Trap",
       "upperLanding": "Overloop",
       "upperRoom": "Kamer boven"
-    }
+    },
+    "planLabel": "Plattegrond",
+    "planNote": "Plattegrond gerenderd uit de dieptedata van de scan"
   },
   "Portfolio": {
     "kicker": "Portfolio",

@@ -1375,7 +1375,6 @@
     "fromHere": "Von hier aus",
     "floorLabel": "Etage",
     "mapLabel": "Standpunkte auf der aktuellen Etage",
-    "mapNote": "Punkte sind die Standpunkte des Scans, kein Grundriss",
     "checkpointsHeading": "Checkpoints",
     "choose": "Checkpoint wählen",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Treppe",
       "upperLanding": "Treppenabsatz oben",
       "upperRoom": "Zimmer oben"
-    }
+    },
+    "planLabel": "Grundriss",
+    "planNote": "Planansicht aus den Tiefendaten des Scans gerendert"
   },
   "Portfolio": {
     "kicker": "Portfolio",

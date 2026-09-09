@@ -1,4 +1,5 @@
 import generatedKaldapealse from "@/lib/demo/kaldapealse-tanav-2.sweeps.json";
+import planKaldapealse from "@/lib/demo/kaldapealse-tanav-2.plan.json";
 import { buildWalkthrough, type GeneratedTour, type Walkthrough, type WalkthroughCuration } from "@/lib/demo/walkthrough";
 
 /**
@@ -130,6 +131,7 @@ const kaldapealseCuration: WalkthroughCuration = {
   ogImage: `${M}/og.jpg`,
   // Public use confirmed for the portfolio (publishing brief, 2026-09-09).
   indexable: true,
+  plan: planKaldapealse,
 };
 
 export const PROPERTY_DEMOS: Walkthrough[] = [buildWalkthrough(generatedKaldapealse as GeneratedTour, kaldapealseCuration)];

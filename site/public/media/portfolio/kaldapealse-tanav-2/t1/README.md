@@ -2,7 +2,7 @@
 
 Everything here is derived from the on-site Matterport Capture scan
 (iPhone LiDAR, 8 September 2026) by `scripts/matterport_capture_tour.py` and
-`scripts/matterport_capture_faces.py`. Nothing is generated: the six 4032×3024
+`scripts/matterport_capture_faces.py` (plans: `scripts/matterport_capture_floorplan.py`). Nothing is generated: the six 4032×3024
 camera frames inside each sweep container are registered to the sweep's frame
 and composited along Matterport's own seams into six 3072 px cube faces.
 
@@ -14,6 +14,11 @@ and composited along Matterport's own seams into six 3072 px cube faces.
 - `thumb/<sweep>.webp` — 320×160 thumbnail for the checkpoint rail
 - `stills/<sweep>.webp` — rectilinear crops for the gallery
 - `poster.webp`, `og.jpg` — the opening view (front garden facing the entrance)
+- `plan/{outside,ground,upper}.webp`, `plan/plan.json` — Matterport-style plan
+  views rendered top-down from the depth panorama inside every sweep container
+  (`scripts/matterport_capture_floorplan.py`): each level from its own sweeps,
+  ceilings cut 1.45 m above each sweep's detected floor, coloured from the
+  composited faces; `plan.json` holds the per-level world→pixel transform
 
 The directory name `t1` is a cache version: these URLs are served with a
 one-year immutable `Cache-Control`, so a regenerated set must go to `t2`.

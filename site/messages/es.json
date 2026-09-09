@@ -1375,7 +1375,6 @@
     "fromHere": "Desde aquí",
     "floorLabel": "Planta",
     "mapLabel": "Puntos de vista de la planta actual",
-    "mapNote": "Los puntos son las posiciones del escaneo, no un plano",
     "checkpointsHeading": "Puntos de ruta",
     "choose": "Elige un punto",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Escalera",
       "upperLanding": "Rellano superior",
       "upperRoom": "Habitación superior"
-    }
+    },
+    "planLabel": "Plano",
+    "planNote": "Vista en planta generada a partir de los datos de profundidad del escaneo"
   },
   "Portfolio": {
     "kicker": "Portafolio",

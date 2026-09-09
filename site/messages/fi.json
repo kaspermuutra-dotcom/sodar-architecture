@@ -1375,7 +1375,6 @@
     "fromHere": "Täältä",
     "floorLabel": "Kerros",
     "mapLabel": "Näkymäpisteet nykyisessä kerroksessa",
-    "mapNote": "Pisteet ovat skannauksen kuvauspaikkoja, ei pohjapiirros",
     "checkpointsHeading": "Pisteet",
     "choose": "Valitse piste",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Portaat",
       "upperLanding": "Yläkerran tasanne",
       "upperRoom": "Yläkerran huone"
-    }
+    },
+    "planLabel": "Pohjapiirros",
+    "planNote": "Pohjanäkymä renderöity skannauksen syvyysdatasta"
   },
   "Portfolio": {
     "kicker": "Portfolio",

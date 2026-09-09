@@ -1375,7 +1375,6 @@
     "fromHere": "Härifrån",
     "floorLabel": "Våning",
     "mapLabel": "Vypunkter på aktuell våning",
-    "mapNote": "Prickarna är skanningens vypunkter, inte en planritning",
     "checkpointsHeading": "Punkter",
     "choose": "Välj en punkt",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Trappa",
       "upperLanding": "Övre trapphall",
       "upperRoom": "Rum på övervåningen"
-    }
+    },
+    "planLabel": "Planritning",
+    "planNote": "Planvy renderad från skanningens djupdata"
   },
   "Portfolio": {
     "kicker": "Portfölj",

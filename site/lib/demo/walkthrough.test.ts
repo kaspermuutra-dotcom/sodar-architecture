@@ -32,6 +32,7 @@ describe("walkthrough integrity (every configured property)", () => {
         for (const g of walk.gallery) expect(existsSync(join(PUBLIC, g.still)), g.still).toBe(true);
         expect(existsSync(join(PUBLIC, walk.poster))).toBe(true);
         expect(existsSync(join(PUBLIC, walk.ogImage))).toBe(true);
+        for (const level of Object.values(walk.plan.levels)) expect(existsSync(join(PUBLIC, level.image)), level.image).toBe(true);
       });
 
       it("keeps floor changes on the stairs and exterior→interior on the entrance", () => {
@@ -71,6 +72,7 @@ describe("buildWalkthrough", () => {
     scenes: { a: { labelKey: "x", floor: "ground", lookAt: "b" }, b: { labelKey: "x", floor: "ground" }, c: { labelKey: "x", floor: "upper" } },
     exclude: {}, dropLinks: [], addLinks: [{ from: "b", to: "c" }], adjustLinks: [{ from: "a", to: "b", pitch: -5 }],
     checkpoints: [{ id: "k", nodeId: "a", labelKey: "k", floor: "ground" }], floorEntry: { exterior: "a", ground: "a", upper: "c" }, gallery: [], poster: "/p", ogImage: "/o", indexable: false,
+    plan: { metresPerPixel: 0.025, levels: { outside: { originX: 0, originY: 0, width: 10, height: 10 }, ground: { originX: 0, originY: 0, width: 10, height: 10 }, upper: { originX: 0, originY: 0, width: 10, height: 10 } }, floorZ: {}, source: "test" },
   };
 
   it("computes world-frame link yaws from positions and applies edits symmetrically", () => {

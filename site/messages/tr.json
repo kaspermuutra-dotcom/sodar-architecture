@@ -1375,7 +1375,6 @@
     "fromHere": "Buradan",
     "floorLabel": "Kat",
     "mapLabel": "Geçerli kattaki bakış noktaları",
-    "mapNote": "Noktalar taramanın bakış noktalarıdır, kat planı değildir",
     "checkpointsHeading": "Noktalar",
     "choose": "Bir nokta seçin",
     "zone": {
@@ -1420,7 +1419,9 @@
       "stairs": "Merdiven",
       "upperLanding": "Üst sahanlık",
       "upperRoom": "Üst kat odası"
-    }
+    },
+    "planLabel": "Kat planı",
+    "planNote": "Plan görünümü taramanın derinlik verisinden oluşturuldu"
   },
   "Portfolio": {
     "kicker": "Portföy",

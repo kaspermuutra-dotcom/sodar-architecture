@@ -87,9 +87,27 @@ export type WalkthroughCuration = {
   poster: string;
   ogImage: string;
   indexable: boolean;
+  /** Generated plan transform (plan.json); images are resolved under `<mediaBase>/plan/`. */
+  plan: GeneratedPlan;
 };
 
 export type WalkLink = { to: string; yaw: number; pitch: number; distance: number };
+
+/** Top-down plan renders (from the scan's depth data) and the world→pixel transform, from scripts/matterport_capture_floorplan.py. */
+export type PlanLevel = {
+  image: string;
+  /** World x of the image's left edge and world y of its top edge (metres, model frame). */
+  originX: number;
+  originY: number;
+  width: number;
+  height: number;
+};
+export type WalkthroughPlan = {
+  metresPerPixel: number;
+  levels: Record<WalkFloor, PlanLevel>;
+};
+type GeneratedPlanLevel = { originX: number; originY: number; width: number; height: number };
+export type GeneratedPlan = { metresPerPixel: number; levels: { outside: GeneratedPlanLevel; ground: GeneratedPlanLevel; upper: GeneratedPlanLevel }; floorZ: Record<string, number>; source: string };
 
 export type WalkScene = {
   id: string;
@@ -122,6 +140,7 @@ export type Walkthrough = {
   poster: string;
   ogImage: string;
   indexable: boolean;
+  plan: WalkthroughPlan;
   /** Sweeps in the export that are not part of the tour, with the reason. */
   excluded: Array<{ sweep: string; reason: string }>;
   /** `tour.v1` view of the same graph for validation and the PSV adapter. */
@@ -227,6 +246,14 @@ export function buildWalkthrough(generated: GeneratedTour, curation: Walkthrough
     poster: curation.poster,
     ogImage: curation.ogImage,
     indexable: curation.indexable,
+    plan: {
+      metresPerPixel: curation.plan.metresPerPixel,
+      levels: {
+        exterior: { image: `${curation.mediaBase}/plan/outside.webp`, ...curation.plan.levels.outside },
+        ground: { image: `${curation.mediaBase}/plan/ground.webp`, ...curation.plan.levels.ground },
+        upper: { image: `${curation.mediaBase}/plan/upper.webp`, ...curation.plan.levels.upper },
+      },
+    },
     excluded,
     tour,
     provenance: generated.source,

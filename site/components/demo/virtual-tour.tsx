@@ -31,6 +31,8 @@ type Props = {
   label: (scene: WalkScene) => string;
   loadingText: string;
   onSceneChange?: (id: string) => void;
+  /** Current view direction as a world yaw in degrees (clockwise, 0 = model +x); throttled to animation frames. */
+  onYawChange?: (yawDeg: number) => void;
   onLoadingChange?: (loading: boolean) => void;
   onError?: (id: string | null) => void;
 };
@@ -96,14 +98,14 @@ function floorRing(link: WalkLink, name: string) {
   };
 }
 
-export const VirtualTour = forwardRef<VirtualTourHandle, Props>(function VirtualTour({ scenes, startId, startYaw, label, loadingText, onSceneChange, onLoadingChange, onError }, ref) {
+export const VirtualTour = forwardRef<VirtualTourHandle, Props>(function VirtualTour({ scenes, startId, startYaw, label, loadingText, onSceneChange, onYawChange, onLoadingChange, onError }, ref) {
   const root = useRef<HTMLDivElement>(null);
   const viewer = useRef<ViewerLike | null>(null);
   const plugin = useRef<Plugin | null>(null);
   const [backdrop, setBackdrop] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
-  const callbacks = useRef({ onSceneChange, onLoadingChange, onError, label });
-  callbacks.current = { onSceneChange, onLoadingChange, onError, label };
+  const callbacks = useRef({ onSceneChange, onYawChange, onLoadingChange, onError, label });
+  callbacks.current = { onSceneChange, onYawChange, onLoadingChange, onError, label };
 
   useEffect(() => {
     const el = root.current;
@@ -178,11 +180,22 @@ export const VirtualTour = forwardRef<VirtualTourHandle, Props>(function Virtual
       v.addEventListener("ready", () => {
         if (!cancelled) setReady(true);
       }, { once: true });
+      let yawFrame = 0;
+      v.addEventListener("position-updated", (e) => {
+        const pos = (e as { position?: { yaw: number } }).position;
+        if (!pos || yawFrame) return;
+        yawFrame = requestAnimationFrame(() => {
+          yawFrame = 0;
+          callbacks.current.onYawChange?.((pos.yaw * 180) / Math.PI);
+        });
+      });
       v.addEventListener("panorama-load", () => callbacks.current.onLoadingChange?.(true));
       v.addEventListener("panorama-loaded", () => {
         callbacks.current.onLoadingChange?.(false);
         callbacks.current.onError?.(null);
         setBackdrop(null);
+        const pos = v.getPosition?.();
+        if (pos) callbacks.current.onYawChange?.((pos.yaw * 180) / Math.PI); // the plan's view cone before the first drag
       });
       v.addEventListener("panorama-error", () => {
         callbacks.current.onLoadingChange?.(false);
