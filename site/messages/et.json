@@ -12,7 +12,8 @@
     "getStarted": "Skanni kinnisvara",
     "menu": "Ava menüü",
     "home": "Sodari avaleht",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "portfolio": "Portfoolio"
   },
   "Hero": {
     "headline1": "AI-ringkäigud,",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Selle nädala skannid",
-    "title": "Iga liiki kuulutus skannitakse ühtmoodi.",
-    "items": [
-      {
-        "label": "Korter",
-        "meta": "3 tuba · Kesklinn"
-      },
-      {
-        "label": "Uusarendus",
-        "meta": "4 tuba · Ülemiste"
-      },
-      {
-        "label": "Villa",
-        "meta": "6 tuba · Pirita"
-      },
-      {
-        "label": "Üürikorter",
-        "meta": "1 tuba · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Ehitatud, et kuulutusi usaldada",
@@ -1381,5 +1360,114 @@
     "mute": "Vaigista",
     "unmute": "Heli sisse",
     "fullscreen": "Täisekraan"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — 360° ringkäik",
+    "metaDesc": "Jaluta läbi {title} kohapealsest skannist kokku pandud 360° ringkäigus: {count} vaatepunkti tänavalt teise korruseni. Sodari demo koos {agency}.",
+    "eyebrow": "Sodari demo · 360° ringkäik kinnisvaral",
+    "agentLabel": "Maakler",
+    "introLabel": "Interaktiivne ringkäik · jäädvustatud kohapeal",
+    "attribution": "3D ringkäigu demo: {agent} · {agency}",
+    "start": "Alusta ringkäiku",
+    "hint": "Lohista, et ringi vaadata · Puuduta rõngast põrandal, et sinna kõndida · Kontrollpunktid hüppavad alade vahel",
+    "back": "Eelmine vaade",
+    "restart": "Alusta uuesti",
+    "fromHere": "Siit edasi",
+    "floorLabel": "Korrus",
+    "mapLabel": "Vaatepunktid praegusel korrusel",
+    "mapNote": "Punktid on skanni vaatepunktid, mitte korruseplaan",
+    "checkpointsHeading": "Kontrollpunktid",
+    "choose": "Vali kontrollpunkt",
+    "zone": {
+      "exterior": "Õues",
+      "ground": "Esimene korrus",
+      "upper": "Teine korrus"
+    },
+    "loading": "Panoraami laadimine…",
+    "errorTitle": "Seda panoraami ei õnnestunud laadida.",
+    "retry": "Proovi uuesti",
+    "galleryTitle": "Veel vaateid skannist",
+    "stillAlt": "Kaader skannist: {label}",
+    "badgeLabel": "Sodar — avaleht",
+    "provenance": "Kohapealsest skannist kokku pandud 360° ringkäik ({count} vaatepunkti). Panoraamid, eelvaated ja kaadrid on ümber projitseeritud jäädvustusest; miski sellel lehel pole genereeritud. See ei ole Matterporti Showcase'i mudel.",
+    "scenes": {
+      "street": "Tänav",
+      "frontGarden": "Esiaed",
+      "entranceSteps": "Sissepääsu trepp",
+      "frontDoor": "Välisuks",
+      "threshold": "Ukseava",
+      "garden": "Aed",
+      "backGarden": "Tagaaed",
+      "terrace": "Terrass",
+      "hallway": "Esik",
+      "stairsBottom": "Trepi jalam",
+      "stairs": "Trepp",
+      "kitchen": "Köök",
+      "bathroom": "Vannituba",
+      "mainRoom": "Suur tuba",
+      "room": "Tuba",
+      "upperLanding": "Ülemine trepimade",
+      "upperRoom": "Ülemine tuba",
+      "upperBathroom": "Ülemine vannituba"
+    },
+    "checkpoints": {
+      "outside": "Õues",
+      "entrance": "Sissepääs",
+      "terrace": "Terrass",
+      "hallway": "Esik",
+      "kitchen": "Köök",
+      "mainRoom": "Suur tuba",
+      "stairs": "Trepp",
+      "upperLanding": "Ülemine trepimade",
+      "upperRoom": "Ülemine tuba"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portfoolio",
+    "title": "Päris kuulutused, telefoniga skannitud.",
+    "homeTitle": "Iga kuulutus skannitakse samamoodi.",
+    "sub": "Interaktiivsed ringkäigud ja näidisskannid Sodari koostööst maakleritega.",
+    "viewAll": "Vaata portfooliot",
+    "metaTitle": "Portfoolio — Sodar",
+    "metaDesc": "Interaktiivsed kinnisvara ringkäigud ja näidisskannid Sodari koostööst maakleritega.",
+    "breadcrumbLabel": "Asukoharada",
+    "backToPortfolio": "Portfoolio",
+    "factsLabel": "Projekti andmed",
+    "facts": {
+      "type": "Formaat",
+      "scope": "Katvus",
+      "scopeValue": "{count} vaatepunkti · õu, esimene ja teine korrus",
+      "client": "Klient"
+    },
+    "galleryTitle": "Vaated skannist",
+    "stillAlt": "Kaader skannist: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Sodari esimene kliendiskann",
+        "type": "Interaktiivne 360° ringkäik kinnisvaral",
+        "cta": "Vaata kinnisvara",
+        "lead": "Jaluta tänavalt teise korruseni kohapealsest skannist kokku pandud kõrglahutusega 360° ringkäigus.",
+        "metaTitle": "Kaldapealse tänav 2 — Sodari esimene kliendiskann",
+        "metaDesc": "Vaata Sodari esimest kliendi kinnisvara ringkäiku, mis on loodud Ruslan Gulidale (RE/MAX)."
+      }
+    },
+    "samples": [
+      {
+        "label": "Korter",
+        "meta": "3 tuba · Kesklinn"
+      },
+      {
+        "label": "Uusarendus",
+        "meta": "4 tuba · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 tuba · Pirita"
+      },
+      {
+        "label": "Üürikorter",
+        "meta": "1 tuba · Kalamaja"
+      }
+    ]
   }
 }

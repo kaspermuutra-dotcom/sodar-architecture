@@ -13,7 +13,7 @@ import { CapabilityGrid } from "@/components/capability-grid";
 import { IntegrationShowcase } from "@/components/integration-showcase";
 import { ImpactStats } from "@/components/impact-stats";
 import { TerminalPreviewSection } from "@/components/terminal-preview-section";
-import { ScansGrid } from "@/components/scans-grid";
+import { PortfolioGrid } from "@/components/portfolio-grid";
 import { TrustPillars } from "@/components/trust-pillars";
 import { PartnerTeaser } from "@/components/partner-teaser";
 import { PricingTeaser } from "@/components/pricing-teaser";
@@ -46,7 +46,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
         <IntegrationShowcase />
         <TerminalPreviewSection />
-        <ScansGrid />
+        <PortfolioGrid variant="home" />
         <div className="theme-light">
           <TrustPillars />
           <PartnerTeaser />

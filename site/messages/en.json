@@ -12,7 +12,8 @@
     "getStarted": "Scan a property",
     "menu": "Toggle menu",
     "home": "Sodar home",
-    "contact": "Contact"
+    "contact": "Contact",
+    "portfolio": "Portfolio"
   },
   "Hero": {
     "headline1": "AI walkthroughs",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "This week’s scans",
-    "title": "Every kind of listing scans the same way.",
-    "items": [
-      {
-        "label": "Apartment",
-        "meta": "3 rooms · Kesklinn"
-      },
-      {
-        "label": "New construction",
-        "meta": "4 rooms · Ülemiste"
-      },
-      {
-        "label": "Villa",
-        "meta": "6 rooms · Pirita"
-      },
-      {
-        "label": "Rental",
-        "meta": "1 room · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Built to be trusted with listings",
@@ -1381,5 +1360,114 @@
     "mute": "Mute",
     "unmute": "Unmute",
     "fullscreen": "Full screen"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — 360° walkthrough",
+    "metaDesc": "Walk through {title} in a linked 360° tour built from the on-site scan: {count} viewpoints from the street to the upper floor. A Sodar demo with {agency}.",
+    "eyebrow": "Sodar demo · 360° property walkthrough",
+    "agentLabel": "Agent",
+    "introLabel": "Interactive property tour · captured on site",
+    "attribution": "3D walkthrough demo for {agent} · {agency}",
+    "start": "Start walkthrough",
+    "hint": "Drag to look around · Tap a ring on the floor to walk there · Checkpoints jump between areas",
+    "back": "Previous scene",
+    "restart": "Start again",
+    "fromHere": "From here",
+    "floorLabel": "Floor",
+    "mapLabel": "Viewpoints on the current floor",
+    "mapNote": "Dots are the scan's viewpoints, not a floor plan",
+    "checkpointsHeading": "Checkpoints",
+    "choose": "Choose a checkpoint",
+    "zone": {
+      "exterior": "Outside",
+      "ground": "Ground floor",
+      "upper": "Upper floor"
+    },
+    "loading": "Loading panorama…",
+    "errorTitle": "This panorama could not be loaded.",
+    "retry": "Try again",
+    "galleryTitle": "More views from the scan",
+    "stillAlt": "Still from the scan: {label}",
+    "badgeLabel": "Sodar — home",
+    "provenance": "Linked 360° walkthrough assembled from the on-site scan ({count} viewpoints). Panoramas, previews and stills are re-projected from the capture; nothing on this page is generated. This is not a hosted Matterport Showcase model.",
+    "scenes": {
+      "street": "Street",
+      "frontGarden": "Front garden",
+      "entranceSteps": "Entrance steps",
+      "frontDoor": "Front door",
+      "threshold": "Doorway",
+      "garden": "Garden",
+      "backGarden": "Back garden",
+      "terrace": "Terrace",
+      "hallway": "Hallway",
+      "stairsBottom": "Foot of the stairs",
+      "stairs": "Stairs",
+      "kitchen": "Kitchen",
+      "bathroom": "Bathroom",
+      "mainRoom": "Main room",
+      "room": "Room",
+      "upperLanding": "Upper landing",
+      "upperRoom": "Upper room",
+      "upperBathroom": "Upper bathroom"
+    },
+    "checkpoints": {
+      "outside": "Outside",
+      "entrance": "Entrance",
+      "terrace": "Terrace",
+      "hallway": "Hallway",
+      "kitchen": "Kitchen",
+      "mainRoom": "Main room",
+      "stairs": "Stairs",
+      "upperLanding": "Upper landing",
+      "upperRoom": "Upper room"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portfolio",
+    "title": "Real listings, scanned with a phone.",
+    "homeTitle": "Every kind of listing scans the same way.",
+    "sub": "Interactive walkthroughs and sample scans from Sodar’s work with agents.",
+    "viewAll": "View the portfolio",
+    "metaTitle": "Portfolio — Sodar",
+    "metaDesc": "Interactive property walkthroughs and sample scans from Sodar’s work with real-estate agents.",
+    "breadcrumbLabel": "Breadcrumb",
+    "backToPortfolio": "Portfolio",
+    "factsLabel": "Project facts",
+    "facts": {
+      "type": "Format",
+      "scope": "Coverage",
+      "scopeValue": "{count} viewpoints · exterior, ground floor, upper floor",
+      "client": "Client"
+    },
+    "galleryTitle": "Views from the scan",
+    "stillAlt": "Still from the scan: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Sodar’s first client scan",
+        "type": "Interactive 360° property walkthrough",
+        "cta": "Explore the property",
+        "lead": "Walk from the street to the upper floor in a high-resolution 360° walkthrough reconstructed from the on-site scan.",
+        "metaTitle": "Kaldapealse tänav 2 — Sodar’s First Client Scan",
+        "metaDesc": "Explore Sodar’s first client property walkthrough, created for Ruslan Gulida of RE/MAX."
+      }
+    },
+    "samples": [
+      {
+        "label": "Apartment",
+        "meta": "3 rooms · Kesklinn"
+      },
+      {
+        "label": "New construction",
+        "meta": "4 rooms · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 rooms · Pirita"
+      },
+      {
+        "label": "Rental",
+        "meta": "1 room · Kalamaja"
+      }
+    ]
   }
 }

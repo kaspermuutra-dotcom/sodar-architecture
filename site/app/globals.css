@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "@photo-sphere-viewer/core/index.css";
 @import "@photo-sphere-viewer/virtual-tour-plugin/index.css";
+@import "@photo-sphere-viewer/markers-plugin/index.css";
 
 /*
   Sodar design system — "Mono Scan", second pass.
@@ -138,6 +139,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .film-track i { position: absolute; inset-block: 0; inset-inline-start: 0; background: #f4f2ee; }
 .film-time { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .08em; font-variant-numeric: tabular-nums; color: rgba(244,242,238,.85); }
 @media (pointer: coarse) { .film-controls { opacity: 1; } }
+
+/* property demo (/demo/<slug>) — exterior intro → Matterport tour */
+/* The viewing surface is a square-cornered architectural window: no radius, no card border, full-bleed on phones. */
+.demo-stage { position: relative; overflow: hidden; border-radius: 0; background: #000; aspect-ratio: 16 / 10; max-height: calc(100dvh - 9rem); width: 100%; }
+.demo-stage, .demo-stage .psv-container, .demo-stage .psv-canvas-container, .demo-stage canvas, .demo-stage img { border-radius: 0; }
+.psv-container:fullscreen, .psv-container:-webkit-full-screen { border-radius: 0; background: #000; }
+@media (max-width: 767px) { .demo-stage { aspect-ratio: 4 / 5; max-height: calc(100dvh - 7rem); width: 100vw; margin-inline: calc(50% - 50vw); } }
+@media (max-height: 520px) and (orientation: landscape) { .demo-stage { aspect-ratio: auto; height: calc(100dvh - 3.5rem); max-height: none; } }
+.demo-psv .psv-container { background: transparent; }
+.demo-psv .psv-loader-container { display: none; }
+.demo-badge { position: absolute; z-index: 5; top: max(.75rem, env(safe-area-inset-top)); inset-inline-end: max(.75rem, env(safe-area-inset-right)); display: inline-flex; align-items: center; gap: .45rem; padding: .4rem .65rem .4rem .5rem; border-radius: 999px; background: rgba(0,0,0,.45); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.14); }
+.demo-badge:hover { border-color: rgba(255,255,255,.4); }
+/* current-checkpoint chip: top-start, clear of the badge (top-end) and of Matterport's bottom-edge controls */
+.demo-chip { top: max(.75rem, env(safe-area-inset-top)); inset-inline-start: max(.75rem, env(safe-area-inset-left)); max-width: calc(100% - 9.5rem); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.demo-rail-item { display: flex; width: 100%; align-items: center; gap: .7rem; border-radius: .75rem; border: 1px solid transparent; padding: .35rem .45rem .35rem .35rem; text-align: start; color: var(--color-text-muted); }
+.demo-rail-item:hover:not(:disabled) { color: var(--color-text); border-color: var(--color-border); }
+.demo-rail-item.is-active { color: var(--color-text); border-color: var(--color-border-strong); background: var(--color-bg-raised); }
+.demo-rail-item:disabled { cursor: default; }
+.demo-rail-item img { filter: grayscale(.2) brightness(.9); }
+.demo-rail-item.is-active img, .demo-rail-item:hover img { filter: none; }
+.demo-floornav svg { aspect-ratio: auto; max-height: 220px; margin-inline: auto; display: block; }
+.demo-stage[data-loading] .psv-loader-container { opacity: 1; }
+/* the tour plugin's arrow cluster is replaced by floor rings (markers); keep it out of the way */
+.demo-psv .psv-virtual-tour-arrows, .demo-psv .psv-virtual-tour-arrow { display: none !important; }
+.demo-psv .psv-marker { cursor: pointer; }
+.demo-psv .psv-navbar { background: rgba(5,5,5,.55); backdrop-filter: blur(8px); }
+.demo-psv .psv-caption-content { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
+.demo-spinner { width: 1.4rem; height: 1.4rem; border-radius: 999px; border: 1px solid rgba(244,242,238,.25); border-top-color: #f4f2ee; animation: demo-spin .9s linear infinite; }
+@keyframes demo-spin { to { transform: rotate(360deg); } }
 
 @media (max-width: 640px) { .section-shell { padding: 4.5rem 1.25rem; } }
 

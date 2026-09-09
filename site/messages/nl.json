@@ -12,7 +12,8 @@
     "getStarted": "Woning scannen",
     "menu": "Menu openen",
     "home": "Sodar startpagina",
-    "contact": "Contact"
+    "contact": "Contact",
+    "portfolio": "Portfolio"
   },
   "Hero": {
     "headline1": "AI-rondleidingen",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Scans van deze week",
-    "title": "Elk soort advertentie scant op dezelfde manier.",
-    "items": [
-      {
-        "label": "Appartement",
-        "meta": "3 kamers · Kesklinn"
-      },
-      {
-        "label": "Nieuwbouw",
-        "meta": "4 kamers · Ülemiste"
-      },
-      {
-        "label": "Villa",
-        "meta": "6 kamers · Pirita"
-      },
-      {
-        "label": "Huurwoning",
-        "meta": "1 kamer · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Gebouwd om vertrouwd te worden met advertenties",
@@ -1381,5 +1360,114 @@
     "mute": "Dempen",
     "unmute": "Geluid aan",
     "fullscreen": "Volledig scherm"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — 360°-rondleiding",
+    "metaDesc": "Loop door {title} in een gekoppelde 360°-tour uit de scan ter plaatse: {count} standpunten van de straat tot de verdieping. Een Sodar-demo met {agency}.",
+    "eyebrow": "Sodar-demo · 360°-rondleiding door de woning",
+    "agentLabel": "Makelaar",
+    "introLabel": "Interactieve rondleiding · ter plaatse vastgelegd",
+    "attribution": "3D-rondleidingsdemo voor {agent} · {agency}",
+    "start": "Rondleiding starten",
+    "hint": "Sleep om rond te kijken · Tik op een ring op de vloer om erheen te lopen · Punten springen tussen zones",
+    "back": "Vorige weergave",
+    "restart": "Opnieuw beginnen",
+    "fromHere": "Vanaf hier",
+    "floorLabel": "Verdieping",
+    "mapLabel": "Standpunten op de huidige verdieping",
+    "mapNote": "Stippen zijn de standpunten van de scan, geen plattegrond",
+    "checkpointsHeading": "Punten",
+    "choose": "Kies een punt",
+    "zone": {
+      "exterior": "Buiten",
+      "ground": "Begane grond",
+      "upper": "Verdieping"
+    },
+    "loading": "Panorama laden…",
+    "errorTitle": "Dit panorama kon niet worden geladen.",
+    "retry": "Opnieuw proberen",
+    "galleryTitle": "Meer beelden uit de scan",
+    "stillAlt": "Beeld uit de scan: {label}",
+    "badgeLabel": "Sodar — home",
+    "provenance": "Gekoppelde 360°-rondleiding samengesteld uit de scan ter plaatse ({count} standpunten). Panorama's, voorbeelden en beelden zijn opnieuw geprojecteerd uit de opname; niets op deze pagina is gegenereerd. Dit is geen gehost Matterport Showcase-model.",
+    "scenes": {
+      "street": "Straat",
+      "frontGarden": "Voortuin",
+      "entranceSteps": "Entreetrap",
+      "frontDoor": "Voordeur",
+      "threshold": "Deuropening",
+      "garden": "Tuin",
+      "backGarden": "Achtertuin",
+      "terrace": "Terras",
+      "hallway": "Hal",
+      "stairsBottom": "Trapvoet",
+      "stairs": "Trap",
+      "kitchen": "Keuken",
+      "bathroom": "Badkamer",
+      "mainRoom": "Hoofdruimte",
+      "room": "Kamer",
+      "upperLanding": "Overloop",
+      "upperRoom": "Kamer boven",
+      "upperBathroom": "Badkamer boven"
+    },
+    "checkpoints": {
+      "outside": "Buiten",
+      "entrance": "Entree",
+      "terrace": "Terras",
+      "hallway": "Hal",
+      "kitchen": "Keuken",
+      "mainRoom": "Hoofdruimte",
+      "stairs": "Trap",
+      "upperLanding": "Overloop",
+      "upperRoom": "Kamer boven"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portfolio",
+    "title": "Echte woningen, gescand met een telefoon.",
+    "homeTitle": "Elk type woning wordt op dezelfde manier gescand.",
+    "sub": "Interactieve rondleidingen en voorbeeldscans uit Sodars werk met makelaars.",
+    "viewAll": "Bekijk het portfolio",
+    "metaTitle": "Portfolio — Sodar",
+    "metaDesc": "Interactieve woningrondleidingen en voorbeeldscans uit Sodars werk met makelaars.",
+    "breadcrumbLabel": "Kruimelpad",
+    "backToPortfolio": "Portfolio",
+    "factsLabel": "Projectgegevens",
+    "facts": {
+      "type": "Formaat",
+      "scope": "Dekking",
+      "scopeValue": "{count} standpunten · buiten, begane grond, verdieping",
+      "client": "Klant"
+    },
+    "galleryTitle": "Beelden uit de scan",
+    "stillAlt": "Beeld uit de scan: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Sodars eerste klantscan",
+        "type": "Interactieve 360°-woningrondleiding",
+        "cta": "Bekijk de woning",
+        "lead": "Van de straat tot de verdieping in een 360°-rondleiding in hoge resolutie, gereconstrueerd uit de scan ter plaatse.",
+        "metaTitle": "Kaldapealse tänav 2 — Sodars eerste klantscan",
+        "metaDesc": "Bekijk Sodars eerste klantrondleiding, gemaakt voor Ruslan Gulida van RE/MAX."
+      }
+    },
+    "samples": [
+      {
+        "label": "Appartement",
+        "meta": "3 kamers · Kesklinn"
+      },
+      {
+        "label": "Nieuwbouw",
+        "meta": "4 kamers · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 kamers · Pirita"
+      },
+      {
+        "label": "Huurwoning",
+        "meta": "1 kamer · Kalamaja"
+      }
+    ]
   }
 }

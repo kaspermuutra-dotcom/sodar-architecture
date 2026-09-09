@@ -12,7 +12,8 @@
     "getStarted": "Skenēt īpašumu",
     "menu": "Atvērt izvēlni",
     "home": "Sodar sākumlapa",
-    "contact": "Kontakti"
+    "contact": "Kontakti",
+    "portfolio": "Portfolio"
   },
   "Hero": {
     "headline1": "MI apskates,",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Šīs nedēļas skenējumi",
-    "title": "Katra veida sludinājums tiek skenēts vienādi.",
-    "items": [
-      {
-        "label": "Dzīvoklis",
-        "meta": "3 istabas · Kesklinn"
-      },
-      {
-        "label": "Jaunbūve",
-        "meta": "4 istabas · Ülemiste"
-      },
-      {
-        "label": "Villa",
-        "meta": "6 istabas · Pirita"
-      },
-      {
-        "label": "Īres dzīvoklis",
-        "meta": "1 istaba · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Veidots, lai tam uzticētu sludinājumus",
@@ -1381,5 +1360,114 @@
     "mute": "Izslēgt skaņu",
     "unmute": "Ieslēgt skaņu",
     "fullscreen": "Pilnekrāns"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — 360° apskate",
+    "metaDesc": "Izstaigājiet {title} saistītā 360° tūrē, kas veidota no skenējuma uz vietas: {count} skatpunkti no ielas līdz augšstāvam. Sodar demo kopā ar {agency}.",
+    "eyebrow": "Sodar demo · īpašuma 360° apskate",
+    "agentLabel": "Aģents",
+    "introLabel": "Interaktīva apskate · uzņemta uz vietas",
+    "attribution": "3D apskates demo: {agent} · {agency}",
+    "start": "Sākt apskati",
+    "hint": "Velciet, lai skatītos · Pieskarieties gredzenam uz grīdas, lai tur aizietu · Punkti pārlec starp zonām",
+    "back": "Iepriekšējais skats",
+    "restart": "Sākt no jauna",
+    "fromHere": "No šejienes",
+    "floorLabel": "Stāvs",
+    "mapLabel": "Skatpunkti pašreizējā stāvā",
+    "mapNote": "Punkti ir skenējuma skatpunkti, nevis plāns",
+    "checkpointsHeading": "Punkti",
+    "choose": "Izvēlieties punktu",
+    "zone": {
+      "exterior": "Ārā",
+      "ground": "Pirmais stāvs",
+      "upper": "Otrais stāvs"
+    },
+    "loading": "Ielādē panorāmu…",
+    "errorTitle": "Šo panorāmu neizdevās ielādēt.",
+    "retry": "Mēģināt vēlreiz",
+    "galleryTitle": "Vairāk skatu no skenējuma",
+    "stillAlt": "Kadrs no skenējuma: {label}",
+    "badgeLabel": "Sodar — sākums",
+    "provenance": "Saistīta 360° apskate, salikta no skenējuma uz vietas ({count} skatpunkti). Panorāmas, priekšskatījumi un kadri ir pārprojicēti no uzņēmuma; nekas šajā lapā nav ģenerēts. Tas nav Matterport Showcase modelis.",
+    "scenes": {
+      "street": "Iela",
+      "frontGarden": "Priekšdārzs",
+      "entranceSteps": "Ieejas kāpnes",
+      "frontDoor": "Ārdurvis",
+      "threshold": "Durvju aile",
+      "garden": "Dārzs",
+      "backGarden": "Aizmugures dārzs",
+      "terrace": "Terase",
+      "hallway": "Priekšnams",
+      "stairsBottom": "Kāpņu pakāje",
+      "stairs": "Kāpnes",
+      "kitchen": "Virtuve",
+      "bathroom": "Vannas istaba",
+      "mainRoom": "Galvenā telpa",
+      "room": "Istaba",
+      "upperLanding": "Augšstāva laukums",
+      "upperRoom": "Istaba augšstāvā",
+      "upperBathroom": "Vannas istaba augšstāvā"
+    },
+    "checkpoints": {
+      "outside": "Ārā",
+      "entrance": "Ieeja",
+      "terrace": "Terase",
+      "hallway": "Priekšnams",
+      "kitchen": "Virtuve",
+      "mainRoom": "Galvenā telpa",
+      "stairs": "Kāpnes",
+      "upperLanding": "Augšstāva laukums",
+      "upperRoom": "Istaba augšstāvā"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portfolio",
+    "title": "Īsti īpašumi, skenēti ar tālruni.",
+    "homeTitle": "Visu veidu īpašumus skenē vienādi.",
+    "sub": "Interaktīvas apskates un paraugskenējumi no Sodar darba ar aģentiem.",
+    "viewAll": "Skatīt portfolio",
+    "metaTitle": "Portfolio — Sodar",
+    "metaDesc": "Interaktīvas īpašumu apskates un paraugskenējumi no Sodar darba ar aģentiem.",
+    "breadcrumbLabel": "Navigācijas ceļš",
+    "backToPortfolio": "Portfolio",
+    "factsLabel": "Projekta dati",
+    "facts": {
+      "type": "Formāts",
+      "scope": "Aptvērums",
+      "scopeValue": "{count} skatpunkti · ārā, pirmais stāvs, otrais stāvs",
+      "client": "Klients"
+    },
+    "galleryTitle": "Skati no skenējuma",
+    "stillAlt": "Kadrs no skenējuma: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Sodar pirmais klienta skenējums",
+        "type": "Interaktīva īpašuma 360° apskate",
+        "cta": "Apskatīt īpašumu",
+        "lead": "No ielas līdz augšstāvam augstas izšķirtspējas 360° apskatē, kas veidota no skenējuma uz vietas.",
+        "metaTitle": "Kaldapealse tänav 2 — Sodar pirmais klienta skenējums",
+        "metaDesc": "Apskatiet Sodar pirmo klienta apskati, kas veidota Ruslanam Gulidam (RE/MAX)."
+      }
+    },
+    "samples": [
+      {
+        "label": "Dzīvoklis",
+        "meta": "3 istabas · Kesklinn"
+      },
+      {
+        "label": "Jaunbūve",
+        "meta": "4 istabas · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 istabas · Pirita"
+      },
+      {
+        "label": "Īres dzīvoklis",
+        "meta": "1 istaba · Kalamaja"
+      }
+    ]
   }
 }

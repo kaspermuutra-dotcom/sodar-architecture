@@ -12,7 +12,8 @@
     "getStarted": "Scanner un bien",
     "menu": "Ouvrir le menu",
     "home": "Accueil Sodar",
-    "contact": "Contact"
+    "contact": "Contact",
+    "portfolio": "Portfolio"
   },
   "Hero": {
     "headline1": "Des visites IA",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Les scans de la semaine",
-    "title": "Chaque type d’annonce se scanne de la même façon.",
-    "items": [
-      {
-        "label": "Appartement",
-        "meta": "3 pièces · Kesklinn"
-      },
-      {
-        "label": "Construction neuve",
-        "meta": "4 pièces · Ülemiste"
-      },
-      {
-        "label": "Villa",
-        "meta": "6 pièces · Pirita"
-      },
-      {
-        "label": "Location",
-        "meta": "1 pièce · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Conçu pour mériter la confiance sur vos annonces",
@@ -1381,5 +1360,114 @@
     "mute": "Couper le son",
     "unmute": "Activer le son",
     "fullscreen": "Plein écran"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — visite 360°",
+    "metaDesc": "Parcourez {title} dans une visite 360° enchaînée issue du scan sur place : {count} points de vue, de la rue à l'étage. Une démo Sodar avec {agency}.",
+    "eyebrow": "Démo Sodar · visite 360° du bien",
+    "agentLabel": "Agent",
+    "introLabel": "Visite interactive · captée sur place",
+    "attribution": "Démo de visite 3D pour {agent} · {agency}",
+    "start": "Démarrer la visite",
+    "hint": "Glissez pour regarder · Touchez un anneau au sol pour vous y rendre · Les points d'étape sautent entre les zones",
+    "back": "Vue précédente",
+    "restart": "Recommencer",
+    "fromHere": "D'ici",
+    "floorLabel": "Niveau",
+    "mapLabel": "Points de vue du niveau actuel",
+    "mapNote": "Les points sont les positions du scan, pas un plan",
+    "checkpointsHeading": "Points d'étape",
+    "choose": "Choisir un point d'étape",
+    "zone": {
+      "exterior": "Extérieur",
+      "ground": "Rez-de-chaussée",
+      "upper": "Étage"
+    },
+    "loading": "Chargement du panorama…",
+    "errorTitle": "Ce panorama n'a pas pu être chargé.",
+    "retry": "Réessayer",
+    "galleryTitle": "Autres vues du scan",
+    "stillAlt": "Image du scan : {label}",
+    "badgeLabel": "Sodar — accueil",
+    "provenance": "Visite 360° enchaînée assemblée à partir du scan sur place ({count} points de vue). Panoramas, aperçus et images sont reprojetés depuis la capture ; rien sur cette page n'est généré. Ce n'est pas un modèle Matterport Showcase hébergé.",
+    "scenes": {
+      "street": "Rue",
+      "frontGarden": "Jardin avant",
+      "entranceSteps": "Marches d'entrée",
+      "frontDoor": "Porte d'entrée",
+      "threshold": "Seuil",
+      "garden": "Jardin",
+      "backGarden": "Jardin arrière",
+      "terrace": "Terrasse",
+      "hallway": "Couloir",
+      "stairsBottom": "Bas de l'escalier",
+      "stairs": "Escalier",
+      "kitchen": "Cuisine",
+      "bathroom": "Salle de bain",
+      "mainRoom": "Pièce principale",
+      "room": "Pièce",
+      "upperLanding": "Palier",
+      "upperRoom": "Pièce à l'étage",
+      "upperBathroom": "Salle de bain à l'étage"
+    },
+    "checkpoints": {
+      "outside": "Extérieur",
+      "entrance": "Entrée",
+      "terrace": "Terrasse",
+      "hallway": "Couloir",
+      "kitchen": "Cuisine",
+      "mainRoom": "Pièce principale",
+      "stairs": "Escalier",
+      "upperLanding": "Palier",
+      "upperRoom": "Pièce à l'étage"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portfolio",
+    "title": "De vrais biens, scannés avec un téléphone.",
+    "homeTitle": "Chaque type de bien se scanne de la même façon.",
+    "sub": "Visites interactives et scans d'exemple issus du travail de Sodar avec des agents.",
+    "viewAll": "Voir le portfolio",
+    "metaTitle": "Portfolio — Sodar",
+    "metaDesc": "Visites immobilières interactives et scans d'exemple issus du travail de Sodar avec des agents.",
+    "breadcrumbLabel": "Fil d'Ariane",
+    "backToPortfolio": "Portfolio",
+    "factsLabel": "Informations du projet",
+    "facts": {
+      "type": "Format",
+      "scope": "Couverture",
+      "scopeValue": "{count} points de vue · extérieur, rez-de-chaussée, étage",
+      "client": "Client"
+    },
+    "galleryTitle": "Vues du scan",
+    "stillAlt": "Image du scan : {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Premier scan client de Sodar",
+        "type": "Visite immobilière interactive à 360°",
+        "cta": "Explorer le bien",
+        "lead": "De la rue à l'étage dans une visite 360° haute résolution reconstruite à partir du scan sur place.",
+        "metaTitle": "Kaldapealse tänav 2 — Premier scan client de Sodar",
+        "metaDesc": "Découvrez la première visite client de Sodar, créée pour Ruslan Gulida de RE/MAX."
+      }
+    },
+    "samples": [
+      {
+        "label": "Appartement",
+        "meta": "3 pièces · Kesklinn"
+      },
+      {
+        "label": "Construction neuve",
+        "meta": "4 pièces · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 pièces · Pirita"
+      },
+      {
+        "label": "Location",
+        "meta": "1 pièce · Kalamaja"
+      }
+    ]
   }
 }

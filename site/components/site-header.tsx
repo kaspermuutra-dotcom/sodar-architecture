@@ -10,6 +10,7 @@ import { SodarMark } from "@/components/logo";
 
 const NAV_ITEMS: [string, string][] = [
   ["product", "/product"],
+  ["portfolio", "/portfolio"],
   ["integrations", "/integrations"],
   ["partners", "/partners"],
   ["pricing", "/pricing"],

@@ -78,6 +78,54 @@ env names, deployment, tests and runbook:
 [`../docs/SCANNER_ARCHITECTURE.md`](../docs/SCANNER_ARCHITECTURE.md).
 `/scan?demo=1` stitches the bundled synthetic room without a camera.
 
+## Portfolio (`/portfolio`, `/portfolio/<slug>`)
+
+`lib/portfolio.ts` is the single ordered registry behind the portfolio index,
+the homepage portfolio section (`components/portfolio-grid.tsx`) and every
+project page. Items carry an explicit `order`; the first client scan
+(Kaldapealse tänav 2, Ruslan Gulida · RE/MAX) is `order: 0` and stays first as
+projects are added. Sample listing-type tiles follow it. `/demo/<slug>`
+redirects permanently to `/portfolio/<slug>` (`next.config.ts`).
+
+Each walkthrough project is a linked 360° tour built from a Matterport Capture
+export. Two scripts in `../scripts/` produce everything from the export:
+
+- `matterport_capture_tour.py` decodes `SweepProcessorData/manifest.mfst`
+  (poses, floors, capture order), derives candidate links from sweep
+  positions and writes `lib/demo/<slug>.sweeps.json`.
+- `matterport_capture_faces.py` renders the **high-resolution** imagery. The
+  export's `*_skybox*.jpg` faces are only a 512 px preview level; the real
+  detail is in each sweep's `.swl` container: six 4032×3024 camera frames with
+  intrinsics and rotations (~27 px/deg) plus Matterport's per-pixel frame
+  assignment map. Frames are registered to the skybox frame and composited
+  along those seams (no cross-fading, so parallax never doubles an edge), then
+  written as a cubemap tile pyramid under
+  `public/media/portfolio/<slug>/<version>/faces/<sweep>/`: `<face>-0.webp`
+  (512 px base), `<face>-1-<col>-<row>.webp` (1536 px, 2×2) and
+  `<face>-2-<col>-<row>.webp` (3072 px, 4×4), plus previews/thumbnails.
+  The `<version>` segment (`t1`, `t2`, …) is what makes the immutable
+  one-year `Cache-Control` header in `next.config.ts` safe: regenerate → new
+  segment → new URLs.
+
+The curated part — labels, floor zones, opening viewpoint, checkpoints, link
+corrections, exclusions — lives in `lib/demo/properties.ts`;
+`lib/demo/walkthrough.ts` merges both into the scanner's `tour.v1` manifest
+(world-aligned hotspot yaws, `sphereCorrection` per panorama) and validates it.
+`lib/demo/walkthrough.test.ts` is the integrity check (unique ids, valid
+floors, symmetric links, reachability of every sweep, checkpoint/floor-entry
+references, existence of every base face and tile, floor changes only on the
+stairs, exterior→interior only through the entrance); `lib/portfolio.test.ts`
+guards the ordering.
+
+UI in `components/demo/`: `virtual-tour.tsx` (Photo Sphere Viewer
+cubemap-tiles + virtual-tour + markers: base level first, tiles for the faces
+in view with a DPR-aware level choice, Matterport-style floor rings for
+tap-to-move, neighbour preloading, error events), `property-demo.tsx`
+(poster → tour orchestration, history, hash deep links), `checkpoint-rail.tsx`,
+`floor-nav.tsx` (floor selector + sweep-position map), `sodar-badge.tsx`. The
+viewing surface is square-cornered and full-bleed on phones. These are 360°
+walkthroughs from the scan, not hosted Matterport Showcase models.
+
 ## Contact
 
 `components/contact-form.tsx` posts to Formspree when

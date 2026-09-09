@@ -12,7 +12,8 @@
     "getStarted": "扫描房源",
     "menu": "切换菜单",
     "home": "Sodar 首页",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "portfolio": "作品集"
   },
   "Hero": {
     "headline1": "AI 实景漫游，",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "本周扫描",
-    "title": "每一种房源，扫描方式都一样。",
-    "items": [
-      {
-        "label": "公寓",
-        "meta": "3 室 · Kesklinn"
-      },
-      {
-        "label": "新建住宅",
-        "meta": "4 室 · Ülemiste"
-      },
-      {
-        "label": "别墅",
-        "meta": "6 室 · Pirita"
-      },
-      {
-        "label": "出租房",
-        "meta": "1 室 · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "值得托付房源",
@@ -1381,5 +1360,114 @@
     "mute": "静音",
     "unmute": "取消静音",
     "fullscreen": "全屏"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — 360° 实景漫游",
+    "metaDesc": "在由现场扫描构建的联动 360° 漫游中走进 {title}：从街道到二层共 {count} 个视点。由 Sodar 与 {agency} 共同呈现。",
+    "eyebrow": "Sodar 演示 · 房产 360° 漫游",
+    "agentLabel": "经纪人",
+    "introLabel": "交互式漫游 · 现场拍摄",
+    "attribution": "为 {agent} · {agency} 制作的 3D 漫游演示",
+    "start": "开始漫游",
+    "hint": "拖动环视 · 点按地面上的圆环即可走过去 · 站点可在区域间跳转",
+    "back": "上一视点",
+    "restart": "重新开始",
+    "fromHere": "从这里",
+    "floorLabel": "楼层",
+    "mapLabel": "当前楼层的视点",
+    "mapNote": "圆点是扫描视点，不是平面图",
+    "checkpointsHeading": "站点",
+    "choose": "选择站点",
+    "zone": {
+      "exterior": "室外",
+      "ground": "一层",
+      "upper": "二层"
+    },
+    "loading": "正在加载全景…",
+    "errorTitle": "无法加载此全景。",
+    "retry": "重试",
+    "galleryTitle": "更多扫描画面",
+    "stillAlt": "扫描画面：{label}",
+    "badgeLabel": "Sodar — 首页",
+    "provenance": "由现场扫描拼合的联动 360° 漫游（{count} 个视点）。全景、预览和画面均由拍摄数据重新投影；本页没有任何生成内容。这不是托管的 Matterport Showcase 模型。",
+    "scenes": {
+      "street": "街道",
+      "frontGarden": "前院",
+      "entranceSteps": "入口台阶",
+      "frontDoor": "前门",
+      "threshold": "门口",
+      "garden": "花园",
+      "backGarden": "后院",
+      "terrace": "露台",
+      "hallway": "门厅",
+      "stairsBottom": "楼梯底部",
+      "stairs": "楼梯",
+      "kitchen": "厨房",
+      "bathroom": "卫生间",
+      "mainRoom": "主室",
+      "room": "房间",
+      "upperLanding": "二层楼梯平台",
+      "upperRoom": "二层房间",
+      "upperBathroom": "二层卫生间"
+    },
+    "checkpoints": {
+      "outside": "室外",
+      "entrance": "入口",
+      "terrace": "露台",
+      "hallway": "门厅",
+      "kitchen": "厨房",
+      "mainRoom": "主室",
+      "stairs": "楼梯",
+      "upperLanding": "二层平台",
+      "upperRoom": "二层房间"
+    }
+  },
+  "Portfolio": {
+    "kicker": "作品集",
+    "title": "真实房源，用手机扫描。",
+    "homeTitle": "各类房源的扫描方式相同。",
+    "sub": "来自 Sodar 与经纪人合作的交互式漫游与示例扫描。",
+    "viewAll": "查看作品集",
+    "metaTitle": "作品集 — Sodar",
+    "metaDesc": "来自 Sodar 与经纪人合作的交互式房产漫游与示例扫描。",
+    "breadcrumbLabel": "面包屑",
+    "backToPortfolio": "作品集",
+    "factsLabel": "项目信息",
+    "facts": {
+      "type": "形式",
+      "scope": "覆盖范围",
+      "scopeValue": "{count} 个视点 · 室外、一层、二层",
+      "client": "客户"
+    },
+    "galleryTitle": "扫描画面",
+    "stillAlt": "扫描画面：{label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Sodar 的首个客户扫描",
+        "type": "交互式 360° 房产漫游",
+        "cta": "浏览房源",
+        "lead": "在由现场扫描重建的高分辨率 360° 漫游中，从街道走到二层。",
+        "metaTitle": "Kaldapealse tänav 2 — Sodar 的首个客户扫描",
+        "metaDesc": "浏览 Sodar 为 RE/MAX 的 Ruslan Gulida 制作的首个客户房产漫游。"
+      }
+    },
+    "samples": [
+      {
+        "label": "公寓",
+        "meta": "3 室 · Kesklinn"
+      },
+      {
+        "label": "新建住宅",
+        "meta": "4 室 · Ülemiste"
+      },
+      {
+        "label": "别墅",
+        "meta": "6 室 · Pirita"
+      },
+      {
+        "label": "出租房",
+        "meta": "1 室 · Kalamaja"
+      }
+    ]
   }
 }

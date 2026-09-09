@@ -12,7 +12,8 @@
     "getStarted": "Skanna en bostad",
     "menu": "Växla meny",
     "home": "Sodar startsida",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "portfolio": "Portfölj"
   },
   "Hero": {
     "headline1": "AI-visningar",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Veckans skanningar",
-    "title": "Alla typer av annonser skannas på samma sätt.",
-    "items": [
-      {
-        "label": "Lägenhet",
-        "meta": "3 rum · Kesklinn"
-      },
-      {
-        "label": "Nyproduktion",
-        "meta": "4 rum · Ülemiste"
-      },
-      {
-        "label": "Villa",
-        "meta": "6 rum · Pirita"
-      },
-      {
-        "label": "Hyresbostad",
-        "meta": "1 rum · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Byggt för att anförtros annonser",
@@ -1381,5 +1360,114 @@
     "mute": "Ljud av",
     "unmute": "Ljud på",
     "fullscreen": "Helskärm"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — 360°-visning",
+    "metaDesc": "Gå igenom {title} i en länkad 360°-tur byggd från skanningen på plats: {count} vypunkter från gatan till övervåningen. En Sodar-demo med {agency}.",
+    "eyebrow": "Sodar-demo · 360°-visning av bostaden",
+    "agentLabel": "Mäklare",
+    "introLabel": "Interaktiv visning · fångad på plats",
+    "attribution": "3D-visningsdemo för {agent} · {agency}",
+    "start": "Starta visningen",
+    "hint": "Dra för att se dig omkring · Tryck på en ring på golvet för att gå dit · Punkter hoppar mellan områden",
+    "back": "Föregående vy",
+    "restart": "Börja om",
+    "fromHere": "Härifrån",
+    "floorLabel": "Våning",
+    "mapLabel": "Vypunkter på aktuell våning",
+    "mapNote": "Prickarna är skanningens vypunkter, inte en planritning",
+    "checkpointsHeading": "Punkter",
+    "choose": "Välj en punkt",
+    "zone": {
+      "exterior": "Utomhus",
+      "ground": "Bottenvåning",
+      "upper": "Övervåning"
+    },
+    "loading": "Laddar panorama…",
+    "errorTitle": "Panoramat kunde inte laddas.",
+    "retry": "Försök igen",
+    "galleryTitle": "Fler vyer från skanningen",
+    "stillAlt": "Stillbild från skanningen: {label}",
+    "badgeLabel": "Sodar — startsida",
+    "provenance": "Länkad 360°-visning sammansatt från skanningen på plats ({count} vypunkter). Panoraman, förhandsvisningar och stillbilder är omprojicerade från inspelningen; inget på sidan är genererat. Detta är inte en Matterport Showcase-modell.",
+    "scenes": {
+      "street": "Gata",
+      "frontGarden": "Framsida",
+      "entranceSteps": "Entrétrappa",
+      "frontDoor": "Ytterdörr",
+      "threshold": "Dörröppning",
+      "garden": "Trädgård",
+      "backGarden": "Baksida",
+      "terrace": "Terrass",
+      "hallway": "Hall",
+      "stairsBottom": "Trappans fot",
+      "stairs": "Trappa",
+      "kitchen": "Kök",
+      "bathroom": "Badrum",
+      "mainRoom": "Huvudrum",
+      "room": "Rum",
+      "upperLanding": "Övre trapphall",
+      "upperRoom": "Rum på övervåningen",
+      "upperBathroom": "Badrum på övervåningen"
+    },
+    "checkpoints": {
+      "outside": "Utomhus",
+      "entrance": "Entré",
+      "terrace": "Terrass",
+      "hallway": "Hall",
+      "kitchen": "Kök",
+      "mainRoom": "Huvudrum",
+      "stairs": "Trappa",
+      "upperLanding": "Övre trapphall",
+      "upperRoom": "Rum på övervåningen"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portfölj",
+    "title": "Riktiga bostäder, skannade med en telefon.",
+    "homeTitle": "Alla typer av bostäder skannas på samma sätt.",
+    "sub": "Interaktiva visningar och exempelskanningar från Sodars arbete med mäklare.",
+    "viewAll": "Se portföljen",
+    "metaTitle": "Portfölj — Sodar",
+    "metaDesc": "Interaktiva bostadsvisningar och exempelskanningar från Sodars arbete med mäklare.",
+    "breadcrumbLabel": "Sökväg",
+    "backToPortfolio": "Portfölj",
+    "factsLabel": "Projektfakta",
+    "facts": {
+      "type": "Format",
+      "scope": "Omfattning",
+      "scopeValue": "{count} vypunkter · utomhus, bottenvåning, övervåning",
+      "client": "Kund"
+    },
+    "galleryTitle": "Vyer från skanningen",
+    "stillAlt": "Stillbild från skanningen: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Sodars första kundskanning",
+        "type": "Interaktiv 360°-bostadsvisning",
+        "cta": "Utforska bostaden",
+        "lead": "Från gatan till övervåningen i en högupplöst 360°-visning rekonstruerad från skanningen på plats.",
+        "metaTitle": "Kaldapealse tänav 2 — Sodars första kundskanning",
+        "metaDesc": "Utforska Sodars första kundvisning, skapad för Ruslan Gulida på RE/MAX."
+      }
+    },
+    "samples": [
+      {
+        "label": "Lägenhet",
+        "meta": "3 rum · Kesklinn"
+      },
+      {
+        "label": "Nyproduktion",
+        "meta": "4 rum · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 rum · Pirita"
+      },
+      {
+        "label": "Hyresrätt",
+        "meta": "1 rum · Kalamaja"
+      }
+    ]
   }
 }

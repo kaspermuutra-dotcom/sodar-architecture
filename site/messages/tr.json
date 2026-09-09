@@ -12,7 +12,8 @@
     "getStarted": "Mülk tara",
     "menu": "Menüyü aç/kapat",
     "home": "Sodar ana sayfa",
-    "contact": "İletişim"
+    "contact": "İletişim",
+    "portfolio": "Portföy"
   },
   "Hero": {
     "headline1": "Daha çok satış kapatan",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Bu haftanın taramaları",
-    "title": "Her tür ilan aynı şekilde taranır.",
-    "items": [
-      {
-        "label": "Daire",
-        "meta": "3 oda · Kesklinn"
-      },
-      {
-        "label": "Yeni yapı",
-        "meta": "4 oda · Ülemiste"
-      },
-      {
-        "label": "Villa",
-        "meta": "6 oda · Pirita"
-      },
-      {
-        "label": "Kiralık",
-        "meta": "1 oda · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "İlanlar emanet edilecek şekilde tasarlandı",
@@ -1381,5 +1360,114 @@
     "mute": "Sesi kapat",
     "unmute": "Sesi aç",
     "fullscreen": "Tam ekran"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — 360° gezinti",
+    "metaDesc": "{title} içinde yerinde taramadan oluşturulan bağlantılı 360° turda gezinin: sokaktan üst kata {count} bakış noktası. {agency} ile bir Sodar demosu.",
+    "eyebrow": "Sodar demosu · 360° mülk gezintisi",
+    "agentLabel": "Danışman",
+    "introLabel": "Etkileşimli gezinti · yerinde çekildi",
+    "attribution": "{agent} · {agency} için 3D gezinti demosu",
+    "start": "Gezintiyi başlat",
+    "hint": "Bakmak için sürükleyin · Oraya gitmek için yerdeki bir halkaya dokunun · Noktalar bölgeler arasında atlar",
+    "back": "Önceki görünüm",
+    "restart": "Baştan başla",
+    "fromHere": "Buradan",
+    "floorLabel": "Kat",
+    "mapLabel": "Geçerli kattaki bakış noktaları",
+    "mapNote": "Noktalar taramanın bakış noktalarıdır, kat planı değildir",
+    "checkpointsHeading": "Noktalar",
+    "choose": "Bir nokta seçin",
+    "zone": {
+      "exterior": "Dışarısı",
+      "ground": "Zemin kat",
+      "upper": "Üst kat"
+    },
+    "loading": "Panorama yükleniyor…",
+    "errorTitle": "Bu panorama yüklenemedi.",
+    "retry": "Tekrar dene",
+    "galleryTitle": "Taramadan daha fazla görünüm",
+    "stillAlt": "Taramadan kare: {label}",
+    "badgeLabel": "Sodar — ana sayfa",
+    "provenance": "Yerinde taramadan oluşturulan bağlantılı 360° gezinti ({count} bakış noktası). Panoramalar, önizlemeler ve kareler çekimden yeniden yansıtılmıştır; bu sayfadaki hiçbir şey üretilmiş değildir. Bu, barındırılan bir Matterport Showcase modeli değildir.",
+    "scenes": {
+      "street": "Sokak",
+      "frontGarden": "Ön bahçe",
+      "entranceSteps": "Giriş basamakları",
+      "frontDoor": "Ön kapı",
+      "threshold": "Kapı eşiği",
+      "garden": "Bahçe",
+      "backGarden": "Arka bahçe",
+      "terrace": "Teras",
+      "hallway": "Hol",
+      "stairsBottom": "Merdiven başı",
+      "stairs": "Merdiven",
+      "kitchen": "Mutfak",
+      "bathroom": "Banyo",
+      "mainRoom": "Ana oda",
+      "room": "Oda",
+      "upperLanding": "Üst kat sahanlığı",
+      "upperRoom": "Üst kat odası",
+      "upperBathroom": "Üst kat banyosu"
+    },
+    "checkpoints": {
+      "outside": "Dışarısı",
+      "entrance": "Giriş",
+      "terrace": "Teras",
+      "hallway": "Hol",
+      "kitchen": "Mutfak",
+      "mainRoom": "Ana oda",
+      "stairs": "Merdiven",
+      "upperLanding": "Üst sahanlık",
+      "upperRoom": "Üst kat odası"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portföy",
+    "title": "Gerçek mülkler, telefonla taranmış.",
+    "homeTitle": "Her tür mülk aynı şekilde taranır.",
+    "sub": "Sodar'ın danışmanlarla yaptığı çalışmalardan etkileşimli gezintiler ve örnek taramalar.",
+    "viewAll": "Portföyü gör",
+    "metaTitle": "Portföy — Sodar",
+    "metaDesc": "Sodar'ın danışmanlarla yaptığı çalışmalardan etkileşimli mülk gezintileri ve örnek taramalar.",
+    "breadcrumbLabel": "Gezinti yolu",
+    "backToPortfolio": "Portföy",
+    "factsLabel": "Proje bilgileri",
+    "facts": {
+      "type": "Biçim",
+      "scope": "Kapsam",
+      "scopeValue": "{count} bakış noktası · dış mekân, zemin kat, üst kat",
+      "client": "Müşteri"
+    },
+    "galleryTitle": "Taramadan görünümler",
+    "stillAlt": "Taramadan kare: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Sodar'ın ilk müşteri taraması",
+        "type": "Etkileşimli 360° mülk gezintisi",
+        "cta": "Mülkü keşfet",
+        "lead": "Yerinde taramadan yeniden oluşturulan yüksek çözünürlüklü 360° gezintide sokaktan üst kata.",
+        "metaTitle": "Kaldapealse tänav 2 — Sodar'ın İlk Müşteri Taraması",
+        "metaDesc": "RE/MAX'ten Ruslan Gulida için oluşturulan Sodar'ın ilk müşteri gezintisini keşfedin."
+      }
+    },
+    "samples": [
+      {
+        "label": "Daire",
+        "meta": "3 oda · Kesklinn"
+      },
+      {
+        "label": "Yeni yapı",
+        "meta": "4 oda · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 oda · Pirita"
+      },
+      {
+        "label": "Kiralık",
+        "meta": "1 oda · Kalamaja"
+      }
+    ]
   }
 }

@@ -12,7 +12,8 @@
     "getStarted": "Digitalizar um imóvel",
     "menu": "Abrir menu",
     "home": "Início Sodar",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "portfolio": "Portfólio"
   },
   "Hero": {
     "headline1": "Visitas com IA",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Digitalizações desta semana",
-    "title": "Todo o tipo de anúncio se digitaliza da mesma forma.",
-    "items": [
-      {
-        "label": "Apartamento",
-        "meta": "3 divisões · Kesklinn"
-      },
-      {
-        "label": "Construção nova",
-        "meta": "4 divisões · Ülemiste"
-      },
-      {
-        "label": "Moradia",
-        "meta": "6 divisões · Pirita"
-      },
-      {
-        "label": "Arrendamento",
-        "meta": "1 divisão · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Feito para merecer confiança com anúncios",
@@ -1381,5 +1360,114 @@
     "mute": "Silenciar",
     "unmute": "Ativar som",
     "fullscreen": "Ecrã inteiro"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — visita 360°",
+    "metaDesc": "Percorra {title} numa visita 360° encadeada criada a partir da digitalização no local: {count} pontos de vista da rua ao piso superior. Uma demo Sodar com {agency}.",
+    "eyebrow": "Demo Sodar · visita 360° ao imóvel",
+    "agentLabel": "Agente",
+    "introLabel": "Visita interativa · captada no local",
+    "attribution": "Demo de visita 3D para {agent} · {agency}",
+    "start": "Iniciar visita",
+    "hint": "Arraste para olhar · Toque num anel no chão para ir até lá · Os pontos saltam entre zonas",
+    "back": "Vista anterior",
+    "restart": "Recomeçar",
+    "fromHere": "A partir daqui",
+    "floorLabel": "Piso",
+    "mapLabel": "Pontos de vista do piso atual",
+    "mapNote": "Os pontos são as posições da digitalização, não uma planta",
+    "checkpointsHeading": "Pontos de passagem",
+    "choose": "Escolha um ponto",
+    "zone": {
+      "exterior": "Exterior",
+      "ground": "Rés-do-chão",
+      "upper": "Piso superior"
+    },
+    "loading": "A carregar o panorama…",
+    "errorTitle": "Não foi possível carregar este panorama.",
+    "retry": "Tentar de novo",
+    "galleryTitle": "Mais vistas da digitalização",
+    "stillAlt": "Imagem da digitalização: {label}",
+    "badgeLabel": "Sodar — início",
+    "provenance": "Visita 360° encadeada montada a partir da digitalização no local ({count} pontos de vista). Panoramas, pré-visualizações e imagens são reprojetados da captura; nada nesta página é gerado. Não é um modelo Matterport Showcase alojado.",
+    "scenes": {
+      "street": "Rua",
+      "frontGarden": "Jardim da frente",
+      "entranceSteps": "Degraus de entrada",
+      "frontDoor": "Porta de entrada",
+      "threshold": "Soleira",
+      "garden": "Jardim",
+      "backGarden": "Jardim das traseiras",
+      "terrace": "Terraço",
+      "hallway": "Corredor",
+      "stairsBottom": "Base das escadas",
+      "stairs": "Escadas",
+      "kitchen": "Cozinha",
+      "bathroom": "Casa de banho",
+      "mainRoom": "Sala principal",
+      "room": "Divisão",
+      "upperLanding": "Patamar superior",
+      "upperRoom": "Divisão superior",
+      "upperBathroom": "Casa de banho superior"
+    },
+    "checkpoints": {
+      "outside": "Exterior",
+      "entrance": "Entrada",
+      "terrace": "Terraço",
+      "hallway": "Corredor",
+      "kitchen": "Cozinha",
+      "mainRoom": "Sala principal",
+      "stairs": "Escadas",
+      "upperLanding": "Patamar superior",
+      "upperRoom": "Divisão superior"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portfólio",
+    "title": "Imóveis reais, digitalizados com um telemóvel.",
+    "homeTitle": "Todos os tipos de imóvel se digitalizam da mesma forma.",
+    "sub": "Visitas interativas e digitalizações de exemplo do trabalho da Sodar com agentes.",
+    "viewAll": "Ver o portfólio",
+    "metaTitle": "Portfólio — Sodar",
+    "metaDesc": "Visitas imobiliárias interativas e digitalizações de exemplo do trabalho da Sodar com agentes.",
+    "breadcrumbLabel": "Navegação",
+    "backToPortfolio": "Portfólio",
+    "factsLabel": "Dados do projeto",
+    "facts": {
+      "type": "Formato",
+      "scope": "Cobertura",
+      "scopeValue": "{count} pontos de vista · exterior, rés-do-chão, piso superior",
+      "client": "Cliente"
+    },
+    "galleryTitle": "Vistas da digitalização",
+    "stillAlt": "Imagem da digitalização: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "A primeira digitalização de cliente da Sodar",
+        "type": "Visita imobiliária interativa a 360°",
+        "cta": "Explorar o imóvel",
+        "lead": "Da rua ao piso superior numa visita 360° de alta resolução reconstruída a partir da digitalização no local.",
+        "metaTitle": "Kaldapealse tänav 2 — A primeira digitalização de cliente da Sodar",
+        "metaDesc": "Explore a primeira visita de cliente da Sodar, criada para Ruslan Gulida da RE/MAX."
+      }
+    },
+    "samples": [
+      {
+        "label": "Apartamento",
+        "meta": "3 divisões · Kesklinn"
+      },
+      {
+        "label": "Construção nova",
+        "meta": "4 divisões · Ülemiste"
+      },
+      {
+        "label": "Moradia",
+        "meta": "6 divisões · Pirita"
+      },
+      {
+        "label": "Arrendamento",
+        "meta": "1 divisão · Kalamaja"
+      }
+    ]
   }
 }

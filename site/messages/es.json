@@ -12,7 +12,8 @@
     "getStarted": "Escanear una propiedad",
     "menu": "Abrir menú",
     "home": "Inicio de Sodar",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "portfolio": "Portafolio"
   },
   "Hero": {
     "headline1": "Recorridos con IA",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Escaneos de esta semana",
-    "title": "Todo tipo de anuncio se escanea igual.",
-    "items": [
-      {
-        "label": "Piso",
-        "meta": "3 estancias · Kesklinn"
-      },
-      {
-        "label": "Obra nueva",
-        "meta": "4 estancias · Ülemiste"
-      },
-      {
-        "label": "Villa",
-        "meta": "6 estancias · Pirita"
-      },
-      {
-        "label": "Alquiler",
-        "meta": "1 estancia · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Diseñado para merecer confianza con tus anuncios",
@@ -1381,5 +1360,114 @@
     "mute": "Silenciar",
     "unmute": "Activar sonido",
     "fullscreen": "Pantalla completa"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — recorrido 360°",
+    "metaDesc": "Recorre {title} en un tour 360° enlazado creado a partir del escaneo in situ: {count} puntos de vista desde la calle hasta la planta alta. Una demo de Sodar con {agency}.",
+    "eyebrow": "Demo de Sodar · recorrido 360° de la propiedad",
+    "agentLabel": "Agente",
+    "introLabel": "Recorrido interactivo · captado in situ",
+    "attribution": "Demo de recorrido 3D para {agent} · {agency}",
+    "start": "Iniciar recorrido",
+    "hint": "Arrastra para mirar · Toca un anillo en el suelo para ir allí · Los puntos saltan entre zonas",
+    "back": "Vista anterior",
+    "restart": "Empezar de nuevo",
+    "fromHere": "Desde aquí",
+    "floorLabel": "Planta",
+    "mapLabel": "Puntos de vista de la planta actual",
+    "mapNote": "Los puntos son las posiciones del escaneo, no un plano",
+    "checkpointsHeading": "Puntos de ruta",
+    "choose": "Elige un punto",
+    "zone": {
+      "exterior": "Exterior",
+      "ground": "Planta baja",
+      "upper": "Planta alta"
+    },
+    "loading": "Cargando panorama…",
+    "errorTitle": "No se pudo cargar este panorama.",
+    "retry": "Reintentar",
+    "galleryTitle": "Más vistas del escaneo",
+    "stillAlt": "Imagen del escaneo: {label}",
+    "badgeLabel": "Sodar — inicio",
+    "provenance": "Recorrido 360° enlazado montado a partir del escaneo in situ ({count} puntos de vista). Panoramas, vistas previas e imágenes se reproyectan de la captura; nada en esta página es generado. No es un modelo Matterport Showcase alojado.",
+    "scenes": {
+      "street": "Calle",
+      "frontGarden": "Jardín delantero",
+      "entranceSteps": "Escalones de entrada",
+      "frontDoor": "Puerta principal",
+      "threshold": "Umbral",
+      "garden": "Jardín",
+      "backGarden": "Jardín trasero",
+      "terrace": "Terraza",
+      "hallway": "Pasillo",
+      "stairsBottom": "Pie de la escalera",
+      "stairs": "Escalera",
+      "kitchen": "Cocina",
+      "bathroom": "Baño",
+      "mainRoom": "Sala principal",
+      "room": "Habitación",
+      "upperLanding": "Rellano superior",
+      "upperRoom": "Habitación superior",
+      "upperBathroom": "Baño superior"
+    },
+    "checkpoints": {
+      "outside": "Exterior",
+      "entrance": "Entrada",
+      "terrace": "Terraza",
+      "hallway": "Pasillo",
+      "kitchen": "Cocina",
+      "mainRoom": "Sala principal",
+      "stairs": "Escalera",
+      "upperLanding": "Rellano superior",
+      "upperRoom": "Habitación superior"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portafolio",
+    "title": "Inmuebles reales, escaneados con un teléfono.",
+    "homeTitle": "Todo tipo de inmueble se escanea igual.",
+    "sub": "Recorridos interactivos y escaneos de muestra del trabajo de Sodar con agentes.",
+    "viewAll": "Ver el portafolio",
+    "metaTitle": "Portafolio — Sodar",
+    "metaDesc": "Recorridos inmobiliarios interactivos y escaneos de muestra del trabajo de Sodar con agentes.",
+    "breadcrumbLabel": "Ruta",
+    "backToPortfolio": "Portafolio",
+    "factsLabel": "Datos del proyecto",
+    "facts": {
+      "type": "Formato",
+      "scope": "Cobertura",
+      "scopeValue": "{count} puntos de vista · exterior, planta baja, planta alta",
+      "client": "Cliente"
+    },
+    "galleryTitle": "Vistas del escaneo",
+    "stillAlt": "Imagen del escaneo: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "El primer escaneo de cliente de Sodar",
+        "type": "Recorrido inmobiliario interactivo 360°",
+        "cta": "Explorar la propiedad",
+        "lead": "De la calle a la planta alta en un recorrido 360° de alta resolución reconstruido a partir del escaneo in situ.",
+        "metaTitle": "Kaldapealse tänav 2 — El primer escaneo de cliente de Sodar",
+        "metaDesc": "Explora el primer recorrido de cliente de Sodar, creado para Ruslan Gulida de RE/MAX."
+      }
+    },
+    "samples": [
+      {
+        "label": "Apartamento",
+        "meta": "3 habitaciones · Kesklinn"
+      },
+      {
+        "label": "Obra nueva",
+        "meta": "4 habitaciones · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 habitaciones · Pirita"
+      },
+      {
+        "label": "Alquiler",
+        "meta": "1 habitación · Kalamaja"
+      }
+    ]
   }
 }

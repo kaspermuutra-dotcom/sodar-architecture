@@ -12,7 +12,8 @@
     "getStarted": "Immobilie scannen",
     "menu": "Menü umschalten",
     "home": "Sodar Startseite",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "portfolio": "Portfolio"
   },
   "Hero": {
     "headline1": "KI-Rundgänge,",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Scans dieser Woche",
-    "title": "Jede Art von Inserat wird gleich gescannt.",
-    "items": [
-      {
-        "label": "Wohnung",
-        "meta": "3 Zimmer · Kesklinn"
-      },
-      {
-        "label": "Neubau",
-        "meta": "4 Zimmer · Ülemiste"
-      },
-      {
-        "label": "Villa",
-        "meta": "6 Zimmer · Pirita"
-      },
-      {
-        "label": "Mietobjekt",
-        "meta": "1 Zimmer · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Gebaut, um mit Inseraten vertraut zu werden",
@@ -1381,5 +1360,114 @@
     "mute": "Stumm",
     "unmute": "Ton an",
     "fullscreen": "Vollbild"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — 360°-Rundgang",
+    "metaDesc": "Gehen Sie durch {title} in einem verknüpften 360°-Rundgang aus dem Vor-Ort-Scan: {count} Standpunkte von der Straße bis ins Obergeschoss. Eine Sodar-Demo mit {agency}.",
+    "eyebrow": "Sodar-Demo · 360°-Immobilienrundgang",
+    "agentLabel": "Makler",
+    "introLabel": "Interaktiver Rundgang · vor Ort aufgenommen",
+    "attribution": "3D-Rundgang-Demo für {agent} · {agency}",
+    "start": "Rundgang starten",
+    "hint": "Ziehen zum Umsehen · Auf einen Ring am Boden tippen, um dorthin zu gehen · Checkpoints springen zwischen Bereichen",
+    "back": "Vorherige Ansicht",
+    "restart": "Von vorn beginnen",
+    "fromHere": "Von hier aus",
+    "floorLabel": "Etage",
+    "mapLabel": "Standpunkte auf der aktuellen Etage",
+    "mapNote": "Punkte sind die Standpunkte des Scans, kein Grundriss",
+    "checkpointsHeading": "Checkpoints",
+    "choose": "Checkpoint wählen",
+    "zone": {
+      "exterior": "Draußen",
+      "ground": "Erdgeschoss",
+      "upper": "Obergeschoss"
+    },
+    "loading": "Panorama wird geladen…",
+    "errorTitle": "Dieses Panorama konnte nicht geladen werden.",
+    "retry": "Erneut versuchen",
+    "galleryTitle": "Weitere Ansichten aus dem Scan",
+    "stillAlt": "Standbild aus dem Scan: {label}",
+    "badgeLabel": "Sodar — Startseite",
+    "provenance": "Verknüpfter 360°-Rundgang aus dem Vor-Ort-Scan ({count} Standpunkte). Panoramen, Vorschauen und Standbilder sind aus der Aufnahme reprojiziert; nichts auf dieser Seite ist generiert. Dies ist kein gehostetes Matterport-Showcase-Modell.",
+    "scenes": {
+      "street": "Straße",
+      "frontGarden": "Vorgarten",
+      "entranceSteps": "Eingangstreppe",
+      "frontDoor": "Haustür",
+      "threshold": "Türöffnung",
+      "garden": "Garten",
+      "backGarden": "Hinterer Garten",
+      "terrace": "Terrasse",
+      "hallway": "Flur",
+      "stairsBottom": "Treppenfuß",
+      "stairs": "Treppe",
+      "kitchen": "Küche",
+      "bathroom": "Bad",
+      "mainRoom": "Hauptraum",
+      "room": "Zimmer",
+      "upperLanding": "Oberer Treppenabsatz",
+      "upperRoom": "Zimmer oben",
+      "upperBathroom": "Bad oben"
+    },
+    "checkpoints": {
+      "outside": "Draußen",
+      "entrance": "Eingang",
+      "terrace": "Terrasse",
+      "hallway": "Flur",
+      "kitchen": "Küche",
+      "mainRoom": "Hauptraum",
+      "stairs": "Treppe",
+      "upperLanding": "Treppenabsatz oben",
+      "upperRoom": "Zimmer oben"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portfolio",
+    "title": "Echte Objekte, mit dem Handy gescannt.",
+    "homeTitle": "Jedes Objekt wird auf dieselbe Weise gescannt.",
+    "sub": "Interaktive Rundgänge und Beispielscans aus Sodars Arbeit mit Maklern.",
+    "viewAll": "Portfolio ansehen",
+    "metaTitle": "Portfolio — Sodar",
+    "metaDesc": "Interaktive Immobilienrundgänge und Beispielscans aus Sodars Arbeit mit Maklern.",
+    "breadcrumbLabel": "Navigationspfad",
+    "backToPortfolio": "Portfolio",
+    "factsLabel": "Projektdaten",
+    "facts": {
+      "type": "Format",
+      "scope": "Umfang",
+      "scopeValue": "{count} Standpunkte · Außenbereich, Erdgeschoss, Obergeschoss",
+      "client": "Kunde"
+    },
+    "galleryTitle": "Ansichten aus dem Scan",
+    "stillAlt": "Standbild aus dem Scan: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Sodars erster Kundenscan",
+        "type": "Interaktiver 360°-Immobilienrundgang",
+        "cta": "Objekt erkunden",
+        "lead": "Von der Straße bis ins Obergeschoss in einem hochauflösenden 360°-Rundgang, rekonstruiert aus dem Vor-Ort-Scan.",
+        "metaTitle": "Kaldapealse tänav 2 — Sodars erster Kundenscan",
+        "metaDesc": "Erkunden Sie Sodars ersten Kunden-Rundgang, erstellt für Ruslan Gulida von RE/MAX."
+      }
+    },
+    "samples": [
+      {
+        "label": "Wohnung",
+        "meta": "3 Zimmer · Kesklinn"
+      },
+      {
+        "label": "Neubau",
+        "meta": "4 Zimmer · Ülemiste"
+      },
+      {
+        "label": "Villa",
+        "meta": "6 Zimmer · Pirita"
+      },
+      {
+        "label": "Mietwohnung",
+        "meta": "1 Zimmer · Kalamaja"
+      }
+    ]
   }
 }

@@ -12,7 +12,8 @@
     "getStarted": "Skannaa kohde",
     "menu": "Avaa valikko",
     "home": "Sodarin etusivu",
-    "contact": "Yhteystiedot"
+    "contact": "Yhteystiedot",
+    "portfolio": "Portfolio"
   },
   "Hero": {
     "headline1": "Tekoälykierrokset,",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Tämän viikon skannaukset",
-    "title": "Kaikenlaiset ilmoitukset skannataan samalla tavalla.",
-    "items": [
-      {
-        "label": "Kerrostaloasunto",
-        "meta": "3 huonetta · Kesklinn"
-      },
-      {
-        "label": "Uudiskohde",
-        "meta": "4 huonetta · Ülemiste"
-      },
-      {
-        "label": "Huvila",
-        "meta": "6 huonetta · Pirita"
-      },
-      {
-        "label": "Vuokrakohde",
-        "meta": "1 huone · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Rakennettu ansaitsemaan luottamus ilmoituksiin",
@@ -1381,5 +1360,114 @@
     "mute": "Mykistä",
     "unmute": "Ääni päälle",
     "fullscreen": "Koko näyttö"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — 360°-kierros",
+    "metaDesc": "Kävele läpi kohteen {title} paikan päällä tehdystä skannauksesta kootussa linkitetyssä 360°-kierroksessa: {count} näkymää kadulta yläkertaan. Sodar-demo yhdessä {agency}n kanssa.",
+    "eyebrow": "Sodar-demo · kohteen 360°-kierros",
+    "agentLabel": "Välittäjä",
+    "introLabel": "Vuorovaikutteinen kierros · kuvattu paikan päällä",
+    "attribution": "3D-kierrosdemo: {agent} · {agency}",
+    "start": "Aloita kierros",
+    "hint": "Vedä katsellaksesi · Napauta lattialla olevaa rengasta kävelläksesi sinne · Pisteet hyppäävät alueiden välillä",
+    "back": "Edellinen näkymä",
+    "restart": "Aloita alusta",
+    "fromHere": "Täältä",
+    "floorLabel": "Kerros",
+    "mapLabel": "Näkymäpisteet nykyisessä kerroksessa",
+    "mapNote": "Pisteet ovat skannauksen kuvauspaikkoja, ei pohjapiirros",
+    "checkpointsHeading": "Pisteet",
+    "choose": "Valitse piste",
+    "zone": {
+      "exterior": "Ulkona",
+      "ground": "Alakerta",
+      "upper": "Yläkerta"
+    },
+    "loading": "Ladataan panoraamaa…",
+    "errorTitle": "Tätä panoraamaa ei voitu ladata.",
+    "retry": "Yritä uudelleen",
+    "galleryTitle": "Lisää näkymiä skannauksesta",
+    "stillAlt": "Kuva skannauksesta: {label}",
+    "badgeLabel": "Sodar — etusivu",
+    "provenance": "Linkitetty 360°-kierros koottu paikan päällä tehdystä skannauksesta ({count} näkymää). Panoraamat, esikatselut ja kuvat on projisoitu uudelleen tallenteesta; mitään tällä sivulla ei ole generoitu. Tämä ei ole Matterport Showcase -malli.",
+    "scenes": {
+      "street": "Katu",
+      "frontGarden": "Etupiha",
+      "entranceSteps": "Sisäänkäynnin portaat",
+      "frontDoor": "Ulko-ovi",
+      "threshold": "Oviaukko",
+      "garden": "Piha",
+      "backGarden": "Takapiha",
+      "terrace": "Terassi",
+      "hallway": "Eteinen",
+      "stairsBottom": "Portaiden alapää",
+      "stairs": "Portaat",
+      "kitchen": "Keittiö",
+      "bathroom": "Kylpyhuone",
+      "mainRoom": "Päähuone",
+      "room": "Huone",
+      "upperLanding": "Yläkerran tasanne",
+      "upperRoom": "Yläkerran huone",
+      "upperBathroom": "Yläkerran kylpyhuone"
+    },
+    "checkpoints": {
+      "outside": "Ulkona",
+      "entrance": "Sisäänkäynti",
+      "terrace": "Terassi",
+      "hallway": "Eteinen",
+      "kitchen": "Keittiö",
+      "mainRoom": "Päähuone",
+      "stairs": "Portaat",
+      "upperLanding": "Yläkerran tasanne",
+      "upperRoom": "Yläkerran huone"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portfolio",
+    "title": "Oikeita kohteita, skannattu puhelimella.",
+    "homeTitle": "Kaikenlaiset kohteet skannataan samalla tavalla.",
+    "sub": "Vuorovaikutteisia kierroksia ja näyteskannauksia Sodarin työstä välittäjien kanssa.",
+    "viewAll": "Katso portfolio",
+    "metaTitle": "Portfolio — Sodar",
+    "metaDesc": "Vuorovaikutteisia kohdekierroksia ja näyteskannauksia Sodarin työstä välittäjien kanssa.",
+    "breadcrumbLabel": "Murupolku",
+    "backToPortfolio": "Portfolio",
+    "factsLabel": "Projektin tiedot",
+    "facts": {
+      "type": "Muoto",
+      "scope": "Kattavuus",
+      "scopeValue": "{count} näkymää · ulkona, alakerta, yläkerta",
+      "client": "Asiakas"
+    },
+    "galleryTitle": "Näkymiä skannauksesta",
+    "stillAlt": "Kuva skannauksesta: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Sodarin ensimmäinen asiakasskannaus",
+        "type": "Vuorovaikutteinen 360°-kohdekierros",
+        "cta": "Tutustu kohteeseen",
+        "lead": "Kadulta yläkertaan korkearesoluutioisella 360°-kierroksella, joka on koottu paikan päällä tehdystä skannauksesta.",
+        "metaTitle": "Kaldapealse tänav 2 — Sodarin ensimmäinen asiakasskannaus",
+        "metaDesc": "Tutustu Sodarin ensimmäiseen asiakaskierrokseen, joka tehtiin RE/MAXin Ruslan Gulidalle."
+      }
+    },
+    "samples": [
+      {
+        "label": "Kerrostaloasunto",
+        "meta": "3 huonetta · Kesklinn"
+      },
+      {
+        "label": "Uudiskohde",
+        "meta": "4 huonetta · Ülemiste"
+      },
+      {
+        "label": "Huvila",
+        "meta": "6 huonetta · Pirita"
+      },
+      {
+        "label": "Vuokra-asunto",
+        "meta": "1 huone · Kalamaja"
+      }
+    ]
   }
 }

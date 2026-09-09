@@ -13,6 +13,9 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@photo-sphere-viewer/core": "^5.15.1",
+    "@photo-sphere-viewer/cubemap-adapter": "^5.15.1",
+    "@photo-sphere-viewer/cubemap-tiles-adapter": "^5.15.1",
+    "@photo-sphere-viewer/markers-plugin": "^5.15.1",
     "@photo-sphere-viewer/virtual-tour-plugin": "^5.15.1",
     "@sparkjsdev/spark": "^2.1.0",
     "@supabase/ssr": "0.7.0",

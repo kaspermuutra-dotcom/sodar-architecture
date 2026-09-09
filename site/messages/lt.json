@@ -12,7 +12,8 @@
     "getStarted": "Skenuoti būstą",
     "menu": "Atidaryti meniu",
     "home": "Sodar pradžia",
-    "contact": "Kontaktai"
+    "contact": "Kontaktai",
+    "portfolio": "Portfolio"
   },
   "Hero": {
     "headline1": "DI apžvalgos,",
@@ -288,28 +289,6 @@
         }
       ]
     }
-  },
-  "Scans": {
-    "kicker": "Šios savaitės skenavimai",
-    "title": "Kiekvienos rūšies skelbimas skenuojamas vienodai.",
-    "items": [
-      {
-        "label": "Butas",
-        "meta": "3 kambariai · Kesklinn"
-      },
-      {
-        "label": "Naujos statybos",
-        "meta": "4 kambariai · Ülemiste"
-      },
-      {
-        "label": "Vila",
-        "meta": "6 kambariai · Pirita"
-      },
-      {
-        "label": "Nuoma",
-        "meta": "1 kambarys · Kalamaja"
-      }
-    ]
   },
   "Trust": {
     "kicker": "Sukurta, kad būtų galima patikėti skelbimus",
@@ -1381,5 +1360,114 @@
     "mute": "Išjungti garsą",
     "unmute": "Įjungti garsą",
     "fullscreen": "Visas ekranas"
+  },
+  "PropertyDemo": {
+    "metaTitle": "{title} — 360° apžiūra",
+    "metaDesc": "Pereikite {title} susietame 360° ture, sukurtame iš skenavimo vietoje: {count} apžvalgos taškai nuo gatvės iki antro aukšto. „Sodar“ demo kartu su {agency}.",
+    "eyebrow": "„Sodar“ demo · 360° būsto apžiūra",
+    "agentLabel": "Agentas",
+    "introLabel": "Interaktyvi apžiūra · užfiksuota vietoje",
+    "attribution": "3D apžiūros demo: {agent} · {agency}",
+    "start": "Pradėti apžiūrą",
+    "hint": "Vilkite, kad apsidairytumėte · Palieskite žiedą ant grindų, kad ten nueitumėte · Taškai peršoka tarp zonų",
+    "back": "Ankstesnis vaizdas",
+    "restart": "Pradėti iš naujo",
+    "fromHere": "Iš čia",
+    "floorLabel": "Aukštas",
+    "mapLabel": "Apžvalgos taškai dabartiniame aukšte",
+    "mapNote": "Taškai – skenavimo apžvalgos vietos, ne planas",
+    "checkpointsHeading": "Taškai",
+    "choose": "Pasirinkite tašką",
+    "zone": {
+      "exterior": "Lauke",
+      "ground": "Pirmas aukštas",
+      "upper": "Antras aukštas"
+    },
+    "loading": "Įkeliama panorama…",
+    "errorTitle": "Nepavyko įkelti šios panoramos.",
+    "retry": "Bandyti dar kartą",
+    "galleryTitle": "Daugiau vaizdų iš skenavimo",
+    "stillAlt": "Kadras iš skenavimo: {label}",
+    "badgeLabel": "„Sodar“ — pradžia",
+    "provenance": "Susieta 360° apžiūra, sudėta iš skenavimo vietoje ({count} apžvalgos taškai). Panoramos, peržiūros ir kadrai perprojektuoti iš įrašo; niekas šiame puslapyje nėra sugeneruota. Tai nėra „Matterport Showcase“ modelis.",
+    "scenes": {
+      "street": "Gatvė",
+      "frontGarden": "Priekinis sodas",
+      "entranceSteps": "Įėjimo laiptai",
+      "frontDoor": "Lauko durys",
+      "threshold": "Tarpdurys",
+      "garden": "Sodas",
+      "backGarden": "Galinis sodas",
+      "terrace": "Terasa",
+      "hallway": "Koridorius",
+      "stairsBottom": "Laiptų apačia",
+      "stairs": "Laiptai",
+      "kitchen": "Virtuvė",
+      "bathroom": "Vonios kambarys",
+      "mainRoom": "Pagrindinis kambarys",
+      "room": "Kambarys",
+      "upperLanding": "Viršutinė laiptų aikštelė",
+      "upperRoom": "Kambarys viršuje",
+      "upperBathroom": "Vonios kambarys viršuje"
+    },
+    "checkpoints": {
+      "outside": "Lauke",
+      "entrance": "Įėjimas",
+      "terrace": "Terasa",
+      "hallway": "Koridorius",
+      "kitchen": "Virtuvė",
+      "mainRoom": "Pagrindinis kambarys",
+      "stairs": "Laiptai",
+      "upperLanding": "Viršutinė aikštelė",
+      "upperRoom": "Kambarys viršuje"
+    }
+  },
+  "Portfolio": {
+    "kicker": "Portfolio",
+    "title": "Tikri būstai, skenuoti telefonu.",
+    "homeTitle": "Visų tipų būstai skenuojami vienodai.",
+    "sub": "Interaktyvios apžiūros ir pavyzdiniai skenavimai iš „Sodar“ darbo su agentais.",
+    "viewAll": "Žiūrėti portfolio",
+    "metaTitle": "Portfolio — „Sodar“",
+    "metaDesc": "Interaktyvios būstų apžiūros ir pavyzdiniai skenavimai iš „Sodar“ darbo su agentais.",
+    "breadcrumbLabel": "Navigacijos kelias",
+    "backToPortfolio": "Portfolio",
+    "factsLabel": "Projekto duomenys",
+    "facts": {
+      "type": "Formatas",
+      "scope": "Aprėptis",
+      "scopeValue": "{count} apžvalgos taškai · lauke, pirmas aukštas, antras aukštas",
+      "client": "Klientas"
+    },
+    "galleryTitle": "Vaizdai iš skenavimo",
+    "stillAlt": "Kadras iš skenavimo: {label}",
+    "items": {
+      "kaldapealse": {
+        "eyebrow": "Pirmasis „Sodar“ kliento skenavimas",
+        "type": "Interaktyvi 360° būsto apžiūra",
+        "cta": "Apžiūrėti būstą",
+        "lead": "Nuo gatvės iki antro aukšto didelės raiškos 360° apžiūroje, sukurtoje iš skenavimo vietoje.",
+        "metaTitle": "Kaldapealse tänav 2 — Pirmasis „Sodar“ kliento skenavimas",
+        "metaDesc": "Apžiūrėkite pirmąją „Sodar“ kliento apžiūrą, sukurtą Ruslanui Gulidai („RE/MAX“)."
+      }
+    },
+    "samples": [
+      {
+        "label": "Butas",
+        "meta": "3 kambariai · Kesklinn"
+      },
+      {
+        "label": "Naujos statybos",
+        "meta": "4 kambariai · Ülemiste"
+      },
+      {
+        "label": "Vila",
+        "meta": "6 kambariai · Pirita"
+      },
+      {
+        "label": "Nuoma",
+        "meta": "1 kambarys · Kalamaja"
+      }
+    ]
   }
 }
