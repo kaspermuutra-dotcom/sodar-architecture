@@ -10,7 +10,7 @@ type Params = { params: Promise<{ locale: string }> };
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Portfolio" });
-  return { title: t("metaTitle"), description: t("metaDesc"), alternates: localeAlternates(locale, "/portfolio"), openGraph: { title: t("metaTitle"), description: t("metaDesc"), images: ["/media/portfolio/kaldapealse-tanav-2/t1/og.jpg"] } };
+  return { title: t("metaTitle"), description: t("metaDesc"), alternates: localeAlternates(locale, "/portfolio"), openGraph: { title: t("metaTitle"), description: t("metaDesc"), images: ["/media/scans-villa.jpg"] } };
 }
 
 /** Portfolio index: every project in registry order, the first client scan first. */
