@@ -24,7 +24,7 @@ import { buildWalkthrough, type GeneratedTour, type Walkthrough, type Walkthroug
  */
 
 // Version segment: bump (t1 → t2) whenever the tiles are regenerated; the CDN caches this path immutably.
-const M = "/media/portfolio/kaldapealse-tanav-2/t1";
+const M = "/media/portfolio/kaldapealse-tanav-2/t3"; // t3 (2026-09-10): optimal seams with depth-aware blends, vignetting correction, tour-wide colour, exposure-matched caps
 
 const kaldapealseCuration: WalkthroughCuration = {
   slug: "kaldapealse-tanav-2",

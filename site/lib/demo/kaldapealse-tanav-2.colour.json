@@ -1,0 +1,1220 @@
+{
+ "source": "site/public/media/portfolio/kaldapealse-tanav-2/t3",
+ "gains": {
+  "8c8a7ac5": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "e1d8e3b2": [
+   0.9401,
+   1.0559,
+   1.1244
+  ],
+  "f761f98a": [
+   1.1425,
+   1.113,
+   1.3133
+  ],
+  "9708a1e8": [
+   1.0763,
+   1.0081,
+   1.1896
+  ],
+  "9f0410de": [
+   0.9148,
+   0.9307,
+   0.9122
+  ],
+  "5aaa75c2": [
+   1.5678,
+   1.3932,
+   1.228
+  ],
+  "836ae58d": [
+   1.8147,
+   1.62,
+   1.9116
+  ],
+  "a7cbb55f": [
+   0.741,
+   0.747,
+   0.6961
+  ],
+  "c80691fc": [
+   0.825,
+   0.7556,
+   0.7007
+  ],
+  "31e18ff1": [
+   0.7227,
+   0.62,
+   0.6718
+  ],
+  "64c45ade": [
+   0.6836,
+   0.62,
+   0.527
+  ],
+  "6933932f": [
+   0.7963,
+   0.7635,
+   0.649
+  ],
+  "e3e179a3": [
+   1.5827,
+   1.3412,
+   1.5827
+  ],
+  "93016101": [
+   0.7741,
+   0.7693,
+   0.8487
+  ],
+  "6adf3a13": [
+   1.5126,
+   1.3919,
+   1.3556
+  ],
+  "67139777": [
+   1.5024,
+   1.4258,
+   1.2119
+  ],
+  "9960ad3a": [
+   0.9196,
+   0.8262,
+   0.7023
+  ],
+  "6075ef93": [
+   0.8209,
+   0.8187,
+   0.7211
+  ],
+  "f85e95a3": [
+   1.4871,
+   1.5347,
+   1.644
+  ],
+  "fbd51372": [
+   1.1202,
+   1.16,
+   1.2583
+  ],
+  "f4e36aa6": [
+   1.062,
+   1.0845,
+   1.0883
+  ],
+  "795122f1": [
+   0.8623,
+   0.8856,
+   0.8198
+  ],
+  "f0cd9cf0": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "8a5134b6": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "95b353d9": [
+   0.8371,
+   0.8834,
+   0.8536
+  ],
+  "bf2609e1": [
+   1.1946,
+   1.132,
+   1.1715
+  ],
+  "437a3f0f": [
+   0.9382,
+   0.9548,
+   0.9116
+  ],
+  "80b0056a": [
+   1.3997,
+   1.4199,
+   1.4398
+  ],
+  "f4c34f0d": [
+   0.7677,
+   0.8748,
+   1.0005
+  ],
+  "453f34b1": [
+   0.9668,
+   1.0179,
+   0.9176
+  ],
+  "917be4db": [
+   0.9457,
+   0.9574,
+   0.9934
+  ],
+  "30833d82": [
+   1.2427,
+   1.1931,
+   1.0763
+  ],
+  "b37eec57": [
+   1.3504,
+   1.2705,
+   1.119
+  ],
+  "289e49f7": [
+   1.0469,
+   0.9302,
+   0.7952
+  ],
+  "925dd397": [
+   1.3387,
+   1.276,
+   1.0846
+  ],
+  "349d9a99": [
+   1.3441,
+   1.3052,
+   1.1988
+  ],
+  "52c0066c": [
+   1.0,
+   1.0,
+   1.0
+  ]
+ },
+ "references": [
+  "b37eec57",
+  "e1d8e3b2",
+  "f4e36aa6"
+ ],
+ "method": "Neighbouring sweeps of a handheld capture are exposed and white-balanced independently, so the same wall\nchanges shade from one viewpoint to the next. This script measures those differences on *the same surfaces*\nand solves one multiplicative linear-RGB gain per sweep over the whole navigation graph at once, so nothing\ndrifts from scene to scene.",
+ "measured": {
+  "e1d8e3b2>f761f98a": {
+   "n": 5068,
+   "distance": 2.56,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.072,
+    "rg": -13.8,
+    "bg": -33.0
+   },
+   "predictedAfter": {
+    "ev": 0.004,
+    "rg": -0.6,
+    "bg": -25.8
+   }
+  },
+  "f761f98a>9708a1e8": {
+   "n": 47010,
+   "distance": 1.54,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.154,
+    "rg": -4.3,
+    "bg": 21.2
+   },
+   "predictedAfter": {
+    "ev": 0.012,
+    "rg": -0.4,
+    "bg": 21.2
+   }
+  },
+  "9708a1e8>6adf3a13": {
+   "n": 23868,
+   "distance": 1.68,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.576,
+    "rg": -3.5,
+    "bg": 42.5
+   },
+   "predictedAfter": {
+    "ev": -0.11,
+    "rg": -1.8,
+    "bg": 17.6
+   }
+  },
+  "9708a1e8>93016101": {
+   "n": 18505,
+   "distance": 2.48,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.513,
+    "rg": 7.9,
+    "bg": 24.4
+   },
+   "predictedAfter": {
+    "ev": 0.122,
+    "rg": 1.7,
+    "bg": 16.3
+   }
+  },
+  "9f0410de>93016101": {
+   "n": 24010,
+   "distance": 2.69,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.171,
+    "rg": -4.0,
+    "bg": -12.9
+   },
+   "predictedAfter": {
+    "ev": -0.104,
+    "rg": -1.7,
+    "bg": -2.0
+   }
+  },
+  "5aaa75c2>836ae58d": {
+   "n": 71413,
+   "distance": 1.49,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.849,
+    "rg": -0.1,
+    "bg": -33.3
+   },
+   "predictedAfter": {
+    "ev": -0.631,
+    "rg": -0.6,
+    "bg": -10.7
+   }
+  },
+  "5aaa75c2>6adf3a13": {
+   "n": 15863,
+   "distance": 1.71,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.088,
+    "rg": 4.8,
+    "bg": -8.9
+   },
+   "predictedAfter": {
+    "ev": 0.087,
+    "rg": 1.2,
+    "bg": 0.7
+   }
+  },
+  "836ae58d>a7cbb55f": {
+   "n": 12123,
+   "distance": 2.73,
+   "weight": 0.0,
+   "measured": {
+    "ev": -0.382,
+    "rg": -29.0,
+    "bg": -72.0
+   },
+   "predictedAfter": {
+    "ev": -1.499,
+    "rg": -37.1,
+    "bg": -77.9
+   }
+  },
+  "a7cbb55f>437a3f0f": {
+   "n": 10965,
+   "distance": 3.85,
+   "weight": 0.35,
+   "measured": {
+    "ev": -0.691,
+    "rg": 4.3,
+    "bg": -8.0
+   },
+   "predictedAfter": {
+    "ev": -0.337,
+    "rg": 3.3,
+    "bg": -5.8
+   }
+  },
+  "a7cbb55f>c80691fc": {
+   "n": 22576,
+   "distance": 4.01,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.004,
+    "rg": -9.5,
+    "bg": 0.9
+   },
+   "predictedAfter": {
+    "ev": 0.02,
+    "rg": -0.4,
+    "bg": 0.4
+   }
+  },
+  "31e18ff1>64c45ade": {
+   "n": 5553,
+   "distance": 1.55,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.372,
+    "rg": 6.5,
+    "bg": 28.4
+   },
+   "predictedAfter": {
+    "ev": -0.372,
+    "rg": 0.8,
+    "bg": 0.7
+   }
+  },
+  "64c45ade>6933932f": {
+   "n": 42608,
+   "distance": 4.17,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.787,
+    "rg": 7.1,
+    "bg": 7.4
+   },
+   "predictedAfter": {
+    "ev": -0.487,
+    "rg": 1.3,
+    "bg": 7.4
+   }
+  },
+  "6933932f>e3e179a3": {
+   "n": 27651,
+   "distance": 2.68,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.834,
+    "rg": -14.5,
+    "bg": -39.7
+   },
+   "predictedAfter": {
+    "ev": -0.021,
+    "rg": -3.2,
+    "bg": -16.3
+   }
+  },
+  "6933932f>8a5134b6": {
+   "n": 2530,
+   "distance": 3.42,
+   "weight": 0.0,
+   "measured": {
+    "ev": 0.183,
+    "rg": 69.2,
+    "bg": 33.5
+   },
+   "predictedAfter": {
+    "ev": 0.572,
+    "rg": 62.3,
+    "bg": 57.1
+   }
+  },
+  "6933932f>795122f1": {
+   "n": 5473,
+   "distance": 4.34,
+   "weight": 0.35,
+   "measured": {
+    "ev": -1.186,
+    "rg": 30.4,
+    "bg": -17.6
+   },
+   "predictedAfter": {
+    "ev": -0.972,
+    "rg": 21.7,
+    "bg": -10.2
+   }
+  },
+  "e3e179a3>52c0066c": {
+   "n": 1482,
+   "distance": 2.97,
+   "weight": 0.0,
+   "measured": {
+    "ev": 2.281,
+    "rg": 21.0,
+    "bg": 196.7
+   },
+   "predictedAfter": {
+    "ev": 1.857,
+    "rg": 2.5,
+    "bg": 151.4
+   }
+  },
+  "93016101>f4c34f0d": {
+   "n": 474,
+   "distance": 2.54,
+   "weight": 0.0,
+   "measured": {
+    "ev": 3.534,
+    "rg": 99.7,
+    "bg": -46.3
+   },
+   "predictedAfter": {
+    "ev": 3.719,
+    "rg": 74.2,
+    "bg": -44.3
+   }
+  },
+  "6adf3a13>67139777": {
+   "n": 18824,
+   "distance": 1.03,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.034,
+    "rg": 2.9,
+    "bg": 41.4
+   },
+   "predictedAfter": {
+    "ev": 0.001,
+    "rg": -0.2,
+    "bg": 23.4
+   }
+  },
+  "67139777>9960ad3a": {
+   "n": 10873,
+   "distance": 1.54,
+   "weight": 0.35,
+   "measured": {
+    "ev": 1.002,
+    "rg": -5.2,
+    "bg": -2.1
+   },
+   "predictedAfter": {
+    "ev": 0.214,
+    "rg": 0.2,
+    "bg": -2.1
+   }
+  },
+  "9960ad3a>6075ef93": {
+   "n": 91736,
+   "distance": 1.49,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.276,
+    "rg": 4.0,
+    "bg": 5.5
+   },
+   "predictedAfter": {
+    "ev": 0.263,
+    "rg": -6.3,
+    "bg": 9.3
+   }
+  },
+  "9960ad3a>f4c34f0d": {
+   "n": 38847,
+   "distance": 1.7,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.333,
+    "rg": 36.1,
+    "bg": -36.3
+   },
+   "predictedAfter": {
+    "ev": -0.25,
+    "rg": 7.3,
+    "bg": -14.3
+   }
+  },
+  "6075ef93>80b0056a": {
+   "n": 48163,
+   "distance": 1.14,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.591,
+    "rg": -4.3,
+    "bg": -3.2
+   },
+   "predictedAfter": {
+    "ev": 0.204,
+    "rg": -6.0,
+    "bg": 11.4
+   }
+  },
+  "6075ef93>437a3f0f": {
+   "n": 31158,
+   "distance": 2.04,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.177,
+    "rg": 1.7,
+    "bg": -6.9
+   },
+   "predictedAfter": {
+    "ev": 0.044,
+    "rg": -0.3,
+    "bg": 1.0
+   }
+  },
+  "f85e95a3>80b0056a": {
+   "n": 64745,
+   "distance": 0.16,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.143,
+    "rg": -1.9,
+    "bg": 6.0
+   },
+   "predictedAfter": {
+    "ev": 0.031,
+    "rg": -0.2,
+    "bg": 0.3
+   }
+  },
+  "fbd51372>f4e36aa6": {
+   "n": 31338,
+   "distance": 2.54,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.108,
+    "rg": -1.6,
+    "bg": 8.5
+   },
+   "predictedAfter": {
+    "ev": 0.011,
+    "rg": -0.2,
+    "bg": 0.4
+   }
+  },
+  "f4e36aa6>795122f1": {
+   "n": 10301,
+   "distance": 0.29,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.42,
+    "rg": -1.7,
+    "bg": 9.2
+   },
+   "predictedAfter": {
+    "ev": 0.128,
+    "rg": -2.3,
+    "bg": 0.7
+   }
+  },
+  "95b353d9>bf2609e1": {
+   "n": 28963,
+   "distance": 1.24,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.367,
+    "rg": -10.5,
+    "bg": -6.8
+   },
+   "predictedAfter": {
+    "ev": -0.009,
+    "rg": -0.3,
+    "bg": -0.2
+   }
+  },
+  "80b0056a>f4c34f0d": {
+   "n": 23696,
+   "distance": 2.09,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.959,
+    "rg": 5.4,
+    "bg": -0.8
+   },
+   "predictedAfter": {
+    "ev": 0.26,
+    "rg": -6.2,
+    "bg": 11.9
+   }
+  },
+  "453f34b1>917be4db": {
+   "n": 10122,
+   "distance": 1.42,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.09,
+    "rg": -4.1,
+    "bg": -13.6
+   },
+   "predictedAfter": {
+    "ev": 0.001,
+    "rg": -0.3,
+    "bg": -0.5
+   }
+  },
+  "917be4db>b37eec57": {
+   "n": 3844,
+   "distance": 1.94,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.47,
+    "rg": -8.4,
+    "bg": 21.6
+   },
+   "predictedAfter": {
+    "ev": -0.062,
+    "rg": -1.5,
+    "bg": 3.2
+   }
+  },
+  "30833d82>b37eec57": {
+   "n": 61924,
+   "distance": 1.51,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.064,
+    "rg": -1.1,
+    "bg": 0.7
+   },
+   "predictedAfter": {
+    "ev": 0.027,
+    "rg": 0.9,
+    "bg": -1.7
+   }
+  },
+  "30833d82>349d9a99": {
+   "n": 29002,
+   "distance": 1.79,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.149,
+    "rg": 1.0,
+    "bg": -1.4
+   },
+   "predictedAfter": {
+    "ev": -0.019,
+    "rg": -0.2,
+    "bg": 0.4
+   }
+  },
+  "30833d82>289e49f7": {
+   "n": 72474,
+   "distance": 1.88,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.364,
+    "rg": -8.0,
+    "bg": 6.4
+   },
+   "predictedAfter": {
+    "ev": 0.005,
+    "rg": -0.6,
+    "bg": 0.8
+   }
+  },
+  "b37eec57>925dd397": {
+   "n": 41946,
+   "distance": 0.82,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.024,
+    "rg": 1.1,
+    "bg": 4.6
+   },
+   "predictedAfter": {
+    "ev": -0.018,
+    "rg": -0.2,
+    "bg": 1.0
+   }
+  }
+ },
+ "measuredAfter": {
+  "e1d8e3b2>f761f98a": {
+   "n": 4926,
+   "distance": 2.56,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.103,
+    "rg": -2.3,
+    "bg": -27.6
+   },
+   "predictedAfter": {
+    "ev": -0.027,
+    "rg": 12.7,
+    "bg": -19.7
+   }
+  },
+  "f761f98a>9708a1e8": {
+   "n": 44423,
+   "distance": 1.54,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.105,
+    "rg": -0.2,
+    "bg": 35.1
+   },
+   "predictedAfter": {
+    "ev": -0.037,
+    "rg": 3.8,
+    "bg": 35.1
+   }
+  },
+  "9708a1e8>6adf3a13": {
+   "n": 22211,
+   "distance": 1.68,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.437,
+    "rg": -0.0,
+    "bg": 25.2
+   },
+   "predictedAfter": {
+    "ev": 0.029,
+    "rg": 1.7,
+    "bg": 3.4
+   }
+  },
+  "9708a1e8>93016101": {
+   "n": 18386,
+   "distance": 2.48,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.185,
+    "rg": 2.0,
+    "bg": 15.8
+   },
+   "predictedAfter": {
+    "ev": -0.205,
+    "rg": -3.9,
+    "bg": 8.3
+   }
+  },
+  "9f0410de>93016101": {
+   "n": 24750,
+   "distance": 2.69,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.003,
+    "rg": -2.4,
+    "bg": 5.5
+   },
+   "predictedAfter": {
+    "ev": -0.272,
+    "rg": -0.1,
+    "bg": 18.7
+   }
+  },
+  "5aaa75c2>836ae58d": {
+   "n": 48997,
+   "distance": 1.49,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.585,
+    "rg": 5.0,
+    "bg": 0.1
+   },
+   "predictedAfter": {
+    "ev": -0.368,
+    "rg": 4.6,
+    "bg": 34.0
+   }
+  },
+  "5aaa75c2>6adf3a13": {
+   "n": 11874,
+   "distance": 1.71,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.236,
+    "rg": 3.1,
+    "bg": -3.4
+   },
+   "predictedAfter": {
+    "ev": 0.234,
+    "rg": -0.5,
+    "bg": 6.7
+   }
+  },
+  "836ae58d>a7cbb55f": {
+   "n": 9281,
+   "distance": 2.73,
+   "weight": 0.0,
+   "measured": {
+    "ev": -1.039,
+    "rg": -38.2,
+    "bg": -74.3
+   },
+   "predictedAfter": {
+    "ev": -2.156,
+    "rg": -45.3,
+    "bg": -79.7
+   }
+  },
+  "a7cbb55f>437a3f0f": {
+   "n": 11729,
+   "distance": 3.85,
+   "weight": 0.35,
+   "measured": {
+    "ev": -0.476,
+    "rg": 1.6,
+    "bg": -5.2
+   },
+   "predictedAfter": {
+    "ev": -0.122,
+    "rg": 0.7,
+    "bg": -2.8
+   }
+  },
+  "a7cbb55f>c80691fc": {
+   "n": 22409,
+   "distance": 4.01,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.042,
+    "rg": 0.1,
+    "bg": 2.4
+   },
+   "predictedAfter": {
+    "ev": 0.058,
+    "rg": 10.2,
+    "bg": 1.9
+   }
+  },
+  "31e18ff1>64c45ade": {
+   "n": 5843,
+   "distance": 1.55,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.368,
+    "rg": 2.2,
+    "bg": 1.2
+   },
+   "predictedAfter": {
+    "ev": -0.368,
+    "rg": -3.3,
+    "bg": -20.6
+   }
+  },
+  "64c45ade>6933932f": {
+   "n": 43496,
+   "distance": 4.17,
+   "weight": 1.0,
+   "measured": {
+    "ev": -1.217,
+    "rg": 0.7,
+    "bg": 11.8
+   },
+   "predictedAfter": {
+    "ev": -0.916,
+    "rg": -4.8,
+    "bg": 11.8
+   }
+  },
+  "6933932f>e3e179a3": {
+   "n": 26554,
+   "distance": 2.68,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.293,
+    "rg": -6.5,
+    "bg": -20.6
+   },
+   "predictedAfter": {
+    "ev": 0.519,
+    "rg": 5.8,
+    "bg": 10.2
+   }
+  },
+  "6933932f>8a5134b6": {
+   "n": 2407,
+   "distance": 3.42,
+   "weight": 0.0,
+   "measured": {
+    "ev": 0.403,
+    "rg": 58.0,
+    "bg": 59.4
+   },
+   "predictedAfter": {
+    "ev": 0.792,
+    "rg": 51.5,
+    "bg": 87.5
+   }
+  },
+  "6933932f>795122f1": {
+   "n": 5445,
+   "distance": 4.34,
+   "weight": 0.35,
+   "measured": {
+    "ev": -0.987,
+    "rg": 22.0,
+    "bg": -10.6
+   },
+   "predictedAfter": {
+    "ev": -0.773,
+    "rg": 13.9,
+    "bg": -2.6
+   }
+  },
+  "e3e179a3>52c0066c": {
+   "n": 1555,
+   "distance": 2.97,
+   "weight": 0.0,
+   "measured": {
+    "ev": 1.88,
+    "rg": 3.3,
+    "bg": 176.2
+   },
+   "predictedAfter": {
+    "ev": 1.456,
+    "rg": -12.5,
+    "bg": 134.1
+   }
+  },
+  "93016101>f4c34f0d": {
+   "n": 483,
+   "distance": 2.54,
+   "weight": 0.0,
+   "measured": {
+    "ev": 3.623,
+    "rg": 82.1,
+    "bg": -45.1
+   },
+   "predictedAfter": {
+    "ev": 3.808,
+    "rg": 58.8,
+    "bg": -43.1
+   }
+  },
+  "6adf3a13>67139777": {
+   "n": 14023,
+   "distance": 1.03,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.259,
+    "rg": -3.4,
+    "bg": 24.9
+   },
+   "predictedAfter": {
+    "ev": 0.294,
+    "rg": -6.4,
+    "bg": 9.0
+   }
+  },
+  "67139777>9960ad3a": {
+   "n": 10228,
+   "distance": 1.54,
+   "weight": 0.35,
+   "measured": {
+    "ev": 0.416,
+    "rg": -0.3,
+    "bg": 13.4
+   },
+   "predictedAfter": {
+    "ev": -0.371,
+    "rg": 5.3,
+    "bg": 13.5
+   }
+  },
+  "9960ad3a>6075ef93": {
+   "n": 92102,
+   "distance": 1.49,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.282,
+    "rg": -5.6,
+    "bg": 9.5
+   },
+   "predictedAfter": {
+    "ev": 0.269,
+    "rg": -15.0,
+    "bg": 13.4
+   }
+  },
+  "9960ad3a>f4c34f0d": {
+   "n": 39359,
+   "distance": 1.7,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.331,
+    "rg": 8.7,
+    "bg": -16.0
+   },
+   "predictedAfter": {
+    "ev": -0.248,
+    "rg": -14.3,
+    "bg": 13.0
+   }
+  },
+  "6075ef93>80b0056a": {
+   "n": 47406,
+   "distance": 1.14,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.07,
+    "rg": -4.3,
+    "bg": 16.7
+   },
+   "predictedAfter": {
+    "ev": 0.864,
+    "rg": -5.9,
+    "bg": 34.3
+   }
+  },
+  "6075ef93>437a3f0f": {
+   "n": 31050,
+   "distance": 2.04,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.045,
+    "rg": -3.0,
+    "bg": 1.4
+   },
+   "predictedAfter": {
+    "ev": 0.177,
+    "rg": -4.9,
+    "bg": 9.9
+   }
+  },
+  "f85e95a3>80b0056a": {
+   "n": 60957,
+   "distance": 0.16,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.016,
+    "rg": -1.0,
+    "bg": 1.1
+   },
+   "predictedAfter": {
+    "ev": -0.096,
+    "rg": 0.7,
+    "bg": -4.3
+   }
+  },
+  "fbd51372>f4e36aa6": {
+   "n": 31221,
+   "distance": 2.54,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.066,
+    "rg": 0.2,
+    "bg": -1.0
+   },
+   "predictedAfter": {
+    "ev": -0.163,
+    "rg": 1.6,
+    "bg": -8.4
+   }
+  },
+  "f4e36aa6>795122f1": {
+   "n": 11234,
+   "distance": 0.29,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.177,
+    "rg": -3.9,
+    "bg": -4.1
+   },
+   "predictedAfter": {
+    "ev": -0.115,
+    "rg": -4.5,
+    "bg": -11.5
+   }
+  },
+  "95b353d9>bf2609e1": {
+   "n": 29786,
+   "distance": 1.24,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.036,
+    "rg": -3.0,
+    "bg": 0.4
+   },
+   "predictedAfter": {
+    "ev": 0.322,
+    "rg": 8.1,
+    "bg": 7.5
+   }
+  },
+  "80b0056a>f4c34f0d": {
+   "n": 23174,
+   "distance": 2.09,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.335,
+    "rg": -10.2,
+    "bg": 19.6
+   },
+   "predictedAfter": {
+    "ev": -0.363,
+    "rg": -20.0,
+    "bg": 34.9
+   }
+  },
+  "453f34b1>917be4db": {
+   "n": 9715,
+   "distance": 1.42,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.028,
+    "rg": 3.6,
+    "bg": -8.2
+   },
+   "predictedAfter": {
+    "ev": -0.116,
+    "rg": 7.7,
+    "bg": 5.7
+   }
+  },
+  "917be4db>b37eec57": {
+   "n": 3535,
+   "distance": 1.94,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.17,
+    "rg": -1.3,
+    "bg": 5.3
+   },
+   "predictedAfter": {
+    "ev": 0.238,
+    "rg": 6.2,
+    "bg": -10.7
+   }
+  },
+  "30833d82>b37eec57": {
+   "n": 58161,
+   "distance": 1.51,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.008,
+    "rg": 0.6,
+    "bg": -0.2
+   },
+   "predictedAfter": {
+    "ev": 0.099,
+    "rg": 2.7,
+    "bg": -2.6
+   }
+  },
+  "30833d82>349d9a99": {
+   "n": 25496,
+   "distance": 1.79,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.344,
+    "rg": -8.9,
+    "bg": -18.1
+   },
+   "predictedAfter": {
+    "ev": 0.473,
+    "rg": -9.9,
+    "bg": -16.6
+   }
+  },
+  "30833d82>289e49f7": {
+   "n": 70079,
+   "distance": 1.88,
+   "weight": 1.0,
+   "measured": {
+    "ev": -0.07,
+    "rg": 8.8,
+    "bg": -2.0
+   },
+   "predictedAfter": {
+    "ev": -0.429,
+    "rg": 17.6,
+    "bg": -7.1
+   }
+  },
+  "b37eec57>925dd397": {
+   "n": 37214,
+   "distance": 0.82,
+   "weight": 1.0,
+   "measured": {
+    "ev": 0.027,
+    "rg": -0.7,
+    "bg": 2.7
+   },
+   "predictedAfter": {
+    "ev": 0.033,
+    "rg": -2.0,
+    "bg": -0.9
+   }
+  }
+ }
+}

@@ -94,11 +94,15 @@ def sweep_points(export: Path, media: Path, node: dict, pose: tuple[list[float],
 def floor_height(points: np.ndarray, cam_z: float) -> float:
     """The sweep's own floor: the strongest horizontal plane below the camera (handheld heights vary by ±0.5 m)."""
     z = points[:, 2]
-    below = z[(z < cam_z - 0.4) & (z > cam_z - 3.0)]
+    below = z[(z < cam_z - 0.6) & (z > cam_z - 2.6)]
     if len(below) < 1000:
         return cam_z - 1.0
-    hist, edges = np.histogram(below, bins=np.arange(cam_z - 3.0, cam_z - 0.4, 0.03))
-    return float(edges[hist.argmax()] + 0.015)
+    hist, edges = np.histogram(below, bins=np.arange(cam_z - 2.6, cam_z - 0.6, 0.03))
+    peak = float(edges[hist.argmax()] + 0.015)
+    # a peak hugging the top of the search window is furniture, a handrail or a step, not the floor
+    if peak > cam_z - 0.72 or hist.max() < 0.01 * len(z):
+        return cam_z - 1.0
+    return peak
 
 
 def pyramid_fill(rgb: np.ndarray, filled: np.ndarray, levels: int = 6, close_px: int = 26) -> np.ndarray:

@@ -97,15 +97,45 @@ export. Three scripts in `../scripts/` produce everything from the export:
   export's `*_skybox*.jpg` faces are only a 512 px preview level; the real
   detail is in each sweep's `.swl` container: six 4032×3024 camera frames with
   intrinsics and rotations (~27 px/deg) plus Matterport's per-pixel frame
-  assignment map. Frames are registered to the skybox frame and composited
-  along those seams (no cross-fading, so parallax never doubles an edge), then
-  written as a cubemap tile pyramid under
+  assignment map. Frames are registered to the skybox frame, the lens
+  vignetting is divided out (a shared radial model fitted from the frame
+  overlaps, so seams through plain walls carry no brightness step), and each
+  direction takes one frame along **optimal seams**: inside every overlap a
+  dynamic-programming path minimises the frames' difference plus the local
+  gradient, so cuts run through plain wall or foliage and never along a door
+  frame, skirting or corner (Matterport's map is the fallback where no path
+  exists). A ~1.5° soft edge blends the two frames at the seam. Depth-assisted
+  reprojection through the container's depth panorama and per-frame offsets
+  was built and measured (`--depth-sigma`): the recorded offsets do not
+  predict the residual seam offsets and the reprojection displaces near
+  surfaces by degrees and bends recesses, so it is off by default. The polar
+  caps (above +34° and below −65°, which the frames never cover) come from the
+  512 px preview, exposure-matched to the frames per sweep. One master cube per
+  sweep is then cut into every level and preview, so the base faces, all tile
+  levels, the previews and the stills share one geometry and one colour
+  transform; written as a cubemap tile pyramid under
   `public/media/portfolio/<slug>/<version>/faces/<sweep>/`: `<face>-0.webp`
   (512 px base), `<face>-1-<col>-<row>.webp` (1536 px, 2×2) and
   `<face>-2-<col>-<row>.webp` (3072 px, 4×4), plus previews/thumbnails.
   The `<version>` segment (`t1`, `t2`, …) is what makes the immutable
   one-year `Cache-Control` header in `next.config.ts` safe: regenerate → new
   segment → new URLs.
+- `matterport_capture_colour.py` solves one linear-RGB gain per sweep over the
+  whole navigation graph (`lib/demo/<slug>.colour.json`, also copied next to
+  the media): every linked pair's shared surfaces are found through the depth
+  panoramas (a point seen by A is projected into B and must agree with B's own
+  depth), the median per-channel ratio in linear light is the pair's
+  measurement, glass/occlusion pairs and tiny counts are dropped, exterior ↔
+  interior pairs count less, and the least-squares solve is anchored on the
+  median-exposure sweep of each level (gains clamped to ±0.7 EV / ±15 %
+  chroma). `matterport_capture_faces.py --colour` applies the gains to the
+  master; `--measure-only` re-measures a finished version for the QA manifest.
+- `matterport_capture_stills.py` renders poster, social image and gallery
+  stills from a version's own 3072 px faces (same registration and colour).
+- `matterport_capture_qa.py` writes `qa.json` next to the media: base-vs-level
+  differences (only sharpness may differ), top/bottom orientation agreement
+  across levels, and the neighbour colour differences; `lib/demo/media.test.ts`
+  asserts it and the pixel size of every face and tile.
 - `matterport_capture_floorplan.py` renders the Matterport-style **plan views**
   under the viewer from the 3600×1801 depth panorama inside every `.swl`
   (standard lat/lon, x mirrored against the colour frame). Every sweep's depth
@@ -131,9 +161,16 @@ stairs, exterior→interior only through the entrance); `lib/portfolio.test.ts`
 guards the ordering.
 
 UI in `components/demo/`: `virtual-tour.tsx` (Photo Sphere Viewer
-cubemap-tiles + virtual-tour + markers: base level first, tiles for the faces
-in view with a DPR-aware level choice, Matterport-style floor rings for
-tap-to-move, neighbour preloading, error events), `property-demo.tsx`
+cubemap-tiles + virtual-tour + markers: a sharp, never-blurred 512 px base,
+tiles for the faces in view with a DPR-aware level choice, Matterport-style
+floor rings for tap-to-move, error events). Moving between scenes is atomic:
+the destination's six base faces and the tiles that will be visible on
+arrival (direction of travel plus the floor) are warmed into the browser
+cache first (6 s deadline), then the two complete scenes cross-fade (550 ms,
+tone mapping disabled so PSV's fade cannot flash), keeping the current pitch
+and facing the direction of travel; a newer request cancels one still
+preloading, so rapid clicks end on the last choice. Reduced motion switches
+without animation. `property-demo.tsx`
 (poster → tour orchestration, history, hash deep links), `checkpoint-rail.tsx`,
 `plan-map.tsx` (Matterport-style plan under the viewer: level tabs, the
 depth-rendered plan of the current level, every viewpoint as a tappable dot,

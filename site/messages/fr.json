@@ -1369,7 +1369,7 @@
     "introLabel": "Visite interactive · captée sur place",
     "attribution": "Démo de visite 3D pour {agent} · {agency}",
     "start": "Démarrer la visite",
-    "hint": "Glissez pour regarder · Touchez un anneau au sol pour vous y rendre · Les points d'étape sautent entre les zones",
+    "hint": "Glissez pour regarder autour · Touchez un point blanc pour avancer",
     "back": "Vue précédente",
     "restart": "Recommencer",
     "fromHere": "D'ici",
@@ -1421,7 +1421,11 @@
       "upperRoom": "Pièce à l'étage"
     },
     "planLabel": "Plan",
-    "planNote": "Vue en plan rendue à partir des données de profondeur du scan"
+    "planNote": "Vue en plan rendue à partir des données de profondeur du scan",
+    "firstUse": "Glissez pour regarder autour · Touchez un point blanc pour avancer",
+    "turnTo": "Tourner vers {name}",
+    "close": "Fermer",
+    "loadingShort": "Chargement…"
   },
   "Portfolio": {
     "kicker": "Portfolio",

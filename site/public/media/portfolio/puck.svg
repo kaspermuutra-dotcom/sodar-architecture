@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-  <circle cx="64" cy="64" r="54" fill="rgba(0,0,0,0.22)"/>
-  <circle cx="64" cy="64" r="46" fill="rgba(255,255,255,0.18)" stroke="#ffffff" stroke-width="7"/>
-  <circle cx="64" cy="64" r="20" fill="rgba(255,255,255,0.92)"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <!-- Sodar movement point: a substantial white ring with a dark halo so it reads on pale and dark floors. The plane is
+       padded (r 80) beyond the drawn ring (r 58) so the tap area is larger than the visible mark. -->
+  <circle cx="80" cy="80" r="66" fill="rgba(0,0,0,0.20)"/>
+  <circle cx="80" cy="80" r="58" fill="rgba(255,255,255,0.14)" stroke="rgba(0,0,0,0.42)" stroke-width="16"/>
+  <circle cx="80" cy="80" r="58" fill="none" stroke="#ffffff" stroke-width="10"/>
+  <circle cx="80" cy="80" r="22" fill="rgba(255,255,255,0.96)" stroke="rgba(0,0,0,0.28)" stroke-width="3"/>
 </svg>

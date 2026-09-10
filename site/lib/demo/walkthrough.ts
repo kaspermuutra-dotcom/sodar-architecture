@@ -107,7 +107,7 @@ export type WalkthroughPlan = {
   levels: Record<WalkFloor, PlanLevel>;
 };
 type GeneratedPlanLevel = { originX: number; originY: number; width: number; height: number };
-export type GeneratedPlan = { metresPerPixel: number; levels: { outside: GeneratedPlanLevel; ground: GeneratedPlanLevel; upper: GeneratedPlanLevel }; floorZ: Record<string, number>; source: string };
+export type GeneratedPlan = { metresPerPixel: number; levels: { outside: GeneratedPlanLevel; ground: GeneratedPlanLevel; upper: GeneratedPlanLevel }; floorZ: Record<string, number>; sweepFloorZ?: Record<string, number>; source: string };
 
 export type WalkScene = {
   id: string;
@@ -148,21 +148,32 @@ export type Walkthrough = {
   provenance: string;
 };
 
-/** Camera height above the floor assumed for placing floor rings (handheld capture at eye level). */
-export const EYE_HEIGHT_M = 1.4;
+/** Camera height above the floor assumed for floor rings when a sweep has no plausible measured floor (this capture was
+ * held at chest height: the depth data puts the camera 0.7–1.1 m above the floor on most sweeps). */
+export const EYE_HEIGHT_M = 1.0;
+/** Measured floor heights are trusted only when they put the camera at a plausible handheld height. */
+const PLAUSIBLE_CAMERA_HEIGHT_M: [number, number] = [0.7, 1.9];
 
 /**
  * World yaw (clockwise-positive, 0 = +x) of the hotspot in `a` pointing at `b`, the pitch of the spot on the
  * floor where `b` stands (a ring drawn there reads like Matterport's), and the horizontal distance.
  */
-export function worldLink(a: GeneratedSweep, b: GeneratedSweep): { yaw: number; pitch: number; distance: number } {
+export function worldLink(a: GeneratedSweep, b: GeneratedSweep, floorZ?: Record<string, number>): { yaw: number; pitch: number; distance: number } {
   const dx = b.p[0] - a.p[0];
   const dy = b.p[1] - a.p[1];
-  const dz = b.p[2] - a.p[2];
   const distance = Math.hypot(dx, dy);
   const theta = (Math.atan2(dy, dx) * 180) / Math.PI;
-  // The target's floor is EYE_HEIGHT_M below the target camera; on stairs dz lifts the spot onto the treads.
-  const pitch = Math.max(-40, Math.min(12, (Math.atan2(dz - EYE_HEIGHT_M, Math.max(distance, 0.4)) * 180) / Math.PI));
+  // The ring lies on the floor under the target camera: its measured floor height when the depth data gives one
+  // (scripts/matterport_capture_floorplan.py, `sweepFloorZ`), else EYE_HEIGHT_M below the camera; on stairs the
+  // height difference lifts the spot onto the treads.
+  const plausible = (sweep: GeneratedSweep) => {
+    const z = floorZ?.[sweep.id];
+    return z !== undefined && sweep.p[2] - z >= PLAUSIBLE_CAMERA_HEIGHT_M[0] && sweep.p[2] - z <= PLAUSIBLE_CAMERA_HEIGHT_M[1] ? z : undefined;
+  };
+  // the ring lies on the destination's floor; on the same storey the current sweep's floor is the same plane and a
+  // more robust fallback than a fixed camera height when the destination's own detection failed
+  const targetFloor = plausible(b) ?? (Math.abs(b.p[2] - a.p[2]) < 1.0 ? plausible(a) : undefined) ?? b.p[2] - EYE_HEIGHT_M;
+  const pitch = Math.max(-40, Math.min(12, (Math.atan2(targetFloor - a.p[2], Math.max(distance, 0.4)) * 180) / Math.PI));
   return { yaw: normalizeYaw(-theta), pitch: Math.round(pitch * 10) / 10, distance: Math.round(distance * 100) / 100 };
 }
 
@@ -177,7 +188,7 @@ export function buildWalkthrough(generated: GeneratedTour, curation: Walkthrough
     const a = byId.get(from);
     const b = byId.get(to);
     if (!a || !b || !ids.has(from) || !ids.has(to) || from === to) return;
-    const base = worldLink(a, b);
+    const base = worldLink(a, b, curation.plan.sweepFloorZ);
     links.set(pair(from, to), { from, to, yaw: edit?.yaw ?? base.yaw, pitch: edit?.pitch ?? base.pitch, distance: base.distance });
   };
   for (const link of generated.candidateLinks) put(link.from, link.to);

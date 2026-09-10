@@ -147,9 +147,28 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .psv-container:fullscreen, .psv-container:-webkit-full-screen { border-radius: 0; background: #000; }
 @media (max-width: 767px) { .demo-stage { aspect-ratio: 4 / 5; max-height: calc(100dvh - 7rem); width: 100vw; margin-inline: calc(50% - 50vw); } }
 @media (max-height: 520px) and (orientation: landscape) { .demo-stage { aspect-ratio: auto; height: calc(100dvh - 3.5rem); max-height: none; } }
-.demo-psv .psv-container { background: transparent; }
+.demo-psv .psv-container { background: transparent; touch-action: none; } /* once active, one finger looks around inside the stage; the page scrolls again after Close */
 .demo-psv .psv-loader-container { display: none; }
+/* top-end cluster: the small Sodar badge and the close control (44 px target), clear of the chip at top-start */
+.demo-topbar { position: absolute; z-index: 6; top: max(.75rem, env(safe-area-inset-top)); inset-inline-end: max(.75rem, env(safe-area-inset-right)); display: flex; align-items: center; gap: .5rem; }
+.demo-topbar .demo-badge { position: static; }
 .demo-badge { position: absolute; z-index: 5; top: max(.75rem, env(safe-area-inset-top)); inset-inline-end: max(.75rem, env(safe-area-inset-right)); display: inline-flex; align-items: center; gap: .45rem; padding: .4rem .65rem .4rem .5rem; border-radius: 999px; background: rgba(0,0,0,.45); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,.14); }
+.demo-close { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem; border-radius: 999px; background: rgba(0,0,0,.45); border: 1px solid rgba(255,255,255,.18); color: #f4f2ee; backdrop-filter: blur(8px); transition: background .18s ease, border-color .18s ease; }
+.demo-close:hover, .demo-close:focus-visible { background: rgba(0,0,0,.65); border-color: rgba(255,255,255,.5); outline: none; }
+/* immediate acknowledgement while a destination preloads */
+.demo-loading { position: absolute; z-index: 6; left: 50%; top: max(.85rem, env(safe-area-inset-top)); transform: translateX(-50%); display: inline-flex; align-items: center; gap: .55rem; padding: .45rem .8rem; border-radius: 999px; background: rgba(0,0,0,.55); backdrop-filter: blur(8px); color: #f4f2ee; font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; pointer-events: none; }
+.demo-loading .demo-spinner { width: .9rem; height: .9rem; }
+/* edge hint: the nearest movement point is outside the view — a restrained chevron at that edge, thumb-sized */
+.demo-edge-hint { position: absolute; z-index: 6; top: 50%; transform: translateY(-50%); display: inline-flex; align-items: center; gap: .35rem; min-width: 3rem; min-height: 3rem; padding: .55rem .6rem; border-radius: 999px; background: rgba(0,0,0,.5); border: 1px solid rgba(255,255,255,.22); color: #f4f2ee; backdrop-filter: blur(8px); transition: background .18s ease, border-color .18s ease; }
+.demo-edge-hint.is-left { inset-inline-start: max(.6rem, env(safe-area-inset-left)); flex-direction: row; }
+.demo-edge-hint.is-right { inset-inline-end: max(.6rem, env(safe-area-inset-right)); flex-direction: row-reverse; }
+.demo-edge-hint:hover, .demo-edge-hint:focus-visible { background: rgba(0,0,0,.7); border-color: rgba(255,255,255,.55); outline: none; }
+.demo-edge-hint-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; max-width: 9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (max-width: 480px) { .demo-edge-hint-label { display: none; } }
+/* first-use message: shown until the visitor has moved once, above the navbar and out of the way of the rings */
+/* below the top row (chip / badge / close) so it never sits on a floor ring */
+.demo-firstuse { position: absolute; z-index: 6; left: 50%; top: calc(max(.75rem, env(safe-area-inset-top)) + 3.4rem); transform: translateX(-50%); max-width: calc(100% - 2rem); padding: .55rem .9rem; border-radius: 999px; background: rgba(0,0,0,.55); backdrop-filter: blur(8px); color: #f4f2ee; font-size: 12px; text-align: center; pointer-events: none; }
+.demo-loading + .demo-firstuse, .demo-loading ~ .demo-firstuse { display: none; }
 .demo-badge:hover { border-color: rgba(255,255,255,.4); }
 /* current-checkpoint chip: top-start, clear of the badge (top-end) and of Matterport's bottom-edge controls */
 .demo-chip { top: max(.75rem, env(safe-area-inset-top)); inset-inline-start: max(.75rem, env(safe-area-inset-left)); max-width: calc(100% - 9.5rem); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

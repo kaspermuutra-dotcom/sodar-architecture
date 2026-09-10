@@ -66,7 +66,7 @@ export function CheckpointRail({ items, activeNodeId, onSelect }: Props) {
                 const active = item.nodeId === activeNodeId;
                 return (
                   <li key={item.id}>
-                    <button type="button" onClick={() => onSelect(item.nodeId)} aria-current={active ? "true" : undefined} className={`demo-rail-item ${active ? "is-active" : ""}`}>
+                    <button type="button" onClick={() => onSelect(item.nodeId)} aria-current={active ? "true" : undefined} data-node={item.nodeId} className={`demo-rail-item ${active ? "is-active" : ""}`}>
                       <img src={item.thumb} alt="" width={64} height={32} loading="lazy" decoding="async" className="h-8 w-16 flex-none rounded-md object-cover" />
                       <span className="truncate text-sm">{item.label}</span>
                     </button>

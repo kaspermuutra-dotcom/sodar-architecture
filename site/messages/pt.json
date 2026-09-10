@@ -1369,7 +1369,7 @@
     "introLabel": "Visita interativa · captada no local",
     "attribution": "Demo de visita 3D para {agent} · {agency}",
     "start": "Iniciar visita",
-    "hint": "Arraste para olhar · Toque num anel no chão para ir até lá · Os pontos saltam entre zonas",
+    "hint": "Arraste para olhar em volta · Toque num ponto branco para avançar",
     "back": "Vista anterior",
     "restart": "Recomeçar",
     "fromHere": "A partir daqui",
@@ -1421,7 +1421,11 @@
       "upperRoom": "Divisão superior"
     },
     "planLabel": "Planta",
-    "planNote": "Vista em planta renderizada a partir dos dados de profundidade da digitalização"
+    "planNote": "Vista em planta renderizada a partir dos dados de profundidade da digitalização",
+    "firstUse": "Arraste para olhar em volta · Toque num ponto branco para avançar",
+    "turnTo": "Virar para {name}",
+    "close": "Fechar",
+    "loadingShort": "A carregar…"
   },
   "Portfolio": {
     "kicker": "Portfólio",

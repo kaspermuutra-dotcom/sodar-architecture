@@ -1369,7 +1369,7 @@
     "introLabel": "Interaktywny spacer · zarejestrowany na miejscu",
     "attribution": "Demo spaceru 3D dla {agent} · {agency}",
     "start": "Rozpocznij spacer",
-    "hint": "Przeciągnij, aby się rozejrzeć · Dotknij pierścienia na podłodze, aby tam przejść · Punkty przeskakują między strefami",
+    "hint": "Przeciągnij, aby się rozejrzeć · Dotknij białego punktu, aby przejść",
     "back": "Poprzedni widok",
     "restart": "Zacznij od nowa",
     "fromHere": "Stąd",
@@ -1421,7 +1421,11 @@
       "upperRoom": "Pokój na piętrze"
     },
     "planLabel": "Rzut",
-    "planNote": "Widok rzutu wyrenderowany z danych głębi skanu"
+    "planNote": "Widok rzutu wyrenderowany z danych głębi skanu",
+    "firstUse": "Przeciągnij, aby się rozejrzeć · Dotknij białego punktu, aby przejść",
+    "turnTo": "Obróć do: {name}",
+    "close": "Zamknij",
+    "loadingShort": "Ładowanie…"
   },
   "Portfolio": {
     "kicker": "Portfolio",

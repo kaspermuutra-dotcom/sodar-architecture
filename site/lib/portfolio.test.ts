@@ -12,7 +12,7 @@ describe("portfolio registry", () => {
   it("resolves project pages by slug and exposes public metadata inputs", () => {
     const project = getPortfolioProject("kaldapealse-tanav-2")!;
     expect(project.walkthrough.indexable).toBe(true);
-    expect(project.walkthrough.ogImage).toMatch(/^\/media\/portfolio\/kaldapealse-tanav-2\/t1\/og\.jpg$/);
+    expect(project.walkthrough.ogImage).toMatch(/^\/media\/portfolio\/kaldapealse-tanav-2\/t\d+\/og\.jpg$/);
     expect(project.walkthrough.startNodeId).toBe("f761f98a");
     expect(getPortfolioProject("nope")).toBeUndefined();
     expect(PORTFOLIO_WALKTHROUGHS).toHaveLength(1);
