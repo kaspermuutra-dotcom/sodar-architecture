@@ -339,7 +339,7 @@ export const VirtualTour = forwardRef<VirtualTourHandle, Props>(function Virtual
         ],
       }) as unknown as ViewerLike;
       viewer.current = v;
-      if (process.env.NODE_ENV !== "production") (window as unknown as { __psv?: unknown }).__psv = v; // inspection hook for QA scripts
+      (window as unknown as { __psv?: unknown }).__psv = v; // read-only inspection hook for the QA scripts (also on the live site: they verify every deploy)
       // PSV's "fade" ramps the tone-mapping exposure to 5× mid-transition (a white flash); with tone mapping off the
       // exposure is ignored and the transition is a plain opacity cross-fade between the two scenes.
       const three = (v as unknown as { renderer?: { renderer?: { toneMapping: number } } }).renderer?.renderer;
