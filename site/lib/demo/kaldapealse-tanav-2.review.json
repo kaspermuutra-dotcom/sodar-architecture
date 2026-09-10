@@ -1,0 +1,2138 @@
+{
+ "media": "site/public/media/portfolio/kaldapealse-tanav-2/t3",
+ "scenes": {
+  "8c8a7ac5": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "8c8a7ac5/ref-y0.webp",
+     "cur": "8c8a7ac5/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "8c8a7ac5/ref-y60.webp",
+     "cur": "8c8a7ac5/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "8c8a7ac5/ref-y120.webp",
+     "cur": "8c8a7ac5/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "8c8a7ac5/ref-y180.webp",
+     "cur": "8c8a7ac5/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "8c8a7ac5/ref-y240.webp",
+     "cur": "8c8a7ac5/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "8c8a7ac5/ref-y300.webp",
+     "cur": "8c8a7ac5/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "8c8a7ac5/ref-floor.webp",
+     "cur": "8c8a7ac5/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "8c8a7ac5/ref-ceiling.webp",
+     "cur": "8c8a7ac5/cur-ceiling.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "e1d8e3b2": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "e1d8e3b2/ref-y0.webp",
+     "cur": "e1d8e3b2/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "e1d8e3b2/ref-y60.webp",
+     "cur": "e1d8e3b2/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "e1d8e3b2/ref-y120.webp",
+     "cur": "e1d8e3b2/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "e1d8e3b2/ref-y180.webp",
+     "cur": "e1d8e3b2/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "e1d8e3b2/ref-y240.webp",
+     "cur": "e1d8e3b2/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "e1d8e3b2/ref-y300.webp",
+     "cur": "e1d8e3b2/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "e1d8e3b2/ref-floor.webp",
+     "cur": "e1d8e3b2/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "e1d8e3b2/ref-ceiling.webp",
+     "cur": "e1d8e3b2/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards f761f98a)",
+     "ref": "e1d8e3b2/ref-door0.webp",
+     "cur": "e1d8e3b2/cur-door0.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "f761f98a": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "f761f98a/ref-y0.webp",
+     "cur": "f761f98a/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "f761f98a/ref-y60.webp",
+     "cur": "f761f98a/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "f761f98a/ref-y120.webp",
+     "cur": "f761f98a/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "f761f98a/ref-y180.webp",
+     "cur": "f761f98a/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "f761f98a/ref-y240.webp",
+     "cur": "f761f98a/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "f761f98a/ref-y300.webp",
+     "cur": "f761f98a/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "f761f98a/ref-floor.webp",
+     "cur": "f761f98a/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "f761f98a/ref-ceiling.webp",
+     "cur": "f761f98a/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 9708a1e8)",
+     "ref": "f761f98a/ref-door0.webp",
+     "cur": "f761f98a/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards e1d8e3b2)",
+     "ref": "f761f98a/ref-door1.webp",
+     "cur": "f761f98a/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "9708a1e8": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "9708a1e8/ref-y0.webp",
+     "cur": "9708a1e8/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "9708a1e8/ref-y60.webp",
+     "cur": "9708a1e8/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "9708a1e8/ref-y120.webp",
+     "cur": "9708a1e8/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "9708a1e8/ref-y180.webp",
+     "cur": "9708a1e8/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "9708a1e8/ref-y240.webp",
+     "cur": "9708a1e8/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "9708a1e8/ref-y300.webp",
+     "cur": "9708a1e8/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "9708a1e8/ref-floor.webp",
+     "cur": "9708a1e8/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "9708a1e8/ref-ceiling.webp",
+     "cur": "9708a1e8/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards f761f98a)",
+     "ref": "9708a1e8/ref-door0.webp",
+     "cur": "9708a1e8/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 6adf3a13)",
+     "ref": "9708a1e8/ref-door1.webp",
+     "cur": "9708a1e8/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "6adf3a13": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "6adf3a13/ref-y0.webp",
+     "cur": "6adf3a13/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "6adf3a13/ref-y60.webp",
+     "cur": "6adf3a13/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "6adf3a13/ref-y120.webp",
+     "cur": "6adf3a13/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "6adf3a13/ref-y180.webp",
+     "cur": "6adf3a13/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "6adf3a13/ref-y240.webp",
+     "cur": "6adf3a13/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "6adf3a13/ref-y300.webp",
+     "cur": "6adf3a13/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "6adf3a13/ref-floor.webp",
+     "cur": "6adf3a13/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "6adf3a13/ref-ceiling.webp",
+     "cur": "6adf3a13/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 67139777)",
+     "ref": "6adf3a13/ref-door0.webp",
+     "cur": "6adf3a13/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 9708a1e8)",
+     "ref": "6adf3a13/ref-door1.webp",
+     "cur": "6adf3a13/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "67139777": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "67139777/ref-y0.webp",
+     "cur": "67139777/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "67139777/ref-y60.webp",
+     "cur": "67139777/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "67139777/ref-y120.webp",
+     "cur": "67139777/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "67139777/ref-y180.webp",
+     "cur": "67139777/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "67139777/ref-y240.webp",
+     "cur": "67139777/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "67139777/ref-y300.webp",
+     "cur": "67139777/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "67139777/ref-floor.webp",
+     "cur": "67139777/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "67139777/ref-ceiling.webp",
+     "cur": "67139777/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 6adf3a13)",
+     "ref": "67139777/ref-door0.webp",
+     "cur": "67139777/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 9960ad3a)",
+     "ref": "67139777/ref-door1.webp",
+     "cur": "67139777/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "93016101": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "93016101/ref-y0.webp",
+     "cur": "93016101/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "93016101/ref-y60.webp",
+     "cur": "93016101/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "93016101/ref-y120.webp",
+     "cur": "93016101/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "93016101/ref-y180.webp",
+     "cur": "93016101/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "93016101/ref-y240.webp",
+     "cur": "93016101/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "93016101/ref-y300.webp",
+     "cur": "93016101/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "93016101/ref-floor.webp",
+     "cur": "93016101/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "93016101/ref-ceiling.webp",
+     "cur": "93016101/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 9708a1e8)",
+     "ref": "93016101/ref-door0.webp",
+     "cur": "93016101/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards f4c34f0d)",
+     "ref": "93016101/ref-door1.webp",
+     "cur": "93016101/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "9f0410de": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "9f0410de/ref-y0.webp",
+     "cur": "9f0410de/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "9f0410de/ref-y60.webp",
+     "cur": "9f0410de/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "9f0410de/ref-y120.webp",
+     "cur": "9f0410de/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "9f0410de/ref-y180.webp",
+     "cur": "9f0410de/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "9f0410de/ref-y240.webp",
+     "cur": "9f0410de/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "9f0410de/ref-y300.webp",
+     "cur": "9f0410de/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "9f0410de/ref-floor.webp",
+     "cur": "9f0410de/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "9f0410de/ref-ceiling.webp",
+     "cur": "9f0410de/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 93016101)",
+     "ref": "9f0410de/ref-door0.webp",
+     "cur": "9f0410de/cur-door0.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "5aaa75c2": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "5aaa75c2/ref-y0.webp",
+     "cur": "5aaa75c2/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "5aaa75c2/ref-y60.webp",
+     "cur": "5aaa75c2/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "5aaa75c2/ref-y120.webp",
+     "cur": "5aaa75c2/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "5aaa75c2/ref-y180.webp",
+     "cur": "5aaa75c2/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "5aaa75c2/ref-y240.webp",
+     "cur": "5aaa75c2/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "5aaa75c2/ref-y300.webp",
+     "cur": "5aaa75c2/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "5aaa75c2/ref-floor.webp",
+     "cur": "5aaa75c2/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "5aaa75c2/ref-ceiling.webp",
+     "cur": "5aaa75c2/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 836ae58d)",
+     "ref": "5aaa75c2/ref-door0.webp",
+     "cur": "5aaa75c2/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 6adf3a13)",
+     "ref": "5aaa75c2/ref-door1.webp",
+     "cur": "5aaa75c2/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "836ae58d": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "836ae58d/ref-y0.webp",
+     "cur": "836ae58d/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "836ae58d/ref-y60.webp",
+     "cur": "836ae58d/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "836ae58d/ref-y120.webp",
+     "cur": "836ae58d/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "836ae58d/ref-y180.webp",
+     "cur": "836ae58d/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "836ae58d/ref-y240.webp",
+     "cur": "836ae58d/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "836ae58d/ref-y300.webp",
+     "cur": "836ae58d/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "836ae58d/ref-floor.webp",
+     "cur": "836ae58d/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "836ae58d/ref-ceiling.webp",
+     "cur": "836ae58d/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 5aaa75c2)",
+     "ref": "836ae58d/ref-door0.webp",
+     "cur": "836ae58d/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards a7cbb55f)",
+     "ref": "836ae58d/ref-door1.webp",
+     "cur": "836ae58d/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "a7cbb55f": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "a7cbb55f/ref-y0.webp",
+     "cur": "a7cbb55f/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "a7cbb55f/ref-y60.webp",
+     "cur": "a7cbb55f/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "a7cbb55f/ref-y120.webp",
+     "cur": "a7cbb55f/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "a7cbb55f/ref-y180.webp",
+     "cur": "a7cbb55f/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "a7cbb55f/ref-y240.webp",
+     "cur": "a7cbb55f/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "a7cbb55f/ref-y300.webp",
+     "cur": "a7cbb55f/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "a7cbb55f/ref-floor.webp",
+     "cur": "a7cbb55f/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "a7cbb55f/ref-ceiling.webp",
+     "cur": "a7cbb55f/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 836ae58d)",
+     "ref": "a7cbb55f/ref-door0.webp",
+     "cur": "a7cbb55f/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 437a3f0f)",
+     "ref": "a7cbb55f/ref-door1.webp",
+     "cur": "a7cbb55f/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "c80691fc": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "c80691fc/ref-y0.webp",
+     "cur": "c80691fc/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "c80691fc/ref-y60.webp",
+     "cur": "c80691fc/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "c80691fc/ref-y120.webp",
+     "cur": "c80691fc/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "c80691fc/ref-y180.webp",
+     "cur": "c80691fc/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "c80691fc/ref-y240.webp",
+     "cur": "c80691fc/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "c80691fc/ref-y300.webp",
+     "cur": "c80691fc/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "c80691fc/ref-floor.webp",
+     "cur": "c80691fc/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "c80691fc/ref-ceiling.webp",
+     "cur": "c80691fc/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards d80bd505)",
+     "ref": "c80691fc/ref-door0.webp",
+     "cur": "c80691fc/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards a7cbb55f)",
+     "ref": "c80691fc/ref-door1.webp",
+     "cur": "c80691fc/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "31e18ff1": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "31e18ff1/ref-y0.webp",
+     "cur": "31e18ff1/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "31e18ff1/ref-y60.webp",
+     "cur": "31e18ff1/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "31e18ff1/ref-y120.webp",
+     "cur": "31e18ff1/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "31e18ff1/ref-y180.webp",
+     "cur": "31e18ff1/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "31e18ff1/ref-y240.webp",
+     "cur": "31e18ff1/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "31e18ff1/ref-y300.webp",
+     "cur": "31e18ff1/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "31e18ff1/ref-floor.webp",
+     "cur": "31e18ff1/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "31e18ff1/ref-ceiling.webp",
+     "cur": "31e18ff1/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 64c45ade)",
+     "ref": "31e18ff1/ref-door0.webp",
+     "cur": "31e18ff1/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards d80bd505)",
+     "ref": "31e18ff1/ref-door1.webp",
+     "cur": "31e18ff1/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "64c45ade": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "64c45ade/ref-y0.webp",
+     "cur": "64c45ade/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "64c45ade/ref-y60.webp",
+     "cur": "64c45ade/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "64c45ade/ref-y120.webp",
+     "cur": "64c45ade/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "64c45ade/ref-y180.webp",
+     "cur": "64c45ade/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "64c45ade/ref-y240.webp",
+     "cur": "64c45ade/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "64c45ade/ref-y300.webp",
+     "cur": "64c45ade/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "64c45ade/ref-floor.webp",
+     "cur": "64c45ade/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "64c45ade/ref-ceiling.webp",
+     "cur": "64c45ade/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 31e18ff1)",
+     "ref": "64c45ade/ref-door0.webp",
+     "cur": "64c45ade/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 6933932f)",
+     "ref": "64c45ade/ref-door1.webp",
+     "cur": "64c45ade/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "6933932f": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "6933932f/ref-y0.webp",
+     "cur": "6933932f/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "6933932f/ref-y60.webp",
+     "cur": "6933932f/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "6933932f/ref-y120.webp",
+     "cur": "6933932f/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "6933932f/ref-y180.webp",
+     "cur": "6933932f/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "6933932f/ref-y240.webp",
+     "cur": "6933932f/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "6933932f/ref-y300.webp",
+     "cur": "6933932f/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "6933932f/ref-floor.webp",
+     "cur": "6933932f/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "6933932f/ref-ceiling.webp",
+     "cur": "6933932f/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards e3e179a3)",
+     "ref": "6933932f/ref-door0.webp",
+     "cur": "6933932f/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 8a5134b6)",
+     "ref": "6933932f/ref-door1.webp",
+     "cur": "6933932f/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "e3e179a3": {
+   "level": "exterior",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "e3e179a3/ref-y0.webp",
+     "cur": "e3e179a3/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "e3e179a3/ref-y60.webp",
+     "cur": "e3e179a3/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "e3e179a3/ref-y120.webp",
+     "cur": "e3e179a3/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "e3e179a3/ref-y180.webp",
+     "cur": "e3e179a3/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "e3e179a3/ref-y240.webp",
+     "cur": "e3e179a3/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "e3e179a3/ref-y300.webp",
+     "cur": "e3e179a3/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "e3e179a3/ref-floor.webp",
+     "cur": "e3e179a3/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "e3e179a3/ref-ceiling.webp",
+     "cur": "e3e179a3/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 6933932f)",
+     "ref": "e3e179a3/ref-door0.webp",
+     "cur": "e3e179a3/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 52c0066c)",
+     "ref": "e3e179a3/ref-door1.webp",
+     "cur": "e3e179a3/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "9960ad3a": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "9960ad3a/ref-y0.webp",
+     "cur": "9960ad3a/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "9960ad3a/ref-y60.webp",
+     "cur": "9960ad3a/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "9960ad3a/ref-y120.webp",
+     "cur": "9960ad3a/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "9960ad3a/ref-y180.webp",
+     "cur": "9960ad3a/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "9960ad3a/ref-y240.webp",
+     "cur": "9960ad3a/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "9960ad3a/ref-y300.webp",
+     "cur": "9960ad3a/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "9960ad3a/ref-floor.webp",
+     "cur": "9960ad3a/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "9960ad3a/ref-ceiling.webp",
+     "cur": "9960ad3a/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 6075ef93)",
+     "ref": "9960ad3a/ref-door0.webp",
+     "cur": "9960ad3a/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 67139777)",
+     "ref": "9960ad3a/ref-door1.webp",
+     "cur": "9960ad3a/cur-door1.webp"
+    }
+   ],
+   "status": "rejected",
+   "note": "Hallway 1 \u2014 manual review 2026-09-11: mismatched wall/floor regions across frame seams"
+  },
+  "6075ef93": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "6075ef93/ref-y0.webp",
+     "cur": "6075ef93/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "6075ef93/ref-y60.webp",
+     "cur": "6075ef93/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "6075ef93/ref-y120.webp",
+     "cur": "6075ef93/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "6075ef93/ref-y180.webp",
+     "cur": "6075ef93/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "6075ef93/ref-y240.webp",
+     "cur": "6075ef93/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "6075ef93/ref-y300.webp",
+     "cur": "6075ef93/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "6075ef93/ref-floor.webp",
+     "cur": "6075ef93/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "6075ef93/ref-ceiling.webp",
+     "cur": "6075ef93/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 80b0056a)",
+     "ref": "6075ef93/ref-door0.webp",
+     "cur": "6075ef93/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 9960ad3a)",
+     "ref": "6075ef93/ref-door1.webp",
+     "cur": "6075ef93/cur-door1.webp"
+    }
+   ],
+   "status": "rejected",
+   "note": "Hallway 2 \u2014 ground-truth sheet: stair/wall boundary displaced vs preview, dark seam band across wall"
+  },
+  "80b0056a": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "80b0056a/ref-y0.webp",
+     "cur": "80b0056a/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "80b0056a/ref-y60.webp",
+     "cur": "80b0056a/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "80b0056a/ref-y120.webp",
+     "cur": "80b0056a/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "80b0056a/ref-y180.webp",
+     "cur": "80b0056a/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "80b0056a/ref-y240.webp",
+     "cur": "80b0056a/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "80b0056a/ref-y300.webp",
+     "cur": "80b0056a/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "80b0056a/ref-floor.webp",
+     "cur": "80b0056a/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "80b0056a/ref-ceiling.webp",
+     "cur": "80b0056a/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards f85e95a3)",
+     "ref": "80b0056a/ref-door0.webp",
+     "cur": "80b0056a/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 6075ef93)",
+     "ref": "80b0056a/ref-door1.webp",
+     "cur": "80b0056a/cur-door1.webp"
+    }
+   ],
+   "status": "rejected",
+   "note": "Hallway 3 \u2014 manual review: mismatched source frames on walls"
+  },
+  "f85e95a3": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "f85e95a3/ref-y0.webp",
+     "cur": "f85e95a3/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "f85e95a3/ref-y60.webp",
+     "cur": "f85e95a3/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "f85e95a3/ref-y120.webp",
+     "cur": "f85e95a3/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "f85e95a3/ref-y180.webp",
+     "cur": "f85e95a3/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "f85e95a3/ref-y240.webp",
+     "cur": "f85e95a3/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "f85e95a3/ref-y300.webp",
+     "cur": "f85e95a3/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "f85e95a3/ref-floor.webp",
+     "cur": "f85e95a3/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "f85e95a3/ref-ceiling.webp",
+     "cur": "f85e95a3/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 80b0056a)",
+     "ref": "f85e95a3/ref-door0.webp",
+     "cur": "f85e95a3/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards e4b461ee)",
+     "ref": "f85e95a3/ref-door1.webp",
+     "cur": "f85e95a3/cur-door1.webp"
+    }
+   ],
+   "status": "rejected",
+   "note": "Hallway 4 \u2014 manual review: mismatched source frames on walls"
+  },
+  "f4c34f0d": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "f4c34f0d/ref-y0.webp",
+     "cur": "f4c34f0d/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "f4c34f0d/ref-y60.webp",
+     "cur": "f4c34f0d/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "f4c34f0d/ref-y120.webp",
+     "cur": "f4c34f0d/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "f4c34f0d/ref-y180.webp",
+     "cur": "f4c34f0d/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "f4c34f0d/ref-y240.webp",
+     "cur": "f4c34f0d/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "f4c34f0d/ref-y300.webp",
+     "cur": "f4c34f0d/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "f4c34f0d/ref-floor.webp",
+     "cur": "f4c34f0d/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "f4c34f0d/ref-ceiling.webp",
+     "cur": "f4c34f0d/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 9960ad3a)",
+     "ref": "f4c34f0d/ref-door0.webp",
+     "cur": "f4c34f0d/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 80b0056a)",
+     "ref": "f4c34f0d/ref-door1.webp",
+     "cur": "f4c34f0d/cur-door1.webp"
+    }
+   ],
+   "status": "rejected",
+   "note": "Foot of the stairs \u2014 ground-truth sheet: wall/floor boundary bends vs preview (yaw 240), stair treads split"
+  },
+  "fbd51372": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "fbd51372/ref-y0.webp",
+     "cur": "fbd51372/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "fbd51372/ref-y60.webp",
+     "cur": "fbd51372/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "fbd51372/ref-y120.webp",
+     "cur": "fbd51372/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "fbd51372/ref-y180.webp",
+     "cur": "fbd51372/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "fbd51372/ref-y240.webp",
+     "cur": "fbd51372/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "fbd51372/ref-y300.webp",
+     "cur": "fbd51372/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "fbd51372/ref-floor.webp",
+     "cur": "fbd51372/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "fbd51372/ref-ceiling.webp",
+     "cur": "fbd51372/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards e4b461ee)",
+     "ref": "fbd51372/ref-door0.webp",
+     "cur": "fbd51372/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards f4e36aa6)",
+     "ref": "fbd51372/ref-door1.webp",
+     "cur": "fbd51372/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "f4e36aa6": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "f4e36aa6/ref-y0.webp",
+     "cur": "f4e36aa6/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "f4e36aa6/ref-y60.webp",
+     "cur": "f4e36aa6/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "f4e36aa6/ref-y120.webp",
+     "cur": "f4e36aa6/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "f4e36aa6/ref-y180.webp",
+     "cur": "f4e36aa6/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "f4e36aa6/ref-y240.webp",
+     "cur": "f4e36aa6/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "f4e36aa6/ref-y300.webp",
+     "cur": "f4e36aa6/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "f4e36aa6/ref-floor.webp",
+     "cur": "f4e36aa6/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "f4e36aa6/ref-ceiling.webp",
+     "cur": "f4e36aa6/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 795122f1)",
+     "ref": "f4e36aa6/ref-door0.webp",
+     "cur": "f4e36aa6/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards aa5000b8)",
+     "ref": "f4e36aa6/ref-door1.webp",
+     "cur": "f4e36aa6/cur-door1.webp"
+    }
+   ],
+   "status": "rejected",
+   "note": "Kitchen 2 \u2014 ground-truth sheet: broad smeared seam masks on walls (yaw 120/240/300), bent wall edge"
+  },
+  "795122f1": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "795122f1/ref-y0.webp",
+     "cur": "795122f1/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "795122f1/ref-y60.webp",
+     "cur": "795122f1/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "795122f1/ref-y120.webp",
+     "cur": "795122f1/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "795122f1/ref-y180.webp",
+     "cur": "795122f1/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "795122f1/ref-y240.webp",
+     "cur": "795122f1/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "795122f1/ref-y300.webp",
+     "cur": "795122f1/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "795122f1/ref-floor.webp",
+     "cur": "795122f1/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "795122f1/ref-ceiling.webp",
+     "cur": "795122f1/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards f4e36aa6)",
+     "ref": "795122f1/ref-door0.webp",
+     "cur": "795122f1/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 6933932f)",
+     "ref": "795122f1/ref-door1.webp",
+     "cur": "795122f1/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "95b353d9": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "95b353d9/ref-y0.webp",
+     "cur": "95b353d9/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "95b353d9/ref-y60.webp",
+     "cur": "95b353d9/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "95b353d9/ref-y120.webp",
+     "cur": "95b353d9/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "95b353d9/ref-y180.webp",
+     "cur": "95b353d9/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "95b353d9/ref-y240.webp",
+     "cur": "95b353d9/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "95b353d9/ref-y300.webp",
+     "cur": "95b353d9/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "95b353d9/ref-floor.webp",
+     "cur": "95b353d9/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "95b353d9/ref-ceiling.webp",
+     "cur": "95b353d9/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards bf2609e1)",
+     "ref": "95b353d9/ref-door0.webp",
+     "cur": "95b353d9/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards e4b461ee)",
+     "ref": "95b353d9/ref-door1.webp",
+     "cur": "95b353d9/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "f0cd9cf0": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "f0cd9cf0/ref-y0.webp",
+     "cur": "f0cd9cf0/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "f0cd9cf0/ref-y60.webp",
+     "cur": "f0cd9cf0/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "f0cd9cf0/ref-y120.webp",
+     "cur": "f0cd9cf0/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "f0cd9cf0/ref-y180.webp",
+     "cur": "f0cd9cf0/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "f0cd9cf0/ref-y240.webp",
+     "cur": "f0cd9cf0/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "f0cd9cf0/ref-y300.webp",
+     "cur": "f0cd9cf0/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "f0cd9cf0/ref-floor.webp",
+     "cur": "f0cd9cf0/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "f0cd9cf0/ref-ceiling.webp",
+     "cur": "f0cd9cf0/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards f228f9e5)",
+     "ref": "f0cd9cf0/ref-door0.webp",
+     "cur": "f0cd9cf0/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards aa5000b8)",
+     "ref": "f0cd9cf0/ref-door1.webp",
+     "cur": "f0cd9cf0/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "8a5134b6": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "8a5134b6/ref-y0.webp",
+     "cur": "8a5134b6/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "8a5134b6/ref-y60.webp",
+     "cur": "8a5134b6/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "8a5134b6/ref-y120.webp",
+     "cur": "8a5134b6/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "8a5134b6/ref-y180.webp",
+     "cur": "8a5134b6/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "8a5134b6/ref-y240.webp",
+     "cur": "8a5134b6/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "8a5134b6/ref-y300.webp",
+     "cur": "8a5134b6/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "8a5134b6/ref-floor.webp",
+     "cur": "8a5134b6/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "8a5134b6/ref-ceiling.webp",
+     "cur": "8a5134b6/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 6933932f)",
+     "ref": "8a5134b6/ref-door0.webp",
+     "cur": "8a5134b6/cur-door0.webp"
+    }
+   ],
+   "status": "rejected",
+   "note": "Main room 1 \u2014 manual review: seams and colour patches"
+  },
+  "52c0066c": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "52c0066c/ref-y0.webp",
+     "cur": "52c0066c/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "52c0066c/ref-y60.webp",
+     "cur": "52c0066c/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "52c0066c/ref-y120.webp",
+     "cur": "52c0066c/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "52c0066c/ref-y180.webp",
+     "cur": "52c0066c/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "52c0066c/ref-y240.webp",
+     "cur": "52c0066c/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "52c0066c/ref-y300.webp",
+     "cur": "52c0066c/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "52c0066c/ref-floor.webp",
+     "cur": "52c0066c/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "52c0066c/ref-ceiling.webp",
+     "cur": "52c0066c/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards e3e179a3)",
+     "ref": "52c0066c/ref-door0.webp",
+     "cur": "52c0066c/cur-door0.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "437a3f0f": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "437a3f0f/ref-y0.webp",
+     "cur": "437a3f0f/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "437a3f0f/ref-y60.webp",
+     "cur": "437a3f0f/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "437a3f0f/ref-y120.webp",
+     "cur": "437a3f0f/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "437a3f0f/ref-y180.webp",
+     "cur": "437a3f0f/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "437a3f0f/ref-y240.webp",
+     "cur": "437a3f0f/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "437a3f0f/ref-y300.webp",
+     "cur": "437a3f0f/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "437a3f0f/ref-floor.webp",
+     "cur": "437a3f0f/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "437a3f0f/ref-ceiling.webp",
+     "cur": "437a3f0f/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 6075ef93)",
+     "ref": "437a3f0f/ref-door0.webp",
+     "cur": "437a3f0f/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards a7cbb55f)",
+     "ref": "437a3f0f/ref-door1.webp",
+     "cur": "437a3f0f/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "bf2609e1": {
+   "level": "ground",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "bf2609e1/ref-y0.webp",
+     "cur": "bf2609e1/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "bf2609e1/ref-y60.webp",
+     "cur": "bf2609e1/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "bf2609e1/ref-y120.webp",
+     "cur": "bf2609e1/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "bf2609e1/ref-y180.webp",
+     "cur": "bf2609e1/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "bf2609e1/ref-y240.webp",
+     "cur": "bf2609e1/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "bf2609e1/ref-y300.webp",
+     "cur": "bf2609e1/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "bf2609e1/ref-floor.webp",
+     "cur": "bf2609e1/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "bf2609e1/ref-ceiling.webp",
+     "cur": "bf2609e1/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards d80bd505)",
+     "ref": "bf2609e1/ref-door0.webp",
+     "cur": "bf2609e1/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 95b353d9)",
+     "ref": "bf2609e1/ref-door1.webp",
+     "cur": "bf2609e1/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "453f34b1": {
+   "level": "upper",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "453f34b1/ref-y0.webp",
+     "cur": "453f34b1/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "453f34b1/ref-y60.webp",
+     "cur": "453f34b1/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "453f34b1/ref-y120.webp",
+     "cur": "453f34b1/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "453f34b1/ref-y180.webp",
+     "cur": "453f34b1/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "453f34b1/ref-y240.webp",
+     "cur": "453f34b1/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "453f34b1/ref-y300.webp",
+     "cur": "453f34b1/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "453f34b1/ref-floor.webp",
+     "cur": "453f34b1/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "453f34b1/ref-ceiling.webp",
+     "cur": "453f34b1/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 917be4db)",
+     "ref": "453f34b1/ref-door0.webp",
+     "cur": "453f34b1/cur-door0.webp"
+    }
+   ],
+   "status": "rejected",
+   "note": "Upper stairs \u2014 manual review: overlapping stair geometry"
+  },
+  "917be4db": {
+   "level": "upper",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "917be4db/ref-y0.webp",
+     "cur": "917be4db/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "917be4db/ref-y60.webp",
+     "cur": "917be4db/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "917be4db/ref-y120.webp",
+     "cur": "917be4db/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "917be4db/ref-y180.webp",
+     "cur": "917be4db/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "917be4db/ref-y240.webp",
+     "cur": "917be4db/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "917be4db/ref-y300.webp",
+     "cur": "917be4db/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "917be4db/ref-floor.webp",
+     "cur": "917be4db/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "917be4db/ref-ceiling.webp",
+     "cur": "917be4db/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 453f34b1)",
+     "ref": "917be4db/ref-door0.webp",
+     "cur": "917be4db/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards b37eec57)",
+     "ref": "917be4db/ref-door1.webp",
+     "cur": "917be4db/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "30833d82": {
+   "level": "upper",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "30833d82/ref-y0.webp",
+     "cur": "30833d82/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "30833d82/ref-y60.webp",
+     "cur": "30833d82/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "30833d82/ref-y120.webp",
+     "cur": "30833d82/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "30833d82/ref-y180.webp",
+     "cur": "30833d82/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "30833d82/ref-y240.webp",
+     "cur": "30833d82/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "30833d82/ref-y300.webp",
+     "cur": "30833d82/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "30833d82/ref-floor.webp",
+     "cur": "30833d82/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "30833d82/ref-ceiling.webp",
+     "cur": "30833d82/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards b37eec57)",
+     "ref": "30833d82/ref-door0.webp",
+     "cur": "30833d82/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 349d9a99)",
+     "ref": "30833d82/ref-door1.webp",
+     "cur": "30833d82/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "289e49f7": {
+   "level": "upper",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "289e49f7/ref-y0.webp",
+     "cur": "289e49f7/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "289e49f7/ref-y60.webp",
+     "cur": "289e49f7/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "289e49f7/ref-y120.webp",
+     "cur": "289e49f7/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "289e49f7/ref-y180.webp",
+     "cur": "289e49f7/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "289e49f7/ref-y240.webp",
+     "cur": "289e49f7/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "289e49f7/ref-y300.webp",
+     "cur": "289e49f7/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "289e49f7/ref-floor.webp",
+     "cur": "289e49f7/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "289e49f7/ref-ceiling.webp",
+     "cur": "289e49f7/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 30833d82)",
+     "ref": "289e49f7/ref-door0.webp",
+     "cur": "289e49f7/cur-door0.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "349d9a99": {
+   "level": "upper",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "349d9a99/ref-y0.webp",
+     "cur": "349d9a99/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "349d9a99/ref-y60.webp",
+     "cur": "349d9a99/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "349d9a99/ref-y120.webp",
+     "cur": "349d9a99/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "349d9a99/ref-y180.webp",
+     "cur": "349d9a99/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "349d9a99/ref-y240.webp",
+     "cur": "349d9a99/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "349d9a99/ref-y300.webp",
+     "cur": "349d9a99/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "349d9a99/ref-floor.webp",
+     "cur": "349d9a99/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "349d9a99/ref-ceiling.webp",
+     "cur": "349d9a99/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 30833d82)",
+     "ref": "349d9a99/ref-door0.webp",
+     "cur": "349d9a99/cur-door0.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "b37eec57": {
+   "level": "upper",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "b37eec57/ref-y0.webp",
+     "cur": "b37eec57/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "b37eec57/ref-y60.webp",
+     "cur": "b37eec57/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "b37eec57/ref-y120.webp",
+     "cur": "b37eec57/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "b37eec57/ref-y180.webp",
+     "cur": "b37eec57/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "b37eec57/ref-y240.webp",
+     "cur": "b37eec57/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "b37eec57/ref-y300.webp",
+     "cur": "b37eec57/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "b37eec57/ref-floor.webp",
+     "cur": "b37eec57/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "b37eec57/ref-ceiling.webp",
+     "cur": "b37eec57/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards 925dd397)",
+     "ref": "b37eec57/ref-door0.webp",
+     "cur": "b37eec57/cur-door0.webp"
+    },
+    {
+     "name": "doorway 2 (towards 30833d82)",
+     "ref": "b37eec57/ref-door1.webp",
+     "cur": "b37eec57/cur-door1.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  },
+  "925dd397": {
+   "level": "upper",
+   "views": [
+    {
+     "yaw": 0,
+     "ref": "925dd397/ref-y0.webp",
+     "cur": "925dd397/cur-y0.webp"
+    },
+    {
+     "yaw": 60,
+     "ref": "925dd397/ref-y60.webp",
+     "cur": "925dd397/cur-y60.webp"
+    },
+    {
+     "yaw": 120,
+     "ref": "925dd397/ref-y120.webp",
+     "cur": "925dd397/cur-y120.webp"
+    },
+    {
+     "yaw": 180,
+     "ref": "925dd397/ref-y180.webp",
+     "cur": "925dd397/cur-y180.webp"
+    },
+    {
+     "yaw": 240,
+     "ref": "925dd397/ref-y240.webp",
+     "cur": "925dd397/cur-y240.webp"
+    },
+    {
+     "yaw": 300,
+     "ref": "925dd397/ref-y300.webp",
+     "cur": "925dd397/cur-y300.webp"
+    }
+   ],
+   "crops": [
+    {
+     "name": "floor",
+     "ref": "925dd397/ref-floor.webp",
+     "cur": "925dd397/cur-floor.webp"
+    },
+    {
+     "name": "ceiling",
+     "ref": "925dd397/ref-ceiling.webp",
+     "cur": "925dd397/cur-ceiling.webp"
+    },
+    {
+     "name": "doorway 1 (towards b37eec57)",
+     "ref": "925dd397/ref-door0.webp",
+     "cur": "925dd397/cur-door0.webp"
+    }
+   ],
+   "status": "needs-review",
+   "note": ""
+  }
+ }
+}

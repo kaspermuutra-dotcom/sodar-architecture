@@ -24,6 +24,8 @@ export type PortfolioItem =
       image: string;
       /** A distinction shown on the card, e.g. the first client scan. */
       distinction?: "first-client";
+      /** Unlisted: the project page stays reachable by URL (review, diagnosis) but is not shown in the portfolio or on the home page. */
+      unlisted?: boolean;
       walkthrough: Walkthrough;
     }
   | {
@@ -47,6 +49,8 @@ export const PORTFOLIO: PortfolioItem[] = [
     client: `${kaldapealse.agent.name} · ${kaldapealse.agent.agency}`,
     image: kaldapealse.poster,
     distinction: "first-client",
+    // Withdrawn from the public portfolio on 2026-09-11 pending the reconstruction review (see /review/kaldapealse-tanav-2).
+    unlisted: true,
     walkthrough: kaldapealse,
   },
   { kind: "sample", order: 10, sampleIndex: 0, image: "/media/scans-window.jpg", clip: "/media/scans-window.mp4" },
@@ -56,6 +60,8 @@ export const PORTFOLIO: PortfolioItem[] = [
 ].sort((a, b) => a.order - b.order) as PortfolioItem[];
 
 export const PORTFOLIO_WALKTHROUGHS = PORTFOLIO.filter((item): item is Extract<PortfolioItem, { kind: "walkthrough" }> => item.kind === "walkthrough");
+/** What the portfolio index and the home page show: everything that is not unlisted. */
+export const PORTFOLIO_LISTED = PORTFOLIO.filter((item) => item.kind !== "walkthrough" || !item.unlisted);
 
 export function getPortfolioProject(slug: string) {
   return PORTFOLIO_WALKTHROUGHS.find((item) => item.slug === slug);

@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LoopVideo } from "@/components/loop-video";
-import { PORTFOLIO } from "@/lib/portfolio";
+import { PORTFOLIO_LISTED } from "@/lib/portfolio";
 
 type Props = {
   /** Homepage variant: section chrome with a link to the full portfolio. On `/portfolio` the page supplies its own heading. */
@@ -19,7 +19,7 @@ export function PortfolioGrid({ variant = "index" }: Props) {
 
   const grid = (
     <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      {PORTFOLIO.map((item) =>
+      {PORTFOLIO_LISTED.map((item) =>
         item.kind === "walkthrough" ? (
           <Link key={item.slug} href={`/portfolio/${item.slug}`} className="group block sm:col-span-2" aria-label={`${t(`items.${item.labelKey}.eyebrow`)} — ${item.title}`}>
             <div className="tile aspect-[3/4] border border-border sm:aspect-[3/2]">
