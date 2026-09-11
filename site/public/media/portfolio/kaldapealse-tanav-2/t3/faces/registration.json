@@ -594,41 +594,6 @@
   "files": 126,
   "faceSize": 3072
  },
- "6075ef93": {
-  "id": "6075ef93",
-  "score": 0.914,
-  "identityScore": 0.821,
-  "tiltYawPitchRoll": [
-   3.5,
-   -3.25,
-   -0.75
-  ],
-  "gains": [
-   0.931,
-   0.953,
-   0.984,
-   0.975,
-   1.042,
-   1.116
-  ],
-  "seams": "optimal-path",
-  "reprojection": "none",
-  "planes": 0,
-  "planarFraction": 0.0,
-  "offsetScale": 1.0,
-  "capGain": [
-   1.1,
-   1.098,
-   1.102
-  ],
-  "colourGain": [
-   0.8209,
-   0.8187,
-   0.7211
-  ],
-  "files": 126,
-  "faceSize": 3072
- },
  "f85e95a3": {
   "id": "f85e95a3",
   "score": 0.954,

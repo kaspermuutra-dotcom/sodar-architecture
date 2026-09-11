@@ -56,12 +56,6 @@
    "level1VsLevel2": 1.29,
    "topBottomOrientation": 0.997
   },
-  "6075ef93": {
-   "baseVsLevel1": 2.12,
-   "baseVsLevel2": 2.1,
-   "level1VsLevel2": 0.77,
-   "topBottomOrientation": 0.997
-  },
   "64c45ade": {
    "baseVsLevel1": 3.1,
    "baseVsLevel2": 3.16,
@@ -403,38 +397,11 @@
    "crossLevel": true,
    "exterior": false
   },
-  "9960ad3a>6075ef93": {
-   "ev": 0.282,
-   "rg": -5.6,
-   "bg": 9.5,
-   "n": 92102,
-   "weight": 1.0,
-   "crossLevel": false,
-   "exterior": false
-  },
   "9960ad3a>f4c34f0d": {
    "ev": -0.331,
    "rg": 8.7,
    "bg": -16.0,
    "n": 39359,
-   "weight": 1.0,
-   "crossLevel": false,
-   "exterior": false
-  },
-  "6075ef93>80b0056a": {
-   "ev": 0.07,
-   "rg": -4.3,
-   "bg": 16.7,
-   "n": 47406,
-   "weight": 1.0,
-   "crossLevel": false,
-   "exterior": false
-  },
-  "6075ef93>437a3f0f": {
-   "ev": -0.045,
-   "rg": -3.0,
-   "bg": 1.4,
-   "n": 31050,
    "weight": 1.0,
    "crossLevel": false,
    "exterior": false

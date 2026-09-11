@@ -971,11 +971,6 @@
      "cur": "9960ad3a/cur-ceiling.webp"
     },
     {
-     "name": "doorway 1 (towards 6075ef93)",
-     "ref": "9960ad3a/ref-door0.webp",
-     "cur": "9960ad3a/cur-door0.webp"
-    },
-    {
      "name": "doorway 2 (towards 67139777)",
      "ref": "9960ad3a/ref-door1.webp",
      "cur": "9960ad3a/cur-door1.webp"
@@ -983,65 +978,6 @@
    ],
    "status": "rejected",
    "note": "Hallway 1 \u2014 manual review 2026-09-11: mismatched wall/floor regions across frame seams"
-  },
-  "6075ef93": {
-   "level": "ground",
-   "views": [
-    {
-     "yaw": 0,
-     "ref": "6075ef93/ref-y0.webp",
-     "cur": "6075ef93/cur-y0.webp"
-    },
-    {
-     "yaw": 60,
-     "ref": "6075ef93/ref-y60.webp",
-     "cur": "6075ef93/cur-y60.webp"
-    },
-    {
-     "yaw": 120,
-     "ref": "6075ef93/ref-y120.webp",
-     "cur": "6075ef93/cur-y120.webp"
-    },
-    {
-     "yaw": 180,
-     "ref": "6075ef93/ref-y180.webp",
-     "cur": "6075ef93/cur-y180.webp"
-    },
-    {
-     "yaw": 240,
-     "ref": "6075ef93/ref-y240.webp",
-     "cur": "6075ef93/cur-y240.webp"
-    },
-    {
-     "yaw": 300,
-     "ref": "6075ef93/ref-y300.webp",
-     "cur": "6075ef93/cur-y300.webp"
-    }
-   ],
-   "crops": [
-    {
-     "name": "floor",
-     "ref": "6075ef93/ref-floor.webp",
-     "cur": "6075ef93/cur-floor.webp"
-    },
-    {
-     "name": "ceiling",
-     "ref": "6075ef93/ref-ceiling.webp",
-     "cur": "6075ef93/cur-ceiling.webp"
-    },
-    {
-     "name": "doorway 1 (towards 80b0056a)",
-     "ref": "6075ef93/ref-door0.webp",
-     "cur": "6075ef93/cur-door0.webp"
-    },
-    {
-     "name": "doorway 2 (towards 9960ad3a)",
-     "ref": "6075ef93/ref-door1.webp",
-     "cur": "6075ef93/cur-door1.webp"
-    }
-   ],
-   "status": "rejected",
-   "note": "Hallway 2 \u2014 ground-truth sheet: stair/wall boundary displaced vs preview, dark seam band across wall"
   },
   "80b0056a": {
    "level": "ground",
@@ -1092,11 +1028,6 @@
      "name": "doorway 1 (towards f85e95a3)",
      "ref": "80b0056a/ref-door0.webp",
      "cur": "80b0056a/cur-door0.webp"
-    },
-    {
-     "name": "doorway 2 (towards 6075ef93)",
-     "ref": "80b0056a/ref-door1.webp",
-     "cur": "80b0056a/cur-door1.webp"
     }
    ],
    "status": "rejected",
@@ -1667,11 +1598,6 @@
      "name": "ceiling",
      "ref": "437a3f0f/ref-ceiling.webp",
      "cur": "437a3f0f/cur-ceiling.webp"
-    },
-    {
-     "name": "doorway 1 (towards 6075ef93)",
-     "ref": "437a3f0f/ref-door0.webp",
-     "cur": "437a3f0f/cur-door0.webp"
     },
     {
      "name": "doorway 2 (towards a7cbb55f)",

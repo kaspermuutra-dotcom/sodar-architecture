@@ -21,6 +21,17 @@ import { buildWalkthrough, type GeneratedTour, type Walkthrough, type Walkthroug
  *   panorama so the arrow lands on the doorway or path.
  * Room names are only used where the imagery makes the function plain
  * (kitchen island and hob, bathroom fixtures); other rooms stay neutral.
+ *
+ * 2026-09-11 — the second hallway sweep (between the entrance hall and the
+ * kitchen opening) was removed from the tour and from the shipped data: its
+ * master showed a displaced stair/wall boundary and a dark seam band that
+ * survived every reprocessing pass. Its neighbours were re-linked only where
+ * the panoramas show a clear passage: hall 1 ↔ hall 3 along the open
+ * corridor (both frames show the other sweep's spot on the hall floor), and
+ * room 1 ↔ hall 3 through room 1's door (the ring from room 1 is nudged to
+ * world yaw 286°, inside the opening measured at 263–297°, because the
+ * straight bearing of 298° clips the door jamb). Room 1 ↔ hall 1 was not
+ * added: from hall 1 that bearing runs into the wall beside the door.
  */
 
 // Version segment: bump (t1 → t2) whenever the tiles are regenerated; the CDN caches this path immutably.
@@ -55,8 +66,7 @@ const kaldapealseCuration: WalkthroughCuration = {
     "6933932f": { labelKey: "terrace", variant: 2, floor: "exterior", lookAt: "e3e179a3" },
     e3e179a3: { labelKey: "terrace", variant: 3, floor: "exterior", lookAt: "6933932f" },
     // ground floor
-    "9960ad3a": { labelKey: "hallway", variant: 1, floor: "ground", lookAt: "6075ef93" },
-    "6075ef93": { labelKey: "hallway", variant: 2, floor: "ground", lookAt: "80b0056a" },
+    "9960ad3a": { labelKey: "hallway", variant: 1, floor: "ground", lookAt: "80b0056a" },
     "80b0056a": { labelKey: "hallway", variant: 3, floor: "ground", lookAt: "f85e95a3" },
     f85e95a3: { labelKey: "hallway", variant: 4, floor: "ground", lookAt: "fbd51372" },
     f4c34f0d: { labelKey: "stairsBottom", floor: "ground", lookAt: "453f34b1" },
@@ -67,7 +77,7 @@ const kaldapealseCuration: WalkthroughCuration = {
     f0cd9cf0: { labelKey: "bathroom", floor: "ground", lookAt: "795122f1" },
     "8a5134b6": { labelKey: "mainRoom", variant: 1, floor: "ground", lookAt: "52c0066c" },
     "52c0066c": { labelKey: "mainRoom", variant: 2, floor: "ground", lookAt: "8a5134b6" },
-    "437a3f0f": { labelKey: "room", variant: 1, floor: "ground", lookAt: "6075ef93" },
+    "437a3f0f": { labelKey: "room", variant: 1, floor: "ground", lookAt: "80b0056a" },
     bf2609e1: { labelKey: "room", variant: 2, floor: "ground", lookAt: "95b353d9" },
     // upper floor
     "453f34b1": { labelKey: "stairs", floor: "upper", lookAt: "917be4db" },
@@ -100,23 +110,28 @@ const kaldapealseCuration: WalkthroughCuration = {
     { from: "f85e95a3", to: "fbd51372" }, // hall → kitchen doorway
     { from: "95b353d9", to: "fbd51372" }, // dining end → kitchen island
     { from: "c80691fc", to: "31e18ff1" }, // garden path along the hedge
+    { from: "9960ad3a", to: "80b0056a" }, // entrance hall → hall centre along the open corridor (replaces the removed hall sweep)
+    { from: "437a3f0f", to: "80b0056a" }, // room 1 → hall through its door (replaces the removed hall sweep)
   ],
   adjustLinks: [
     // First ring: lifted from the foot of the steps so it sits inside the opening frame (default pitch −6°).
     { from: "f761f98a", to: "9708a1e8", pitch: -30 },
+    // Room 1's door opening spans world yaw 263–297° from the sweep; the straight bearing to hall 3 (298°) clips the
+    // jamb, so the ring sits inside the opening on the hall floor beyond it.
+    { from: "437a3f0f", to: "80b0056a", yaw: 286 },
   ],
   checkpoints: [
     { id: "outside", nodeId: "f761f98a", labelKey: "outside", floor: "exterior" },
     { id: "entrance", nodeId: "6adf3a13", labelKey: "entrance", floor: "exterior" },
     { id: "terrace", nodeId: "6933932f", labelKey: "terrace", floor: "exterior" },
-    { id: "hallway", nodeId: "6075ef93", labelKey: "hallway", floor: "ground" },
+    { id: "hallway", nodeId: "80b0056a", labelKey: "hallway", floor: "ground" },
     { id: "kitchen", nodeId: "fbd51372", labelKey: "kitchen", floor: "ground" },
     { id: "main-room", nodeId: "8a5134b6", labelKey: "mainRoom", floor: "ground" },
     { id: "stairs", nodeId: "f4c34f0d", labelKey: "stairs", floor: "ground" },
     { id: "upper-landing", nodeId: "917be4db", labelKey: "upperLanding", floor: "upper" },
     { id: "upper-room", nodeId: "30833d82", labelKey: "upperRoom", floor: "upper" },
   ],
-  floorEntry: { exterior: "f761f98a", ground: "6075ef93", upper: "917be4db" },
+  floorEntry: { exterior: "f761f98a", ground: "80b0056a", upper: "917be4db" },
   gallery: [
     { nodeId: "8c8a7ac5", labelKey: "street" },
     { nodeId: "e3e179a3", labelKey: "terrace" },

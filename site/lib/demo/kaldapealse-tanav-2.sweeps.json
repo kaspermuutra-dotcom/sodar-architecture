@@ -267,24 +267,9 @@
       "faces": "skybox"
     },
     {
-      "id": "6075ef93",
-      "sweep": "6075ef9358f14033a3798a8ccb1f8e26",
-      "parent": "9960ad3a",
-      "floor": 1,
-      "p": [
-        7.752,
-        -10.434,
-        0.78
-      ],
-      "heading": -179.69,
-      "time": 1788859252.0,
-      "status": "success",
-      "faces": "skybox"
-    },
-    {
       "id": "f85e95a3",
       "sweep": "f85e95a39af649bc92da700302da17a8",
-      "parent": "6075ef93",
+      "parent": "9960ad3a",
       "floor": 1,
       "p": [
         8.729,
@@ -464,7 +449,7 @@
     {
       "id": "437a3f0f",
       "sweep": "437a3f0f1a404cd290865c87e7ce39d4",
-      "parent": "6075ef93",
+      "parent": "9960ad3a",
       "floor": 1,
       "p": [
         7.12,
@@ -868,13 +853,6 @@
     },
     {
       "from": "9960ad3a",
-      "to": "6075ef93",
-      "yaw": 215.3,
-      "pitch": -12.9,
-      "distance": 1.49
-    },
-    {
-      "from": "9960ad3a",
       "to": "67139777",
       "yaw": 31.9,
       "pitch": -27.6,
@@ -886,27 +864,6 @@
       "yaw": 123.5,
       "pitch": 5.3,
       "distance": 1.7
-    },
-    {
-      "from": "6075ef93",
-      "to": "80b0056a",
-      "yaw": 137.5,
-      "pitch": -12.3,
-      "distance": 1.14
-    },
-    {
-      "from": "6075ef93",
-      "to": "9960ad3a",
-      "yaw": 24.8,
-      "pitch": -15.1,
-      "distance": 1.49
-    },
-    {
-      "from": "6075ef93",
-      "to": "437a3f0f",
-      "yaw": 288.3,
-      "pitch": -11.9,
-      "distance": 2.04
     },
     {
       "from": "f85e95a3",
@@ -1085,13 +1042,6 @@
     },
     {
       "from": "437a3f0f",
-      "to": "6075ef93",
-      "yaw": 19.0,
-      "pitch": -16.1,
-      "distance": 2.04
-    },
-    {
-      "from": "437a3f0f",
       "to": "a7cbb55f",
       "yaw": 237.1,
       "pitch": -23.5,
@@ -1103,13 +1053,6 @@
       "yaw": 89.7,
       "pitch": -26.0,
       "distance": 0.16
-    },
-    {
-      "from": "80b0056a",
-      "to": "6075ef93",
-      "yaw": 202.3,
-      "pitch": -15.7,
-      "distance": 1.14
     },
     {
       "from": "80b0056a",
@@ -1308,5 +1251,5 @@
       "reason": "cancelled by the operator during capture"
     }
   ],
-  "removedRecords": 37
+  "removedRecords": 38
 }

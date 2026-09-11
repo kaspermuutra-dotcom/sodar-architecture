@@ -186,6 +186,8 @@ export function cubemapPanorama(scene: WalkScene, pixelRatio = 1, cssWidth = 0) 
 
 /** Horizontal field of view at the default zoom on the 16:10 stage (vertical 66°). */
 const DEFAULT_HFOV_DEG = 94;
+/** Vertical field of view at the default zoom (`defaultZoomLvl` 40 between minFov 30° and maxFov 90°). */
+const DEFAULT_VFOV_DEG = 66;
 
 const PUCK = "/media/portfolio/puck.svg";
 const PUCK_HOVER = "/media/portfolio/puck-hover.svg";
@@ -193,17 +195,29 @@ const PUCK_ACTIVE = "/media/portfolio/puck-active.svg";
 
 /**
  * A ring lying flat on the floor at the spot the linked sweep occupies — the tap-to-move affordance Matterport
- * users know. `imageLayer` markers are real 3D planes, so perspective foreshortens distant rings naturally. The
- * plane is sized so the drawn ring stays substantial at any distance (the artwork pads a transparent margin, so
- * the tap area is ~1.4× the visible ring and never below ~50 CSS px), and capped so a ring right in front of the
- * visitor does not cover the room.
+ * users know. `imageLayer` markers are real 3D planes, so perspective foreshortens distant rings naturally.
+ *
+ * The plane's width on the stage at the default zoom, in CSS px: large enough to find and tap on a phone at any
+ * link distance (the artwork draws the ring on ~73 % of the plane, so a 3 m ring is ~55 px wide with a ~75 px tap
+ * area, above the 44 px touch minimum), capped so a ring right in front of the visitor does not cover the room.
  */
 export function ringSize(distance: number) {
-  return Math.max(72, Math.min(190, 300 / Math.max(distance, 0.8)));
+  return Math.max(76, Math.min(160, 240 / Math.max(distance, 0.8)));
 }
 
-function floorRing(link: WalkLink, name: string) {
-  const size = ringSize(link.distance);
+/**
+ * PSV sizes `imageLayer` planes in units where 1000 ≈ one radian on the sphere (the plane is `size/100` wide at
+ * radius 10), so a fixed number would show up 2–3× smaller on a phone than on a wide stage. Convert the intended
+ * on-screen width into plane units from the stage's default-zoom field of view; the plane keeps that angular size,
+ * so it grows when the visitor zooms in and in fullscreen, as a mark on the floor should.
+ */
+export function ringPlaneUnits(cssPx: number, stage: { width: number; height: number }) {
+  const hFov = 2 * Math.atan(Math.tan(toRad(DEFAULT_VFOV_DEG / 2)) * (Math.max(stage.width, 1) / Math.max(stage.height, 1)));
+  return (cssPx * hFov * 1000) / Math.max(stage.width, 1);
+}
+
+function floorRing(link: WalkLink, name: string, stage: { width: number; height: number }) {
+  const size = ringPlaneUnits(ringSize(link.distance), stage);
   return {
     id: `go-${link.to}`,
     imageLayer: PUCK,
@@ -290,6 +304,7 @@ export const VirtualTour = forwardRef<VirtualTourHandle, Props>(function Virtual
       const reduced = prefersReducedMotion();
       const dpr = window.devicePixelRatio || 1;
       const cssWidth = root.current.clientWidth;
+      const stage = { width: cssWidth, height: root.current.clientHeight };
       const nodes = scenes.map((s) => ({
         id: s.id,
         panorama: cubemapPanorama(s, dpr, cssWidth),
@@ -299,7 +314,7 @@ export const VirtualTour = forwardRef<VirtualTourHandle, Props>(function Virtual
         sphereCorrection: { pan: toRad(s.pan) },
         links: s.links.map((l) => ({ nodeId: l.to, position: { yaw: toRad(l.yaw), pitch: toRad(l.pitch) }, name: callbacks.current.label(scenes.find((t) => t.id === l.to) ?? s) })),
         // Matterport-style floor rings: one flat image layer per link, lying on the floor where the next sweep stands.
-        markers: s.links.map((l) => floorRing(l, callbacks.current.label(scenes.find((t) => t.id === l.to) ?? s))),
+        markers: s.links.map((l) => floorRing(l, callbacks.current.label(scenes.find((t) => t.id === l.to) ?? s), stage)),
         data: { yaw: s.yaw },
       }));
       const v = new core.Viewer({
