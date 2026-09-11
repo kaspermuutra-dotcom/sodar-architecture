@@ -78,9 +78,13 @@ def merged_range_map(sw: Sweep, neighbours: list[Sweep], w: int, h: int) -> tupl
     own = sw.cloud
     nz = own["normal"][:, 2]
     z = own["xyz"][:, 2]
-    floor = float(np.median(z[(nz > 0.9) & (z < -0.3)])) if ((nz > 0.9) & (z < -0.3)).sum() > 50 else None
+    fsel = (nz > 0.9) & (z < -0.3)
+    floor = float(np.median(z[fsel])) if fsel.sum() > 50 else None
     ceil = float(np.median(z[(nz < -0.9) & (z > 0.3)])) if ((nz < -0.9) & (z > 0.3)).sum() > 50 else None
-    return rm, {"floor_z": floor, "ceiling_z": ceil}
+    # planarity: on stairs the "floor" points spread over many heights; then the plane prior is wrong and the
+    # fill is skipped (the preview stays)
+    spread = float(np.percentile(z[fsel], 90) - np.percentile(z[fsel], 10)) if fsel.sum() > 50 else 9.9
+    return rm, {"floor_z": floor, "ceiling_z": ceil, "floor_spread_m": spread, "floor_planar": spread < 0.25}
 
 
 def cap_range(rm: np.ndarray, planes: dict, d_sky: np.ndarray) -> np.ndarray:
@@ -154,6 +158,10 @@ def fill_caps(ex: CaptureExport, id8: str, neighbour_ids: list[str], calib_dir: 
     rm, planes = merged_range_map(sw, neigh, W, H)
     od = render_dir / id8
     rep = {"neighbours": [n.id8 for n in neigh], "planes": planes, "faces": {}}
+    if not planes.get("floor_planar", False) or planes.get("floor_z") is None:
+        rep["skipped"] = "floor not planar (stairs) or no floor plane: preview cap kept"
+        (od / "capfill.json").write_text(json.dumps(rep, indent=1))
+        return rep
     for f in range(6):
         # work from the pristine render (kept as C_raw_*), so the fill can be re-run
         for kind in ("", "conf_"):

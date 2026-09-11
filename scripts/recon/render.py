@@ -147,6 +147,9 @@ class SweepModel:
             g = cv2.resize(g, (gw, gh), interpolation=cv2.INTER_AREA)
             zb = cv2.medianBlur(zb.astype(np.float32), 5)
             refined = joint_bilateral(zb, g, radius=12, sigma_s=7.0, sigma_c=12.0)
+            # at real discontinuities a weighted mean still yields in-between depths: snap to the near or the far
+            # surface by an affinity-weighted majority vote instead
+            # (a majority-vote near/far snap was tried here and made the edges blockier; see snap_discontinuities)
             # only trust the image-guided depth where the image has an edge to align to; elsewhere the joint
             # bilateral degenerates into a blur that smears silhouettes (white wall in front of a white wall)
             grad = cv2.magnitude(cv2.Sobel(g, cv2.CV_32F, 1, 0), cv2.Sobel(g, cv2.CV_32F, 0, 1))
@@ -218,6 +221,43 @@ def joint_bilateral(depth: np.ndarray, guide: np.ndarray, radius: int = 7, sigma
             den += wc
     out = np.where(den > 1e-6, num / np.maximum(den, 1e-6), depth)
     return out.astype(np.float32)
+
+
+def snap_discontinuities(depth: np.ndarray, guide: np.ndarray, radius: int = 10, sigma_s: float = 6.0, sigma_c: float = 12.0) -> dict:
+    """Near/far decision at depth discontinuities by an image-affinity-weighted majority vote.
+
+    Candidates per pixel: the local minimum (near) and maximum (far) depth in the window. Each neighbour votes for
+    the candidate its own depth is closer to, weighted by spatial and colour affinity to the centre pixel."""
+    h, w = depth.shape
+    valid = depth > 0.05
+    dinf = np.where(valid, depth, np.inf).astype(np.float32)
+    dneg = np.where(valid, depth, -np.inf).astype(np.float32)
+    k = np.ones((2 * radius + 1, 2 * radius + 1), np.uint8)
+    near = cv2.erode(dinf, k)
+    far = cv2.dilate(dneg, k)
+    near = np.where(np.isfinite(near), near, depth)
+    far = np.where(np.isfinite(far), far, depth)
+    mid = 0.5 * (near + far)
+    vote_near = np.zeros_like(depth, np.float32)
+    vote_far = np.zeros_like(depth, np.float32)
+    pad = radius
+    dp = cv2.copyMakeBorder(depth, pad, pad, pad, pad, cv2.BORDER_REFLECT)
+    vp = cv2.copyMakeBorder(valid.astype(np.float32), pad, pad, pad, pad, cv2.BORDER_REFLECT)
+    gp = cv2.copyMakeBorder(guide, pad, pad, pad, pad, cv2.BORDER_REFLECT)
+    for dy in range(-radius, radius + 1):
+        for dx in range(-radius, radius + 1):
+            ws = math.exp(-(dx * dx + dy * dy) / (2 * sigma_s * sigma_s))
+            if ws < 0.02:
+                continue
+            gs = gp[pad + dy : pad + dy + h, pad + dx : pad + dx + w]
+            ds = dp[pad + dy : pad + dy + h, pad + dx : pad + dx + w]
+            vs = vp[pad + dy : pad + dy + h, pad + dx : pad + dx + w]
+            wc = np.exp(-((gs - guide) ** 2) / (2 * sigma_c * sigma_c)) * ws * vs
+            is_near = ds < mid
+            vote_near += wc * is_near
+            vote_far += wc * (~is_near)
+    chosen = np.where(vote_near >= vote_far, near, far).astype(np.float32)
+    return {"depth": chosen, "ratio": far / np.maximum(near, 0.05)}
 
 
 def frame_images(sw: Sweep, scale: int = 1) -> list[np.ndarray]:

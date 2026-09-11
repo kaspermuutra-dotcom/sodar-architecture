@@ -106,3 +106,22 @@ Observed on the three difficult scenes (hallway 6075ef93, kitchen f4e36aa6, stai
   (up to 1.6 m). Not usable for interiors as configured; the exterior run gave the intrinsics. Negative result kept.
 * **Tooling bug found late:** `geom.view_dirs` had pitch inverted (positive = down); every "pitch −60" panel in
   earlier comparison sheets was looking up. Fixed; sheets regenerated.
+
+## Gate 3 outcome (2026-09-11) and the all-scene run
+
+Objective proxies (`scripts/recon/score.py`, six eye-level views per scene; automated only, the visual review
+decides): Candidate C has the highest sharpness in three of four scenes (B close), line deviation on a par with B
+and t3 (≈2 px; the blurred preview/A score lower for the wrong reason), the best agreement with the preview
+geometry in the kitchen and stairs-bottom scenes, and the smallest colour spread across views among the
+high-resolution candidates. Visually: C keeps door frames, the round window, the oven edge and the stair
+panelling straight where t3 doubled them, and renders the floor to the nadir with real pixels. Residuals: small
+ghost bands at white-on-grey wall tops and thin near objects, one horizontal seam band on the upper-stairs wall.
+
+Tried and rejected after the gate: an affinity-weighted majority-vote near/far snap of the per-frame depth
+(`snap_discontinuities`) — it made the silhouettes blockier than the joint bilateral alone. Kept in the code,
+not applied.
+
+All-scene run: `scripts/recon/run_all.py` (stages render → colour → tiles → finish) produces media version
+`t4`; the floor fill is skipped where the floor is not planar (stairs sweeps keep the preview cap);
+`tourcolour.py` solves the tour-wide gains on depth-verified correspondences and writes the old-format
+`colour.json`/`qa.json` the media test asserts.

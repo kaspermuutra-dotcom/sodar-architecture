@@ -72,7 +72,10 @@ def main() -> None:
                 blocks.append({"kind": kind, "yaw": yaw, "pitch": pitch, "hfov": hfov, "w": w, "h": h, "uris": uris})
         page.append({"id": id8, "label": label, "names": names, "blocks": blocks})
         print(id8, label, len(names), "sources,", len(blocks), "blocks, running size", round(total / 1e6, 1), "MB", flush=True)
+    scores_path = Path(a.render).parent / "review" / "scores.json"
+    scores = json.loads(scores_path.read_text()) if scores_path.exists() else {}
     data = json.dumps(page)
+    scores_js = json.dumps(scores)
     html = f"""<title>Kaldapealse reconstruction review</title>
 <meta name="robots" content="noindex,nofollow">
 <style>
@@ -89,9 +92,22 @@ p.note{{color:var(--mut);max-width:900px}}
 </style>
 <h1>Kaldapealse tänav 2 — three-scene reconstruction review (r1, private)</h1>
 <p class="note">Same yaw, pitch and field of view for every source. Use the buttons to switch the source for a whole scene, or click an image to flicker it against the previous source (click again to go back). "100 % crop" panels are at the native 3072-px cube resolution; the preview and Candidate A cannot resolve more than the 512-px cube they come from.</p>
+<div id="scores"></div>
 <div id="root"></div>
 <script>
 const DATA={data};
+const SCORES={scores_js};
+(function(){{
+  const el=document.getElementById('scores'); if(!Object.keys(SCORES).length) return;
+  const metrics=[['sharpness','Sharpness (Laplacian var, ↑)'],['straightness_px','Line deviation px (↓; blur also lowers it)'],['refAgreement','Agreement with preview geometry (NCC, ↑)'],['colourSpread','Colour spread across views (↓)'],['duplication','Parallel-edge proxy (↓, weak)']];
+  let h='<h2>Objective proxies (eye-level views, 960×640, hfov 50)</h2><p class="note">Automated proxies only; the visual review decides. The preview and Candidate A score "straight" because they are blurred.</p><div style="overflow-x:auto"><table style="border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:13px">';
+  for(const [sid,res] of Object.entries(SCORES)){{
+    const names=Object.keys(res);
+    h+='<tr><th style="text-align:left;padding:6px 10px;color:#9cf">'+sid+'</th>'+names.map(n=>'<th style="padding:6px 10px;text-align:right">'+n+'</th>').join('')+'</tr>';
+    for(const [k,label] of metrics){{ h+='<tr><td style="padding:4px 10px;color:#bbb">'+label+'</td>'+names.map(n=>'<td style="padding:4px 10px;text-align:right">'+(res[n][k]??'')+'</td>').join('')+'</tr>'; }}
+  }}
+  el.innerHTML=h+'</table></div>';
+}})();
 const root=document.getElementById('root');
 DATA.forEach((sc,si)=>{{
   const h=document.createElement('h2');h.textContent=sc.label+' ('+sc.id+')';root.appendChild(h);
