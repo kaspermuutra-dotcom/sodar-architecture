@@ -25,3 +25,7 @@ artifacts/tours/
 
 # pitch deck export tooling deps
 deck/export/node_modules/
+
+# reconstruction experiments (large intermediates; reports are copied out explicitly)
+artifacts/recon/
+.venv-recon/
