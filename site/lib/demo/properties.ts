@@ -35,7 +35,12 @@ import { buildWalkthrough, type GeneratedTour, type Walkthrough, type Walkthroug
  */
 
 // Version segment: bump (t1 → t2) whenever the tiles are regenerated; the CDN caches this path immutably.
-const M = "/media/portfolio/kaldapealse-tanav-2/t3"; // t3 (2026-09-10): optimal seams with depth-aware blends, vignetting correction, tour-wide colour, exposure-matched caps
+// t4 (2026-09-11): multi-view reconstruction (scripts/recon, docs/RECON_NOTES.md) — every direction lifted with the sweep's
+// LiDAR depth and sampled from the frame at its solved camera centre, so door frames, windows and stairs no longer double at
+// the seams. 14 scenes keep the t3 seam composite where the depth render fails (LiDAR through glazing bends frames; thin
+// near objects such as door leaves, basins and a wall corner tear or ghost; two sunlit facades blotch); the choice per scene
+// is recorded next to the render (artifacts/recon/…/render/<id>/source_t3.json) and in t4/README.md.
+const M = "/media/portfolio/kaldapealse-tanav-2/t4";
 
 const kaldapealseCuration: WalkthroughCuration = {
   slug: "kaldapealse-tanav-2",
@@ -67,8 +72,7 @@ const kaldapealseCuration: WalkthroughCuration = {
     e3e179a3: { labelKey: "terrace", variant: 3, floor: "exterior", lookAt: "6933932f" },
     // ground floor
     "9960ad3a": { labelKey: "hallway", variant: 1, floor: "ground", lookAt: "80b0056a" },
-    "80b0056a": { labelKey: "hallway", variant: 3, floor: "ground", lookAt: "f85e95a3" },
-    f85e95a3: { labelKey: "hallway", variant: 4, floor: "ground", lookAt: "fbd51372" },
+    "80b0056a": { labelKey: "hallway", variant: 3, floor: "ground", lookAt: "fbd51372" },
     f4c34f0d: { labelKey: "stairsBottom", floor: "ground", lookAt: "453f34b1" },
     fbd51372: { labelKey: "kitchen", variant: 1, floor: "ground", lookAt: "f4e36aa6" },
     f4e36aa6: { labelKey: "kitchen", variant: 2, floor: "ground", lookAt: "8a5134b6" },
@@ -93,6 +97,7 @@ const kaldapealseCuration: WalkthroughCuration = {
     f228f9e5: "low_overlap re-shot 0.21 m from bathroom sweep f0cd9cf0; weaker pose, no processed skybox",
     aa5000b8: "low_overlap re-shot 0.40 m from kitchen sweep f4e36aa6; weaker pose, no processed skybox",
     d80bd505: "low_overlap re-shot 0.47 m from room sweep bf2609e1; weaker pose, no processed skybox",
+    f85e95a3: "0.16 m from hallway sweep 80b0056a (a near-duplicate viewpoint); its frames disagree on the plain wall beside the kitchen opening in every reconstruction, so the hall keeps 80b0056a only",
   },
   dropLinks: [
     ["437a3f0f", "a7cbb55f"], // room window ↔ garden
@@ -107,7 +112,7 @@ const kaldapealseCuration: WalkthroughCuration = {
     { from: "f4e36aa6", to: "8a5134b6" }, // kitchen → main room through the wide opening
     { from: "795122f1", to: "f0cd9cf0" }, // kitchen → bathroom door
     { from: "8a5134b6", to: "52c0066c" }, // across the main room
-    { from: "f85e95a3", to: "fbd51372" }, // hall → kitchen doorway
+    { from: "80b0056a", to: "fbd51372" }, // hall → kitchen through the wide opening (replaces the excluded near-duplicate hall sweep)
     { from: "95b353d9", to: "fbd51372" }, // dining end → kitchen island
     { from: "c80691fc", to: "31e18ff1" }, // garden path along the hedge
     { from: "9960ad3a", to: "80b0056a" }, // entrance hall → hall centre along the open corridor (replaces the removed hall sweep)

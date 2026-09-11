@@ -1023,74 +1023,10 @@
      "name": "ceiling",
      "ref": "80b0056a/ref-ceiling.webp",
      "cur": "80b0056a/cur-ceiling.webp"
-    },
-    {
-     "name": "doorway 1 (towards f85e95a3)",
-     "ref": "80b0056a/ref-door0.webp",
-     "cur": "80b0056a/cur-door0.webp"
     }
    ],
    "status": "rejected",
    "note": "Hallway 3 \u2014 manual review: mismatched source frames on walls"
-  },
-  "f85e95a3": {
-   "level": "ground",
-   "views": [
-    {
-     "yaw": 0,
-     "ref": "f85e95a3/ref-y0.webp",
-     "cur": "f85e95a3/cur-y0.webp"
-    },
-    {
-     "yaw": 60,
-     "ref": "f85e95a3/ref-y60.webp",
-     "cur": "f85e95a3/cur-y60.webp"
-    },
-    {
-     "yaw": 120,
-     "ref": "f85e95a3/ref-y120.webp",
-     "cur": "f85e95a3/cur-y120.webp"
-    },
-    {
-     "yaw": 180,
-     "ref": "f85e95a3/ref-y180.webp",
-     "cur": "f85e95a3/cur-y180.webp"
-    },
-    {
-     "yaw": 240,
-     "ref": "f85e95a3/ref-y240.webp",
-     "cur": "f85e95a3/cur-y240.webp"
-    },
-    {
-     "yaw": 300,
-     "ref": "f85e95a3/ref-y300.webp",
-     "cur": "f85e95a3/cur-y300.webp"
-    }
-   ],
-   "crops": [
-    {
-     "name": "floor",
-     "ref": "f85e95a3/ref-floor.webp",
-     "cur": "f85e95a3/cur-floor.webp"
-    },
-    {
-     "name": "ceiling",
-     "ref": "f85e95a3/ref-ceiling.webp",
-     "cur": "f85e95a3/cur-ceiling.webp"
-    },
-    {
-     "name": "doorway 1 (towards 80b0056a)",
-     "ref": "f85e95a3/ref-door0.webp",
-     "cur": "f85e95a3/cur-door0.webp"
-    },
-    {
-     "name": "doorway 2 (towards e4b461ee)",
-     "ref": "f85e95a3/ref-door1.webp",
-     "cur": "f85e95a3/cur-door1.webp"
-    }
-   ],
-   "status": "rejected",
-   "note": "Hallway 4 \u2014 manual review: mismatched source frames on walls"
   },
   "f4c34f0d": {
    "level": "ground",

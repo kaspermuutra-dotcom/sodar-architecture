@@ -29,7 +29,8 @@ W, H = 1024, 512
 
 
 def load_equirect(render: Path, id8: str) -> np.ndarray:
-    return np.asarray(Image.open(render / id8 / "C_equirect.jpg").convert("RGB"), np.float32)
+    # render.py writes 2048×1024 equirects; the solve samples at W×H
+    return np.asarray(Image.open(render / id8 / "C_equirect.jpg").convert("RGB").resize((W, H), Image.LANCZOS), np.float32)
 
 
 def lin(v: np.ndarray) -> np.ndarray:
@@ -68,7 +69,7 @@ def solve(ids: list[str], pairs: dict, refs: set[str], lam: float = 0.05, lam_re
     for c in range(3):
         rows, rhs = [], []
         for (a, b), (r, cnt) in pairs.items():
-            w = math.sqrt(min(cnt, 2000) / 2000.0)
+            w = math.sqrt(min(cnt, 20000) / 20000.0)  # a pair seen on a few thousand samples (a doorway sliver) must not outweigh one seen on 80 000
             row = np.zeros(n)
             row[idx[a]] = w
             row[idx[b]] = -w

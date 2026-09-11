@@ -119,10 +119,21 @@ def stage_finish(a, ex, ids) -> None:
 
     media = Path(a.media)
     tc = json.loads((Path(a.render) / "tourcolour.json").read_text())
+    # Trusted pairs (weight 1, asserted by media.test.ts) are the tour's own links: sweeps that share a doorway or
+    # an open room. Other pairs inside 4.6 m (a bathroom seen through a wall, a room behind a closed door) are
+    # solved with the same correspondences but only reported (weight 0): their lighting differs for real.
+    links = set()
+    if a.links_json and Path(a.links_json).exists():
+        for x, y in json.loads(Path(a.links_json).read_text()):
+            links.add((x, y))
+            links.add((y, x))
     measured = {}
     for pair, r in tc["measuredBefore"].items():
         ev_after = tc["evAfter"][pair]
-        measured[pair] = {"measured": {"ev": ev_after, "rg": 0.0, "bg": 0.0}, "n": r["n"], "weight": 1}
+        x, y = pair.split(">")
+        # trusted = a tour link measured on enough depth-verified samples (a doorway sliver of a few thousand samples
+        # is dominated by whatever bright or dark surface it happens to cover)
+        measured[pair] = {"measured": {"ev": ev_after, "rg": 0.0, "bg": 0.0}, "n": r["n"], "weight": 1 if ((not links or (x, y) in links) and r["n"] >= 5000) else 0}
     colour = {"source": str(media), "gains": tc["gains"], "references": tc["references"], "measuredAfter": measured, "note": "solved by scripts/recon/tourcolour.py on the r1 reconstruction (depth-verified correspondences); rg/bg after are not re-measured here"}
     (media / "colour.json").write_text(json.dumps(colour, indent=1) + "\n")
     subprocess.run([PY, str(HERE.parent / "matterport_capture_qa.py"), str(media), str(media / "colour.json"), a.levels], check=True)
@@ -148,6 +159,10 @@ frame overlaps; colour is anchored per frame to Matterport's preview and then no
 (`colour.json`). The floor below each sweep, which its own frames never see, is filled from neighbouring sweeps
 that see it from above; the ceiling cap above ≈+37° still comes from the 512 px preview. Nothing is generated.
 
+Where the depth-based render fails the scene keeps its t3 seam-composite master (LiDAR depth through glazing bends
+window frames; thin near objects — door leaves, basins, a wall corner — tear or ghost; sunlit facades blotch). Those
+scenes carry a `source_t3.json` next to their render; the tour-wide colour solve and the tiles treat both sources alike.
+
 - `faces/<sweep>/<face>-0.webp` — 512 px base face
 - `faces/<sweep>/<face>-1-<col>-<row>.webp` — 1536 px level, 2×2 tiles
 - `faces/<sweep>/<face>-2-<col>-<row>.webp` — 3072 px level, 4×4 tiles
@@ -170,6 +185,7 @@ def main() -> None:
     ap.add_argument("--media", required=True)
     ap.add_argument("--stage", default="all")
     ap.add_argument("--sweeps-json", default="site/lib/demo/kaldapealse-tanav-2.sweeps.json")
+    ap.add_argument("--links-json", default=None, help="JSON list of [from, to] tour links: only these pairs are weighted in qa.json")
     a = ap.parse_args()
     ex = CaptureExport(Path(a.export))
     ids = [x.strip() for x in Path(a.ids_file).read_text().split() if x.strip()]

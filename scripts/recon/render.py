@@ -571,7 +571,7 @@ def equirect_from_faces(faces: dict[int, np.ndarray], w: int = 2048, h: int = 10
     return np.clip(sample_cube({k: v.astype(np.float32) for k, v in faces.items()}, equirect_dirs(w, h)), 0, 255).astype(np.uint8)
 
 
-def render_sweep(ex: CaptureExport, id8: str, calib_dir: Path, out: Path, face: int, candidates: list[str], blend_deg: float, scale: int) -> dict:
+def render_sweep(ex: CaptureExport, id8: str, calib_dir: Path, out: Path, face: int, candidates: list[str], blend_deg: float, scale: int, no_field: bool = False) -> dict:
     t0 = time.time()
     sw = ex.by_id8(id8)
     preview = {n: sw.preview_face(n).astype(np.float32) for n in range(6)}
@@ -588,6 +588,10 @@ def render_sweep(ex: CaptureExport, id8: str, calib_dir: Path, out: Path, face: 
         imgs = frame_images(sw, scale)
         model.set_guides([sw.frame(k, 4).astype(np.float32) for k in range(6)], 4)
         gains, fields = exposure_gains(model, imgs, scale, preview)
+        if no_field:
+            # per-frame gains only: the smooth preview-anchored ratio field can print grey patches on plain walls
+            # where the preview and the frame disagree (shadows, glare); the frames' own shading is kept instead
+            fields = np.ones_like(fields)
         labels, conf, lstats = label_map(model, imgs, gains, scale, fields=fields)
         faces, confs = render_faces(model, imgs, gains, labels, scale, face, blend_deg, preview, fields)
         Image.fromarray((np.clip(fields.mean(-1), 0.5, 1.5) * 170 - 85).astype(np.uint8).reshape(-1, fields.shape[2])).save(od / "C_gainfields.png")
@@ -635,10 +639,11 @@ if __name__ == "__main__":
     ap.add_argument("--candidates", default="A,C")
     ap.add_argument("--blend-deg", type=float, default=0.35)
     ap.add_argument("--scale", type=int, default=1, help="decode frames reduced by this factor (speed/memory)")
+    ap.add_argument("--no-field", action="store_true", help="per-frame gains only, no spatial gain field (plain walls with glare/shadow)")
     a = ap.parse_args()
     ex = CaptureExport(Path(a.export))
     if a.camera_json:
         ex.override_camera(json.loads(Path(a.camera_json).read_text())["params_full"])
     for i in a.ids:
-        r = render_sweep(ex, i, Path(a.calib), Path(a.out), a.face, a.candidates.split(","), a.blend_deg, a.scale)
+        r = render_sweep(ex, i, Path(a.calib), Path(a.out), a.face, a.candidates.split(","), a.blend_deg, a.scale, no_field=a.no_field)
         print(json.dumps(r))
