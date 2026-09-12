@@ -6,7 +6,8 @@ import { FACE_NAMES, WALK_FLOORS, buildWalkthrough, scenePath, validateWalkthrou
 
 const PUBLIC = join(__dirname, "..", "..", "public");
 
-describe("walkthrough integrity (every configured property)", () => {
+// Runs for every locally built property; none is configured while the portfolio shows hosted models only.
+describe.runIf(PROPERTY_DEMOS.length > 0)("walkthrough integrity (every configured property)", () => {
   for (const walk of PROPERTY_DEMOS) {
     describe(walk.slug, () => {
       it("has unique scene ids, valid floors, symmetric links and no dangling references", () => {

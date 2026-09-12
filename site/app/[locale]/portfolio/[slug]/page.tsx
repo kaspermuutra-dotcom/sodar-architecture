@@ -21,21 +21,22 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Portfolio" });
   const title = t(`items.${project.labelKey}.metaTitle`);
   const description = t(`items.${project.labelKey}.metaDesc`);
-  const image = project.walkthrough.ogImage;
+  const image = project.ogImage;
   return {
     title,
     description,
     alternates: localeAlternates(locale, `/portfolio/${project.slug}`),
     openGraph: { title, description, locale, type: "website", images: [{ url: image, width: 1200, height: 630 }] },
     twitter: { card: "summary_large_image", title, description, images: [image] },
-    robots: project.walkthrough.indexable ? undefined : { index: false, follow: false },
+    robots: project.indexable ? undefined : { index: false, follow: false },
   };
 }
 
 /**
  * A portfolio project: the interactive walkthrough with the minimum of chrome
- * around it. A project with an `embed` shows the hosted Matterport model in
- * place of the local viewer; the facts, stills and metadata stay the same.
+ * around it. A project with an `embed` shows the hosted Matterport model; one
+ * with a local `walkthrough` shows the linked 360° viewer, whose stills also
+ * deep-link into it.
  */
 export default async function PortfolioProjectPage({ params }: Params) {
   const { locale, slug } = await params;
@@ -46,6 +47,9 @@ export default async function PortfolioProjectPage({ params }: Params) {
   const tScene = await getTranslations("PropertyDemo"); // scene names live with the viewer strings
   const walk = project.walkthrough;
   const embed = project.embed;
+  if (!embed && !walk) notFound();
+  // the local viewer's stills open the tour at their scene; a hosted embed cannot deep-link, so its stills are plain tiles
+  const gallery = walk ? walk.gallery.map((g) => ({ ...g, href: `#${g.nodeId}` })) : project.gallery.map((g) => ({ ...g, href: undefined }));
 
   return (
     <PageShell>
@@ -58,13 +62,13 @@ export default async function PortfolioProjectPage({ params }: Params) {
         <header className="mb-5 mt-5 flex flex-wrap items-end justify-between gap-x-8 gap-y-3 sm:mb-6">
           <div>
             <p className="eyebrow">{t(`items.${project.labelKey}.eyebrow`)}</p>
-            <h1 className="display mt-3 text-[clamp(2.2rem,4.6vw,4rem)]">{walk.title}</h1>
+            <h1 className="display mt-3 text-[clamp(2.2rem,4.6vw,4rem)]">{project.title}</h1>
             <p className="mt-2 text-base text-text">{project.client}</p>
           </div>
           <p className="max-w-md text-sm text-text-muted">{t(`items.${project.labelKey}.lead`)}</p>
         </header>
 
-        {embed ? <MatterportEmbed modelId={embed.modelId} title={walk.title} poster={walk.poster} /> : <PropertyDemo walk={walk} />}
+        {embed ? <MatterportEmbed modelId={embed.modelId} title={project.title} poster={project.image} /> : <PropertyDemo walk={walk!} />}
 
         <section className="mt-12 grid gap-8 border-t border-border pt-8 sm:grid-cols-3" aria-labelledby="project-facts">
           <h2 id="project-facts" className="sr-only">
@@ -76,7 +80,7 @@ export default async function PortfolioProjectPage({ params }: Params) {
           </div>
           <div>
             <p className="section-kicker">{t("facts.scope")}</p>
-            <p className="mt-2 text-sm text-text">{embed ? t("facts.scopeEmbed") : t("facts.scopeValue", { count: walk.scenes.length })}</p>
+            <p className="mt-2 text-sm text-text">{walk && !embed ? t("facts.scopeValue", { count: walk.scenes.length }) : t("facts.scopeEmbed")}</p>
           </div>
           <div>
             <p className="section-kicker">{t("facts.client")}</p>
@@ -89,14 +93,14 @@ export default async function PortfolioProjectPage({ params }: Params) {
             {t("galleryTitle")}
           </h2>
           <ul className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
-            {walk.gallery.map((g) => (
-              <li key={g.nodeId} className="tile aspect-[16/10]">
-                {embed ? (
-                  <img src={g.still} alt={t("stillAlt", { label: tScene(`scenes.${g.labelKey}`) })} width={1280} height={800} loading="lazy" decoding="async" />
-                ) : (
-                  <a href={`#${g.nodeId}`} aria-label={tScene(`scenes.${g.labelKey}`)} className="block h-full w-full">
+            {gallery.map((g) => (
+              <li key={g.still} className="tile aspect-[16/10]">
+                {g.href ? (
+                  <a href={g.href} aria-label={tScene(`scenes.${g.labelKey}`)} className="block h-full w-full">
                     <img src={g.still} alt={t("stillAlt", { label: tScene(`scenes.${g.labelKey}`) })} width={1280} height={800} loading="lazy" decoding="async" />
                   </a>
+                ) : (
+                  <img src={g.still} alt={t("stillAlt", { label: tScene(`scenes.${g.labelKey}`) })} width={1280} height={800} loading="lazy" decoding="async" />
                 )}
               </li>
             ))}

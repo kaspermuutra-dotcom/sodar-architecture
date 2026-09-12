@@ -87,20 +87,23 @@ project page. Items carry an explicit `order`; the first client scan
 projects are added. Sample listing-type tiles follow it. `/demo/<slug>`
 redirects permanently to `/portfolio/<slug>` (`next.config.ts`).
 
-A walkthrough item may carry an `embed` (`{ provider: "matterport", modelId }`):
-the project page then shows the official Matterport Showcase model
-(`components/demo/matterport-embed.tsx` — the same square-cornered stage,
-poster → Start, Sodar badge, a fullscreen control on the stage and Close over
-the iframe; `title=0` hides Matterport's title panel, its logo stays and is
-never covered; Matterport streams the imagery, nothing is downloaded or
-re-processed) instead of the local viewer, the coverage fact switches to
-`Portfolio.facts.scopeEmbed` and the stills lose their scene deep links. The
-local tour data and media stay in place for `/review/<slug>` and the metadata.
-Kaldapealse tänav 2 has been embedded since 2026-09-12 (model `98WLexoRstU`).
+A walkthrough item carries either an `embed` (`{ provider: "matterport",
+modelId }`) or a local `walkthrough`. With an embed the project page shows the
+official Matterport Showcase model (`components/demo/matterport-embed.tsx` —
+the same square-cornered stage, poster → Start mounting the frame with
+`play=1&title=0`, an opaque Sodar panel top-left over the player's logo, a
+fullscreen control on the stage (the frame's own fullscreen is off so the
+panel stays), Close, and the poster held over the frame while the player's
+loading screen runs; Matterport streams the imagery, nothing is downloaded or
+re-processed), the coverage fact is `Portfolio.facts.scopeEmbed`, and the
+stills (`gallery` on the item, under `public/media/portfolio/<slug>/<version>/`)
+are plain tiles. Kaldapealse tänav 2 has been embedded since 2026-09-12 (model
+`98WLexoRstU`); its local reconstruction — curation, generated data, review
+page and media t1–t4 — was removed the same day and lives in git history.
 
-Otherwise each walkthrough project is a linked 360° tour built from a
-Matterport Capture export. Three scripts in `../scripts/` produce everything
-from the export:
+A local walkthrough project is a linked 360° tour built from a Matterport
+Capture export. Three scripts in `../scripts/` produce everything from the
+export:
 
 - `matterport_capture_tour.py` decodes `SweepProcessorData/manifest.mfst`
   (poses, floors, capture order), derives candidate links from sweep

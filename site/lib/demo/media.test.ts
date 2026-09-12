@@ -10,8 +10,9 @@ import { FACE_NAMES, TILE_LEVELS } from "@/lib/demo/walkthrough";
  * base/tile consistency and neighbour colour differences inside the accepted bounds.
  */
 const PUBLIC = join(process.cwd(), "public");
+// No locally built walkthrough is published at the moment (see properties.ts); the checks run again as soon as one is.
 const walk = PROPERTY_DEMOS[0];
-const mediaBase = walk.scenes[0].faces.replace(/\/faces\/[^/]+$/, "");
+const mediaBase = walk ? walk.scenes[0].faces.replace(/\/faces\/[^/]+$/, "") : "";
 const mediaDir = join(PUBLIC, mediaBase);
 
 /** Pixel size of a WebP file from its container header (VP8, VP8L or VP8X). */
@@ -28,7 +29,7 @@ function webpSize(file: string): [number, number] {
   return [b.readUInt16LE(26) & 0x3fff, b.readUInt16LE(28) & 0x3fff];
 }
 
-describe("walkthrough media", () => {
+describe.runIf(Boolean(walk))("walkthrough media", () => {
   it("has every base face and tile at the declared size, with sweep and level in every path", () => {
     const seen = new Set<string>();
     for (const scene of walk.scenes) {

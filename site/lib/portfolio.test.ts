@@ -1,3 +1,5 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { PORTFOLIO, PORTFOLIO_WALKTHROUGHS, getPortfolioProject } from "./portfolio";
 
@@ -11,11 +13,12 @@ describe("portfolio registry", () => {
 
   it("resolves project pages by slug and exposes public metadata inputs", () => {
     const project = getPortfolioProject("kaldapealse-tanav-2")!;
-    expect(project.walkthrough.indexable).toBe(true);
-    expect(project.unlisted).toBe(false); // listed again with the hosted Matterport model
-    expect(project.walkthrough.ogImage).toMatch(/^\/media\/portfolio\/kaldapealse-tanav-2\/t\d+\/og\.jpg$/);
-    expect(project.walkthrough.startNodeId).toBe("f761f98a");
+    expect(project.indexable).toBe(true);
+    expect(project.unlisted).toBeFalsy(); // listed with the hosted Matterport model
+    expect(project.ogImage).toMatch(/^\/media\/portfolio\/kaldapealse-tanav-2\/e\d+\/og\.jpg$/);
     expect(project.embed).toEqual({ provider: "matterport", modelId: "98WLexoRstU" }); // the page shows the hosted Showcase model
+    expect(project.walkthrough).toBeUndefined(); // the local reconstruction was removed on 2026-09-12
+    for (const file of [project.image, project.ogImage, ...project.gallery.map((g) => g.still)]) expect(existsSync(join(__dirname, "..", "public", file)), file).toBe(true);
     expect(getPortfolioProject("nope")).toBeUndefined();
     expect(PORTFOLIO_WALKTHROUGHS).toHaveLength(1);
   });
