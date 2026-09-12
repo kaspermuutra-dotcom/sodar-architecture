@@ -65,7 +65,7 @@ export const PORTFOLIO: PortfolioItem[] = [
     labelKey: "kaldapealse",
     title: "Kaldapealse tänav 2",
     client: "Ruslan Gulida · RE/MAX",
-    image: `${KALDAPEALSE}/poster.webp`,
+    image: "/media/portfolio/kaldapealse-tanav-2/e2/poster.jpg",
     ogImage: `${KALDAPEALSE}/og.jpg`,
     gallery: [
       { labelKey: "street", still: `${KALDAPEALSE}/stills/8c8a7ac5.webp` },
