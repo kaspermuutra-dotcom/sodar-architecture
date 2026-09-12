@@ -1427,6 +1427,12 @@
     "close": "Kapat",
     "loadingShort": "Yükleniyor…"
   },
+  "MatterportEmbed": {
+    "hint": "Etrafa bakmak için sürükleyin · Hareket etmek için zemine tıklayın · Bebek evi ve kat planı alt çubukta",
+    "fullscreen": "Tam ekran",
+    "exitFullscreen": "Tam ekrandan çık",
+    "frameTitle": "{title} — Matterport 3D tur"
+  },
   "Portfolio": {
     "kicker": "Portföy",
     "title": "Gerçek mülkler, telefonla taranmış.",
@@ -1442,6 +1448,7 @@
       "type": "Biçim",
       "scope": "Kapsam",
       "scopeValue": "{count} bakış noktası · dış mekân, zemin kat, üst kat",
+      "scopeEmbed": "Dış mekân, zemin kat ve üst kat · Matterport 3D tur",
       "client": "Müşteri"
     },
     "galleryTitle": "Taramadan görünümler",

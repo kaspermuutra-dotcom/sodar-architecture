@@ -1427,6 +1427,12 @@
     "close": "Schließen",
     "loadingShort": "Lädt…"
   },
+  "MatterportEmbed": {
+    "hint": "Ziehen zum Umsehen · Auf den Boden klicken, um sich zu bewegen · Puppenhaus und Grundriss in der unteren Leiste",
+    "fullscreen": "Vollbild",
+    "exitFullscreen": "Vollbild beenden",
+    "frameTitle": "{title} — Matterport-3D-Rundgang"
+  },
   "Portfolio": {
     "kicker": "Portfolio",
     "title": "Echte Objekte, mit dem Handy gescannt.",
@@ -1442,6 +1448,7 @@
       "type": "Format",
       "scope": "Umfang",
       "scopeValue": "{count} Standpunkte · Außenbereich, Erdgeschoss, Obergeschoss",
+      "scopeEmbed": "Außenbereich, Erdgeschoss und Obergeschoss · Matterport-3D-Rundgang",
       "client": "Kunde"
     },
     "galleryTitle": "Ansichten aus dem Scan",

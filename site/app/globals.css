@@ -145,6 +145,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .demo-stage { position: relative; overflow: hidden; border-radius: 0; background: #000; aspect-ratio: 16 / 10; max-height: calc(100dvh - 9rem); width: 100%; }
 .demo-stage, .demo-stage .psv-container, .demo-stage .psv-canvas-container, .demo-stage canvas, .demo-stage img { border-radius: 0; }
 .psv-container:fullscreen, .psv-container:-webkit-full-screen { border-radius: 0; background: #000; }
+/* hosted Matterport model: the Showcase iframe fills the stage; fullscreen is taken on the stage so the badge and Close stay on top */
+.demo-embed iframe { display: block; border: 0; }
+/* opaque top-left Sodar panel over the hosted player: physical left (Matterport's UI is never mirrored), sized past the
+   player's logo box (≈8–142 × 8–40 css px on phones and desktops), no blur or transparency, so nothing shows through */
+.demo-embed .demo-poster-cover { position: absolute; inset: 0; z-index: 6; background: #000; }
+.demo-stage:fullscreen, .demo-stage:-webkit-full-screen { aspect-ratio: auto; width: 100%; height: 100%; max-height: none; margin: 0; }
 @media (max-width: 767px) { .demo-stage { aspect-ratio: 4 / 5; max-height: calc(100dvh - 7rem); width: 100vw; margin-inline: calc(50% - 50vw); } }
 @media (max-height: 520px) and (orientation: landscape) { .demo-stage { aspect-ratio: auto; height: calc(100dvh - 3.5rem); max-height: none; } }
 .demo-psv .psv-container { background: transparent; touch-action: none; } /* once active, one finger looks around inside the stage; the page scrolls again after Close */
@@ -170,6 +176,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .demo-firstuse { position: absolute; z-index: 6; left: 50%; top: calc(max(.75rem, env(safe-area-inset-top)) + 3.4rem); transform: translateX(-50%); max-width: calc(100% - 2rem); padding: .55rem .9rem; border-radius: 999px; background: rgba(0,0,0,.55); backdrop-filter: blur(8px); color: #f4f2ee; font-size: 12px; text-align: center; pointer-events: none; }
 .demo-loading + .demo-firstuse, .demo-loading ~ .demo-firstuse { display: none; }
 .demo-badge:hover { border-color: rgba(255,255,255,.4); }
+.demo-badge.demo-badge-cover { top: 0; left: 0; inset-inline-end: auto; inset-inline-start: auto; z-index: 7; width: 11.5rem; height: 3.5rem; border-radius: 0 0 1rem 0; border: 0; padding: 0 1rem; gap: .55rem; background: #000; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.demo-badge.demo-badge-cover:hover { border: 0; }
+.demo-badge-cover .wordmark { font-size: .68rem; }
 /* current-checkpoint chip: top-start, clear of the badge (top-end) and of Matterport's bottom-edge controls */
 .demo-chip { top: max(.75rem, env(safe-area-inset-top)); inset-inline-start: max(.75rem, env(safe-area-inset-left)); max-width: calc(100% - 9.5rem); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .demo-rail-item { display: flex; width: 100%; align-items: center; gap: .7rem; border-radius: .75rem; border: 1px solid transparent; padding: .35rem .45rem .35rem .35rem; text-align: start; color: var(--color-text-muted); }

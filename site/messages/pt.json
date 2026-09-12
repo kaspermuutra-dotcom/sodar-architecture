@@ -1427,6 +1427,12 @@
     "close": "Fechar",
     "loadingShort": "A carregar…"
   },
+  "MatterportEmbed": {
+    "hint": "Arraste para olhar em volta · Clique no chão para se mover · Casa de bonecas e planta na barra inferior",
+    "fullscreen": "Ecrã inteiro",
+    "exitFullscreen": "Sair do ecrã inteiro",
+    "frameTitle": "{title} — visita 3D Matterport"
+  },
   "Portfolio": {
     "kicker": "Portfólio",
     "title": "Imóveis reais, digitalizados com um telemóvel.",
@@ -1442,6 +1448,7 @@
       "type": "Formato",
       "scope": "Cobertura",
       "scopeValue": "{count} pontos de vista · exterior, rés-do-chão, piso superior",
+      "scopeEmbed": "Exterior, rés-do-chão e piso superior · visita 3D Matterport",
       "client": "Cliente"
     },
     "galleryTitle": "Vistas da digitalização",

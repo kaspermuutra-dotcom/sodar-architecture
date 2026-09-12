@@ -1427,6 +1427,12 @@
     "close": "Sulge",
     "loadingShort": "Laadimine…"
   },
+  "MatterportEmbed": {
+    "hint": "Ringivaatamiseks lohista · Liikumiseks klõpsa põrandal · Nukumaja ja korruseplaan on alumisel ribal",
+    "fullscreen": "Täisekraan",
+    "exitFullscreen": "Välju täisekraanist",
+    "frameTitle": "{title} — Matterporti 3D ringkäik"
+  },
   "Portfolio": {
     "kicker": "Portfoolio",
     "title": "Päris kuulutused, telefoniga skannitud.",
@@ -1442,6 +1448,7 @@
       "type": "Formaat",
       "scope": "Katvus",
       "scopeValue": "{count} vaatepunkti · õu, esimene ja teine korrus",
+      "scopeEmbed": "Õu, esimene ja teine korrus · Matterporti 3D ringkäik",
       "client": "Klient"
     },
     "galleryTitle": "Vaated skannist",

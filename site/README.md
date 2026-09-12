@@ -87,8 +87,20 @@ project page. Items carry an explicit `order`; the first client scan
 projects are added. Sample listing-type tiles follow it. `/demo/<slug>`
 redirects permanently to `/portfolio/<slug>` (`next.config.ts`).
 
-Each walkthrough project is a linked 360° tour built from a Matterport Capture
-export. Three scripts in `../scripts/` produce everything from the export:
+A walkthrough item may carry an `embed` (`{ provider: "matterport", modelId }`):
+the project page then shows the official Matterport Showcase model
+(`components/demo/matterport-embed.tsx` — the same square-cornered stage,
+poster → Start, Sodar badge, a fullscreen control on the stage and Close over
+the iframe; `title=0` hides Matterport's title panel, its logo stays and is
+never covered; Matterport streams the imagery, nothing is downloaded or
+re-processed) instead of the local viewer, the coverage fact switches to
+`Portfolio.facts.scopeEmbed` and the stills lose their scene deep links. The
+local tour data and media stay in place for `/review/<slug>` and the metadata.
+Kaldapealse tänav 2 has been embedded since 2026-09-12 (model `98WLexoRstU`).
+
+Otherwise each walkthrough project is a linked 360° tour built from a
+Matterport Capture export. Three scripts in `../scripts/` produce everything
+from the export:
 
 - `matterport_capture_tour.py` decodes `SweepProcessorData/manifest.mfst`
   (poses, floors, capture order), derives candidate links from sweep

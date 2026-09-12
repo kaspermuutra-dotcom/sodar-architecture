@@ -1427,6 +1427,12 @@
     "close": "Chiudi",
     "loadingShort": "Caricamento…"
   },
+  "MatterportEmbed": {
+    "hint": "Trascina per guardarti intorno · Clicca sul pavimento per spostarti · Casa delle bambole e planimetria nella barra in basso",
+    "fullscreen": "Schermo intero",
+    "exitFullscreen": "Esci da schermo intero",
+    "frameTitle": "{title} — tour 3D Matterport"
+  },
   "Portfolio": {
     "kicker": "Portfolio",
     "title": "Immobili reali, scansionati con un telefono.",
@@ -1442,6 +1448,7 @@
       "type": "Formato",
       "scope": "Copertura",
       "scopeValue": "{count} punti di vista · esterno, piano terra, piano superiore",
+      "scopeEmbed": "Esterno, piano terra e piano superiore · tour 3D Matterport",
       "client": "Cliente"
     },
     "galleryTitle": "Viste dalla scansione",

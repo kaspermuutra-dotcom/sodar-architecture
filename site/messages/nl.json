@@ -1427,6 +1427,12 @@
     "close": "Sluiten",
     "loadingShort": "Laden…"
   },
+  "MatterportEmbed": {
+    "hint": "Sleep om rond te kijken · Klik op de vloer om te bewegen · Poppenhuis en plattegrond in de onderste balk",
+    "fullscreen": "Volledig scherm",
+    "exitFullscreen": "Volledig scherm verlaten",
+    "frameTitle": "{title} — Matterport 3D-rondleiding"
+  },
   "Portfolio": {
     "kicker": "Portfolio",
     "title": "Echte woningen, gescand met een telefoon.",
@@ -1442,6 +1448,7 @@
       "type": "Formaat",
       "scope": "Dekking",
       "scopeValue": "{count} standpunten · buiten, begane grond, verdieping",
+      "scopeEmbed": "Buiten, begane grond en verdieping · Matterport 3D-rondleiding",
       "client": "Klant"
     },
     "galleryTitle": "Beelden uit de scan",

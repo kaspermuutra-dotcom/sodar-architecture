@@ -1427,6 +1427,12 @@
     "close": "Uždaryti",
     "loadingShort": "Įkeliama…"
   },
+  "MatterportEmbed": {
+    "hint": "Vilkite, kad apsidairytumėte · Spustelėkite grindis, kad judėtumėte · Lėlių namelis ir aukšto planas apatinėje juostoje",
+    "fullscreen": "Visas ekranas",
+    "exitFullscreen": "Išeiti iš viso ekrano",
+    "frameTitle": "{title} — Matterport 3D apžiūra"
+  },
   "Portfolio": {
     "kicker": "Portfolio",
     "title": "Tikri būstai, skenuoti telefonu.",
@@ -1442,6 +1448,7 @@
       "type": "Formatas",
       "scope": "Aprėptis",
       "scopeValue": "{count} apžvalgos taškai · lauke, pirmas aukštas, antras aukštas",
+      "scopeEmbed": "Lauko erdvė, pirmas ir antras aukštas · Matterport 3D apžiūra",
       "client": "Klientas"
     },
     "galleryTitle": "Vaizdai iš skenavimo",

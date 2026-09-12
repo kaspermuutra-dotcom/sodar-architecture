@@ -1427,6 +1427,12 @@
     "close": "Fermer",
     "loadingShort": "Chargement…"
   },
+  "MatterportEmbed": {
+    "hint": "Faites glisser pour regarder autour · Cliquez sur le sol pour vous déplacer · Maison de poupée et plan dans la barre du bas",
+    "fullscreen": "Plein écran",
+    "exitFullscreen": "Quitter le plein écran",
+    "frameTitle": "{title} — visite 3D Matterport"
+  },
   "Portfolio": {
     "kicker": "Portfolio",
     "title": "De vrais biens, scannés avec un téléphone.",
@@ -1442,6 +1448,7 @@
       "type": "Format",
       "scope": "Couverture",
       "scopeValue": "{count} points de vue · extérieur, rez-de-chaussée, étage",
+      "scopeEmbed": "Extérieur, rez-de-chaussée et étage · visite 3D Matterport",
       "client": "Client"
     },
     "galleryTitle": "Vues du scan",

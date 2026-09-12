@@ -1427,6 +1427,12 @@
     "close": "Stäng",
     "loadingShort": "Laddar…"
   },
+  "MatterportEmbed": {
+    "hint": "Dra för att se dig omkring · Klicka på golvet för att förflytta dig · Dockhus och planritning i nederkanten",
+    "fullscreen": "Helskärm",
+    "exitFullscreen": "Avsluta helskärm",
+    "frameTitle": "{title} — Matterport 3D-rundvandring"
+  },
   "Portfolio": {
     "kicker": "Portfölj",
     "title": "Riktiga bostäder, skannade med en telefon.",
@@ -1442,6 +1448,7 @@
       "type": "Format",
       "scope": "Omfattning",
       "scopeValue": "{count} vypunkter · utomhus, bottenvåning, övervåning",
+      "scopeEmbed": "Utomhus, bottenvåning och övervåning · Matterport 3D-rundvandring",
       "client": "Kund"
     },
     "galleryTitle": "Vyer från skanningen",

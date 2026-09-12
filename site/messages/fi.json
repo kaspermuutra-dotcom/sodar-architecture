@@ -1427,6 +1427,12 @@
     "close": "Sulje",
     "loadingShort": "Ladataan…"
   },
+  "MatterportEmbed": {
+    "hint": "Katsele ympärillesi vetämällä · Liiku napsauttamalla lattiaa · Nukkekoti ja pohjapiirros alapalkissa",
+    "fullscreen": "Koko näyttö",
+    "exitFullscreen": "Poistu koko näytöstä",
+    "frameTitle": "{title} — Matterport 3D -kierros"
+  },
   "Portfolio": {
     "kicker": "Portfolio",
     "title": "Oikeita kohteita, skannattu puhelimella.",
@@ -1442,6 +1448,7 @@
       "type": "Muoto",
       "scope": "Kattavuus",
       "scopeValue": "{count} näkymää · ulkona, alakerta, yläkerta",
+      "scopeEmbed": "Piha, alakerta ja yläkerta · Matterport 3D -kierros",
       "client": "Asiakas"
     },
     "galleryTitle": "Näkymiä skannauksesta",

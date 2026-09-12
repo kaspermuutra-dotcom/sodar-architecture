@@ -1427,6 +1427,12 @@
     "close": "Aizvērt",
     "loadingShort": "Ielādē…"
   },
+  "MatterportEmbed": {
+    "hint": "Velciet, lai paskatītos apkārt · Klikšķiniet uz grīdas, lai pārvietotos · Leļļu māja un stāva plāns apakšējā joslā",
+    "fullscreen": "Pilnekrāns",
+    "exitFullscreen": "Iziet no pilnekrāna",
+    "frameTitle": "{title} — Matterport 3D apskate"
+  },
   "Portfolio": {
     "kicker": "Portfolio",
     "title": "Īsti īpašumi, skenēti ar tālruni.",
@@ -1442,6 +1448,7 @@
       "type": "Formāts",
       "scope": "Aptvērums",
       "scopeValue": "{count} skatpunkti · ārā, pirmais stāvs, otrais stāvs",
+      "scopeEmbed": "Āra teritorija, pirmais un otrais stāvs · Matterport 3D apskate",
       "client": "Klients"
     },
     "galleryTitle": "Skati no skenējuma",

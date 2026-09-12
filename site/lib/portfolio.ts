@@ -12,6 +12,9 @@ import type { Walkthrough } from "@/lib/demo/walkthrough";
  * already showed (they have no project page).
  */
 
+/** An official Matterport Showcase embed: `https://my.matterport.com/show/?m=<modelId>`. */
+export type PortfolioEmbed = { provider: "matterport"; modelId: string };
+
 export type PortfolioItem =
   | {
       kind: "walkthrough";
@@ -26,6 +29,11 @@ export type PortfolioItem =
       distinction?: "first-client";
       /** Unlisted: the project page stays reachable by URL (review, diagnosis) but is not shown in the portfolio or on the home page. */
       unlisted?: boolean;
+      /**
+       * Hosted viewer shown on the project page instead of the locally built walkthrough. The local tour data
+       * (`walkthrough`) is kept for the review page, the metadata and the stills.
+       */
+      embed?: PortfolioEmbed;
       walkthrough: Walkthrough;
     }
   | {
@@ -49,8 +57,10 @@ export const PORTFOLIO: PortfolioItem[] = [
     client: `${kaldapealse.agent.name} · ${kaldapealse.agent.agency}`,
     image: kaldapealse.poster,
     distinction: "first-client",
-    // Withdrawn from the public portfolio on 2026-09-11 pending the reconstruction review (see /review/kaldapealse-tanav-2).
-    unlisted: true,
+    // Withdrawn on 2026-09-11 pending the reconstruction review; listed again on 2026-09-12 with the hosted
+    // Matterport Showcase model of the same capture in place of the local reconstruction.
+    unlisted: false,
+    embed: { provider: "matterport", modelId: "98WLexoRstU" },
     walkthrough: kaldapealse,
   },
   { kind: "sample", order: 10, sampleIndex: 0, image: "/media/scans-window.jpg", clip: "/media/scans-window.mp4" },

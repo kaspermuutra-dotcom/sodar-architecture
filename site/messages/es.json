@@ -1427,6 +1427,12 @@
     "close": "Cerrar",
     "loadingShort": "Cargando…"
   },
+  "MatterportEmbed": {
+    "hint": "Arrastra para mirar alrededor · Haz clic en el suelo para moverte · Casa de muñecas y plano en la barra inferior",
+    "fullscreen": "Pantalla completa",
+    "exitFullscreen": "Salir de pantalla completa",
+    "frameTitle": "{title} — recorrido 3D de Matterport"
+  },
   "Portfolio": {
     "kicker": "Portafolio",
     "title": "Inmuebles reales, escaneados con un teléfono.",
@@ -1442,6 +1448,7 @@
       "type": "Formato",
       "scope": "Cobertura",
       "scopeValue": "{count} puntos de vista · exterior, planta baja, planta alta",
+      "scopeEmbed": "Exterior, planta baja y planta alta · recorrido 3D de Matterport",
       "client": "Cliente"
     },
     "galleryTitle": "Vistas del escaneo",

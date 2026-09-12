@@ -1427,6 +1427,12 @@
     "close": "关闭",
     "loadingShort": "加载中…"
   },
+  "MatterportEmbed": {
+    "hint": "拖动环视 · 点击地面移动 · 底部栏中有玩偶屋视图和平面图",
+    "fullscreen": "全屏",
+    "exitFullscreen": "退出全屏",
+    "frameTitle": "{title} — Matterport 3D 漫游"
+  },
   "Portfolio": {
     "kicker": "作品集",
     "title": "真实房源，用手机扫描。",
@@ -1442,6 +1448,7 @@
       "type": "形式",
       "scope": "覆盖范围",
       "scopeValue": "{count} 个视点 · 室外、一层、二层",
+      "scopeEmbed": "室外、一层、二层 · Matterport 3D 漫游",
       "client": "客户"
     },
     "galleryTitle": "扫描画面",

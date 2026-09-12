@@ -149,9 +149,9 @@ const kaldapealseCuration: WalkthroughCuration = {
   ],
   poster: `${M}/poster.webp`,
   ogImage: `${M}/og.jpg`,
-  // Public use confirmed for the portfolio (publishing brief, 2026-09-09); noindex reinstated 2026-09-11 while the
-  // reconstruction is reworked — the route stays reachable for review only.
-  indexable: false,
+  // Public use confirmed for the portfolio (publishing brief, 2026-09-09); noindex 2026-09-11 while the reconstruction
+  // was reworked; indexable again since 2026-09-12 (the page shows the hosted Matterport model).
+  indexable: true,
   plan: planKaldapealse,
 };
 

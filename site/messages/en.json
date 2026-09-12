@@ -1427,6 +1427,12 @@
     "close": "Close",
     "loadingShort": "Loading…"
   },
+  "MatterportEmbed": {
+    "hint": "Drag to look around · Click the floor to move · Dollhouse and floor plan in the bottom bar",
+    "fullscreen": "Fullscreen",
+    "exitFullscreen": "Exit fullscreen",
+    "frameTitle": "{title} — Matterport 3D walkthrough"
+  },
   "Portfolio": {
     "kicker": "Portfolio",
     "title": "Real listings, scanned with a phone.",
@@ -1442,6 +1448,7 @@
       "type": "Format",
       "scope": "Coverage",
       "scopeValue": "{count} viewpoints · exterior, ground floor, upper floor",
+      "scopeEmbed": "Exterior, ground floor and upper floor · Matterport 3D walkthrough",
       "client": "Client"
     },
     "galleryTitle": "Views from the scan",

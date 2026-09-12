@@ -1427,6 +1427,12 @@
     "close": "Zamknij",
     "loadingShort": "Ładowanie…"
   },
+  "MatterportEmbed": {
+    "hint": "Przeciągnij, aby się rozejrzeć · Kliknij podłogę, aby się przemieścić · Domek dla lalek i rzut w dolnym pasku",
+    "fullscreen": "Pełny ekran",
+    "exitFullscreen": "Zamknij pełny ekran",
+    "frameTitle": "{title} — spacer 3D Matterport"
+  },
   "Portfolio": {
     "kicker": "Portfolio",
     "title": "Prawdziwe nieruchomości, zeskanowane telefonem.",
@@ -1442,6 +1448,7 @@
       "type": "Format",
       "scope": "Zakres",
       "scopeValue": "{count} punktów widokowych · na zewnątrz, parter, piętro",
+      "scopeEmbed": "Otoczenie, parter i piętro · spacer 3D Matterport",
       "client": "Klient"
     },
     "galleryTitle": "Widoki ze skanu",

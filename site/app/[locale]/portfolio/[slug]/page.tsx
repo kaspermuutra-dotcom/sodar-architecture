@@ -6,6 +6,7 @@ import { localeAlternates } from "@/lib/seo";
 import { getPortfolioProject, PORTFOLIO_WALKTHROUGHS } from "@/lib/portfolio";
 import { PageShell } from "@/components/page-shell";
 import { PropertyDemo } from "@/components/demo/property-demo";
+import { MatterportEmbed } from "@/components/demo/matterport-embed";
 
 type Params = { params: Promise<{ locale: string; slug: string }> };
 
@@ -31,7 +32,11 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   };
 }
 
-/** A portfolio project: the interactive walkthrough with the minimum of chrome around it. */
+/**
+ * A portfolio project: the interactive walkthrough with the minimum of chrome
+ * around it. A project with an `embed` shows the hosted Matterport model in
+ * place of the local viewer; the facts, stills and metadata stay the same.
+ */
 export default async function PortfolioProjectPage({ params }: Params) {
   const { locale, slug } = await params;
   const project = getPortfolioProject(slug);
@@ -40,6 +45,7 @@ export default async function PortfolioProjectPage({ params }: Params) {
   const t = await getTranslations("Portfolio");
   const tScene = await getTranslations("PropertyDemo"); // scene names live with the viewer strings
   const walk = project.walkthrough;
+  const embed = project.embed;
 
   return (
     <PageShell>
@@ -58,7 +64,7 @@ export default async function PortfolioProjectPage({ params }: Params) {
           <p className="max-w-md text-sm text-text-muted">{t(`items.${project.labelKey}.lead`)}</p>
         </header>
 
-        <PropertyDemo walk={walk} />
+        {embed ? <MatterportEmbed modelId={embed.modelId} title={walk.title} poster={walk.poster} /> : <PropertyDemo walk={walk} />}
 
         <section className="mt-12 grid gap-8 border-t border-border pt-8 sm:grid-cols-3" aria-labelledby="project-facts">
           <h2 id="project-facts" className="sr-only">
@@ -70,7 +76,7 @@ export default async function PortfolioProjectPage({ params }: Params) {
           </div>
           <div>
             <p className="section-kicker">{t("facts.scope")}</p>
-            <p className="mt-2 text-sm text-text">{t("facts.scopeValue", { count: walk.scenes.length })}</p>
+            <p className="mt-2 text-sm text-text">{embed ? t("facts.scopeEmbed") : t("facts.scopeValue", { count: walk.scenes.length })}</p>
           </div>
           <div>
             <p className="section-kicker">{t("facts.client")}</p>
@@ -85,9 +91,13 @@ export default async function PortfolioProjectPage({ params }: Params) {
           <ul className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
             {walk.gallery.map((g) => (
               <li key={g.nodeId} className="tile aspect-[16/10]">
-                <a href={`#${g.nodeId}`} aria-label={tScene(`scenes.${g.labelKey}`)} className="block h-full w-full">
+                {embed ? (
                   <img src={g.still} alt={t("stillAlt", { label: tScene(`scenes.${g.labelKey}`) })} width={1280} height={800} loading="lazy" decoding="async" />
-                </a>
+                ) : (
+                  <a href={`#${g.nodeId}`} aria-label={tScene(`scenes.${g.labelKey}`)} className="block h-full w-full">
+                    <img src={g.still} alt={t("stillAlt", { label: tScene(`scenes.${g.labelKey}`) })} width={1280} height={800} loading="lazy" decoding="async" />
+                  </a>
+                )}
               </li>
             ))}
           </ul>
